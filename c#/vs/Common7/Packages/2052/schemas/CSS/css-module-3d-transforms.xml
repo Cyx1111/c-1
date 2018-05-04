@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="3D Transforms" standard-reference="http://www.w3.org/TR/css3-3d-transforms/" status="WD" pub-date="2009-03-20">
+
+  <CssProperty _locID="transform-style" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): flat; }" description="定义如何在三维空间中呈现嵌套的元素。" standard-reference="http://www.w3.org/TR/css3-3d-transforms/#transform-origin">
+    
+    <entry _locID="transform-style_flat" _locAttrData="description" value="flat" description="此元素的所有子级都会经过平展并呈现到该元素的二维平面中。"/>
+    <entry _locID="transform-style_preserve-3d" _locAttrData="description" value="preserve-3d" browsers="none" description="不进行平展，因此子级将维持其在三维空间中的位置。"/>
+  </CssProperty>
+
+  <CssProperty _locID="perspective" _locAttrData="description" version="3.0" browsers="IE10" restriction="number" syntax="div { $(name): none; }" description="应用与 perspective(&lt;number&gt;) 转换函数相同的转换，只不过它仅应用于元素的已定位或已转换子级，而不应用于元素自身的转换。" standard-reference="http://www.w3.org/TR/css3-3d-transforms/#perspective">
+    
+    <entry _locID="perspective_none" _locAttrData="description" value="none" description="不应用任何透视转换。"/>
+  </CssProperty>
+
+  <CssPropertyValue type="perspective-origins">
+    <entry value="left"/>
+    <entry value="center"/>
+    <entry value="right"/>
+    <entry value="top"/>
+    <entry value="bottom"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="perspective-origin" _locAttrData="description" version="3.0" browsers="IE10" type="perspective-origins" restriction="percentage, length" syntax="div { $(name): 10px; }" description="建立 perspective 属性的原点。它将有效设置 X 和 Y 位置，查看者从这个位置看的话就好像是在看元素的子级。" standard-reference="http://www.w3.org/TR/css3-3d-transforms/#perspective-origin"/>
+
+  <CssProperty _locID="backface-visibility" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): hidden; }" description="确定已转换元素的“背面”在面向查看者时是否可见。利用标识转换，元素的前面将面向查看者。" standard-reference="http://www.w3.org/TR/css3-3d-transforms/#backface-visibility">
+    <entry value="visible"/>
+    <entry value="hidden"/>
+  </CssProperty>
+
+</CssModule>

@@ -1,0 +1,25 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <TemplateID>Microsoft.Modeling.ModelingProject</TemplateID>
+    <Name Package="{FA1929D0-D314-4897-9248-6FE1FAF50A89}" ID="101" />
+    <Description Package="{FA1929D0-D314-4897-9248-6FE1FAF50A89}" ID="102" />
+    <Icon Package="{FA1929D0-D314-4897-9248-6FE1FAF50A89}" ID="201" />
+    <ProjectType>Modeling</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>ModelingProject</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="ModelingProject.modelproj" File="ModelingProject.modelproj" ReplaceParameters="true">
+      <Folder Name="ModelDefinition">
+        <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.uml">ModelDefinition.uml</ProjectItem>
+      </Folder>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

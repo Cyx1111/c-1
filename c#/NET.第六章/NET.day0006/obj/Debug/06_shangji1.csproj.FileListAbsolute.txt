@@ -1,0 +1,6 @@
+F:\C#\NET.第六章\NET.day0006\bin\Debug\NET.day0006.exe.config
+F:\C#\NET.第六章\NET.day0006\bin\Debug\NET.day0006.exe
+F:\C#\NET.第六章\NET.day0006\bin\Debug\NET.day0006.pdb
+F:\C#\NET.第六章\NET.day0006\obj\Debug\06_shangji1.csprojResolveAssemblyReference.cache
+F:\C#\NET.第六章\NET.day0006\obj\Debug\NET.day0006.exe
+F:\C#\NET.第六章\NET.day0006\obj\Debug\NET.day0006.pdb

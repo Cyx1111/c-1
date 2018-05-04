@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageLanguagePackManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="Microsoft.LightSwitch.Cosmopolitan" Version="1.0" Language="ru-RU" Publisher="Microsoft" />
+    <DisplayName>Оболочка и тема LightSwitch Cosmopolitan</DisplayName>
+    <Description>Оболочка и тема LightSwitch с современным и простым пользовательским интерфейсом, основанная на теме Silverlight Cosmopolitan</Description>
+  </Metadata>
+</PackageLanguagePackManifest>

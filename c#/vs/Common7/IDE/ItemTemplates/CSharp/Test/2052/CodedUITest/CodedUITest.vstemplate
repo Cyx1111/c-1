@@ -1,0 +1,45 @@
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{6077292c-6751-4483-8425-9026bc0187b6}" ID="101"/>
+    <Description Package="{6077292c-6751-4483-8425-9026bc0187b6}" ID="102"/>
+    <Icon Package="{6077292c-6751-4483-8425-9026bc0187b6}" ID="104"/>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>80</SortOrder>
+    <DefaultName>CodedUITest.cs</DefaultName>
+    <TemplateGroupID>TestProject-V1</TemplateGroupID>
+    <TemplateID>TestProject-V1-CodedUITest</TemplateID>
+    <ShowByDefault>false</ShowByDefault>
+    <CustomDataSignature>TestProject-V1</CustomDataSignature>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>System</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Data</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Drawing</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Windows.Forms</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>WindowsBase</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>UIAutomationTypes</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem ReplaceParameters="true">CodedUITest.cs</ProjectItem>
+  </TemplateContent>
+  <TestProjectData>
+    <LongDescription Package="{6077292c-6751-4483-8425-9026bc0187b6}" ID="102"/>
+    <HelpKeyword Package="{6077292c-6751-4483-8425-9026bc0187b6}" ID="102"/>
+  </TestProjectData>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.QualityTools.CodedUITestPackage</Assembly>
+    <FullClassName>Microsoft.VisualStudio.TestTools.CodedUITest.UITestWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+<copyright file="ArchitectureToolsRegistrationEntries_TFS2008.xml" company="Microsoft">
+     Copyright (c) Microsoft Corporation. All Rights Reserved.
+     Information Contained Herein is Proprietary and Confidential.
+</copyright>
+<summary>
+ Install configuration file for use on TFS 2008 servers using TFSReg.exe
+</summary>
+-->
+<RegistrationEntries>
+  <RegistrationEntry>
+    <Type>ArchitectureTools</Type>
+    <ChangeType>NoChange</ChangeType>
+    <ServiceInterfaces />
+    <ArtifactTypes>
+      <ArtifactType>
+        <Name>ArchitectureTools</Name>
+        <OutboundLinkTypes />
+      </ArtifactType>
+    </ArtifactTypes>
+  </RegistrationEntry>
+  <RegistrationEntry>
+    <Type>WorkItemTracking</Type>
+    <ChangeType>NoChange</ChangeType>
+    <ArtifactTypes>
+      <ArtifactType>
+        <Name>Workitem</Name>
+        <OutboundLinkTypes>
+          <OutboundLinkType>
+            <Name>Model Link</Name>
+            <TargetArtifactTypeTool>ArchitectureTools</TargetArtifactTypeTool>
+            <TargetArtifactTypeName>ModelLink</TargetArtifactTypeName>
+          </OutboundLinkType>
+        </OutboundLinkTypes>
+      </ArtifactType>
+    </ArtifactTypes>
+  </RegistrationEntry>    
+</RegistrationEntries>

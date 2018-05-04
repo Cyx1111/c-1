@@ -1,0 +1,11 @@
+F:\C#\New text\New text\bin\Debug\New text.exe.config
+F:\C#\New text\New text\bin\Debug\New text.exe
+F:\C#\New text\New text\bin\Debug\New text.pdb
+F:\C#\New text\New text\obj\Debug\New text.csprojResolveAssemblyReference.cache
+F:\C#\New text\New text\obj\Debug\New_text.FrmMin.resources
+F:\C#\New text\New text\obj\Debug\New_text.Properties.Resources.resources
+F:\C#\New text\New text\obj\Debug\New text.csproj.GenerateResource.Cache
+F:\C#\New text\New text\obj\Debug\New text.exe
+F:\C#\New text\New text\obj\Debug\New text.pdb
+F:\C#\New text\New text\obj\Debug\New_text.FrmDog.resources
+F:\C#\New text\New text\obj\Debug\New_text.FrmFormation.resources

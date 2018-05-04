@@ -1,0 +1,101 @@
+﻿@{
+	// 设置布局页和页标题 
+	Layout ="~/_SiteLayout.cshtml"; 
+	Page.Title ="登录";
+
+	// 初始化常规页变量 
+	var email =""; 
+	var password =""; 
+	var rememberMe = false;
+
+	// 验证 
+	var isValid = true; 
+	var emailErrorMessage =""; 
+	var passwordErrorMessage ="";
+
+    // 如果这是 POST 请求，则验证并处理数据 
+    if (IsPost) { 
+        email = Request.Form["email"]; 
+        password = Request.Form["password"]; 
+        rememberMe = Request.Form["rememberMe"].AsBool();
+
+        // 验证用户的电子邮件 
+        if (email.IsEmpty()) { 
+            emailErrorMessage ="你必须指定电子邮件地址。"; 
+            isValid = false; 
+		}
+
+		// 验证用户的密码 
+		if (password.IsEmpty()) { 
+			passwordErrorMessage ="你必须指定密码。"; 
+			isValid = false; 
+		}
+
+		// 确认没有验证错误 
+		if (isValid) { 
+			if (WebSecurity.UserExists(email) && WebSecurity.GetPasswordFailuresSinceLastSuccess(email) > 4 && WebSecurity.GetLastPasswordFailureDate(email).AddSeconds(60) > DateTime.UtcNow ) { 
+				Response.Redirect("~/account/AccountLockedOut"); 
+				return; 
+			}
+
+			// 试图使用提供的凭据登录安全对象 
+			if (WebSecurity.Login(email, password, rememberMe)) { 
+				var returnUrl = Request.QueryString["ReturnUrl"]; 
+				if (returnUrl.IsEmpty()){ 
+					Response.Redirect("~/"); 
+				} else { 
+					Context.RedirectLocal(returnUrl); 
+				} 
+			}
+
+			// 如果我们到达这里，则表示登录失败；向用户转达该信息 
+			isValid = false; 
+		} 
+	} 
+}
+
+<p>
+	请在下面输入你的电子邮件地址和密码。如果你没有帐户，
+	请访问<a href="@Href("~/Account/Register")">注册页</a>，然后创建一个帐户。
+</p>
+
+@* 如果存在一个或多个验证错误，则显示以下错误 *@ 
+@if (!isValid) {
+<p class="message error">登录有问题和/或表单有错误。</p>
+}
+
+<form method="post" action="">
+    <fieldset>
+		<legend>登录你的帐户</legend>
+        <ol>
+            <li class="email">
+				<label for="email">电子邮件地址:</label>
+				<input type="text" id="email" name="email" value="@email" title="电子邮件" @if(!emailErrorMessage.IsEmpty()){<text>class="error-field"</text>} /> 
+				@* 将任何电子邮件验证错误写入此页 *@ 
+				@if (!emailErrorMessage.IsEmpty()) {
+                <label for="email" class="validation-error">
+					@emailErrorMessage
+                </label>
+                }
+            </li>
+            <li class="password">
+				<label for="password">密码:</label>
+				<input type="password" id="password" name="password" title="密码" @if(!passwordErrorMessage.IsEmpty()){<text>class="error-field"</text>} /> 
+				@* 将任何密码验证错误写入此页 *@ 
+				@if (!passwordErrorMessage.IsEmpty()) {
+                <label for="password" class="validation-error">
+					@passwordErrorMessage
+                </label>
+                }
+            </li>
+            <li class="remember-me">
+				<label class="checkbox" for="rememberMe">记住我?</label>
+				<input type="checkbox" id="rememberMe" name="rememberMe" value="true" title="记住我" @if(rememberMe){<text>checked="checked"</text>} />
+            </li>
+        </ol>
+        <p class="form-actions">
+			<input type="submit" value="登录" title="登录"/>
+        </p>
+		<p><a href="@Href("~/Account/ForgotPassword")">忘记了密码?</a></p>
+    </fieldset>
+</form>

@@ -1,0 +1,17 @@
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="Fakes.Microsoft.7f7ad6f1-9647-4e72-bd6d-0222abbadf01" Version="11.0" Language="en-US" Publisher="Microsoft" />
+    <DisplayName>Fakes</DisplayName>
+    <Description>Fakes Visual Studio Integration</Description>
+  </Metadata>
+  <Installation InstalledByMsi="true" SystemComponent="true">
+    <InstallationTarget Version="11.0" Id="Microsoft.VisualStudio.Ultimate" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" Version="4.5" />
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="Microsoft.VisualStudio.TestWindow.Fakes.dll" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="Microsoft.QualityTools.Testing.Fakes.VsPackage.pkgdef" />
+  </Assets>
+</PackageManifest>

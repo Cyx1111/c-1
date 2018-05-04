@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="IntellitraceVsix.Microsoft.854B8E02-AB96-457B-9366-88FAE9C6AF84" Version="11.0.50216.0" Language="en-us" Publisher="Microsoft"/>
+    <DisplayName>IntelliTrace</DisplayName>
+    <Description>IntelliTrace</Description>
+  </Metadata>
+  <Installation Scope="ProductExtension" AllUsers="true" InstalledByMsi="true" SystemComponent="true">
+    <InstallationTarget Version="[11.0,12.0)" Id="Microsoft.VisualStudio.Ultimate"/>
+  </Installation>
+  <Dependencies/>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="11.0.0\Microsoft.IntelliTrace.DebuggerMargin.11.0.0.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="11.0.0\Microsoft.IntelliTrace.SearchMargin.11.0.0.dll" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="11.0.0\IntelliTrace.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="11.0.0\IntelliTrace.frontend.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="10.1\IntelliTrace.pkgdef" />
+  </Assets>
+</PackageManifest>

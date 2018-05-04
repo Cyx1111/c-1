@@ -1,0 +1,11 @@
+F:\C#\s2_003\s2_003\bin\Debug\s2_003.exe.config
+F:\C#\s2_003\s2_003\bin\Debug\s2_003.exe
+F:\C#\s2_003\s2_003\bin\Debug\s2_003.pdb
+F:\C#\s2_003\s2_003\obj\Debug\s2_003.csprojResolveAssemblyReference.cache
+F:\C#\s2_003\s2_003\obj\Debug\s2_003.Frmmian.resources
+F:\C#\s2_003\s2_003\obj\Debug\s2_003.Properties.Resources.resources
+F:\C#\s2_003\s2_003\obj\Debug\s2_003.csproj.GenerateResource.Cache
+F:\C#\s2_003\s2_003\obj\Debug\s2_003.exe
+F:\C#\s2_003\s2_003\obj\Debug\s2_003.pdb
+F:\C#\s2_003\s2_003\obj\Debug\s2_003.frmci.resources
+F:\C#\s2_003\s2_003\obj\Debug\s2_003.frmdidi.resources

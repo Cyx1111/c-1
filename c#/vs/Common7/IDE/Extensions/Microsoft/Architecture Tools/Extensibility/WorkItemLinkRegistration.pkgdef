@@ -1,0 +1,6 @@
+﻿[$RootKey$\WorkItemTracking\LinkExtensibility]
+@=""
+
+[$RootKey$\WorkItemTracking\LinkExtensibility\Model Link]
+"AssemblyName"="$PackageFolder$\Microsoft.VisualStudio.ArchitectureTools.WorkItemLinking.dll"
+"TypeName"="Microsoft.VisualStudio.ArchitectureTools.WorkItemLinking.ModelLinkPicker"

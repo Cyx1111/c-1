@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Animations" standard-reference="http://www.w3.org/TR/css3-animations/" status="WD" pub-date="2012-04-03">
+
+  <CssAtDirective name="keyframes" _locID="keyframes-rule" _locAttrData="description" version="3.0" browsers="IE10" syntax="@keyframes animation-name" description="定义动画关键帧集。" standard-reference="http://www.w3.org/TR/css3-animations/#keyframes"/>
+
+  <CssProperty _locID="animation-name" _locAttrData="description" version="3.0" browsers="IE10" restriction="identifier" type="animation-name" syntax="div { $(name): movearound; }" description="定义应用的动画的列表。每个名称可用于选择关键帧位置规则，此规则提供动画的属性值。" standard-reference="http://www.w3.org/TR/css3-animations/#the-animation-name-property-"/>
+
+
+  <CssPropertyValue type="animation-name">
+    <entry _locID="animation-name_none" _locAttrData="description" value="none" description="未执行任何动画"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="animation-duration" _locAttrData="description" version="3.0" browsers="IE10" restriction="time" syntax="div { $(name): 4s; }" description="定义动画完成一个循环所花费的时间长度。" standard-reference="http://www.w3.org/TR/css3-animations/#animation-duration"/>
+
+  <CssProperty _locID="animation-timing-function" _locAttrData="description" version="3.0" browsers="IE10" type="timing-functions" restriction="enum" syntax="div { $(name): ease; }" description="描述动画如何完成一个持续时间循环。请参见“transition-timing-function”。" standard-reference="http://www.w3.org/TR/css3-animations/#animation-timing-function"/>
+
+  <CssProperty _locID="animation-iteration-count" _locAttrData="description" version="3.0" browsers="IE10" restriction="number" type="animation-iteration-count" syntax="div { $(name): 3; }" description="定义动画循环的播放次数。默认值为 1，这表示动画将从头到尾播放一次。" standard-reference="http://www.w3.org/TR/css3-animations/#animation-iteration-count"/>
+
+  <CssPropertyValue type="animation-iteration-count">
+    <entry _locID="animation-iteration-count_infinite" _locAttrData="description" value="infinite" description="使动画永远重复。"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="animation-direction" _locAttrData="description" version="3.0" browsers="IE10" type="animation-directions" restriction="enum" syntax="div { $(name): normal; }" description="定义动画是否应在交替循环中反向播放动画。" standard-reference="http://www.w3.org/TR/css3-animations/#animation-direction"/>
+
+  <CssPropertyValue type="animation-directions">
+    <entry _locID="animation-direction_normal" _locAttrData="description" value="normal" description="正常播放。"/>
+    <entry _locID="animation-direction_alternate" _locAttrData="description" value="alternate" description="奇数次的动画循环迭代将按正常方向播放，偶数次的动画循环迭代将按反方向播放。"/>
+    <entry _locID="animation-direction_reverse" _locAttrData="description" value="reverse" description="奇数次的动画循环迭代将按正常方向播放，偶数次的动画循环迭代将按反方向播放。"/>
+    <entry _locID="animation-direction_alternate-reverse" _locAttrData="description" value="alternate-reverse" description="奇数次的动画循环迭代将按反方向播放，偶数次的动画循环迭代将按正常方向播放。"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="animation-play-state" _locAttrData="description" version="3.0" browsers="IE10" type="animation-play-states" restriction="enum" syntax="div { $(name): running; }" description="定义动画是正在运行还是已暂停。" standard-reference="http://www.w3.org/TR/css3-animations/#animation-play-state"/>
+
+  <CssPropertyValue type="animation-play-states">
+    <entry _locID="animation-play-state_running" _locAttrData="description" value="running" description="继续播放暂停的动画。"/>
+    <entry _locID="animation-play-state_paused" _locAttrData="description" value="paused" description="暂停正在运行的动画。"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="animation-delay" _locAttrData="description" version="3.0" browsers="IE10" restriction="time" syntax="div { $(name): 4s; }" description="定义动画将开始的时间。“animation-delay”值为“0”意味着，动画在应用后将立即执行。否则，该值指定相对于应用动画时间的偏移量，动画将按此偏移量延迟执行。" standard-reference="http://www.w3.org/TR/css3-animations/#animation-delay"/>
+
+  <CssPropertyValue type="animation-fill-modes">
+    <entry _locID="animation-fill-mode_none" _locAttrData="description" value="none" description="在应用动画的时间与动画开始播放或动画完成的时间之间，属性值没有更改。"/>
+    <entry _locID="animation-fill-mode_forwards" _locAttrData="description" value="forwards" description="最后一个属性值(由最后一个 @keyframes 位置规则定义)将在动画完成后保留。"/>
+    <entry _locID="animation-fill-mode_backwards" _locAttrData="description" value="backwards" description="开始属性值(由第一个 @keyframes 位置规则定义)将在动画显示前(在“animation-delay”定义的时间段内)应用。"/>
+    <entry _locID="animation-fill-mode_both" _locAttrData="description" value="both" description="将同时应用向前和向后填充模式。"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="animation-fill-mode" _locAttrData="description" version="3.0" browsers="IE10" type="animation-fill-modes" restriction="enum" syntax="div { $(name): forwards; }" description="定义动画在其执行时间之外应用的值。" standard-reference="http://www.w3.org/TR/css3-animations/#animation-fill-mode-property"/>
+
+  <CssProperty _locID="animation" _locAttrData="description" version="3.0" browsers="IE10" restriction="time, enum, identifier, number" type="animation-fill-modes, timing-functions, animation-directions, animation-iteration-count, animation-name" syntax="div { $(name): movearound 4s ease 3 normal; }" description="速记属性将六个动画的属性合并为一个属性。" standard-reference="http://www.w3.org/TR/css3-animations/#animation"/>
+
+</CssModule>

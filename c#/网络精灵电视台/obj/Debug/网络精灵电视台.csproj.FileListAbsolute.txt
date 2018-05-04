@@ -1,0 +1,9 @@
+F:\C#\网络精灵电视台\bin\Debug\网络精灵电视台.exe.config
+F:\C#\网络精灵电视台\bin\Debug\网络精灵电视台.exe
+F:\C#\网络精灵电视台\bin\Debug\网络精灵电视台.pdb
+F:\C#\网络精灵电视台\obj\Debug\网络精灵电视台.csprojResolveAssemblyReference.cache
+F:\C#\网络精灵电视台\obj\Debug\网络精灵电视台.Form1.resources
+F:\C#\网络精灵电视台\obj\Debug\网络精灵电视台.Properties.Resources.resources
+F:\C#\网络精灵电视台\obj\Debug\网络精灵电视台.csproj.GenerateResource.Cache
+F:\C#\网络精灵电视台\obj\Debug\网络精灵电视台.exe
+F:\C#\网络精灵电视台\obj\Debug\网络精灵电视台.pdb

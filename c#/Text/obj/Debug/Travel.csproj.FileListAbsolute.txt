@@ -1,0 +1,8 @@
+H:\VS项目\Text\Text\bin\Debug\Text.exe.config
+H:\VS项目\Text\Text\bin\Debug\Text.exe
+H:\VS项目\Text\Text\bin\Debug\Text.pdb
+H:\VS项目\Text\Text\obj\Debug\Text.Form1.resources
+H:\VS项目\Text\Text\obj\Debug\Text.Properties.Resources.resources
+H:\VS项目\Text\Text\obj\Debug\Travel.csproj.GenerateResource.Cache
+H:\VS项目\Text\Text\obj\Debug\Text.exe
+H:\VS项目\Text\Text\obj\Debug\Text.pdb

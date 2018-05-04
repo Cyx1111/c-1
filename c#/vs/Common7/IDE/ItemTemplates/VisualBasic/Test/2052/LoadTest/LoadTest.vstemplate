@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+	<TemplateData>
+		<Name Package="{9cb895ca-2347-4524-ab57-688951c8f4cb}" ID="1113"/>
+		<Description Package="{9cb895ca-2347-4524-ab57-688951c8f4cb}" ID="1109"/>
+		<Icon Package="{9cb895ca-2347-4524-ab57-688951c8f4cb}" ID="4002"/>
+		<ProjectType>VisualBasic</ProjectType>
+		<SortOrder>80</SortOrder>
+		<DefaultName>LoadTest.loadtest</DefaultName>
+		<TemplateGroupID>TestProject-V1</TemplateGroupID>
+		<TemplateID>TestProject-V1-LoadTest</TemplateID>
+		<ShowByDefault>false</ShowByDefault>
+		<CustomDataSignature>TestProject-V1</CustomDataSignature>
+	</TemplateData>
+	<TemplateContent>
+		<References>
+			<Reference>
+				<Assembly>System</Assembly>
+			</Reference>
+		</References>
+		<ProjectItem ReplaceParameters="false">Default.loadtest</ProjectItem>
+	</TemplateContent>
+	<TestProjectData>
+		<LongDescription Package="{9cb895ca-2347-4524-ab57-688951c8f4cb}" ID="1110"/>
+		<HelpKeyword>vs.loadtest</HelpKeyword>
+	</TestProjectData>
+	<WizardExtension>
+        	<Assembly>Microsoft.VisualStudio.QualityTools.LoadTestPackage</Assembly>
+        	<FullClassName>Microsoft.VisualStudio.TestTools.LoadTest.LoadTestWizardExtension</FullClassName>
+	</WizardExtension>
+</VSTemplate>

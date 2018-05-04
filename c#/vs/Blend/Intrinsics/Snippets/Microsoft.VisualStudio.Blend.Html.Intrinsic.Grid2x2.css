@@ -1,0 +1,28 @@
+.ms-grid-2x2
+{
+    display: -ms-grid;
+    -ms-grid-rows: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+    width: 400px;
+    height: 400px;
+}
+.ms-grid-2x2 div:nth-child(1)
+{
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+}
+.ms-grid-2x2 div:nth-child(2)
+{
+    -ms-grid-column: 2;
+    -ms-grid-row: 1;
+}
+.ms-grid-2x2 div:nth-child(3)
+{
+    -ms-grid-column: 1;
+    -ms-grid-row: 2;
+}
+.ms-grid-2x2 div:nth-child(4)
+{
+    -ms-grid-column: 2;
+    -ms-grid-row: 2;
+}

@@ -1,0 +1,33 @@
+﻿[$RootKey$\VsGraphics\Debugger\Servers\PlatformFlavors]
+"x86"="$PackageFolder$\x86\VsGraphicsDesktopEngine.exe"
+"win32"="$PackageFolder$\x86\VsGraphicsDesktopEngine.exe"
+"x64"="$PackageFolder$\x64\VsGraphicsDesktopEngine.exe"
+
+[$RootKey$\VsGraphics\Debugger\Servers\ExtensionFlavors]
+".vsglog"="$PackageFolder$\x86\VsGraphicsDesktopEngine.exe"
+
+[$RootKey$\VsGraphics\Debugger\Servers\RegisteredExtensions]
+"x86"=".vsglog"
+"win32"=".vsglog"
+"x64"=".vsglog"
+
+[$RootKey$\SelectionElements\{07518412-BA08-461C-8035-54A201CF5095}]
+"Name" = "VSGraphics.Debugger.Document"
+"PropagateFromEmptySelContext"=dword:00000001
+[$RootKey$\SelectionElements\{163D0EB8-EC49-4C1F-8B4A-05318E47A41C}]
+"Name" = "VSGraphics.Debugger.PendingFrameNumber"
+"PropagateFromEmptySelContext"=dword:00000001
+[$RootKey$\SelectionElements\{27AF94AF-C2C8-4588-A5B3-728811646AD8}]
+"Name" = "VSGraphics.Debugger.FrameNumber"
+"PropagateFromEmptySelContext"=dword:00000001
+[$RootKey$\SelectionElements\{3B59A321-EB7A-469E-A663-16BAD2A71C77}]
+"Name" = "VSGraphics.Debugger.EventID"
+"PropagateFromEmptySelContext"=dword:00000001
+[$RootKey$\SelectionElements\{4CEEED20-26EF-45BF-9C6D-E0788B929560}]
+"Name" = "VSGraphics.Debugger.ObjectID"
+"PropagateFromEmptySelContext"=dword:00000001
+[$RootKey$\SelectionElements\{5D6BAFB5-6785-47AB-931F-E8C718D3826F}]
+"Name" = "VSGraphics.Debugger.Point2D"
+"PropagateFromEmptySelContext"=dword:00000001
+
+

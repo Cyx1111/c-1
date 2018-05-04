@@ -1,0 +1,31 @@
+HKCR
+{
+	<%=SAFEOBJNAME%>.Connect.1 = s 'Connect Class'
+	{
+		CLSID = s '{<%=ICONNECTCLSID%>}'
+	}
+	<%=SAFEOBJNAME%>.Connect = s 'Connect Class'
+	{
+		CLSID = s '{<%=ICONNECTCLSID%>}'
+		CurVer = s '<%=SAFEOBJNAME%>.Connect.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove '{<%=ICONNECTCLSID%>}' = s 'Connect Class'
+		{
+			ProgID = s '<%=SAFEOBJNAME%>.Connect.1'
+			VersionIndependentProgID = s '<%=SAFEOBJNAME%>.Connect'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{<%=LIBID%>}'
+		}
+	}
+}
+
+HKCU
+{
+<%=REGISTRATIONINFO%>
+}

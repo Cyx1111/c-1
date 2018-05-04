@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.VisualStudio.VCProject</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.VisualStudio.VCProject.charSet">
+      <summary>由 <see cref="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.CharacterSet" /> 属性使用。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.charSet.charSetNotSet">
+      <summary>未设置。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.charSet.charSetUnicode">
+      <summary>Unicode 字符设置</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.charSet.charSetMBCS">
+      <summary>多字节字符集</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.VCProject.compileAsManagedOptions">
+      <summary>由 <see cref="P:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileAsManaged" /> 属性使用。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.compileAsManagedOptions.managedNotSet">
+      <summary>无公共语言运行时支持</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.compileAsManagedOptions.managedAssembly">
+      <summary>公共语言运行时支持（/clr）</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.compileAsManagedOptions.managedAssemblyPure">
+      <summary>纯 MSIL 通用语言运行时支持 (/clr:pure)</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.compileAsManagedOptions.managedAssemblySafe">
+      <summary>安全 MSIL公共语言运行时支持（/clr:safe）</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.compileAsManagedOptions.managedAssemblyOldSyntax">
+      <summary>公共语言执行时支持，旧语法（/clr：oldSyntax）</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.VCProject.ConfigurationTypes">
+      <summary>由 <see cref="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.ConfigurationType" /> 属性使用。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.ConfigurationTypes.typeUnknown">
+      <summary>实用工具</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.ConfigurationTypes.typeApplication">
+      <summary>应用程序（.exe）</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.ConfigurationTypes.typeDynamicLibrary">
+      <summary>动态库（.dll）</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.ConfigurationTypes.typeStaticLibrary">
+      <summary>静态库 (.dll)</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.ConfigurationTypes.typeGeneric">
+      <summary>Makefile（生成文件），显示生成文件工具集 (NMake)</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.VCProject.IVCBuildOptionsPage">
+      <summary>“VC++项目设置” 页的自动化接口。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.IVCBuildOptionsPage.BuildLogging">
+      <summary>获取或设置指示生成活动是否将被记录的值。</summary>
+      <returns>如果记录构建活动，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.IVCBuildOptionsPage.BuildTiming">
+      <summary>获取或设置指示生成时间元数据是否被发送到输出窗口的值。</summary>
+      <returns>如果构建时间为输出窗口的输出，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.IVCBuildOptionsPage.CPPExtensions">
+      <summary>获取或设置指示与 C++ 文件关联的文件扩展名的值。</summary>
+      <returns>与 C++ 文件关联的文件扩展名。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.IVCBuildOptionsPage.DefaultSolutionExplorerMode">
+      <summary>设置或获取 SolutionExplorerMode。</summary>
+      <returns>solutionExplorerMode。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.IVCBuildOptionsPage.ExtensionsToHide">
+      <summary>获取或设置指示“解决方案资源管理器”中隐藏的文件扩展名的值。</summary>
+      <returns>隐藏文件扩展名。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.IVCBuildOptionsPage.ExtensionsToInclude">
+      <summary>获取或设置指示项目中自动包含的文件类型的值。</summary>
+      <returns>自动包含在此项目中的文件类型。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.IVCBuildOptionsPage.ShowEnvironmentInBuildLog">
+      <summary>获取或设置一个指示是否在 Visual C++ 项目生成期间将所有环境变量回显到生成日志中的值。</summary>
+      <returns>如果构建日志包括环境信息，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.IVCBuildOptionsPage.ShowNoMatchingRuleDlg">
+      <summary>获取或设置指示在项目中添加文件是否会显示“未找到匹配的自定义生成规则”对话框。</summary>
+      <returns>如果当文件添加到项目中时显示 未找到匹配的自定义生成规则 对话框，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.IVCBuildOptionsPage.ToolFileSearchPaths">
+      <summary>指定包含 .TOOL 文件的目录列表，.TOOL 文件可帮助您定义项目的生成设置。</summary>
+      <returns>包含 .TOOL 文件的目录的列表。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.IVCBuildOptionsPage.ValidateSchemas">
+      <summary>获取或设置一个指示是否要执行架构验证的值。</summary>
+      <returns>如果出现架构验证，则为 true；否则为 false。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.VCProject.IVCBuildOptionsPage2">
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.IVCBuildOptionsPage2.BuildLogging">
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.IVCBuildOptionsPage2.BuildTiming">
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.IVCBuildOptionsPage2.DefaultSolutionExplorerMode">
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.IVCBuildOptionsPage2.ExtensionsToHide">
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.IVCBuildOptionsPage2.ExtensionsToInclude">
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.IVCBuildOptionsPage2.MaxConcurrentFileCompiles">
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.IVCBuildOptionsPage2.ShowEnvironmentInBuildLog">
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.IVCBuildOptionsPage2.ToolFileSearchPaths">
+    </member>
+    <member name="T:Microsoft.VisualStudio.VCProject.optManagedIncrementalBuild">
+      <summary>（弃用某个）指定 incremental build 是否用于生成 manageg 项目。 增量生成仅编译自最后一次编译更改的那些方法。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.optManagedIncrementalBuild.optManagedIncrementalBuildNo">
+      <summary>不使用增量生成。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.optManagedIncrementalBuild.optManagedIncrementalBuildYes">
+      <summary>使用增量生成。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.VCProject.RemoteDebuggerType">
+      <summary>由 <see cref="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.Remote" /> 属性使用。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.RemoteDebuggerType.DbgRemote">
+      <summary>Remote</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.RemoteDebuggerType.DbgRemoteTCPIP">
+      <summary>无身份验证的远程访问。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.VCProject.solutionExplorerMode">
+      <summary>用于在 解决方案资源管理器 中为 Visual C++ 项目设置默认模式。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.solutionExplorerMode.modeShowOnlyInProject">
+      <summary>显示位于项目中的唯一文件。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.solutionExplorerMode.modeShowAllFiles">
+      <summary>显示解决方案中的所有文件。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.VCProject.TypeOfDebugger">
+      <summary>指定要使用的调试器类型。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.TypeOfDebugger.DbgNativeOnly">
+      <summary>仅限本机</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.TypeOfDebugger.DbgManagedOnly">
+      <summary>仅限托管</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.TypeOfDebugger.DbgMixed">
+      <summary>Mixed</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.TypeOfDebugger.DbgAuto">
+      <summary>Auto</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.TypeOfDebugger.DbgScript">
+      <summary>字符集</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.VCProject.useOfATL">
+      <summary>指定 ATL 项目是否静态或动态链接到 ATL .dll。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.useOfATL.useATLNotSet">
+      <summary>未设置</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.useOfATL.useATLStatic">
+      <summary>静态链接</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.useOfATL.useATLDynamic">
+      <summary>动态链接</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.VCProject.useOfMfc">
+      <summary>指定 MFC 项目是否将静态或动态链接到 MFC DLL。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.useOfMfc.useMfcStdWin">
+      <summary>标准的 Windows 库</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.useOfMfc.useMfcStatic">
+      <summary>静态链接</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.useOfMfc.useMfcDynamic">
+      <summary>动态链接</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.VCProject.vcContextGuids">
+      <summary>包含上下文 GUID，每个 GUID 都表示一个给定的 IDE 状态，如 Visual C++ 项目已打开，或 Visual C++ 编辑器已打开。 此枚举作为参数传递给 <see cref="M:EnvDTE.Commands.AddNamedCommand(EnvDTE.AddIn,System.String,System.String,System.String,System.Boolean,System.Int32,System.Object[]@,System.Int32)" /> 和 <see cref="M:EnvDTE80.Commands2.AddNamedCommand2(EnvDTE.AddIn,System.String,System.String,System.String,System.Boolean,System.Object,System.Object[]@,System.Int32,System.Int32,EnvDTE80.vsCommandControlType)" />。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.vcContextGuids.vcContextGuidVCEditor">
+      <summary>表示 Visual C++ 代码是否已在编辑器中打开。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.vcContextGuids.vcContextGuidVCProject">
+      <summary>表示 Visual C++ 项目是否出现在 IDE 中。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.VCProject.VCDirectories">
+      <summary>提供了一种机制，设置和询问项目目录。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.VCDirectories.ExcludeDirectories">
+      <summary>获取或设置要排除的目录。</summary>
+      <returns>字符串包含应从项目中排除的目录的名称。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.VCDirectories.ExecutableDirectories">
+      <summary>设置或获取可执行文件的目录。</summary>
+      <returns>字符串包含可执行的代码目录的名称。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.VCDirectories.IncludeDirectories">
+      <summary>设置或获取头文件的目录。</summary>
+      <returns>字符串包含头文件目录的名称。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.VCDirectories.LibraryDirectories">
+      <summary>设置或获取库的目录。</summary>
+      <returns>字符串包含库的目录的名称。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.VCDirectories.ReferenceDirectories">
+      <summary>设置或获取引用目录。</summary>
+      <returns>字符串包含引用文件的目录的名称。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.VCDirectories.SourceDirectories">
+      <summary>设置或获取源目录。</summary>
+      <returns>字符串包含源文件的目录的名称。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.VCProject.VCFileConfigurationProperties">
+      <summary>包含有关文件的生成信息。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.VCFileConfigurationProperties.ExcludedFromBuild">
+      <summary>获取或设置一个值，该值指示是否从生成中排除此项。</summary>
+      <returns>如果从生成中排除此项，则为 true；否则为 false。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.VCProject.vcprojCATIDS">
+      <summary>用于辨认通过 DTE 自动化方法返回的项目。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.vcprojCATIDS.vcprojCATIDActiveXReferenceNode">
+      <summary>目前尚未实现。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.vcprojCATIDS.vcprojCATIDAssemblyReferenceNode">
+      <summary>目前尚未实现。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.vcprojCATIDS.vcprojCATIDFileGroup">
+      <summary>表示文件夹 GUID。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.vcprojCATIDS.vcprojCATIDFileNode">
+      <summary>表示一个文件 GUID。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.vcprojCATIDS.vcprojCATIDProjectNode">
+      <summary>表示一个文件 GUID。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.vcprojCATIDS.vcprojCATIDProjectReferenceNode">
+      <summary>目前尚未实现。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.vcprojCATIDS.vcprojCATIDReferences">
+      <summary>目前尚未实现。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties">
+      <summary>包含项目配置的属性。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.ATLMinimizesCRunTimeLibraryUsage">
+      <summary>使 ATL 静态链接到 C 运行库以最大程度地减少依赖项。 它要求设置 useOfATL 属性。</summary>
+      <returns>如果将 ATL 静态链接到 C 运行库，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.Attach">
+      <summary>指定在调试此项目时是否应将调试器附加到 <see cref="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.Command" /> 属性中指定的进程。</summary>
+      <returns>如果应将此调试器附加到指定的进程，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.CharacterSet">
+      <summary>通知编译器使用指定的字符集。</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.VCProject.charSet" /> 枚举。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.Command">
+      <summary>如果 <see cref="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.Remote" /> 指定本地调试并且 <see cref="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.Attach" /> 为 false，则 <see cref="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.Command" /> 属性将指定要在调用调试器时启动的可执行文件。 如果 <see cref="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.Attach" /> 为 true 并且 <see cref="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.Remote" /> 指定了远程调试，则 <see cref="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.Command" /> 属性将指定在调用调试器时调试进程应附加到的进程。</summary>
+      <returns>要在调用调试器时启动的可执行文件或调用调试器时调试进程应附加到的进程</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.CommandArguments">
+      <summary>要在 <see cref="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.Attach" /> 为 false 时传递给 <see cref="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.Command" /> 中指定的进程的参数。</summary>
+      <returns>要传递给应用程序的命令行参数。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.ConfigurationType">
+      <summary>获取和设置此配置生成的输出的类型。</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.VCProject.ConfigurationTypes" /> 枚举。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.DebuggerType">
+      <summary>为托管代码或非托管代码指定调试器设置。 如果指定的调试器类型与所调试的代码不匹配，则无法单步执行代码的某些段。 例如，如果指定托管的调试器，则无法单步执行非托管代码。</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.VCProject.TypeOfDebugger" /> 枚举。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.DeleteExtensionsOnClean">
+      <summary>指定在清理或重新生成时要删除的临时目录中的文件。</summary>
+      <returns>在清理或重新生成时要删除的临时目录中的文件。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.EnableManagedIncrementalBuild">
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.HttpUrl">
+      <summary>为 ATL Server 调试指定项目的 URL。</summary>
+      <returns>项目的 URL。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.IntermediateDirectory">
+      <summary>指定临时文件目录的相对路径。 它可以包括环境变量。</summary>
+      <returns>临时文件目录的相对路径。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.ManagedExtensions">
+      <summary>指定此配置使用 Visual C++。 公开 C++ 编译器的 /clr 选项的功能。</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.VCProject.compileAsManagedOptions" /> 枚举。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.OutputDirectory">
+      <summary>指定用于放置输出的目录。 默认情况下，它使用项目目录。</summary>
+      <returns>输出目录。 默认情况下使用项目目录。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.OutputPath">
+      <summary>指定该项目的配置输出文件的位置。</summary>
+      <returns>生成输出的路径。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.PDBPath">
+      <summary>要在其中搜索符号文件的附加目录。</summary>
+      <returns>要在其中搜索符号文件的目录。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.Remote">
+      <summary>指定本地调试或远程调试。</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.VCProject.RemoteDebuggerType" /> 枚举。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.RemoteCommand">
+      <summary>如果 <see cref="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.Attach" /> 为 false 并且 <see cref="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.Remote" /> 指定了远程调试，则将在您调用调试器时启动该可执行文件。 如果 <see cref="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.Attach" /> 为 true 并且 <see cref="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.Remote" /> 指定了远程调试，则 <see cref="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.RemoteCommand" /> 属性将指定在调用调试器时应将调试进程附加到的进程。</summary>
+      <returns>调试进程应该被附加到的进程。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.RemoteMachine">
+      <summary>如果 <see cref="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.Remote" /> 指定远程调试，则 <see cref="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.RemoteMachine" /> 属性将指定包含要调试程序的计算机的名称。</summary>
+      <returns>要使用远程调试器调试的远程计算机。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.SQLDebugging">
+      <summary>为项目启用 SQL 调试。</summary>
+      <returns>如果启用 SQL 调试，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.useOfATL">
+      <summary>指定配置使用 ATL 的方式。</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.VCProject.useOfATL" /> 枚举。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.useOfMfc">
+      <summary>指定配置使用 MFC 的方式。</summary>
+      <returns>一个 <see cref="T:Microsoft.VisualStudio.VCProject.useOfMfc" /> 枚举。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.WholeProgramOptimization">
+      <summary>通过迟延链接时间代码生成来启用跨模块优化。 公开编译器的 /GL 选项的功能。</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.VCProject.WholeProgramOptimizationTypes" /> 枚举。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.WorkingDirectory">
+      <summary>调试器的工作目录。 默认位置为包含 .vcxproj 文件的目录。</summary>
+      <returns>调试器的工作目录。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.VCProject.WholeProgramOptimizationTypes">
+      <summary>指定将横跨对象边界进行优化的节目。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.WholeProgramOptimizationTypes.WholeProgramOptimizationNone">
+      <summary>无全程序优化</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.WholeProgramOptimizationTypes.WholeProgramOptimizationLinkTimeCodeGen">
+      <summary>使用链接时间代码生成</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.WholeProgramOptimizationTypes.WholeProgramOptimizationPGOInstrument">
+      <summary>按配置优化 - 检测</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.WholeProgramOptimizationTypes.WholeProgramOptimizationPGOOptimize">
+      <summary>按配置优化 - 优化</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.VCProject.WholeProgramOptimizationTypes.WholeProgramOptimizationPGOUpdate">
+      <summary>按配置优化 - 更新</summary>
+    </member>
+  </members>
+</doc>

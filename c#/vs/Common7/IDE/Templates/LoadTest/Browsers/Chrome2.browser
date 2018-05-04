@@ -1,0 +1,9 @@
+<Browser Name="Chrome 2" MaxConnections="6">
+  <Headers>    
+    <Header Name="User-Agent" Value="Mozilla/5.0 (Windows; U; Windows NT 5.1;) AppleWebKit/530.1 (KHTML, like Gecko) Chrome/2.0.169.1 Safari/530.1"/>
+    <Header Name="Accept" Value="*/*" />
+    <Header Name="Accept-Language" Value="{{$IEAcceptLanguage}}" />
+    <Header Name="Accept-Encoding" Value="gzip,deflate" />
+    <Header Name="Accept-Charset" Value="ISO-8859-1,*,utf-8" />
+  </Headers>
+</Browser>

@@ -1,0 +1,7 @@
+F:\C#\S2_04-13\S2_04-13\bin\Debug\S2_04-13.dll
+F:\C#\S2_04-13\S2_04-13\bin\Debug\S2_04-13.pdb
+F:\C#\S2_04-13\S2_04-13\obj\Debug\S2_04_13.UserControl1.resources
+F:\C#\S2_04-13\S2_04-13\obj\Debug\S2_04-13.csproj.GenerateResource.Cache
+F:\C#\S2_04-13\S2_04-13\obj\Debug\S2_04-13.dll
+F:\C#\S2_04-13\S2_04-13\obj\Debug\S2_04-13.pdb
+F:\C#\S2_04-13\S2_04-13\obj\Debug\S2_04_13.Form1.resources

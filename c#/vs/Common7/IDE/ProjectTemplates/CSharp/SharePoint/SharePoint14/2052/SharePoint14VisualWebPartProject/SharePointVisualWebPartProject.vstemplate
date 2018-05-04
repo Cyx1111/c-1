@@ -1,0 +1,62 @@
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID="359"/>
+    <Description Package="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID="360"/>
+    <Icon Package="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID="226"/>
+    <TemplateID>SharePoint14VisualWebPartProject_CS</TemplateID>
+    <FrameworkVersion>3.5</FrameworkVersion>
+    <ProjectType>CSharp</ProjectType>
+    <CreateNewFolder>true</CreateNewFolder>
+    <CreateInPlace>true</CreateInPlace>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>VisualWebPartProject</DefaultName>
+    <SortOrder>30</SortOrder>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="SharePointVisualWebPartProject.csproj" ReplaceParameters="true">
+      <Folder Name="VisualWebPart1" TargetFolderName="VisualWebPart1">
+        <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="SharePointProjectItem.spdata">VisualWebPart1.spdata</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="false">VisualWebPart1.webpart</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="false">Elements.xml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="true">VisualWebPart1.ascx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="false">VisualWebPart1.ascx.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Features" TargetFolderName="Features">
+        <Folder Name="Feature1" TargetFolderName="Feature1">
+          <ProjectItem ReplaceParameters="true" TargetFileName="Feature1.feature">Feature.feature</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Feature1.Template.xml">feature.xml</ProjectItem>
+        </Folder>
+      </Folder>
+      <Folder Name="Package" TargetFolderName="Package">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Package.package">Package.package</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Package.Template.xml">manifest.xml</ProjectItem>
+      </Folder>
+    </Project>
+    <CustomParameters>
+      <CustomParameter Name="$rootnamespace$" Value="$safeprojectname$"/>
+      <CustomParameter Name="$fileinputname$" Value="VisualWebPart1"/>
+      <CustomParameter Name="$webparturl$" Value="$projectname$_VisualWebPart1.webpart"/>
+      <CustomParameter Name="$import_error_message$" Value="$Resources:core,ImportErrorMessage;"/>
+      <CustomParameter Name="$webpart_title$" Value="$projectname$ - VisualWebPart1"/>
+      <CustomParameter Name="$ProjectItemName$" Value="VisualWebPart1"/>
+      <CustomParameter Name="$subnamespace$" Value="VisualWebPart1"/>
+      <CustomParameter Name="$loc_webpart_description$" _locID="$loc_webpart_description$" _locAttrData="Value" Value="我的可视 Web 部件"/>
+      <CustomParameter Name="$loc_feature_description$" _locID="$loc_feature_description$" _locAttrData="Value" Value="我的可视 Web 部件功能"/>
+      <CustomParameter Name="$loc_constructor_comment1$" _locID="$loc_constructor_comment1$" _locAttrData="Value" Value="仅当使用检测方法进行性能分析时才取消注释以下 SecurityPermission"/>
+      <CustomParameter Name="$loc_constructor_comment2$" _locID="$loc_constructor_comment2$" _locAttrData="Value" Value="特性，然后在代码准备进行生产时移除 SecurityPermission"/>
+      <CustomParameter Name="$loc_constructor_comment3$" _locID="$loc_constructor_comment3$" _locAttrData="Value" Value="特性。因为 SecurityPermission 特性会绕过针对您的构造函数的调用方的"/>
+      <CustomParameter Name="$loc_constructor_comment4$" _locID="$loc_constructor_comment4$" _locAttrData="Value" Value="安全检查，不建议将它用于生产。"/>
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.WebPartProjectWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

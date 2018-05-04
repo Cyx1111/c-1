@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <_locDefinition xmlns="urn:locstudio">
+    <_locDefault _loc="locNone"/>
+    <_locTag _loc="locData">Title</_locTag>
+    <_locTag _loc="locData">Description</_locTag>
+    <_locTag _loc="locData">Author</_locTag>
+    <_locTag _loc="locData">ToolTip</_locTag>
+  </_locDefinition>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>创建多语句表函数</Title>
+      <Shortcut></Shortcut>
+      <Description>创建多语句表函数。</Description>
+      <Author>Microsoft Corporation</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>SchemaName</ID>
+          <ToolTip>架构名称</ToolTip>
+          <Default>dbo</Default>
+        </Literal>
+        <Literal>
+          <ID>FunctionName</ID>
+          <ToolTip>函数名称</ToolTip>
+          <Default>FunctionName</Default>
+        </Literal>
+        <Literal>
+          <ID>Param1</ID>
+          <ToolTip>输入参数的名称</ToolTip>
+          <Default>param1</Default>
+        </Literal>
+        <Literal>
+          <ID>Datatype_Param1</ID>
+          <ToolTip>输入参数的数据类型</ToolTip>
+          <Default>int</Default>
+        </Literal>
+        <Literal>
+          <ID>Param2</ID>
+          <ToolTip>输入参数的名称</ToolTip>
+          <Default>param2</Default>
+        </Literal>
+        <Literal>
+          <ID>Datatype_Param2</ID>
+          <ToolTip>输入参数的数据类型</ToolTip>
+          <Default>char(5)</Default>
+        </Literal>
+        <Literal>
+          <ID>Column1</ID>
+          <ToolTip>列名称</ToolTip>
+          <Default>c1</Default>
+        </Literal>
+        <Literal>
+          <ID>Datatype_Column1</ID>
+          <ToolTip>列的数据类型</ToolTip>
+          <Default>int</Default>
+        </Literal>
+        <Literal>
+          <ID>Column2</ID>
+          <ToolTip>列名称</ToolTip>
+          <Default>c2</Default>
+        </Literal>
+        <Literal>
+          <ID>Datatype_Column2</ID>
+          <ToolTip>列的数据类型</ToolTip>
+          <Default>char(5)</Default>
+        </Literal>
+        <Literal>
+          <ID>TableName</ID>
+          <ToolTip>表名称</ToolTip>
+          <Default>SampleTable</Default>
+        </Literal>
+        <Literal>
+          <ID>TableVarName</ID>
+          <ToolTip>函数返回的表变量的名称</ToolTip>
+          <Default>returntable</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="SQL_SSDT">
+        <![CDATA[
+CREATE FUNCTION [$SchemaName$].[$FunctionName$]
+(
+    @$Param1$ $Datatype_Param1$,
+    @$Param2$ $Datatype_Param2$
+)
+RETURNS @$TableVarName$ TABLE 
+(
+    [$Column1$] $Datatype_Column1$,
+    [$Column2$] $Datatype_Column2$
+)
+AS
+BEGIN
+    INSERT @$TableVarName$
+    SELECT @$Param1$, @$Param2$
+    RETURN 
+END
+]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

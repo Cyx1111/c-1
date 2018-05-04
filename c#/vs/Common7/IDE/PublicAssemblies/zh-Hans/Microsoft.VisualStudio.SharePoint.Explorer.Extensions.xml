@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.VisualStudio.SharePoint.Explorer.Extensions</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ExtensionNodeTypes">
+      <summary>为表示 SharePoint 网站上各个组件的内置“服务器资源管理器”节点（如表示列表、字段或内容类型的节点）定义 ID。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ExtensionNodeTypes.ContentTypeNode">
+      <summary>为表示 Microsoft.SharePoint.SPContentType 的节点指定 ID。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ExtensionNodeTypes.FeatureNode">
+      <summary>为表示 Microsoft.SharePoint.SPFeature 的节点指定 ID。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ExtensionNodeTypes.FieldNode">
+      <summary>为表示附加到内容类型或列表的 Microsoft.SharePoint.SPField 的节点指定 ID。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ExtensionNodeTypes.ListNode">
+      <summary>为表示 Microsoft.SharePoint.SPList 的节点指定 ID。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ExtensionNodeTypes.ListTemplateNode">
+      <summary>为表示 Microsoft.SharePoint.SPListTemplate 的节点指定 ID。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ExtensionNodeTypes.ListViewNode">
+      <summary>为表示 Microsoft.SharePoint.SPView 的节点指定 ID。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ExtensionNodeTypes.WorkflowAssociationNode">
+      <summary>为表示 Microsoft.SharePoint.Workflow.SPWorkflowAssociation 的节点指定 ID。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ExtensionNodeTypes.WorkflowTemplateNode">
+      <summary>为表示 Microsoft.SharePoint.Workflow.SPWorkflowTemplate 的节点指定 ID。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.FeatureScope">
+      <summary>指定“服务器资源管理器”节点表示的 Microsoft.SharePoint.SPFeature 的范围。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.FeatureScope.Web">
+      <summary>节点表示具有 Web 级别范围的功能。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.FeatureScope.Site">
+      <summary>节点表示具有站点级别范围的功能。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.FeatureScope.WebApplication">
+      <summary>节点表示具有 Web 应用程序级别范围的功能。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.FeatureScope.Farm">
+      <summary>节点表示具有服务器场级别范围的功能。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IContentTypeNodeInfo">
+      <summary>提供有关由“服务器资源管理器”中节点表示的内容类型（即 Microsoft.SharePoint.SPContentType）的信息。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IContentTypeNodeInfo.Name">
+      <summary>获取内容类型的名称。</summary>
+      <returns>内容类型的名称。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFeatureNodeInfo">
+      <summary>提供有关由“服务器资源管理器”中节点表示的功能（即 Microsoft.SharePoint.SPFeature）的信息。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFeatureNodeInfo.Id">
+      <summary>获取功能的 ID。</summary>
+      <returns>功能的 ID。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFeatureNodeInfo.Name">
+      <summary>获取功能的名称。</summary>
+      <returns>功能的名称。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFeatureNodeInfo.Scope">
+      <summary>获取一个表示功能范围的 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.FeatureScope" /> 值。</summary>
+      <returns>功能的范围。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFieldNodeInfo">
+      <summary>提供有关由“服务器资源管理器”中节点表示的字段（即 Microsoft.SharePoint.SPField）的信息。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFieldNodeInfo.ContentTypeName">
+      <summary>获取与字段关联的内容类型的名称（如果有）。</summary>
+      <returns>与字段关联的内容类型的名称</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFieldNodeInfo.Id">
+      <summary>获取字段的 ID。</summary>
+      <returns>字段的 ID。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFieldNodeInfo.IsHidden">
+      <summary>获取一个指示是否隐藏字段的值。</summary>
+      <returns>如果隐藏字段，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFieldNodeInfo.ListId">
+      <summary>获取与字段关联的列表的 ID（如果有）。</summary>
+      <returns>与字段关联的列表的 ID。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFieldNodeInfo.Title">
+      <summary>获取字段名。</summary>
+      <returns>字段名。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListNodeInfo">
+      <summary>提供有关由“服务器资源管理器”中节点表示的列表（即 Microsoft.SharePoint.SPList）的信息。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListNodeInfo.Category">
+      <summary>获取一个 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ListCategory" /> 值，该值指定列表所属的类别。</summary>
+      <returns>列表所属的类别。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListNodeInfo.DefaultViewUrl">
+      <summary>获取列表的默认视图的 URL。</summary>
+      <returns>列表的默认视图的 URL。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListNodeInfo.Id">
+      <summary>获取列表的 ID。</summary>
+      <returns>列表的 ID。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListNodeInfo.IsHidden">
+      <summary>获取一个指示是否隐藏列表的值。</summary>
+      <returns>如果隐藏列表，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListNodeInfo.Title">
+      <summary>获取列表的标题。</summary>
+      <returns>列表的标题。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListTemplateNodeInfo">
+      <summary>提供有关由“服务器资源管理器”中节点表示的列表模板（即 Microsoft.SharePoint.SPListTemplate）的信息。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListTemplateNodeInfo.Category">
+      <summary>获取一个 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ListTemplateCategory" /> 值，该值指定列表模板所属的类别。</summary>
+      <returns>列表模板所属的类别。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListTemplateNodeInfo.IsHidden">
+      <summary>获取一个指示是否隐藏列表模板的值。</summary>
+      <returns>如果隐藏列表模板，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListTemplateNodeInfo.Name">
+      <summary>获取列表模板的名称。</summary>
+      <returns>列表模板的名称。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListViewNodeInfo">
+      <summary>提供有关由“服务器资源管理器”中节点表示的列表视图（即 Microsoft.SharePoint.SPView）的信息。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListViewNodeInfo.Id">
+      <summary>获取视图的 ID。</summary>
+      <returns>视图的 ID。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListViewNodeInfo.ListId">
+      <summary>获取与视图相关联的 Microsoft.SharePoint.SPList 的 ID。</summary>
+      <returns>与视图相关联的 Microsoft.SharePoint.SPList 的 ID。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListViewNodeInfo.Text">
+      <summary>获取视图的文本。</summary>
+      <returns>视图的文本。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListViewNodeInfo.Url">
+      <summary>获取视图的 URL。</summary>
+      <returns>视图的 URL。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IWorkflowAssociationNodeInfo">
+      <summary>提供有关由“服务器资源管理器”中节点表示的工作流关联（即 Microsoft.SharePoint.Workflow.SPWorkflowAssociation）的信息。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IWorkflowAssociationNodeInfo.Id">
+      <summary>获取工作流关联的 ID。</summary>
+      <returns>工作流关联的 ID。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IWorkflowAssociationNodeInfo.ListId">
+      <summary>获取 Microsoft.SharePoint.Workflow.SPWorkflowAssociation 附加到的 Microsoft.SharePoint.SPList 的 ID。</summary>
+      <returns>Microsoft.SharePoint.Workflow.SPWorkflowAssociation 附加到的 Microsoft.SharePoint.SPList 的 ID。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IWorkflowAssociationNodeInfo.Name">
+      <summary>获取工作流关联的名称。</summary>
+      <returns>工作流关联的名称。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IWorkflowTemplateNodeInfo">
+      <summary>提供有关由“服务器资源管理器”中节点表示的工作流模板（即 Microsoft.SharePoint.Workflow.SPWorkflowTemplate）的信息。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IWorkflowTemplateNodeInfo.Id">
+      <summary>获取工作流模板的 ID。</summary>
+      <returns>工作流模板的 ID。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ListCategory">
+      <summary>指定“服务器资源管理器”节点表示的 Microsoft.SharePoint.SPList 的类别。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ListCategory.DocumentLibrary">
+      <summary>节点表示文档库。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ListCategory.List">
+      <summary>节点表示列表。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ListTemplateCategory">
+      <summary>指定“服务器资源管理器”节点表示的 Microsoft.SharePoint.SPListTemplate 的类别。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ListTemplateCategory.Other">
+      <summary>节点表示“网页”类别的列表模板。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ListTemplateCategory.Libraries">
+      <summary>节点表示“库”类别的列表模板。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ListTemplateCategory.Communications">
+      <summary>节点表示“通信”类别的列表模板。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ListTemplateCategory.Tracking">
+      <summary>节点表示“跟踪”类别的列表模板。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ListTemplateCategory.CustomLists">
+      <summary>节点表示“自定义列表”类别的列表模板。</summary>
+    </member>
+  </members>
+</doc>

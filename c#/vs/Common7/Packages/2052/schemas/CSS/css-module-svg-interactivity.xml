@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="SVG Interactivity" standard-reference="http://www.w3.org/TR/SVG11/interact.html" status="REC" pub-date="2011-08-16">
+
+  <CssProperty _locID="pointer-events" _locAttrData="description" version="3.0" restriction="enum" description="允许作者控制某个特定图形元素在何种情况(如果有)下可成为鼠标事件的目标。" standard-reference="http://www.w3.org/TR/SVG11/interact.html#PointerEventsProperty">
+
+    <entry value="none"/>
+    <entry value="visiblePainted"/>
+    <entry value="visibleFill"/>
+    <entry value="visibleStroke"/>
+    <entry value="visible"/>
+    <entry value="painted"/>
+    <entry value="fill"/>
+    <entry value="stroke"/>
+    <entry value="all"/>
+  </CssProperty>
+
+</CssModule>

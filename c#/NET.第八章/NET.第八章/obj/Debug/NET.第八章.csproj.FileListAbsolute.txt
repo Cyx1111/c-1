@@ -1,0 +1,9 @@
+F:\C#\NET.第八章\NET.第八章\bin\Debug\NET.第八章.exe.config
+F:\C#\NET.第八章\NET.第八章\bin\Debug\NET.第八章.exe
+F:\C#\NET.第八章\NET.第八章\bin\Debug\NET.第八章.pdb
+F:\C#\NET.第八章\NET.第八章\obj\Debug\NET.第八章.exe
+F:\C#\NET.第八章\NET.第八章\obj\Debug\NET.第八章.pdb
+F:\C#\NET.第八章\NET.第八章\obj\Debug\NET.第八章.csprojResolveAssemblyReference.cache
+F:\C#\NET.第八章\NET.第八章\obj\Debug\NET.第八章.Treeview.resources
+F:\C#\NET.第八章\NET.第八章\obj\Debug\NET.第八章.csproj.GenerateResource.Cache
+F:\C#\NET.第八章\NET.第八章\obj\Debug\NET.第八章.Form1.resources

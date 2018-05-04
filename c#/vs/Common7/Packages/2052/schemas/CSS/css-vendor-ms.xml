@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Microsoft Extensions" standard-reference="http://msdn.microsoft.com/en-us/ie/gg192966.aspx" pub-date="2012-02-23">
+
+  <CssAtDirective name="-ms-viewport" version="3.0" browsers="IE10" include-root-properties="false" include-root-directives="false" syntax="@$(name) { width: device-width; }" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh868813.aspx">
+
+    <CssProperty ref="width">
+      <entry value="device-width"/>
+      <entry value="device-height"/>
+    </CssProperty>
+
+    <CssProperty ref="height">
+      <entry value="device-width"/>
+      <entry value="device-height"/>
+    </CssProperty>
+  </CssAtDirective>
+
+  <CssPseudo name="::-ms-browse" _locID="ms-browse-pseudo-element" _locAttrData="description" version="3.0" browsers="IE10" description="将一个或多个样式应用于输入类型为文件控件的浏览按钮。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh779844.aspx"/>
+  
+  <CssPseudo name="::-ms-check" _locID="ms-check-pseudo-element" _locAttrData="description" version="3.0" browsers="IE10" description="将一个或多个样式应用于复选框和单选按钮输入控件的选中。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh465739.aspx"/>
+
+  <CssPseudo name="::-ms-clear" _locID="ms-clear-pseudo-element" _locAttrData="description" version="3.0" browsers="IE10" description="当文本输入控件的输入区域不包含任何内容时，将一个或多个样式应用于该区域。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh465740.aspx"/>
+
+  <CssPseudo name="::-ms-expand" _locID="ms-expand-pseudo-element" _locAttrData="description" version="3.0" browsers="IE10" description="将一个或多个样式应用于选择控件的下拉按钮。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh465742.aspx"/>
+
+  <CssPseudo name="::-ms-fill" _locID="ms-fill-pseudo-element" _locAttrData="description" version="3.0" browsers="IE10" description="将一个或多个样式应用于进度条的条部分。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh465757.aspx"/>
+
+  <CssPseudo name="::-ms-fill-lower" _locID="ms-fill-lower-pseudo-element" _locAttrData="description" version="3.0" browsers="IE10" description="将一个或多个样式应用于滑块轨道中从其最小值直至 Thumb 当前选择的值的部分。在从左到右的布局中，这是滑块轨道在 Thumb 左侧的部分。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh465745.aspx"/>
+
+  <CssPseudo name="::-ms-fill-upper" _locID="ms-fill-upper-pseudo-element" _locAttrData="description" version="3.0" browsers="IE10" description="将一个或多个样式应用于滑块轨道中从 Thumb 当前选择的值直至滑块的最大值的部分。在从左到右的布局中，这是滑块轨道在 Thumb 右侧的部分。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh465748.aspx"/>
+
+  <CssPseudo name="::-ms-reveal" _locID="ms-reveal-pseudo-element" _locAttrData="description" version="3.0" browsers="IE10" description="将一个或多个样式应用于输入类型为密码控件的密码显示按钮。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh465773.aspx"/>
+
+  <CssPseudo name="::-ms-thumb" _locID="ms-thumb-pseudo-element" _locAttrData="description" version="3.0" browsers="IE10" description="将一个或多个样式应用于用户拖动的范围输入控件(也称为滑块控件)的部分。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh465780.aspx"/>
+
+  <CssPseudo name="::-ms-ticks-after" _locID="ms-ticks-after-pseudo-element" _locAttrData="description" version="3.0" browsers="IE10" description="将一个或多个样式应用于滑块中从 Thumb 之后开始直至滑块的最大值的刻度线。在从左到右的布局中，这些是 Thumb 右侧的刻度。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh465789.aspx"/>
+
+  <CssPseudo name="::-ms-ticks-before" _locID="ms-ticks-before-pseudo-element" _locAttrData="description" version="3.0" browsers="IE10" description="将一个或多个样式应用于滑块中表示其最小值直至 Thumb 当前选择的值的刻度线。在从左到右的布局中，这些是 Thumb 左侧的刻度。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh465796.aspx"/>
+
+  <CssPseudo name="::-ms-tooltip" _locID="ms-tooltip-pseudo-element" _locAttrData="description" version="3.0" browsers="IE10" description="将一个或多个样式应用于滑块(输入类型为范围)的工具提示。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh465805.aspx"/>
+
+  <CssPseudo name="::-ms-track" _locID="ms-track-pseudo-element" _locAttrData="description" version="3.0" browsers="IE10" description="将一个或多个样式应用于滑块的轨道。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh465813.aspx"/>
+
+  <CssPseudo name="::-ms-value" _locID="ms-value-pseudo-element" _locAttrData="description" version="3.0" browsers="IE10" description="将一个或多个样式应用于文本/密码输入控件或选择控件的内容。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh465820.aspx"/>
+
+  <CssPseudo name=":-ms-lang(en)" _locID="lang-pseudo-function" _locAttrData="description" version="3.0" browsers="IE10" syntax="html:-ms-lang(en) { color: blue; }" description="pseudo-class :-ms-lang(C) 表示 C 语言中的元素。" standard-reference="http://www.w3.org/TR/css3-selectors/#lang-pseudo"/>
+
+  <CssPseudo name=":-ms-input-placeholder" version="3.0" browsers="IE10" syntax="input:-ms-input-placeholder { color: red; }" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh767367.aspx"/>
+
+  <CssPseudo name=":-ms-keyboard-active" version="3.0" browsers="IE10" syntax="input:-ms-keyboard-active { background: red; }" standard-reference="#NoOnlineDocs"/>
+
+  <CssProperty _locID="zoom" _locAttrData="description" version="3.0" browsers="IE6,S4" restriction="enum, integer, number, percentage" syntax=".example { $(name): 1; }" description="设置或检索对象的放大比例。" standard-reference="http://msdn.microsoft.com/en-us/ie/gg192966.aspx">
+
+    <entry value="normal"/>
+  </CssProperty>
+
+  <CssProperty name="-ms-zoom" ref="zoom" browsers="IE8"/>
+
+  <CssProperty _locID="filter" _locAttrData="description" version="3.0" browsers="IE6-9" restriction="" syntax="div { $(name): alpha(opacity = 50); }" description="仅限于 IE。用于生成视觉效果。" standard-reference="http://msdn.microsoft.com/en-us/ie/gg192966.aspx"/>
+
+  <CssProperty name="-ms-filter" ref="filter" restriction="string" syntax="div { $(name): 'alpha(opacity = 50)'; }" browsers="IE8-9"/>
+
+  <CssProperty _locID="behavior" _locAttrData="description" version="3.0" browsers="IE6" type="url" restriction="url" syntax="div { $(name): url(http://example.com/png_fix.htc); }" description="仅限于 IE。用于扩展浏览器的行为" standard-reference="http://msdn.microsoft.com/en-us/ie/gg192966.aspx"/>
+
+  <CssProperty name="-ms-behavior" ref="behavior" browsers="IE8"/>
+
+  <CssProperty _locID="-ms-accelerator" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="u { $(name): true; }" description="仅限于 IE。可以在按下 Alt 键前关闭快捷键的系统下划线" standard-reference="http://www.css3.com/css-accelerator/">
+
+    <entry _locID="-ms-accelerator_true" _locAttrData="description" value="true" description="该元素包含一个快捷键序列。"/>
+    <entry _locID="-ms-accelerator_false" _locAttrData="description" value="false" description="该元素不包含快捷键序列。"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-line-break" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="p { $(name): strict; }" description="指定哪一组换行限制在元素中有效。" standard-reference="http://www.w3.org/TR/css3-text/#line-break0">
+
+    <entry _locID="-ms-line-break_auto" _locAttrData="description" value="auto" description="UA 确定要用于 CJK 文字的一组换行限制，它可能根据行的长度更改这些限制；例如，对于较短的行，则使用限制性较低的一组换行规则。"/>
+    <entry _locID="-ms-line-break_newspaper" _locAttrData="description" value="newspaper" description="使用限制最少的一组换行规则为 CJK 文字换行。通常用于较短的行，如报纸中。"/>
+    <entry _locID="-ms-line-break_normal" _locAttrData="description" value="normal" description="使用一组正常的换行规则为 CJK 文字换行。"/>
+    <entry _locID="-ms-line-break_strict" _locAttrData="description" value="strict" description="使用限制性高于“normal”的一组换行规则进行 CJK 文字换行。"/>
+    <entry _locID="-ms-line-break_keep-all" _locAttrData="description" value="keep-all" description="CJK 字符的序列不能再在暗示的换行点处换行。此选项只应在词分隔符的存在仍会产生换行机会(如在朝鲜语中)的情况下使用。"/>
+  </CssProperty>
+
+  <!-- Text -->
+
+  <CssProperty _locID="-ms-text-overflow" ref="text-overflow" browsers="IE10"/>
+
+  <CssProperty _locID="-ms-text-underline-position" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): auto; }" description="设置在同一元素上指定的下划线的位置: 该位置不影响上级元素指定的下划线。此属性一般用于垂直书写的上下文(如日语文档)，其中，通常要求让下划线显示在受影响的文本的“上方”(右侧)" standard-reference="http://www.w3.org/TR/css3-text/#text-underline-position0">
+
+    <entry _locID="-ms-text-underline-position_auto" _locAttrData="description" value="auto" description="用户代理可使用任何算法来确定下划线的位置。在水平行布局中，下划线应针对字母对齐。在垂直行布局中，如果语言设置为日语或朝鲜语，则下划线应针对上方对齐。"/>
+    <entry _locID="-ms-text-underline-position_under" _locAttrData="description" value="under" description="下划线与元素的 em 框的下边缘(垂直书写模式下的左边缘)对齐。在这种情况下，下划线通常不会穿过下行字母。这有时称为“记账”下划线。"/>
+    <entry _locID="-ms-text-underline-position_alphabetic" _locAttrData="description" value="alphabetic" description="下划线与字母基线对齐。在这种情况下，下划线可能穿过一些下行字母。"/>
+    <entry _locID="-ms-text-underline-position_over" _locAttrData="description" value="over" description="下划线与元素的 em 框的边缘(垂直书写模式下的右边缘)对齐。在此模式下，上划线还会换侧。"/>
+  </CssProperty>
+
+  <CssProperty name="-ms-word-wrap" ref="word-wrap" version="3.0" browsers="IE8"/>
+
+  <CssProperty _locID="-ms-word-break" ref="word-break" browsers="IE8"/>
+
+  <CssProperty _locID="-ms-text-align-last" ref="text-align-last" browsers="IE8"/>
+
+  <CssProperty _locID="-ms-text-justify" ref="text-justify" browsers="IE8"/>
+
+  <CssProperty _locID="-ms-text-autospace" _locAttrData="description" version="3.0" browsers="IE8" restriction="enum" syntax="div { $(name): ideograph-numeric; }" description="确定在全宽标点符号字符显示在一行的开头时是否应剪裁它，以使其“墨迹”与上面和下面的行中的第一个字形对齐。" standard-reference="http://www.w3.org/TR/css3-text/#text-autospace">
+
+    <entry _locID="-ms-text-autospace_none" _locAttrData="description" value="none" description="不创建额外的空间。"/>
+    <entry _locID="-ms-text-autospace_ideograph-numeric" _locAttrData="description" value="ideograph-numeric" description="在一连串象形字母和数字字形之间创建 1/4em 的额外间距。"/>
+    <entry _locID="-ms-text-autospace_ideograph-alpha" _locAttrData="description" value="ideograph-alpha" description="在一连串象形字母和非象形字母(如拉丁字母、西里尔字母、希腊字母、阿拉伯字母或希伯来字母)之间创建 1/4em 的额外间距。"/>
+    <entry _locID="-ms-text-autospace_ideograph-space" _locAttrData="description" value="ideograph-space" description="扩展由象形文字围绕的空白字符的宽度。"/>
+    <entry _locID="-ms-text-autospace_ideograph-parenthesis" _locAttrData="description" value="ideograph-parenthesis" description="在正常(非宽)括号与象形文字之间创建额外的间距。"/>
+    <entry _locID="-ms-text-autospace_punctuation" _locAttrData="description" value="punctuation" description="根据特定于语言的排字约定的要求，创建额外的围绕标点的非换行间距。"/>
+  </CssProperty>
+
+  <!-- 3D transforms -->
+
+  <CssProperty name="-ms-transform" ref="transform" browsers="IE9-9"/>
+
+  <CssProperty name="-ms-transform-origin" ref="transform-origin" browsers="IE9-9"/>
+
+  <CssProperty _locID="-ms-transform-origin-x" _locAttrData="description" version="3.0" browsers="IE10" restriction="length, percentage" description="应用于某个元素的转换原点的 x 坐标(相对于其边框)。" standard-reference="http://www.w3.org/TR/css3-3d-transforms/#transform-origin"/>
+
+  <CssProperty _locID="-ms-transform-origin-y" _locAttrData="description" version="3.0" browsers="IE10" restriction="length, percentage" description="应用于某个元素的转换原点的 y 坐标(相对于其边框)。" standard-reference="http://www.w3.org/TR/css3-3d-transforms/#transform-origin"/>
+
+  <CssProperty _locID="-ms-transform-origin-z" _locAttrData="description" version="3.0" browsers="IE10" restriction="length, percentage" description="应用于某个元素的转换原点的 z 坐标(相对于其边框)。" standard-reference="http://www.w3.org/TR/css3-3d-transforms/#transform-origin"/>
+
+  <CssProperty _locID="-ms-block-progression" _locAttrData="description" version="3.0" browsers="IE8" restriction="enum" syntax="div { $(name): bt; }" description="“block-progression”属性设置 block-progression 值和流方向" standard-reference="http://www.w3.org/TR/2003/CR-css3-text-20030514/#Progression">
+
+    <entry value="tb"/>
+    <entry value="rl"/>
+    <entry value="lr"/>
+    <entry _locID="-ms-block-progression_bt" _locAttrData="description" value="bt" description="从下到上的块流。布局为水平方向。"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-writing-mode" _locAttrData="description" version="3.0" browsers="IE8" restriction="enum" syntax="span { $(name): lr-tb; }" description="这是“direction”和“block-progression”的速记属性。" standard-reference="http://www.w3.org/TR/2003/CR-css3-text-20030514/#writing-mode">
+
+    <entry value="lr-tb"/>
+    <entry value="tb-rl"/>
+    <entry value="rl-tb"/>
+    <entry value="bt-rl"/>
+    <entry value="tb-lr"/>
+    <entry value="bt-lr"/>
+    <entry value="lr-bt"/>
+    <entry value="rl-bt"/>
+  </CssProperty>
+
+
+
+  <!-- Grid Alignment -->
+
+  <CssProperty _locID="display">
+    <entry _locID="display_-ms-grid" _locAttrData="description" value="-ms-grid" version="3.0" browsers="IE10" description="grid 值将使元素显示为块级别的网格元素。"/>
+    <entry _locID="display_-ms-inline-grid" _locAttrData="description" value="-ms-inline-grid" version="3.0" browsers="IE10" description="inline-grid 值将使元素显示为内联级别的网格元素。"/>
+    <entry value="-ms-flexbox" browsers="IE10"/>
+    <entry value="-ms-inline-flexbox" browsers="IE10"/>
+  </CssProperty>
+
+  <CssProperty name="-ms-grid-column" ref="grid-column" browsers="IE10"/>
+
+  <CssProperty name="-ms-grid-column-align" ref="grid-column-align" browsers="IE10"/>
+
+  <CssProperty name="-ms-grid-columns" ref="grid-columns" browsers="IE10"/>
+
+  <CssProperty name="-ms-grid-column-span" ref="grid-column-span" browsers="IE10"/>
+
+  <CssProperty name="-ms-grid-row" ref="grid-row" browsers="IE10"/>
+
+  <CssProperty name="-ms-grid-row-align" ref="grid-row-align" browsers="IE10"/>
+
+  <CssProperty name="-ms-grid-rows" ref="grid-rows" browsers="IE10"/>
+
+  <CssProperty name="-ms-grid-row-span" ref="grid-row-span" browsers="IE10"/>
+
+  <CssProperty _locID="-ms-grid-layer" _locAttrData="description, syntax" version="3.0" browsers="IE10" restriction="integer" syntax="div { $(name):2; }" description="grid-layer 在概念上与 z-index 相似，但是避免重载 z-index 属性的含义，这仅适用于定位元素。" standard-reference="http://www.w3.org/TR/2011/WD-css3-grid-layout-20110407/#grid-layer"/>
+
+  <!-- Flex box-->
+
+  <CssProperty _locID="-ms-flex" ref="flex" browsers="IE10"/>
+  
+  <CssProperty _locID="-ms-flex-align" ref="flex-align" browsers="IE10"/>
+
+  <CssProperty _locID="-ms-flex-direction" ref="flex-direction" browsers="IE10"/>
+
+  <CssProperty _locID="-ms-flex-flow" ref="flex-flow" browsers="IE10"/>
+
+  <CssProperty _locID="-ms-flex-order" ref="flex-order" browsers="IE10"/>
+
+  <CssProperty _locID="-ms-flex-pack" ref="flex-pack" browsers="IE10"/>
+
+  <CssProperty _locID="-ms-flex-wrap" ref="flex-wrap" browsers="IE10"/>
+
+  <CssProperty _locID="-ms-flex-item-align" ref="flex-item-align" browsers="IE10"/>
+
+  <CssProperty _locID="-ms-flex-line-pack" ref="flex-line-pack" browsers="IE10"/>
+
+  <!-- Scrollbar -->
+
+  <CssProperty _locID="scrollbar-arrow-color" _locAttrData="description" version="3.0" browsers="IE6" restriction="color" type="color" syntax="body { $(name): #00ffff; }" description="确定滚动箭头的箭头元素的颜色。" standard-reference="http://msdn.microsoft.com/en-us/library/ms531154(VS.85).aspx"/>
+
+  <CssProperty _locID="scrollbar-3dlight-color" _locAttrData="description" version="3.0" browsers="IE6" restriction="color" type="color" syntax="textarea { $(name): #00ffff; }" description="确定滚动条的滚动框和滚动箭头的上边缘和左边缘的颜色。" standard-reference="http://msdn.microsoft.com/en-us/library/ms531153(VS.85).aspx"/>
+
+  <CssProperty _locID="scrollbar-base-color" _locAttrData="description" version="3.0" browsers="IE6" restriction="color" type="color" syntax="textarea { $(name): #00ffff; }" description="确定滚动条的主要元素(包括滚动框、轨道和滚动箭头)的颜色。" standard-reference="http://msdn.microsoft.com/en-us/library/ms531155(VS.85).aspx"/>
+
+  <CssProperty _locID="scrollbar-darkshadow-color" _locAttrData="description" version="3.0" browsers="IE6" restriction="color" type="color" syntax="textarea { $(name): #00ffff; }" description="确定滚动条的槽的颜色。" standard-reference="http://msdn.microsoft.com/en-us/library/ms531156(v=VS.85).aspx"/>
+
+  <CssProperty _locID="scrollbar-face-color" _locAttrData="description" version="3.0" browsers="IE6" restriction="color" type="color" syntax="textarea { $(name): #00ffff; }" description="确定滚动条的滚动框和滚动箭头的颜色。" standard-reference="http://msdn.microsoft.com/en-us/library/ms531157(VS.85).aspx"/>
+
+  <CssProperty _locID="scrollbar-highlight-color" _locAttrData="description" version="3.0" browsers="IE6" restriction="color" type="color" syntax="textarea { $(name): #00ffff; }" description="确定滚动条的滚动框和滚动箭头的上边缘和左边缘的颜色。" standard-reference="http://msdn.microsoft.com/en-us/library/ms531158(VS.85).aspx"/>
+
+  <CssProperty _locID="scrollbar-shadow-color" _locAttrData="description" version="3.0" browsers="IE6" restriction="color" type="color" syntax="textarea { $(name): #00ffff; }" description="确定滚动条的滚动框和滚动箭头的下边缘和右边缘的颜色。" standard-reference="http://msdn.microsoft.com/en-us/library/ms531159(VS.85).aspx"/>
+
+  <CssProperty _locID="scrollbar-track-color" _locAttrData="description" version="3.0" browsers="IE6" restriction="color" type="color" syntax="textarea { $(name): #00ffff; }" description="确定滚动条的轨道元素的颜色。" standard-reference="http://msdn.microsoft.com/en-us/library/ms531160(VS.85).aspx"/>
+
+  <CssProperty name="-ms-scrollbar-arrow-color" ref="scrollbar-arrow-color" browsers="IE8"/>
+
+  <CssProperty name="-ms-scrollbar-3dlight-color" ref="scrollbar-3dlight-color" browsers="IE8"/>
+
+  <CssProperty name="-ms-scrollbar-base-color" ref="scrollbar-base-color" browsers="IE8"/>
+
+  <CssProperty name="-ms-scrollbar-darkshadow-color" ref="scrollbar-darkshadow-color" browsers="IE8"/>
+
+  <CssProperty name="-ms-scrollbar-face-color" ref="scrollbar-face-color" browsers="IE8"/>
+
+  <CssProperty name="-ms-scrollbar-highlight-color" ref="scrollbar-highlight-color" browsers="IE8"/>
+
+  <CssProperty name="-ms-scrollbar-shadow-color" ref="scrollbar-shadow-color" browsers="IE8"/>
+
+  <CssProperty name="-ms-scrollbar-track-color" ref="scrollbar-track-color" browsers="IE8"/>
+
+  <CssProperty _locID="-ms-content-zooming" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): zoom; }" description="获取或设置一个值，该值指示是否启用缩放。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh441251.aspx">
+
+    <entry value="none"/>
+    <entry value="zoom"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-content-zoom-snap" _locAttrData="description" version="3.0" browsers="IE10" syntax="header { $(name): proximity; }" description="获取或设置一个速记值，该值用于设置 -ms-content-zoom-snap-type 和 -ms-content-zoom-snap-points 属性的值。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh441255.aspx">
+
+    <entry value="none"/>
+    <entry value="proximity"/>
+    <entry value="mandatory"/>
+    <entry value="snapInterval(100%, 100%)"/>
+    <entry value="snapList()"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-content-zoom-snap-type" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="header { $(name): proximity; }" description="获取或设置一个值，该值指示定义的对齐点对缩放的影响。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh441264.aspx">
+
+    <entry value="none"/>
+    <entry value="proximity"/>
+    <entry value="mandatory"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-content-zoom-snap-points" _locAttrData="description" version="3.0" browsers="IE10" description="获取或设置一个值，该值定义缩放对齐点的位置。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh441259.aspx">
+
+    <entry value="snapInterval(100%, 100%)"/>
+    <entry value="snapList()"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-content-zoom-chaining" _locAttrData="description" version="3.0" browsers="IE10" syntax="div { $(name): chained; }" description="获取或设置一个值，该值指示在用户在操作过程中点击内容边界时发生的缩放行为。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh441243.aspx">
+
+    <entry value="none"/>
+    <entry value="chained"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-content-zoom-limit" _locAttrData="description" version="3.0" browsers="IE10" restriction="percentage" syntax="div { $(name): 10%; }" description="获取或设置一个速记值，该值用于设置 -ms-content-zoom-limit-min 和 -ms-content-zoom-limit-max 属性的值。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh996912.aspx"/>
+
+  <CssProperty _locID="-ms-content-zoom-limit-min" _locAttrData="description" version="3.0" browsers="IE10" restriction="percentage" syntax="div { $(name): 10%; }" description="获取或设置一个值，该值指定 msContentZoomFactor 属性的最小值。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh996914.aspx"/>
+
+  <CssProperty _locID="-ms-content-zoom-limit-max" _locAttrData="description" version="3.0" browsers="IE10" restriction="percentage" syntax="div { $(name): 10%; }" description="获取或设置一个值，该值指定 msContentZoomFactor 属性的最大值。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh996913.aspx"/>
+
+  <CssProperty _locID="-ms-user-select" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): none; }" description="控制所选内容的外观。" standard-reference="http://ie.microsoft.com/testdrive/HTML5/msUserSelect/">
+
+    <entry value="none"/>
+    <entry value="text"/>
+    <entry value="element"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-flow-from" _locAttrData="description" version="3.0" browsers="IE10" restriction="identifier" syntax="div { $(name): identifier; }" description="获取或设置一个值，该值确定文档中接受来自数据源的内容流的 Connected Frame 容器。" standard-reference="http://www.w3.org/TR/css3-regions/#flow-from">
+
+    <entry value="none"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-flow-into" _locAttrData="description" version="3.0" browsers="IE10" restriction="identifier" syntax="div { $(name): identifier; }" description="获取或设置一个值，该值确定文档中充当 Connected Frame 数据源的 iframe 容器。" standard-reference="http://www.w3.org/TR/css3-regions/#flow-into">
+
+    <entry value="none"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-wrap-flow" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): maximum; }" description="当某个元素的“wrap-flow”属性具有“auto”以外的计算值时，该元素将成为排除项。" standard-reference="http://www.w3.org/TR/css3-exclusions/#wrap-flow-property">
+
+    <entry _locID="-ms-wrap-flow_auto" _locAttrData="description" value="auto" description="对于浮动内容，将创建排除区域；对于所有其他元素，将不创建排除区域。"/>
+    <entry _locID="-ms-wrap-flow_both" _locAttrData="description" value="both" description="内联流内容可在排除区域的所有侧面流动。"/>
+    <entry _locID="-ms-wrap-flow_start" _locAttrData="description" value="start" description="内联流内容可环绕排除区域的开始边缘，但必须将排除区域的结束边缘附近的区域保留为空。"/>
+    <entry _locID="-ms-wrap-flow_end" _locAttrData="description" value="end" description="内联流内容可环绕排除区域的结束侧，但必须将排除区域的开始边缘附近的区域保留为空。"/>
+    <entry _locID="-ms-wrap-flow_maximum" _locAttrData="description" value="maximum" description="内联流内容可环绕包含可为给定行提供最大可用空间的排除区域的一侧，但必须将排除区域的另一侧保留为空。"/>
+    <entry _locID="-ms-wrap-flow_clear" _locAttrData="description" value="clear" description="内联流内容只能环绕排除区域的顶部和底部，且必须将排除框的开始边缘和结束边缘附近的区域保留为空。"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-wrap-margin" _locAttrData="description" version="3.0" browsers="IE10" restriction="length, percentage" syntax="div { $(name): 20px; }" description="获取或设置一个值，该值用于从其他形状中偏移内部环绕形状。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh466103.aspx"/>
+
+  <CssProperty _locID="-ms-wrap-through" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): wrap; }" description="获取或设置一个值，该值指定内容应如何环绕排除元素。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh441290.aspx">
+
+    <entry _locID="-ms-wrap-through_wrap" _locAttrData="description" value="wrap" description="排除元素会继承其父节点的环绕上下文。其后代内联内容将环绕在该元素外部定义的排除区域。"/>
+    <entry _locID="-ms-wrap-through_none" _locAttrData="description" value="none" description="排除元素不会继承其父节点的环绕上下文。其后代仅受在该元素内部定义的排除形状的约束。"/>
+  </CssProperty>
+
+  <!-- Touch: Zooming and Panning  -->
+
+  <CssProperty _locID="-ms-scroll-boundary" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum, length" syntax="div { $(name): 10px 20px 20px 10px; }" description="获取或设置一个速记值，该值用于设置 -ms-scroll-boundary-top、-ms-scroll-boundary-right、-ms-scroll-boundary-bottom 和 -ms-scroll-boundary-left 属性的值。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh441308.aspx">
+
+    <entry value="auto"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-scroll-boundary-bottom" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum, length" syntax="div { $(name): 10px; }" description="获取或设置一个值，该值指定 scrollTop 属性的最大值。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh441318.aspx">
+
+    <entry value="auto"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-scroll-boundary-top" _locAttrData="description" version="3.0" browsers="IE10" restriction=" length" syntax="div { $(name): 10px; }" description="获取或设置一个值，该值指定 scrollTop 属性的最大值。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh465994.aspx"/>
+
+  <CssProperty _locID="-ms-scroll-boundary-left" _locAttrData="description" version="3.0" browsers="IE10" restriction="length" syntax="div { $(name): 10px; }" description="获取或设置一个值，该值指定 scrollLeft 属性的最大值。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh441328.aspx"/>
+
+  <CssProperty _locID="-ms-scroll-boundary-right" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum, length" syntax="div { $(name): 10px; }" description="获取或设置一个值，该值指定 scrollLeft 属性的最大值。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh441328.aspx">
+
+    <entry value="auto"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-scroll-chaining" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum, length" syntax="div { $(name): chained; }" description="获取或设置一个值，该值指示在用户在操作过程中点击内容边界时发生的滚动行为。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh466007.aspx">
+
+    <entry value="none"/>
+    <entry value="chained"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-scroll-rails" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum, length" syntax="div { $(name): railed; }" description="获取或设置一个值，该值指示垂直于移动主轴方向的小幅移动会导致 scrollTop 和 scrollLeft 属性同时更改还是会导致主轴更改(例如，scrollTop 或 scrollLeft 属性将会更改，但不是同时更改)。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh466018.aspx">
+
+    <entry value="none"/>
+    <entry value="railed"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-scroll-snap-points-x" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): snapInterval(100%, 100%); }" description="获取或设置一个值，该值定义对齐点在 X 轴上的位置。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh466031.aspx">
+
+    <entry value="snapInterval(100%, 100%)"/>
+    <entry value="snapList()"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-scroll-snap-points-y" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): snapInterval(100%, 100%); }" description="获取或设置一个值，该值定义对齐点在 Y 轴上的位置。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh466042.aspx">
+
+    <entry value="snapInterval(100%, 100%)"/>
+    <entry value="snapList()"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-scroll-snap-type" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): proximity; }" description="获取或设置一个值，该值定义应该用于当前元素的对齐点的类型。对齐点的类型有两种，二者的主要区别在于是否保证用户始终在某个对齐点上停止。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh466057.aspx">
+
+    <entry value="none"/>
+    <entry value="proximity"/>
+    <entry value="mandatory"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-scroll-snap-x" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): proximity snapInterval(100%, 100%); }" description="获取或设置一个速记值，该值用于设置 -ms-scroll-snap-type 和 -ms-scroll-snap-points-x 属性的值。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh466066.aspx">
+
+    <entry value="none"/>
+    <entry value="proximity"/>
+    <entry value="mandatory"/>
+    <entry value="snapInterval(100%, 100%)"/>
+    <entry value="snapList()"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-scroll-snap-y" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): proximity snapInterval(100%, 100%); }" description="获取或设置一个速记值，该值用于设置 -ms-scroll-snap-type 和 -ms-scroll-snap-points-y 属性的值。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh466078.aspx">
+
+    <entry value="none"/>
+    <entry value="proximity"/>
+    <entry value="mandatory"/>
+    <entry value="snapInterval(100%, 100%)"/>
+    <entry value="snapList()"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-scroll-limit-x-max" _locAttrData="description" version="3.0" browsers="IE10" restriction="length" syntax="div { $(name): auto; }" description="获取或设置一个值，该值指定 scrollLeft 属性的最大值。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh996919.aspx">
+
+    <entry value="auto"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-scroll-limit-x-min" _locAttrData="description" version="3.0" browsers="IE10" restriction="length" syntax="div { $(name): 5px; }" description="获取或设置一个值，该值指定 scrollLeft 属性的最小值。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh996920.aspx"/>
+
+  <CssProperty _locID="-ms-scroll-limit-y-max" _locAttrData="description" version="3.0" browsers="IE10" restriction="length" syntax="div { $(name): auto; }" description="获取或设置一个值，该值指定 scrollTop 属性的最大值。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh996921.aspx">
+
+    <entry value="auto"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-scroll-limit-y-min" _locAttrData="description" version="3.0" browsers="IE10" restriction="length" syntax="div { $(name): 5px; }" description="获取或设置一个值，该值指定 scrollTop 属性的最小值。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh996922.aspx"/>
+
+  <CssProperty _locID="-ms-scroll-limit" _locAttrData="description" version="3.0" browsers="IE10" restriction="length" description="获取或设置一个速记值，该值用于设置 -ms-scroll-limit-x-min、-ms-scroll-limit-y-min、-ms-scroll-limit-x-max 和 -ms-scroll-limit-y-max 属性的值。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh996918.aspx">
+
+    <entry value="auto"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-scroll-translation" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): vertical-to-horizontal; }" description="获取或设置一个值，该值指定指定元素上是否发生垂直到水平滚动轮转换。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh996917.aspx">
+
+    <entry value="none"/>
+    <entry value="vertical-to-horizontal"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-touch-action" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): manipulation double-tap-zoom; }" description="获取或设置一个值，该值指示用户是否能处理给定区域以及如何这样做。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/Hh767313.aspx">
+
+    <entry _locID="-ms-touch-action_auto" _locAttrData="description" value="auto" description="该元素是一个被动元素，并带有几个例外。"/>
+    <entry _locID="-ms-touch-action_none" _locAttrData="description" value="none" description="该元素是 manipulation-blocking 元素。"/>
+    <entry _locID="-ms-touch-action_manipulation" _locAttrData="description" value="manipulation" description="该元素是 manipulation-causing 元素。"/>
+    <entry _locID="-ms-touch-action_double-tap-zoom" _locAttrData="description" value="double-tap-zoom" description="该元素将在双击时缩放。"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-zoom-animation" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): none; }" description="获取或设置一个值，该值指示是否在缩放时使用动画。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh466117.aspx">
+
+    <entry value="default"/>
+    <entry value="none"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-overflow-style" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" description="指定当内容从元素的内容区域溢出时是否剪切内容。" syntax="p { $(name): scrollbar; }" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh441298.aspx">
+
+    <entry _locID="-ms-overflow-style_auto" _locAttrData="description" value="auto" description="无首选项，UA 应使用列表中它支持的第一种滚动方法。"/>
+    <entry _locID="-ms-overflow-style_scrollbar" _locAttrData="description" value="scrollbar" description="滚动条通常是在元素的一个或两个边缘上插入的窄条，它通常具有可用来单击的箭头和一个用于上下拖动(或左右拖动)的“Thumb”控件，以便移动元素内容。"/>
+    <entry _locID="-ms-overflow-style_none" _locAttrData="description" value="none" description="指示元素不显示滚动条或平移指示器，即使其内容溢出时也是如此。"/>
+    <entry _locID="-ms-overflow-style_autohiding-scrollbar" _locAttrData="description" value="-ms-autohiding-scrollbar" description="指示元素在鼠标交互过程中显示自动隐藏滚动条，在触摸和键盘交互过程中显示平移指示器。"/>
+  </CssProperty>
+
+  <CssProperty name="background">
+    <entry value="-ms-linear-gradient()" version="3.0" browsers="IE10"/>
+    <entry value="-ms-radial-gradient()" version="3.0" browsers="IE10"/>
+    <entry value="-ms-repeating-linear-gradient()" version="3.0" browsers="IE10"/>
+    <entry value="-ms-repeating-radial-gradient()" version="3.0" browsers="IE10"/>
+  </CssProperty>
+
+  <CssProperty name="background-image">
+    <entry value="-ms-linear-gradient()" version="3.0" browsers="IE10"/>
+    <entry value="-ms-radial-gradient()" version="3.0" browsers="IE10"/>
+    <entry value="-ms-repeating-linear-gradient()" version="3.0" browsers="IE10"/>
+    <entry value="-ms-repeating-radial-gradient()" version="3.0" browsers="IE10"/>
+  </CssProperty>
+
+  <CssProperty name="font-stretch">
+    <entry _locID="font-stretch_wider" _locAttrData="description" value="wider" browsers="IE10" description="指示相对于父元素的宽度更宽的值。"/>
+    <entry _locID="font-stretch_narrower" _locAttrData="description" value="narrower" browsers="IE10" description="指示相对于父元素的宽度更窄的值。"/>
+  </CssProperty>
+
+  <CssProperty _locID="background-position-x" _locAttrData="description" version="3.0" browsers="IE6" type="background-position" restriction="length, percentage" syntax="body { $(name): center; }" description="如果已指定背景图像，则此属性在其相应的背景定位区域内指定其初始位置(进行任何调整大小操作后)。" standard-reference="http://www.w3.org/TR/css3-background/#the-background-position"/>
+
+  <CssProperty _locID="background-position-y" _locAttrData="description" version="3.0" browsers="IE6" type="background-position" restriction="length, percentage" syntax="body { $(name): center; }" description="如果已指定背景图像，则此属性在其相应的背景定位区域内指定其初始位置(进行任何调整大小操作后)。" standard-reference="http://www.w3.org/TR/css3-background/#the-background-position"/>
+    
+  <CssProperty _locID="-ms-hyphenate-limit-chars" _locAttrData="description" version="3.0" browsers="IE10" restriction="integer" syntax="div { $(name): 5 2 2; }" description="获取或设置一到三个值，该值指示有连字符的词中的最小字符数。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh441147.aspx">
+
+    <entry value="auto"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-hyphenate-limit-lines" _locAttrData="description" version="3.0" browsers="IE10" restriction="integer" syntax="div { $(name): 2; }" description="获取或设置一个值，该值指示可能以有连字符的词结尾的元素中的最大连续行数。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh441157.aspx">
+
+    <entry value="no-limit"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-hyphenate-limit-zone" _locAttrData="description" version="3.0" browsers="IE10" restriction="percentage, length" syntax="div { $(name): 25%; }" description="获取或设置一个值，该值定义连字区域的宽度。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh441168.aspx"/>
+
+  <CssProperty name="-ms-hyphens" ref="hyphens" browsers="IE10"/>
+
+  <CssProperty _locID="-ms-high-contrast-adjust" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="section { $(name): auto; }" description="获取或设置一个值，该值指示是否覆盖已在高对比度模式中设置的任何级联样式表(CSS)属性。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh441137.aspx">
+
+    <entry value="none"/>
+    <entry value="auto"/>
+  </CssProperty>
+
+  <CssProperty name="-ms-ime-mode" ref="ime-mode" browsers="IE10"/>
+
+  <CssProperty _locID="-ms-layout-grid" _locAttrData="description" version="3.0" browsers="IE10" syntax="div { $(name): both fixed 12px 12px}" description="设置或检索用于指定文本字符的布局的复合文档网格属性。" standard-reference="http://msdn.microsoft.com/en-us/library/ie/ms530771(v=vs.85).aspx">
+
+    <entry _locID="-ms-layout-grid_mode" _locAttrData="description" value="mode" description="可用于 -ms-layout-grid-mode 属性的任何模式值范围。"/>
+    <entry _locID="-ms-layout-grid_type" _locAttrData="description" value="type" description="可用于 -ms-layout-grid-type 属性的任何类型值范围。"/>
+    <entry _locID="-ms-layout-grid_line" _locAttrData="description" value="line" description="可用于 -ms-layout-grid-line 属性的任何行值范围。"/>
+    <entry _locID="-ms-layout-grid_char" _locAttrData="description" value="char" description="可用于 -ms-layout-grid-char 属性的任何字符值范围。"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-layout-grid-char" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum, length, percentage" syntax="div { $(name): auto; }" description="设置或检索用于呈现元素的文本内容的字符网格的大小。" standard-reference="http://msdn.microsoft.com/en-us/library/ie/ms530772(v=vs.85).aspx">
+
+    <entry _locID="-ms-layout-grid-char_none" _locAttrData="description" value="none" description="默认值。未设置字符网格。"/>
+    <entry _locID="-ms-layout-grid-char_auto" _locAttrData="description" value="auto" description="该元素的字体中的最大字符用于设置字符网格。"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-layout-grid-line" _locAttrData="description" version="3.0" browsers="IE10" restriction="length" syntax="div { $(name): auto; }" description="设置或检索用于呈现元素的文本内容的网格线值。" standard-reference="http://msdn.microsoft.com/en-us/library/ie/ms530773(v=vs.85).aspx">
+
+    <entry _locID="-ms-layout-grid-line_none" _locAttrData="description" value="none" description="默认值。未设置网格线。"/>
+    <entry _locID="-ms-layout-grid-line_auto" _locAttrData="description" value="auto" description="该元素的字体中的最大字符用于设置字符网格。"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-layout-grid-mode" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): line; }" description="获取或设置文本布局网格是否使用两个维度。" standard-reference="http://msdn.microsoft.com/en-us/library/ie/ms530774(v=vs.85).aspx">
+
+    <entry _locID="-ms-layout-grid-mode_both" _locAttrData="description" value="both" description="默认值。字符网格和线网格模式均已启用。需要此设置才能完全启用元素上的布局网格。"/>
+    <entry _locID="-ms-layout-grid-mode_none" _locAttrData="description" value="none" description="未使用网格。"/>
+    <entry _locID="-ms-layout-grid-mode_line" _locAttrData="description" value="line" description="仅使用了线网格。建议在使用内联元素(如 span)时这样做，以便在充当网格布局中的单个实体的一连串文本上禁用水平网格。"/>
+    <entry _locID="-ms-layout-grid-mode_char" _locAttrData="description" value="char" description="仅使用了字符网格。建议在使用块级别的元素(如 blockquote)时这样做，此时将禁用线网格。"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-layout-grid-type" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="div { $(name): strict; }" description="设置或检索用于呈现元素的文本内容的网格的类型。" standard-reference="http://msdn.microsoft.com/en-us/library/ie/ms530775(v=vs.85).aspx">
+
+    <entry _locID="-ms-layout-grid-type_loose" _locAttrData="description" value="loose" description="默认值。用于日语和朝鲜语字符的网格。"/>
+    <entry _locID="-ms-layout-grid-type_strict" _locAttrData="description" value="strict" description="用于中文、日语(Genko)和朝鲜语字符的网格。只有象形文字、假名和宽字符才会对齐到网格。"/>
+    <entry _locID="-ms-layout-grid-type_fixed" _locAttrData="description" value="fixed" description="用于等宽字体布局的网格。所有非草书字符均视为相同的；默认情况下，每个字符都在单个网格空间内居中。"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-progress-appearance" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="progress { $(name): bar; }" description="获取或设置一个值，该值指定进度控件显示为条形还是环形。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/Hh779845.aspx">
+
+    <entry value="bar"/>
+    <entry value="ring"/>
+  </CssProperty>
+
+  <CssProperty _locID="-ms-text-kashida-space" _locAttrData="description" version="3.0" browsers="IE10" restriction="percentage" syntax="article { $(name): 10%; }" description="设置或检索在对齐对象中的文本行时 kashida 扩展与空白扩展的比率。" standard-reference="http://msdn.microsoft.com/en-us/library/windows/apps/hh453798.aspx"/>
+
+  <CssProperty _locID="-ms-text-size-adjust" _locAttrData="description" version="3.0" browsers="IE10" restriction="percentage" syntax="html { $(name): 150%; }" description="指定用于在 Internet Explorer 中显示文本内容的大小调整。" standard-reference="http://msdn.microsoft.com/en-us/library/ff462082%28v=VS.92%29.aspx">
+
+    <entry value="auto"/>
+    <entry value="none"/>
+  </CssProperty>
+
+  <CssProperty name="-ms-perspective" ref="perspective" browsers="IE10"/>
+  
+  <CssProperty name="-ms-perspective-origin" ref="perspective-origin" browsers="IE10"/>
+
+  <CssProperty _locID="-ms-perspective-origin-x" _locAttrData="description" version="3.0" browsers="IE10" type="perspective-origins" restriction="percentage, length" description="建立 perspective 属性的原点。它将有效设置 X 位置，查看者从这个位置看的话就好像是在看元素的子级。" standard-reference="http://www.w3.org/TR/css3-3d-transforms/#perspective-origin"/>
+
+  <CssProperty _locID="-ms-perspective-origin-y" _locAttrData="description" version="3.0" browsers="IE10" type="perspective-origins" restriction="percentage, length" description="建立 perspective 属性的原点。它将有效设置 Y 位置，查看者从这个位置看的话就好像是在看元素的子级。" standard-reference="http://www.w3.org/TR/css3-3d-transforms/#perspective-origin"/>
+
+  <CssProperty _locID="-ms-interpolation-mode" _locAttrData="description" version="3.0" browsers="IE7" restriction="enum" syntax="img.highqual { $(name): bicubic; }" description="获取或设置用于拉伸图像的内插(重新采样)方法。" standard-reference="http://msdn.microsoft.com/en-us/library/ie/ms530822(v=vs.85).aspx">
+
+    <entry value="nearest-neighbor"/>
+    <entry value="bicubic"/>
+  </CssProperty>
+  
+  <CssProperty name="position">
+    <entry _locID="position_ms-page" _locAttrData="description" value="-ms-page" version="3.0" browsers="IE10" description="该框的位置是根据“绝对”模型计算出来的。"/>
+  </CssProperty>
+
+
+</CssModule>

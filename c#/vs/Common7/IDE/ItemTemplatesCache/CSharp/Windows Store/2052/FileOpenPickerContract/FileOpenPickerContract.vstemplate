@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="1012" />
+    <Description Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="1013" />
+    <Icon Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="4011" />
+    <TemplateID>Microsoft.CS.WinRT.FileOpenPickerContract</TemplateID>
+    <TemplateGroupID>WinRT-Managed</TemplateGroupID>
+    <ProjectType>CSharp</ProjectType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>FileOpenPickerPage.xaml</DefaultName>
+    <ShowByDefault>false</ShowByDefault>
+    <SortOrder>90</SortOrder>
+    <PreviewImage>FileOpenPickerContract.png</PreviewImage>
+    <TargetPlatformName>Windows</TargetPlatformName>
+    <RequiredPlatformVersion>8</RequiredPlatformVersion>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="true" ItemType="Page" SubType="Designer" CustomTool="MSBuild:Compile" TargetFileName="$fileinputname$.xaml">FileOpenPickerPage.xaml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="true" TargetFileName="$fileinputname$.xaml.cs">FileOpenPickerPage.xaml.cs</ProjectItem>
+
+    <ProjectItem ReplaceParameters="false" TargetFileName="$wizardcommonprefix$ReadMe.txt">ReadMe.txt</ProjectItem>
+    <ProjectItem ReplaceParameters="false" TargetFileName="$wizardcommonprefix$StandardStyles.xaml">StandardStyles.xaml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$BindableBase.cs">BindableBase.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$BooleanToVisibilityConverter.cs">BooleanToVisibilityConverter.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$BooleanNegationConverter.cs">BooleanNegationConverter.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$LayoutAwarePage.cs">LayoutAwarePage.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$RichTextColumns.cs">RichTextColumns.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$SuspensionManager.cs">SuspensionManager.cs</ProjectItem>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.WinRT.TemplateWizards, Version=11.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.WinRT.TemplateWizards.SmartItem.Wizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <CommonOptional>ReadMe.txt</CommonOptional>
+    <CommonRequired>StandardStyles.xaml</CommonRequired>
+    <CommonRequired>BindableBase.cs</CommonRequired>
+    <CommonRequired>BooleanToVisibilityConverter.cs</CommonRequired>
+    <CommonRequired>BooleanNegationConverter.cs</CommonRequired>
+    <CommonRequired>LayoutAwarePage.cs</CommonRequired>
+    <CommonRequired>RichTextColumns.cs</CommonRequired>
+    <CommonRequired>SuspensionManager.cs</CommonRequired>
+    <Activation>
+      <AppMethod Name="OnFileOpenPickerActivated" CommentPrefix="// ">
+        <![CDATA[
+        /// <summary>
+        /// 在激活应用程序以显示文件打开选取器时调用。
+        /// </summary>
+        /// <param name="args">有关激活请求的详细信息。</param>
+        
+        protected override void OnFileOpenPickerActivated(Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs args)
+        {
+            var fileOpenPickerPage = new $rootnamespace$.$safeitemname$();
+            fileOpenPickerPage.Activate(args);
+        }
+        ]]>
+      </AppMethod>
+      <AppMethodComment>
+        <![CDATA[
+        // TODO: 对文件打开选取器的激活请求作出响应
+        //
+        // 以下代码无法自动添加到您的应用程序子类，
+        // 这可能是因为无法找到相应的类，也可能是因为已存在名称
+        // 相同的方法。确保有适当的代码通过显示适当的
+        // 文件打开选取器来处理激活。
+        //
+        ]]>
+      </AppMethodComment>
+      <ManifestData>
+        <Extension Category="windows.fileOpenPicker">
+          <FileOpenPicker>
+            <SupportedFileTypes SupportsAnyFileType="true"></SupportedFileTypes>
+          </FileOpenPicker>
+        </Extension>
+      </ManifestData>
+      <ManifestComment>
+        <![CDATA[
+        // TODO: 编辑清单以启用文件打开选取器支持
+        //
+        // 包清单无法自动更新。打开包清单
+        // 文件并确保已启用对文件打开选取器的支持。
+        ]]>
+      </ManifestComment>
+    </Activation>
+  </WizardData>
+</VSTemplate>

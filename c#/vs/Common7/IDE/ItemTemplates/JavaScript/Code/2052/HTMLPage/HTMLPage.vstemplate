@@ -1,0 +1,15 @@
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name _locID="JSP_Item_HTMLName">HTML 页</Name>
+    <Description _locID="JSP_Item_HTMLDesc">空 HTML 页。</Description>
+    <Icon>HTMLPage.ico</Icon>
+    <TemplateID>Microsoft.JavaScript.HTMLPage</TemplateID>
+    <ProjectType>JavaScript</ProjectType>
+    <BlendProjectSubType>WJApplication</BlendProjectSubType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>page.html</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem>HTMLPage.html</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

@@ -1,0 +1,95 @@
+;-------------------------------------------------------------------------
+; netne6.INF -- Microsoft VSTS Network Emulation NDIS6 Driver
+;
+; Copyright (c) Microsoft Corporation.  All rights reserved.
+;-------------------------------------------------------------------------
+
+[version]
+Signature   = "$Windows NT$"
+Class       = NetService
+ClassGUID   = {4D36E974-E325-11CE-BFC1-08002BE10318}
+Provider    = %Creator%
+CatalogFile = netne6.cat
+DriverVer=10/17/2011,11.00.40930.01
+ 
+[Manufacturer]
+%Creator%=MSFT,NTx86
+
+[MSFT.NTx86]
+%NdisLwf_Desc%=Install, MS_SFilter
+
+;-------------------------------------------------------------------------
+; Installation Section
+;-------------------------------------------------------------------------
+[Install]
+AddReg=Inst_Ndi
+Characteristics=0x40000
+NetCfgInstanceId="{E8B163B7-0190-4abd-9292-C456C991C015}"
+Copyfiles = ndislwf.copyfiles.sys
+
+[SourceDisksNames]
+1=%NdisLwf_Desc%,"",,
+
+[SourceDisksFiles]
+netne6.sys=1
+
+[DestinationDirs]
+DefaultDestDir=12
+ndislwf.copyfiles.sys=12
+
+[ndislwf.copyfiles.sys]
+netne6.sys,,,2
+
+
+;-------------------------------------------------------------------------
+; Ndi installation support
+;-------------------------------------------------------------------------
+[Inst_Ndi]
+HKR, Ndi,Service,,"SFilter"
+HKR, Ndi,CoServices,0x00010000,"SFilter"
+HKR, Ndi,HelpText,,%NdisLwf_HelpText%
+HKR, Ndi,FilterClass,, failover
+HKR, Ndi,FilterType,0x00010001,0x00000002
+HKR, Ndi\Interfaces,UpperRange,,"noupper"
+HKR, Ndi\Interfaces,LowerRange,,"nolower"
+HKR, Ndi\Interfaces, FilterMediaTypes,,"ethernet"
+HKR, Ndi,FilterRunType, 0x00010001, 1 ;this filter must run before any protocol can bind to the below miniport 
+
+;-------------------------------------------------------------------------
+; Service installation support
+;-------------------------------------------------------------------------
+[Install.Services]
+AddService=SFilter,,NdisLwf_Service_Inst
+
+[NdisLwf_Service_Inst]
+DisplayName     = %NdisLwf_Desc%
+ServiceType     = 1 ;SERVICE_KERNEL_DRIVER
+StartType       = 1 ;SERVICE_SYSTEM_START
+ErrorControl    = 1 ;SERVICE_ERROR_NORMAL
+ServiceBinary   = %12%\netne6.sys
+LoadOrderGroup  = NDIS
+Description     = %NdisLwf_Desc%
+AddReg          = Common.Params.reg
+
+[Install.Remove.Services]
+DelService=SFilter,0x200
+
+[Common.Params.reg]
+
+HKR, FilterDriverParams\DriverParam, 		ParamDesc, 	, "Driverparam for lwf"
+HKR, FilterDriverParams\DriverParam, 		default, 	, "5"
+HKR, FilterDriverParams\DriverParam, 		type, 		, "int"
+
+HKR, FilterAdapterParams\AdapterParam, 		ParamDesc, 	, "Adapterparam for lwf"
+HKR, FilterAdapterParams\AdapterParam, 		default, 	, "10"
+HKR, FilterAdapterParams\AdapterParam, 		type, 		, "int"
+
+[Strings]
+Creator = "Microsoft VSTS"
+NdisLwf_Desc = "Microsoft VSTS Network Emulation NDIS6 Driver"
+NdisLwf_HelpText = "LightWeight Filter Driver for Microsoft VSTS Network Emulation"
+
+
+
+
+

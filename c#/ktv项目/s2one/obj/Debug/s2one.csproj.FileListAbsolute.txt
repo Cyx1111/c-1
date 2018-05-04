@@ -1,0 +1,11 @@
+F:\C#\s2one\s2one\bin\Debug\s2one.exe.config
+F:\C#\s2one\s2one\obj\Debug\s2one.csprojResolveAssemblyReference.cache
+F:\C#\s2one\s2one\obj\Debug\s2one.FrmLogin.resources
+F:\C#\s2one\s2one\obj\Debug\s2one.frmmain.resources
+F:\C#\s2one\s2one\obj\Debug\s2one.Frmregist.resources
+F:\C#\s2one\s2one\obj\Debug\s2one.Properties.Resources.resources
+F:\C#\s2one\s2one\obj\Debug\s2one.csproj.GenerateResource.Cache
+F:\C#\s2one\s2one\bin\Debug\s2one.exe
+F:\C#\s2one\s2one\bin\Debug\s2one.pdb
+F:\C#\s2one\s2one\obj\Debug\s2one.exe
+F:\C#\s2one\s2one\obj\Debug\s2one.pdb

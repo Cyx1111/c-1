@@ -1,0 +1,8 @@
+<Browser Name="Internet Explorer 10.0" MaxConnections="6">
+  <Headers>
+    <Header Name="User-Agent" Value="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)" />
+    <Header Name="Accept" Value="*/*" />
+    <Header Name="Accept-Language" Value="{{$IEAcceptLanguage}}" />
+    <Header Name="Accept-Encoding" Value="GZIP" />
+  </Headers>
+</Browser>

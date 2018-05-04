@@ -1,0 +1,9 @@
+F:\C#\影院售票系统\影院售票系统\bin\Debug\影院售票系统.exe.config
+F:\C#\影院售票系统\影院售票系统\bin\Debug\影院售票系统.exe
+F:\C#\影院售票系统\影院售票系统\bin\Debug\影院售票系统.pdb
+F:\C#\影院售票系统\影院售票系统\obj\Debug\影院售票系统.csprojResolveAssemblyReference.cache
+F:\C#\影院售票系统\影院售票系统\obj\Debug\影院售票系统.Form1.resources
+F:\C#\影院售票系统\影院售票系统\obj\Debug\影院售票系统.Properties.Resources.resources
+F:\C#\影院售票系统\影院售票系统\obj\Debug\影院售票系统.csproj.GenerateResource.Cache
+F:\C#\影院售票系统\影院售票系统\obj\Debug\影院售票系统.exe
+F:\C#\影院售票系统\影院售票系统\obj\Debug\影院售票系统.pdb

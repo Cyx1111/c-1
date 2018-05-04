@@ -1,0 +1,1140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.Windows.Design.Extensibility</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Windows.Design.AssemblyReferences">
+      <summary>一个上下文项，该项维护设计器用于解析类型信息的引用集。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.AssemblyReferences.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Windows.Design.AssemblyReferences" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.AssemblyReferences.#ctor(System.Collections.Generic.IEnumerable{System.Reflection.AssemblyName})">
+      <summary>使用指定的引用集初始化 <see cref="T:Microsoft.Windows.Design.AssemblyReferences" /> 类的新实例。</summary>
+      <param name="newReferences">新的引用集。 此参数不得为 null，且不得包含 null 值。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="newReferences" /> 为 null，或如果数组中的一个值是 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.AssemblyReferences.#ctor(System.Reflection.AssemblyName,System.Collections.Generic.IEnumerable{System.Reflection.AssemblyName})">
+      <summary>使用指定的本地程序集名称和引用集初始化 <see cref="T:Microsoft.Windows.Design.AssemblyReferences" /> 类的新实例。</summary>
+      <param name="localAssemblyName">本地程序集名称。 此参数仅可设置一次。</param>
+      <param name="newReferences">新的引用集。 此参数不得为 null，且不得包含 null 值。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="newReferences" /> 为 null，或如果数组中的一个值是 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.AssemblyReferences.GetTypes(System.Type)">
+      <summary>返回派生自或实现指定基类型的被引用的程序集集合中的所有类型。</summary>
+      <returns>类型的枚举。 如果没有匹配的成员，则返回空枚举。</returns>
+      <param name="baseType">所有返回的类型应派生自的基类型。 如果 <paramref name="baseType" /> 是一个接口，则所有返回的类型将实现该接口。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="baseType" /> 为 null。</exception>
+    </member>
+    <member name="P:Microsoft.Windows.Design.AssemblyReferences.ItemType">
+      <summary>获取上下文项管理器中的一个键，该键用来确定此对象所属的上下文项的类型。</summary>
+      <returns>上下文项管理器中的一个键，该键用来确定此对象所属的上下文项的类型。</returns>
+    </member>
+    <member name="P:Microsoft.Windows.Design.AssemblyReferences.LocalAssemblyName">
+      <summary>获取本地程序集名称。</summary>
+      <returns>本地程序集名称。</returns>
+    </member>
+    <member name="M:Microsoft.Windows.Design.AssemblyReferences.OnItemChanged(Microsoft.Windows.Design.EditingContext,Microsoft.Windows.Design.ContextItem)">
+      <summary>在上下文项存储到上下文项管理器中之前对其进行调用。</summary>
+      <param name="context">正接收此 <see cref="T:Microsoft.Windows.Design.AssemblyReferences" /> 对象的编辑上下文。</param>
+      <param name="previousItem">现有的 <see cref="T:Microsoft.Windows.Design.AssemblyReferences" /> 对象。</param>
+    </member>
+    <member name="P:Microsoft.Windows.Design.AssemblyReferences.ReferencedAssemblies">
+      <summary>获取一个可用于枚举被引用的程序集集合的可枚举对象。</summary>
+      <returns>一个可用于枚举被引用的程序集集合的可枚举对象。</returns>
+    </member>
+    <member name="T:Microsoft.Windows.Design.ContextItem">
+      <summary>表示设计器中的一个状态。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ContextItem.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Windows.Design.ContextItem" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Windows.Design.ContextItem.ItemType">
+      <summary>在派生类中被重写时，获取此编辑上下文项的项类型。</summary>
+      <returns>此编辑上下文项的 <see cref="T:System.Type" />。</returns>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ContextItem.OnItemChanged(Microsoft.Windows.Design.EditingContext,Microsoft.Windows.Design.ContextItem)">
+      <summary>在上下文项存储到上下文项管理器中之前对其进行调用。</summary>
+      <param name="context">进行此更改的编辑上下文。</param>
+      <param name="previousItem">上下文中上一个活动的项。</param>
+    </member>
+    <member name="T:Microsoft.Windows.Design.ContextItemManager">
+      <summary>维护一组上下文项。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ContextItemManager.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Windows.Design.ContextItemManager" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ContextItemManager.Contains``1">
+      <summary>返回一个值，该值指示上下文项管理器是否包含指定类型的项。</summary>
+      <returns>如果上下文包含此项类型的实例，则为 true；否则为 false。</returns>
+      <typeparam name="TItemType">
+      </typeparam>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ContextItemManager.Contains(System.Type)">
+      <summary>当在派生类中重写时，返回一个值，该值指示上下文项管理器是否包含指定类型的项。</summary>
+      <returns>如果上下文包含此项类型的实例，则为 true；否则为 false。</returns>
+      <param name="itemType">要检查的项的类型。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="itemType" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ContextItemManager.GetEnumerator">
+      <summary>当在派生类中重写时，获取编辑上下文中的上下文项的枚举。</summary>
+      <returns>上下文项的枚举。</returns>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ContextItemManager.GetTarget(System.Delegate)">
+      <summary>一个可返回委托的目标对象的实用工具方法。</summary>
+      <returns>回调的目标对象。</returns>
+      <param name="callback">具有所需的目标的回调。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="callback" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ContextItemManager.GetValue``1">
+      <summary>返回所请求的项类型的实例。</summary>
+      <returns>所请求的类型的上下文项。 如果在此类型的上下文中没有任何项，则将创建一个默认项。</returns>
+      <typeparam name="TItemType">
+      </typeparam>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ContextItemManager.GetValue(System.Type)">
+      <summary>在派生类中重写时，返回所请求的项类型的实例。</summary>
+      <returns>所请求的类型的上下文项。 如果在此类型的上下文中没有任何项，则将创建一个默认项。</returns>
+      <param name="itemType">要返回的项的类型。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="itemType" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ContextItemManager.NotifyItemChanged(Microsoft.Windows.Design.EditingContext,Microsoft.Windows.Design.ContextItem,Microsoft.Windows.Design.ContextItem)">
+      <summary>对指定的 <see cref="T:Microsoft.Windows.Design.ContextItem" /> 调用受保护的 <see cref="M:Microsoft.Windows.Design.ContextItem.OnItemChanged(Microsoft.Windows.Design.EditingContext,Microsoft.Windows.Design.ContextItem)" />。</summary>
+      <param name="context">正在使用的编辑上下文。</param>
+      <param name="item">新的上下文项。</param>
+      <param name="previousItem">前一个上下文项。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="context" />、<paramref name="item" /> 或 <paramref name="previousItem" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ContextItemManager.RemoveCallback(System.Delegate,System.Delegate)">
+      <summary>一个帮助器方法，该方法执行 Delegate.Remove，但知道如何给作为泛型回调代理的委托解包。</summary>
+      <returns>应指派给 existing 的新委托。</returns>
+      <param name="existing">现有的委托。</param>
+      <param name="toRemove">要从 existing 中移除的委托。</param>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ContextItemManager.SetValue(Microsoft.Windows.Design.ContextItem)">
+      <summary>当在派生类中重写时，将一个上下文项设置为指定值。</summary>
+      <param name="value">要设置到上下文项管理器中的值。 不能为 null。</param>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ContextItemManager.Subscribe``1(Microsoft.Windows.Design.SubscribeContextCallback{``0})">
+      <summary>添加一个将在指定项类型的上下文项发生更改时进行调用的回调。</summary>
+      <param name="callback">一个将在 <paramref name="ContextItemType" /> 发生更改时进行调用的回调。</param>
+      <typeparam name="TContextItemType">
+      </typeparam>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="callback" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ContextItemManager.Subscribe(System.Type,Microsoft.Windows.Design.SubscribeContextCallback)">
+      <summary>当在派生类中重写时，添加一个将在指定项类型的上下文项发生更改时进行调用的回调。</summary>
+      <param name="contextItemType">要订阅的项的类型。</param>
+      <param name="callback">一个将在 <paramref name="contextItemType" /> 发生更改时进行调用的回调。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="contextItemType" /> 或 <paramref name="callback" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ContextItemManager.System#Collections#IEnumerable#GetEnumerator">
+      <summary>有关此成员的说明，请参见 <see cref="M:System.Collections.IEnumerable.GetEnumerator" />。</summary>
+      <returns>上下文项的枚举。</returns>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ContextItemManager.Unsubscribe``1(Microsoft.Windows.Design.SubscribeContextCallback{``0})">
+      <summary>移除一个订阅。</summary>
+      <param name="callback">要移除的回调。</param>
+      <typeparam name="TContextItemType">
+      </typeparam>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="callback" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ContextItemManager.Unsubscribe(System.Type,Microsoft.Windows.Design.SubscribeContextCallback)">
+      <summary>在派生类中重写时，移除一个订阅。</summary>
+      <param name="contextItemType">要从中移除回调的上下文项的类型。</param>
+      <param name="callback">要移除的回调。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="contextItemType" /> 或 <paramref name="callback" /> 为 null。</exception>
+    </member>
+    <member name="T:Microsoft.Windows.Design.EditingContext">
+      <summary>包含有关设计器的上下文状态。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.EditingContext.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Windows.Design.EditingContext" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.EditingContext.CreateContextItemManager">
+      <summary>创建从 <see cref="P:Microsoft.Windows.Design.EditingContext.Items" /> 属性返回的上下文项管理器的实例。</summary>
+      <returns>
+        <see cref="T:Microsoft.Windows.Design.ContextItemManager" /> 类的实现。</returns>
+    </member>
+    <member name="M:Microsoft.Windows.Design.EditingContext.CreateServiceManager">
+      <summary>创建要从 <see cref="P:Microsoft.Windows.Design.EditingContext.Services" /> 属性返回的服务管理器的实例。</summary>
+      <returns>
+        <see cref="T:Microsoft.Windows.Design.ServiceManager" /> 类的一个实现。</returns>
+    </member>
+    <member name="M:Microsoft.Windows.Design.EditingContext.Dispose">
+      <summary>释放由 <see cref="T:Microsoft.Windows.Design.EditingContext" /> 使用的所有资源。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.EditingContext.Dispose(System.Boolean)">
+      <summary>释放由 <see cref="T:Microsoft.Windows.Design.EditingContext" /> 占用的非托管资源，还可以另外再释放托管资源。</summary>
+      <param name="disposing">true 表示释放托管资源和非托管资源；false 表示仅释放非托管资源。</param>
+    </member>
+    <member name="E:Microsoft.Windows.Design.EditingContext.Disposing">
+      <summary>当调用 <see cref="M:Microsoft.Windows.Design.EditingContext.Dispose" /> 方法时发生。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.EditingContext.Finalize">
+      <summary>实现 <see cref="T:System.IDisposable" /> 模式的终结器。</summary>
+    </member>
+    <member name="P:Microsoft.Windows.Design.EditingContext.Items">
+      <summary>获取返回当前编辑上下文存储的上下文项的本地集。</summary>
+      <returns>此编辑上下文提供的上下文项的 <see cref="T:Microsoft.Windows.Design.ContextItemManager" />。</returns>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="M:Microsoft.Windows.Design.EditingContext.CreateContextItemManager" /> 方法返回了一个 null<see cref="T:Microsoft.Windows.Design.ContextItemManager" />。</exception>
+    </member>
+    <member name="P:Microsoft.Windows.Design.EditingContext.Services">
+      <summary>获取此编辑内容的服务管理。</summary>
+      <returns>此编辑上下文的 <see cref="T:Microsoft.Windows.Design.ServiceManager" />。</returns>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="M:Microsoft.Windows.Design.EditingContext.CreateServiceManager" /> 方法返回了一个 null<see cref="T:Microsoft.Windows.Design.ServiceManager" />。</exception>
+    </member>
+    <member name="T:Microsoft.Windows.Design.PublishServiceCallback">
+      <summary>在对象应发布服务实例时回调的委托。</summary>
+      <returns>类型 <paramref name="serviceType" /> 的实例。</returns>
+      <param name="serviceType">要发布的服务的类型。</param>
+    </member>
+    <member name="T:Microsoft.Windows.Design.PublishServiceCallback`1">
+      <summary>在对象应发布服务实例时回调的泛型委托。</summary>
+      <returns>指定的服务类型的实例。</returns>
+      <typeparam name="TServiceType">
+      </typeparam>
+    </member>
+    <member name="T:Microsoft.Windows.Design.RequirementAttribute">
+      <summary>定义 <see cref="T:Microsoft.Windows.Design.RequirementValidator" /> 类使用的属性。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.RequirementAttribute.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Windows.Design.RequirementAttribute" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Windows.Design.RequirementAttribute.AllRequired">
+      <summary>获取指示所有相同类型的要求特性是否需要的值。</summary>
+      <returns>如果相同类型的所有要求属性都是必需的，则为 true；否则为 false。</returns>
+    </member>
+    <member name="M:Microsoft.Windows.Design.RequirementAttribute.CreateSubscription(Microsoft.Windows.Design.EditingContext)">
+      <summary>返回当此特性中包含的要求发生更改时，用于通知的 <see cref="T:Microsoft.Windows.Design.RequirementSubscription" /> 对象。</summary>
+      <returns>一个新的 <see cref="T:Microsoft.Windows.Design.RequirementSubscription" /> 对象。</returns>
+      <param name="context">要检查的编辑上下文。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="context" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.RequirementAttribute.MeetsRequirement(Microsoft.Windows.Design.EditingContext)">
+      <summary>确定 <see cref="T:Microsoft.Windows.Design.EditingContext" /> 是否满足指定属性的要求。</summary>
+      <returns>如果满足特性的需求，则为 true；否则为 false。</returns>
+      <param name="context">要检查的编辑上下文。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="context" /> 为 null。</exception>
+    </member>
+    <member name="T:Microsoft.Windows.Design.RequirementSubscription">
+      <summary>当编辑上下文中发生更改时提供通知可满足附加的要求。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.RequirementSubscription.#ctor(Microsoft.Windows.Design.RequirementAttribute)">
+      <summary>初始化 <see cref="T:Microsoft.Windows.Design.RequirementSubscription" /> 类的新实例。</summary>
+      <param name="requirement">为其创建订阅的要求。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="requirement" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.RequirementSubscription.OnRequirementChanged">
+      <summary>引发 <see cref="E:Microsoft.Windows.Design.RequirementSubscription.RequirementChanged" /> 事件。</summary>
+    </member>
+    <member name="P:Microsoft.Windows.Design.RequirementSubscription.Requirement">
+      <summary>获取附加到该订阅上的要求特性。</summary>
+      <returns>附加到此订阅的 <see cref="T:Microsoft.Windows.Design.RequirementAttribute" />。</returns>
+    </member>
+    <member name="E:Microsoft.Windows.Design.RequirementSubscription.RequirementChanged">
+      <summary>在要求更改后发生。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.RequirementSubscription.Subscribe">
+      <summary>订阅特定上下文事件。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.RequirementSubscription.Unsubscribe">
+      <summary>移除对上下文事件的订阅。</summary>
+    </member>
+    <member name="T:Microsoft.Windows.Design.RequirementValidator">
+      <summary>确定所需上下文和服务是否对指定类型可用。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.RequirementValidator.#ctor(Microsoft.Windows.Design.Features.FeatureManager,System.Type)">
+      <summary>为指定的 <see cref="T:Microsoft.Windows.Design.Features.FeatureManager" /> 和类型初始化 <see cref="T:Microsoft.Windows.Design.RequirementValidator" /> 类的新实例。</summary>
+      <param name="featureManager">针对其验证要求的功能管理器。</param>
+      <param name="type">要从其中获取要求特性的类型。</param>
+    </member>
+    <member name="P:Microsoft.Windows.Design.RequirementValidator.MeetsRequirements">
+      <summary>获取一个值，该值指示编辑上下文中是否存在类型要求。</summary>
+      <returns>如果编辑上下文中存在类型要求，则为 true；如果一个或多个要求缺失，则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.Windows.Design.RequirementValidator.PendingRequirements">
+      <summary>获取挂起的要求特性的列表。</summary>
+      <returns>挂起的要求特性的列表。 以下是尚未满足的一些要求。</returns>
+    </member>
+    <member name="P:Microsoft.Windows.Design.RequirementValidator.Requirements">
+      <summary>获取针对此验证程序中包含的类型的所有要求的枚举。</summary>
+      <returns>
+        <see cref="P:Microsoft.Windows.Design.RequirementValidator.Type" /> 的 <see cref="T:Microsoft.Windows.Design.RequirementAttribute" /> 对象的枚举。</returns>
+    </member>
+    <member name="E:Microsoft.Windows.Design.RequirementValidator.RequirementsChanged">
+      <summary>在使用该类型所必需的要求集发生更改时发生。</summary>
+    </member>
+    <member name="P:Microsoft.Windows.Design.RequirementValidator.Type">
+      <summary>获取要验证其是否符合要求的对象的类型。</summary>
+      <returns>一个 <see cref="T:System.Type" />，表示要验证其是否符合要求的对象。</returns>
+    </member>
+    <member name="T:Microsoft.Windows.Design.RequiresContextItemAttribute">
+      <summary>指示类依赖于指定的上下文。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.RequiresContextItemAttribute.#ctor(System.Type)">
+      <summary>初始化 <see cref="T:Microsoft.Windows.Design.RequiresContextItemAttribute" /> 类的新实例。</summary>
+      <param name="contextItemType">所需上下文的类型。</param>
+    </member>
+    <member name="P:Microsoft.Windows.Design.RequiresContextItemAttribute.ContextItemType">
+      <summary>获取类需要的上下文项类型。</summary>
+      <returns>一个 <see cref="T:System.Type" />，指示类需要的 <see cref="T:Microsoft.Windows.Design.ContextItem" /> 类型。</returns>
+    </member>
+    <member name="M:Microsoft.Windows.Design.RequiresContextItemAttribute.CreateSubscription(Microsoft.Windows.Design.EditingContext)">
+      <summary>创建一个对象，当该对象中属性所指定的要求被编辑上下文所满足时启用通知。</summary>
+      <returns>可用于处理事件的 <see cref="T:Microsoft.Windows.Design.RequirementSubscription" /> 对象。</returns>
+      <param name="context">要检查的编辑上下文。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="context" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.RequiresContextItemAttribute.MeetsRequirement(Microsoft.Windows.Design.EditingContext)">
+      <summary>指示正在编辑的上下文中是否包含 <see cref="P:Microsoft.Windows.Design.RequiresContextItemAttribute.ContextItemType" /> 类型的上下文项。</summary>
+      <returns>如果满足特性的需求，则为 true；否则为 false。</returns>
+      <param name="context">要检查的编辑上下文。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="context" /> 为 null。</exception>
+    </member>
+    <member name="P:Microsoft.Windows.Design.RequiresContextItemAttribute.TypeId">
+      <summary>获取该属性的类型 ID。</summary>
+      <returns>一个对象，指示该特性的类型 ID。</returns>
+    </member>
+    <member name="T:Microsoft.Windows.Design.RequiresServiceAttribute">
+      <summary>指示类依赖于指定的服务。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.RequiresServiceAttribute.#ctor(System.Type)">
+      <summary>初始化 <see cref="T:Microsoft.Windows.Design.RequiresServiceAttribute" /> 类的新实例。</summary>
+      <param name="serviceType">类所需要的服务类型。</param>
+    </member>
+    <member name="M:Microsoft.Windows.Design.RequiresServiceAttribute.CreateSubscription(Microsoft.Windows.Design.EditingContext)">
+      <summary>创建一个对象，当该对象中属性所指定的要求被编辑上下文所满足时启用通知。</summary>
+      <returns>可用于处理事件的 <see cref="T:Microsoft.Windows.Design.RequirementSubscription" /> 对象。</returns>
+      <param name="context">要检查的编辑上下文。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="context" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.RequiresServiceAttribute.MeetsRequirement(Microsoft.Windows.Design.EditingContext)">
+      <summary>指示正在编辑的上下文中是否包含 <see cref="P:Microsoft.Windows.Design.RequiresServiceAttribute.ServiceType" /> 类型的服务。</summary>
+      <returns>如果满足特性的需求，则为 true；否则为 false。</returns>
+      <param name="context">要检查的编辑上下文。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="context" /> 为 null。</exception>
+    </member>
+    <member name="P:Microsoft.Windows.Design.RequiresServiceAttribute.ServiceType">
+      <summary>获取类请求的服务类型。</summary>
+      <returns>一个 <see cref="T:System.Type" />，指示类需要的服务类型。</returns>
+    </member>
+    <member name="P:Microsoft.Windows.Design.RequiresServiceAttribute.TypeId">
+      <summary>获取该属性的类型 ID。</summary>
+      <returns>一个对象，指示该特性的类型 ID。</returns>
+    </member>
+    <member name="T:Microsoft.Windows.Design.ServiceManager">
+      <summary>表示与 <see cref="T:Microsoft.Windows.Design.EditingContext" /> 关联的行为。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ServiceManager.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Windows.Design.ServiceManager" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ServiceManager.Contains``1">
+      <summary>确定 <see cref="T:Microsoft.Windows.Design.ServiceManager" /> 是否包含指定类型的服务。</summary>
+      <returns>如果 <see cref="T:Microsoft.Windows.Design.ServiceManager" /> 包含 <paramref name="serviceType" />，则为 true；否则为 false。</returns>
+      <typeparam name="TServiceType">
+      </typeparam>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ServiceManager.Contains(System.Type)">
+      <summary>当在派生类中重写时，确定 <see cref="T:Microsoft.Windows.Design.ServiceManager" /> 是否包含指定类型的服务。</summary>
+      <returns>如果 <see cref="T:Microsoft.Windows.Design.ServiceManager" /> 包含 <paramref name="serviceType" />，则为 true；否则为 false。</returns>
+      <param name="serviceType">要搜索的服务的类型。</param>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ServiceManager.GetEnumerator">
+      <summary>当在派生类中重写时，检索此 <see cref="T:Microsoft.Windows.Design.ServiceManager" /> 的已发布服务的枚举器。</summary>
+      <returns>已发布服务的枚举。</returns>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ServiceManager.GetRequiredService``1">
+      <summary>检索指定类型的服务的实例。</summary>
+      <returns>所请求服务的类型的一个实例。 此方法从不返回 null。</returns>
+      <typeparam name="TServiceType">
+      </typeparam>
+      <exception cref="T:System.NotSupportedException">未请求该类型的任何服务。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ServiceManager.GetService``1">
+      <summary>检索指定泛型类型的服务的实例。</summary>
+      <returns>所请求服务的类型的一个实例；否则为 null。</returns>
+      <typeparam name="TServiceType">
+      </typeparam>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ServiceManager.GetService(System.Type)">
+      <summary>当在派生类中重写时，检索指定类型的服务的实例。</summary>
+      <returns>所请求服务的类型的一个实例；否则为 null。</returns>
+      <param name="serviceType">要检索的服务类型。</param>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ServiceManager.GetTarget(System.Delegate)">
+      <summary>一种帮助器方法，用来获取委托的目标对象。</summary>
+      <returns>
+        <paramref name="callback" /> 的目标。</returns>
+      <param name="callback">要获取其目标的委托。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="callback" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ServiceManager.Publish``1(Microsoft.Windows.Design.PublishServiceCallback{``0})">
+      <summary>发布由指定方法表示的指定类型的服务。</summary>
+      <param name="callback">当请求该服务时要调用的方法。</param>
+      <typeparam name="TServiceType">
+      </typeparam>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="callback" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ServiceManager.Publish(System.Type,Microsoft.Windows.Design.PublishServiceCallback)">
+      <summary>当在派生类中重写时，发布由指定方法表示的指定类型的服务。</summary>
+      <param name="serviceType">正发布的服务的类型。</param>
+      <param name="callback">当请求该服务时要调用的方法。</param>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ServiceManager.Publish(System.Type,System.Object)">
+      <summary>当在派生类中重写时，发布指定类型的指定服务实例。</summary>
+      <param name="serviceType">正发布的服务的类型。</param>
+      <param name="serviceInstance">服务的实例。</param>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ServiceManager.Publish``1(``0)">
+      <summary>发布指定类型的指定服务实例。</summary>
+      <param name="serviceInstance">服务的实例。</param>
+      <typeparam name="TServiceType">
+      </typeparam>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="serviceInstance" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ServiceManager.RemoveCallback(System.Delegate,System.Delegate)">
+      <summary>从委托中移除回调方法。</summary>
+      <returns>要替换现有委托的新委托。 如果 <paramref name="existing" /> 为 null，则返回 null。 如果 <paramref name="toRemove" /> 为 null，则返回 <paramref name="existing" />。</returns>
+      <param name="existing">要从中移除回调的委托。</param>
+      <param name="toRemove">要从委托中移除的回调方法。</param>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ServiceManager.Subscribe``1(Microsoft.Windows.Design.SubscribeServiceCallback{``0})">
+      <summary>请求在指定类型的服务可用时调用指定的方法。</summary>
+      <param name="callback">当该服务可用时要调用的方法。</param>
+      <typeparam name="TServiceType">
+      </typeparam>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="callback" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ServiceManager.Subscribe(System.Type,Microsoft.Windows.Design.SubscribeServiceCallback)">
+      <summary>当在派生类中重写时，请求在指定类型的服务可用时调用指定的方法。</summary>
+      <param name="serviceType">要订阅的服务的类型。</param>
+      <param name="callback">当该服务可用时要调用的方法。</param>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ServiceManager.System#Collections#IEnumerable#GetEnumerator">
+      <summary>有关此成员的说明，请参见 <see cref="M:System.Collections.IEnumerable.GetEnumerator" />。</summary>
+      <returns>已发布服务的枚举。</returns>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ServiceManager.Unsubscribe``1(Microsoft.Windows.Design.SubscribeServiceCallback{``0})">
+      <summary>请求在指定类型的服务可用时不再调用指定的方法。</summary>
+      <param name="callback">在该服务可用时不再调用的方法。</param>
+      <typeparam name="TServiceType">
+      </typeparam>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="callback" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.ServiceManager.Unsubscribe(System.Type,Microsoft.Windows.Design.SubscribeServiceCallback)">
+      <summary>当在派生类中重写时，请求在指定类型的服务可用时不再调用指定的方法。</summary>
+      <param name="serviceType">要取消订阅的服务的类型。</param>
+      <param name="callback">在该服务可用时不再调用的方法。</param>
+    </member>
+    <member name="T:Microsoft.Windows.Design.SubscribeContextCallback">
+      <summary>定义一个在更改上下文项时调用的回调方法。</summary>
+      <param name="item">已更改的上下文项。</param>
+    </member>
+    <member name="T:Microsoft.Windows.Design.SubscribeContextCallback`1">
+      <summary>定义一个在更改上下文项时调用的回调方法。</summary>
+      <param name="item">已更改的上下文项。</param>
+      <typeparam name="TContextItemType">
+      </typeparam>
+    </member>
+    <member name="T:Microsoft.Windows.Design.SubscribeServiceCallback">
+      <summary>为服务订阅回调的委托。</summary>
+      <param name="serviceType">发布的服务的类型。</param>
+      <param name="serviceInstance">服务的实例。</param>
+    </member>
+    <member name="T:Microsoft.Windows.Design.SubscribeServiceCallback`1">
+      <summary>为服务订阅回调的泛型委托。</summary>
+      <param name="serviceInstance">服务的实例。</param>
+      <typeparam name="TServiceType">
+      </typeparam>
+    </member>
+    <member name="T:Microsoft.Windows.Design.Features.FeatureAttribute">
+      <summary>存储一个表示 <see cref="T:Microsoft.Windows.Design.Features.FeatureProvider" /> 类型的 <see cref="T:System.Type" /> 对象。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Features.FeatureAttribute.#ctor(System.Type)">
+      <summary>初始化 <see cref="T:Microsoft.Windows.Design.Features.FeatureAttribute" /> 类的新实例。</summary>
+      <param name="featureProviderType">此属性所描述的功能提供程序的类型。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="featureProviderType" /> 为 null。</exception>
+      <exception cref="T:System.ArgumentException">功能提供程序不能从 <paramref name="featureProviderType" /> 分配。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Features.FeatureAttribute.Equals(System.Object)">
+      <returns>如果指定的对象与此属性相等，则为 true；否则为 false。</returns>
+      <param name="obj">要比较的对象。</param>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Features.FeatureAttribute.FeatureProviderType">
+      <summary>获取要实例化的 <see cref="T:Microsoft.Windows.Design.Features.FeatureProvider" /> 类型。</summary>
+      <returns>一个 <see cref="T:System.Type" />，表示要附加至目标控件的功能提供程序的类。</returns>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Features.FeatureAttribute.GetHashCode">
+      <returns>此对象的哈希代码。</returns>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Features.FeatureAttribute.TypeId">
+      <summary>获取此特性的唯一标识符。</summary>
+      <returns>一个表示该属性的唯一标识符的 <see cref="T:System.Object" />。</returns>
+    </member>
+    <member name="T:Microsoft.Windows.Design.Features.FeatureAvailableEventArgs">
+      <summary>为 <see cref="E:Microsoft.Windows.Design.Features.FeatureManager.FeatureAvailable" /> 事件提供数据。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Features.FeatureAvailableEventArgs.#ctor(System.Type)">
+      <summary>初始化 <see cref="T:Microsoft.Windows.Design.Features.FeatureAvailableEventArgs" /> 类的新实例。</summary>
+      <param name="featureProviderType">现在可以创建功能提供程序的类型了。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="featureProviderType" /> 为 null。</exception>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Features.FeatureAvailableEventArgs.FeatureProviderType">
+      <summary>获取创建可用的功能提供程序的类型。</summary>
+      <returns>一个 <see cref="T:System.Type" /> 对象，表示创建可用的功能提供程序。</returns>
+    </member>
+    <member name="T:Microsoft.Windows.Design.Features.FeatureConnector`1">
+      <summary>为所有基于功能连接器的扩展性提供基实现。</summary>
+      <typeparam name="TFeatureProviderType">功能提供程序的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Features.FeatureConnector`1.#ctor(Microsoft.Windows.Design.Features.FeatureManager)">
+      <summary>初始化 <see cref="T:Microsoft.Windows.Design.Features.FeatureConnector`1" /> 类的新实例。</summary>
+      <param name="manager">与此功能连接器相关联的功能管理器。</param>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Features.FeatureConnector`1.Context">
+      <summary>获取功能连接器的编辑上下文。</summary>
+      <returns>一个与功能连接器相关联的 <see cref="T:Microsoft.Windows.Design.EditingContext" />。</returns>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Features.FeatureConnector`1.CreateFeatureProviders(System.Type)">
+      <summary>基于提供的类型创建一个与功能连接器相关联的功能提供程序的新列表。</summary>
+      <returns>功能提供程序的一个枚举。</returns>
+      <param name="type">对其进行查询以获得功能提供程序的 <see cref="T:System.Type" />。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="type" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Features.FeatureConnector`1.CreateFeatureProviders``1(System.Type)">
+      <summary>基于提供的类型和子类型创建一个与功能连接器相关联的功能提供程序的新列表。</summary>
+      <returns>功能提供程序的一个枚举，按子类型筛选。</returns>
+      <param name="type">对其进行查询以获得功能提供程序的 <see cref="T:System.Type" />。</param>
+      <typeparam name="TSubtype">功能提供程序类型的子类型。</typeparam>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="type" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Features.FeatureConnector`1.Dispose">
+      <summary>释放由 <see cref="T:Microsoft.Windows.Design.Features.FeatureConnector`1" /> 使用的所有资源。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Features.FeatureConnector`1.Dispose(System.Boolean)">
+      <summary>释放由 <see cref="T:Microsoft.Windows.Design.Features.FeatureConnector`1" /> 占用的非托管资源，还可以另外再释放托管资源。</summary>
+      <param name="disposing">true 表示释放托管资源和非托管资源；false 表示仅释放非托管资源。</param>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Features.FeatureConnector`1.Finalize">
+    </member>
+    <member name="P:Microsoft.Windows.Design.Features.FeatureConnector`1.Manager">
+      <summary>获取功能连接器的 <see cref="T:Microsoft.Windows.Design.Features.FeatureManager" />。</summary>
+      <returns>一个与功能连接器相关联的 <see cref="T:Microsoft.Windows.Design.Features.FeatureManager" />。</returns>
+    </member>
+    <member name="T:Microsoft.Windows.Design.Features.FeatureConnectorAttribute">
+      <summary>指示处理 <see cref="T:Microsoft.Windows.Design.Features.FeatureProvider" /> 所必需的 <see cref="T:Microsoft.Windows.Design.Features.FeatureConnector`1" /> 的类型。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Features.FeatureConnectorAttribute.#ctor(System.Type)">
+      <summary>初始化 <see cref="T:Microsoft.Windows.Design.Features.FeatureConnectorAttribute" /> 类的新实例。</summary>
+      <param name="featureConnectorType">功能管理器的类型。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="featureConnectorType" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Features.FeatureConnectorAttribute.Equals(System.Object)">
+      <returns>如果该对象等于此对象，则为 true；否则为 false。</returns>
+      <param name="obj">要比较的对象。</param>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Features.FeatureConnectorAttribute.FeatureConnectorType">
+      <summary>获取要实例化的 <see cref="T:Microsoft.Windows.Design.Features.FeatureConnector`1" /> 类型。</summary>
+      <returns>一个 <see cref="T:System.Type" /> 对象，表示要实例化的 <see cref="T:Microsoft.Windows.Design.Features.FeatureConnector`1" /> 类型。</returns>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Features.FeatureConnectorAttribute.GetHashCode">
+      <returns>该对象的哈希代码。</returns>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Features.FeatureConnectorAttribute.TypeId">
+      <summary>获取用于确定唯一特性的对象。</summary>
+      <returns>用于确定唯一特性的对象。</returns>
+    </member>
+    <member name="T:Microsoft.Windows.Design.Features.FeatureConnectorInformation">
+      <summary>包含描述指定功能连接器的信息。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Features.FeatureConnectorInformation.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Windows.Design.Features.FeatureConnectorInformation" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Features.FeatureConnectorInformation.FeatureConnectorType">
+      <summary>获取此 <see cref="T:Microsoft.Windows.Design.Features.FeatureConnectorInformation" /> 描述的功能连接器的类型。</summary>
+      <returns>一个 <see cref="T:System.Type" /> 对象，表示此 <see cref="T:Microsoft.Windows.Design.Features.FeatureConnectorInformation" /> 对象的功能连接器的类型。</returns>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Features.FeatureConnectorInformation.PendingItems">
+      <summary>获取功能连接器所需要的但是在编辑上下文中不可用的上下文列表。</summary>
+      <returns>当前编辑上下文中不可用的所需上下文项类型的枚举。</returns>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Features.FeatureConnectorInformation.PendingServices">
+      <summary>获取功能连接器所需要的但是在编辑上下文中不可用的服务。</summary>
+      <returns>当前编辑上下文中不可用的所需服务类型的枚举。</returns>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Features.FeatureConnectorInformation.RequiredItems">
+      <summary>获取功能连接器所需的上下文列表。</summary>
+      <returns>在创建功能连接器之前，必须在编辑上下文中可用的所需上下文项类型的枚举。</returns>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Features.FeatureConnectorInformation.RequiredServices">
+      <summary>获取功能连接器所需的服务。</summary>
+      <returns>在创建功能连接器之前，必须在编辑上下文中可用的所需服务类型的枚举。</returns>
+    </member>
+    <member name="T:Microsoft.Windows.Design.Features.FeatureManager">
+      <summary>管理功能提供程序和功能连接器。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Features.FeatureManager.#ctor(Microsoft.Windows.Design.EditingContext)">
+      <summary>初始化 <see cref="T:Microsoft.Windows.Design.Features.FeatureManager" /> 类的新实例。</summary>
+      <param name="context">此功能管理器用于解析服务和上下文项的编辑上下文。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="context" /> 为 null。</exception>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Features.FeatureManager.Context">
+      <summary>获取此功能管理器的编辑上下文。</summary>
+      <returns>用于此功能管理器的 <see cref="T:Microsoft.Windows.Design.EditingContext" />。</returns>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Features.FeatureManager.CreateFeatureProviders(System.Type)">
+      <summary>创建并返回一组指定类型的功能提供程序。</summary>
+      <returns>功能提供程序的一个枚举。 如果没有任何可用的 <paramref name="featureProviderType" /> 的功能提供程序，则此方法返回一个空枚举。</returns>
+      <param name="featureProviderType">要返回的功能提供程序的类型。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="featureProviderType" /> 为 null。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="featureProviderType" /> 不从 <see cref="T:Microsoft.Windows.Design.Features.FeatureProvider" /> 派生。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Features.FeatureManager.CreateFeatureProviders(System.Type,System.Predicate{System.Type})">
+      <summary>创建并返回一组指定类型的功能提供程序。</summary>
+      <returns>功能提供程序的一个枚举。 如果没有任何可用的 <paramref name="featureProviderType" /> 或 <paramref name="match" /> 的功能提供程序，则此方法返回一个空枚举。</returns>
+      <param name="featureProviderType">要返回的功能提供程序的类型。</param>
+      <param name="match">创建功能提供程序时要使用的谓词。 如果该谓词返回 true，则功能提供程序将包含在枚举中。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="featureProviderType" /> 或 <paramref name="match" /> 为 null。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="featureProviderType" /> 不从 <see cref="T:Microsoft.Windows.Design.Features.FeatureProvider" /> 派生。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Features.FeatureManager.CreateFeatureProviders(System.Type,System.Type)">
+      <summary>创建并返回一组适用于指定类型的功能提供程序。</summary>
+      <returns>功能提供程序的一个枚举。 如果没有任何可用的 <paramref name="featureProviderType" /> 或 <paramref name="type" /> 的功能提供程序，则此方法返回一个空枚举。</returns>
+      <param name="featureProviderType">要返回的功能提供程序的类型。</param>
+      <param name="type">要为其创建功能提供程序的类型。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="featureProviderType" /> 或 <paramref name="type" /> 为 null。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="featureProviderType" /> 不从 <see cref="T:Microsoft.Windows.Design.Features.FeatureProvider" /> 派生。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Features.FeatureManager.CreateFeatureProviders(System.Type,System.Type,System.Predicate{System.Type})">
+      <summary>创建并返回一组适用于指定类型的功能提供程序。</summary>
+      <returns>功能提供程序的一个枚举。 如果没有任何可用的 <paramref name="featureProviderType" />、<paramref name="type" /> 或 <paramref name="match" /> 的功能提供程序，则此方法返回一个空枚举。</returns>
+      <param name="featureProviderType">要返回的功能提供程序的类型。</param>
+      <param name="type">要为其创建功能提供程序的类型。</param>
+      <param name="match">创建功能提供程序时要使用的谓词。 如果该谓词返回 true，则功能提供程序将包含在枚举中。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="featureProviderType" />、<paramref name="type" /> 或 <paramref name="match" /> 为 null。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="featureProviderType" /> 不从 <see cref="T:Microsoft.Windows.Design.Features.FeatureProvider" /> 派生。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Features.FeatureManager.Dispose">
+      <summary>释放由 <see cref="T:Microsoft.Windows.Design.Features.FeatureManager" /> 使用的所有资源。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Features.FeatureManager.Dispose(System.Boolean)">
+      <summary>释放所有正在运行的功能连接器。</summary>
+      <param name="disposing">如果将释放此对象，则为 true；如果将终止此对象，则为 false。</param>
+    </member>
+    <member name="E:Microsoft.Windows.Design.Features.FeatureManager.FeatureAvailable">
+      <summary>当新的功能类型可用时发生。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Features.FeatureManager.Finalize">
+      <summary>可调用 <see cref="M:Microsoft.Windows.Design.Features.FeatureManager.Dispose" /> 的终结器。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Features.FeatureManager.GetCustomAttributes(System.Type,System.Type)">
+      <summary>枚举指定类型上的特性。</summary>
+      <returns>自定义特性的枚举。</returns>
+      <param name="type">要枚举其特性的类型。</param>
+      <param name="attributeType">要返回的特性的类型。</param>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Features.FeatureManager.InitializeFeatures(System.Type)">
+      <summary>针对在指定类型上定义的功能提供程序初始化任何功能连接器。</summary>
+      <param name="type">要为其初始化功能连接器的类型。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="type" /> 为 null。</exception>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Features.FeatureManager.MetadataProvider">
+      <summary>获取或设置一个可为此功能管理器提供类型元数据的自定义元数据提供程序。</summary>
+      <returns>一个提供类型元数据的 <see cref="T:Microsoft.Windows.Design.Features.MetadataProviderCallback" />。</returns>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Features.FeatureManager.OnFeatureAvailable(Microsoft.Windows.Design.Features.FeatureAvailableEventArgs)">
+      <summary>引发 <see cref="E:Microsoft.Windows.Design.Features.FeatureManager.FeatureAvailable" /> 事件。</summary>
+      <param name="e">要传递给事件的 <see cref="T:System.EventArgs" />。</param>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Features.FeatureManager.PendingConnectors">
+      <summary>获取因等待上下文项或服务而尚未激活的所有连接器的枚举。</summary>
+      <returns>正在等待服务或上下文项在编辑上下文中变为可用的功能连接器的枚举。</returns>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Features.FeatureManager.RunningConnectors">
+      <summary>获取当前运行的所有连接器的枚举。</summary>
+      <returns>当前运行的功能连接器的枚举。</returns>
+    </member>
+    <member name="T:Microsoft.Windows.Design.Features.FeatureProvider">
+      <summary>向功能添加特定于类的基值。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Features.FeatureProvider.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Windows.Design.Features.FeatureProvider" /> 类的新实例。</summary>
+    </member>
+    <member name="T:Microsoft.Windows.Design.Features.MetadataProviderCallback">
+      <summary>指定一个自定义机制，以便将元数据特性提供给 <see cref="T:Microsoft.Windows.Design.Features.FeatureManager" /> 类。</summary>
+      <returns>特性的枚举。</returns>
+      <param name="type">要获取其特性的类型。</param>
+      <param name="attributeType">要枚举的特性的类型。 不能为 null。</param>
+    </member>
+    <member name="T:Microsoft.Windows.Design.Metadata.AttributeCallback">
+      <summary>当某个类型需要特性时调用。</summary>
+      <param name="builder">可用于添加特性的 <see cref="T:Microsoft.Windows.Design.Metadata.AttributeCallbackBuilder" />。 <see cref="T:Microsoft.Windows.Design.Metadata.AttributeCallbackBuilder" /> 委托只能为请求元数据的类型生成特性。</param>
+    </member>
+    <member name="T:Microsoft.Windows.Design.Metadata.AttributeCallbackBuilder">
+      <summary>将此类的实例传递给回调委托以惰式填充某个类型的特性。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.AttributeCallbackBuilder.AddCustomAttributes(System.Attribute[])">
+      <summary>将指定特性的内容添加到此生成器。</summary>
+      <param name="attributes">要添加的新特性的数组。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="attributes" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.AttributeCallbackBuilder.AddCustomAttributes(System.String,System.Attribute[])">
+      <summary>将特性添加到具有指定名称的成员。</summary>
+      <param name="memberName">要为其添加特性的成员。 仅支持属性和事件成员；将忽略任何其他项。</param>
+      <param name="attributes">要添加的新特性的数组。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="memberName" /> 或 <paramref name="attributes" /> 为 null。</exception>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Metadata.AttributeCallbackBuilder.CallbackType">
+      <summary>获取要为其调用此回调的类型。</summary>
+      <returns>要为其调用此回调的类型。</returns>
+    </member>
+    <member name="T:Microsoft.Windows.Design.Metadata.AttributeTable">
+      <summary>用于定义设计时外观和行为的元数据特性表。</summary>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Metadata.AttributeTable.AttributedTypes">
+      <summary>获取具有某些形式的特性重写（例如对属性或类型本身的重写）的所有类型的枚举。</summary>
+      <returns>具有特性重写的类型的枚举。</returns>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.AttributeTable.ContainsAttributes(System.Type)">
+      <summary>返回一个值，该值指示此表是否包含指定类型的任何元数据。</summary>
+      <returns>如果表中包含指定类型的特性，则为 true；否则为 false。</returns>
+      <param name="type">要对其检查元数据特性的类型。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="type" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.AttributeTable.GetCustomAttributes(System.Reflection.Assembly)">
+      <summary>返回提供给指定的程序集的所有特性的枚举。</summary>
+      <returns>特性的枚举。</returns>
+      <param name="assembly">要为其获取程序集级别特性的程序集。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="assembly" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.AttributeTable.GetCustomAttributes(System.Type)">
+      <summary>返回提供给指定类型的所有特性的枚举。</summary>
+      <returns>特性的枚举。</returns>
+      <param name="type">要为其获取类级别特性的类型。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="type" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.AttributeTable.GetCustomAttributes(System.Type,System.String)">
+      <summary>返回提供给指定的类型和成员名称的所有特性的枚举。</summary>
+      <returns>特性的枚举。</returns>
+      <param name="ownerType">依赖项属性的所属类型。</param>
+      <param name="memberName">要为其提供特性的成员的名称。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="ownerType" /> 或 <paramref name="memberName" /> 为 null。</exception>
+    </member>
+    <member name="T:Microsoft.Windows.Design.Metadata.AttributeTableBuilder">
+      <summary>创建定义设计时元数据的特性表。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.AttributeTableBuilder.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Windows.Design.Metadata.AttributeTableBuilder" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.AttributeTableBuilder.AddCallback(System.Type,Microsoft.Windows.Design.Metadata.AttributeCallback)">
+      <summary>添加一个在需要指定类型的元数据时调用的回调。</summary>
+      <param name="type">要为其要添加元数据特性的类型。</param>
+      <param name="callback">一个将向 <paramref name="Type" /> 添加元数据的 <see cref="T:Microsoft.Windows.Design.Metadata.AttributeCallback" />。</param>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.AttributeTableBuilder.AddCustomAttributes(System.Reflection.Assembly,System.Attribute[])">
+      <summary>将提供的特性数组的内容添加到表生成器。</summary>
+      <param name="assembly">要为其添加程序集级别特性的程序集。</param>
+      <param name="attributes">要添加到 <paramref name="assembly" /> 的新特性。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="assembly" /> 或 <paramref name="attributes" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.AttributeTableBuilder.AddCustomAttributes(System.Type,System.Attribute[])">
+      <summary>将提供的特性的内容添加到表生成器。</summary>
+      <param name="type">要为其添加类级别特性的类型。</param>
+      <param name="attributes">要添加到 <paramref name="type" /> 的新特性。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="type" /> 或 <paramref name="attributes" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.AttributeTableBuilder.AddCustomAttributes(System.Type,System.String,System.Attribute[])">
+      <summary>将特性添加到具有指定名称的成员。</summary>
+      <param name="ownerType">成员所属的类型。</param>
+      <param name="memberName">要为其添加特性的成员。</param>
+      <param name="attributes">要添加的特性。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="ownerType" />、<paramref name="memberName" /> 或 <paramref name="attributes" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.AttributeTableBuilder.AddTable(Microsoft.Windows.Design.Metadata.AttributeTable)">
+      <summary>将提供的特性表的内容添加到表生成器。</summary>
+      <param name="table">现有特性表。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="table" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.AttributeTableBuilder.CreateTable">
+      <summary>创建一个包含通过 <see cref="M:Microsoft.Windows.Design.Metadata.AttributeCallbackBuilder.AddCustomAttributes(System.Attribute[])" /> 调用提供的所有特性定义的特性表。</summary>
+      <returns>一个可用于定义设计时元数据的特性表。</returns>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.AttributeTableBuilder.ValidateTable">
+      <summary>此方法用于验证所创建的特性表是否包含有效的特性信息。</summary>
+      <exception cref="T:Microsoft.Windows.Design.Metadata.AttributeTableValidationException">表状态无效。</exception>
+    </member>
+    <member name="T:Microsoft.Windows.Design.Metadata.AttributeTableContainer">
+      <summary>提供 <see cref="T:Microsoft.Windows.Design.Metadata.AttributeTable" /> 实例的集合。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.AttributeTableContainer.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Windows.Design.Metadata.AttributeTableContainer" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.AttributeTableContainer.AddAttributeTable(Microsoft.Windows.Design.Metadata.AttributeTable)">
+      <summary>将指定的表添加到当前容器中的特性表集。</summary>
+      <param name="table">要添加的特性表。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="table" /> 为 null。</exception>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Metadata.AttributeTableContainer.AttributeTables">
+      <summary>获取有关添加的特性表的枚举。</summary>
+      <returns>有关添加的特性表的枚举。</returns>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.AttributeTableContainer.GetAttributes(System.Reflection.Assembly,System.Type)">
+      <summary>枚举指定程序集的特性。</summary>
+      <returns>特性的枚举。</returns>
+      <param name="assembly">要枚举特性的程序集。</param>
+      <param name="attributeType">要枚举的特性类型，或为 null 以枚举所有特性。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="assembly" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.AttributeTableContainer.GetAttributes(System.Reflection.Assembly,System.Type,System.Func{System.Object,System.Object})">
+      <summary>枚举指定程序集的特性。</summary>
+      <returns>特性的枚举。</returns>
+      <param name="assembly">要枚举特性的程序集。</param>
+      <param name="attributeType">要枚举的特性类型，或为 null 以枚举所有特性。</param>
+      <param name="reflectionMapper">可选的映射函数，用于将传入的反射元数据映射到运行时元数据。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="assembly" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.AttributeTableContainer.GetAttributes(System.Reflection.MemberInfo,System.Type)">
+      <summary>枚举指定成员的自定义特性，包括基成员的继承特性。</summary>
+      <returns>特性的枚举。</returns>
+      <param name="member">要为其获取特性的成员。</param>
+      <param name="attributeType">要检索的特性类型，或为 null 以检索所有特性。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="member" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.AttributeTableContainer.GetAttributes(System.Reflection.MemberInfo,System.Type,System.Func{System.Object,System.Object})">
+      <summary>枚举指定成员的自定义特性，包括基成员的继承特性。</summary>
+      <returns>特性的枚举。</returns>
+      <param name="member">要为其获取特性的成员。</param>
+      <param name="attributeType">要检索的特性类型，或为 null 以检索所有特性。</param>
+      <param name="reflectionMapper">可选的映射函数，用于将传入的反射元数据映射到运行时元数据。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="member" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.AttributeTableContainer.GetLocalAttributes(System.Reflection.MemberInfo,System.Type)">
+      <summary>枚举指定成员的自定义特性，包括基成员的继承特性。</summary>
+      <returns>特性的枚举。</returns>
+      <param name="member">要为其获取特性的成员。</param>
+      <param name="attributeType">要检索的特性类型，或为 null 以检索所有特性。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="member" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.AttributeTableContainer.GetLocalAttributes(System.Reflection.MemberInfo,System.Type,System.Func{System.Object,System.Object})">
+      <summary>枚举指定成员的自定义特性，包括基成员的继承特性。</summary>
+      <returns>特性的枚举。</returns>
+      <param name="member">要为其获取特性的成员。</param>
+      <param name="attributeType">要检索的特性类型，或为 null 以检索所有特性。</param>
+      <param name="reflectionMapper">可选的映射函数，用于将传入的反射元数据映射到运行时元数据。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="member" /> 为 null。</exception>
+    </member>
+    <member name="T:Microsoft.Windows.Design.Metadata.AttributeTableValidationException">
+      <summary>在 <see cref="T:Microsoft.Windows.Design.Metadata.AttributeTable" /> 中提供的元数据与现有类型上的属性、方法和事件不匹配时引发。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.AttributeTableValidationException.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Windows.Design.Metadata.AttributeTableValidationException" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.AttributeTableValidationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>以序列化信息初始化 <see cref="T:Microsoft.Windows.Design.Metadata.AttributeTableValidationException" /> 类的新实例。</summary>
+      <param name="info">序列化存储区。</param>
+      <param name="context">序列化上下文。</param>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.AttributeTableValidationException.#ctor(System.String)">
+      <summary>使用消息初始化 <see cref="T:Microsoft.Windows.Design.Metadata.AttributeTableValidationException" /> 类的新实例。</summary>
+      <param name="message">一个描述异常的字符串。</param>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.AttributeTableValidationException.#ctor(System.String,System.Collections.Generic.IEnumerable{System.String})">
+      <summary>初始化包含验证错误集合的 <see cref="T:Microsoft.Windows.Design.Metadata.AttributeTableValidationException" /> 类的新实例。</summary>
+      <param name="message">显示给用户的消息。</param>
+      <param name="validationErrors">验证期间发生的错误的集合。</param>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.AttributeTableValidationException.#ctor(System.String,System.Exception)">
+      <summary>使用内部异常初始化 <see cref="T:Microsoft.Windows.Design.Metadata.AttributeTableValidationException" /> 类的新实例。</summary>
+      <param name="message">显示给用户的消息。</param>
+      <param name="inner">一个可选内部异常。</param>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.AttributeTableValidationException.#ctor(System.String,System.Exception,System.Collections.Generic.IEnumerable{System.String})">
+      <summary>使用消息、错误字符串的集合和内部异常初始化 <see cref="T:Microsoft.Windows.Design.Metadata.AttributeTableValidationException" /> 类的新实例。</summary>
+      <param name="message">显示给用户的消息。</param>
+      <param name="inner">一个可选内部异常。</param>
+      <param name="validationErrors">验证期间发生的错误的集合。</param>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.AttributeTableValidationException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>重写用于执行序列化的异常类型的 <see cref="M:System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />。</summary>
+      <param name="info">序列化存储区。</param>
+      <param name="context">序列化上下文。</param>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Metadata.AttributeTableValidationException.ValidationErrors">
+      <summary>获取验证错误的集合。</summary>
+      <returns>错误字符串的可枚举集合。</returns>
+    </member>
+    <member name="T:Microsoft.Windows.Design.Metadata.EventIdentifier">
+      <summary>表示一个与平台无关的事件。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.EventIdentifier.#ctor(Microsoft.Windows.Design.Metadata.TypeIdentifier,System.String)">
+      <summary>使用指定的现有类型标识符和事件名称初始化 <see cref="T:Microsoft.Windows.Design.Metadata.EventIdentifier" /> 类的新实例。</summary>
+      <param name="declaringTypeId">在其上声明该事件的类型的 <see cref="T:Microsoft.Windows.Design.Metadata.TypeIdentifier" />。</param>
+      <param name="name">事件的名称。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="name" /> 为 null。</exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="name" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.EventIdentifier.#ctor(System.Type,System.String)">
+      <summary>使用指定的现有类型和事件名称初始化 <see cref="T:Microsoft.Windows.Design.Metadata.EventIdentifier" /> 类的新实例。</summary>
+      <param name="declaringType">在其上声明该事件的类型。</param>
+      <param name="name">事件的名称。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="declaringType" /> 或 <paramref name="name" /> 为 null。</exception>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Metadata.EventIdentifier.DeclaringType">
+      <summary>获取声明该事件的类型（如果该事件是在构造函数中设置的）。</summary>
+      <returns>一个声明该事件的类型；如果该事件标识符是使用 <see cref="T:Microsoft.Windows.Design.Metadata.TypeIdentifier" /> 创建的，则为 null。</returns>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Metadata.EventIdentifier.DeclaringTypeIdentifier">
+      <summary>获取声明该事件的类型的类型标识符。</summary>
+      <returns>声明该事件的类型的类型标识符。</returns>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.EventIdentifier.Equals(Microsoft.Windows.Design.Metadata.EventIdentifier)">
+      <summary>确定指定的 <see cref="T:Microsoft.Windows.Design.Metadata.EventIdentifier" /> 是否等于当前的 <see cref="T:Microsoft.Windows.Design.Metadata.EventIdentifier" />。</summary>
+      <returns>如果指定的 <see cref="T:Microsoft.Windows.Design.Metadata.EventIdentifier" /> 等于当前的 <see cref="T:Microsoft.Windows.Design.Metadata.EventIdentifier" />，则为 true；否则为 false。</returns>
+      <param name="other">与当前的 <see cref="T:Microsoft.Windows.Design.Metadata.EventIdentifier" /> 进行比较的 <see cref="T:Microsoft.Windows.Design.Metadata.EventIdentifier" />。</param>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.EventIdentifier.Equals(System.Object)">
+      <summary>确定指定的 <see cref="T:System.Object" /> 是否等于当前的 <see cref="T:Microsoft.Windows.Design.Metadata.EventIdentifier" />。</summary>
+      <returns>如果指定的 <see cref="T:System.Object" /> 等于当前的 <see cref="T:Microsoft.Windows.Design.Metadata.EventIdentifier" />，则为 true；否则为 false。</returns>
+      <param name="obj">与当前的 <see cref="T:System.Object" /> 进行比较的 <see cref="T:Microsoft.Windows.Design.Metadata.EventIdentifier" />。</param>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Metadata.EventIdentifier.FullName">
+      <summary>获取该事件的类型限定名称。</summary>
+      <returns>该事件的类型限定名称。</returns>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.EventIdentifier.GetHashCode">
+      <summary>返回当前 <see cref="T:Microsoft.Windows.Design.Metadata.EventIdentifier" /> 实例的哈希代码。</summary>
+      <returns>当前 <see cref="T:Microsoft.Windows.Design.Metadata.EventIdentifier" /> 实例的哈希代码。</returns>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Metadata.EventIdentifier.IsEmpty">
+      <summary>获取一个值，该值指示当前的标识符是否是使用空白构造函数创建的。</summary>
+      <returns>如果此标识符是使用空白构造函数创建的，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Metadata.EventIdentifier.Name">
+      <summary>获取该事件的名称。</summary>
+      <returns>事件的名称。</returns>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.EventIdentifier.op_Equality(Microsoft.Windows.Design.Metadata.EventIdentifier,Microsoft.Windows.Design.Metadata.EventIdentifier)">
+      <summary>确定指定的 <see cref="T:Microsoft.Windows.Design.Metadata.EventIdentifier" /> 实例是否被视为相等。</summary>
+      <returns>如果 <paramref name="first" /> 等于 <paramref name="second" />，则为 true；否则为 false。</returns>
+      <param name="first">要比较的第一个 <see cref="T:Microsoft.Windows.Design.Metadata.EventIdentifier" />。</param>
+      <param name="second">要比较的第二个 <see cref="T:Microsoft.Windows.Design.Metadata.EventIdentifier" />。</param>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.EventIdentifier.op_Inequality(Microsoft.Windows.Design.Metadata.EventIdentifier,Microsoft.Windows.Design.Metadata.EventIdentifier)">
+      <summary>确定是否将指定的 <see cref="T:Microsoft.Windows.Design.Metadata.EventIdentifier" /> 实例视为不相等。</summary>
+      <returns>如果 <paramref name="first" /> 不等于 <paramref name="second" />，则为 true；否则为 false。</returns>
+      <param name="first">要比较的第一个 <see cref="T:Microsoft.Windows.Design.Metadata.EventIdentifier" />。</param>
+      <param name="second">要比较的第二个 <see cref="T:Microsoft.Windows.Design.Metadata.EventIdentifier" />。</param>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.EventIdentifier.ToString">
+      <summary>获取字符串形式的 <see cref="P:Microsoft.Windows.Design.Metadata.EventIdentifier.FullName" /> 属性。</summary>
+      <returns>字符串形式的 <see cref="P:Microsoft.Windows.Design.Metadata.EventIdentifier.FullName" /> 属性。</returns>
+    </member>
+    <member name="T:Microsoft.Windows.Design.Metadata.IProvideAttributeTable">
+      <summary>定义一个提供特性表的类。</summary>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Metadata.IProvideAttributeTable.AttributeTable">
+      <summary>获取由该类提供的特性表。</summary>
+      <returns>由该类提供的 <see cref="T:Microsoft.Windows.Design.Metadata.AttributeTable" />。</returns>
+    </member>
+    <member name="T:Microsoft.Windows.Design.Metadata.PropertyIdentifier">
+      <summary>表示一个与平台无关的属性。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.PropertyIdentifier.#ctor(Microsoft.Windows.Design.Metadata.TypeIdentifier,System.String)">
+      <summary>使用指定的现有类型标识符和属性名称初始化 <see cref="T:Microsoft.Windows.Design.Metadata.PropertyIdentifier" /> 类的新实例。</summary>
+      <param name="declaringTypeId">在其上声明该属性的类型的 <see cref="T:Microsoft.Windows.Design.Metadata.TypeIdentifier" />。</param>
+      <param name="name">属性的名称。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="name" /> 为 null。</exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="name" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.PropertyIdentifier.#ctor(System.Type,System.String)">
+      <summary>使用指定的现有类型和属性名称初始化 <see cref="T:Microsoft.Windows.Design.Metadata.PropertyIdentifier" /> 类的新实例。</summary>
+      <param name="declaringType">在其上声明该属性的类型。</param>
+      <param name="name">属性的名称。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="declaringType" /> 或 <paramref name="name" /> 为 null。</exception>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Metadata.PropertyIdentifier.DeclaringType">
+      <summary>获取声明此属性的类型（如果此属性是在构造函数中设置的）。</summary>
+      <returns>一个声明该属性的类型；如果该属性标识符是使用 <see cref="T:Microsoft.Windows.Design.Metadata.TypeIdentifier" /> 创建的，则为 null。</returns>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Metadata.PropertyIdentifier.DeclaringTypeIdentifier">
+      <summary>获取声明该属性的类型的类型标识符。</summary>
+      <returns>声明该属性的类型的类型标识符。</returns>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.PropertyIdentifier.Equals(Microsoft.Windows.Design.Metadata.PropertyIdentifier)">
+      <summary>确定指定的 <see cref="T:Microsoft.Windows.Design.Metadata.PropertyIdentifier" /> 是否等于当前的 <see cref="T:Microsoft.Windows.Design.Metadata.PropertyIdentifier" />。</summary>
+      <returns>如果指定的 <see cref="T:Microsoft.Windows.Design.Metadata.PropertyIdentifier" /> 等于当前的 <see cref="T:Microsoft.Windows.Design.Metadata.PropertyIdentifier" />，则为 true；否则为 false。</returns>
+      <param name="other">与当前的 <see cref="T:Microsoft.Windows.Design.Metadata.PropertyIdentifier" /> 进行比较的 <see cref="T:Microsoft.Windows.Design.Metadata.PropertyIdentifier" />。</param>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.PropertyIdentifier.Equals(System.Object)">
+      <summary>确定指定的 <see cref="T:System.Object" /> 是否等于当前的 <see cref="T:Microsoft.Windows.Design.Metadata.PropertyIdentifier" />。</summary>
+      <returns>如果指定的 <see cref="T:System.Object" /> 等于当前的 <see cref="T:Microsoft.Windows.Design.Metadata.PropertyIdentifier" />，则为 true；否则为 false。</returns>
+      <param name="obj">与当前的 <see cref="T:System.Object" /> 进行比较的 <see cref="T:Microsoft.Windows.Design.Metadata.PropertyIdentifier" />。</param>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Metadata.PropertyIdentifier.FullName">
+      <summary>获取该属性的类型限定名称。</summary>
+      <returns>该属性的类型限定名称。</returns>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.PropertyIdentifier.GetHashCode">
+      <summary>返回当前 <see cref="T:Microsoft.Windows.Design.Metadata.PropertyIdentifier" /> 实例的哈希代码。</summary>
+      <returns>当前 <see cref="T:Microsoft.Windows.Design.Metadata.PropertyIdentifier" /> 实例的哈希代码。</returns>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Metadata.PropertyIdentifier.IsEmpty">
+      <summary>获取一个值，该值指示当前的标识符是否是使用空白构造函数创建的。</summary>
+      <returns>如果此标识符是使用空白构造函数创建的，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Metadata.PropertyIdentifier.Name">
+      <summary>获取属性的名称。</summary>
+      <returns>属性的名称。</returns>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.PropertyIdentifier.op_Equality(Microsoft.Windows.Design.Metadata.PropertyIdentifier,Microsoft.Windows.Design.Metadata.PropertyIdentifier)">
+      <summary>确定指定的 <see cref="T:Microsoft.Windows.Design.Metadata.PropertyIdentifier" /> 实例是否被视为相等。</summary>
+      <returns>如果 <paramref name="first" /> 等于 <paramref name="second" />，则为 true；否则为 false。</returns>
+      <param name="first">要比较的第一个 <see cref="T:Microsoft.Windows.Design.Metadata.PropertyIdentifier" />。</param>
+      <param name="second">要比较的第二个 <see cref="T:Microsoft.Windows.Design.Metadata.PropertyIdentifier" />。</param>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.PropertyIdentifier.op_Inequality(Microsoft.Windows.Design.Metadata.PropertyIdentifier,Microsoft.Windows.Design.Metadata.PropertyIdentifier)">
+      <summary>确定是否将指定的 <see cref="T:Microsoft.Windows.Design.Metadata.PropertyIdentifier" /> 实例视为不相等。</summary>
+      <returns>如果 <paramref name="first" /> 不等于 <paramref name="second" />，则为 true；否则为 false。</returns>
+      <param name="first">要比较的第一个 <see cref="T:Microsoft.Windows.Design.Metadata.PropertyIdentifier" />。</param>
+      <param name="second">要比较的第二个 <see cref="T:Microsoft.Windows.Design.Metadata.PropertyIdentifier" />。</param>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.PropertyIdentifier.ToString">
+      <summary>获取字符串形式的 <see cref="P:Microsoft.Windows.Design.Metadata.PropertyIdentifier.FullName" /> 属性。</summary>
+      <returns>字符串形式的 <see cref="P:Microsoft.Windows.Design.Metadata.PropertyIdentifier.FullName" /> 属性。</returns>
+    </member>
+    <member name="T:Microsoft.Windows.Design.Metadata.ProvideMetadataAttribute">
+      <summary>表示一个提供元数据的类。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.ProvideMetadataAttribute.#ctor(System.Type)">
+      <summary>初始化 <see cref="T:Microsoft.Windows.Design.Metadata.ProvideMetadataAttribute" /> 类的新实例。</summary>
+      <param name="metadataProviderType">可实现 <see cref="T:Microsoft.Windows.Design.Metadata.IProvideAttributeTable" /> 接口的类的 <see cref="T:System.Type" />。</param>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Metadata.ProvideMetadataAttribute.MetadataProviderType">
+      <summary>获取实现 <see cref="T:Microsoft.Windows.Design.Metadata.IProvideAttributeTable" /> 接口的类型。</summary>
+      <returns>实现 <see cref="T:Microsoft.Windows.Design.Metadata.IProvideAttributeTable" /> 接口的类型。</returns>
+    </member>
+    <member name="T:Microsoft.Windows.Design.Metadata.TypeIdentifier">
+      <summary>标识一个与平台无关的类型。</summary>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.TypeIdentifier.#ctor(System.String)">
+      <summary>初始化 <see cref="T:Microsoft.Windows.Design.Metadata.TypeIdentifier" /> 类的新实例。</summary>
+      <param name="fullyQualifiedName">该类型的完全限定名。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="fullyQualifiedName" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.TypeIdentifier.#ctor(System.String,System.String)">
+      <summary>使用指定的 XML 命名空间和类型名称初始化 <see cref="T:Microsoft.Windows.Design.Metadata.TypeIdentifier" /> 类的新实例。</summary>
+      <param name="xmlNamespace">在其中声明该类型的 XML 命名空间。</param>
+      <param name="name">类型名称。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="xmlNamespace" /> 或 <paramref name="name" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.TypeIdentifier.Equals(Microsoft.Windows.Design.Metadata.TypeIdentifier)">
+      <summary>确定指定的 <see cref="T:Microsoft.Windows.Design.Metadata.TypeIdentifier" /> 是否等于当前的 <see cref="T:Microsoft.Windows.Design.Metadata.TypeIdentifier" />。</summary>
+      <returns>如果指定的 <see cref="T:Microsoft.Windows.Design.Metadata.TypeIdentifier" /> 等于当前的 <see cref="T:Microsoft.Windows.Design.Metadata.TypeIdentifier" />，则为 true；否则为 false。</returns>
+      <param name="other">与当前的 <see cref="T:Microsoft.Windows.Design.Metadata.TypeIdentifier" /> 进行比较的 <see cref="T:Microsoft.Windows.Design.Metadata.TypeIdentifier" />。</param>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.TypeIdentifier.Equals(System.Object)">
+      <summary>确定指定的 <see cref="T:System.Object" /> 是否等于当前的 <see cref="T:Microsoft.Windows.Design.Metadata.TypeIdentifier" />。</summary>
+      <returns>如果指定的 <see cref="T:System.Object" /> 等于当前的 <see cref="T:Microsoft.Windows.Design.Metadata.TypeIdentifier" />，则为 true；否则为 false。</returns>
+      <param name="obj">与当前的 <see cref="T:System.Object" /> 进行比较的 <see cref="T:Microsoft.Windows.Design.Metadata.TypeIdentifier" />。</param>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.TypeIdentifier.GetHashCode">
+      <summary>返回当前 <see cref="T:Microsoft.Windows.Design.Metadata.TypeIdentifier" /> 实例的哈希代码。</summary>
+      <returns>当前 <see cref="T:Microsoft.Windows.Design.Metadata.TypeIdentifier" /> 实例的哈希代码。</returns>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Metadata.TypeIdentifier.IsEmpty">
+      <summary>获取一个值，该值指示当前的标识符是否是使用空白构造函数创建的。</summary>
+      <returns>如果此标识符是使用空白构造函数创建的，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Metadata.TypeIdentifier.Name">
+      <summary>获取类型的名称。</summary>
+      <returns>类型名称。 如果 <see cref="P:Microsoft.Windows.Design.Metadata.TypeIdentifier.XmlNamespace" /> 为 null，则这是一个完全限定的 CLR 类型名。</returns>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.TypeIdentifier.op_Equality(Microsoft.Windows.Design.Metadata.TypeIdentifier,Microsoft.Windows.Design.Metadata.TypeIdentifier)">
+      <summary>确定指定的 <see cref="T:Microsoft.Windows.Design.Metadata.TypeIdentifier" /> 实例是否被视为相等。</summary>
+      <returns>如果 <paramref name="first" /> 等于 <paramref name="second" />，则为 true；否则为 false。</returns>
+      <param name="first">要比较的第一个 <see cref="T:Microsoft.Windows.Design.Metadata.TypeIdentifier" />。</param>
+      <param name="second">要比较的第二个 <see cref="T:Microsoft.Windows.Design.Metadata.TypeIdentifier" />。</param>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.TypeIdentifier.op_Inequality(Microsoft.Windows.Design.Metadata.TypeIdentifier,Microsoft.Windows.Design.Metadata.TypeIdentifier)">
+      <summary>确定是否将指定的 <see cref="T:Microsoft.Windows.Design.Metadata.TypeIdentifier" /> 实例视为不相等。</summary>
+      <returns>如果 <paramref name="first" /> 不等于 <paramref name="second" />，则为 true；否则为 false。</returns>
+      <param name="first">要比较的第一个 <see cref="T:Microsoft.Windows.Design.Metadata.TypeIdentifier" />。</param>
+      <param name="second">要比较的第二个 <see cref="T:Microsoft.Windows.Design.Metadata.TypeIdentifier" />。</param>
+    </member>
+    <member name="M:Microsoft.Windows.Design.Metadata.TypeIdentifier.ToString">
+      <summary>获取字符串形式的 <see cref="P:Microsoft.Windows.Design.Metadata.TypeIdentifier.Name" /> 属性。</summary>
+      <returns>字符串形式的 <see cref="P:Microsoft.Windows.Design.Metadata.TypeIdentifier.Name" /> 属性。</returns>
+    </member>
+    <member name="P:Microsoft.Windows.Design.Metadata.TypeIdentifier.XmlNamespace">
+      <summary>获取此类型的 XML 命名空间。</summary>
+      <returns>此类型的 XML 命名空间。 如果设置此属性，则类型名称是命名空间中的一个简单名称。</returns>
+    </member>
+  </members>
+</doc>

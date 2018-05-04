@@ -1,0 +1,17 @@
+﻿<!--DSL Tools Language Template-->
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TemplateData>
+    <TemplateID>Microsoft.Modeling.UmlUseCaseDiagram</TemplateID>
+    <Name Package="{ad5399fa-d19b-4e2a-97f8-508acf96236e}" ID="103"/>
+		<Description Package="{ad5399fa-d19b-4e2a-97f8-508acf96236e}" ID="102"/>
+		<Icon Package="{ad5399fa-d19b-4e2a-97f8-508acf96236e}" ID="201" />
+		<ProjectType>Modeling</ProjectType>
+		<SortOrder>362</SortOrder>
+		<DefaultName>UMLUseCaseDiagram.usecasediagram</DefaultName>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem TargetFileName="$fileinputname$.usecasediagram">blank.usecasediagram</ProjectItem>
+		<ProjectItem TargetFileName="$fileinputname$.usecasediagram.layout">blank.usecasediagram.layout</ProjectItem>
+	</TemplateContent>
+</VSTemplate>
+

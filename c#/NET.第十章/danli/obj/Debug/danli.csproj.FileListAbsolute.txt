@@ -1,0 +1,15 @@
+F:\C#\NET.第十章\danli\bin\Debug\danli.exe.config
+F:\C#\NET.第十章\danli\obj\Debug\Interop.WMPLib.dll
+F:\C#\NET.第十章\danli\obj\Debug\AxInterop.WMPLib.dll
+F:\C#\NET.第十章\danli\obj\Debug\danli.csproj.ResolveComReference.cache
+F:\C#\NET.第十章\danli\bin\Debug\danli.exe
+F:\C#\NET.第十章\danli\bin\Debug\danli.pdb
+F:\C#\NET.第十章\danli\bin\Debug\Interop.WMPLib.dll
+F:\C#\NET.第十章\danli\bin\Debug\AxInterop.WMPLib.dll
+F:\C#\NET.第十章\danli\obj\Debug\danli.csprojResolveAssemblyReference.cache
+F:\C#\NET.第十章\danli\obj\Debug\danli.Form1.resources
+F:\C#\NET.第十章\danli\obj\Debug\danli.Form2.resources
+F:\C#\NET.第十章\danli\obj\Debug\danli.Properties.Resources.resources
+F:\C#\NET.第十章\danli\obj\Debug\danli.csproj.GenerateResource.Cache
+F:\C#\NET.第十章\danli\obj\Debug\danli.exe
+F:\C#\NET.第十章\danli\obj\Debug\danli.pdb

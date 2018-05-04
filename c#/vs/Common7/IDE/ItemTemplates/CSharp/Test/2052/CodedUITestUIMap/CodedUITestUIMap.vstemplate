@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{6077292c-6751-4483-8425-9026bc0187b6}" ID="109"/>
+    <Description Package="{6077292c-6751-4483-8425-9026bc0187b6}" ID="110"/>
+    <Icon Package="{6077292c-6751-4483-8425-9026bc0187b6}" ID="104"/>
+    <DefaultName>UIMap.uitest</DefaultName>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>85</SortOrder>
+    <TemplateGroupID>TestProject-V1</TemplateGroupID>
+    <TemplateID>Microsoft.CSharp.UITestMap</TemplateID>
+    <ShowByDefault>false</ShowByDefault>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>System</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Data</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Drawing</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Windows.Forms</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>WindowsBase</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>UIAutomationTypes</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem TargetFileName="$fileinputname$.uitest" ReplaceParameters="true">
+      UIMap.uitest
+    </ProjectItem>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.QualityTools.CodedUITestPackage</Assembly>
+    <FullClassName>Microsoft.VisualStudio.TestTools.CodedUITest.UIMapItemWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta http-equiv="Content-Type" content="text/html" />
+        <title>Console</title>
+        <link id="toolwindow.css" rel="stylesheet" href="../common/toolwindow.css" type="text/css" />
+        <link id="datatree.css" rel="stylesheet" href="../common/datatree.css" type="text/css" />
+        <link id="htmltree.css" rel="stylesheet" href="../common/htmltree.css" type="text/css" />
+        <link id="console.css" href="console.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../common/jquery-1.5.2.min.js"></script>
+        <script type="text/javascript" src="../common/toolwindow.js"></script>
+        <script type="text/javascript" src="../common/datatree.js"></script>
+        <script type="text/javascript" src="../common/htmltree.js"></script>
+        <script type="text/javascript" src="consoleUtils.js"></script>
+        <script type="text/javascript" src="console.js"></script>
+    </head>
+    <body tabindex="-1">
+        <div id="mainContainer">
+            <div id="toolbar" class="BPT-Toolbar">
+                <div class="BPT-Toolbar-Container">
+                    <div class="BPT-Toolbar-Left">
+                        <div id="clearButton" class="BPT-ToolbarButton BPT-ToolbarButton-StateDisabled" tabindex="1">
+                            <div class="buttonIcon clearButton"></div>
+                            <div>Clear</div>
+                        </div>
+                        <div class="BPT-ToolbarSeparator">
+                            <div>&nbsp;</div>
+                        </div>
+                         <div id="errorsButton" class="BPT-ToolbarButton BPT-ToolbarToggleButton BPT-ToolbarToggleButton-StateOn" tabindex="1">
+                            <div class="buttonIcon errorButton"></div>
+                            <div>0 Errors</div>
+                        </div>
+                        <div class="BPT-ToolbarSeparator">
+                            <div>&nbsp;</div>
+                        </div>
+                        <div id="warningsButton" class="BPT-ToolbarButton BPT-ToolbarToggleButton BPT-ToolbarToggleButton-StateOn" tabindex="1">
+                            <div class="buttonIcon warnButton"></div>
+                            <div>0 Warnings</div>
+                        </div>
+                        <div class="BPT-ToolbarSeparator">
+                            <div>&nbsp;</div>
+                        </div>
+                        <div id="messagesButton" class="BPT-ToolbarButton BPT-ToolbarToggleButton BPT-ToolbarToggleButton-StateOn" tabindex="1">
+                            <div class="buttonIcon infoButton"></div>
+                            <div>0 Messages</div>
+                        </div>
+                        <div class="BPT-ToolbarSeparator">
+                            <div></div>
+                        </div>
+                    </div>
+
+                    <div class="BPT-Toolbar-Right">
+                    </div>
+                </div>
+            </div>
+            <div id="outputArea" class="ScrollContainer BPT-DataTree-ScrollContainer BPT-HtmlTree-ScrollContainer">
+                <ul id="outputList">
+                </ul>
+                <div id="warningSection" class='BPT-WarnMessage' style="display: none;">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

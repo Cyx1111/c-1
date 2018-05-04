@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.VisualStudio.TextTemplating.Modeling.11.0</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTransformation">
+      <summary>要访问文本模板的代码中的 Visual Studio ModelBus，请在模板的 template 指令的 inherits 特性中指定此类，并将“hostspecific” 特性设置为 true。 在模板代码中，可获取 SModelBus 和 SComponentModel 服务。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTransformation.#ctor">
+    </member>
+    <member name="P:Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTransformation.ModelBus">
+      <summary>获取此基类提供的 Visual Studio ModelBus 服务。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTransformation.OnSessionChanged(Microsoft.VisualStudio.TextTemplating.ITextTemplatingSession,Microsoft.VisualStudio.TextTemplating.ITextTemplatingSession)">
+      <summary>只要提供的会话与上次记住的会话不同即会调用。 清除静态 modelbus 实例以准备要读取的模型文件的新快照。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTransformation.ReportError(Microsoft.VisualStudio.Modeling.Integration.ErrorCategory,System.String)">
+      <summary>从 ModelBus 错误转换到文本模板错误。 基于类别值调用 this.Error 或 this.Warning。</summary>
+      <param name="category">ModelBus ErrorCategory</param>
+      <param name="message">消息字符串</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTransformation.ServiceProvider">
+      <summary>返回包含 Visual Studio ModelBus 的服务提供程序。 请不要从主机使用服务提供程序。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TextTemplating.Modeling.SessionStoreCache">
+      <summary>在 T4 用户会话期间维护存储的缓存。 每个存储均由键字符串进行标识。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TextTemplating.Modeling.SessionStoreCache.CacheSessionStore(System.String,Microsoft.VisualStudio.Modeling.Store)">
+      <summary>用给定的键字符串缓存存储。</summary>
+      <param name="storeKey">标识此存储的键。 它不能已被使用。</param>
+      <param name="store">存储。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TextTemplating.Modeling.SessionStoreCache.DisposeSessionStoreMap">
+      <summary>释放缓存及其存储。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TextTemplating.Modeling.SessionStoreCache.GetSessionStore(System.String)">
+      <summary>获取由给定键标识的存储；如果未找到该键，则为 null。</summary>
+      <returns>由 storeKey 标识的存储；如果未找到该键，则为 null。</returns>
+      <param name="storeKey">标识存储的字符串。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TextTemplating.Modeling.VsTextTemplatingModelingAdapterManager">
+      <summary>在 Visual Studio 中的文本模板化 AppDomain 内创建和管理表示域特定语言模型的模型总线适配器。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TextTemplating.Modeling.VsTextTemplatingModelingAdapterManager.#ctor">
+    </member>
+    <member name="M:Microsoft.VisualStudio.TextTemplating.Modeling.VsTextTemplatingModelingAdapterManager.ClearState">
+      <summary>清除所有适配器的存储状态。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TextTemplating.Modeling.VsTextTemplatingModelingAdapterManager.CreateDocumentHandler(Microsoft.VisualStudio.Modeling.Integration.ModelingAdapterReference,System.IServiceProvider)">
+      <summary>在给定 ModelingAdapterReference 的情况下创建 ModelingDocumentHandler。</summary>
+      <returns>新的 ModelingDocumentHandler。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TextTemplating.Modeling.VsTextTemplatingModelingAdapterManager.CreateLoadStore(Microsoft.VisualStudio.Modeling.Store,Microsoft.VisualStudio.Modeling.Integration.ModelingAdapterReference,System.IServiceProvider)">
+      <summary>加载给定适配器引用的模型所在的存储。 如果给定的存储为 null，则创建该存储。</summary>
+      <returns>所加载模型的根元素。</returns>
+      <param name="store">在其中加载模型的存储。 如果为 Null，则创建新存储。</param>
+      <param name="adapterReference">对将加载的模型中的元素的适配器引用。</param>
+      <param name="serviceProvider">要在其中加载存储的服务提供程序。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TextTemplating.Modeling.VsTextTemplatingModelingAdapterManager.CreateSerializerLocator">
+    </member>
+    <member name="M:Microsoft.VisualStudio.TextTemplating.Modeling.VsTextTemplatingModelingAdapterManager.DoCreateAdapter(Microsoft.VisualStudio.Modeling.Integration.ModelBusReference,System.IServiceProvider)">
+      <summary>基于 ModelBusReference 创建 ModelBusAdapter。</summary>
+      <returns>新的 ModelBusAdapter 实例。</returns>
+      <param name="reference">创建适配器所依据的引用。</param>
+      <param name="serviceProvider">用来在调用方与被引用模型之间创建关联的服务提供程序。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TextTemplating.Modeling.VsTextTemplatingModelingAdapterManager.FindStoreRoot(Microsoft.VisualStudio.Modeling.Store,Microsoft.VisualStudio.Modeling.Integration.ModelingAdapterReference,System.IServiceProvider)">
+      <summary>在给定缓存存储的情况下，在其中为给定的适配器引用查找模型根。</summary>
+      <returns>根元素；如果未找到适配器引用，则返回 null。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TextTemplating.Modeling.VsTextTemplatingModelingAdapterManager.GetAdapterReferenceStoreKey(Microsoft.VisualStudio.Modeling.Integration.ModelingAdapterReference)">
+      <summary>在给定 AdapterReference 的情况下，提供一个键，该键唯一地表示应用来加载/取消引用它的存储。</summary>
+      <param name="adapterReference">一个 ModelingAdapterReference。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TextTemplating.Modeling.VsTextTemplatingModelingAdapterManager.GetView(Microsoft.VisualStudio.Modeling.Integration.ModelBusAdapter,Microsoft.VisualStudio.Modeling.Integration.ModelBusReference)">
+      <summary>在文本模板上下文中不受支持。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextTemplating.Modeling.VsTextTemplatingModelingAdapterManager.HostName">
+      <summary>一个常量字符串，用于将此标识为 Visual Studio 文本模板化模型总线主机。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation">
+      <summary>使用此基类可从域特定语言模型进行文本转换。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation.#ctor">
+    </member>
+    <member name="M:Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation.AddDomainModel(System.Type)">
+      <summary>添加存储要加载的域模型类型。 在调用 Initialize() 之前为每个域模型调用此方法。</summary>
+      <param name="modelType">用域特定语言定义的域模型类型。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation.ConvertModelRelativePathToTemplateRelativePath(System.String,System.String,System.String)">
+      <summary>将相对于模型文件表示的路径转换为相对于模板表示的路径。</summary>
+      <param name="modelPath">模型文件的完整路径。</param>
+      <param name="templatePath">模板文件的完整路径。</param>
+      <param name="path">要转换的路径。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation.Dispose(System.Boolean)">
+    </member>
+    <member name="M:Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation.Initialize">
+      <summary>加载使用 AddModel() 指定的模型，并使主机做好处理模板的准备。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation.OnSessionChanged(Microsoft.VisualStudio.TextTemplating.ITextTemplatingSession,Microsoft.VisualStudio.TextTemplating.ITextTemplatingSession)">
+    </member>
+    <member name="P:Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation.ServiceProvider">
+    </member>
+    <member name="P:Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation.Session">
+    </member>
+    <member name="P:Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation.SessionId">
+    </member>
+    <member name="P:Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation.SkipValidation">
+      <summary>如果为 true，则 ValidateStore() 不运行验证，并返回 false。 默认值为 false。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation.Store">
+      <summary>获取模型存储。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation.ValidateStore(System.String,System.CodeDom.Compiler.CompilerErrorCollection)">
+      <summary>用给定的验证类别验证存储。 如果有错误，则返回 true。</summary>
+      <param name="categories">要应用的验证类别。 使用“open”、“load”、“save”和“menu”。 用“|”分隔多个类别。</param>
+      <param name="errors">错误报告将放置到此集合中。</param>
+    </member>
+  </members>
+</doc>

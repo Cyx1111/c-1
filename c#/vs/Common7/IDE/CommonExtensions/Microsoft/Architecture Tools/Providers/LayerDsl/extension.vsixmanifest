@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Vsix Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="Microsoft.VisualStudio.TeamArchitect.LayerDesigner.DslProvider">
+    <Name>Layer Dsl Provider</Name>
+    <Author>Microsoft</Author>
+    <Version>11.0</Version>
+    <Description>Microsoft Visual Studio Architecture Tools - Layer Dsl Provider</Description>
+    <Locale>1033</Locale>
+    <SupportedProducts>
+      <VisualStudio Version="11.0">
+        <Edition>Premium</Edition>
+        <Edition>Ultimate</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5" />
+    <SystemComponent>true</SystemComponent>
+    <InstalledByMsi>true</InstalledByMsi>
+  </Identifier>
+  <References />
+  <Content>
+    <CustomExtension Type="Microsoft.VisualStudio.DirectedGraph.Provider">Microsoft.VisualStudio.TeamArchitect.LayerDesigner.DslProvider.dll</CustomExtension>
+    <MefComponent>Microsoft.VisualStudio.TeamArchitect.LayerDesigner.DslProvider.dll</MefComponent>
+  </Content>
+</Vsix>

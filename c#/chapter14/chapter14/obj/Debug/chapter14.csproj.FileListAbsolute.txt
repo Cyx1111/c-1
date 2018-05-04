@@ -1,0 +1,6 @@
+F:\C#\chapter14\chapter14\bin\Debug\chapter14.exe.config
+F:\C#\chapter14\chapter14\obj\Debug\chapter14.csprojResolveAssemblyReference.cache
+F:\C#\chapter14\chapter14\bin\Debug\chapter14.exe
+F:\C#\chapter14\chapter14\bin\Debug\chapter14.pdb
+F:\C#\chapter14\chapter14\obj\Debug\chapter14.exe
+F:\C#\chapter14\chapter14\obj\Debug\chapter14.pdb

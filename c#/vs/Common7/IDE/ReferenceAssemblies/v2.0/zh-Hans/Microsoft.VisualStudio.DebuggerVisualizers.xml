@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.VisualStudio.DebuggerVisualizers</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer">
+    </member>
+    <member name="M:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer.#ctor">
+    </member>
+    <member name="M:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer.Show(Microsoft.VisualStudio.DebuggerVisualizers.IDialogVisualizerService,Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider)">
+      <param name="windowService">一个 <see cref="T:Microsoft.VisualStudio.DebuggerVisualizers.IDialogVisualizerService" /> 类型的对象，该对象提供您的可视化工具可以用来显示 Windows 窗体、控件和对话框的方法。</param>
+      <param name="objectProvider">
+        <see cref="T:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider" /> 类型的对象。 此对象提供从可视化工具的调试器端到调试对象端上的对象源 (<see cref="T:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource" />) 的通信。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.DebuggerVisualizers.IDialogVisualizerService">
+    </member>
+    <member name="M:Microsoft.VisualStudio.DebuggerVisualizers.IDialogVisualizerService.ShowDialog(System.Windows.Forms.CommonDialog)">
+      <param name="dialog">从 System.Windows.Forms.CommonDialog 派生的任何对话框。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.DebuggerVisualizers.IDialogVisualizerService.ShowDialog(System.Windows.Forms.Control)">
+      <param name="control">从 System.Windows.Forms.Control 派生的任何控件。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.DebuggerVisualizers.IDialogVisualizerService.ShowDialog(System.Windows.Forms.Form)">
+      <returns>显示 Windows 窗体。</returns>
+      <param name="form">从 System.Windows.Forms.Form 派生的任何 Windows 窗体对象。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider">
+    </member>
+    <member name="M:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetData">
+      <returns>包含进行可视化处理的对象的内容的数据流。 调用此方法会导致对 VisualizerObjectSource 调用 <see cref="M:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.GetData(System.Object,System.IO.Stream)" />。 然后该 GetData 调用的返回值会返回到此方法的调用方。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetObject">
+      <returns>进行可视化处理的数据对象。 这实际是在调试对象中进行可视化处理的对象的调试器端副本。 如果修改此对象的内容，则所做的更改不会在调试对象中反映出来，除非使用 <see cref="M:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.ReplaceData(System.IO.Stream)" />/<see cref="M:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.ReplaceObject(System.Object)" /> 或 <see cref="M:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.TransferData(System.IO.Stream)" />/<see cref="M:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.TransferObject(System.Object)" />。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.IsObjectReplaceable">
+      <returns>确定进行可视化处理的数据对象是可替换（读/写）的还是不可替换（只读）的。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.ReplaceData(System.IO.Stream)">
+      <param name="newObjectData">包含要用于创建新对象的数据的流，用来替换当前进行可视化处理的对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.ReplaceObject(System.Object)">
+      <param name="newObject">用来替换当前正进行可视化处理的对象的新对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.TransferData(System.IO.Stream)">
+      <returns>返回由 VisualizerObjectSource 的 TransferData 方法填充的数据流。 在调试器端和调试对象端（对象源）之间没有基于流的双向通信。</returns>
+      <param name="outgoingData">要传输回调试对象端的数据的流。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.TransferObject(System.Object)">
+      <returns>对 <see cref="M:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.TransferData(System.IO.Stream)" /> 的返回值进行反序列化的结果。</returns>
+      <param name="outgoingObject">要传输回调试对象端的对象。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerDevelopmentHost">
+    </member>
+    <member name="M:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerDevelopmentHost.#ctor(System.Object,System.Type)">
+      <param name="objectToVisualize">要在可视化工具中显示的数据对象。 例如，如果要测试 String 可视化工具，此参数则为要在可视化工具中显示的 String。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerDevelopmentHost.#ctor(System.Object,System.Type,System.Type)">
+      <param name="objectToVisualize">要在可视化工具中显示的数据对象。 例如，如果要测试 String 可视化工具，此参数则为要在可视化工具中显示的 String。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerDevelopmentHost.#ctor(System.Object,System.Type,System.Type,System.Boolean)">
+      <param name="objectToVisualize">要在可视化工具中显示的数据对象。 例如，如果要测试 String 可视化工具，此参数则为要在可视化工具中显示的 String。</param>
+      <param name="replacementOK">此布尔值确定可视化工具是否可以替换（编辑）数据对象。 将此值设置为 false 会让可视化工具宿主将该数据对象视为只读。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerDevelopmentHost.DebuggeeObject">
+    </member>
+    <member name="M:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerDevelopmentHost.ShowVisualizer">
+    </member>
+    <member name="M:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerDevelopmentHost.ShowVisualizer(System.Windows.Forms.Control)">
+      <param name="parentControl">希望可视化工具成为其父级的控件。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerDevelopmentHost.ShowVisualizer(System.Windows.Forms.IWin32Window)">
+      <param name="parentWindow">一个您希望可视化工具成为其父级的窗口。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource">
+    </member>
+    <member name="M:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.#ctor">
+    </member>
+    <member name="M:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.CreateReplacementObject(System.Object,System.IO.Stream)">
+      <returns>一个可以替换 <paramref name="target" /> 对象的对象（其内容从传入的数据流构造）。 此方法实际上不替换 <paramref name="target" />，而是为调试器提供替换对象以完成实际的替换。</returns>
+      <param name="target">正进行可视化处理的对象。</param>
+      <param name="incomingData">传入的数据流。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.Deserialize(System.IO.Stream)">
+      <returns>一个从 <paramref name="serializationStream" /> 中的数据构造的对象。</returns>
+      <param name="serializationStream">传入的对象流。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.GetData(System.Object,System.IO.Stream)">
+      <param name="target">正进行可视化处理的对象。</param>
+      <param name="outgoingData">输出的数据流。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.Serialize(System.IO.Stream,System.Object)">
+      <param name="serializationStream">输出的数据流。</param>
+      <param name="target">正进行可视化处理的对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.TransferData(System.Object,System.IO.Stream,System.IO.Stream)">
+      <param name="target">正进行可视化处理的对象。</param>
+      <param name="incomingData">从调试器端传入的数据流。</param>
+      <param name="outgoingData">输出到调试器端的数据流。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.DebuggerVisualizers.DebugViewerShim.ManagedShim">
+    </member>
+    <member name="M:Microsoft.VisualStudio.DebuggerVisualizers.DebugViewerShim.ManagedShim.#ctor">
+    </member>
+  </members>
+</doc>

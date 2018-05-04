@@ -1,0 +1,9 @@
+<Browser Name="Safari 3" MaxConnections="4">
+  <Headers>
+    <Header Name="User-Agent" Value="Mozilla/5.0 (Windows; U; Windows NT 5.2; en-US) AppleWebKit/525.28 (KHTML, like Gecko) Version/3.2.2 Safari/525.28.1" />
+    <Header Name="Accept" Value="*/*" />
+    <Header Name="Accept-Language" Value="{{$IEAcceptLanguage}}" />
+    <Header Name="Accept-Encoding" Value="GZIP,deflate" />
+    <Header Name="Accept-Charset" Value="ISO-8859-1,utf-8;q=0.7,*;q=0.7" />
+  </Headers>
+</Browser>

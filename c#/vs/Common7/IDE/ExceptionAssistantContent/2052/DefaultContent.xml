@@ -1,0 +1,1877 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssistantContent Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdata:exception-assistant-content">
+	<ContentInfo>
+		<ContentName>默认内容</ContentName>
+		<ContentID>urn:exception-content-microsoft-com:visual-studio-7-default-content</ContentID>
+		<ContentFileVersion>1.0</ContentFileVersion>
+		<ContentAuthor>Microsoft</ContentAuthor>
+		<ContentComment>默认的 Visual Studio 8.0 异常助手内容。</ContentComment>
+	</ContentInfo>
+
+	<Exception HelpID="EHInvalidProject">
+		<Type>Microsoft.Build.BuildEngine.InvalidProjectFileException</Type>
+	</Exception>
+	<Exception HelpID="EHLogger">
+		<Type>Microsoft.Build.BuildFramework.LoggerException</Type>
+	</Exception>
+	<Exception HelpID="EHOTCannotRemoveControl">
+		<Type>Microsoft.Office.Tools.CannotRemoveControlException</Type>
+	</Exception>
+	<Exception HelpID="EHOTControlNameAlreadyExists">
+		<Type>Microsoft.Office.Tools.ControlNameAlreadyExistsException</Type>
+	</Exception>
+	<Exception HelpID="EHOTInvalidRange">
+		<Type>Microsoft.Office.Tools.InvalidRangeException</Type>
+	</Exception>
+	<Exception HelpID="EHOTRangeNotOnWorksheet">
+		<Type>Microsoft.Office.Tools.RangeNotOnWorksheetException</Type>
+	</Exception>
+	<Exception HelpID="EHOTSetDataBindingFailed">
+		<Type>Microsoft.Office.Tools.Excel.SetDataBindingFailedException</Type>
+	</Exception>
+	<Exception HelpID="EHDSqlInvalidUdt">
+		<Type>Microsoft.SqlServer.Server.InvalidUdtException</Type>
+	</Exception>
+	<Exception HelpID="EHVBCantStartSingInstance">
+		<Type>Microsoft.VisualBasic.ApplicationServices.CantStartSingleInstanceException</Type>
+	</Exception>
+	<Exception HelpID="EHVBNoStartupForm">
+		<Type>Microsoft.VisualBasic.ApplicationServices.NoStartupFormException</Type>
+	</Exception>
+	<Exception HelpID="EHVBWCContainingClassNotOptional">
+		<Type>Microsoft.VisualBasic.Compatibility.VB6.WebClassContainingClassNotOptional</Type>
+	</Exception>
+	<Exception HelpID="EHVBWCCouldNotFindEvent">
+		<Type>Microsoft.VisualBasic.Compatibility.VB6.WebClassCouldNotFindEvent</Type>
+	</Exception>
+	<Exception HelpID="EHVBWCNextItemCannotBeCurrentWebItem">
+		<Type>Microsoft.VisualBasic.Compatibility.VB6.WebClassNextItemCannotBeCurrentWebItem</Type>
+	</Exception>
+	<Exception HelpID="EHVBWCResponseNotFound">
+		<Type>Microsoft.VisualBasic.Compatibility.VB6.WebClassNextItemRespondNotFound</Type>
+	</Exception>
+	<Exception HelpID="EHVBWCWebClassNameNotOptional">
+		<Type>Microsoft.VisualBasic.Compatibility.VB6.WebClassUserWebClassNameNotOptional</Type>
+	</Exception>
+	<Exception HelpID="EHVBWCWebClassFileNameNotOptional">
+		<Type>Microsoft.VisualBasic.Compatibility.VB6.WebClassWebClassFileNameNotOptional</Type>
+	</Exception>
+	<Exception HelpID="EHVBWCWebItemNotValid">
+		<Type>Microsoft.VisualBasic.Compatibility.VB6.WebClassWebItemNotValid</Type>
+	</Exception>
+	<Exception HelpID="EHVBWIAssociatedWebClassNotOptional">
+		<Type>Microsoft.VisualBasic.Compatibility.VB6.WebItemAssociatedWebClassNotOptional</Type>
+	</Exception>
+	<Exception HelpID="EHVBWIClosingTagNotFoung">
+		<Type>Microsoft.VisualBasic.Compatibility.VB6.WebItemClosingTagNotFound</Type>
+	</Exception>
+	<Exception HelpID="EHVBWICouldNotLoadEmbeddedResource">
+		<Type>Microsoft.VisualBasic.Compatibility.VB6.WebItemCouldNotLoadEmbeddedResource</Type>
+	</Exception>
+	<Exception HelpID="EHVBWICouldNotLoadTemplateFile">
+		<Type>Microsoft.VisualBasic.Compatibility.VB6.WebItemCouldNotLoadTemplateFile</Type>
+	</Exception>
+	<Exception HelpID="EHVBWINameNotOptional">
+		<Type>Microsoft.VisualBasic.Compatibility.VB6.WebItemNameNotOptional</Type>
+	</Exception>
+	<Exception HelpID="EHVBWINoTemplateSpecified">
+		<Type>Microsoft.VisualBasic.Compatibility.VB6.WebItemNoTemplateSpecified</Type>
+	</Exception>
+	<Exception HelpID="EHVBWITooManyNestedTags">
+		<Type>Microsoft.VisualBasic.Compatibility.VB6.WebItemTooManyNestedTags</Type>
+	</Exception>
+	<Exception HelpID="EHVBWIUnexpectedErrorReadingTemplateFile">
+		<Type>Microsoft.VisualBasic.Compatibility.VB6.WebItemUnexpectedErrorReadingTemplateFile</Type>
+	</Exception>
+	<Exception HelpID="EHMalformedLine">
+		<Type>Microsoft.VisualBasic.FileIO.MalformedLineException</Type>
+	</Exception>
+	<Exception HelpID="EHVsa">
+		<Type>Microsoft.Vsa.VsaException</Type>
+	</Exception>
+	<Exception HelpID="EHVSTCacheAlreadyLoaded">
+		<Type>Microsoft.VisualStudio.Tools.Applications.Runtime.CacheAlreadyLoadedException</Type>
+	</Exception>
+	<Exception HelpID="EHVSTCachedDataTypeMismatch">
+		<Type>Microsoft.VisualStudio.Tools.Applications.Runtime.CachedDataTypeMismatchException</Type>
+	</Exception>
+	<Exception HelpID="EHVSTCannotCreateCustomizationDomain">
+		<Type>Microsoft.VisualStudio.Tools.Applications.Runtime.CannotCreateCustomizationDomainException</Type>
+	</Exception>
+	<Exception HelpID="EHVSTCannotCreateStartUpObject">
+		<Type>Microsoft.VisualStudio.Tools.Applications.Runtime.CannotCreateStartupObjectException</Type>
+	</Exception>
+	<Exception HelpID="EHVSTCannotFindStartupObjectAssembly">
+		<Type>Microsoft.VisualStudio.Tools.Applications.Runtime.CannotFindStartupObjectAssemblyException</Type>
+	</Exception>
+	<Exception HelpID="EHVSTCannotGetCachedDataManifest">
+		<Type>Microsoft.VisualStudio.Tools.Applications.Runtime.CannotGetCachedDataManifestException</Type>
+	</Exception>
+	<Exception HelpID="EHVSTCannotLoadManifest">
+		<Type>Microsoft.VisualStudio.Tools.Applications.Runtime.CannotLoadManifestException</Type>
+	</Exception>
+	<Exception HelpID="EHVSTCannotRetrieveCachedData">
+		<Type>Microsoft.VisualStudio.Tools.Applications.Runtime.CannotRetrieveCachedDataException</Type>
+	</Exception>
+	<Exception HelpID="EHVSTControlCouldNotBeInitialized">
+		<Type>Microsoft.VisualStudio.Tools.Applications.Runtime.ControlCouldNotBeInitializedException</Type>
+	</Exception>
+	<Exception HelpID="EHControlNotFound">
+		<Type>Microsoft.VisualStudio.Tools.Applications.Runtime.ControlNotFoundException</Type>
+	</Exception>
+	<Exception HelpID="EHVSTInvalidDeployManifest">
+		<Type>Microsoft.VisualStudio.Tools.Applications.Runtime.InvalidDeployManifestException</Type>
+	</Exception>
+	<Exception HelpID="EHVSTInvalidManifest">
+		<Type>Microsoft.VisualStudio.Tools.Applications.Runtime.InvalidManifestException</Type>
+	</Exception>
+	<Exception HelpID="EHVSTInvalidNewApplicationManifest">
+		<Type>Microsoft.VisualStudio.Tools.Applications.Runtime.InvalidNewApplicationManifestException</Type>
+	</Exception>
+	<Exception HelpID="EHVSTItemAlreadyInCache">
+		<Type>Microsoft.VisualStudio.Tools.Applications.Runtime.ItemAlreadyInCacheException</Type>
+	</Exception>
+	<Exception HelpID="EHVSTItemNotInCache">
+		<Type>Microsoft.VisualStudio.Tools.Applications.Runtime.ItemNotInCacheException</Type>
+	</Exception>
+	<Exception HelpID="EHVSTNonCacheableType">
+		<Type>Microsoft.VisualStudio.Tools.Applications.Runtime.NonCacheableTypeException</Type>
+	</Exception>
+	<Exception HelpID="EHVSTNoStartupObjects">
+		<Type>Microsoft.VisualStudio.Tools.Applications.Runtime.NoStartupObjectsException</Type>
+	</Exception>
+	<Exception HelpID="EHVSTNotAvailableOffline">
+		<Type>Microsoft.VisualStudio.Tools.Applications.Runtime.NotAvailableOfflineException</Type>
+	</Exception>
+	<Exception HelpID="EHVSTNotAvailableOnline">
+		<Type>Microsoft.VisualStudio.Tools.Applications.Runtime.NotAvailableOnlineException</Type>
+	</Exception>
+	<Exception HelpID="EHVSTRuntime">
+		<Type>Microsoft.VisualStudio.Tools.Applications.Runtime.RuntimeException</Type>
+	</Exception>
+	<Exception HelpID="EHVSTUpdateFailed">
+		<Type>Microsoft.VisualStudio.Tools.Applications.Runtime.UpdateFailedException</Type>
+	</Exception>
+	<Exception HelpID="EHAccessViolation">
+		<Type>System.AccessViolationException</Type>
+	</Exception>
+	<Exception HelpID="EHAppDomainUnloaded">
+		<Type>System.AppDomainUnloadedException</Type>
+	</Exception>
+	<Exception HelpID="EHApplication">
+		<Type>System.ApplicationException</Type>
+	</Exception>
+	<Exception HelpID="EHArgument">
+		<Type>System.ArgumentException</Type>
+	</Exception>
+	<Exception HelpID="EHArgumentNull">
+		<Type>System.ArgumentNullException</Type>
+	</Exception>
+	<Exception HelpID="EHArgumentOutOfRange">
+		<Type>System.ArgumentOutOfRangeException</Type>
+	</Exception>
+	<Exception HelpID="EHArithmetic">
+		<Type>System.ArithmeticException</Type>
+	</Exception>
+	<Exception HelpID="EHArrayTypeMismatch">
+		<Type>System.ArrayTypeMismatchException</Type>
+	</Exception>
+	<Exception HelpID="EHBadImageFormat">
+		<Type>System.BadImageFormatException</Type>
+	</Exception>
+	<Exception HelpID="EHCannotUnloadAppDomain">
+		<Type>System.CannotUnloadAppDomainException</Type>
+	</Exception>
+	<Exception HelpID="EHContextMarshal">
+		<Type>System.ContextMarshalException</Type>
+	</Exception>
+	<Exception HelpID="EHDataMisaligned">
+		<Type>System.DataMisalignedException</Type>
+	</Exception>
+	<Exception HelpID="EHDividebyZero">
+		<Type>System.DivideByZeroException</Type>
+	</Exception>
+	<Exception HelpID="EHDllNotFound">
+		<Type>System.DllNotFoundException</Type>
+	</Exception>
+	<Exception HelpID="EHDuplicateWaitObject">
+		<Type>System.DuplicateWaitObjectException</Type>
+	</Exception>
+	<Exception HelpID="EHEntryPointNotFound">
+		<Type>System.EntryPointNotFoundException</Type>
+	</Exception>
+	<Exception HelpID="EHException">
+		<Type>System.Exception</Type>
+	</Exception>
+	<Exception HelpID="EHExecutionEngine">
+		<Type>System.ExecutionEngineException</Type>
+	</Exception>
+	<Exception HelpID="EHFieldAccess">
+		<Type>System.FieldAccessException</Type>
+	</Exception>
+	<Exception HelpID="EHFormat">
+		<Type>System.FormatException</Type>
+	</Exception>
+	<Exception HelpID="EHIndexOutOfRange">
+		<Type>System.IndexOutOfRangeException</Type>
+	</Exception>
+	<Exception HelpID="EHInsufficientMemory">
+		<Type>System.InsufficientMemoryException</Type>
+	</Exception>
+	<Exception HelpID="EHInvalidCast">
+		<Type>System.InvalidCastException</Type>
+	</Exception>
+	<Exception HelpID="EHInvalidOperation">
+		<Type>System.InvalidOperationException</Type>
+	</Exception>
+	<Exception HelpID="EHInvalidProgram">
+		<Type>System.InvalidProgramException</Type>
+	</Exception>
+	<Exception HelpID="EHMemberAccess">
+		<Type>System.MemberAccessException</Type>
+	</Exception>
+	<Exception HelpID="EHMethodAccess">
+		<Type>System.MethodAccessException</Type>
+	</Exception>
+	<Exception HelpID="EHMissingField">
+		<Type>System.MissingFieldException</Type>
+	</Exception>
+	<Exception HelpID="EHMissingMember">
+		<Type>System.MissingMemberException</Type>
+	</Exception>
+	<Exception HelpID="EHMissingMethod">
+		<Type>System.MissingMethodException</Type>
+	</Exception>
+	<Exception HelpID="EHMulticastNotSupported">
+		<Type>System.MulticastNotSupportedException</Type>
+	</Exception>
+	<Exception HelpID="EHNotFiniteNumber">
+		<Type>System.NotFiniteNumberException</Type>
+	</Exception>
+	<Exception HelpID="EHNotImplemented">
+		<Type>System.NotImplementedException</Type>
+	</Exception>
+	<Exception HelpID="EHNotSupported">
+		<Type>System.NotSupportedException</Type>
+	</Exception>
+	<Exception HelpID="EHNullReference">
+		<Type>System.NullReferenceException</Type>
+	</Exception>
+	<Exception HelpID="EHObjectDisposed">
+		<Type>System.ObjectDisposedException</Type>
+	</Exception>
+	<Exception HelpID="EHOperationCanceled">
+		<Type>System.OperationCanceledException</Type>
+	</Exception>
+	<Exception HelpID="EHOutOfMemory">
+		<Type>System.OutOfMemoryException</Type>
+	</Exception>
+	<Exception HelpID="EHOverflow">
+		<Type>System.OverflowException</Type>
+	</Exception>
+	<Exception HelpID="EHPlatformNotSupported">
+		<Type>System.PlatformNotSupportedException</Type>
+	</Exception>
+	<Exception HelpID="EHRank">
+		<Type>System.RankException</Type>
+	</Exception>
+	<Exception HelpID="EHStackOverflow">
+		<Type>System.StackOverflowException</Type>
+	</Exception>
+	<Exception HelpID="EHSystem">
+		<Type>System.SystemException</Type>
+	</Exception>
+	<Exception HelpID="EHTimeout">
+		<Type>System.TimeoutException</Type>
+	</Exception>
+	<Exception HelpID="EHTypeInitialization">
+		<Type>System.TypeInitializationException</Type>
+	</Exception>
+	<Exception HelpID="EHTypeLoad">
+		<Type>System.TypeLoadException</Type>
+	</Exception>
+	<Exception HelpID="EHTypeUnloaded">
+		<Type>System.TypeUnloadedException</Type>
+	</Exception>
+	<Exception HelpID="EHUnauthorizedAccess">
+		<Type>System.UnauthorizedAccessException</Type>
+	</Exception>
+	<Exception HelpID="EHUriFormat">
+		<Type>System.UriFormatException</Type>
+	</Exception>
+	<Exception HelpID="EHAHAddlnSegmentDirectoryNotFound">
+		<Type>System.AddIn.Hosting.AddInSegmentDirectoryNotFoundException</Type>
+	</Exception>
+	<Exception HelpID="EHAHInvalidPipelineStore">
+		<Type>System.AddIn.Hosting.InvalidPipelineStoreException</Type>
+	</Exception>
+	<Exception HelpID="EHCKeyNotFound">
+		<Type>System.Collections.Generic.KeyNotFoundException</Type>
+	</Exception>
+	<Exception HelpID="EHCMInvalidAsynchronousState">
+		<Type>System.ComponentModel.InvalidAsynchronousStateException</Type>
+	</Exception>
+	<Exception HelpID="EHCMInvalidEnumArgument">
+		<Type>System.ComponentModel.InvalidEnumArgumentException</Type>
+	</Exception>
+	<Exception HelpID="EHCMLicense">
+		<Type>System.ComponentModel.LicenseException</Type>
+	</Exception>
+	<Exception HelpID="EHCWarning">
+		<Type>System.ComponentModel.WarningException</Type>
+	</Exception>
+	<Exception HelpID="EHCWin32">
+		<Type>System.ComponentModel.Win32Exception</Type>
+	</Exception>
+	<Exception HelpID="EHCMCheckout">
+		<Type>System.ComponentModel.Design.CheckoutException</Type>
+	</Exception>
+	<Exception HelpID="System.ComponentModel.Design.ExceptionCollection">
+		<Type>System.ComponentModel.Design.ExceptionCollection</Type>
+	</Exception>
+	<Exception HelpID="EHCMCodeDomSerializer">
+		<Type>System.ComponentModel.Design.Serialization.CodeDomSerializerException</Type>
+	</Exception>
+	<Exception HelpID="EHCConfigurationErrors">
+		<Type>System.Configuration.ConfigurationErrorsException</Type>
+	</Exception>
+	<Exception HelpID="EHCConfiguration">
+		<Type>System.Configuration.ConfigurationException</Type>
+	</Exception>
+	<Exception HelpID="EHCSettingsPropertyIsReadOnly">
+		<Type>System.Configuration.SettingsPropertyIsReadOnlyException</Type>
+	</Exception>
+	<Exception HelpID="EHCSettingsPropertyNotFound">
+		<Type>System.Configuration.SettingsPropertyNotFoundException</Type>
+	</Exception>
+	<Exception HelpID="EHCSettingsPropertyWrongType">
+		<Type>System.Configuration.SettingsPropertyWrongTypeException</Type>
+	</Exception>
+	<Exception HelpID="EHCInstall">
+		<Type>System.Configuration.Install.InstallException</Type>
+	</Exception>
+	<Exception HelpID="EHCProvider">
+		<Type>System.Configuration.Provider.ProviderException</Type>
+	</Exception>
+	<Exception HelpID="EHConstraint">
+		<Type>System.Data.ConstraintException</Type>
+	</Exception>
+	<Exception HelpID="EHDData">
+		<Type>System.Data.DataException</Type>
+	</Exception>
+	<Exception HelpID="EHDDBConcurrency">
+		<Type>System.Data.DBConcurrencyException</Type>
+	</Exception>
+	<Exception HelpID="EHDDeletedRowInaccessible">
+		<Type>System.Data.DeletedRowInaccessibleException</Type>
+	</Exception>
+	<Exception HelpID="EHDDuplicateName">
+		<Type>System.Data.DuplicateNameException</Type>
+	</Exception>
+	<Exception HelpID="EHDEvaluate">
+		<Type>System.Data.EvaluateException</Type>
+	</Exception>
+	<Exception HelpID="EHDInRowChangingEvent">
+		<Type>System.Data.InRowChangingEventException</Type>
+	</Exception>
+	<Exception HelpID="EHDInvalidConstraint">
+		<Type>System.Data.InvalidConstraintException</Type>
+	</Exception>
+	<Exception HelpID="EHInvalidExpression">
+		<Type>System.Data.InvalidExpressionException</Type>
+	</Exception>
+	<Exception HelpID="EHDMissingPrimaryKey">
+		<Type>System.Data.MissingPrimaryKeyException</Type>
+	</Exception>
+	<Exception HelpID="EHNoNullAllowed">
+		<Type>System.Data.NoNullAllowedException</Type>
+	</Exception>
+	<Exception HelpID="EHDOperationAborted">
+		<Type>System.Data.OperationAbortedException</Type>
+	</Exception>
+	<Exception HelpID="EHReadOnly">
+		<Type>System.Data.ReadOnlyException</Type>
+	</Exception>
+	<Exception HelpID="EHDRowNotInTable">
+		<Type>System.Data.RowNotInTableException</Type>
+	</Exception>
+	<Exception HelpID="EHDStrongTyping">
+		<Type>System.Data.StrongTypingException</Type>
+	</Exception>
+	<Exception HelpID="EHDSyntaxError">
+		<Type>System.Data.SyntaxErrorException</Type>
+	</Exception>
+	<Exception HelpID="EHDTypedDataSetGenerator">
+		<Type>System.Data.TypedDataSetGeneratorException</Type>
+	</Exception>
+	<Exception HelpID="EHDVersionNotFound">
+		<Type>System.Data.VersionNotFoundException</Type>
+	</Exception>
+	<Exception HelpID="EHDCommonDb">
+		<Type>System.Data.Common.DbException</Type>
+	</Exception>
+	<Exception HelpID="EHDDTypedDataSetGenerator">
+		<Type>System.Data.Design.TypedDataSetGeneratorException</Type>
+	</Exception>
+	<Exception HelpID="EHOdbc">
+		<Type>System.Data.Odbc.OdbcException</Type>
+	</Exception>
+	<Exception HelpID="EHOleDb">
+		<Type>System.Data.OleDb.OleDbException</Type>
+	</Exception>
+	<Exception HelpID="EHOracle">
+		<Type>System.Data.OracleClient.OracleException</Type>
+	</Exception>
+	<Exception HelpID="EHSql">
+		<Type>System.Data.SqlClient.SqlException</Type>
+	</Exception>
+	<Exception HelpID="EHDSqlAlreadyFilled">
+		<Type>System.Data.SqlTypes.SqlAlreadyFilledException</Type>
+	</Exception>
+	<Exception HelpID="EHDSqlNotFilled">
+		<Type>System.Data.SqlTypes.SqlNotFilledException</Type>
+	</Exception>
+	<Exception HelpID="EHDSqlNullValue">
+		<Type>System.Data.SqlTypes.SqlNullValueException</Type>
+	</Exception>
+	<Exception HelpID="EHDSqlTruncate">
+		<Type>System.Data.SqlTypes.SqlTruncateException</Type>
+	</Exception>
+	<Exception HelpID="EHDSqlType">
+		<Type>System.Data.SqlTypes.SqlTypeException</Type>
+	</Exception>
+	<Exception HelpID="EHDSSqlCe">
+		<Type>System.Data.SqlServerCe.SqlCeException</Type>
+	</Exception>
+	<Exception HelpID="EHDSSqlCeInvalidDatabaseFormat">
+		<Type>System.Data.SqlServerCe.SqlCeInvalidDatabaseFormatException</Type>
+	</Exception>
+	<Exception HelpID="EHDSSqlCeLockTimeout">
+		<Type>System.Data.SqlServerCe.SqlCeLockTimeoutException</Type>
+	</Exception>
+	<Exception HelpID="EHDSSqlCeTransactionInProgress">
+		<Type>System.Data.SqlServerCe.SqlCeTransactionInProgressException</Type>
+	</Exception>
+	<Exception HelpID="EHDependentPlatformMissing">
+		<Type>System.Deployment.Application.DependentPlatformMissingException</Type>
+	</Exception>
+	<Exception HelpID="EHDeDeploymentDownload">
+		<Type>System.Deployment.Application.DeploymentDownloadException</Type>
+	</Exception>
+	<Exception HelpID="EHDeDeployment">
+		<Type>System.Deployment.Application.DeploymentException</Type>
+	</Exception>
+	<Exception HelpID="EHInvalidDeployment">
+		<Type>System.Deployment.Application.InvalidDeploymentException</Type>
+	</Exception>
+	<Exception HelpID="EHDeTrustNotGranted">
+		<Type>System.Deployment.Application.TrustNotGrantedException</Type>
+	</Exception>
+	<Exception HelpID="EHDSDirectoryServicesCOM">
+		<Type>System.DirectoryServices.DirectoryServicesCOMException</Type>
+	</Exception>
+	<Exception HelpID="EHDSActiveDirectoryObjectExists">
+		<Type>System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectExistsException</Type>
+	</Exception>
+	<Exception HelpID="EHDSActiveDirectoryObjectNotFound">
+		<Type>System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException</Type>
+	</Exception>
+	<Exception HelpID="EHDSActiveDirectoryOperation">
+		<Type>System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException</Type>
+	</Exception>
+	<Exception HelpID="EHDSActiveDirectoryServerDown">
+		<Type>System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException</Type>
+	</Exception>
+	<Exception HelpID="EHDSForestTrustCollision">
+		<Type>System.DirectoryServices.ActiveDirectory.ForestTrustCollisionException</Type>
+	</Exception>
+	<Exception HelpID="EHDSSyncFromAllServersOperation">
+		<Type>System.DirectoryServices.ActiveDirectory.SyncFromAllServersOperationException</Type>
+	</Exception>
+	<Exception HelpID="EHDSBerConversion">
+		<Type>System.DirectoryServices.Protocols.BerConversionException</Type>
+	</Exception>
+	<Exception HelpID="EHDSDirectory">
+		<Type>System.DirectoryServices.Protocols.DirectoryException</Type>
+	</Exception>
+	<Exception HelpID="EHDSDirectoryOperation">
+		<Type>System.DirectoryServices.Protocols.DirectoryOperationException</Type>
+	</Exception>
+	<Exception HelpID="EHDSDsmlInvalidDocument">
+		<Type>System.DirectoryServices.Protocols.DsmlInvalidDocumentException</Type>
+	</Exception>
+	<Exception HelpID="EHDSErrorResponse">
+		<Type>System.DirectoryServices.Protocols.ErrorResponseException</Type>
+	</Exception>
+	<Exception HelpID="EHDSLdap">
+		<Type>System.DirectoryServices.Protocols.LdapException</Type>
+	</Exception>
+	<Exception HelpID="EHDSTlsOperation">
+		<Type>System.DirectoryServices.Protocols.TlsOperationException</Type>
+	</Exception>
+	<Exception HelpID="EHInvalidPrinter">
+		<Type>System.Drawing.Printing.InvalidPrinterException</Type>
+	</Exception>
+	<Exception HelpID="EHESRegistration">
+		<Type>System.EnterpriseServices.RegistrationException</Type>
+	</Exception>
+	<Exception HelpID="EHESServicedComponent">
+		<Type>System.EnterpriseServices.ServicedComponentException</Type>
+	</Exception>
+	<Exception HelpID="EHISCardSpace">
+		<Type>System.IdentityModel.Selectors.CardSpaceException</Type>
+	</Exception>
+	<Exception HelpID="EHISIdentityValidation">
+		<Type>System.IdentityModel.Selectors.IdentityValidationException</Type>
+	</Exception>
+	<Exception HelpID="EHISPolicyValidation">
+		<Type>System.IdentityModel.Selectors.PolicyValidationException</Type>
+	</Exception>
+	<Exception HelpID="EHISServiceBusy">
+		<Type>System.IdentityModel.Selectors.ServiceBusyException</Type>
+	</Exception>
+	<Exception HelpID="EHISServiceNotStarted">
+		<Type>System.IdentityModel.Selectors.ServiceNotStartedException</Type>
+	</Exception>
+	<Exception HelpID="EHISStsCommunication">
+		<Type>System.IdentityModel.Selectors.StsCommunicationException</Type>
+	</Exception>
+	<Exception HelpID="EHISUnsupportedPolicyOptions">
+		<Type>System.IdentityModel.Selectors.UnsupportedPolicyOptionsException</Type>
+	</Exception>
+	<Exception HelpID="EHISUntrustedRecipient">
+		<Type>System.IdentityModel.Selectors.UntrustedRecipientException</Type>
+	</Exception>
+	<Exception HelpID="EHISUserCancellation">
+		<Type>System.IdentityModel.Selectors.UserCancellationException</Type>
+	</Exception>
+	<Exception HelpID="EHITSecurityToken">
+		<Type>System.IdentityModel.Tokens.SecurityTokenException</Type>
+	</Exception>
+	<Exception HelpID="EHITSecurityTokenValidation">
+		<Type>System.IdentityModel.Tokens.SecurityTokenValidationException</Type>
+	</Exception>
+	<Exception HelpID="EHDirectoryNotFound">
+		<Type>System.IO.DirectoryNotFoundException</Type>
+	</Exception>
+	<Exception HelpID="EHIODriveNotFound">
+		<Type>System.IO.DriveNotFoundException</Type>
+	</Exception>
+	<Exception HelpID="EHEndOfStream">
+		<Type>System.IO.EndOfStreamException</Type>
+	</Exception>
+	<Exception HelpID="EHIFileFormat">
+		<Type>System.IO.FileFormatException</Type>
+	</Exception>
+	<Exception HelpID="EHFileLoad">
+		<Type>System.IO.FileLoadException</Type>
+	</Exception>
+	<Exception HelpID="EHFileNotFound">
+		<Type>System.IO.FileNotFoundException</Type>
+	</Exception>
+	<Exception HelpID="EHInternalBufferOverflow">
+		<Type>System.IO.InternalBufferOverflowException</Type>
+	</Exception>
+	<Exception HelpID="EHIOInvalidData">
+		<Type>System.IO.InvalidDataException</Type>
+	</Exception>
+	<Exception HelpID="EHIOException">
+		<Type>System.IO.IOException</Type>
+	</Exception>
+	<Exception HelpID="EHPathTooLong">
+		<Type>System.IO.PathTooLongException</Type>
+	</Exception>
+	<Exception HelpID="EHIPipe">
+		<Type>System.IO.PipeException</Type>
+	</Exception>
+	<Exception HelpID="EHIOIsolatedStorage">
+		<Type>System.IO.IsolatedStorage.IsolatedStorageException</Type>
+	</Exception>
+	<Exception HelpID="EHILReservationNotFound">
+		<Type>System.IO.Log.ReservationNotFoundException</Type>
+	</Exception>
+	<Exception HelpID="EHILSequenceFull">
+		<Type>System.IO.Log.SequenceFullException</Type>
+	</Exception>
+	<Exception HelpID="EHMManagement">
+		<Type>System.Management.ManagementException</Type>
+	</Exception>
+	<Exception HelpID="EHMessageQueue">
+		<Type>System.Messaging.MessageQueueException</Type>
+	</Exception>
+	<Exception HelpID="EHCookie">
+		<Type>System.Net.CookieException</Type>
+	</Exception>
+	<Exception HelpID="EHNHttpListener">
+		<Type>System.Net.HttpListenerException</Type>
+	</Exception>
+	<Exception HelpID="EHNProtocolViolation">
+		<Type>System.Net.ProtocolViolationException</Type>
+	</Exception>
+	<Exception HelpID="EHWeb">
+		<Type>System.Net.WebException</Type>
+	</Exception>
+	<Exception HelpID="EHNSmtp">
+		<Type>System.Net.Mail.SmtpException</Type>
+	</Exception>
+	<Exception HelpID="EHNSmtpFailedRecipient">
+		<Type>System.Net.Mail.SmtpFailedRecipientException</Type>
+	</Exception>
+	<Exception HelpID="EHNSmtpFailedRecipients">
+		<Type>System.Net.Mail.SmtpFailedRecipientsException</Type>
+	</Exception>
+	<Exception HelpID="EHNNetworkInformation">
+		<Type>System.Net.NetworkInformation.NetworkInformationException</Type>
+	</Exception>
+	<Exception HelpID="EHNPing">
+		<Type>System.Net.NetworkInformation.PingException</Type>
+	</Exception>
+	<Exception HelpID="EHSocket">
+		<Type>System.Net.Sockets.SocketException</Type>
+	</Exception>
+	<Exception HelpID="EHPPrintCommitAttributes">
+		<Type>System.Printing.PrintCommitAttributesException</Type>
+	</Exception>
+	<Exception HelpID="EHPPrintingCanceled">
+		<Type>System.Printing.PrintingCanceledException</Type>
+	</Exception>
+	<Exception HelpID="EHPPrintJob">
+		<Type>System.Printing.PrintJobException</Type>
+	</Exception>
+	<Exception HelpID="EHPPrintQueue">
+		<Type>System.Printing.PrintQueueException</Type>
+	</Exception>
+	<Exception HelpID="EHPPrintServer">
+		<Type>System.Printing.PrintServerException</Type>
+	</Exception>
+	<Exception HelpID="EHPPrintSystem">
+		<Type>System.Printing.PrintSystemException</Type>
+	</Exception>
+	<Exception HelpID="EHRAmbiguousMatch">
+		<Type>System.Reflection.AmbiguousMatchException</Type>
+	</Exception>
+	<Exception HelpID="EHRCustomAttributeFormat">
+		<Type>System.Reflection.CustomAttributeFormatException</Type>
+	</Exception>
+	<Exception HelpID="EHRInvalidFilterCriteria">
+		<Type>System.Reflection.InvalidFilterCriteriaException</Type>
+	</Exception>
+	<Exception HelpID="EHRReflectionTypeLoad">
+		<Type>System.Reflection.ReflectionTypeLoadException</Type>
+	</Exception>
+	<Exception HelpID="EHRTarget">
+		<Type>System.Reflection.TargetException</Type>
+	</Exception>
+	<Exception HelpID="EHRTargetInvocation">
+		<Type>System.Reflection.TargetInvocationException</Type>
+	</Exception>
+	<Exception HelpID="EHRTargetParameterCount">
+		<Type>System.Reflection.TargetParameterCountException</Type>
+	</Exception>
+	<Exception HelpID="EHRSMissingManifestResource">
+		<Type>System.Resources.MissingManifestResourceException</Type>
+	</Exception>
+	<Exception HelpID="EHRSMissingSatelliteAssembly">
+		<Type>System.Resources.MissingSatelliteAssemblyException</Type>
+	</Exception>
+	<Exception HelpID="EHRuntimeWrapped">
+		<Type>System.Runtime.CompilerServices.RuntimeWrappedException</Type>
+	</Exception>
+	<Exception HelpID="EHCOM">
+		<Type>System.Runtime.InteropServices.COMException</Type>
+	</Exception>
+	<Exception HelpID="EHRTExternal">
+		<Type>System.Runtime.InteropServices.ExternalException</Type>
+	</Exception>
+	<Exception HelpID="EHRTInvalidComObject">
+		<Type>System.Runtime.InteropServices.InvalidComObjectException</Type>
+	</Exception>
+	<Exception HelpID="EHRTInvalidOleVariantType">
+		<Type>System.Runtime.InteropServices.InvalidOleVariantTypeException</Type>
+	</Exception>
+	<Exception HelpID="EHRTMarshalDirective">
+		<Type>System.Runtime.InteropServices.MarshalDirectiveException</Type>
+	</Exception>
+	<Exception HelpID="EHSafeArrayRankMismatch">
+		<Type>System.Runtime.InteropServices.SafeArrayRankMismatchException</Type>
+	</Exception>
+	<Exception HelpID="EHRTSafeArrayTypeMismatch">
+		<Type>System.Runtime.InteropServices.SafeArrayTypeMismatchException</Type>
+	</Exception>
+	<Exception HelpID="EHRTSEH">
+		<Type>System.Runtime.InteropServices.SEHException</Type>
+	</Exception>
+	<Exception HelpID="EHRTRemoting">
+		<Type>System.Runtime.Remoting.RemotingException</Type>
+	</Exception>
+	<Exception HelpID="EHRTRemotingTimedout">
+		<Type>System.Runtime.Remoting.RemotingTimeoutException</Type>
+	</Exception>
+	<Exception HelpID="EHRTServer">
+		<Type>System.Runtime.Remoting.ServerException</Type>
+	</Exception>
+	<Exception HelpID="EHRTSUDSGenerator">
+		<Type>System.Runtime.Remoting.MetadataServices.SUDSGeneratorException</Type>
+	</Exception>
+	<Exception HelpID="EHRTSUDSParser">
+		<Type>System.Runtime.Remoting.MetadataServices.SUDSParserException</Type>
+	</Exception>
+	<Exception HelpID="EHRSInvalidDataContract">
+		<Type>System.Runtime.Serialization.InvalidDataContractException</Type>
+	</Exception>
+	<Exception HelpID="EHRTSerialization">
+		<Type>System.Runtime.Serialization.SerializationException</Type>
+	</Exception>
+	<Exception HelpID="EHSHostProtection">
+		<Type>System.Security.HostProtectionException</Type>
+	</Exception>
+	<Exception HelpID="EHSecurity">
+		<Type>System.Security.SecurityException</Type>
+	</Exception>
+	<Exception HelpID="EHVerification">
+		<Type>System.Security.VerificationException</Type>
+	</Exception>
+	<Exception HelpID="EHSXmlSyntax">
+		<Type>System.Security.XmlSyntaxException</Type>
+	</Exception>
+	<Exception HelpID="EHSPrivilegeNotHeld">
+		<Type>System.Security.AccessControl.PrivilegeNotHeldException</Type>
+	</Exception>
+	<Exception HelpID="EHSAuthentication">
+		<Type>System.Security.Authentication.AuthenticationException</Type>
+	</Exception>
+	<Exception HelpID="EHSInvalidCredential">
+		<Type>System.Security.Authentication.InvalidCredentialException</Type>
+	</Exception>
+	<Exception HelpID="EHSCryptographic">
+		<Type>System.Security.Cryptography.CryptographicException</Type>
+	</Exception>
+	<Exception HelpID="EHSCryptographicUnexpectedOperation">
+		<Type>System.Security.Cryptography.CryptographicUnexpectedOperationException</Type>
+	</Exception>
+	<Exception HelpID="EHSPolicy">
+		<Type>System.Security.Policy.PolicyException</Type>
+	</Exception>
+	<Exception HelpID="EHSIdentityNotMapped">
+		<Type>System.Security.Principal.IdentityNotMappedException</Type>
+	</Exception>
+	<Exception HelpID="EHSRRightsManagement">
+		<Type>System.Security.RightsManagement.RightsManagementException</Type>
+	</Exception>
+	<Exception HelpID="EHSActionNotSupported">
+		<Type>System.ServiceModel.ActionNotSupportedException</Type>
+	</Exception>
+	<Exception HelpID="EHSAddressAccessDenied">
+		<Type>System.ServiceModel.AddressAccessDeniedException</Type>
+	</Exception>
+	<Exception HelpID="EHSAddressAlreadyInUse">
+		<Type>System.ServiceModel.AddressAlreadyInUseException</Type>
+	</Exception>
+	<Exception HelpID="EHSCInvalidChannelBinding">
+		<Type>System.ServiceModel.Channels.InvalidChannelBindingException</Type>
+	</Exception>
+	<Exception HelpID="EHSChannelTerminated">
+		<Type>System.ServiceModel.ChannelTerminatedException</Type>
+	</Exception>
+	<Exception HelpID="EHSCommunication">
+		<Type>System.ServiceModel.CommunicationException</Type>
+	</Exception>
+	<Exception HelpID="EHSCommunicationObjectAborted">
+		<Type>System.ServiceModel.CommunicationObjectAbortedException</Type>
+	</Exception>
+	<Exception HelpID="EHSCommunicationObjectFaulted">
+		<Type>System.ServiceModel.CommunicationObjectFaultedException</Type>
+	</Exception>
+	<Exception HelpID="EHSDFilterInvalidBodyAccess">
+		<Type>System.ServiceModel.Dispatcher.FilterInvalidBodyAccessException</Type>
+	</Exception>
+	<Exception HelpID="EHSDInvalidBodyAccess">
+		<Type>System.ServiceModel.Dispatcher.InvalidBodyAccessException</Type>
+	</Exception>
+	<Exception HelpID="EHSDMessageFilter">
+		<Type>System.ServiceModel.Dispatcher.MessageFilterException</Type>
+	</Exception>
+	<Exception HelpID="EHSDMultipleFilterMatches">
+		<Type>System.ServiceModel.Dispatcher.MultipleFilterMatchesException</Type>
+	</Exception>
+	<Exception HelpID="EHSDNavigatorInvalidBodyAccess">
+		<Type>System.ServiceModel.Dispatcher.NavigatorInvalidBodyAccessException</Type>
+	</Exception>
+	<Exception HelpID="EHSDXPathNavigator">
+		<Type>System.ServiceModel.Dispatcher.XPathNavigatorException</Type>
+	</Exception>
+	<Exception HelpID="EHSEndpointNotFound">
+		<Type>System.ServiceModel.EndpointNotFoundException</Type>
+	</Exception>
+	<Exception HelpID="EHSFault">
+		<Type>System.ServiceModel.FaultException</Type>
+	</Exception>
+	<Exception HelpID="EHSFault1">
+		<Type>System.ServiceModel.FaultException`1</Type>
+	</Exception>
+	<Exception HelpID="EHSInvalidMessageContract">
+		<Type>System.ServiceModel.InvalidMessageContractException</Type>
+	</Exception>
+	<Exception HelpID="EHSMessageHeader">
+		<Type>System.ServiceModel.MessageHeaderException</Type>
+	</Exception>
+	<Exception HelpID="EHSMsmq">
+		<Type>System.ServiceModel.MsmqException</Type>
+	</Exception>
+	<Exception HelpID="EHSMsmqPoisonMessage">
+		<Type>System.ServiceModel.MsmqPoisonMessageException</Type>
+	</Exception>
+	<Exception HelpID="EHSPInstanceLock">
+		<Type>System.ServiceModel.Persistence.InstanceLockException</Type>
+	</Exception>
+	<Exception HelpID="EHSPInstanceNotFound">
+		<Type>System.ServiceModel.Persistence.InstanceNotFoundException</Type>
+	</Exception>
+	<Exception HelpID="EHSPPersistence">
+		<Type>System.ServiceModel.Persistence.PersistenceException</Type>
+	</Exception>
+	<Exception HelpID="EHSPoisonMessage">
+		<Type>System.ServiceModel.PoisonMessageException</Type>
+	</Exception>
+	<Exception HelpID="EHSProtocol">
+		<Type>System.ServiceModel.ProtocolException</Type>
+	</Exception>
+	<Exception HelpID="EHSQuotaExceeded">
+		<Type>System.ServiceModel.QuotaExceededException</Type>
+	</Exception>
+	<Exception HelpID="EHSSExpiredSecurityToken">
+		<Type>System.ServiceModel.Security.ExpiredSecurityTokenException</Type>
+	</Exception>
+	<Exception HelpID="EHSSMessageSecurity">
+		<Type>System.ServiceModel.Security.MessageSecurityException</Type>
+	</Exception>
+	<Exception HelpID="EHSSSecurityAccessDenied">
+		<Type>System.ServiceModel.Security.SecurityAccessDeniedException</Type>
+	</Exception>
+	<Exception HelpID="EHSSSecurityNegotiation">
+		<Type>System.ServiceModel.Security.SecurityNegotiationException</Type>
+	</Exception>
+	<Exception HelpID="EHSServerTooBusy">
+		<Type>System.ServiceModel.ServerTooBusyException</Type>
+	</Exception>
+	<Exception HelpID="EHSServiceActivation">
+		<Type>System.ServiceModel.ServiceActivationException</Type>
+	</Exception>
+	<Exception HelpID="EHSTimeout">
+		<Type>System.ServiceProcess.TimeoutException</Type>
+	</Exception>
+	<Exception HelpID="EHTDecoderFallback">
+		<Type>System.Text.DecoderFallbackException</Type>
+	</Exception>
+	<Exception HelpID="EHTEncoderFallback">
+		<Type>System.Text.EncoderFallbackException</Type>
+	</Exception>
+	<Exception HelpID="EHTAbandonedMutex">
+		<Type>System.Threading.AbandonedMutexException</Type>
+	</Exception>
+	<Exception HelpID="EHTSemaphoreFull">
+		<Type>System.Threading.SemaphoreFullException</Type>
+	</Exception>
+	<Exception HelpID="EHTSynchronizationLock">
+		<Type>System.Threading.SynchronizationLockException</Type>
+	</Exception>
+	<Exception HelpID="EHTThreadAbort">
+		<Type>System.Threading.ThreadAbortException</Type>
+	</Exception>
+	<Exception HelpID="EHTTHreadInterrupted">
+		<Type>System.Threading.ThreadInterruptedException</Type>
+	</Exception>
+	<Exception HelpID="EHTThreadStart">
+		<Type>System.Threading.ThreadStartException</Type>
+	</Exception>
+	<Exception HelpID="EHTThreadState">
+		<Type>System.Threading.ThreadStateException</Type>
+	</Exception>
+	<Exception HelpID="EHTWaitHandleCannotBeOpened">
+		<Type>System.Threading.WaitHandleCannotBeOpenedException</Type>
+	</Exception>
+	<Exception HelpID="EHTrTransactionAborted">
+		<Type>System.Transactions.TransactionAbortedException</Type>
+	</Exception>
+	<Exception HelpID="EHTrTransaction">
+		<Type>System.Transactions.TransactionException</Type>
+	</Exception>
+	<Exception HelpID="EHTrTransactionInDoubt">
+		<Type>System.Transactions.TransactionInDoubtException</Type>
+	</Exception>
+	<Exception HelpID="EHTrTransactionManagerCommunication">
+		<Type>System.Transactions.TransactionManagerCommunicationException</Type>
+	</Exception>
+	<Exception HelpID="EHTrTransactionPromotion">
+		<Type>System.Transactions.TransactionPromotionException</Type>
+	</Exception>
+	<Exception HelpID="EHWHttpCompile">
+		<Type>System.Web.HttpCompileException</Type>
+	</Exception>
+	<Exception HelpID="EHWHttp">
+		<Type>System.Web.HttpException</Type>
+	</Exception>
+	<Exception HelpID="EHWHttpParse">
+		<Type>System.Web.HttpParseException</Type>
+	</Exception>
+	<Exception HelpID="EHWHttpRequestValidation">
+		<Type>System.Web.HttpRequestValidationException</Type>
+	</Exception>
+	<Exception HelpID="EHWHttpUnhandled">
+		<Type>System.Web.HttpUnhandledException</Type>
+	</Exception>
+	<Exception HelpID="EHWDatabaseNotEnabledForNotification">
+		<Type>System.Web.Caching.DatabaseNotEnabledForNotificationException</Type>
+	</Exception>
+	<Exception HelpID="EHWTableNotEnabledForNotification">
+		<Type>System.Web.Caching.TableNotEnabledForNotificationException</Type>
+	</Exception>
+	<Exception HelpID="EHWSqlExecution">
+		<Type>System.Web.Management.SqlExecutionException</Type>
+	</Exception>
+	<Exception HelpID="EHWMembershipCreateUser">
+		<Type>System.Web.Security.MembershipCreateUserException</Type>
+	</Exception>
+	<Exception HelpID="EHWMembershipPassword">
+		<Type>System.Web.Security.MembershipPasswordException</Type>
+	</Exception>
+	<Exception HelpID="EHWSoap">
+		<Type>System.Web.Services.Protocols.SoapException</Type>
+	</Exception>
+	<Exception HelpID="EHWSoapHeader">
+		<Type>System.Web.Services.Protocols.SoapHeaderException</Type>
+	</Exception>
+	<Exception HelpID="EHWUIViewstate">
+		<Type>System.Web.UI.ViewStateException</Type>
+	</Exception>
+	<Exception HelpID="EHWAElementNotAvailable">
+		<Type>System.Windows.Automation.ElementNotAvailableException</Type>
+	</Exception>
+	<Exception HelpID="EHWAElementNotEnabled">
+		<Type>System.Windows.Automation.ElementNotEnabledException</Type>
+	</Exception>
+	<Exception HelpID="EHWANoClickablePoint">
+		<Type>System.Windows.Automation.NoClickablePointException</Type>
+	</Exception>
+	<Exception HelpID="EHWAProxyAssemblyNotLoaded">
+		<Type>System.Windows.Automation.ProxyAssemblyNotLoadedException</Type>
+	</Exception>
+	<Exception HelpID="EHWCPrintDialog">
+		<Type>System.Windows.Controls.PrintDialogException</Type>
+	</Exception>
+	<Exception HelpID="EHWFInvalidActiveXState">
+		<Type>System.Windows.Forms.AxHost.InvalidActiveXStateException</Type>
+	</Exception>
+	<Exception HelpID="EHWMXamlParse">
+		<Type>System.Windows.Markup.XamlParseException</Type>
+	</Exception>
+	<Exception HelpID="EHWMAAnimation">
+		<Type>System.Windows.Media.Animation.AnimationException</Type>
+	</Exception>
+	<Exception HelpID="EHWMInvalidWmpVersion">
+		<Type>System.Windows.Media.InvalidWmpVersionException</Type>
+	</Exception>
+	<Exception HelpID="EHWResourceReferenceKeyNotFound">
+		<Type>System.Windows.ResourceReferenceKeyNotFoundException</Type>
+	</Exception>
+	<Exception HelpID="EHWXXps">
+		<Type>System.Windows.Xps.XpsException</Type>
+	</Exception>
+	<Exception HelpID="EHWXXpsPackaging">
+		<Type>System.Windows.Xps.XpsPackagingException</Type>
+	</Exception>
+	<Exception HelpID="EHWXXpsSerialization">
+		<Type>System.Windows.Xps.XpsSerializationException</Type>
+	</Exception>
+	<Exception HelpID="EHWXXpsWriter">
+		<Type>System.Windows.Xps.XpsWriterException</Type>
+	</Exception>
+	<Exception HelpID="EHWAEventDeliveryFailed">
+		<Type>System.Workflow.Activities.EventDeliveryFailedException</Type>
+	</Exception>
+	<Exception HelpID="EHWARRuleEvaluation">
+		<Type>System.Workflow.Activities.Rules.RuleEvaluationException</Type>
+	</Exception>
+	<Exception HelpID="EHWARRuleEvaluationIncompatibleTypes">
+		<Type>System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException</Type>
+	</Exception>
+	<Exception HelpID="EHWARRule">
+		<Type>System.Workflow.Activities.Rules.RuleException</Type>
+	</Exception>
+	<Exception HelpID="EHWARRuleSetValidation">
+		<Type>System.Workflow.Activities.Rules.RuleSetValidationException</Type>
+	</Exception>
+	<Exception HelpID="EHWAWorkflowAuthorization">
+		<Type>System.Workflow.Activities.WorkflowAuthorizationException</Type>
+	</Exception>
+	<Exception HelpID="EHWCCWorkflowValidationFailed">
+		<Type>System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException</Type>
+	</Exception>
+	<Exception HelpID="EHWCSWorkflowMarkupSerialization">
+		<Type>System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationException</Type>
+	</Exception>
+	<Exception HelpID="EHWCWorkflowTerminated">
+		<Type>System.Workflow.ComponentModel.WorkflowTerminatedException</Type>
+	</Exception>
+	<Exception HelpID="EHWRHPersistence">
+		<Type>System.Workflow.Runtime.Hosting.PersistenceException</Type>
+	</Exception>
+	<Exception HelpID="EHWRTTrackingProfileDeserialization">
+		<Type>System.Workflow.Runtime.Tracking.TrackingProfileDeserializationException</Type>
+	</Exception>
+	<Exception HelpID="EHWRWorkflowOwnership">
+		<Type>System.Workflow.Runtime.WorkflowOwnershipException</Type>
+	</Exception>
+	<Exception HelpID="EHXXml">
+		<Type>System.Xml.XmlException</Type>
+	</Exception>
+	<Exception HelpID="EHXXmlSchema">
+		<Type>System.Xml.Schema.XmlSchemaException</Type>
+	</Exception>
+	<Exception HelpID="EHXXmlSchemaInference">
+		<Type>System.Xml.Schema.XmlSchemaInferenceException</Type>
+	</Exception>
+	<Exception HelpID="EHXXmlSchemaValidation">
+		<Type>System.Xml.Schema.XmlSchemaValidationException</Type>
+	</Exception>
+	<Exception HelpID="EHXXPath">
+		<Type>System.Xml.XPath.XPathException</Type>
+	</Exception>
+	<Exception HelpID="EHXXsltCompile">
+		<Type>System.Xml.Xsl.XsltCompileException</Type>
+	</Exception>
+	<Exception HelpID="EHXXslt">
+		<Type>System.Xml.Xsl.XsltException</Type>
+	</Exception>
+	<Exception>
+		<Type>Microsoft.VisualBasic.ApplicationServices.NoStartupFormException</Type>
+		<Tip HelpID="EHNoStartupForm">
+			<Description>确保有一个启动窗体。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>Microsoft.VisualBasic.FileIO.MalformedLineException</Type>
+		<Tip HelpID="EHMalformedLine">
+			<Description>检查以确保正确定义了 TextFieldType 和 Delimiter。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.ArgumentNullException</Type>
+		<Tip HelpID="EHArgumentNull">
+			<Description>使用“new”关键字创建对象实例。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.ArgumentNullException</Type>
+		<Tip HelpID="EHArgumentNull">
+			<Description>在调用方法前，通过检查确定对象是否为 null。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.ArgumentOutOfRangeException</Type>
+		<Tip HelpID="EHArgumentOutOfRange">
+			<Description>确保此方法的参数具有有效值。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.ArgumentOutOfRangeException</Type>
+		<Tip HelpID="EHArgumentOutOfRange">
+			<Description>如果您使用的是一个集合，请确保索引小于该集合的大小。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.ArgumentOutOfRangeException</Type>
+		<Tip HelpID="EHArgumentOutOfRange">
+			<Description>在将重载的双参数 FindString 或 FindExactString 方法用于组合框或列表框时，请检查 startIndex 参数。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.ArrayTypeMismatchException</Type>
+		<Tip HelpID="EHArrayTypeMismatch">
+			<Description>确保该对象类型可转换为数组类型。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.BadImageFormatException</Type>
+		<Tip HelpID="EHBadImageFormat">
+			<Description>确保该文件映像是有效的托管程序集。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.BadImageFormatException</Type>
+		<Tip HelpID="EHBadImageFormat">
+			<Description>确保已经为程序集提供了正确的文件路径。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.CannotUnloadAppDomainException</Type>
+		<Tip HelpID="EHCannotUnloadAppDomain">
+			<Description>确保您尝试卸载的应用程序域不是默认域、没有正在运行的线程并且尚未卸载。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.DivideByZeroException</Type>
+		<Tip HelpID="EHDividebyZero">
+			<Description>在执行除法运算之前，应确保分母的值不为零。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.DuplicateWaitObjectException</Type>
+		<Tip HelpID="EHDuplicateWaitObject">
+			<Description>确保传递至 WaitAll 或 WaitAny 方法的 WaitHandle 对象是唯一的。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.FieldAccessException</Type>
+		<Tip HelpID="EHFieldAccess">
+			<Description>如果类库中某个字段的访问级别已经改变，请重新编译引用该库的所有程序集。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.FormatException</Type>
+		<Tip HelpID="EHFormat">
+			<Description>确保方法参数的格式正确。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.FormatException</Type>
+		<Tip HelpID="EHFormat">
+			<Description>将一个字符串转换为 DateTime 时，先分析该字符串以获取日期，然后再将每个变量放置到 DateTime 对象中。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IndexOutOfRangeException</Type>
+		<Tip HelpID="EHIndexOutOfRange">
+			<Description>确保列表中的最大索引小于列表的大小。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IndexOutOfRangeException</Type>
+		<Tip HelpID="EHIndexOutOfRange">
+			<Description>确保索引不是负数。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IndexOutOfRangeException</Type>
+		<Tip HelpID="EHIndexOutOfRange">
+			<Description>确保数据列名称正确。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.InvalidCastException</Type>
+		<Tip HelpID="EHInvalidCast">
+			<Description>当从一个数字执行强制转换时，值必须是一个小于无限大的数字。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.InvalidCastException</Type>
+		<Tip HelpID="EHInvalidCast">
+			<Description>确保源类型可以转换为目标类型。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.InvalidOperationException</Type>
+		<Precondition>Source="System.Drawing"</Precondition>
+		<Tip HelpID="EHInvalidOperation">
+			<Description>如果在使用 GetHdc 方法后使用 Graphics 对象，请调用 ReleaseHdc 方法。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.InvalidOperationException</Type>
+		<Context>System.Console.ReadKey</Context>
+		<Tip HelpID="EHIOException">
+			<Description>关闭控制台窗口。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.InvalidOperationException</Type>
+		<Context>System.Console.KeyAvailable.get</Context>
+		<Tip HelpID="EHIOException">
+			<Description>关闭控制台窗口。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.InvalidOperationException</Type>
+		<Precondition>$SourceFunction="System.Windows.Forms.Control.Handle.get"</Precondition>
+		<Tip HelpID="EHInvalidOperation.WinForms.IllegalCrossThreadCall">
+			<Description>如何跨线程调用 Windows 窗体控件</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.InvalidOperationException</Type>
+		<Precondition>$SourceFunction="System.ServiceModel.Description.ConfigLoader.LookupChannel"</Precondition>
+		<Tip HelpID="EHInvalidOperation">
+			<Description>将有效的终结点名称传递到服务客户端构造函数。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.MethodAccessException</Type>
+		<Tip HelpID="EHMethodAccess">
+			<Description>如果类库中某方法的访问级别已经改变，请重新编译引用该库的所有程序集。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.MissingFieldException</Type>
+		<Tip HelpID="EHMissingField">
+			<Description>如果类库中的某个字段已被移除，请重新编译引用该库的所有程序集。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.MissingMemberException</Type>
+		<Tip HelpID="EHMissingMember">
+			<Description>如果类库中的某个成员已移除，请重新编译引用该库的所有程序集。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.MissingMemberException</Type>
+		<Tip HelpID="EHMissingMember">
+			<Description>如果您尝试访问后期绑定对象变量上的成员，请确保将该变量声明为“Public”。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.MissingMethodException</Type>
+		<Tip HelpID="EHMissingMethod">
+			<Description>如果类库中的某个方法已被移除，请重新编译引用该库的所有程序集。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.NotSupportedException</Type>
+		<Tip HelpID="EHNotSupported">
+			<Description>检查以确定是否存在支持此功能的类。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.NullReferenceException</Type>
+		<Tip HelpID="EHNullReference">
+			<Description>使用“new”关键字创建对象实例。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.NullReferenceException</Type>
+		<Tip HelpID="EHNullReference">
+			<Description>在调用方法前，通过检查确定对象是否为 null。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.ObjectDisposedException</Type>
+		<Tip HelpID="EHObjectDisposed">
+			<Description>请确保在尝试使用某个资源之前尚未将其释放。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.OutOfMemoryException</Type>
+		<Tip HelpID="EHOutOfMemory">
+			<Description>如果要创建数组，请确保大小正确。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.OutOfMemoryException</Type>
+		<Tip HelpID="EHOutOfMemory">
+			<Description>对于内部用途和新的托管对象，确保要有足够的内存可供分配。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.OverflowException</Type>
+		<Tip HelpID="EHOverflow">
+			<Description>确保不会被零除。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.RankException</Type>
+		<Tip HelpID="EHRank">
+			<Description>确保您的数组具有所需的维数。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.StackOverflowException</Type>
+		<Tip HelpID="EHStackOverflow">
+			<Description>确保您没有无限循环或无限递归。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.UnauthorizedAccessException</Type>
+		<Tip HelpID="EHUnauthorizedAccess">
+			<Description>确保您具有足够的特权来访问此资源。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.UnauthorizedAccessException</Type>
+		<Tip HelpID="EHUnauthorizedAccess">
+			<Description>如果您要尝试访问某个文件，请确保该文件不是只读的。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Data.ConstraintException</Type>
+		<Tip HelpID="EHConstraint">
+			<Description>放松或关闭数据集内的约束。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Data.ConstraintException</Type>
+		<Tip HelpID="EHConstraint">
+			<Description>一定不要尝试为已存在主键的主键字段赋值。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Data.ConstraintException</Type>
+		<Tip HelpID="EHConstraint">
+			<Description>从视图状态加载数据集之前，要先清除数据集。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Data.DBConcurrencyException</Type>
+		<Tip HelpID="EHDBConcurrency">
+			<Description>在应用程序中包括逻辑以处理并发冲突。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Data.InvalidExpressionException</Type>
+		<Tip HelpID="EHInvalidExpression">
+			<Description>检查表达式的语法。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Data.NoNullAllowedException</Type>
+		<Tip HelpID="EHNoNullAllowed">
+			<Description>先检查值是否为 DBNull，然后再将它添加到列中。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Data.NoNullAllowedException</Type>
+		<Tip HelpID="EHNoNullAllowed">
+			<Description>将 AllowDBNull 设置为 True。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Data.ReadOnlyException</Type>
+		<Tip HelpID="EHReadOnly">
+			<Description>将列更改为读/写列。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Data.Odbc.OdbcException</Type>
+		<Context>System.Data.IDbConnection.Open</Context>
+		<Tip HelpID="EHOdbc">
+			<Description>验证您是否在使用有效的凭据进行连接。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Data.Odbc.OdbcException</Type>
+		<Context>System.Data.IDbConnection.Open</Context>
+		<Tip HelpID="EHOdbc">
+			<Description>验证服务器名称是否正确以及服务器是否正在运行。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Data.OleDb.OleDbException</Type>
+		<Context>System.Data.IDbConnection.Open</Context>
+		<Tip HelpID="EHOleDb">
+			<Description>验证您是否在使用有效的凭据进行连接。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Data.OleDb.OleDbException</Type>
+		<Context>System.Data.IDbConnection.Open</Context>
+		<Tip HelpID="EHOleDb">
+			<Description>验证服务器名称是否正确以及服务器是否正在运行。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Data.OracleClient.OracleException</Type>
+		<Context>System.Data.IDbConnection.Open</Context>
+		<Tip HelpID="EHOracle">
+			<Description>验证您是否在使用有效的凭据进行连接。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Data.OracleClient.OracleException</Type>
+		<Context>System.Data.IDbConnection.Open</Context>
+		<Tip HelpID="EHOracle">
+			<Description>验证服务器名称是否正确以及服务器是否正在运行。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Data.SqlClient.SqlException</Type>
+		<Context>System.Data.IDbConnection.Open</Context>
+		<Tip HelpID="EHSql">
+			<Description>验证您是否在使用有效的凭据进行连接。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Data.SqlClient.SqlException</Type>
+		<Context>System.Data.IDbConnection.Open</Context>
+		<Tip HelpID="EHSql">
+			<Description>验证服务器名称是否正确以及服务器是否正在运行。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Deployment.Application.DependentPlatformMissingException</Type>
+		<Tip HelpID="EHDependentPlatformMissing">
+			<Description>确保在目标计算机上安装了应用程序需要的所有程序集。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Deployment.Application.InvalidDeploymentException</Type>
+		<Tip HelpID="EHInvalidDeployment">
+			<Description>确保此应用程序的清单有效。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Deployment.Application.InvalidDeploymentException</Type>
+		<Tip HelpID="EHInvalidDeployment">
+			<Description>请确保此应用程序已进行 ClickOnce 部署。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Drawing.Printing.InvalidPrinterException</Type>
+		<Tip HelpID="EHInvalidPrinter">
+			<Description>确保打印机存在。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.DirectoryNotFoundException</Type>
+		<Tip HelpID="EHDirectoryNotFound">
+			<Description>验证目录是否存在于指定位置。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.DirectoryNotFoundException</Type>
+		<Tip HelpID="EHDirectoryNotFound">
+			<Description>使用相对路径时，请确保当前目录是正确的。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.EndOfStreamException</Type>
+		<Tip HelpID="EHEndOfStream">
+			<Description>在读取操作之前检查是否到达了文件的结尾。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.FileLoadException</Type>
+		<Tip HelpID="EHFileLoad">
+			<Description>确保文件是有效的 .NET Framework 程序集。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.FileNotFoundException</Type>
+		<Tip HelpID="EHFileNotFound">
+			<Description>验证文件是否存在于指定位置。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.FileNotFoundException</Type>
+		<Tip HelpID="EHFileNotFound">
+			<Description>使用相对路径时，请确保当前目录是正确的。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.InternalBufferOverflowException</Type>
+		<Tip HelpID="EHInternalBufferOverflow">
+			<Description>使用 FileSystemWatcher 时，筛选掉不需要的更改通知。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.IOException</Type>
+		<Context>System.Console.Clear</Context>
+		<Tip HelpID="EHIOException">
+			<Description>关闭控制台窗口。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.IOException</Type>
+		<Context>System.Console.MoveBufferArea</Context>
+		<Tip HelpID="EHIOException">
+			<Description>关闭控制台窗口。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.IOException</Type>
+		<Context>System.Console.SetBufferSize</Context>
+		<Tip HelpID="EHIOException">
+			<Description>关闭控制台窗口。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.IOException</Type>
+		<Context>System.Console.SetCursorPosition</Context>
+		<Tip HelpID="EHIOException">
+			<Description>关闭控制台窗口。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.IOException</Type>
+		<Context>System.Console.SetWindowPosition</Context>
+		<Tip HelpID="EHIOException">
+			<Description>关闭控制台窗口。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.IOException</Type>
+		<Context>System.Console.SetWindowSize</Context>
+		<Tip HelpID="EHIOException">
+			<Description>关闭控制台窗口。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.IOException</Type>
+		<Context>System.Console.BufferHeight.get</Context>
+		<Tip HelpID="EHIOException">
+			<Description>关闭控制台窗口。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.IOException</Type>
+		<Context>System.Console.BufferHeight.set</Context>
+		<Tip HelpID="EHIOException">
+			<Description>关闭控制台窗口。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.IOException</Type>
+		<Context>System.Console.BufferWidth.get</Context>
+		<Tip HelpID="EHIOException">
+			<Description>关闭控制台窗口。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.IOException</Type>
+		<Context>System.Console.BufferWidth.set</Context>
+		<Tip HelpID="EHIOException">
+			<Description>关闭控制台窗口。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.IOException</Type>
+		<Context>System.Console.CursorLeft.get</Context>
+		<Tip HelpID="EHIOException">
+			<Description>关闭控制台窗口。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.IOException</Type>
+		<Context>System.Console.CursorLeft.set</Context>
+		<Tip HelpID="EHIOException">
+			<Description>关闭控制台窗口。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.IOException</Type>
+		<Context>System.Console.CursorSize.get</Context>
+		<Tip HelpID="EHIOException">
+			<Description>关闭控制台窗口。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.IOException</Type>
+		<Context>System.Console.CursorSize.set</Context>
+		<Tip HelpID="EHIOException">
+			<Description>关闭控制台窗口。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.IOException</Type>
+		<Context>System.Console.CursorTop.get</Context>
+		<Tip HelpID="EHIOException">
+			<Description>关闭控制台窗口。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.IOException</Type>
+		<Context>System.Console.CursorTop.set</Context>
+		<Tip HelpID="EHIOException">
+			<Description>关闭控制台窗口。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.IOException</Type>
+		<Context>System.Console.CursorVisible.get</Context>
+		<Tip HelpID="EHIOException">
+			<Description>关闭控制台窗口。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.IOException</Type>
+		<Context>System.Console.CursorVisible.set</Context>
+		<Tip HelpID="EHIOException">
+			<Description>关闭控制台窗口。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.IOException</Type>
+		<Context>System.Console.TreatControlCAsInput.get</Context>
+		<Tip HelpID="EHIOException">
+			<Description>关闭控制台窗口。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.IOException</Type>
+		<Context>System.Console.TreatControlCAsInput.set</Context>
+		<Tip HelpID="EHIOException">
+			<Description>关闭控制台窗口。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.IOException</Type>
+		<Context>System.Console.WindowHeight.get</Context>
+		<Tip HelpID="EHIOException">
+			<Description>关闭控制台窗口。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.IOException</Type>
+		<Context>System.Console.WindowHeight.set</Context>
+		<Tip HelpID="EHIOException">
+			<Description>关闭控制台窗口。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.IOException</Type>
+		<Context>System.Console.WindowLeft.get</Context>
+		<Tip HelpID="EHIOException">
+			<Description>关闭控制台窗口。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.IOException</Type>
+		<Context>System.Console.WindowLeft.set</Context>
+		<Tip HelpID="EHIOException">
+			<Description>关闭控制台窗口。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.IOException</Type>
+		<Context>System.Console.WindowTop.get</Context>
+		<Tip HelpID="EHIOException">
+			<Description>关闭控制台窗口。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.IOException</Type>
+		<Context>System.Console.WindowTop.set</Context>
+		<Tip HelpID="EHIOException">
+			<Description>关闭控制台窗口。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.IOException</Type>
+		<Context>System.Console.WindowWidth.get</Context>
+		<Tip HelpID="EHIOException">
+			<Description>关闭控制台窗口。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.IOException</Type>
+		<Context>System.Console.WindowWidth.set</Context>
+		<Tip HelpID="EHIOException">
+			<Description>关闭控制台窗口。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.IO.PathTooLongException</Type>
+		<Tip HelpID="EHPathTooLong">
+			<Description>确保路径的长度不大于系统定义的最大长度。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Messaging.MessageQueueException</Type>
+		<Tip HelpID="EHMessageQueue">
+			<Description>检查异常的 MessageQueueErrorCode 属性以确定消息队列操作失败的原因。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Net.CookieException</Type>
+		<Tip HelpID="EHCookie">
+			<Description>确保 Cookie 大小不会超出 Cookie 容器所允许的最大值。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Net.WebException</Type>
+		<Tip HelpID="EHWeb">
+			<Description>检查异常的 Response 属性以确定请求失败的原因。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Net.WebException</Type>
+		<Tip HelpID="EHWeb">
+			<Description>检查异常的 Status 属性以确定请求失败的原因。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Net.Sockets.SocketException</Type>
+		<Tip HelpID="EHSocket">
+			<Description>检查 ErrorCode 属性以确定发生套接字错误的原因。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Runtime.InteropServices.COMException</Type>
+		<Tip HelpID="EHCOM">
+			<Description>检查异常的 ErrorCode 属性以确定 COM 对象返回的 HRESULT。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Runtime.InteropServices.COMException</Type>
+		<Precondition>ErrorCode=-2147417831</Precondition>
+		<Tip HelpID="EHCOM">
+			<Description>禁用承载进程。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Runtime.InteropServices.SafeArrayRankMismatchException</Type>
+		<Tip HelpID="EHSafeArrayRankMismatch">
+			<Description>确保您的数组具有所需的维数。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Security.SecurityException</Type>
+		<Tip HelpID="EHSecurity">
+			<Description>使用证书获取所需的权限。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Security.SecurityException</Type>
+		<Precondition>$EngineType!="e04bde58-45ec-48db-9807-513f78865212"</Precondition>
+		<Tip HelpID="EHSecurity">
+			<Description>部署 Office 解决方案时，请检查以确保已满足所有必要的安全要求。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Security.SecurityException</Type>
+		<Tip HelpID="EHSecurity">
+			<Description>如果实现自定义安全对象的程序集引用了其他程序集，请将所引用的程序集添加到完全信任程序集列表中。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Security.SecurityException</Type>
+		<Demand>Unrestricted</Demand>
+		<Tip HelpID="EHSecurity">
+			<Description>此应用程序需要完全信任权限才能正确运行。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Security.SecurityException</Type>
+		<Demand>System.Security.Permissions.FileIOPermission</Demand>
+		<Tip HelpID="EHSecurity">
+			<Description>将应用程序数据存储在独立存储区内。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Security.SecurityException</Type>
+		<Demand>System.Security.Permissions.FileIOPermission</Demand>
+		<Context>System.Windows.Forms.FileDialog.FileName.get</Context>
+		<Tip HelpID="EHSecurity">
+			<Description>使用 OpenFile 方法打开或保存文件。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Security.SecurityException</Type>
+		<Demand>System.Security.Permissions.FileIOPermission</Demand>
+		<Precondition>$EngineType="e04bde58-45ec-48db-9807-513f78865212"</Precondition>
+		<Tip HelpID="EHSecurity">
+			<Description>通过属性页调整程序集的权限级别。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Security.SecurityException</Type>
+		<Demand>System.Security.Permissions.EventLogPermission</Demand>
+		<Tip HelpID="EHSecurity">
+			<Description>确保应用程序是在对本地计算机上的现有事件日志进行读写。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Security.SecurityException</Type>
+		<Demand>System.Security.Permissions.SecurityPermission</Demand>
+		<Tip HelpID="EHSecurity">
+			<Description>使用等效的托管库。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Security.SecurityException</Type>
+		<Demand>System.Security.Permissions.UIPermission</Demand>
+		<Tip HelpID="EHSecurity">
+			<Description>使用安全窗口。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Security.SecurityException</Type>
+		<Demand>System.Drawing.Printing.PrintingPermission</Demand>
+		<Tip HelpID="EHSecurity">
+			<Description>允许用户通过 PrintDialog 组件进行打印。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Security.SecurityException</Type>
+		<Demand>System.Drawing.Printing.PrintingPermission</Demand>
+		<Tip HelpID="EHSecurity">
+			<Description>打印到默认打印机。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Security.SecurityException</Type>
+		<Demand>System.Net.WebPermission</Demand>
+		<Tip HelpID="EHSecurity">
+			<Description>从部署数据的同一 Web 服务器上检索数据。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Security.SecurityException</Type>
+		<Demand>System.Data.Odbc.OdbcPermission</Demand>
+		<Tip HelpID="EHSecurity">
+			<Description>从部署 Web 服务的同一 Web 服务器上的 Web 服务中检索数据。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Security.SecurityException</Type>
+		<Demand>System.Data.OleDb.OleDbPermission</Demand>
+		<Tip HelpID="EHSecurity">
+			<Description>从部署 Web 服务的同一 Web 服务器上的 Web 服务中检索数据。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Security.SecurityException</Type>
+		<Demand>System.Data.SqlClient.SqlClientPermission</Demand>
+		<Tip HelpID="EHSecurity">
+			<Description>从部署 Web 服务的同一 Web 服务器上的 Web 服务中检索数据。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Security.SecurityException</Type>
+		<Demand>System.Data.OracleClient.OraclePermission</Demand>
+		<Tip HelpID="EHSecurity">
+			<Description>从部署 Web 服务的同一 Web 服务器上的 Web 服务中检索数据。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Security.VerificationException</Type>
+		<Tip HelpID="EHVerification">
+			<Description>确保应用程序所加载的类库的两个版本不冲突。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.Security.Policy.PolicyException</Type>
+		<Tip HelpID="EHPolicy">
+			<Description>检查以确定代码请求的权限是否超过了策略将会授予的权限，或者是否将策略配置为禁止运行代码。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>System.ServiceModel.Security.MessageSecurityException</Type>
+		<Precondition>$InnerExceptionType="System.Net.WebException" &amp;&amp; Message~"NTLM" &amp;&amp; InnerException.Response.Headers.Server~"ASP.NET Development Server"</Precondition>
+		<Tip HelpID="EHSSMessageSecurity">
+			<Description>使用 ASP.Net 开发服务器时解决 NTLM 验证问题。</Description>
+		</Tip>
+	</Exception>
+	<Exception>
+		<Type>*</Type>
+		<Action ActionCommand="ViewDetail">
+			<Title>查看详细信息...</Title>
+			<ToolTip>检查异常对象的内容。</ToolTip>
+		</Action>
+	</Exception>
+	<Exception>
+		<Type>*</Type>
+		<Precondition>$InnerExceptionType="System.Security.SecurityException" || $Name="System.Security.SecurityException"</Precondition>
+		<Action ActionCommand="AddPermission">
+			<Title>向项目添加权限</Title>
+			<ToolTip>向应用程序清单添加权限以在运行前请求这些权限。</ToolTip>
+		</Action>
+	</Exception>
+</AssistantContent>

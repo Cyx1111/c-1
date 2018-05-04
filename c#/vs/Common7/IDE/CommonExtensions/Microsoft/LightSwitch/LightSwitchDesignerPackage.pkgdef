@@ -1,0 +1,32 @@
+[$RootKey$]
+
+[$RootKey$\InstalledProducts]
+
+[$RootKey$\InstalledProducts\Microsoft LightSwitch]
+"DefaultProductAttribute"="KH"
+"LogoID"="#300"
+"Package"="{69d57f29-ec7e-4d47-a636-f793f220a8dc}"
+"ProductDetails"="#2003"
+"UseVSProductID"=dword:00000001
+@="#2002"
+
+[$RootKey$\Menus]
+"{69d57f29-ec7e-4d47-a636-f793f220a8dc}"=",1000,1"
+
+[$RootKey$\Packages]
+
+[$RootKey$\Packages\{69d57f29-ec7e-4d47-a636-f793f220a8dc}]
+"Assembly"="Microsoft.LightSwitch.Design.Package, Version=11.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"Class"="Microsoft.LightSwitch.VisualStudioIntegration.DesignerPackage.DesignerHostPackage"
+"CodeBase"="$ShellFolder$\Common7\IDE\PrivateAssemblies\Microsoft.LightSwitch.Design.Package.dll"
+"CompanyName"="Microsoft Corporation"
+"ID"=dword:00000064
+"InProcServer32"="$System$\mscoree.dll"
+"MinEdition"="Standard"
+"ProductName"="LightSwitch Designer Hosting package"
+"ProductVersion"="1.0"
+@="LightSwitch Designer Hosting package"
+
+[$RootKey$\Packages\{69d57f29-ec7e-4d47-a636-f793f220a8dc}\SatelliteDll]
+"DllName"="Microsoft.LightSwitch.Design.PackageUI.dll"
+"Path"="$ShellFolder$\Common7\IDE"

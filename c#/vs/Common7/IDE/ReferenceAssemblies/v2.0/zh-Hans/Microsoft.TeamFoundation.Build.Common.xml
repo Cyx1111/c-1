@@ -1,0 +1,821 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.TeamFoundation.Build.Common</name>
+  </assembly>
+  <members>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.NET_FW_RULE_DIRECTION_.NET_FW_RULE_DIR_MAX">
+        <summary />
+      </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.NET_FW_RULE_DIRECTION_.NET_FW_RULE_DIR_OUT">
+        <summary />
+      </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.NET_FW_RULE_DIRECTION_.NET_FW_RULE_DIR_IN">
+        <summary />
+      </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Common.NET_FW_RULE_DIRECTION_" />
+    <member name="F:Microsoft.TeamFoundation.Build.Common.NET_FW_PROFILE_TYPE2_.NET_FW_PROFILE2_ALL">
+        <summary />
+      </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.NET_FW_PROFILE_TYPE2_.NET_FW_PROFILE2_PUBLIC">
+        <summary />
+      </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.NET_FW_PROFILE_TYPE2_.NET_FW_PROFILE2_PRIVATE">
+        <summary />
+      </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.NET_FW_PROFILE_TYPE2_.NET_FW_PROFILE2_DOMAIN">
+        <summary />
+      </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Common.NET_FW_PROFILE_TYPE2_" />
+    <member name="F:Microsoft.TeamFoundation.Build.Common.NET_FW_ACTION_.NET_FW_ACTION_MAX">
+        <summary />
+      </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.NET_FW_ACTION_.NET_FW_ACTION_ALLOW">
+        <summary />
+      </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.NET_FW_ACTION_.NET_FW_ACTION_BLOCK">
+        <summary />
+      </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Common.INetFwRules.Remove(System.String)" />
+    <member name="M:Microsoft.TeamFoundation.Build.Common.INetFwRules.Item(System.String)" />
+    <member name="P:Microsoft.TeamFoundation.Build.Common.INetFwRules.Count" />
+    <member name="M:Microsoft.TeamFoundation.Build.Common.INetFwRules.Add(Microsoft.TeamFoundation.Build.Common.INetFwRule)" />
+    <member name="T:Microsoft.TeamFoundation.Build.Common.INetFwRules" />
+    <member name="P:Microsoft.TeamFoundation.Build.Common.INetFwRule.serviceName" />
+    <member name="P:Microsoft.TeamFoundation.Build.Common.INetFwRule.RemotePorts" />
+    <member name="P:Microsoft.TeamFoundation.Build.Common.INetFwRule.RemoteAddresses" />
+    <member name="P:Microsoft.TeamFoundation.Build.Common.INetFwRule.Protocol" />
+    <member name="P:Microsoft.TeamFoundation.Build.Common.INetFwRule.Profiles" />
+    <member name="P:Microsoft.TeamFoundation.Build.Common.INetFwRule.Name" />
+    <member name="P:Microsoft.TeamFoundation.Build.Common.INetFwRule.LocalPorts" />
+    <member name="P:Microsoft.TeamFoundation.Build.Common.INetFwRule.LocalAddresses" />
+    <member name="P:Microsoft.TeamFoundation.Build.Common.INetFwRule.InterfaceTypes" />
+    <member name="P:Microsoft.TeamFoundation.Build.Common.INetFwRule.Interfaces" />
+    <member name="P:Microsoft.TeamFoundation.Build.Common.INetFwRule.IcmpTypesAndCodes" />
+    <member name="P:Microsoft.TeamFoundation.Build.Common.INetFwRule.Grouping" />
+    <member name="P:Microsoft.TeamFoundation.Build.Common.INetFwRule.Enabled" />
+    <member name="P:Microsoft.TeamFoundation.Build.Common.INetFwRule.EdgeTraversal" />
+    <member name="P:Microsoft.TeamFoundation.Build.Common.INetFwRule.Direction" />
+    <member name="P:Microsoft.TeamFoundation.Build.Common.INetFwRule.Description" />
+    <member name="P:Microsoft.TeamFoundation.Build.Common.INetFwRule.ApplicationName" />
+    <member name="P:Microsoft.TeamFoundation.Build.Common.INetFwRule.Action" />
+    <member name="T:Microsoft.TeamFoundation.Build.Common.INetFwRule" />
+    <member name="P:Microsoft.TeamFoundation.Build.Common.INetFwPolicy2.UnicastResponsesToMulticastBroadcastDisabled" />
+    <member name="P:Microsoft.TeamFoundation.Build.Common.INetFwPolicy2.Rules" />
+    <member name="M:Microsoft.TeamFoundation.Build.Common.INetFwPolicy2.RestoreLocalFirewallDefaults" />
+    <member name="P:Microsoft.TeamFoundation.Build.Common.INetFwPolicy2.NotificationsDisabled" />
+    <member name="M:Microsoft.TeamFoundation.Build.Common.INetFwPolicy2.IsRuleGroupEnabled(System.Int32,System.String)" />
+    <member name="P:Microsoft.TeamFoundation.Build.Common.INetFwPolicy2.IsRuleGroupCurrentlyEnabled" />
+    <member name="P:Microsoft.TeamFoundation.Build.Common.INetFwPolicy2.FirewallEnabled" />
+    <member name="P:Microsoft.TeamFoundation.Build.Common.INetFwPolicy2.ExcludedInterfaces" />
+    <member name="M:Microsoft.TeamFoundation.Build.Common.INetFwPolicy2.EnableRuleGroup(System.Int32,System.String,System.Boolean)" />
+    <member name="P:Microsoft.TeamFoundation.Build.Common.INetFwPolicy2.CurrentProfileTypes" />
+    <member name="P:Microsoft.TeamFoundation.Build.Common.INetFwPolicy2.BlockAllInboundTraffic" />
+    <member name="T:Microsoft.TeamFoundation.Build.Common.AdministrationPermissions">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.AdministrationPermissions.AdministerBuildResourcePermissions">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.AdministrationPermissions.AllPermissions">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.AdministrationPermissions.ManageBuildResources">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.AdministrationPermissions.UseBuildResources">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.AdministrationPermissions.ViewBuildResources">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Common.AzureCloudAppProfile">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.AzureCloudAppProfile.AzureAllowUpgrade">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.AzureCloudAppProfile.AzureAppendTimestampToDeploymentLabel">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.AzureCloudAppProfile.AzureDeploymentLabel">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.AzureCloudAppProfile.AzureHostedServiceLabel">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.AzureCloudAppProfile.AzureHostedServiceName">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.AzureCloudAppProfile.AzureServiceConfiguration">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.AzureCloudAppProfile.AzureSlot">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Build.Common.AzureDeploymentSlot" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.AzureCloudAppProfile.AzureSolutionConfiguration">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.AzureCloudAppProfile.AzureStorageAccountLabel">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.AzureCloudAppProfile.AzureStorageAccountName">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Common.AzureCloudAppProfile.CreateDefaultProfile(System.String,System.String,System.String)">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Build.Common.AzureCloudAppProfile" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Common.AzureCloudAppProfile.Parse(System.String)">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Build.Common.AzureCloudAppProfile" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.AzureCloudAppProfile.Properties">
+      <returns>返回 <see cref="T:System.Collections.Generic.IDictionary`2" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Common.AzureCloudAppProfile.ToXml">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Common.AzureDeploymentSlot">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.AzureDeploymentSlot.Staging">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.AzureDeploymentSlot.Production">
+      <summary />
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Common.BuildCommonUtil">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildCommonUtil.BuildAgentIdVariable">
+      <summary>，当引用生成代理ID在代理的BuildDirectory属性时，获取该变量。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildCommonUtil.BuildAgentNameVariable">
+      <summary>，当引用生成代理名称在代理的BuildDirectory属性时，获取该变量。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildCommonUtil.BuildDefinitionIdVariable">
+      <summary>，当引用生成定义ID在代理的BuildDirectory属性时，获取该变量。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildCommonUtil.BuildDefinitionPathVariable">
+      <summary>，当引用生成定义路径在代理的BuildDirectory属性时，获取该变量。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildCommonUtil.BuildDirEnvironmentVariable">
+      <summary>，当对特定代理时，生成目录获取环境变量。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildCommonUtil.BuildRegistryKeyPath">
+      <summary>获取应存储生成一组特定的注册表项路径。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildCommonUtil.DefaultAgentPort">
+      <summary>获取生成代理的默认端口。</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildCommonUtil.DefaultWorkingDirectory">
+      <summary>获取生成代理的默认工作目录。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Common.BuildCommonUtil.ExpandEnvironmentVariables(System.String)">
+      <summary>展开为格式“$ (...)”的环境变量“…”的位置字符串的一部分是字母和数字的任何有效的组合。 为当前环境中不扩展到现有变量的环境变量被识别的任何架构在输出路径保持原样。</summary>
+      <returns>已扩展和移除的所有环境变量的字符串</returns>
+      <param name="inputValue">与外接变量的输入字符串</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Common.BuildCommonUtil.ExpandEnvironmentVariables(System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+      <summary>展开为格式“$ (...)”的环境变量“…”的位置字符串的一部分是字母和数字的任何有效的组合。 为当前环境中不扩展到现有变量的环境变量被识别的任何架构与字符串字典的键匹配并用字典的值替换。 如果模式不匹配一个环境变量或密钥在字典它在输出路径保持原样。</summary>
+      <returns>已扩展和移除的所有环境变量的字符串</returns>
+      <param name="inputValue">与外接变量的输入字符串</param>
+      <param name="additionalVariableReplacements">应替换添加的名称/值对字典</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Common.BuildCommonUtil.GetCommonLocalPath(System.Collections.Generic.IEnumerable{System.String})">
+      <summary>确定所有之间最长的通用根目录路径提供的项。</summary>
+      <returns>最常见的路径或空字符串</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Common.BuildCommonUtil.GetCommonServerPath(System.Collections.Generic.IEnumerable{System.String})">
+      <summary>确定所有之间最长的通用根目录路径提供的项。</summary>
+      <returns>最常见的路径或空字符串</returns>
+      <param name="serverItems">服务器路径</param>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildCommonUtil.MacroPattern">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildCommonUtil.NoCICheckInComment">
+      <summary>获取在签入注释"中应包括确保的注释， CI忽略变更集</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Common.BuildCommonUtil.Replace(System.String,System.String,System.String,System.Boolean)">
+      <summary>执行字符串替换。</summary>
+      <returns>使用替换替换模式每个匹配项的原始字符串</returns>
+      <param name="original">原始字符串</param>
+      <param name="pattern">替换模式位于原始上</param>
+      <param name="replacement">使用的值作为替换</param>
+      <param name="ignoreCase">指示是否执行区分大小写的替换</param>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildCommonUtil.SourceDirEnvironmentVariable">
+      <summary>获取源目录，默认情况下所有源文件中映射。 这与BuildDirEnvironmentVariable \ SourceSubdirectory等效。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Common.BuildConstants">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.AgentContractVersionKey">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.AgentUriKey">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.AgentVersionKey">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.BuildAgentDiagnosticInfoKey">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildConstants.BuildLogFileName">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildConstants.BuildNumberArgument">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildConstants.BuildService">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildConstants.BuildService3">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.BuildServiceHostDiagnosticInfoKey">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.BuildServiceHostStatusKey">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.BuildServiceHostUriKey">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildConstants.BuildTypeFolderName">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildConstants.BuildUriArgument">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.CredentialsKey">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildConstants.CustomEventsFileName">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildConstants.DefaultServiceHostUrlPath">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildConstants.Disabled">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.DisclaimerToken">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.DomainNameToken">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildConstants.DropLocationArgument">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildConstants.EventSourceName">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.FenceAgentConfigurationStatusValue">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.FenceAgentInstructionValue">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.FenceAgentSubkey">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildConstants.FirewallExceptionFormat" />
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildConstants.InformationNodeIdArgument">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildConstants.LogFilePerProjectArgument">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.MaxAgentKeyCount">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.MaxPathLength">
+      <summary>一个路径的最大长度从windef.h。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.MaxPathNameLength">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.MaxUriLength">
+      <summary>Team Foundation URI的最大长度。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.NetworkIsolated">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.PasswordToken">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildConstants.ProcessName">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildConstants.ProjectFileName">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.RetryIdKey">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.SequenceIdKey">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildConstants.ServiceApplicationName">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.ServiceContractVersionKey">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.ServiceHostUriKey">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.ServiceVersionKey">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.TeamFoundationServerUrlKey">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildConstants.TfsProjectFileArgument">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildConstants.TfsUrlArgument">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.UserNameToken">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildConstants.WindowsServiceName">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.WorkflowIntegrationConfigurationValueFormat">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.WorkflowIntegrationConfigurationValueSeparator">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.WorkflowIntegrationServiceConfigurationKey">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Common.BuildConstants.BuildStatus">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildConstants.BuildStatus.BuildFailed">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildConstants.BuildStatus.BuildInitializing">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildConstants.BuildStatus.BuildStopped">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildConstants.BuildStatus.BuildSucceeded">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildConstants.BuildStatus.FinishedCompilation">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildConstants.BuildStatus.StartedCompilation">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildConstants.BuildStatus.StartedTesting">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildConstants.BuildStatus.Sync">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildConstants.BuildStatus.SyncCompleted">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildConstants.BuildStatus.TestCompleted">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Common.BuildConstants.BuildStatusIconID">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.BuildStatusIconID.Default">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.BuildStatusIconID.BuildSucceeded">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.BuildStatusIconID.BuildFailed">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildConstants.BuildStatusIconID.BuildStopped">
+      <summary />
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Common.BuildDefinitionSubscriptionType">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildDefinitionSubscriptionType.None">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildDefinitionSubscriptionType.User">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildDefinitionSubscriptionType.System">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildDefinitionSubscriptionType.Ignored">
+      <summary />
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Common.BuildPath">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Common.BuildPath.Combine(System.String,System.String)">
+      <summary>合并两个路径段到一教规本地化的路径。</summary>
+      <returns>表示相对以及父的组合字符串。</returns>
+      <param name="parent">路径的父部分。</param>
+      <param name="relative">路径的子部分。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Common.BuildPath.GetFullPath(System.String)">
+      <summary>教规本地化查询路径。 这，以确保，因此，如果使用它，递归运算符是下的路径-于前个元素，并通配符不使用除路径的最后一个元素。</summary>
+      <returns>一个教规本地化的查询路径字符串。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Common.BuildPath.GetItemDepth(System.String)">
+      <summary>给定完全限定路径此方法将确定深度级别相对根文件夹并返回整数表示计算的深度。 路径，则通过之前，应教规本地化。</summary>
+      <returns>表示路径的深度整数。</returns>
+      <param name="buildPath">应确定的路径。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Common.BuildPath.GetItemName(System.String)">
+      <summary>返回路径的文件名部分。 如果路径仅包含一个团队项目，则文件名将为空。</summary>
+      <returns>表示路径的叶名称的字符串(和GetFileName相同)。</returns>
+      <param name="buildPath">检索该项目中名为的路径。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Common.BuildPath.GetTeamProject(System.String)">
+      <summary>返回生成路径的团队项目部件。 此方法假定，路径已教规本地化的。</summary>
+      <returns>查询路径的团队项目部件。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Common.BuildPath.IsRecursive(System.String)">
+      <summary>表示查询路径是否包含完整的递归运算符。  此方法假定，输入路径。教规本地化的。</summary>
+      <returns>True，如果该字符串否则递归，错误。</returns>
+      <param name="queryPath">检查查询的路径recursiveness。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Common.BuildPath.IsValidPath(System.String@,System.Boolean,System.String@)">
+      <summary>，如果它是有效的，验证生成项目路径并教规本地化它。 ，在路径无效时，输出值错误设置。</summary>
+      <returns>True，则路径否则有效，错误。</returns>
+      <param name="path">应验证的路径。</param>
+      <param name="allowWildcards">是否应允许通配符。</param>
+      <param name="error">，如果有，错误导致方法失败。</param>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildPath.RootFolder">
+      <summary>获取根文件夹。</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Common.BuildPermissions">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildPermissions.AdministerBuildPermissions">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildPermissions.AllPermissions">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildPermissions.DeleteBuildDefinition">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildPermissions.DeleteBuilds">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildPermissions.DestroyBuilds">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildPermissions.EditBuildDefinition">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildPermissions.EditBuildQuality">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildPermissions.ManageBuildQualities">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildPermissions.ManageBuildQueue">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildPermissions.OverrideBuildCheckInValidation">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildPermissions.QueueBuilds">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildPermissions.RetainIndefinitely">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildPermissions.StopBuilds">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildPermissions.UpdateBuildInformation">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildPermissions.ViewBuildDefinition">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildPermissions.ViewBuilds">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Common.BuildPropertyKinds">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildPropertyKinds.BuildAgent">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildPropertyKinds.BuildController">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildPropertyKinds.BuildDefinition">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Common.BuildSecurity">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildSecurity.AdministrationNamespaceId">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildSecurity.BuildNamespaceId">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildSecurity.NamespaceSeparator">
+      <summary>此分隔符由所有分层生成命名空间使用。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildSecurity.PrivilegesToken">
+      <summary>管理和服务收集命名空间使用此标记。</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Common.BuildServiceHostLabStatus">
+      <summary>BuildServiceHost使用的枚举运行在实验室模式指示其操作状态。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildServiceHostLabStatus.Idle">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildServiceHostLabStatus.InProgress">
+      <summary />
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Common.BuildWellKnownBatchIds">
+      <summary>包含系统管理的批的已知标识符。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildWellKnownBatchIds.DynamicBatch">
+      <summary>基于配置的批量的动态批。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.BuildWellKnownBatchIds.DynamicBatchId">
+      <summary>获取DynamicBatch的字符串表示形式。</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Common.BuildWellKnownGroups">
+      <summary>包含已知的 Team Foundation Build 组的安全标识符。</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildWellKnownGroups.BuildAdministratorsIdentifier">
+      <summary>获取团队项目集合生成管理员组的已知安全标识符(sid)。</summary>
+      <returns>返回 <see cref="T:System.Security.Principal.SecurityIdentifier" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.BuildWellKnownGroups.BuildServicesIdentifier">
+      <summary>获取团队项目集合生成服务组的已知安全标识符(sid)。</summary>
+      <returns>返回 <see cref="T:System.Security.Principal.SecurityIdentifier" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Common.DeploymentInformationTypes">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.DeploymentInformationTypes.Build">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.DeploymentInformationTypes.ConnectToSnapshot">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.DeploymentInformationTypes.Deploy">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.DeploymentInformationTypes.Test">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Common.ErrorWarningTypes">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.ErrorWarningTypes.Compilation">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.ErrorWarningTypes.StaticAnalysis">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.ErrorWarningTypes.Test">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Common.GatedCheckInErrorCode">
+      <summary>，在检查封闭时，提供对服务器返回的错误代码。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.GatedCheckInErrorCode.BuildSubmitted">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.GatedCheckInErrorCode.OverrideDenied">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.GatedCheckInErrorCode.ShelvesetCreated">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.GatedCheckInErrorCode.ShelvesetNotCreated">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Common.HostedBuildSettings">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Common.HostedBuildSettings.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.HostedBuildSettings.ConnectionString">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Common.HostedBuildSettings.ResponseQueueName">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Common.INetFwPolicy2" />
+    <member name="T:Microsoft.TeamFoundation.Build.Common.InformationFields">
+      <summary>封装内置信息节点字段名称。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.ActivityInstanceId">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.ActivityType">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.AssemblySignature">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.AssignedTo">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.BlocksCovered">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.BlocksNotCovered">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.ChangesetId">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.ChangesetUri">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.CheckedInBy">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.CheckInCommitted">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.Code">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.Comment">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.CompilationErrors">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.CompilationWarnings">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.ContextId">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.DeploymentInformationType">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.DisplayText">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.EndLineNumber">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.ErrorType">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.File">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.FinishTime">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.Flavor">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.Importance">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.IsBuildCoverageProcessing">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.LineNumber">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.LinesCovered">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.LinesNotCovered">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.LinesPartiallyCovered">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.LocalPath">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.LogFile">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.Message">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.Name">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.OriginalName">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.OriginalOwner">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.Owner">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.Platform">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.PossibleAgents">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.ProjectFile">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.Properties">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.QualifiedName">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.RequestedBy">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.RequestId">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.ReservationStatus">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.ReservedAgentName">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.ReservedAgentUri">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.RunId">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.RunPassed">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.RunUser">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.SectionHeader">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.SectionName">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.SectionPriority">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.ServerPath">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.StartTime">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.State">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.StaticAnalysisErrors">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.StaticAnalysisWarnings">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.Status">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.TargetNames">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.TestsFailed">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.TestsPassed">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.TestsTotal">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.Timestamp">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.Title">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.TotalCompilationErrors">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.TotalCompilationWarnings">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.TotalStaticAnalysisErrors">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.TotalStaticAnalysisWarnings">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.Url">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.WarningType">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.WorkItemId">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationFields.WorkItemUri">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Common.InformationTypes">
+      <summary>封装内置信息节点类型名称。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationTypes.ActivityProperties">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationTypes.ActivityTracking">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationTypes.AgentScopeActivityTracking">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationTypes.AssociatedChangeset">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationTypes.AssociatedWorkItem">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationTypes.BuildError">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationTypes.BuildMessage">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationTypes.BuildProject">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationTypes.BuildStep">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationTypes.BuildWarning">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationTypes.CheckInOutcome">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationTypes.CodeCoverageSummary">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationTypes.CompilationSummary">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationTypes.ConfigurationSummary">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationTypes.CustomSummaryInformation">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationTypes.DeploymentInformation">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationTypes.ExternalLink">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationTypes.OpenedWorkItem">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationTypes.ReshelvedShelveset">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.InformationTypes.TestSummary">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Common.LegacyBuildTypeHelper">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Common.LegacyBuildTypeHelper.ParseBuildTypeFile(System.String,System.String,System.Boolean,System.String@)">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Common.NET_FW_ACTION_" />
+    <member name="T:Microsoft.TeamFoundation.Build.Common.PermissionStringConstants">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.PermissionStringConstants.AdministerBuildPermissions">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.PermissionStringConstants.AdministerBuildResourcePermissions">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.PermissionStringConstants.DeleteBuildDefinition">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.PermissionStringConstants.DeleteBuilds">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.PermissionStringConstants.DestroyBuilds">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.PermissionStringConstants.EditBuildDefinition">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.PermissionStringConstants.EditBuildQuality">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.PermissionStringConstants.ManageBuildQualities">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.PermissionStringConstants.ManageBuildQueue">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.PermissionStringConstants.ManageBuildResources">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.PermissionStringConstants.OverrideBuildCheckInValidation">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.PermissionStringConstants.QueueBuilds">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.PermissionStringConstants.RetainIndefinitely">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.PermissionStringConstants.StopBuilds">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.PermissionStringConstants.UpdateBuildInformation">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.PermissionStringConstants.UseBuildResources">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.PermissionStringConstants.ViewBuildDefinition">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.PermissionStringConstants.ViewBuildResources">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.PermissionStringConstants.ViewBuilds">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Common.RegistryKeys">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.RegistryKeys.ContinuousDeliveryEnabled">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.RegistryKeys.LeaseRenewalTimeout">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.RegistryKeys.MachinePoolControllerName">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.RegistryKeys.MachinePoolDescription">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.RegistryKeys.MachinePoolIsDefault">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.RegistryKeys.MachinePoolMachineCount">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.RegistryKeys.MachinePoolRequestQueueName">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.RegistryKeys.MachinePoolRoot">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.RegistryKeys.MachinePoolServicePassword">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.RegistryKeys.MachinePoolServiceUserName">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.RegistryKeys.MachinePoolVMImageName">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.RegistryKeys.MachinePoolVMSize">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.RegistryKeys.QueueConnectionString">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.RegistryKeys.RegistrySettingsPath">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.RegistryKeys.ResponseBatchSize">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.RegistryKeys.ResponseQueueName">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Common.ServiceAction">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.ServiceAction.None">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.ServiceAction.Add">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.ServiceAction.Delete">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Common.ServiceAction.Update">
+      <summary />
+    </member>
+  </members>
+</doc>

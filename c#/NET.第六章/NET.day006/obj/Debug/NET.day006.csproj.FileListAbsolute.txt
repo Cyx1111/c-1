@@ -1,0 +1,2 @@
+F:\C#\NET.day006\NET.day006\bin\Debug\NET.day006.exe.config
+F:\C#\NET.第六章\NET.day006\bin\Debug\NET.day006.exe.config

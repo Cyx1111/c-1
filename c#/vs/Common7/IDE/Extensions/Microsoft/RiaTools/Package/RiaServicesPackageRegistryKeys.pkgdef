@@ -1,0 +1,6 @@
+﻿// Additional registry modifications for the package
+
+// Exclude the following templates from Silverlight
+[$RootKey$\Packages\{CB22EE0E-4072-4ae7-96E2-90FCCF879544}\AddNewItemFilters\ExcludedTemplates]
+"AuthenticationDomainService.vstemplate"="0"
+"BusinessLogic.vstemplate"="0"

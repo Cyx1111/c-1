@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Basic Box" standard-reference="http://www.w3.org/TR/css3-box/" status="WD" pub-date="2007-08-09">
+
+  <CssProperty _locID="display" _locAttrData="description" version="1.0" restriction="enum" syntax="p { $(name): inline; }" description="将此属性与“float”和“position”一起使用可确定为元素生成的框的类型。" standard-reference="http://www.w3.org/TR/css3-box/#display">
+
+    <entry _locID="display_block" _locAttrData="description" value="block" version="2.0" description="块框。"/>
+    <entry _locID="display_compact" _locAttrData="description" value="compact" version="3.0" browsers="none" description="块框或标记框，具体取决于上下文。属性将应用于紧凑框(基于其最终状态)。"/>
+    <entry _locID="display_inline" _locAttrData="description" value="inline" version="2.0" description="内联框。"/>
+    <entry _locID="display_inline-block" _locAttrData="description" value="inline-block" version="2.0" description="块框本身作为单个内联框流动，这与替代元素类似。inline-block 的内部将格式化为块框，而框本身将格式化为内联框。"/>
+    <entry value="inline-table" version="2.0"/>
+    <entry _locID="display_" _locAttrData="description" value="list-item" version="2.0" description="一个或多个块框和一个标记框。"/>
+    <entry value="ruby" version="3.0"/>
+    <entry value="ruby-base" version="3.0"/>
+    <entry value="ruby-text" version="3.0"/>
+    <entry value="ruby-base-group" version="3.0" browsers="none"/>
+    <entry value="ruby-text-group" version="3.0" browsers="none"/>
+    <entry value="ruby-base-container" version="3.0"/>
+    <entry value="ruby-text-container" version="3.0"/>
+    <entry _locID="display_run-in" _locAttrData="description" value="run-in" version="2.0" description="块框或内联框，具体取决于上下文。属性将基于其最终状态(内联级别或块级别)应用于 run-in 框。"/>
+    <entry value="table" version="2.0"/>
+    <entry value="table-row-group" version="2.0"/>
+    <entry value="table-header-group" version="2.0"/>
+    <entry value="table-footer-group" version="2.0"/>
+    <entry value="table-row" version="2.0"/>
+    <entry value="table-column" version="2.0"/>
+    <entry value="table-column-group" version="2.0"/>
+    <entry value="table-cell" version="2.0"/>
+    <entry value="table-caption" version="2.0"/>
+    <entry _locID="display_none" _locAttrData="description" value="none" version="1.0" description="此值会导致元素不生成任何框(即，元素对布局没有任何影响)。后代元素也不会生成任何框；无法通过对后代元素设置“display”属性来重写此行为。"/>
+  </CssProperty>
+
+  <CssProperty _locID="padding" _locAttrData="description" version="1.0" restriction="length, percentage" description="用于设置内边距区域的厚度的速记属性。如果省略左侧值，则它与右侧值相同。如果省略底部值，则它与顶部值相同。如果值略右侧值，则它与顶部值相同。该值不能为负值。" syntax="div { $(name): 4px 7px 2px 4px; }" standard-reference="http://www.w3.org/TR/css3-box/#padding1"/>
+
+  <CssProperty _locID="padding-top" ref="padding" syntax="ul { $(name): 2em; }"/>
+  <CssProperty _locID="padding-right" ref="padding-top"/>
+  <CssProperty _locID="padding-left" ref="padding-top"/>
+  <CssProperty _locID="padding-bottom" ref="padding-top"/>
+
+  <CssProperty _locID="margin" _locAttrData="description" version="1.0" restriction="length, percentage" description="用于设置外边距区域的厚度的速记属性。如果省略左侧值，则它与右侧值相同。如果省略底部值，则它与顶部值相同。如果忽略右侧值，则它与顶部值相同。该值不能为负值。" syntax="div { $(name): 4px 7px 2px 4px; }" standard-reference="http://www.w3.org/TR/css3-box/#margin1">
+
+    <entry value="auto"/>
+  </CssProperty>
+
+  <CssProperty _locID="margin-top" ref="margin" syntax="div { $(name): 4px; }"/>
+  <CssProperty _locID="margin-left" ref="margin-top"/>
+  <CssProperty _locID="margin-right" ref="margin-top"/>
+  <CssProperty _locID="margin-bottom" ref="margin-top"/>
+
+  <CssProperty _locID="width" _locAttrData="description" version="1.0" restriction="length, percentage" description="指定某些框的内容区域、内边距区域或边框区域(具体取决于“box-sizing”)的宽度。" syntax="header { $(name): 200px; }" standard-reference="http://www.w3.org/TR/css3-box/#width">
+
+    <entry _locID="width_auto" _locAttrData="description" value="auto" description="宽度取决于其他属性的值。"/>
+  </CssProperty>
+
+  <CssProperty _locID="height" _locAttrData="description" version="1.0" restriction="length, percentage" description="指定某些框的内容区域、内边距区域或边框区域(具体取决于“box-sizing”)的高度。" syntax="footer { $(name): 100px; }" standard-reference="http://www.w3.org/TR/css3-box/#height">
+
+    <entry _locID="height_auto" _locAttrData="description" value="auto" description="高度取决于其他属性的值。"/>
+  </CssProperty>
+
+  <CssProperty _locID="min-width" _locAttrData="description" version="2.0" browsers="C,FF1,IE7,O7,S1" restriction="length, percentage" description="使作者能够将内容宽度限定为某个特定范围。" syntax="footer { $(name): 300px; }" standard-reference="http://www.w3.org/TR/css3-box/#min-width"/>
+
+  <CssProperty _locID="max-width" _locAttrData="description" version="2.0" browsers="C,FF1,IE7,O7,S1" restriction="length, percentage" description="使作者能够将内容宽度限定为某个特定范围。" syntax="footer { $(name): 300px; }" standard-reference="http://www.w3.org/TR/css3-box/#max-width">
+
+    <entry _locID="max-width_none" _locAttrData="description" value="none" description="框的宽度没有限制。"/>
+  </CssProperty>
+
+  <CssProperty _locID="min-height" _locAttrData="description" version="2.0" browsers="C,FF1,IE7,O7,S1" restriction="length, percentage" description="使作者能够将内容高度限定为某个特定范围。" syntax="footer { $(name): 300px; }" standard-reference="http://www.w3.org/TR/css3-box/#min-height"/>
+
+  <CssProperty _locID="max-height" _locAttrData="description" version="2.0" browsers="C,FF1,IE7,O7,S1" restriction="length, percentage" description="使作者能够将内容高度限定为某个特定范围。" syntax="footer { $(name): 300px; }" standard-reference="http://www.w3.org/TR/css3-box/#max-height">
+
+    <entry _locID="max-height_none" _locAttrData="description" value="none" description="框的高度没有限制。"/>
+  </CssProperty>
+
+  <CssProperty _locID="float" _locAttrData="description" version="1.0" restriction="enum" syntax="img { $(name): right; }" description="指定框的浮动方式。可以为任何元素设置此属性，但它仅适用于生成没有绝对定位的框的元素。" standard-reference="http://www.w3.org/TR/2006/WD-CSS21-20060411/visuren.html#propdef-float">
+
+    <entry _locID="float_left" _locAttrData="description" value="left" description="元素生成向左浮动的块框。内容从框的右侧顶部开始流动(受“clear”属性约束)。"/>
+    <entry _locID="float_right" _locAttrData="description" value="right" description="与“left”类似，只不过框向右侧浮动，并且内容在框的左侧顶部开始流动。"/>
+    <entry _locID="float_none" _locAttrData="description" value="none" description="框不会浮动。"/>
+  </CssProperty>
+
+  <CssProperty _locID="clear" _locAttrData="description" version="1.0" restriction="enum" description="指示元素框的哪一侧不可以与前面的浮动框相邻。“clear”属性不考虑元素自身内的或其他块格式化上下文中的浮动内容。" syntax="footer { $(name): both; }" standard-reference="http://www.w3.org/TR/2006/WD-CSS21-20060411/visuren.html#propdef-clear">
+
+    <entry _locID="clear_none" _locAttrData="description" value="none" description="框相对于浮动内容的位置不受任何约束。"/>
+    <entry _locID="clear_left" _locAttrData="description" value="left" description="生成的框的空隙将设置为一个空间量，此空间量是将顶部边框边缘置于任何左浮动框(由源文档中前面的元素生成)的底部外边缘的下方所必需的。"/>
+    <entry _locID="clear_right" _locAttrData="description" value="right" description="生成的框的空隙将设置为一个空间量，此空间量是将顶部边框边缘置于任何右浮动框(由源文档中前面的元素生成)的底部外边缘的下方所必需的。"/>
+    <entry _locID="clear_both" _locAttrData="description" value="both" description="生成的框的空隙将设置为一个空间量，此空间量是将顶部边框边缘置于任何右浮动框和左浮动框(由源文档中前面的元素生成)的底部外边缘的下方所必需的。"/>
+  </CssProperty>
+
+  <CssPropertyValue type="overflow">
+    <entry _locID="overflow_visible" _locAttrData="description" value="visible" version="2.0" description="不剪切内容，即，内容可以在内容框外部呈现。"/>
+    <entry _locID="overflow_hidden" _locAttrData="description" value="hidden" version="2.0" description="将剪切内容且不应提供任何滚动机制来查看剪切区域外部的内容。"/>
+    <entry _locID="overflow_scroll" _locAttrData="description" value="scroll" version="2.0" description="将剪切内容，并且如果用户代理使用屏幕上可见的滚动机制(如滚动条或平移工具)，则应为框显示该机制(无论是否剪切了任何内容)。"/>
+    <entry _locID="overflow_auto" _locAttrData="description" value="auto" version="2.0" description="“auto”值的行为与 UA 相关，但应会导致为溢出框提供滚动机制。"/>
+    <entry _locID="overflow_no-display" _locAttrData="description" value="no-display" version="3.0" browsers="none" description="当内容无法放入内容框中时，将移除整个框，就好像指定了“display: none”一样。"/>
+    <entry _locID="overflow_no-content" _locAttrData="description" value="no-content" version="3.0" browsers="none" description="当内容无法放入内容框中时，将隐藏整个内容，就好像指定了“visibility: hidden”一样。"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="overflow-x" _locAttrData="description" version="3.0" browsers="C,FF1.5,IE5,O9.5,S3" type="overflow" restriction="enum" description="指定当内容从元素的内容区域溢出时是否剪切内容。" syntax="div { $(name): hidden; }" standard-reference="http://www.w3.org/TR/css3-box/#overflow-x"/>
+
+  <CssProperty _locID="overflow-y" browsers="C,FF1.5,IE5,O9.5,S3" ref="overflow-x"/>
+
+  <CssProperty _locID="overflow" _locAttrData="description" version="2.0" type="overflow" restriction="enum" description="用于设置“overflow-x”和“overflow-y”的速记。" syntax="div { overflow: hidden auto; }" standard-reference="http://www.w3.org/TR/css3-box/#overflow"/>
+
+  <CssProperty _locID="overflow-style" _locAttrData="description" version="3.0" browsers="none" restriction="enum" syntax="div { $(name): marquee, panner; }" description="指定当内容从元素的内容区域溢出时是否剪切内容。" standard-reference="http://www.w3.org/TR/css3-box/#overflow-style">
+
+    <entry _locID="overflow-style_auto" _locAttrData="description" value="auto" description="无首选项，UA 应使用列表中它支持的第一种滚动方法。"/>
+    <entry _locID="overflow-style_scrollbar" _locAttrData="description" value="scrollbar" description="滚动条通常是在元素的一个或两个边缘上插入的窄条，它通常具有可用来单击的箭头和一个用于上下拖动(或左右拖动)的“Thumb”控件，以便移动元素内容。"/>
+    <entry _locID="overflow-style_panner" _locAttrData="description" value="panner" description="平移工具通常是一个显示在元素的一个角落的矩形，其内部包含一个更小的矩形。"/>
+    <entry _locID="overflow-style_move" _locAttrData="description" value="move" description="用户可以直接移动元素内容(而不是通过滚动条或平移工具间接移动)。通常，鼠标指针会变为手形或十字箭头以指示用户可以拖动内容。"/>
+    <entry _locID="overflow-style_marquee" _locAttrData="description" value="marquee" description="自动移动内容，而不引发任何用户事件来进行控制。"/>
+
+  </CssProperty>
+
+  <CssProperty _locID="marquee-loop" _locAttrData="description" version="3.0" browsers="none" restriction="integer" description="指定内容移动的频率。" syntax="li { $(name): 1; }" standard-reference="http://www.w3.org/TR/css3-box/#marquee-loop">
+
+    <entry value="infinite"/>
+  </CssProperty>
+
+  <CssProperty _locID="marquee-style" _locAttrData="description" version="3.0" browsers="none" restriction="enum" description="指定内容移动的样式。" syntax="li { $(name): scroll; }" standard-reference="http://www.w3.org/TR/css3-box/#marquee-style">
+
+    <entry value="scroll"/>
+    <entry value="slide"/>
+    <entry value="alternate"/>
+  </CssProperty>
+
+  <CssProperty _locID="marquee-direction" _locAttrData="description" version="3.0" browsers="none" restriction="enum" description="确定在使用选框效果的情况下，内容移动的初始方向。" syntax="li { $(name): forward; }" standard-reference="http://www.w3.org/TR/css3-box/#marquee-direction">
+
+    <entry value="forward"/>
+    <entry value="reverse"/>
+  </CssProperty>
+
+  <CssProperty _locID="marquee-speed" _locAttrData="description" version="3.0" browsers="none" restriction="enum" description="此属性确定内容滚动的速度。" syntax="li { $(name): fast; }" standard-reference="http://www.w3.org/TR/css3-box/#marquee-speed">
+
+    <entry value="slow"/>
+    <entry value="normal"/>
+    <entry value="fast"/>
+  </CssProperty>
+
+  <CssProperty _locID="visibility" _locAttrData="description" version="2.0" browsers="all" restriction="enum" syntax="img { $(name): hidden; }" description="指定是否呈现元素所生成的框。不可见的框仍将影响布局(将“display”属性设置为“none”可禁止生成框)。" standard-reference="http://www.w3.org/TR/css3-box/#visibility">
+
+    <entry _locID="visibility_visible" _locAttrData="description" value="visible" description="生成的框是可见的。"/>
+    <entry _locID="visibility_hidden" _locAttrData="description" value="hidden" description="生成的框是不可见的(完全透明，不绘制任何内容)，但仍将影响布局。"/>
+    <entry _locID="visibility_collapse" _locAttrData="description" value="collapse" description="表特定的。如果对元素而非行、行组、列或列组使用，则“collapse”具有的含义与“hidden”相同。"/>
+  </CssProperty>
+
+  <CssProperty _locID="rotation" _locAttrData="description" version="3.0" browsers="none" restriction="angle" description="将块级别元素按逆时针方向绕“rotation-point”给定的点旋转。" syntax="img { $(name): 90deg; }" standard-reference="http://www.w3.org/TR/css3-box/#rotation"/>
+
+  <CssProperty _locID="rotation-point" _locAttrData="description" version="3.0" browsers="none" restriction="percentage, length" description="将点定义为与左上边框边缘的偏移的值对。初始值为 50% 50%。" syntax="img { $(name): 10% 25%; }" standard-reference="http://www.w3.org/TR/css3-box/#rotation-point">
+    
+    <entry value="left"/>
+    <entry value="center"/>
+    <entry value="right"/>
+    <entry value="top"/>
+    <entry value="bottom"/>
+  </CssProperty>
+
+  <CssProperty _locID="clip" _locAttrData="description" version="2.0" browsers="all" restriction="enum" description="定义元素的框的可见部分。" syntax="span { $(name): rect(0px, 60px, 200px, 0px); }" standard-reference="http://www.w3.org/TR/CSS2/visufx.html#propdef-clip">
+    
+    <entry value="auto"/>
+    <entry value="rect()"/>
+  </CssProperty>
+
+</CssModule>

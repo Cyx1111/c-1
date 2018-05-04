@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.TeamFoundation.Discussion.Client</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.TeamFoundation.Discussion.Client.Comment">
+      <summary>注释是讨论的一部分。 在启动时讨论，应通过该创始者具有根注释和其他注释由参与者。</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Discussion.Client.Comment.Author">
+      <summary>创建注释的人员。</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Framework.Client.TeamFoundationIdentity" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Discussion.Client.Comment.CommentType">
+      <summary>指示注释是否为文本或代码更改，依此类推。</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Discussion.Client.CommentType" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Discussion.Client.Comment.Content">
+      <summary>注释的内容。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Discussion.Client.Comment.Discussion">
+      <summary>这是引用此注释项讨论线程的客户端特性。</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Discussion.Client.DiscussionThread" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Discussion.Client.Comment.DiscussionId">
+      <summary>拥有注释讨论的ID。</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.Comment.GetChildComments">
+      <summary>返回此注释的直接子注释。 该方法包装子注释列表的副本在只读集合的。</summary>
+      <returns>返回 <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Discussion.Client.Comment.Id">
+      <summary>Id注释。 ID为0在注释第一次创建和分配给递增的值时，将它保存到服务器后。</summary>
+      <returns>返回 <see cref="T:System.Int16" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Discussion.Client.Comment.IsDeleted">
+      <summary>True，则注释中删除。</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Discussion.Client.Comment.NeedsSave">
+      <summary>True，则注释更改并可保存到本地存储区。</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Discussion.Client.Comment.ParentComment">
+      <summary>注释的直接父注释。</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Discussion.Client.Comment" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Discussion.Client.Comment.PublishedDate">
+      <summary>后，在注释发布并可由其他视图。</summary>
+      <returns>返回 <see cref="T:System.DateTime" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Discussion.Client.Comment.SavedDate">
+      <summary>datetime，在注释已保存在本地。</summary>
+      <returns>返回 <see cref="T:System.DateTime" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.Comment.ToString">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Discussion.Client.CommentId">
+      <summary>表示注释的唯一标识符。团队项目集合。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.CommentId.Equals(Microsoft.TeamFoundation.Discussion.Client.CommentId)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.CommentId.Equals(System.Object)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.CommentId.GetHashCode">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.CommentId.ToString">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Discussion.Client.CommentType">
+      <summary>注释的类型。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Discussion.Client.CommentType.Unknown">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Discussion.Client.CommentType.Text">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Discussion.Client.CommentType.CodeChange">
+      <summary />
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Discussion.Client.DiscussionException">
+      <summary>Tfs讨论API所有异常的基类引发的。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.DiscussionException.#ctor">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.DiscussionException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.DiscussionException.#ctor(System.String)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.DiscussionException.#ctor(System.String,System.Exception)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.DiscussionException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Discussion.Client.DiscussionPosition">
+      <summary>讨论的位置在文件。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.DiscussionPosition.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.String)">
+      <summary>构造讨论位置实例。</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Discussion.Client.DiscussionPosition.EndCharPosition">
+      <summary>结束位置的字符号。</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Discussion.Client.DiscussionPosition.EndLine">
+      <summary>结束位置的行number。</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Discussion.Client.DiscussionPosition.PositionContext">
+      <summary>我们需要有关注释正确重新创建并确定它的任何其他元数据。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Discussion.Client.DiscussionPosition.StartCharPosition">
+      <summary>起始位置的字符号。</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Discussion.Client.DiscussionPosition.StartLine">
+      <summary>起始位置的行number。</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.DiscussionPosition.ToString">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Discussion.Client.DiscussionPublishException">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.DiscussionPublishException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.DiscussionPublishException.#ctor(System.String)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.DiscussionPublishException.#ctor(System.String,System.Exception)">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Discussion.Client.DiscussionSaveException">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.DiscussionSaveException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.DiscussionSaveException.#ctor(System.String)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.DiscussionSaveException.#ctor(System.String,System.Exception)">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Discussion.Client.DiscussionSeverity">
+      <summary>讨论的严重级别。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Discussion.Client.DiscussionSeverity.Unknown">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Discussion.Client.DiscussionSeverity.Low">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Discussion.Client.DiscussionSeverity.Normal">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Discussion.Client.DiscussionSeverity.High">
+      <summary />
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Discussion.Client.DiscussionStatus">
+      <summary>讨论的状态。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Discussion.Client.DiscussionStatus.Unknown">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Discussion.Client.DiscussionStatus.Active">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Discussion.Client.DiscussionStatus.Fixed">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Discussion.Client.DiscussionStatus.WontFix">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Discussion.Client.DiscussionStatus.Closed">
+      <summary />
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Discussion.Client.DiscussionThread">
+      <summary>讨论为注释线程与代码、文件或代码评审块。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.DiscussionThread.#ctor(Microsoft.TeamFoundation.Discussion.Client.IDiscussionManager,System.Int32,System.Uri)">
+      <summary>构造讨论。</summary>
+      <param name="workItemId">代码评审请求的工作项ID。</param>
+      <param name="versionUri">只能作为变更集或搁置集的URI。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.DiscussionThread.#ctor(Microsoft.TeamFoundation.Discussion.Client.IDiscussionManager,System.Int32,System.Uri,System.String)">
+      <summary>构造讨论。</summary>
+      <param name="workItemId">代码评审请求的工作项ID。</param>
+      <param name="versionUri">只能作为变更集或搁置集的URI。</param>
+      <param name="itemPath">包含讨论文件的服务器路径。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.DiscussionThread.#ctor(Microsoft.TeamFoundation.Discussion.Client.IDiscussionManager,System.Int32,System.Uri,System.String,Microsoft.TeamFoundation.Discussion.Client.DiscussionPosition)">
+      <summary>构造讨论。</summary>
+      <param name="workItemId">代码评审请求的工作项ID。</param>
+      <param name="versionUri">只能作为变更集或搁置集的URI。</param>
+      <param name="itemPath">包含讨论文件的服务器路径。</param>
+      <param name="position">讨论的位置在文件。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.DiscussionThread.AddComment(Microsoft.TeamFoundation.Discussion.Client.Comment,Microsoft.TeamFoundation.Discussion.Client.Comment)">
+      <summary>添加给定的注释。此讨论。 将会引发异常，则:1. parentComment 为空，但:a. 讨论具有根注释。 b. 讨论已删除。 2. parentComment 未发布到服务器。</summary>
+      <returns>添加的新注释。</returns>
+      <param name="comment">要添加的注释。</param>
+      <param name="parentComment">特定注释的父级。 如果为null，新注释将作为根。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.DiscussionThread.AddComment(Microsoft.TeamFoundation.Framework.Client.TeamFoundationIdentity,Microsoft.TeamFoundation.Discussion.Client.CommentType,System.String,Microsoft.TeamFoundation.Discussion.Client.Comment)">
+      <summary>添加新注释到此讨论。 将会引发异常，则:1. parentComment 为空，但:a. 讨论具有根注释。 b. 讨论已删除。 2. parentComment 未发布到服务器。</summary>
+      <returns>添加的新注释。</returns>
+      <param name="author">新注释的作者。</param>
+      <param name="commentType">新注释的类型。</param>
+      <param name="content">新注释的内容。</param>
+      <param name="parentComment">新注释的父级。 如果为null，新的注释可以是根。</param>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Discussion.Client.DiscussionThread.Id">
+      <summary>讨论的唯一ID。 ID为0在讨论创建和分配一个唯一值时，将它保存到服务器后。</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Discussion.Client.DiscussionThread.ItemPath">
+      <summary>讨论结果文件的服务器路径。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Discussion.Client.DiscussionThread.LastUpdatedDate">
+      <summary>后，在讨论此客户端上次更新。 ，当客户端进行更新时，仅轮询此属性更新。</summary>
+      <returns>返回 <see cref="T:System.DateTime" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Discussion.Client.DiscussionThread.NeedsSave">
+      <summary>True，则讨论更改并可保存到本地存储区。</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Discussion.Client.DiscussionThread.Position">
+      <summary>讨论中的文件的位置。</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Discussion.Client.DiscussionPosition" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Discussion.Client.DiscussionThread.PublishedDate">
+      <summary>后，在讨论发布并可由其他视图。</summary>
+      <returns>返回 <see cref="T:System.DateTime" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Discussion.Client.DiscussionThread.ReadStatus">
+      <summary>跟踪讨论是否已阅读。</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Discussion.Client.ReadStatus" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Discussion.Client.DiscussionThread.Revision">
+      <summary>，在讨论发布版本时，在服务器上增加。  但是，发布调用不会更新客户端讨论的版本。  ，当客户端进行更新时，仅轮询客户端版本更新。</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Discussion.Client.DiscussionThread.RootComment">
+      <summary>讨论的根注释。 setter只第一次只能工作，那么，当RootComment为空时，确保讨论的线程的注释不能更新。</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Discussion.Client.Comment" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Discussion.Client.DiscussionThread.SavedDate">
+      <summary>datetime，在讨论已保存在本地。</summary>
+      <returns>返回 <see cref="T:System.DateTime" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Discussion.Client.DiscussionThread.Severity">
+      <summary>指示讨论的严重级别。</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Discussion.Client.DiscussionSeverity" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Discussion.Client.DiscussionThread.Status">
+      <summary>指示讨论的状态。</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Discussion.Client.DiscussionStatus" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.DiscussionThread.ToString">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Discussion.Client.DiscussionThread.VersionUri">
+      <summary>搁置集或变更集的URI与讨论。</summary>
+      <returns>返回 <see cref="T:System.Uri" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Discussion.Client.DiscussionThread.WorkItemId">
+      <summary>代码评审请求的工作项ID与讨论。</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Discussion.Client.IDiscussionManager">
+      <summary>控制发布和查询讨论 Team Foundation Server。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.IDiscussionManager.BeginCleanup(System.Collections.Generic.IEnumerable{Microsoft.TeamFoundation.Discussion.Client.DiscussionThread},System.AsyncCallback,System.Object)">
+      <summary>清理在本地存储的讨论。</summary>
+      <returns>返回 <see cref="T:System.IAsyncResult" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.IDiscussionManager.BeginPublish(System.Collections.Generic.IEnumerable{Microsoft.TeamFoundation.Discussion.Client.DiscussionThread},System.AsyncCallback,System.Object)">
+      <summary>发布讨论，以便其他浏览器中显示。</summary>
+      <returns>返回 <see cref="T:System.IAsyncResult" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.IDiscussionManager.BeginQueryByCodeReviewRequest(System.Int32,Microsoft.TeamFoundation.Discussion.Client.QueryStoreOptions,System.AsyncCallback,System.Object)">
+      <summary>查询讨论与指定的代码评审请求。  结果可能自服务器或本地存储区或两个获取，设置 option，默认值为 QueryStoreOption.ServerOnly。</summary>
+      <returns>返回 <see cref="T:System.IAsyncResult" />。</returns>
+      <param name="workItemId">代码评审请求的工作项ID。</param>
+      <param name="storeOptions">指定讨论检索存储区。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.IDiscussionManager.BeginQueryByVersion(System.Uri,Microsoft.TeamFoundation.Discussion.Client.QueryStoreOptions,System.AsyncCallback,System.Object)">
+      <summary>查询讨论与指定的变更集或搁置集。  结果可能自服务器或本地存储区或两个获取，设置 option，默认值为 QueryStoreOption.ServerOnly。</summary>
+      <returns>返回 <see cref="T:System.IAsyncResult" />。</returns>
+      <param name="versionUri">只能作为变更集或搁置集的URI。</param>
+      <param name="storeOptions">指定讨论检索存储区。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.IDiscussionManager.BeginSave(System.Collections.Generic.IEnumerable{Microsoft.TeamFoundation.Discussion.Client.DiscussionThread},System.AsyncCallback,System.Object)">
+      <summary>保存更改的讨论对本地存储区。</summary>
+      <returns>返回 <see cref="T:System.IAsyncResult" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.IDiscussionManager.EndCleanup(System.IAsyncResult)">
+      <summary>清理讨论的末尾。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.IDiscussionManager.EndPublish(System.IAsyncResult)">
+      <summary>关闭发布讨论。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.IDiscussionManager.EndQueryByCodeReviewRequest(System.IAsyncResult)">
+      <summary>查询讨论的末尾按指定的代码评审请求。</summary>
+      <returns>返回 <see cref="T:System.Collections.Generic.IEnumerable`1" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.IDiscussionManager.EndQueryByVersion(System.IAsyncResult)">
+      <summary>查询讨论的末尾按指定的变更集或搁置集。</summary>
+      <returns>返回 <see cref="T:System.Collections.Generic.IEnumerable`1" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.IDiscussionManager.EndSave(System.IAsyncResult)">
+      <summary>保存讨论的末尾。</summary>
+    </member>
+    <member name="E:Microsoft.TeamFoundation.Discussion.Client.IDiscussionManager.LocalDataLost">
+      <summary>通知本地存储区损坏，并且现有数据丢失。</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Discussion.Client.IDiscussionManager.LocalDataRetentionDays">
+      <summary>本地数据将保留，因为上次保存的日期的天数。</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Discussion.Client.QueryStoreOptions">
+      <summary>查询的选项的讨论。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Discussion.Client.QueryStoreOptions.None">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Discussion.Client.QueryStoreOptions.ServerOnly">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Discussion.Client.QueryStoreOptions.LocalOnly">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Discussion.Client.QueryStoreOptions.ServerAndLocal">
+      <summary />
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Discussion.Client.ReadStatus">
+      <summary>讨论的读取的状态。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Discussion.Client.ReadStatus.Unknown">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Discussion.Client.ReadStatus.Read">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Discussion.Client.ReadStatus.Unread">
+      <summary />
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Discussion.Client.TeamFoundationDiscussionService">
+      <summary>入口点 Team Foundation 讨论服务。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.TeamFoundationDiscussionService.#ctor">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.TeamFoundationDiscussionService.CreateDiscussionManager">
+      <summary>返回 IDiscussionManager 接口的新实例。</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Discussion.Client.IDiscussionManager" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Discussion.Client.TeamFoundationDiscussionService.Initialize(Microsoft.TeamFoundation.Client.TfsTeamProjectCollection)">
+    </member>
+  </members>
+</doc>

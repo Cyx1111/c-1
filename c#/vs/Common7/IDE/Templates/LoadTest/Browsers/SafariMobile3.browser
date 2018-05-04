@@ -1,0 +1,8 @@
+<Browser Name="Safari for iPhone">
+  <Headers>
+    <Header Name="User-Agent" Value="Mozilla/5.0 (iPhone; U; CPU like Mac OS X;) AppleWebKit/420+ (KHTML, like Gecko) Version/3.0 Mobile/1A543a Safari/419.3" />
+    <Header Name="Accept" Value="*/*" />
+    <Header Name="Accept-Language" Value="{{$IEAcceptLanguage}}" />
+    <Header Name="Accept-Encoding" Value="GZIP,deflate" />   
+  </Headers>
+</Browser>

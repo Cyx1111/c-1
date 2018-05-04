@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Travel", "Text\Travel.csproj", "{40E32123-26AF-453C-BD96-E61DD604568D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AboutXML", "AboutXML\AboutXML.csproj", "{35BCB37B-E323-405C-9AB0-39CE9ABD64CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fly", "Fly\Fly.csproj", "{86AE3EFE-A2A0-4A19-B62C-0B6321BBFD94}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{40E32123-26AF-453C-BD96-E61DD604568D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40E32123-26AF-453C-BD96-E61DD604568D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40E32123-26AF-453C-BD96-E61DD604568D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40E32123-26AF-453C-BD96-E61DD604568D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35BCB37B-E323-405C-9AB0-39CE9ABD64CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35BCB37B-E323-405C-9AB0-39CE9ABD64CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35BCB37B-E323-405C-9AB0-39CE9ABD64CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35BCB37B-E323-405C-9AB0-39CE9ABD64CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86AE3EFE-A2A0-4A19-B62C-0B6321BBFD94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86AE3EFE-A2A0-4A19-B62C-0B6321BBFD94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86AE3EFE-A2A0-4A19-B62C-0B6321BBFD94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86AE3EFE-A2A0-4A19-B62C-0B6321BBFD94}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

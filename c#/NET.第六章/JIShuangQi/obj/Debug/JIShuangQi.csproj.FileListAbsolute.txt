@@ -1,0 +1,9 @@
+F:\vs全部内容\Zhi\JIShuangQi\bin\Debug\JIShuangQi.exe.config
+F:\vs全部内容\Zhi\JIShuangQi\bin\Debug\JIShuangQi.exe
+F:\vs全部内容\Zhi\JIShuangQi\bin\Debug\JIShuangQi.pdb
+F:\vs全部内容\Zhi\JIShuangQi\obj\Debug\JIShuangQi.csprojResolveAssemblyReference.cache
+F:\vs全部内容\Zhi\JIShuangQi\obj\Debug\JIShuangQi.Form1.resources
+F:\vs全部内容\Zhi\JIShuangQi\obj\Debug\JIShuangQi.Properties.Resources.resources
+F:\vs全部内容\Zhi\JIShuangQi\obj\Debug\JIShuangQi.csproj.GenerateResource.Cache
+F:\vs全部内容\Zhi\JIShuangQi\obj\Debug\JIShuangQi.exe
+F:\vs全部内容\Zhi\JIShuangQi\obj\Debug\JIShuangQi.pdb

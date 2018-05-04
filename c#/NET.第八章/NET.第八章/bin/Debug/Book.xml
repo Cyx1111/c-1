@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Enginner>
+  <!--第一本书的信息-->
+  <Enginners  ID="1001">
+  <Name>海明威</Name>
+  <Price>56</Price>
+  </Enginners>
+  <!--第二本书的信息-->
+  <Enginners  ID="1002">
+  <Name>路遥</Name>
+  <Price>77</Price>
+  </Enginners>
+  
+  
+  
+</Enginner>

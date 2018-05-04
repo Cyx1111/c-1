@@ -1,0 +1,8 @@
+[$RootKey$]
+
+[$RootKey$\AD7Metrics]
+
+[$RootKey$\AD7Metrics\Engine]
+
+[$RootKey$\AD7Metrics\Engine\{032F4B8C-7045-4B24-ACCF-D08C9DA108FE}]
+"CrossThreadDependencyNotification"=dword:00000000

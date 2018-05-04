@@ -1,0 +1,47 @@
+﻿トピック
+    about_NuGet
+    
+簡潔な説明
+	NuGet Package Manager のコマンドに関する情報が記載されています。
+           
+詳細な説明
+	このトピックでは、NuGet Package Manager のコマンドについて説明します。NuGet は統合型パッケージ 
+	管理ツールで、ライブラリとツールを .NET プロジェクトに追加することを目的としています。
+
+                 
+	次の NuGet cmdlets が含まれています。
+
+	Cmdlet					説明
+        ------------------		----------------------------------------------
+	Get-Package				パッケージ ソースから使用可能なパッケージのセットを取得します。
+
+	Install-Package			パッケージとその依存関係をプロジェクトにインストールします。
+
+	Uninstall-Package		パッケージをアンインストールします。他のパッケージがこのパッケージに依存している場合、 
+					コマンドは失敗します (-Force オプションが指定されている場合を除く)。
+
+	Update-Package			パッケージとその依存関係を新しいバージョンに更新します。
+
+	Add-BindingRedirect		プロジェクトの出力パス内のすべてのアセンブリを調べ、
+					必要な場所でアプリケーション (または Web) 構成ファイルに 
+					バインドのリダイレクトを追加します。
+                            
+	Get-Project				指定されているプロジェクトの DTE (Development Tools Environment) 
+					への参照を返します。プロジェクトが指定されていない場合は、
+					Package Manager Console で選択されている既定のプロジェクトを返します。
+
+	Open-PackagePage        指定されているパッケージの ProjectUrl, LicenseUrl  または 
+	ReportAbuseUrl を指定してブラウザーを開きます。
+
+        Register-TabExpansion	コマンドのパラメーターのタブ拡張を登録します。
+
+参照
+    オンライン ドキュメント: http://go.microsoft.com/fwlink/?LinkID=206619
+    Get-Package
+    Install-Package
+    Uninstall-Package
+    Update-Package
+    Add-BindingRedirect
+    Get-Project
+    Open-PackagePage
+    Register-TabExpansion

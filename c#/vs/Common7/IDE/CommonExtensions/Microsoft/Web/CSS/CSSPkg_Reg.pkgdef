@@ -1,0 +1,177 @@
+[$RootKey$]
+
+[$RootKey$\AutomationProperties]
+
+[$RootKey$\AutomationProperties\TextEditor]
+
+[$RootKey$\AutomationProperties\TextEditor\CSS]
+"Description"="#6000"
+"Name"="CSS"
+"Package"="{F5E7E720-1401-11D1-883B-0000F87579D2}"
+"ProfileSave"=dword:00000001
+"ResourcePackage"="{A764E895-518D-11d2-9A89-00C04F79EFC3}"
+"VsSettingsMigration"=dword:00000001
+@="#6002"
+
+[$RootKey$\AutomationProperties\TextEditor\CSS Specific]
+"Description"="#6001"
+"Name"="CSS Specific"
+"Package"="{A764E895-518D-11d2-9A89-00C04F79EFC3}"
+"ProfileSave"=dword:00000001
+"ResourcePackage"="{A764E895-518D-11d2-9A89-00C04F79EFC3}"
+"VsSettingsMigration"=dword:00000001
+@="#6003"
+
+[$RootKey$\CLSID]
+
+[$RootKey$\CLSID\{174CFBDA-D046-11d2-AA20-00C04F8EF472}]
+"InprocServer32"="$BaseInstallDir$\Common7\Packages\csspkg.dll"
+@="StyleRuleBuilder Object"
+
+[$RootKey$\CLSID\{C75EF3CC-71A8-43fe-AA14-84A73700BAE2}]
+"InprocServer32"="$BaseInstallDir$\Common7\Packages\csspkg.dll"
+@="CSSCompletionSet Object"
+
+[$RootKey$\CLSID\{EA841F23-FC5F-4d7e-A9D9-6DC05ED5C832}]
+"InprocServer32"="$BaseInstallDir$\Common7\Packages\csspkg.dll"
+@="CSSSyntaxTip Object"
+
+[$RootKey$\Editors]
+
+[$RootKey$\Editors\{A764E89A-518D-11d2-9A89-00C04F79EFC3}]
+"CommonPhysicalViewAttributes"=dword:00000002
+"DisplayName"="#102"
+"EditorTrustLevel"=dword:00000001
+"Package"="{A764E895-518D-11d2-9A89-00C04F79EFC3}"
+@="CSS Source Editor"
+
+[$RootKey$\Editors\{A764E89A-518D-11d2-9A89-00C04F79EFC3}\Extensions]
+"*"=dword:00000017
+"css"=dword:00000028
+
+[$RootKey$\Editors\{A764E89A-518D-11d2-9A89-00C04F79EFC3}\LogicalViews]
+"{7651a700-06e5-11d1-8ebd-00a0c90f26ea}"=""
+"{7651a703-06e5-11d1-8ebd-00a0c90f26ea}"=""
+
+[$RootKey$\Editors\{C2AAB90C-EEF4-4ba3-AC36-8AB8F3D89BA1}]
+"CommonPhysicalViewAttributes"=dword:00000003
+"DisplayName"="#105"
+"EditorTrustLevel"=dword:00000001
+"LinkedEditorGuid"="{A764E89A-518D-11d2-9A89-00C04F79EFC3}"
+"Package"="{A764E895-518D-11d2-9A89-00C04F79EFC3}"
+@="CSS Source Editor With Encoding"
+
+[$RootKey$\Editors\{C2AAB90C-EEF4-4ba3-AC36-8AB8F3D89BA1}\Extensions]
+"*"=dword:00000016
+"css"=dword:00000027
+
+[$RootKey$\Editors\{C2AAB90C-EEF4-4ba3-AC36-8AB8F3D89BA1}\LogicalViews]
+"{7651a700-06e5-11d1-8ebd-00a0c90f26ea}"=""
+"{7651a703-06e5-11d1-8ebd-00a0c90f26ea}"=""
+
+[$RootKey$\KeyBindingTables]
+
+[$RootKey$\KeyBindingTables\{A764E89A-518D-11d2-9A89-00C04F79EFC3}]
+"AllowNavKeyBinding"=dword:00000001
+"Package"="{A764E895-518D-11d2-9A89-00C04F79EFC3}"
+@="#102"
+
+[$RootKey$\Languages]
+
+[$RootKey$\Languages\CodeExpansions]
+
+[$RootKey$\Languages\CodeExpansions\CSS]
+"DisplayName"="0"
+"IndexPath"="%InstallRoot%\Web\Snippets\CSS\%LCID%\SnippetsIndex.xml"
+"LangStringID"="css"
+"Package"="{A764E895-518D-11d2-9A89-00C04F79EFC3}"
+"ShowRoots"=dword:00000000
+@="{A764E898-518D-11d2-9A89-00C04F79EFC3}"
+
+[$RootKey$\Languages\CodeExpansions\CSS\ForceCreateDirs]
+"Microsoft Visual Web Developer"="%InstallRoot%\Web\Snippets\CSS\%LCID%\CSS\;%MyDocs%\Code Snippets\Visual Web Developer\My CSS Snippets\"
+
+[$RootKey$\Languages\CodeExpansions\CSS\Paths]
+"Microsoft Visual Web Developer"="%InstallRoot%\Web\Snippets\CSS\%LCID%\CSS\;%MyDocs%\Code Snippets\Visual Web Developer\My CSS Snippets\"
+
+[$RootKey$\Languages\File Extensions]
+
+[$RootKey$\Languages\File Extensions\.css]
+"Name"="Cascading Style Sheet Language"
+@="{A764E898-518D-11d2-9A89-00C04F79EFC3}"
+
+[$RootKey$\Languages\Language Services]
+
+[$RootKey$\Languages\Language Services\CSS]
+"Default to Non Hot URLs"=dword:00000000
+"DefaultToInsertSpaces"=dword:00000001
+"LangResID"=dword:00000065
+"Package"="{A764E895-518D-11d2-9A89-00C04F79EFC3}"
+"RequestStockColors"=dword:00000001
+"ShowCompletion"=dword:00000001
+"ShowSmartIndent"=dword:00000001
+"UseStockColors"=dword:00000000
+@="{A764E898-518D-11d2-9A89-00C04F79EFC3}"
+
+[$RootKey$\Languages\Language Services\CSS\EditorToolsOptions]
+"Package"="{A764E895-518D-11d2-9A89-00C04F79EFC3}"
+
+[$RootKey$\Languages\Language Services\CSS\EditorToolsOptions\CSS Specific]
+"Package"="{A764E895-518D-11d2-9A89-00C04F79EFC3}"
+"Page"="{258E9CAF-04E6-11d3-9AA9-00C04F79EFC3}"
+"Keywords"="#1556"
+@="#2200"
+
+[$RootKey$\Languages\Language Services\CSS\EditorToolsOptions\Format]
+"Package"="{A764E895-518D-11d2-9A89-00C04F79EFC3}"
+"Page"="{258E9CAE-04E6-11d3-9AA9-00C04F79EFC3}"
+"Keywords"="#1555"
+@="#2100"
+
+[$RootKey$\Menus]
+"{A764E895-518D-11d2-9A89-00C04F79EFC3}"=", 1000, 1"
+
+[$RootKey$\Packages]
+
+[$RootKey$\Packages\{A764E895-518D-11d2-9A89-00C04F79EFC3}]
+"InprocServer32"="$BaseInstallDir$\Common7\Packages\csspkg.dll"
+@="Visual Studio CSS Editing Package"
+
+[$RootKey$\Packages\{A764E895-518D-11d2-9A89-00C04F79EFC3}\SatelliteDll]
+"DllName"="CSSPkgUI.dll"
+"Path"="$BaseInstallDir$\Common7\Packages"
+
+[$RootKey$\Packages\{A764E895-518D-11d2-9A89-00C04F79EFC3}\Schemas]
+
+[$RootKey$\Packages\{A764E895-518D-11d2-9A89-00C04F79EFC3}\Schemas\Schema 1]
+"Name"="CSS 1.0"
+"Friendly Name"="CSS 1.0"
+
+[$RootKey$\Packages\{A764E895-518D-11d2-9A89-00C04F79EFC3}\Schemas\Schema 2]
+"Name"="CSS 2.1"
+"Friendly Name"="CSS 2.1"
+
+[$RootKey$\Packages\{A764E895-518D-11d2-9A89-00C04F79EFC3}\Schemas\Schema 3]
+"Name"="CSS 3.0"
+"Friendly Name"="CSS 3.0"
+
+[$RootKey$\Services]
+
+[$RootKey$\Services\{925C40C7-A4F7-11d2-9A96-00C04F79EFC3}]
+"Name"="StyleBuilderFactory Service"
+@="{A764E895-518D-11d2-9A89-00C04F79EFC3}"
+
+[$RootKey$\Services\{A764E898-518D-11d2-9A89-00C04F79EFC3}]
+"Name"="CSS Language Service"
+@="{A764E895-518D-11d2-9A89-00C04F79EFC3}"
+
+[$RootKey$\Services\{DDEBABB1-E61F-11d2-AA2F-00C04F8EF472}]
+"Name"="StyleOrganizer Service"
+@="{A764E895-518D-11d2-9A89-00C04F79EFC3}"
+
+[$RootKey$\ToolWindows]
+
+[$RootKey$\ToolWindows\{A764E899-518D-11d2-9A89-00C04F79EFC3}]
+"Name"="Style Organizer Tool Window"
+@="{A764E895-518D-11d2-9A89-00C04F79EFC3}"
+

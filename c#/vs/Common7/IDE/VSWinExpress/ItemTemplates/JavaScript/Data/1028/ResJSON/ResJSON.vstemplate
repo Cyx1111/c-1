@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name _locID="JSP_Item_ResJSONName">資源檔 (.resjson)</Name>
+    <Description _locID="JSP_Item_ResJSONDesc">用於存放字串資源的檔案。</Description>
+    <Icon>Resources.ico</Icon>
+    <TemplateID>Microsoft.JavaScript.ResJSON</TemplateID>
+    <ProjectType>JavaScript</ProjectType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>resources.resjson</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem>Resources.resjson</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

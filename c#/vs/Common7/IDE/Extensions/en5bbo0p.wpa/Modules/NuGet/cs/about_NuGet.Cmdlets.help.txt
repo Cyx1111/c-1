@@ -1,0 +1,47 @@
+﻿TÉMA
+    about_NuGet
+    
+KRÁTKÝ POPIS
+    Poskytuje informace o příkazech NuGet správce balíčku.
+           
+DLOUHÝ POPIS
+    Toto téma popisuje příkazy NuGet správce balíčku. NuGet je integrovaný nástroj 
+    správy balíčků pro přidávání knihoven a nástrojů do projektů rozhraní .NET.
+
+                 
+    Součástí jsou následující rutiny NuGet.
+
+        Cmdlet					Popis
+        ------------------		----------------------------------------------
+        Get-Package				Získá sadu balíčků dostupných ve zdroji balíčku.
+
+        Install-Package			Nainstaluje do projektu balíček a jeho závislé součásti.
+
+        Uninstall-Package		Odinstaluje balíček. Pokud jsou na tomto balíčku závislé jiné balíčky 
+                                a není zadán parametr -Force, příkaz se nezdaří.
+
+        Update-Package			Aktualizuje balíček a jeho závislé součásti na novější verzi.
+
+        Add-BindingRedirect		Hledá projekt ve všech sestaveních ve výstupní cestě
+                                a v případě potřeby přidá přesměrování vazby 
+                                do konfiguračního souboru aplikace (nebo webu).
+                            
+        Get-Project				Vrátí odkaz na prostředí DTE (Development Tools Environment) 
+                                zadaného projektu. Není-li zadán žádný projekt, vrátí 
+                                výchozí projekt vybraný v konzole Správce balíčků.
+
+        Open-PackagePage        Otevře prohlížeč na adrese ProjectUrl, LicenseUrl nebo 
+                                ReportAbuseUrl zadaného projektu.
+
+        Register-TabExpansion	Registruje rozšíření karty pro parametry příkazu.
+
+VIZ TAKÉ
+    Online dokumentace: http://go.microsoft.com/fwlink/?LinkID=206619
+    Get-Package
+    Install-Package
+    Uninstall-Package
+    Update-Package
+    Add-BindingRedirect
+    Get-Project
+    Open-PackagePage
+    Register-TabExpansion

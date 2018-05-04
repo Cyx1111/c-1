@@ -1,0 +1,5 @@
+F:\C#\序列化0\序列化0\bin\Debug\序列化0.exe.config
+F:\C#\序列化0\序列化0\bin\Debug\序列化0.exe
+F:\C#\序列化0\序列化0\bin\Debug\序列化0.pdb
+F:\C#\序列化0\序列化0\obj\Debug\序列化0.exe
+F:\C#\序列化0\序列化0\obj\Debug\序列化0.pdb

@@ -1,0 +1,10 @@
+F:\C#\new text2\new text2\bin\Debug\new text2.exe.config
+F:\C#\new text2\new text2\bin\Debug\new text2.exe
+F:\C#\new text2\new text2\bin\Debug\new text2.pdb
+F:\C#\new text2\new text2\obj\Debug\new text2.csprojResolveAssemblyReference.cache
+F:\C#\new text2\new text2\obj\Debug\new_text2.Form1.resources
+F:\C#\new text2\new text2\obj\Debug\new_text2.FrmAdd.resources
+F:\C#\new text2\new text2\obj\Debug\new_text2.Properties.Resources.resources
+F:\C#\new text2\new text2\obj\Debug\new text2.csproj.GenerateResource.Cache
+F:\C#\new text2\new text2\obj\Debug\new text2.exe
+F:\C#\new text2\new text2\obj\Debug\new text2.pdb

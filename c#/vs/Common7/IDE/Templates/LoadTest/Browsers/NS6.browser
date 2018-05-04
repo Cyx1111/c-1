@@ -1,0 +1,8 @@
+﻿<Browser Name="Netscape 6.0">
+  <Headers>
+    <Header Name="User-Agent" Value="Mozilla/5.0 (Windows; U; Windows NT 5.0; en; rv:1.0) Netscape/6.0" />
+    <Header Name="Accept" Value="image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, */*" />
+    <Header Name="Accept-Language" Value="{{$IEAcceptLanguage}}" />
+    <Header Name="Accept-Encoding" Value="GZIP" />
+  </Headers>
+</Browser>

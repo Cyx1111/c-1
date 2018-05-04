@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="D8E409C0-654F-4900-9E72-19C9779DC153">
+    <Name>TaskFiltering</Name>
+    <Author>Microsoft</Author>
+    <Version>1.0</Version>
+    <Description xml:space="preserve">Enables filtering the Solution Explorer based on information derived from the current TFS My Work task that you are working on.</Description>
+    <Locale>1033</Locale>
+    <InstalledByMsi>false</InstalledByMsi>
+    <SupportedProducts>
+      <VisualStudio Version="11.0">
+        <Edition>Premium</Edition>
+      </VisualStudio>
+      <VisualStudio Version="11.0">
+        <Edition>Ultimate</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5" />
+    <SystemComponent>true</SystemComponent>
+  </Identifier>
+  <References>
+    <Reference Id="Microsoft.VisualStudio.MPF" MinVersion="10.0">
+      <Name>Visual Studio MPF</Name>
+    </Reference>
+  </References>
+  <Content>
+    <VsPackage>Microsoft.VisualStudio.TaskFiltering.Package.pkgdef</VsPackage>
+    <MefComponent>Microsoft.VisualStudio.TaskFiltering.Package.dll</MefComponent>
+    <MefComponent>Microsoft.VisualStudio.TaskFiltering.Public.dll</MefComponent>
+  </Content>
+</Vsix>

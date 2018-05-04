@@ -1,0 +1,6 @@
+F:\C#\NET.第九章\NET.第九章\bin\Debug\NET.第九章.exe.config
+F:\C#\NET.第九章\NET.第九章\bin\Debug\NET.第九章.exe
+F:\C#\NET.第九章\NET.第九章\bin\Debug\NET.第九章.pdb
+F:\C#\NET.第九章\NET.第九章\obj\Debug\NET.第九章.csprojResolveAssemblyReference.cache
+F:\C#\NET.第九章\NET.第九章\obj\Debug\NET.第九章.exe
+F:\C#\NET.第九章\NET.第九章\obj\Debug\NET.第九章.pdb

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Ruby" standard-reference="http://www.w3.org/TR/css3-ruby/" status="WD" pub-date="2011-06-30">
+
+  <CssProperty _locID="ruby-position" _locAttrData="description" version="3.0" browsers="FF10,IE5" restriction="enum" description="此属性由包含 display: ruby-text 的元素的父级用来控制拼音文本相对于其基的位置。" syntax="before | after | right" standard-reference="http://www.w3.org/TR/css3-ruby/#ruby-position">
+
+    <entry _locID="ruby-position_before" _locAttrData="description" value="before" description="拼音文本显示在基的前面。这是象形的东亚书写体系中最常使用的设置。"/>
+    <entry _locID="ruby-position_after" _locAttrData="description" value="after" description="拼音文本显示在基的后面。这是象形的东亚书写体系中较少使用的设置，最容易在教育性文字中发现。"/>
+    <entry _locID="ruby-position_right" _locAttrData="description" value="right" description="拼音文本显示在基的右侧。与“before”和“after”不同，此值与文字排列方向无关。"/>
+    <entry value="inline"/>
+  </CssProperty>
+
+  <CssProperty _locID="ruby-align" _locAttrData="description" version="3.0" browsers="FF10,IE5" restriction="enum" description="此属性可在任何元素上使用，以控制拼音文本和基内容相互之间的文本对齐方式。" syntax="auto | start | left | center | end | right | distribute-letter | distribute-space | line-edge" standard-reference="http://www.w3.org/TR/css3-ruby/#rubyalign">
+
+    <entry _locID="ruby-align_auto" _locAttrData="description" value="auto" description="用户代理确定拼音内容的对齐方式。这是初始值。"/>
+    <entry _locID="ruby-align_start" _locAttrData="description" value="start" description="拼音文本内容与基的开始边缘对齐。"/>
+    <entry _locID="ruby-align_left" _locAttrData="description" value="left" description="拼音文本内容与基的开始边缘对齐。"/>
+    <entry _locID="ruby-align_center" _locAttrData="description" value="center" description="拼音文本内容在基的宽度内居中。如果基的长度小于拼音文本的长度，则基将在拼音文本的宽度内居中。"/>
+    <entry _locID="ruby-align_end" _locAttrData="description" value="end" description="拼音文本内容与基的结束边缘对齐。"/>
+    <entry _locID="ruby-align_right" _locAttrData="description" value="right" description="拼音文本内容与基的结束边缘对齐。"/>
+    <entry _locID="ruby-align_distribute-letter" _locAttrData="description" value="distribute-letter" description="如果拼音文本的宽度小于基的宽度，则拼音文本内容将均匀分布在基的宽度上，且第一个和最后一个拼音文本字形将与对应的第一个和最后一个基字形对齐。如果拼音文本的宽度至少为基的宽度，则基的字母将均匀分布在拼音文本的宽度上。"/>
+    <entry _locID="ruby-align_distribute-space" _locAttrData="description" value="distribute-space" description="如果拼音文本的宽度小于基的宽度，则拼音文本内容将均匀分布在基的宽度上，且拼音文本的第一个字符的前面和最后一个字符的后面都将添加一定数量的空格。空白的数量通常等于拼音文本的字符间间距量的一半。"/>
+    <entry _locID="ruby-align_line-edge" _locAttrData="description" value="line-edge" description="如果拼音文本不靠近行边缘，则它将按“auto”的方式对齐。如果拼音文本靠近行边缘，则它仍将按“auto”的方式对齐，但拼音文本与行的末端接触的一侧将与对应的基边缘对齐。"/>
+  </CssProperty>
+
+  <CssProperty _locID="ruby-overhang" _locAttrData="description" version="3.0" browsers="FF10,IE5" restriction="enum" description="确定在拼音文本宽于拼音基时是否允许拼音文本部分延伸到除其自身的基以外的任何邻近文本上方，并确定在哪一侧延伸。" syntax="auto | start | end | none" standard-reference="http://www.w3.org/TR/css3-ruby/#rubyover">
+
+    <entry _locID="ruby-overhang_auto" _locAttrData="description" value="auto" description="拼音文本可在任何一侧延伸到靠近基的文本上方。这是初始值。"/>
+    <entry _locID="ruby-overhang_start" _locAttrData="description" value="start" description="拼音文本可延伸到它前面的文本上方。"/>
+    <entry _locID="ruby-overhang_end" _locAttrData="description" value="end" description="拼音文本可延伸到它后面的文本上方。"/>
+    <entry _locID="ruby-overhang_none" _locAttrData="description" value="none" description="拼音文本无法延伸到靠近其基的任何文本上方，而只能位于其自身的基上方。"/>
+  </CssProperty>
+
+  <CssProperty _locID="ruby-span" _locAttrData="description" version="3.0" browsers="FF10" restriction="enum" description="确定在拼音文本宽于拼音基时是否允许拼音文本部分延伸到除其自身的基以外的任何邻近文本上方，并确定在哪一侧延伸。" syntax="attr(x) | none" standard-reference="http://www.w3.org/TR/css3-ruby/#rubyspan">
+
+    <entry _locID="ruby-span_none" _locAttrData="description" value="none" description="不跨越。计算值为“1”。"/>
+    <entry _locID="ruby-span_attr" _locAttrData="description" value="attr(x)" description="特性“x”的值是一个字符串值。该字符串值将作为 &lt;number&gt; 计算，用于确定批注元素要跨越的拼音基元素的数目。"/>
+  </CssProperty>
+
+</CssModule>

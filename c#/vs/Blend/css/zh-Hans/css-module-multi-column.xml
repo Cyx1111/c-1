@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Multi-column" standard-reference="http://www.w3.org/TR/css3-multicol/" status="CR" pub-date="2011-04-12">
+
+  <CssProperty _locID="column-width" _locAttrData="description" version="3.0" browsers="IE10,O11.6" restriction="length" syntax="div { $(name): 100px; }" description="此属性描述多列元素中的栏的宽度。" standard-reference="http://www.w3.org/TR/css3-multicol/#column-width">
+
+    <entry _locID="column-width_auto" _locAttrData="description" value="auto" description="宽度取决于其他属性的值。"/>
+  </CssProperty>
+
+  <CssProperty _locID="column-count" _locAttrData="description" version="3.0" browsers="IE10,O11.6" restriction="integer" syntax="div { $(name): 3; }" description="描述使元素的内容流入到的栏的最佳数量。" standard-reference="http://www.w3.org/TR/css3-multicol/#column-count">
+
+    <entry _locID="column-count_auto" _locAttrData="description" value="auto" description="按“column-width”属性和元素宽度确定列数。"/>
+  </CssProperty>
+
+  <CssProperty _locID="columns" _locAttrData="description" version="3.0" browsers="IE10,O11.6" restriction="length, integer" syntax="div { -webkit-columns: 100px 3; }" description="用于设置“column-width”和“column-count”的速记属性。" standard-reference="http://www.w3.org/TR/css3-multicol/#columns0">
+
+    <entry _locID="columns_auto" _locAttrData="description" value="auto" description="宽度取决于其他属性的值。"/>
+  </CssProperty>
+
+  <CssProperty _locID="column-gap" _locAttrData="description" version="3.0" browsers="IE10,O11.6" restriction="length" syntax="div { $(name): 10px; }" description="设置各个栏之间的间隙。如果各个栏之间存在隔线，则会显示在间隙的中部。" standard-reference="http://www.w3.org/TR/css3-multicol/#column-gap0">
+
+    <entry _locID="column-gap_normal" _locAttrData="description" value="normal" description="因用户代理而异，通常等于 1em。"/>
+  </CssProperty>
+
+  <CssProperty _locID="column-rule-color" _locAttrData="description" version="3.0" browsers="IE10,O11.6" type="color" restriction="color" syntax="div { $(name): #ff0; }" description="设置隔线的颜色" standard-reference="http://www.w3.org/TR/css3-multicol/#column-rule-color"/>
+
+  <CssProperty _locID="column-rule-style" _locAttrData="description" version="3.0" browsers="IE10,O11.6" type="border-style" restriction="enum" syntax="div { $(name): solid; }" description="设置元素的各个栏之间的隔线的样式。" standard-reference="http://www.w3.org/TR/css3-multicol/#column-rule-style"/>
+
+  <CssProperty _locID="column-rule-width" _locAttrData="description" version="3.0" browsers="IE10,O11.6" type="border-width" restriction="length" syntax="div { $(name): 3px; }" description="设置各个栏之间的隔线的宽度。不允许使用负值。" standard-reference="http://www.w3.org/TR/css3-multicol/#column-rule-width"/>
+
+  <CssProperty _locID="column-rule" _locAttrData="description" ref="border" version="3.0" browsers="IE10,O11.6" description="此属性是用于在样式表中的同一位置设置“column-rule-width”、“column-rule-style”和“column-rule-color”的速记。省略值将被设置为其初始值。" standard-reference="http://www.w3.org/TR/css3-multicol/#column-rule0"/>
+
+  <CssProperty _locID="break-inside" _locAttrData="description" version="3.0" browsers="IE10,O11.6" restriction="enum" syntax="h2 { $(name): avoid-column; }" description="描述生成的框内的分页/分栏行为。" standard-reference="http://www.w3.org/TR/css3-multicol/#column-breaks">
+
+    <entry _locID="break-inside_auto" _locAttrData="description" value="auto" description="不强制也不禁止在生成的框中使用分页/分栏符。"/>
+    <entry _locID="break-inside_avoid" _locAttrData="description" value="avoid" description="避免在生成的框中使用分页/分栏符。"/>
+    <entry _locID="break-inside_avoid-page" _locAttrData="description" value="avoid-page" description="避免在生成的框中使用分页符。"/>
+    <entry _locID="break-inside_avoid-column" _locAttrData="description" value="avoid-column" description="避免在生成的框中使用分栏符。"/>
+  </CssProperty>
+  
+  <CssProperty _locID="break-before" _locAttrData="description" version="3.0" browsers="IE10,O11.6" restriction="enum" syntax="h2 { $(name): column; }" description="描述在生成的框前面的分页/分栏行为。" standard-reference="http://www.w3.org/TR/css3-multicol/#column-breaks">
+
+    <entry _locID="break-before_auto" _locAttrData="description" value="auto" description="不强制也不禁止在生成的框前面/后面使用分页/分栏符。"/>
+    <entry _locID="break-before_always" _locAttrData="description" value="always" description="始终强制在生成的框前面/后面使用分页符。"/>
+    <entry _locID="break-before_avoid" _locAttrData="description" value="avoid" description="避免在生成的框前面/后面使用分页/分栏符。"/>
+    <entry _locID="break-before_left" _locAttrData="description" value="left" description="强制在生成的框前面/后面使用一个或两个分页符，以便将下一页设置为左侧页面的格式。"/>
+    <entry _locID="break-before_right" _locAttrData="description" value="right" description="强制在生成的框前面/后面使用一个或两个分页符，以便将下一页设置为右侧页面的格式。"/>
+    <entry _locID="break-before_page" _locAttrData="description" value="page" description="始终强制在生成的框前面/后面使用分页符。"/>
+    <entry _locID="break-before_column" _locAttrData="description" value="column" description="始终强制在生成的框前面/后面使用分栏符。"/>
+    <entry _locID="break-before_avoid-page" _locAttrData="description" value="avoid-page" description="避免在生成的框前面/后面使用分页符。"/>
+    <entry _locID="break-before_avoid-column" _locAttrData="description" value="avoid-column" description="避免在生成的框前面/后面使用分栏符。"/>
+  </CssProperty>
+
+  <CssProperty _locID="break-after" browsers="IE10,O11.1" ref="break-before"/>
+
+  <CssProperty _locID="column-span" _locAttrData="description" version="3.0" browsers="IE10,O11.6" restriction="enum" syntax="article { $(name): all; }" description="描述生成的框后面的分页/分栏行为。" standard-reference="http://www.w3.org/TR/css3-multicol/#column-span0">
+
+    <entry _locID="column-span_none" _locAttrData="description" value="none" description="该元素不跨越多个栏。"/>
+    <entry _locID="column-span_all" _locAttrData="description" value="all" description="该元素跨越所有栏。先于该元素显示的正常流中的内容将在该元素显示前自动在所有栏之间进行平衡。"/>
+  </CssProperty>
+
+  <CssProperty _locID="column-fill" _locAttrData="description" version="3.0" browsers="IE10,O11.6" restriction="enum" syntax="article { $(name): balance; }" description="在连续媒体中，仅当已约束栏的长度时才会参考此属性。否则，将自动对各个栏进行平衡。" standard-reference="http://www.w3.org/TR/css3-multicol/#filling-columns">
+
+    <entry _locID="column-fill_auto" _locAttrData="description" value="auto" description="按顺序填充栏。"/>
+    <entry _locID="column-fill_balance" _locAttrData="description" value="balance" description="如有可能，在各个栏之间均匀地平衡内容。"/>
+  </CssProperty>
+
+</CssModule>

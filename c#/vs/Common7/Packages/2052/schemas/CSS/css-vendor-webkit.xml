@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Webkit Extensions" standard-reference="http://css-infos.net/properties/webkit.php" pub-date="2012-02-23">
+
+  <CssAtDirective name="-webkit-keyframes" _locID="webkit-keyframes-rule" _locAttrData="description" version="3.0" browsers="C,S4" syntax="@-webkit-keyframes animation-name" description="定义动画关键帧集。" standard-reference="http://www.w3.org/TR/css3-animations/#keyframes"/>
+
+  <CssPseudo name="::-webkit-scrollbar" version="3.0" browsers="C,S5"/>
+  <CssPseudo name="::-webkit-scrollbar-button" version="3.0" browsers="C,S5"/>
+  <CssPseudo name="::-webkit-scrollbar-track" version="3.0" browsers="C,S5"/>
+  <CssPseudo name="::-webkit-scrollbar-track-piece" version="3.0" browsers="C,S5"/>
+  <CssPseudo name="::-webkit-scrollbar-thumb" version="3.0" browsers="C,S5"/>
+  <CssPseudo name="::-webkit-scrollbar-corner" version="3.0" browsers="C,S5"/>
+  <CssPseudo name="::-webkit-resizer" version="3.0" browsers="C,S5"/>
+  <CssPseudo name="::-webkit-input-placeholder" version="3.0" browsers="C,S4"/>
+  <CssPseudo name="::-webkit-search-decoration" version="3.0" browsers="C,S4"/>
+  <CssPseudo name="::-webkit-search-cancel-button" version="3.0" browsers="C,S4"/>
+  <CssPseudo name="::-webkit-search-results-button" version="3.0" browsers="C,S4"/>
+  <CssPseudo name="::-webkit-search-results-decoration" version="3.0" browsers="C,S4"/>
+  <CssPseudo name=":horizontal" version="3.0" browsers="C,S5"/>
+  <CssPseudo name=":vertical" version="3.0" browsers="C,S5"/>
+  <CssPseudo name=":decrement" version="3.0" browsers="C,S5"/>
+  <CssPseudo name=":increment" version="3.0" browsers="C,S5"/>
+  <CssPseudo name=":start" version="3.0" browsers="C,S5"/>
+  <CssPseudo name=":end" version="3.0" browsers="C,S5"/>
+  <CssPseudo name=":double-button" version="3.0" browsers="C,S5"/>
+  <CssPseudo name=":single-button" version="3.0" browsers="C,S5"/>
+  <CssPseudo name=":no-button" version="3.0" browsers="C,S5"/>
+  <CssPseudo name=":corner-present" version="3.0" browsers="C,S5"/>
+  <CssPseudo name=":window-inactive" version="3.0" browsers="C,S3"/>  
+
+  <CssProperty _locID="-webkit-appearance" _locAttrData="description" version="3.0" browsers="C,S3" restriction="enum" syntax="h3 { $(name): button; }" description="将按钮和其他控件的外观更改为类似于本机控件。" standard-reference="http://css-infos.net/property/-webkit-appearance">
+
+    <entry value="caps-lock-indicator"/>
+    <entry value="button"/>
+    <entry value="button-bevel"/>
+    <entry value="caret"/>
+    <entry value="checkbox"/>
+    <entry value="default-button"/>
+    <entry value="listbox"/>
+    <entry value="listitem"/>
+    <entry value="media-fullscreen-button"/>
+    <entry value="media-mute-button"/>
+    <entry value="media-play-button"/>
+    <entry value="media-seek-back-button"/>
+    <entry value="media-seek-forward-button"/>
+    <entry value="media-slider"/>
+    <entry value="media-sliderthumb"/>
+    <entry value="menulist"/>
+    <entry value="menulist-button"/>
+    <entry value="menulist-text"/>
+    <entry value="menulist-textfield"/>
+    <entry value="none"/>
+    <entry value="push-button"/>
+    <entry value="radio"/>
+    <entry value="scrollbarbutton-down"/>
+    <entry value="scrollbarbutton-left"/>
+    <entry value="scrollbarbutton-right"/>
+    <entry value="scrollbarbutton-up"/>
+    <entry value="scrollbargripper-horizontal"/>
+    <entry value="scrollbargripper-vertical"/>
+    <entry value="scrollbarthumb-horizontal"/>
+    <entry value="scrollbarthumb-vertical"/>
+    <entry value="scrollbartrack-horizontal"/>
+    <entry value="scrollbartrack-vertical"/>
+
+    <entry value="searchfield"/>
+    <entry value="searchfield-cancel-button"/>
+    <entry value="searchfield-decoration"/>
+    <entry value="searchfield-results-button"/>
+    <entry value="searchfield-results-decoration"/>
+    <entry value="slider-horizontal"/>
+    <entry value="slider-vertical"/>
+    <entry value="sliderthumb-horizontal"/>
+    <entry value="sliderthumb-vertical"/>
+    <entry value="square-button"/>
+    <entry value="textarea"/>
+    <entry value="textfield"/>
+  </CssProperty>
+
+  <CssProperty name="-webkit-background-composite" version="3.0" browsers="C,S3" restriction="enum" syntax="div { $(name): padding; }">
+
+    <entry value="border"/>
+    <entry value="padding"/>
+  </CssProperty>
+
+  <CssProperty name="-webkit-background-clip" ref="background-clip" browsers="C,S3"/>
+
+  <CssProperty name="-webkit-background-origin" ref="background-origin" browsers="C,S3"/>
+
+  <CssProperty name="-webkit-background-size" ref="background-size" browsers="C,S3"/>
+
+  <CssProperty name="-webkit-border-radius" ref="border-radius" browsers="C,S3"/>
+
+  <CssProperty name="-webkit-border-top-left-radius" browsers="C,S3" ref="border-top-left-radius"/>
+  <CssProperty name="-webkit-border-top-right-radius" browsers="C,S3" ref="-webkit-border-top-left-radius"/>
+  <CssProperty name="-webkit-border-bottom-left-radius" browsers="C,S3" ref="-webkit-border-top-left-radius"/>
+  <CssProperty name="-webkit-border-bottom-right-radius" browsers="C,S3" ref="-webkit-border-top-left-radius"/>
+
+  <CssProperty name="-webkit-border-image" ref="border-image" browsers="C,S5"/>
+
+  <CssProperty name="-webkit-box-shadow" ref="box-shadow" browsers="C,S3"/>
+
+  <CssProperty name="-webkit-box-sizing" ref="box-sizing" browsers="C,S3"/>
+
+  <CssProperty name="-webkit-columns" ref="columns" browsers="C,S3"/>
+
+  <CssProperty name="-webkit-column-width" ref="column-width" browsers="C,S3"/>
+
+  <CssProperty name="-webkit-column-count" ref="column-count" browsers="C,S3"/>
+
+  <CssProperty name="-webkit-column-gap" ref="column-gap" browsers="C,S3"/>
+
+  <CssProperty name="-webkit-column-rule" ref="column-rule" browsers="C,S3"/>
+
+  <CssProperty name="-webkit-column-rule-color" ref="column-rule-color" browsers="C,S3"/>
+
+  <CssProperty name="-webkit-column-rule-style" ref="column-rule-style" browsers="C,S3"/>
+
+  <CssProperty name="-webkit-column-rule-width" ref="column-rule-width" browsers="C,S3"/>
+
+  <CssProperty _locID="-webkit-user-select" _locAttrData="description" version="3.0" browsers="C,S3" restriction="enum" syntax="div { $(name): text; }" description="控制所选内容的外观。" standard-reference="http://css-infos.net/property/-webkit-user-select">
+
+    <entry value="none"/>
+    <entry value="text"/>
+    <entry value="auto"/>
+  </CssProperty>
+
+  <CssProperty name="-webkit-marquee-direction" ref="marquee-direction" browsers="C,S3"/>
+
+  <CssProperty name="-webkit-marquee-speed" ref="marquee-speed" browsers="C,S3"/>
+
+  <CssProperty name="-webkit-marquee-style" ref="marquee-style" browsers="C,S3"/>
+
+  <CssProperty name="-webkit-marquee-increment" version="3.0" browsers="C,S3" restriction="percentage, length" syntax="div { $(name): 10%; }">
+
+    <entry value="large"/>
+    <entry value="medium"/>
+    <entry value="small"/>
+  </CssProperty>
+
+  <CssProperty name="-webkit-marquee-repitition" version="3.0" browsers="C,S3" restriction="integer" syntax="div { $(name): 3; }">
+
+    <entry value="infinite"/>
+  </CssProperty>
+
+  <CssProperty name="-webkit-margin-collapse" version="3.0" browsers="C,S3" restriction="enum" syntax="div { $(name): collapse; }">
+
+    <entry value="discard"/>
+    <entry value="separate"/>
+    <entry value="collapse"/>
+  </CssProperty>
+
+  <CssProperty name="-webkit-margin-bottom-collapse" ref="-webkit-margin-collapse"/>
+  <CssProperty name="-webkit-margin-top-collapse" ref="-webkit-margin-collapse"/>
+
+  <CssProperty name="-webkit-margin-start" version="3.0" browsers="C,S3" restriction="percentage, length" syntax="div { $(name): 5px; }">
+
+    <entry value="auto"/>
+  </CssProperty>
+
+  <CssProperty name="-webkit-padding-start" version="3.0" browsers="C,S3" restriction="percentage, length" syntax="div { $(name): 5px; }"/>
+
+  <CssProperty name="-webkit-touch-callout" version="3.0" browsers="S3" restriction="enum" syntax="a { $(name): none; }">
+
+    <entry value="none"/>
+  </CssProperty>
+
+  <CssProperty name="-webkit-user-drag" version="3.0" browsers="S3" restriction="enum" syntax="div { $(name): element; }">
+
+    <entry value="auto"/>
+    <entry value="none"/>
+    <entry value="element"/>
+  </CssProperty>
+
+  <CssProperty name="-webkit-text-stroke-color" version="3.0" browsers="S3" restriction="color" type="color" syntax="div { $(name): red; }"/>
+
+  <CssProperty name="-webkit-text-stroke-width" version="3.0" browsers="S3" restriction="length, percentage" syntax="div { $(name): 2px; }">
+
+    <entry value="medium"/>
+    <entry value="thick"/>
+    <entry value="thin"/>
+  </CssProperty>
+
+  <CssProperty name="-webkit-text-stroke" ref="-webkit-text-stroke-width" restriction="color, length, percentage" syntax="div { $(name): red 2x; }"/>
+
+  <CssProperty name="-webkit-text-fill-color" version="3.0" browsers="S3" restriction="color" type="color" syntax="div { $(name): red; }"/>
+
+  <CssProperty name="-webkit-transform" ref="transform" browsers="C,S3.1"/>
+
+  <CssProperty name="-webkit-transform-origin" ref="transform-origin" browsers="C,S3.1"/>
+
+  <CssProperty _locID="-webkit-transform-origin-x" _locAttrData="description" version="3.0" browsers="C,S3.1" restriction="length, percentage" syntax="img { $(name): 5px}" description="应用于某个元素的转换原点的 x 坐标(相对于其边框)。" standard-reference="http://www.w3.org/TR/css3-3d-transforms/#transform-origin"/>
+
+  <CssProperty _locID="-webkit-transform-origin-y" _locAttrData="description" version="3.0" browsers="C,S3.1" syntax="img { $(name): 5px}" restriction="length, percentage" description="应用于某个元素的转换原点的 y 坐标(相对于其边框)。" standard-reference="http://www.w3.org/TR/css3-3d-transforms/#transform-origin"/>
+
+  <CssProperty _locID="-webkit-transform-origin-z" _locAttrData="description" version="3.0" browsers="C,S4" restriction="length, percentage" syntax="img { $(name): 5px}" description="应用于某个元素的转换原点的 z 坐标(相对于其边框)。" standard-reference="http://www.w3.org/TR/css3-3d-transforms/#transform-origin"/>
+
+  <CssProperty name="-webkit-transition-property" ref="transition-property" browsers="C,S5"/>
+
+  <CssProperty name="-webkit-transition-duration" ref="transition-duration" browsers="C,S5"/>
+
+  <CssProperty name="-webkit-transition-timing-function" ref="transition-timing-function" browsers="C,S5"/>
+
+  <CssProperty name="-webkit-transition-delay" ref="transition-delay" browsers="C,S5"/>
+
+  <CssProperty name="-webkit-transition" ref="transition" browsers="C,S5"/>
+
+  <CssProperty _locID="-webkit-box-orient" _locAttrData="description" version="3.0" browsers="C,S3" restriction="enum" syntax="div { $(name): vertical; }" description="在 webkit 应用程序中，-webkit-box-orient 指定一个框是水平还是垂直布局其内容。" standard-reference="http://css-infos.net/property/-webkit-box-orient">
+
+    <entry _locID="-webkit-box-orient_horizontal" _locAttrData="description" value="horizontal" description="该框在水平行中从左到右显示其子级。"/>
+    <entry _locID="-webkit-box-orient_vertical" _locAttrData="description" value="vertical" description="该框在垂直方向上从上到下层叠显示其子级。"/>
+    <entry _locID="-webkit-box-orient_block-axis" _locAttrData="description" value="block-axis" description="元素的方向与框的轴平行。"/>
+    <entry _locID="-webkit-box-orient_inline-axis" _locAttrData="description" value="inline-axis" description="元素的方向为垂直方向。"/>
+  </CssProperty>
+
+  <CssProperty _locID="-webkit-box-direction" _locAttrData="description" version="3.0" browsers="C,S3" restriction="enum" syntax="div { $(name): reverse; }" description="在 webkit 应用程序中，-webkit-box-direction 指定一个框是正常(从上边缘或左边缘)还是反向(从下边缘或右边缘)布局其内容。" standard-reference="http://css-infos.net/property/-webkit-box-direction">
+
+    <entry _locID="-webkit-box-direction_normal" _locAttrData="description" value="normal" description="具有 box-orient 的计算值“horizontal”的框将从左到右显示其子级。具有计算值“vertical”的框将从上到下显示其子级。"/>
+    <entry _locID="-webkit-box-direction_reverse" _locAttrData="description" value="reverse" description="具有 box-orient 的计算值“horizontal”的框将从右到左显示其子级。具有计算值“vertical”的框将从下到上显示其子级。"/>
+  </CssProperty>
+
+  <CssProperty _locID="-webkit-box-ordinal-group" _locAttrData="description" version="3.0" browsers="C,S3" restriction="integer" syntax="div { $(name): 3; }" description="指示元素所属的序号组。序号组较小的元素将显示在序号组较大的元素前面。" standard-reference="http://css-infos.net/property/-webkit-box-ordinal-group"/>
+
+  <CssProperty _locID="-webkit-box-align" _locAttrData="description" version="3.0" browsers="C,S3" restriction="enum" syntax="div { $(name): end; }" description="指定外部灵活框元素内的嵌套元素的对齐方式。" standard-reference="http://css-infos.net/property/-webkit-box-align">
+
+    <entry _locID="-webkit-box-align_start" _locAttrData="description" value="start" description="对于正常方向的框，每个子级的上边缘沿框的顶部放置。额外的空间放置在元素的下方。对于反方向的框，每个子级的下边缘沿框的底部放置。额外的空间放置在元素的上方。"/>
+    <entry _locID="-webkit-box-align_end" _locAttrData="description" value="end" description="对于正常方向的框，每个子级的下边缘沿框的底部放置。额外的空间放置在元素的上方。对于反方向的框，每个子级的上边缘沿框的顶部放置。额外的空间放置在元素的下方。"/>
+    <entry _locID="-webkit-box-align_center" _locAttrData="description" value="center" description="任何额外空间将均匀划分，一半位于子级上方，另一半位于子级下方。"/>
+    <entry _locID="-webkit-box-align_baseline" _locAttrData="description" value="baseline" description="如果此框方向是内联轴或水平，则将所有子级都放置在基线对齐的位置，并根据需要在前后放置额外空间。对于块流，将使用位于元素内的第一个非空行框的基线。对于表，将使用第一个单元格的基线。"/>
+    <entry _locID="-webkit-box-align_stretch" _locAttrData="description" value="stretch" description="每个子级的高度将会调整为包含块的高度。"/>
+  </CssProperty>
+
+  <CssProperty _locID="-webkit-box-pack" _locAttrData="description" version="3.0" browsers="C,S3" restriction="enum" syntax="div { $(name): end; }" description="指定位于取向方向的当前元素中的子元素的对齐方式。" standard-reference="http://css-infos.net/property/-webkit-box-pack">
+
+    <entry _locID="-webkit-box-pack_start" _locAttrData="description" value="start" description="对于普通方向框，将第一个子级的左边缘置于左侧，并将所有额外空间置于最后一个子级之后。对于反向方向框，将最后一个子级的右边缘置于右侧，并将所有额外空间置于第一个子级之前。"/>
+    <entry _locID="-webkit-box-pack_end" _locAttrData="description" value="end" description="对于普通方向框，将最后一个子级的右边缘置于右侧，并将所有额外空间置于第一个子级之前。对于反向方向框，将第一个子级的左边缘置于左侧，并将所有额外空间置于最后一个子级之后。"/>
+    <entry _locID="-webkit-box-pack_center" _locAttrData="description" value="center" description="均匀划分额外空间，一半置于第一个子级之前，另一半置于最后一个子级之后。"/>
+    <entry _locID="-webkit-box-pack_justify" _locAttrData="description" value="justify" description="均匀划分各个子级之间的空间，不将任何额外空间置于第一个子级之前或最后一个子级之后。如果只有一个子级，则将填充值视为它是开头的情况。"/>
+  </CssProperty>
+
+  <CssProperty _locID="-webkit-box-reflect" _locAttrData="description" version="3.0" browsers="C,S4" syntax="div { $(name): below 5px; }" description="定义边框的反射。" standard-reference="http://css-infos.net/property/-webkit-box-reflect">
+
+    <entry _locID="-webkit-box-reflect_above" _locAttrData="description" value="above" description="反射显示在边框的上方。"/>
+    <entry _locID="-webkit-box-reflect_below" _locAttrData="description" value="below" description="反射显示在边框的下方。"/>
+    <entry _locID="-webkit-box-reflect_left" _locAttrData="description" value="left" description="反射显示在边框的左侧。"/>
+    <entry _locID="-webkit-box-reflect_right" _locAttrData="description" value="right" description="反射显示在边框的右侧。"/>
+  </CssProperty>
+
+  <CssProperty _locID="-webkit-box-flex" _locAttrData="description" version="3.0" browsers="C,S3" restriction="number" syntax="div { $(name): 1; }" description="指定元素的灵活性。" standard-reference="http://css-infos.net/property/-webkit-box-flex"/>
+
+  <CssProperty _locID="-webkit-box-flex-group" _locAttrData="description" version="3.0" browsers="C,S3" restriction="integer" syntax="div { $(name): 4; }" description="可使用“box-flex-group”属性将弹性元素分配给弹性组。" standard-reference="http://css-infos.net/property/-webkit-box-flex-group"/>
+
+  <CssProperty _locID="-webkit-text-size-adjust" _locAttrData="description" version="3.0" browsers="C,S3" restriction="percentage" syntax="div { $(name): 60%; }" description="指定用于在 iPhone 上的 Safari 中显示文本内容的大小调整。" standard-reference="http://css-infos.net/property/-webkit-text-size-adjust">
+
+    <entry _locID="-webkit-text-size-adjust_none" _locAttrData="description" value="none" description="将不调整文本大小。"/>
+    <entry _locID="-webkit-text-size-adjust_auto" _locAttrData="description" value="auto" description="将为 iPhone 上的 Safari 自动调整文本大小。"/>
+  </CssProperty>
+
+  <CssProperty name="vertical-align">
+    <entry value="-webkit-baseline-middle" version="2.0" browsers="C,S1"/>
+  </CssProperty>
+
+  <CssProperty name="overflow-x">
+    <entry value="-webkit-marquee" version="2.0" browsers="C,S3"/>
+  </CssProperty>
+
+  <!-- Animation -->
+
+  <CssProperty name="-webkit-animation-name" ref="animation-name" browsers="C,S5"/>
+
+  <CssProperty name="-webkit-animation-duration" ref="animation-duration" browsers="C,S5"/>
+
+  <CssProperty name="-webkit-animation-timing-function" ref="animation-timing-function" browsers="C,S5"/>
+
+  <CssProperty name="-webkit-animation-iteration-count" ref="animation-iteration-count" browsers="C,S5"/>
+
+  <CssProperty name="-webkit-animation-direction" ref="animation-direction" browsers="C,S5"/>
+
+  <CssProperty name="-webkit-animation-play-state" ref="animation-play-state" browsers="C,S5"/>
+
+  <CssProperty name="-webkit-animation-delay" ref="animation-delay" browsers="C,S5"/>
+
+  <CssProperty name="-webkit-animation-fill-mode" ref="animation-fill-mode" browsers="C,S5"/>
+
+  <CssProperty name="-webkit-animation" ref="animation" browsers="C,S5"/>
+
+  <CssProperty name="-webkit-backface-visibility" ref="backface-visibility" browsers="C,S5"/>
+
+  <CssProperty name="-webkit-perspective" ref="perspective" browsers="C,S4"/>
+
+  <CssProperty name="-webkit-perspective-origin" ref="perspective-origin" browsers="C,S4"/>
+
+  <CssProperty name="-webkit-transform-style" ref="transform-style" browsers="C,S4"/>
+
+  <CssProperty name="-webkit-hyphens" ref="hyphens" browsers="S5.1"/>
+
+  <CssProperty name="-webkit-tap-highlight-color" version="3" browsers="C,S3.1" type="color" restriction="color" standard-reference="http://css-infos.net/property/-webkit-tap-highlight-color"/>
+
+  <CssProperty name="-webkit-text-shadow" ref="text-shadow" browsers="C,S1.1"/>
+
+  <CssProperty _locID="-webkit-line-break" _locAttrData="description" version="3.0" browsers="C,S3" syntax="p { $(name): normal; }" description="指定 CJK (中文、日语和朝鲜语)文本的换行规则。" standard-reference="http://css-infos.net/property/-webkit-line-break">
+
+    <entry value="after-white-space"/>
+    <entry value="normal"/>
+  </CssProperty>
+
+  <CssProperty _locID="-webkit-nbsp-mode" _locAttrData="description" version="3.0" browsers="C,S3" syntax="p { $(name): space; }" description="定义文本中的不间断空格的行为。" standard-reference="http://css-infos.net/property/-webkit-nbsp-mode">
+
+    <entry value="space"/>
+    <entry value="normal"/>
+  </CssProperty>
+
+  <CssProperty _locID="-webkit-overflow-scrolling" _locAttrData="description" version="3.0" browsers="C,S5" syntax="div { $(name): touch; }" description="指定是否在 overflow:scroll 元素中使用本机样式滚动。" standard-reference="http://css-infos.net/property/-webkit-nbsp-mode">
+
+    <entry value="auto"/>
+    <entry value="touch"/>
+  </CssProperty>
+
+  <CssProperty name="-webkit-filter" version="3.0" browsers="S6" restriction="enum" syntax="img { $(name): blur(3px); }">
+
+    <entry value="grayscale()"/>
+    <entry value="sepia()"/>
+    <entry value="invert()"/>
+    <entry value="hue-rotate(180deg)"/>
+    <entry value="blur(3px)"/>
+    <entry value="brightness(2)"/>
+    <entry value="contrast(2)"/>
+    <entry value="saturate(3)"/>
+  </CssProperty>
+
+  <CssProperty name="-webkit-flow-from" ref="-ms-flow-from" browsers="C,S5.2"/>
+
+  <CssProperty name="-webkit-flow-into" ref="-ms-flow-into" browsers="C,S5.2"/>
+
+  <CssProperty name="background">
+    <entry value="-webkit-gradient()" version="3.0" browsers="C,S4"/>
+    <entry value="-webkit-linear-gradient()" version="3.0" browsers="C,S5.1"/>
+    <entry value="-webkit-radial-gradient()" version="3.0" browsers="C,S5.1"/>
+    <entry value="-webkit-repeating-linear-gradient()" version="3.0" browsers="C,S5.1"/>
+    <entry value="-webkit-repeating-radial-gradient()" version="3.0" browsers="C,S5.1"/>
+  </CssProperty>
+
+  <CssProperty name="background-image">
+    <entry value="-webkit-gradient()" version="3.0" browsers="C,S4"/>
+    <entry value="-webkit-linear-gradient()" version="3.0" browsers="C,S5.1"/>
+    <entry value="-webkit-radial-gradient()" version="3.0" browsers="C,S5.1"/>
+    <entry value="-webkit-repeating-linear-gradient()" version="3.0" browsers="C,S5.1"/>
+    <entry value="-webkit-repeating-radial-gradient()" version="3.0" browsers="C,S5.1"/>
+  </CssProperty>
+
+  <CssProperty name="display">
+    <entry value="-webkit-box" browsers="C,S1"/>
+    <entry value="-webkit-inline-box" browsers="C,S1"/>
+  </CssProperty>
+
+  <CssProperty name="cursor">
+    <entry value="-webkit-zoom-in" browsers="C,S1.2"/>
+    <entry value="-webkit-zoom-out" browsers="C,S1.2"/>
+    <entry value="-webkit-grabbing" browsers="C,S1.2"/>
+    <entry value="-webkit-grab" browsers="C,S1.2"/>
+  </CssProperty>
+
+  <CssPropertyValue type="color">
+    <entry value="-webkit-activelink" browsers="C,S1"/>
+    <entry value="-webkit-focus-ring-color" browsers="C,S1"/>
+    <entry value="-webkit-link" browsers="C,S1"/>
+    <entry value="-webkit-text" browsers="C,S1"/>
+  </CssPropertyValue>
+
+</CssModule>

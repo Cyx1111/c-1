@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Generated and Replaced Content" standard-reference="http://www.w3.org/TR/css3-content/" status="WD" pub-date="2003-05-14">
+
+  <CssPseudo name="::before(2)" _locID="before-pseudo-function" _locAttrData="description" version="3.0" browsers="none" syntax="span::before(2) { content: 'B'; }" description="伪元素用于在某个元素(或其他伪元素)的内容的紧前面插入内容。将多个“::before()”函数结合在一起使用时，将使用此数字参数。“content”属性用于指定要插入的内容。" standard-reference="http://www.w3.org/TR/css3-content/#inserting"/>
+
+  <CssPseudo name="::after(2)" _locID="after-pseudo-function" _locAttrData="description" version="3.0" browsers="none" syntax="span::after(2) { content: 'B'; }" description="伪元素用于在某个元素(或其他伪元素)的内容的紧后面插入内容。将多个“::after()”函数结合在一起使用时，将使用此数字参数。“content”属性用于指定要插入的内容。" standard-reference="http://www.w3.org/TR/css3-content/#inserting"/>
+
+  <CssPseudo name="::outside" _locID="outside-pseudo-element" _locAttrData="description" version="3.0" browsers="none" syntax="span::outside::before { content: 'A'; }" description="“::outside”伪元素是紧靠在该伪元素的上级元素的外部生成的元素。" standard-reference="http://www.w3.org/TR/css3-content/#wrapping"/>
+
+  <CssPseudo name="::outside(2)" _locID="outside-pseudo-function" _locAttrData="description" version="3.0" browsers="none" syntax="span::outside(1)::before { content: 'A'; }" description="“::outside”伪元素是紧靠在该伪元素的上级元素外部生成的元素。在给定一个参数时，“::outside(n)”表示紧靠在第 n-1 个伪元素的外部生成的第 n 个伪元素。" standard-reference="http://www.w3.org/TR/css3-content/#wrapping"/>
+
+  <CssPseudo name="::alternate" _locID="alternate-pseudo-element" _locAttrData="description" version="3.0" browsers="none" description="此伪元素是通过将其“move-to”属性设置为一个标识符来创建的。在“content”属性中下一次发生“pending()”时将呈现它。" syntax="span::after::alternate { content: 'alternate2'; move-to: example; }" standard-reference="http://www.w3.org/TR/css3-content/#inserting1"/>
+
+  <CssPseudo name="::marker" _locID="marker-selector" _locAttrData="description" version="3.0" browsers="none" syntax="li::marker { content: counter(item, decimal) '.'; }" description="对于一个要生成的“::marker”伪元素，其父级必须具有“list-item”的一个“display”计算值。" standard-reference="http://www.w3.org/TR/css3-content/#block"/>
+
+  <CssPseudo name="::line-marker" _locID="line-marker-selector" _locAttrData="description" version="3.0" browsers="none" syntax="pre::line-marker { width: 2em; }" description="“::line-marker”伪元素使用与“::marker”伪元素完全相同的方式定位，但是每行都显示，而不仅仅在第一行显示。" standard-reference="http://www.w3.org/TR/css3-content/#block"/>
+
+  <CssProperty _locID="crop" _locAttrData="description" version="3.0" browsers="none" restriction="enum" description="允许被替换的元素仅仅是对象的一个矩形区域而不是整个对象。" syntax="&lt;shape&gt; | auto" standard-reference="http://www.w3.org/TR/css3-content/#the-crop">
+
+    <entry _locID="crop_auto" _locAttrData="description" value="auto" description="元素的计算的固有宽度和高度与其实际的固有宽度和高度相同。"/>
+    <entry _locID="crop_rect" _locAttrData="description" value="rect(top, right, bottom, left)" description="这四个参数每一个都可以是 &lt;length&gt; 或 &lt;percentage&gt;。所有百分比值都是相对于元素的固有维度(如果有)计算的。这些值是相对于元素左上角的偏移量。"/>
+    <entry _locID="crop_insert-rect" _locAttrData="description" value="insert-rect(top, right, bottom, left)" description="这四个参数每一个都可以是 &lt;length&gt; 或 &lt;percentage&gt;。所有百分比值都是相对于元素的固有维度(如果有)计算的。这些值都是相对于元素各自边缘的偏移量。"/>
+  </CssProperty>
+
+  <CssProperty _locID="move-to" _locAttrData="description" version="3.0" browsers="none" restriction="identifier" description="属性导致该元素或伪元素从流中被删除并在稍后重新插入到文档中。" syntax="normal | here | &lt;identifier&gt;" standard-reference="http://www.w3.org/TR/css3-content/#moving">
+
+    <entry _locID="move-to_normal" _locAttrData="description" value="normal" description="对于“::alternate”伪元素，如果父级在其“content”属性中使用“footnote”计数器，那么“move-to”的计算值就为“footnotes”。"/>
+    <entry _locID="move-to_here" _locAttrData="description" value="here" description="该元素或伪元素未移动。此值禁止创建“::alternate”伪元素和任何具有此类上级伪元素的伪元素。"/>
+  </CssProperty>
+
+  <CssProperty _locID="quotes" _locAttrData="description" version="2.0" browsers="C,FF1.5,IE8,O8,S5.1" restriction="string" description="为任意数目的嵌入引用内容指定引号。" syntax="none | [ &lt;string&gt; &lt;string&gt; ]+" standard-reference="http://www.w3.org/TR/css3-content/#quotes">
+
+    <entry _locID="quotes_none" _locAttrData="description" value="none" description="“content”属性的“open-quote”和“close-quote”值不会生成任何引号，就如同它们分别为“no-open-quote”和“no-close-quote”一样。"/>
+  </CssProperty>
+
+  <CssProperty _locID="counter-increment" _locAttrData="description" version="2.0" browsers="C,FF1.5,IE8,O10.5,S3" restriction="identifier, integer" description="计数器与“content”属性的“counter()”和“counters()”函数结合使用。" syntax="h1:before { $(name): section; }" standard-reference="http://www.w3.org/TR/css3-content/#counters">
+
+    <entry _locID="counter-increment_none" _locAttrData="description" value="none" description="未修改计数器。"/>
+  </CssProperty>
+
+  <CssProperty _locID="counter-reset" _locAttrData="description" version="2.0" browsers="C,FF1.5,IE8,O10.5,S3" restriction="identifier, integer" syntax="h1 { $(name): section; }" description="属性接受一个或多个计数器名称(标识符)，每个名称后面可以跟一个整数。此整数就是每出现一个匹配元素时要为计数器设置的值。" standard-reference="http://www.w3.org/TR/css3-content/#counters">
+
+    <entry _locID="counter-increment_none" _locAttrData="description" value="none" description="未修改计数器。"/>
+  </CssProperty>
+
+  <CssProperty _locID="page-policy" _locAttrData="description" version="3.0" browsers="none" restriction="enum" syntax="@string chapter { $(name): last; }" description="确定给定元素的哪一个基于页面的匹配项适用于计数器或字符串值。" standard-reference="http://www.w3.org/TR/css3-content/#page-policy">
+
+    <entry _locID="page-policy_start" _locAttrData="description" value="start" description="在页面开头采用计数器或字符串的值(在将样式应用到页面元素之前，但在将其应用到 @page 上下文本身之后)。"/>
+    <entry _locID="page-policy_first" _locAttrData="description" value="first" description="在处理页面期间采用在计数器或字符串中发生第一次状态更改之后的值。"/>
+    <entry _locID="page-policy_last" _locAttrData="description" value="last" description="采用页面上的最终状态更改之后的值。"/>
+  </CssProperty>
+
+  <CssAtDirective name="counter" _locID="counter-rule" _locAttrData="description" version="3.0" browsers="none" include-root-properties="false" include-root-directives="false" syntax="@counter footnote { list-style-type: super-decimal; }" description="作者可能使用 @counter 声明块和“page-policy”属性，这仅适用于字符串和计数器。" standard-reference="http://www.w3.org/TR/css3-content/#counter0">
+
+    <CssProperty ref="list-style-type"/>
+  </CssAtDirective>
+
+  <CssAtDirective name="string" _locID="string-rule" _locAttrData="description" version="3.0" syntax="@string chapter { page-policy: last; }" browsers="none" description="作者可能使用 @string 声明块和“page-policy”，这仅适用于字符串和计数器。" standard-reference="http://www.w3.org/TR/css3-content/#string"/>
+
+  <CssProperty _locID="content" _locAttrData="description" version="2.0" browsers="C,FF1,IE8,O4,S1" restriction="string, url" description="确定给定元素的哪一个基于页面的匹配项适用于计数器或字符串值。" syntax="a:after { $(name): ' ( attr(href))';}" standard-reference="http://www.w3.org/TR/css3-content/#content">
+
+    <entry _locID="content_normal" _locAttrData="description" value="normal" description="请参阅 http://www.w3.org/TR/css3-content/#content 中的计算规则。"/>
+    <entry _locID="content_none" _locAttrData="description" value="none" description="对于元素，这会禁止元素子级作为此元素的子级呈现，就像此元素是空的一样。对于伪元素，这会导致伪元素无内容。"/>
+    <entry _locID="content_inhibit" _locAttrData="description" value="inhibit" version="3.0" browsers="none" description="对于元素，这会禁止元素子级作为此元素的子级呈现，就像此元素是空的一样。对于伪元素，这会禁止创建伪元素，就像“display”计算结果为“none”一样。"/>
+    <entry _locID="content_contents" _locAttrData="description" value="contents" version="3.0" browsers="none" description="显示元素的后代。"/>
+    <entry _locID="content_footnote" _locAttrData="description" value="footnote" version="3.0" browsers="none" description="“counter(footnote, normal)”的速记。这可在脚注的流入部分使用。"/>
+    <entry _locID="content_endnote" _locAttrData="description" value="endnote" version="3.0" browsers="none" description="“counter(endnote, normal)”的速记。这可在尾注的流入部分使用。"/>
+    <entry _locID="content_section-note" _locAttrData="description" value="section-note" version="3.0" browsers="none" description="“counter(section-note, normal)”的速记。这可在 section-note 的流入部分使用。"/>
+    <entry _locID="content_list-item" _locAttrData="description" value="list-item" version="3.0" browsers="none" description="“counter(list-item, normal)”的速记。注意，如果某个“::marker”伪元素的上级的“display”设置为“list-item”，则为它进行此设置的效果与设置“normal”的效果并不相当，因为这会忽略“list-style”属性。"/>
+    <entry _locID="content_open-quote" _locAttrData="description" value="open-quote" browsers="none" description="值将由“quotes”属性中的相应字符串替换。"/>
+    <entry _locID="content_close-quote" _locAttrData="description" value="close-quote" browsers="none" description="值将由“quotes”属性中的相应字符串替换。"/>
+    <entry _locID="content_no-open-quote" _locAttrData="description" value="no-open-quote" browsers="none" description="不插入任何内容(如同在“none”中一样)，但增加(减少)引号的嵌套级别。"/>
+    <entry _locID="content_no-close-quote" _locAttrData="description" value="no-close-quote" browsers="none" description="不插入任何内容(如同在“none”中一样)，但增加(减少)引号的嵌套级别。"/>
+    <entry _locID="content_box" _locAttrData="description" value="box" version="3.0" browsers="none" description="空心方形。"/>
+    <entry _locID="content_check" _locAttrData="description" value="check" version="3.0" browsers="none" description="选中标记。"/>
+    <entry _locID="content_circle" _locAttrData="description" value="circle" version="3.0" browsers="none" description="空心圆。"/>
+    <entry _locID="content_diamond" _locAttrData="description" value="diamond" version="3.0" browsers="none" description="实心菱形。在某些平台上，它类似于光盘。"/>
+    <entry _locID="content_disc" _locAttrData="description" value="disc" version="3.0" browsers="none" description="实心圆。"/>
+    <entry _locID="content_hyphen" _locAttrData="description" value="hyphen" version="3.0" browsers="none" description="连字符项目符号。"/>
+    <entry _locID="content_square" _locAttrData="description" value="square" version="3.0" browsers="none" description="实心方形。"/>
+    <entry _locID="content_attr" _locAttrData="description" value="attr()" description="对于选择器的主题，attr(n) 函数将特性 n 的值作为字符串返回"/>
+    <entry _locID="content_date" _locAttrData="description" value="date(format)" version="3.0" browsers="none" description="当前日期和/或时间，其格式根据指定字符串的格式设置。格式基于 POSIX 日期格式字符串。"/>
+    <entry _locID="content_counterN" _locAttrData="description" value="counter(name)" description="计数器由标识符表示(请参见“counter-increment”和“counter-reset”属性)。"/>
+    <entry _locID="content_counterNSty" _locAttrData="description" value="counter(name, style)" browsers="none" description="计数器由标识符表示(请参见“counter-increment”和“counter-reset”属性)。"/>
+    <entry _locID="content_counterstr" _locAttrData="description" value="counters(name, string)" browsers="none" description="计数器由标识符表示(请参见“counter-increment”和“counter-reset”属性)。"/>
+    <entry _locID="content_countersNSS" _locAttrData="description" browsers="none" value="counters(name, string, style)" description="计数器由标识符表示(请参见“counter-increment”和“counter-reset”属性)。"/>
+    <entry _locID="content_string" _locAttrData="description" browsers="none" value="string(name)" description="指定字符串值"/>
+    <entry _locID="content_pending" _locAttrData="description" browsers="none" value="pending()" description="这会导致其“move-to”属性计算结果为指定标识符的所有元素和伪元素作为当前元素(或伪元素)的子级插入。"/>
+    <entry value="url()"/>
+  </CssProperty>
+
+  <CssProperty _locID="display">
+    <entry value="normal" version="3.0"/>
+  </CssProperty>
+
+</CssModule>

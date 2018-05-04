@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.TeamFoundation.TestManagement.Common</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.TeamFoundation.TestManagement.Common.AttachmentTypes">
+      <summary>指定测试结果附件的附件类型名。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.AttachmentTypes.ActionRecording">
+      <summary>返回“ActionRecording”。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.AttachmentTypes.BugFilingData">
+      <summary>返回“BugFilingData”。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.AttachmentTypes.CodeCoverage">
+      <summary>返回“CodeCoverage”。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.AttachmentTypes.GeneralAttachment">
+      <summary>返回“GeneralAttachment”。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.AttachmentTypes.IntermediateCollectorData">
+      <summary>返回“IntermediateCollectorData”。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.AttachmentTypes.RunConfiguration">
+      <summary>返回“RunConfiguration”。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.AttachmentTypes.TestImpactDetails">
+      <summary>返回“TestImpactDetails”。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.AttachmentTypes.TmiTestRunDeploymentFiles">
+      <summary>返回“TmiTestRunDeploymentFiles”。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.AttachmentTypes.TmiTestRunReverseDeploymentFiles">
+      <summary>返回“TmiTestRunReverseDeploymentFiles”。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.AttachmentTypes.TrxTmiTestResultDetail">
+      <summary>返回“TrxTmiTestResultDetail”。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.AttachmentTypes.TrxTmiTestRunSummary">
+      <summary>返回“TrxTmiTestRunSummary”。</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.TestManagement.Common.EnvironmentParentTypes">
+      <summary>指定测试环境的父级 （所有者）的类型。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.EnvironmentParentTypes.TeamProject">
+      <summary>测试环境属于团队项目。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.EnvironmentParentTypes.TestController">
+      <summary>测试环境属于测试控制器。</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.TestManagement.Common.IdConstants">
+      <summary>为 Team Foundation Server 代理作业指定作业 ID。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.IdConstants.CoverAnJobId">
+      <summary>返回 CoverAnJob 的字符串 ID。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.IdConstants.ProjectDeletionCleanupJobId">
+      <summary>返回 ProjectDeletionCleanupJob 的字符串 ID。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.IdConstants.SuiteRepopulateJobId">
+      <summary>返回 SuiteRepopulateJobId 的字符串 ID。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.IdConstants.TestCaseSynchronizerJobId">
+      <summary>返回 TestCaseSynchronizerJobId 的字符串 ID。</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.TestManagement.Common.TestManagementErrorCodes">
+      <summary>为来自客户端和服务器端的错误消息指定错误代码。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.TestManagementErrorCodes.None">
+      <summary>无错误。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.TestManagementErrorCodes.SaveTestPlanError">
+      <summary>保存测试计划时出错。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.TestManagementErrorCodes.DuplicateSuiteName">
+      <summary>套件名称重复。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.TestManagementErrorCodes.TestPointNotFoundError">
+      <summary>找不到测试点。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.TestManagementErrorCodes.DuplicateTestCaseInSuite">
+      <summary>测试套件中的测试用例重复。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.TestManagementErrorCodes.TestSettingsNotFound">
+      <summary>找不到测试设置。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.TestManagementErrorCodes.TestEnvironmentAlreadyExistsOnTestController">
+      <summary>此测试控制器上已存在测试环境。</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.TestManagement.Common.TestWellKnownGroups">
+      <summary>提供 TestWellKnownGroups 的信息。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.TestWellKnownGroups.TestServiceAccountsIdentifier">
+      <summary>返回测试服务帐户的安全标识。</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.TestManagement.Common.WitCategoryRefName">
+      <summary>指定 WIT 类别名称的常量。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.WitCategoryRefName.Bug">
+      <summary>返回“Microsoft.BugCategory”。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.WitCategoryRefName.FeedbackRequestCategory">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.WitCategoryRefName.FeedbackResponseCategory">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.WitCategoryRefName.Requirement">
+      <summary>返回“Microsoft.RequirementCategory”。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.WitCategoryRefName.SharedStep">
+      <summary>返回“Microsoft.SharedStepCategory”。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.WitCategoryRefName.SharedStepByForwardLink">
+      <summary>返回“Microsoft.VSTS.TestCase.SharedStepReferencedBy-Forward”。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.WitCategoryRefName.SharedStepByReverseLink">
+      <summary>返回“Microsoft.VSTS.TestCase.SharedStepReferencedBy-Reverse”。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.WitCategoryRefName.TestCase">
+      <summary>返回“Microsoft.TestCaseCategory”。</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.TestManagement.Common.Internal.ArtifactHelper">
+      <summary>仅供内部使用。用于管理项目 URI 抓换的帮助器类。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.ArtifactHelper.ConvertWorkItemUrisToIds(System.Collections.Generic.List{System.String})">
+      <returns>返回 <see cref="T:System.Collections.Generic.List`1" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.ArtifactHelper.ExtractQueryParameters(System.Uri,System.String@)">
+      <returns>返回 <see cref="T:System.Collections.Specialized.NameValueCollection" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.ArtifactHelper.GetArtifactUrlFromHttpUrl(System.String)">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.ArtifactHelper.ParseAttachmentId(System.String,System.Int32@)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.ArtifactHelper.ParseAttachmentId(System.Uri,System.Int32@)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.ArtifactHelper.ParseSessionId(System.Uri,System.Int32@)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.ArtifactHelper.ParseTestCaseResultAttachmentId(System.String,System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.ArtifactHelper.ParseTestCaseResultAttachmentId(System.Uri,System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.ArtifactHelper.ParseTestCaseResultId(System.String,System.Int32@,System.Int32@)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.ArtifactHelper.ParseTestCaseResultId(System.Uri,System.Int32@,System.Int32@)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.TestManagement.Common.Internal.AttachmentDownloadFields">
+      <summary>仅限内部使用。  询问用于附件下载的参数。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.AttachmentDownloadFields.AttachmentId">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.AttachmentDownloadFields.Length">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.AttachmentDownloadFields.SessionId">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.AttachmentDownloadFields.TestResultId">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.AttachmentDownloadFields.TestRunId">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.TestManagement.Common.Internal.HttpRange">
+      <summary>仅限内部使用。  用于包含和分析用于 HTTP 范围标头的字节偏移量。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.HttpRange.#ctor(System.Int64,System.Int64,System.Int64)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.TestManagement.Common.Internal.HttpRange.End">
+      <returns>返回 <see cref="T:System.Int64" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.TestManagement.Common.Internal.HttpRange.Start">
+      <returns>返回 <see cref="T:System.Int64" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.HttpRange.ToString">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.TestManagement.Common.Internal.HttpRange.Total">
+      <returns>返回 <see cref="T:System.Int64" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.HttpRange.TryParse(System.String,Microsoft.TeamFoundation.TestManagement.Common.Internal.HttpRange@)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames">
+      <summary>仅供内部使用。测试管理器子系统使用的各种工作项字段的引用名称。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.Actions">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.ActivatedBy">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.ActivatedDate">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.AutomationStatus">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.ClosedBy">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.ClosedDate">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.DataField">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.Description">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.IntegrationBuild">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.Owner">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.Parameters">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.Priority">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.StateChangeDate">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.Storage">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.TestId">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.TestIdIsNotNull">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.TestName">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.TestType">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.WorkItemType">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.TestManagement.Common.Internal.XmlUtility">
+      <summary>仅限内部使用。  用于读取/写入/加载 XML 文件的帮助器功能。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.XmlUtility.CreateSafeReader(System.IO.Stream)">
+      <returns>返回 <see cref="T:System.Xml.XmlReader" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.XmlUtility.CreateSafeReader(System.IO.TextReader)">
+      <returns>返回 <see cref="T:System.Xml.XmlReader" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.XmlUtility.CreateSafeXmlTextReader(System.IO.Stream)">
+      <returns>返回 <see cref="T:System.Xml.XmlTextReader" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.XmlUtility.CreateSafeXmlTextReader(System.IO.TextReader)">
+      <returns>返回 <see cref="T:System.Xml.XmlTextReader" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.XmlUtility.LoadXmlDocumentFromFile(System.String)">
+      <returns>返回 <see cref="T:System.Xml.XmlDocument" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.XmlUtility.LoadXmlDocumentFromStream(System.IO.Stream)">
+      <returns>返回 <see cref="T:System.Xml.XmlDocument" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.XmlUtility.LoadXmlDocumentFromString(System.String)">
+      <returns>返回 <see cref="T:System.Xml.XmlDocument" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.XmlUtility.LoadXmlDocumentFromTextReader(System.IO.TextReader)">
+      <returns>返回 <see cref="T:System.Xml.XmlDocument" />。</returns>
+    </member>
+  </members>
+</doc>

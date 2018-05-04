@@ -1,0 +1,1661 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.TeamFoundation.WorkItemTracking.Controls</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.ColumnsPickerControl">
+      <summary>ColumnsPickerControl是选择和排序的Currituck域/列并将现有用户定义字段的集合UserControl。 它有两listviews以提供与所选列和按钮移动项目在它们之间。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.ColumnsPickerControl.#ctor(Microsoft.TeamFoundation.WorkItemTracking.Client.WorkItemStore)">
+      <summary>没有默认构造函数。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.ColumnsPickerControl.#ctor(Microsoft.TeamFoundation.WorkItemTracking.Client.WorkItemStore,Microsoft.TeamFoundation.WorkItemTracking.Controls.IColumnsPickerFieldDefinitionFilter)">
+      <summary>没有默认构造函数。</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.ColumnsPickerControl.AddRequiredButtonLabel">
+      <summary>要求在设置的非空值。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.ColumnsPickerControl.AllWorkItemTypesText">
+      <summary>要求在设置的非空值。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.ColumnsPickerControl.AvailableColumnsLabel">
+      <summary>要求在设置的非空值。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.ColumnsPickerControl.ClickAddRequiredButton">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.ColumnsPickerControl.ClickResetButton">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.ColumnsPickerControl.ColumnPickerDescriptionText">
+      <summary>要求在设置的非空值。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.ColumnsPickerControl.ColumnPickerWorkItemTypeLabel">
+      <summary>要求在设置的非空值。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.ColumnsPickerControl.ColumnResetButtonLabel">
+      <summary>要求在设置的非空值。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.ColumnsPickerControl.Dispose(System.Boolean)">
+      <summary>清理正在使用的所有资源。</summary>
+      <param name="disposing">如果应释放托管资源，则为 true；否则为 false。</param>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.ColumnsPickerControl.ExcludedColumns">
+      <summary>currituck字符串标识符的ArrayList集合。</summary>
+      <returns>返回 <see cref="T:System.Collections.ArrayList" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.ColumnsPickerControl.FakedVirtualColumns">
+      <summary>返回要创建的程序集的列的VirtualColumnCollection，因为我们必须支持splitted title列</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnCollection" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.ColumnsPickerControl.PortfolioDisplayName">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.ColumnsPickerControl.RequiredItemTag">
+      <summary>要求在设置的非空值。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.ColumnsPickerControl.ResetControlState">
+      <summary>重置所有属性设置为默认值并重置控件为默认状态。</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.ColumnsPickerControl.SelectedColumnsLabel">
+      <summary>要求在设置的非空值。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.ColumnsPickerControl.SelectedVirtualColumns">
+      <summary>VirtualColumn对象的VirtualColumnCollection。</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnCollection" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.ColumnsPickerControl.SelectedWorkItemType">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.ColumnsPickerControl.ShowBottomButtons">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.ColumnsPickerControl.SpecialAvailableVirtualColumns">
+      <summary>VirtualColumn对象的VirtualColumnCollection。</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnCollection" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.ColumnsPickerControl.ValidateAndApplyControlState">
+      <summary>确保控件的属性在将显示的有效状态并将它们应用于子控件;引发InvalidOperationException错误的异常。 调用控件的父之前的一次显示。</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.Connection">
+      <summary>连接枚举表示组节点可以具有的连接类型(无，，滚动，)。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.Connection.None">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.Connection.Up">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.Connection.Down">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.Connection.Across">
+      <summary />
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.CountChangedEventArgs">
+      <summary>通过的一个参数(bool)简单的EventArgs派生类为EventHandler作为FxCop要求。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.CountChangedEventArgs.#ctor(System.Boolean)">
+      <summary>没有默认构造函数。</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.CountChangedEventArgs.EmptyList">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayField">
+      <summary>此选件类以提取用于包的字段。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayField.#ctor(System.String,System.Int32)">
+    </member>
+    <member name="E:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayField.Changed">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayField.FieldName">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayField.GetInvariantFieldName(System.String,Microsoft.TeamFoundation.WorkItemTracking.Client.FieldDefinitionCollection)">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayField.GetLocalizedFieldName(System.String,Microsoft.TeamFoundation.WorkItemTracking.Client.FieldDefinitionCollection)">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayField.ToString">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayField.Width">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection">
+      <summary>这是保存DisplayFields的集合选件类</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection.#ctor">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection.#ctor(Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection.Add(Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayField)">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection.AddRange(Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayField[])">
+    </member>
+    <member name="E:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection.Changed">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection.Clear">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection.Contains(Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayField)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection.Contains(System.String)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection.CopyTo(Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayField[],System.Int32)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection.Count">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection.Equals(System.Object)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection.GetEnumerator">
+      <returns>返回 <see cref="T:System.Collections.IEnumerator" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection.GetHashCode">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection.IndexOf(Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayField)">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection.IndexOf(System.String)">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection.Insert(System.Int32,Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayField)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection.IsReadOnly">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection.Item(System.Int32)">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayField" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection.Item(System.String)">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayField" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection.Remove(Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayField)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection.RemoveAt(System.Int32)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection.System#Collections#ICollection#IsSynchronized">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection.System#Collections#ICollection#SyncRoot">
+      <returns>返回 <see cref="T:System.Object" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection.System#Collections#IList#Add(System.Object)">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection.System#Collections#IList#Contains(System.Object)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection.System#Collections#IList#IndexOf(System.Object)">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection.System#Collections#IList#Insert(System.Int32,System.Object)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection.System#Collections#IList#IsFixedSize">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection.System#Collections#IList#Item(System.Int32)">
+      <returns>返回 <see cref="T:System.Object" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection.System#Collections#IList#Remove(System.Object)">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayMode">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayMode.Edit">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayMode.Add">
+      <summary />
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.FilterReason">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.FilterReason.Valid">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.FilterReason.Excluded">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.FilterReason.DoesNotExistsInCurrentProject">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.FilterReason.CannotLinkSelf">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.FilterReason.InvalidForLinksControl">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.FilterReason.AccessDenied">
+      <summary />
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.FormElementType">
+      <summary>此枚举列表FORM元素的所有不同的类型。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.FormElementType.RootElement">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.FormElementType.Column">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.FormElementType.Control">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.FormElementType.Group">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.FormElementType.Splitter">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.FormElementType.Tab">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.FormElementType.TabGroup">
+      <summary />
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlFilter">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlFilter.ConvertToPlainText(System.String)">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlFilter.Strip(System.String)">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.IColumnsPickerFieldDefinitionFilter">
+      <summary>筛选FieldDefinition类型的列的接口调用方不支持的。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IColumnsPickerFieldDefinitionFilter.SupportedFieldDefinition(Microsoft.TeamFoundation.WorkItemTracking.Client.FieldDefinition)">
+      <summary>，如果FieldDefinition对象由调用方，支持SupportedFieldDefinition返回true。</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+      <param name="fieldDef">为evaulate的FieldDefinition值。</param>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.IDialogControl">
+      <summary>在链接对话框中承载的所有控件应实现此接口这是向后兼容性支持的旧接口。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IDialogControl.GetDisplayName(System.String)">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IDialogControl.GetUpdatedLink">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Client.Link" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IDialogControl.Initialize(Microsoft.TeamFoundation.WorkItemTracking.Controls.IDialogControlHost,Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayMode,Microsoft.TeamFoundation.WorkItemTracking.Client.Link)">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.IDialogControlHost">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.IDialogControlHost.ServiceProvider">
+      <returns>返回 <see cref="T:System.IServiceProvider" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.IDialogControlHost.TeamFoundationServer">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Client.TeamFoundationServer" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.IDialogControlHost.WorkItem">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Client.WorkItem" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.ILinkDialogControl">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.ILinkDialogControl.GetDisplayName(System.String)">
+      <summary>获取该链接的本地化显示名称</summary>
+      <returns>链接的本地化显示名称</returns>
+      <param name="linkTypeName">链接类型名称</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.ILinkDialogControl.GetUpdatedLinks">
+      <summary>从用户获得的更新链接，如果multiselct设置为false，该数组都应有一个元素</summary>
+      <returns>从用户获得的链接</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.ILinkDialogControl.Initialize(Microsoft.TeamFoundation.WorkItemTracking.Controls.ILinkDialogControlHost,Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayMode,Microsoft.TeamFoundation.WorkItemTracking.Client.Link,System.Boolean)">
+      <summary>Initializies与宿主的控件，架构和现有链接，则编辑模式</summary>
+      <param name="controlHost">链接对话框ControlHost</param>
+      <param name="displayMode">对话框方式(添加或编辑)</param>
+      <param name="link">已编辑的链接， null，如果架构是添加</param>
+      <param name="multiSelect">允许选择多</param>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.ILinkDialogControlHost">
+      <summary>添加/编辑链接此对话框的实现接口并传递到子链接控件</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.ILinkDialogControlHost.IsMultipleSourceMode">
+      <summary>;如果有多个源工作项，则为true。 WorkItem返回其中一个源工作项</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.ILinkDialogControlHost.LinkTypeName">
+      <summary>选定的链接类型的名称</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="E:Microsoft.TeamFoundation.WorkItemTracking.Controls.ILinkDialogControlHost.LinkTypeNameChanged">
+      <summary>，更改，发生链接类型名称</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.ILinkDialogControlHost.ServiceProvider">
+      <summary>宿主为控件显示它只包含对服务(如访问的字体服务提供程序</summary>
+      <returns>返回 <see cref="T:System.IServiceProvider" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.ILinkDialogControlHost.TeamProjectCollection">
+      <summary>TfsTeamProjectCollection宿主与</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Client.TfsTeamProjectCollection" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.ILinkDialogControlHost.WorkItem">
+      <summary>workitem宿主associted。</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Client.WorkItem" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.IResultListDataProvider">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IResultListDataProvider.AddFieldForPaging(System.String)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.IResultListDataProvider.DisplayRowCount">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IResultListDataProvider.GetFieldInfo(System.String,System.Int32@,System.Boolean@)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IResultListDataProvider.GetFieldValue(System.Int32,System.Int32)">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IResultListDataProvider.GetItem(System.Int32)">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Client.WorkItem" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IResultListDataProvider.GetItemId(System.Int32)">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IResultListDataProvider.GetItemIndex(System.Int32)">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IResultListDataProvider.IsItemDirty(System.Int32)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IResultListDataProvider.PageItems(System.Int32[])">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Client.WorkItem" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.IStatusHandler">
+      <summary>定义一个处理程序(宿主)状态更新(如查询或会审编辑)</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IStatusHandler.SetText(System.String)">
+      <summary>设置状态文本</summary>
+      <param name="text">新状态文本</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IStatusHandler.ShowException(System.Exception)">
+      <summary>在宿主窗体approproate显示异常</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.IStatusProvider">
+      <summary>状态(例如在机智窗体的控件) provider</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.IStatusProvider.StatusHandler">
+      <summary>用于获取控件以处理程序实例</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.IStatusHandler" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemClipboard">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemClipboard.CanCopy">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemClipboard.CanCut">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemClipboard.CanPaste">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="E:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemClipboard.ClipboardStatusChanged">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemClipboard.Copy">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemClipboard.Cut">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemClipboard.Paste">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemControl">
+      <summary>此接口包括工作项跟踪控件的最小的定义。</summary>
+    </member>
+    <member name="E:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemControl.AfterUpdateDatasource">
+      <summary>此事件由BeforeUpdateDatasource后的控件实现终止避免起源于更改的无效通知执行由控件。</summary>
+    </member>
+    <member name="E:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemControl.BeforeUpdateDatasource">
+      <summary>，当更新。AfterUpdateDatasource的信号之后的数据源避免起源于更改的无效通知执行由控件时，此事件由控件实现终止状态。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemControl.Clear">
+      <summary>清除当前值控件。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemControl.FlushToDatasource">
+      <summary>刷新当前控件值到数据源(绑定字段)。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemControl.InvalidateDatasource">
+      <summary>无效此控件使用的数据源，这使得控件重新设置基于当前字段绑定到其状态。</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemControl.Properties">
+      <summary>获取或设置可用于初始化状态的自定义属性</summary>
+      <returns>返回 <see cref="T:System.Collections.Specialized.StringDictionary" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemControl.ReadOnly">
+      <summary>获取或设置一个值此控件读取只。</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemControl.SetSite(System.IServiceProvider)">
+      <summary>允许平台提供服务提供程序实现对控件。</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemControl.WorkItemDatasource">
+      <summary>获取或设置工作项数据源绑定到此控件。</summary>
+      <returns>返回 <see cref="T:System.Object" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemControl.WorkItemFieldName">
+      <summary>控件将修改的字段的名称。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemControlHost">
+      <summary>宿主实现的接口</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemControlHost.SendToExcel(Microsoft.TeamFoundation.Client.TfsTeamProjectCollection,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Int32})">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemControlHost.SendToMail(Microsoft.TeamFoundation.Client.TfsTeamProjectCollection,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Int32})">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemControlHost.SendToProject(Microsoft.TeamFoundation.Client.TfsTeamProjectCollection,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Int32})">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemControlHost.ShowQueryResults(Microsoft.TeamFoundation.Client.TfsTeamProjectCollection,System.String,System.String)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemControlHost.ShowWorkItem(Microsoft.TeamFoundation.WorkItemTracking.Client.WorkItem)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemControlHost.SupportsSendToExcel">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemControlHost.SupportsSendToMail">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemControlHost.SupportsSendToProject">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemControlHost2">
+      <summary>由工作项宿主提供显示查询结果的功能来实现接口。如果此接口不支持显示查询结果将继续支持取消机制。</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemControlHost2.SupportsShowQueryResults">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemFilter">
+      <summary>筛选某些项目的接口。CheckBoxResultGrid。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemFilter.ShouldFilterItem(Microsoft.TeamFoundation.WorkItemTracking.Client.WorkItem,System.String@,System.Drawing.Bitmap@)">
+      <summary>检查特定项目是否应在CheckBoxResultGrid筛选</summary>
+      <returns>一个FilterReason枚举值。</returns>
+      <param name="workItem">workitem我们感兴趣</param>
+      <param name="reason">这个原因。该项筛选，在工具提示将显示</param>
+      <param name="icon">(可选)若要显示而不是复选框，如果的图标该项无效(以获得最佳的可视外观使用11x11图标)，如果为null，将使用默认图标</param>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemGridValueProvider">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemGridValueProvider.GetFieldValue(System.Object,System.Int32,System.Int32,System.Int32,System.Object@)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemGridValueProvider.GridCollectionReset(System.Object)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemGridValueProvider.IsItemDirty(System.Int32)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="E:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemGridValueProvider.ItemChanged">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemGridValueProvider.RegisterGrid(System.Object)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemGridValueProvider.UnregisterGrid(System.Object)">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemInformationProvider">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemInformationProvider.AlternateEditorText">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemInformationProvider.Id">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemInformationProvider.IsDirty">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemInformationProvider.IsNew">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemInformationProvider.LaunchAlternateEditor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemInformationProvider.Message">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemInformationProvider.Prepare">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemInformationProvider.ShowWarning">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemInformationProvider.Type">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemToolTip">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemToolTip.Label">
+      <returns>返回 <see cref="T:System.Windows.Forms.Label" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemToolTip.ToolTip">
+      <returns>返回 <see cref="T:System.Windows.Forms.ToolTip" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemUserAction">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemUserAction.HighlightBackColor">
+      <returns>返回 <see cref="T:System.Drawing.Color" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemUserAction.HighlightForeColor">
+      <returns>返回 <see cref="T:System.Drawing.Color" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemUserAction.RequiredText">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemUserAction.UserActionRequired">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="E:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemUserAction.UserActionRequiredChanged">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.LabelPosition">
+      <summary>此枚举列表标签的所有不同的位置(如果有)</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.LabelPosition.None">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.LabelPosition.Top">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.LabelPosition.Left">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.LabelPosition.Right">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.LabelPosition.Bottom">
+      <summary />
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinkDialogRelatedLinkControl">
+      <summary>显示linktype特定控件项目的LinkDialog子控件</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinkDialogRelatedLinkControl.#ctor">
+      <summary>构造函数</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinkDialogRelatedLinkControl.CachedWorkItems">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Client.WorkItem" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinkDialogRelatedLinkControl.Dispose(System.Boolean)">
+      <summary>清理正在使用的所有资源。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinkDialogRelatedLinkControl.GetDisplayName(System.String)">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinkDialogRelatedLinkControl.GetUpdatedLink">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Client.Link" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinkDialogRelatedLinkControl.GetUpdatedLinks">
+      <summary>返回与用户所输入的值的新RelatedLink</summary>
+      <returns>返回 <see cref="T:System.Collections.Generic.IEnumerable`1" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinkDialogRelatedLinkControl.Initialize(Microsoft.TeamFoundation.WorkItemTracking.Controls.IDialogControlHost,Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayMode,Microsoft.TeamFoundation.WorkItemTracking.Client.Link)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinkDialogRelatedLinkControl.Initialize(Microsoft.TeamFoundation.WorkItemTracking.Controls.ILinkDialogControlHost,Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayMode,Microsoft.TeamFoundation.WorkItemTracking.Client.Link,System.Boolean)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinkDialogRelatedLinkControl.UpdateEnabledStates">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinkDialogRelatedLinkControl.UpdateEnabledStates(Microsoft.TeamFoundation.WorkItemTracking.Client.WorkItemLinkTypeEnd)">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinksControl">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinksControl.#ctor">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinksControl.Dispose(System.Boolean)">
+      <summary>清理正在使用的所有资源。</summary>
+      <param name="disposing">如果应释放托管资源，则为 true；否则为 false。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinksControl.Exec(System.Int32)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinksControl.IsBusy">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinksControl.LinkChanged(Microsoft.TeamFoundation.WorkItemTracking.Client.Link)">
+      <summary>调用，当LINK在基础工作项对象进行更改。 使用FieldChanged事件， WorkItemForm控制跟踪更改，并调用所有链接更改的此功能</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinksControl.Microsoft#TeamFoundation#WorkItemTracking#Controls#IWorkItemClipboard#CanCopy">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinksControl.Microsoft#TeamFoundation#WorkItemTracking#Controls#IWorkItemClipboard#CanCut">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinksControl.Microsoft#TeamFoundation#WorkItemTracking#Controls#IWorkItemClipboard#CanPaste">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="E:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinksControl.Microsoft#TeamFoundation#WorkItemTracking#Controls#IWorkItemClipboard#ClipboardStatusChanged">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinksControl.Microsoft#TeamFoundation#WorkItemTracking#Controls#IWorkItemClipboard#Copy">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinksControl.Microsoft#TeamFoundation#WorkItemTracking#Controls#IWorkItemClipboard#Cut">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinksControl.Microsoft#TeamFoundation#WorkItemTracking#Controls#IWorkItemClipboard#Paste">
+    </member>
+    <member name="E:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinksControl.Microsoft#TeamFoundation#WorkItemTracking#Controls#IWorkItemControl#AfterUpdateDatasource">
+    </member>
+    <member name="E:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinksControl.Microsoft#TeamFoundation#WorkItemTracking#Controls#IWorkItemControl#BeforeUpdateDatasource">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinksControl.Microsoft#TeamFoundation#WorkItemTracking#Controls#IWorkItemControl#Clear">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinksControl.Microsoft#TeamFoundation#WorkItemTracking#Controls#IWorkItemControl#FlushToDatasource">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinksControl.Microsoft#TeamFoundation#WorkItemTracking#Controls#IWorkItemControl#InvalidateDatasource">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinksControl.Microsoft#TeamFoundation#WorkItemTracking#Controls#IWorkItemControl#SetSite(System.IServiceProvider)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinksControl.OnFontChanged(System.EventArgs)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinksControl.Properties">
+      <returns>返回 <see cref="T:System.Collections.Specialized.StringDictionary" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinksControl.ReadOnly">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinksControl.Status(System.Int32,System.Boolean@,System.Boolean@)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinksControl.StatusHandler">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.IStatusHandler" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinksControl.WorkItemDatasource">
+      <returns>返回 <see cref="T:System.Object" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.LinksControl.WorkItemFieldName">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl">
+      <summary>PickWorkItemsControl是选择的Currituck workitems从UserControl可以从一个简单的选择器查询检索的从组合服务器或查询填充生成从工作项类型、ID和标题的列表。  列表可以是单个或多个选择。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.#ctor(Microsoft.TeamFoundation.WorkItemTracking.Client.WorkItemStore)">
+      <summary>没有默认构造函数。 创建一个multiSelection视图。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.#ctor(Microsoft.TeamFoundation.WorkItemTracking.Client.WorkItemStore,System.Boolean)">
+      <summary>没有默认构造函数。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.#ctor(Microsoft.TeamFoundation.WorkItemTracking.Client.WorkItemStore,System.Boolean,System.Boolean)">
+      <summary>实例化控件。</summary>
+      <param name="preferTfsVisualStyle">指定控件是否应使用样式约定 TFS 主题的颜色或退出粘贴于 Winforms 默认值。</param>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.BannerLabel">
+      <summary>在工作项查找方法单选按钮上的横幅文本</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.DisplayRowCount">
+      <summary>获取行数结果网格中。</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.Dispose(System.Boolean)">
+      <summary>清理正在使用的所有资源。</summary>
+      <param name="disposing">如果应释放托管资源，则为 true；否则为 false。</param>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.ExcludedWorkItemIds">
+      <summary>作为字符串的ID。</summary>
+      <returns>返回 <see cref="T:System.Collections.Generic.List`1" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.FilterItemsNotInProject">
+      <summary>指示是否筛选掉不为选定的项目的工作项。 如果此特性设置为" true "，并查询返回不是当前选定项的成员然后对话框的工作项，其中显示了工作项不会显示。</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.GetCurrentlySelectedWorkItem">
+      <summary>返回列表中的选定(显示，未选中)工作项。 ，如果未选定的工作项，返回" null "。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.GetWorkItemIds(System.Int32,System.Int32)">
+      <summary>从显示索引特定的大小结果网格获取工作项ID。</summary>
+      <returns>列出工作中显示索引的giev范围项ID。</returns>
+      <param name="startDisplayIndex">开始显示索引。</param>
+      <param name="endDisplayIndex">关闭中显示索引。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.GetWorkItemIndex(System.Int32)">
+      <summary>获取特定工作项中显示索引。</summary>
+      <returns>特定工作项中显示索引。</returns>
+      <param name="workItemId">获取工作项的ID显示索引。</param>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.IdRadioButtonEnabled">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.InitializeForPartialOpen">
+      <summary>指示是否初始化PartialOpen的返回的工作项。  如果" true "，检索的所有WorkItemCollections具有DefaultProjectHint方法调用的原因。</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.Microsoft#TeamFoundation#WorkItemTracking#Controls#IWorkItemFilter#ShouldFilterItem(Microsoft.TeamFoundation.WorkItemTracking.Client.WorkItem,System.String@,System.Drawing.Bitmap@)">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.FilterReason" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.MultiSelect">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.OnLoad(System.EventArgs)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.PickItemsFromRadioButtonEnabled">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="E:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.PickWorkItemsCountChanged">
+    </member>
+    <member name="E:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.PickWorkItemsDoubleClicked">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.PopulateInitially">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.PortfolioDisplayName">
+      <summary>此和PortfolioDisplayName为空或null，则更好的ProjectPickerControl有效，以便用户可以选择一个。  值传递给ProjectPickerControl、PickWorkItemsControl和ColumnsPickerControl子控件。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.QueryRadioButtonEnabled">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.ResetControlState">
+      <summary>重置所有属性设置为默认值并重置控件为默认状态。</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.ResultsEmpty">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.SelectAllAfterRun">
+      <summary>默认为 true。 SingleSelection ListView将仅选择第一项。</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.SelectedQueryId">
+      <returns>返回 <see cref="T:System.Guid" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.SelectedQueryName">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.SelectedRadioButton">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemsPickerRadioButton" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.SelectedWorkItems">
+      <summary>在结果列表视图中选择的工作项对象。</summary>
+      <returns>返回 <see cref="T:System.Collections.Generic.List`1" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.SelectedWorkItemTypeName">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.ToggleCheckState(Microsoft.TeamFoundation.WorkItemTracking.Client.WorkItem)">
+      <summary>，如果控件在“多选模式下，切换选定项的复选框状态。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.ValidateAndApplyControlState">
+      <summary>确保控件的属性在将显示的有效状态并将它们应用于子控件;引发InvalidOperationException错误的异常。 调用控件的父之前的一次显示。</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.WorkItemFieldsToReturn">
+      <summary>作为字符串的Currituck字段。</summary>
+      <returns>返回 <see cref="T:System.Collections.Generic.List`1" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.WorkItemFilter">
+      <summary>自定义筛选器另外筛选。 如果未设置，则筛选当前属性</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemFilter" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.WorkItemIdsText">
+      <summary>在工作项ID文本框中的文本</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="E:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsControl.WorkItemSelectionChanged">
+      <summary>，当所选工作项更改时，发生。</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsCountChangedEventHandler">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.PickWorkItemsDoubleClickedEventHandler">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.ProjectChangedEventArgs">
+      <summary>通过的一个参数(字符串)简单的EventArgs派生类为EventHandler作为FxCop要求。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.ProjectChangedEventArgs.#ctor(System.String)">
+      <summary>没有默认构造函数。</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.ProjectChangedEventArgs.NewProject">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.ProjectPickerControl">
+      <summary>ProjectPickerControl用于选择组合项目使用其他combobox从特定字段命名空间的UserControl。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.ProjectPickerControl.#ctor(Microsoft.TeamFoundation.WorkItemTracking.Client.WorkItemStore)">
+      <summary>没有默认构造函数。</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.ProjectPickerControl.AnyProjectText">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.ProjectPickerControl.Dispose(System.Boolean)">
+      <summary>清理正在使用的所有资源。</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.ProjectPickerControl.Label">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.ProjectPickerControl.PortfolioDisplayName">
+      <summary>此和PortfolioDisplayName为空或null，则更好的ProjectPickerControl有效，以便用户可以选择一个。  值传递给ProjectPickerControl、PickWorkItemsControl和ColumnsPickerControl子控件。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="E:Microsoft.TeamFoundation.WorkItemTracking.Controls.ProjectPickerControl.ProjectPickerProjectChanged">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.ProjectPickerControl.ResetControlState">
+      <summary>重置所有属性设置为默认值并重置控件为默认状态。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.ProjectPickerControl.ValidateAndApplyControlState">
+      <summary>确保控件的属性在将显示的有效状态并将它们应用于子控件;引发InvalidOperationException错误的异常。 调用控件的父之前的一次显示。</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.ProjectPickerProjectChangedEventHandler">
+      <summary>友好显示名称。</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.QueryBuilderControl">
+      <summary>基础结构选件类。 不应在代码中直接调用。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.QueryBuilderControl.#ctor">
+      <summary>，然后才能使用此位生成器之前，构造函数，必须也称为Intialize</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.QueryBuilderControl.#ctor(Microsoft.TeamFoundation.WorkItemTracking.Client.WorkItemStore,System.String)">
+      <summary>构造位生成器并intializes与特定团队项目</summary>
+      <param name="store">查询的WorkItemStore</param>
+      <param name="teamProjectName">团队项目名称与该枚举生成器(在存储必须存在)</param>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.QueryBuilderControl.CanDeleteSelectedCaluses">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.QueryBuilderControl.CanDeleteSelectedClauses">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.QueryBuilderControl.CanGroupSelectedCaluses">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.QueryBuilderControl.CanGroupSelectedClauses">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.QueryBuilderControl.CanInsertCaluse">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.QueryBuilderControl.CanInsertClause">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.QueryBuilderControl.CanUngroupSelectedCaluses">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.QueryBuilderControl.CanUngroupSelectedClauses">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="E:Microsoft.TeamFoundation.WorkItemTracking.Controls.QueryBuilderControl.ClauseFocusChanged">
+    </member>
+    <member name="E:Microsoft.TeamFoundation.WorkItemTracking.Controls.QueryBuilderControl.ContextMenuPopup">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.QueryBuilderControl.DeleteSelectedClauses">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.QueryBuilderControl.Dispose(System.Boolean)">
+    </member>
+    <member name="E:Microsoft.TeamFoundation.WorkItemTracking.Controls.QueryBuilderControl.FilterExpressionChanged">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.QueryBuilderControl.FilterIsValid(System.String@)">
+      <summary>检查筛选器是否有效</summary>
+      <returns>，如果筛选器否则，是有效的错误，则为true</returns>
+      <param name="error">错误消息，如果筛选器无效</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.QueryBuilderControl.GenerateWiql(Microsoft.TeamFoundation.WorkItemTracking.Controls.ResultOptions)">
+      <summary>，如果筛选器表达式无效，请生成一个wiql字符串，引发</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.QueryBuilderControl.GroupSelectedClauses">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.QueryBuilderControl.Initialize(Microsoft.TeamFoundation.WorkItemTracking.Client.WorkItemStore,System.String)">
+      <summary>初始化控件。</summary>
+      <param name="store">查询的WorkItemStore</param>
+      <param name="teamProjectName">团队项目名称与该枚举生成器(在存储必须存在)</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.QueryBuilderControl.InsertClause">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.QueryBuilderControl.LinkingOptionsCollapsed">
+      <summary>将链接的选项(仅OneHop模式折叠状态)</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.QueryBuilderControl.MaximumPreferredHeight">
+      <summary>控件的最大PreferredHeight，用于中间格式计算。  此控件与此不建议多个(除非其小于minimumSize)</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.QueryBuilderControl.PreferredHeight">
+      <summary>queryBuilder的PreferredHeight，对于此类情况，最佳布局容器控件允许一个生成器发展。此范围或更大</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="E:Microsoft.TeamFoundation.WorkItemTracking.Controls.QueryBuilderControl.PreferredHeightChanged">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.QueryBuilderControl.QueryType">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Client.QueryType" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.QueryBuilderControl.RestoreGridFocus">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.QueryBuilderControl.SetWiql(System.String)">
+      <summary>设置一个生成器的wiql表达式(select子句将忽略)</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.QueryBuilderControl.UngroupSelectedClauses">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.ResultOptions">
+      <summary>此选件类封装结果选项的两个基本元素。 1. 列表显示字段2。 sort类范围列表</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.ResultOptions.#ctor">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.ResultOptions.#ctor(Microsoft.TeamFoundation.WorkItemTracking.Client.FieldDefinitionCollection,System.String)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.ResultOptions.#ctor(Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection,Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.ResultOptions.#ctor(Microsoft.TeamFoundation.WorkItemTracking.Controls.ResultOptions,System.Boolean)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.ResultOptions.CheckChangeFlag(Microsoft.TeamFoundation.WorkItemTracking.Controls.ResultOptions.ChangeType,Microsoft.TeamFoundation.WorkItemTracking.Controls.ResultOptions.ChangeType)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.ResultOptions.ColumnWidthsToString">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.ResultOptions.DetermineChange(Microsoft.TeamFoundation.WorkItemTracking.Controls.ResultOptions,Microsoft.TeamFoundation.WorkItemTracking.Controls.ResultOptions)">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.ResultOptions.ChangeType" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.ResultOptions.DisplayFields">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.ResultOptions.GetDefaultColumnWidth(System.String,Microsoft.TeamFoundation.WorkItemTracking.Client.FieldDefinitionCollection)">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.ResultOptions.GetOrderByClause(Microsoft.TeamFoundation.WorkItemTracking.Client.FieldDefinitionCollection)">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.ResultOptions.GetSelectClause(Microsoft.TeamFoundation.WorkItemTracking.Client.FieldDefinitionCollection)">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.ResultOptions.IsLinkQuery">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.ResultOptions.IsTreeQuery">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.ResultOptions.LoadColumnWidthsFromString(System.String)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.ResultOptions.QueryType">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Client.QueryType" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.ResultOptions.SetLinkingQuery(Microsoft.TeamFoundation.WorkItemTracking.Client.QueryType,System.Boolean,Microsoft.TeamFoundation.WorkItemTracking.Client.FieldDefinitionCollection)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.ResultOptions.SortFields">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.ResultOptions.ChangeType">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.ResultOptions.ChangeType.None">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.ResultOptions.ChangeType.Widths">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.ResultOptions.ChangeType.Columns">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.ResultOptions.ChangeType.Sort">
+      <summary />
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortField">
+      <summary>此选件类以提取用于包的SortFields。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortField.#ctor(System.String,System.Boolean)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortField.Ascending">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortField.Direction">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Client.SortType" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection">
+      <summary>这是保存DisplayFields的集合选件类</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection.#ctor">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection.#ctor(Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection.Add(Microsoft.TeamFoundation.WorkItemTracking.Controls.SortField)">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection.AddRange(Microsoft.TeamFoundation.WorkItemTracking.Controls.SortField[])">
+    </member>
+    <member name="E:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection.Changed">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection.Clear">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection.Contains(Microsoft.TeamFoundation.WorkItemTracking.Controls.SortField)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection.Contains(System.String)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection.CopyTo(Microsoft.TeamFoundation.WorkItemTracking.Controls.SortField[],System.Int32)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection.Count">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection.Equals(System.Object)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection.GetEnumerator">
+      <returns>返回 <see cref="T:System.Collections.IEnumerator" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection.GetHashCode">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection.IndexOf(Microsoft.TeamFoundation.WorkItemTracking.Controls.SortField)">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection.IndexOf(System.String)">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection.Insert(System.Int32,Microsoft.TeamFoundation.WorkItemTracking.Controls.SortField)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection.IsReadOnly">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection.Item(System.Int32)">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortField" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection.Item(System.String)">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortField" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection.Remove(Microsoft.TeamFoundation.WorkItemTracking.Controls.SortField)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection.RemoveAt(System.Int32)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection.System#Collections#ICollection#IsSynchronized">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection.System#Collections#ICollection#SyncRoot">
+      <returns>返回 <see cref="T:System.Object" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection.System#Collections#IList#Add(System.Object)">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection.System#Collections#IList#Contains(System.Object)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection.System#Collections#IList#IndexOf(System.Object)">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection.System#Collections#IList#Insert(System.Int32,System.Object)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection.System#Collections#IList#IsFixedSize">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection.System#Collections#IList#Item(System.Int32)">
+      <returns>返回 <see cref="T:System.Object" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.SortFieldCollection.System#Collections#IList#Remove(System.Object)">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.StoryboardLinkingHandler">
+      <summary>用于存储在TFS和链接的演示图板链接提供双击处理程序将工作项。  从有关IClientLinking的注释:“应显式声明为ComVisible改进与插件结构时，不会在对程序集的COM可见性的依赖项</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.StoryboardLinkingHandler.#ctor">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.StoryboardLinkingHandler.ExecuteDefaultAction(System.String,System.String)">
+      <summary>如果可能，以响应来自链接UI，的机智客户端的请求打开URI与指定的演示图板项目URI。</summary>
+      <returns>指示与指定的项目URI是否的布尔值成功打开的URI。</returns>
+      <param name="artifactUri">TFS项目URI从工作项存储返回。</param>
+      <param name="contextInfo">指定的项目的上下文。</param>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumn">
+      <summary>为传递的虚拟列(字段)选件类来回ColumnsPickerControl选件类。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumn.#ctor(System.String,System.String,System.Boolean,System.Boolean)">
+      <summary>完成用于ColumnsPickerControl设置requiredText</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumn.#ctor(System.String,System.String,System.Boolean,System.Object,System.Boolean)">
+      <summary>没有默认构造函数;始终需要非空的字符串。 公开不在ColumnsPickerControl显示的字符串列表框和可能向用户显示由调用方。 MappedDatabaseField是Currituck字段名称此列映射。 这可能与显示。  对于未映射的列将为空或null的。 必需的方式调用方需要此字段，并ColumnsPickerControl不能删除它。 示例是ID字段。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumn.#ctor(System.String,System.String,System.String,System.Boolean,System.Object,System.Boolean)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumn.DatabaseDisplayField">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumn.Display">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumn.GetFakedColumnReferenceNamePrefix">
+      <summary>此方法在这里，以便其他选件类可以检索映射为伪造的列反序列化需要此名称重新生成引用列表，在该工作簿会加载后。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumn.GetNextFakedColumnReferenceName">
+      <summary>我们必须将抵御伪造的列是但是与往返列，伪造的列没有数据库字段映射，因此我们必须具有映射到数据库字段)抵御伪造的此格式引用名称是System.Faked的引用名称(</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumn.IsFaked">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumn.IsFakedReferenceName(System.String,System.Int32@)">
+      <summary>检查引用名称是一个“伪造”名称</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumn.IsRequired">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumn.IsSpecialField">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumn.IsUserField">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumn.MappedDatabaseField">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumn.SpecialFieldInfo">
+      <returns>返回 <see cref="T:System.Object" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumn.ToString">
+      <summary>返回DetailedDisplay，如果需要(完全使用在ColumnsPickerControl);否则返回显示。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnCollection">
+      <summary>虚拟列(字段)列表选件类传递到/从ColumnsPickerControl选件类。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnCollection.#ctor">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnCollection.Add(Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumn)">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnCollection.AddRange(Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnCollection)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnCollection.Clear">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnCollection.Clone">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnCollection" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnCollection.Contains(Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumn)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnCollection.ContainsDisplayName(System.String)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnCollection.CopyTo(Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnCollection,System.Int32)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnCollection.CopyTo(System.Array,System.Int32)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnCollection.Count">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnCollection.FindVirtualColumn(System.String)">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumn" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnCollection.GetEnumerator">
+      <returns>返回 <see cref="T:System.Collections.Generic.IEnumerator`1" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnCollection.IndexOf(Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumn)">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnCollection.Insert(System.Int32,Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumn)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnCollection.IsFixedSize">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnCollection.IsReadOnly">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnCollection.IsSynchronized">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnCollection.Item(System.Int32)">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumn" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnCollection.Remove(Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumn)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnCollection.RemoveAt(System.Int32)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnCollection.Sort(System.Collections.Generic.IComparer{Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumn})">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnCollection.SyncRoot">
+      <returns>返回 <see cref="T:System.Object" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnCollection.System#Collections#IEnumerable#GetEnumerator">
+      <returns>返回 <see cref="T:System.Collections.IEnumerator" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnsComparer">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnsComparer.#ctor">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumnsComparer.Compare(Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumn,Microsoft.TeamFoundation.WorkItemTracking.Controls.VirtualColumn)">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.WebpageControl">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WebpageControl.#ctor">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WebpageControl.Dispose(System.Boolean)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WebpageControl.InvalidateImmediately">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WebpageControl.Microsoft#TeamFoundation#WorkItemTracking#Controls#IStatusProvider#StatusHandler">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.IStatusHandler" />。</returns>
+    </member>
+    <member name="E:Microsoft.TeamFoundation.WorkItemTracking.Controls.WebpageControl.Microsoft#TeamFoundation#WorkItemTracking#Controls#IWorkItemControl#AfterUpdateDatasource">
+    </member>
+    <member name="E:Microsoft.TeamFoundation.WorkItemTracking.Controls.WebpageControl.Microsoft#TeamFoundation#WorkItemTracking#Controls#IWorkItemControl#BeforeUpdateDatasource">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WebpageControl.Microsoft#TeamFoundation#WorkItemTracking#Controls#IWorkItemControl#Clear">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WebpageControl.Microsoft#TeamFoundation#WorkItemTracking#Controls#IWorkItemControl#FlushToDatasource">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WebpageControl.Microsoft#TeamFoundation#WorkItemTracking#Controls#IWorkItemControl#InvalidateDatasource">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WebpageControl.Microsoft#TeamFoundation#WorkItemTracking#Controls#IWorkItemControl#SetSite(System.IServiceProvider)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WebpageControl.Navigate(System.Xml.Linq.XElement,System.Boolean)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WebpageControl.OnInvalidateDatasource">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WebpageControl.Properties">
+      <returns>返回 <see cref="T:System.Collections.Specialized.StringDictionary" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WebpageControl.ReadOnly">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WebpageControl.WorkItemDatasource">
+      <returns>返回 <see cref="T:System.Object" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WebpageControl.WorkItemFieldName">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl">
+      <summary>这是将显示控件启用给定的编辑工作项1.的控件。 对工作项2.的引用。 窗体定义</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl.CachingEnabled">
+      <summary>启用/禁用工作项缓存的boolean标志窗体。</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl.CanCopy">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl.CanCut">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl.CanEnableIme">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl.CanPaste">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl.ClearCache">
+      <summary>清除所有当前缓存的工作项窗体。</summary>
+    </member>
+    <member name="E:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl.ClipboardStatusChanged">
+    </member>
+    <member name="E:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl.ContextMenuPopup">
+      <summary>将激发，当用户权限鼠标单击事件。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl.Copy">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl.Cut">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl.Dispose(System.Boolean)">
+      <summary>清理正在使用的所有资源。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl.FlushUserInput">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl.FormDefinition">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl.GetFirstFieldError">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl.HandleFirstFieldError(System.String)">
+      <summary>将焦点设置到有错误的第一个字段并显示错误消息</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl.Item">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Client.WorkItem" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl.LayoutTargetName">
+      <summary>如果指定要与布局元素目标属性在工作项类型窗体中定义的将匹配的名称。 默认值为“WinForms”;</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl.OnClipboardStatusChanged(System.EventArgs)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl.OnContextMenuPopup(System.Drawing.Point)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl.OnFontChanged(System.EventArgs)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl.Paste">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl.ReadOnly">
+      <summary>只读-返回视图当前是否为只读。 设置此属性显示视图。 必须调用RenderView ()在只读的更改的生效。</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl.RenderView">
+      <summary>RenderView -呈现视图。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl.RenderView(System.Boolean)">
+      <summary>RenderView -呈现视图。</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl.ServiceProvider">
+      <returns>返回 <see cref="T:System.IServiceProvider" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl.ShowAllFieldErrors(System.String,System.Int32)">
+      <summary>将焦点设置到有错误的第一个字段并显示错误消息</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl.StatusHandler">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.IStatusHandler" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl.UserActionRequiredBackColor">
+      <returns>返回 <see cref="T:System.Drawing.Color" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl.UserActionRequiredForeColor">
+      <returns>返回 <see cref="T:System.Drawing.Color" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl.WndProc(System.Windows.Forms.Message@)">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemGridValueProviderEventArgs">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemGridValueProviderEventArgs.#ctor(Microsoft.TeamFoundation.WorkItemTracking.Client.WorkItem)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemGridValueProviderEventArgs.Item">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Client.WorkItem" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemGridValueProviderEventHandler">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemInformationBar">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemInformationBar.#ctor">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemInformationBar.Refresh(Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemInformationProvider)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemInformationBar.Refresh(Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl,System.String,System.String)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemInformationBar.Refresh(Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl,System.String,System.String)">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemInformationProvider">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemInformationProvider.#ctor(Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemFormControl,System.String,System.String)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemInformationProvider.#ctor(Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl,System.String,System.String)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemInformationProvider.AlternateEditorText">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemInformationProvider.Id">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemInformationProvider.IsDirty">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemInformationProvider.IsNew">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemInformationProvider.LaunchAlternateEditor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemInformationProvider.Message">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemInformationProvider.Prepare">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemInformationProvider.ShowWarning">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemInformationProvider.Type">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid">
+      <summary>此选件类提供简单的接口以标显示工作项。  命名IResultListDataProvider和ResultOptions对象(或WorkItemStore和WIQL语句)网格将显示WorkItemCollection或结果目录树的内容链接查询的。  用户可添加自己的列可以利用Columns.Add和通过实现事件CellValueNeeded</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.#ctor">
+      <summary>使用 TFS 主题颜色样式，WorkItemResultGrid 初始化的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.#ctor(System.Boolean)">
+      <summary>初始化给定类型的 WorkItemResultGrid 的新实例。</summary>
+      <param name="preferTfsVisualStyle">指定控件是否应使用样式约定 TFS 主题的颜色或粘贴于 Winforms 默认值。</param>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.BoldDirtyItems">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="E:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.CollectionChanging">
+    </member>
+    <member name="E:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.ContextMenuPopup">
+      <summary>此激发事件时，当用户请求显示上下文菜单。</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.DisplayIsDirtyColumn">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.DisplayRowHeader">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.Dispose(System.Boolean)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.GetItemIndex(System.Int32)">
+      <summary>返回具有该 ID 的项索引</summary>
+      <returns>如果未找到已匹配到此 ID 的第一项的索引，则为 -1</returns>
+      <param name="id">工作项 ID</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.GetSelectedIds">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.GetSelectedRows">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.InternalColumn">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.IsPointOnExpandCollapseImage(System.Int32,System.Drawing.Point)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.IsResettingRows">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.LoadFromQuery(Microsoft.TeamFoundation.WorkItemTracking.Client.Query)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.LoadFromWiql(Microsoft.TeamFoundation.WorkItemTracking.Client.WorkItemStore,System.String)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.OnCellBeginEdit(System.Windows.Forms.DataGridViewCellCancelEventArgs)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.OnCellErrorTextNeeded(System.Windows.Forms.DataGridViewCellErrorTextNeededEventArgs)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.OnCellFormatting(System.Windows.Forms.DataGridViewCellFormattingEventArgs)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.OnCellMouseDown(System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.OnCellPainting(System.Windows.Forms.DataGridViewCellPaintingEventArgs)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.OnCellToolTipTextNeeded(System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.OnCellValueNeeded(System.Windows.Forms.DataGridViewCellValueEventArgs)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.OnCollectionChanging">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.OnColumnDisplayIndexChanged(System.Windows.Forms.DataGridViewColumnEventArgs)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.OnColumnDividerDoubleClick(System.Windows.Forms.DataGridViewColumnDividerDoubleClickEventArgs)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.OnColumnWidthChanged(System.Windows.Forms.DataGridViewColumnEventArgs)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.OnContextMenuPopup(System.Drawing.Point)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.OnCurrentCellChanged(System.EventArgs)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.OnDragDrop(System.Windows.Forms.DragEventArgs)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.OnDragLeave(System.EventArgs)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.OnDragOver(System.Windows.Forms.DragEventArgs)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.OnGotFocus(System.EventArgs)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.OnLostFocus(System.EventArgs)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.OnMouseClick(System.Windows.Forms.MouseEventArgs)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.OnPaint(System.Windows.Forms.PaintEventArgs)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.OnResize(System.EventArgs)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.OnRowPrePaint(System.Windows.Forms.DataGridViewRowPrePaintEventArgs)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.OnScroll(System.Windows.Forms.ScrollEventArgs)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.OnSelectionChanged(System.EventArgs)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.OnValueProviderItemChanged(Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemGridValueProviderEventArgs)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.PauseBeforeFill">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.PreferTfsVisualStyle">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.ProcessCmdKey(System.Windows.Forms.Message@,System.Windows.Forms.Keys)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.RefreshGrid(System.Boolean,System.Boolean,System.Boolean)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.ResultCount">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.ResultOptions">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.ResultOptions" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.ResumeLayout">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.SetAccessibilityObjectName(System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.SetAllExpansion(System.Boolean)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.SetExpansionStateForCurrentSelection(System.Boolean)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.SortBackcolor">
+      <summary>排序列的指定背景色。在使用 Winforms 默认着色时，则忽略。</summary>
+      <returns>返回 <see cref="T:System.Drawing.Color" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.SortForecolor">
+      <summary>排序列的指定前景色。在使用 Winforms 默认着色时，则忽略。</summary>
+      <returns>返回 <see cref="T:System.Drawing.Color" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.StretchLastColumn">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.SuspendLayout">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.UpdateWidths(Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayFieldCollection)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.ValueProvider">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.IWorkItemGridValueProvider" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.VirtualThumbTracking">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.WndProc(System.Windows.Forms.Message@)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.WorkItemCollection">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Client.WorkItemCollection" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.CollectionChangingEventHandler">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.ColumnInfo">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.ColumnInfo.#ctor(System.Int32,System.String,System.Boolean)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.ColumnInfo.#ctor(System.Int32,System.String,System.Boolean,Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayField)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.ColumnInfo.DisplayField">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.DisplayField" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.ColumnInfo.FieldId">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.ColumnInfo.IsSortable">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemResultGrid.ColumnInfo.Name">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemsPickerRadioButton">
+      <summary>单选按钮的枚举控件，使调用方可以设置的默认值。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemsPickerRadioButton.PickItemsFrom">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemsPickerRadioButton.IdQuery">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemsPickerRadioButton.Query">
+      <summary />
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.CanCopy">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.CanCut">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.CanPaste">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="E:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.ContextMenuPopup">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.ContextMenuPopupEvent">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.Copy">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.Cut">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.Dispose">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.Dispose(System.Boolean)">
+      <summary>清理正在使用的所有资源。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.FlushUserInput">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.FormDefinition">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.GetFirstFieldError">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.GetHideControlBorders(System.Windows.DependencyObject)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.GetHideReadOnlyEmptyFields(System.Windows.DependencyObject)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.HandleFirstFieldError(System.String)">
+      <summary>将焦点设置到有错误的第一个字段并显示错误消息</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.HideControlBorders">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.HideControlBordersProperty">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.HideReadOnlyEmptyFields">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.HideReadOnlyEmptyFieldsProperty">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.Item">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Client.WorkItem" />。</returns>
+    </member>
+    <member name="E:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.Microsoft#TeamFoundation#WorkItemTracking#Controls#IWorkItemClipboard#ClipboardStatusChanged">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.Part_WorkItemPanel">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.Paste">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.ReadOnly">
+      <summary>只读-返回视图当前是否为只读。 设置此属性呈现视图。 必须调用RenderView ()在只读的更改的生效。</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.RenderView">
+      <summary>RenderView -呈现视图。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.RenderView(System.Boolean)">
+      <summary>RenderView -呈现视图。</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.ServiceProvider">
+      <returns>返回 <see cref="T:System.IServiceProvider" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.SetHideControlBorders(System.Windows.DependencyObject,System.Boolean)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.SetHideReadOnlyEmptyFields(System.Windows.DependencyObject,System.Boolean)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.ShowAllFieldErrors(System.String,System.Int32)">
+      <summary>将焦点设置到有错误的第一个字段并显示错误消息</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.WpfControls.WorkItemControl.StatusHandler">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.IStatusHandler" />。</returns>
+    </member>
+  </members>
+</doc>

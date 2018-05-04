@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Fonts" standard-reference="http://www.w3.org/TR/css3-fonts/" status="WD" pub-date="2011-10-04">
+
+  <CssAtDirective name="font-face" _locID="font-face-rule" _locAttrData="description" version="3.0" browsers="all" include-root-properties="false" include-root-directives="false" syntax="@font-face { &lt;font-description&gt; }" description="允许链接到在需要时自动激活的字体。这将使作者能够绕过“web-safe”字体的限制，从而允许独立于给定用户的环境中的字体进行一致呈现。" standard-reference="http://www.w3.org/TR/css3-fonts/#the-font-face-rule">
+
+    <CssProperty ref="font"/>
+    <CssProperty ref="font-family"/>
+    <CssProperty ref="font-size"/>
+    <CssProperty ref="font-variant"/>
+    <CssProperty ref="font-weight"/>
+    <CssProperty ref="font-style"/>
+    <CssProperty ref="font-size-adjust"/>
+    <CssProperty ref="font-stretch"/>
+
+    <CssProperty _locID="src" _locAttrData="description" version="3.0" restriction="enum, string, url, identifier" syntax="src: url(font.woff) format('woff');" description="指定包含字体数据的资源。无论字体是可下载的还是本地安装的，都需要此属性。它的值是一个外部引用或本地安装的字体名称的按优先级排列的、用逗号分隔的列表。" standard-reference="http://www.w3.org/TR/css3-fonts/#src-desc">
+
+      <entry value="url()"/>
+      <entry value="local()"/>
+      <entry _locID="src_formatTT" _locAttrData="description" value="format('truetype')" description="TrueType 字体。"/>
+      <entry _locID="src_formatOT" _locAttrData="description" value="format('opentype')" description="OpenType 字体。"/>
+      <entry _locID="src_formatWOFF" _locAttrData="description" value="format('woff')" description="WOFF 字体(Web 开放字体格式)。"/>
+      <entry _locID="src_formatEOT" _locAttrData="description" value="format('embedded-opentype')" description="嵌入的 OpenType 字体。"/>
+      <entry _locID="src_formatSVG" _locAttrData="description" value="format('svg')" description="SVG 字体。"/>
+    </CssProperty>
+
+    <CssProperty _locID="unicode-range" _locAttrData="description" version="3.0" restriction="unicode-range" description="给定字体所支持的 Unicode 字符的范围。初始值为 U+0-10FFFF" syntax="'urange' [, 'urange']*" standard-reference="http://www.w3.org/TR/css3-fonts/#unicode-range"/>
+
+  </CssAtDirective>
+
+  <CssProperty _locID="font-weight" _locAttrData="description" version="1.0" restriction="enum" type="font-weight" syntax="th { $(name): bold; }" description="指定字体中的字形的粗细、黑度或笔画粗细。" standard-reference="http://www.w3.org/TR/css3-fonts/#font-weight-the-font-weight-property"/>
+    
+  <CssPropertyValue type="font-weight">
+    <entry _locID="font-weight_bold" _locAttrData="description" value="bold" description="与 700 相同"/>
+    <entry _locID="font-weight_bolder" _locAttrData="description" value="bolder" description="指定字形比继承值更粗。"/>
+    <entry _locID="font-weight_lighter" _locAttrData="description" value="lighter" description="指定字形比继承值更细。"/>
+    <entry _locID="font-weight_normal" _locAttrData="description" value="normal" description="与 400 相同"/>
+    <entry _locID="font-weight_100" _locAttrData="description" value="100" description="极细"/>
+    <entry _locID="font-weight_200" _locAttrData="description" value="200" description="特细"/>
+    <entry _locID="font-weight_300" _locAttrData="description" value="300" description="纤细"/>
+    <entry _locID="font-weight_400" _locAttrData="description" value="400" description="普通"/>
+    <entry _locID="font-weight_500" _locAttrData="description" value="500" description="中等"/>
+    <entry _locID="font-weight_600" _locAttrData="description" value="600" description="半粗"/>
+    <entry _locID="font-weight_700" _locAttrData="description" value="700" description="加粗"/>
+    <entry _locID="font-weight_800" _locAttrData="description" value="800" description="特粗"/>
+    <entry _locID="font-weight_900" _locAttrData="description" value="900" description="极粗"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="font-stretch" _locAttrData="description" version="3.0" browsers="FF9,IE9" restriction="enum" syntax="div { $(name): expanded; }" description="font-stretch 属性用于扩展或收缩字体的水平宽度。更改相对于浏览器显示的字体的普通宽度。" standard-reference="http://www.w3.org/TR/css3-fonts/#font-stretch0">
+
+    <entry value="normal"/>
+    <entry value="ultra-condensed"/>
+    <entry value="extra-condensed"/>
+    <entry value="condensed"/>
+    <entry value="semi-condensed"/>
+    <entry value="semi-expanded"/>
+    <entry value="expanded"/>
+    <entry value="extra-expanded"/>
+    <entry value="ultra-expanded"/>
+  </CssProperty>
+
+  <CssProperty _locID="font-size" _locAttrData="description" version="1.0" restriction="length, percentage" type="font-size" description="指示字体中的字形的所需高度。对于可缩放的字体，font-size 是应用于字体的 EM 单位的缩放比例。(请注意，某些字形可能会超出其 EM 框。)对于不可缩放的字体，font-size 将转换为绝对单位并与字体的声明的 font-size 匹配，并对匹配的值使用相同的绝对坐标空间。" syntax="div { $(name): 12px; }" standard-reference="http://www.w3.org/TR/css3-fonts/#font-size-prop"/>
+
+  <CssPropertyValue type="font-size">
+    <entry value="large"/>
+    <entry value="larger"/>
+    <entry value="medium"/>
+    <entry value="small"/>
+    <entry value="smaller"/>
+    <entry value="x-large"/>
+    <entry value="x-small"/>
+    <entry value="xx-large"/>
+    <entry value="xx-small"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="font-style" _locAttrData="description" version="1.0" restriction="enum" type="font-style" syntax="body { $(name): italic; }" description="允许选择斜体或倾斜字面。斜体形式通常是自然手写体，而倾斜字面通常是常规字面的倾斜版本。" standard-reference="http://www.w3.org/TR/css3-fonts/#font-style0"/>
+
+  <CssPropertyValue type="font-style">
+    <entry _locID="font-style_italic" _locAttrData="description" value="italic" description="选择标记为“italic”的字体，或者，如果该字体不可用，则选择标记为“oblique”的字体。"/>
+    <entry _locID="font-style_normal" _locAttrData="description" value="normal" description="选择归类为“normal”的字形。"/>
+    <entry _locID="font-style_oblique" _locAttrData="description" value="oblique" description="选择标记为“oblique”的字体。"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="font-variant" _locAttrData="description" version="1.0" restriction="enum" type="font-variant" syntax="div { $(name): small-caps; }" description="指定字体的可变表示形式" standard-reference="http://www.w3.org/TR/css3-fonts/#font-variant-prop"/>
+
+  <CssPropertyValue type="font-variant">
+    <entry _locID="font-variant_normal" _locAttrData="description" value="normal" description="指定未标记为小型大写字母字体的字面。"/>
+    <entry _locID="font-variant_small-caps" _locAttrData="description" value="small-caps" description="指定标记为小型大写字母字体的字体。如果真正的小型大写字母字体不可用，则用户代理应模拟小型大写字母字体。"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="font-family" _locAttrData="description" restriction="font" type="font" version="1.0" description="指定字体系列名称或一般系列名称的优先级列表。用户代理将循环访问系列名称的列表，直到与包含要呈现的字符的字形的可用字体匹配。" syntax="body { $(name): arial, verdana; }" standard-reference="http://www.w3.org/TR/css3-fonts/#font-family0"/>
+
+  <CssPropertyValue type="font">
+    <entry value="serif"/>
+    <entry value="sans-serif"/>
+    <entry value="cursive"/>
+    <entry value="fantasy"/>
+    <entry value="monospace"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="font-size-adjust" _locAttrData="description" version="3.0" browsers="FF3.5,IE10" restriction="number" description="可使用此属性在发生字体回退时保留文本的可读性。它通过调整 font-size 以使 x-height 相同(不管使用的字体如何)来做到这一点。" syntax="div { $(name): 0.58; }" standard-reference="http://www.w3.org/TR/css3-fonts/#font-size-adjust">
+
+    <entry _locID="font-size-adjust_none" _locAttrData="description" value="none" description="不保留字体的 x-height。"/>
+  </CssProperty>
+
+  <CssProperty _locID="font" _locAttrData="description" version="1.0" restriction="font" type="font-weight, font-style, font-variant, font-size" description="用于设置样式表中的同一位置的“font-style”、“font-variant”、“font-weight”、“font-size”、“line-height”和“font-family”的速记属性。此属性的语法基于用于设置与字体相关的多个属性的传统录入速记表示法。" syntax="body { $(name): bold 12px arial, verdana; }" standard-reference="http://www.w3.org/TR/css3-fonts/#propdef-font">
+
+    <entry _locID="font_caption" _locAttrData="description" value="caption" version="3.0" description="用于标题控件(如按钮、下拉列表等)的字体。"/>
+    <entry _locID="font_icon" _locAttrData="description" value="icon" version="3.0" description="用于标签图标的字体。"/>
+    <entry _locID="font_menu" _locAttrData="description" value="menu" version="3.0" description="菜单(例如，下拉列表菜单和菜单列表)中使用的字体。"/>
+    <entry _locID="font_message-box" _locAttrData="description" value="message-box" version="3.0" description="对话框中使用的字体。"/>
+    <entry _locID="font_small-caption" _locAttrData="description" value="small-caption" version="3.0" description="用于标记小型控件的字体。"/>
+    <entry _locID="font_status-bar" _locAttrData="description" value="status-bar" version="3.0" description="窗口状态栏中使用的字体。"/>
+  </CssProperty>
+
+  <CssProperty _locID="font-feature-settings" _locAttrData="description" version="3.0" browsers="IE10" restriction="string, number" description="此属性提供了对 OpenType 字体特性的低级别控制。它旨在提供对未广泛使用但为特定用例所必需的字体特性的访问。" syntax="body { $(name): 'hwid'; }" standard-reference="http://www.w3.org/TR/css3-fonts/#propdef-font-feature-settings">
+
+    <entry _locID="font-feature-settings-normal" _locAttrData="description" value="normal" version="3.0" description="未发生字形替换或定位的更改。"/>
+    <entry value="on" browsers="none"/>
+    <entry value="off" browsers="none"/>
+  </CssProperty>
+
+  <CssProperty _locID="font-kerning" _locAttrData="description" version="3.0" browsers="none" restriction="enum" description="字距调整是字形内部间距的上下文调整。此属性可控制量度字距调整(将使用字体中包含的调整数据)。" syntax="body { $(name): normal; }" standard-reference="http://www.w3.org/TR/css3-fonts/#propdef-font-kerning">
+      
+      <entry value="auto"/>
+      <entry value="normal"/>
+      <entry value="none"/>
+  </CssProperty>
+
+  <CssProperty _locID="font-language-override" _locAttrData="description" version="3.0" browsers="none" restriction="string" description="值“normal”意指在使用 OpenType 字体进行呈现时，将使用文档的语言推断 OpenType 语言系统(用于在呈现时选择语言特定的特性)。" syntax="body { $(name): 'SRB'; }" standard-reference="http://www.w3.org/TR/css3-fonts/#font-language-override-prop">
+
+    <entry _locID="font-language-override_normal" _locAttrData="description" value="normal" description="意指在使用 OpenType 字体进行呈现时，将使用文档的语言推断 OpenType 语言系统，用于在呈现时选择语言特定的特性。"/>
+  </CssProperty>
+
+  <CssProperty _locID="font-synthesis" _locAttrData="description" version="3.0" browsers="none" restriction="enum" description="此属性控制是否允许用户代理在字体系列缺少粗体或斜体字形时合成粗体或斜体字体字形。" syntax="html:lang(ar) { $(name): none; }" standard-reference="http://www.w3.org/TR/css3-fonts/#propdef-font-synthesis">
+
+    <entry _locID="font-synthesis_none" _locAttrData="description" value="none" description="禁用所有合成面。"/>
+    <entry value="style"/>
+    <entry value="weight"/>
+  </CssProperty>
+
+  <CssProperty _locID="font-variant-alternates" _locAttrData="description" version="3.0" browsers="none" restriction="enum" description="对于任何给定字符，字体可提供各种备用字形以及该字符的默认字形。此属性提供了对这些备用字形的选择的控制。" syntax="h2 { $(name): styleset(3,5); }" standard-reference="http://www.w3.org/TR/css3-fonts/#propdef-font-variant-alternates">
+
+    <entry value="normal"/>
+    <entry _locID="font-variant-alternates_stylistic" _locAttrData="description" value="stylistic()" description="允许显示样式替代项。"/>
+    <entry _locID="font-variant-alternates_contextual" _locAttrData="description" value="contextual" description="允许显示上下文替代项。"/>
+    <entry _locID="font-variant-alternates_no-contextual" _locAttrData="description" value="no-contextual" description="禁止显示上下文替代项。"/>
+    <entry _locID="font-variant-alternates_historical-forms" _locAttrData="description" value="historical-forms" description="允许显示历史形式。"/>
+    <entry _locID="font-variant-alternates_styleset" _locAttrData="description" value="styleset()" description="允许显示样式集。"/>
+    <entry _locID="font-variant-alternates_character-variant" _locAttrData="description" value="character-variant()" description="允许显示特定字符的变体。"/>
+    <entry _locID="font-variant-alternates_swash" _locAttrData="description" value="swash()" description="允许显示花体字形。"/>
+    <entry _locID="font-variant-alternates_ornaments" _locAttrData="description" value="ornaments()" description="允许将默认替换为装饰字(如果字体中已提供)。"/>
+    <entry _locID="font-variant-alternates_annotation" _locAttrData="description" value="annotation()" description="允许显示替代批注形式。"/>
+    <entry _locID="font-variant-alternates_ruby" _locAttrData="description" value="ruby" description="允许显示拼音字形。此值仅选择在拼音文本中使用的字形，而不会影响字体缩放。"/>
+  </CssProperty>
+
+  <CssProperty _locID="font-variant-caps" _locAttrData="description" version="3.0" browsers="none" restriction="enum" description="指定对大写形式的控制。" syntax="p { $(name): titling-caps; }" standard-reference="http://www.w3.org/TR/css3-fonts/#font-variant-caps-prop">
+
+    <entry value="normal"/>
+    <entry _locID="font-variant-caps_small-caps" _locAttrData="description" value="small-caps" description="允许显示小型大写字母。小型大写字母的字形通常使用大写字母的形式，但会减小为小写字母的大小。"/>
+    <entry _locID="font-variant-caps_all-small-caps" _locAttrData="description" value="all-small-caps" description="允许对大写字母和小写字母显示小型大写字母。"/>
+    <entry _locID="font-variant-caps_petite-caps" _locAttrData="description" value="petite-caps" description="允许显示小号大写字母。"/>
+    <entry _locID="font-variant-caps_all-petite-caps" _locAttrData="description" value="all-petite-caps" description="允许对大写字母和小写字母显示小号大写字母。"/>
+    <entry _locID="font-variant-caps_titling-caps" _locAttrData="description" value="titling-caps" description="允许显示标题大写字母。"/>
+    <entry _locID="font-variant-caps_unicase" _locAttrData="description" value="unicase" description="允许将大写字母的小型大写字母与常规小写字母一起显示。"/>
+  </CssProperty>
+
+  <CssProperty _locID="font-variant-east-asian" _locAttrData="description" version="3.0" browsers="none" restriction="enum" description="允许控制东亚文本中的字形替换和定位。" syntax="mark { $(name): normal; }" standard-reference="http://www.w3.org/TR/css3-fonts/#font-variant-east-asian-prop">
+
+    <entry value="normal"/>
+    <entry _locID="font-variant-east-asian_hojo-kanji" _locAttrData="description" value="hojo-kanji" description="允许呈现 Hojo 日文汉字形式。"/>
+    <entry _locID="font-variant-east-asian_jis78" _locAttrData="description" value="jis78" description="允许呈现 JIS78 形式。"/>
+    <entry _locID="font-variant-east-asian_jis83" _locAttrData="description" value="jis83" description="允许呈现 JIS83 形式。"/>
+    <entry _locID="font-variant-east-asian_jis90" _locAttrData="description" value="jis90" description="允许呈现 JIS90 形式。"/>
+    <entry _locID="font-variant-east-asian_jis04" _locAttrData="description" value="jis04" description="允许呈现 JIS04 形式。"/>
+    <entry _locID="font-variant-east-asian_nlckanji" _locAttrData="description" value="nlckanji" description="允许呈现 NLC 日文汉字形式。"/>
+    <entry _locID="font-variant-east-asian_" _locAttrData="description" value="simplified" description="允许呈现简体形式。"/>
+    <entry _locID="font-variant-east-asian_traditional" _locAttrData="description" value="traditional" description="允许呈现繁体形式。"/>
+    <entry _locID="font-variant-east-asian_full-width" _locAttrData="description" value="full-width" description="允许呈现全角变体。"/>
+    <entry _locID="font-variant-east-asian_proportional-width" _locAttrData="description" value="proportional-width" description="允许呈现按比例间距的变体。"/>
+  </CssProperty>
+
+  <CssProperty _locID="font-variant-ligatures" _locAttrData="description" version="3.0" browsers="none" restriction="enum" description="指定控制启用或禁用哪些连字。值“normal”意指使用字体设置的默认值。" syntax="div { $(name): historical-ligatures; }" standard-reference="http://www.w3.org/TR/css3-fonts/#font-variant-ligatures-prop">
+
+    <entry _locID="font-variant-ligatures_normal" _locAttrData="description" value="normal" description="意指使用字体设置的默认值。"/>
+    <entry _locID="font-variant-ligatures_common-ligatures" _locAttrData="description" value="common-ligatures" description="允许显示常见连字。"/>
+    <entry _locID="font-variant-ligatures_no-common-ligatures" _locAttrData="description" value="no-common-ligatures" description="禁止显示常见连字。"/>
+    <entry _locID="font-variant-ligatures_additional-ligatures" _locAttrData="description" value="additional-ligatures" description="允许显示其他连字。"/>
+    <entry _locID="font-variant-ligatures_no-additional-ligatures" _locAttrData="description" value="no-additional-ligatures" description="禁止显示其他连字。"/>
+    <entry _locID="font-variant-ligatures_historical-ligatures" _locAttrData="description" value="historical-ligatures" description="允许显示历史连字。"/>
+    <entry _locID="font-variant-ligatures_no-historical-ligatures" _locAttrData="description" value="no-historical-ligatures" description="禁止显示历史连字。"/>
+  </CssProperty>
+
+  <CssProperty _locID="font-variant-numeric" _locAttrData="description" version="3.0" browsers="none" restriction="enum" description="指定对数字形式的控制。" syntax=".amount { $(name): oldstyle-nums diagonal-fractions; }" standard-reference="http://www.w3.org/TR/css3-fonts/#font-variant-numeric-prop">
+
+    <entry value="normal"/>
+    <entry _locID="font-variant-numeric_lining-nums" _locAttrData="description" value="lining-nums" description="允许显示线形数字。"/>
+    <entry _locID="font-variant-numeric_oldstyle-nums" _locAttrData="description" value="oldstyle-nums" description="允许显示旧样式数字。"/>
+    <entry _locID="font-variant-numeric_proportional-nums" _locAttrData="description" value="proportional-nums" description="允许显示比例数字。"/>
+    <entry _locID="font-variant-numeric_tabular-nums" _locAttrData="description" value="tabular-nums" description="允许显示表格格式数字。"/>
+    <entry _locID="font-variant-numeric_diagonal-fractions" _locAttrData="description" value="diagonal-fractions" description="允许显示线形分数(斜分式)。"/>
+    <entry _locID="font-variant-numeric_stacked-fractions" _locAttrData="description" value="stacked-fractions" description="允许显示线形分数(竖式)。"/>
+    <entry _locID="font-variant-numeric_slashed-zero" _locAttrData="description" value="slashed-zero" description="允许显示前面带有斜线的零。"/>
+  </CssProperty>
+
+  <CssProperty _locID="font-variant-position" _locAttrData="description" version="3.0" browsers="none" restriction="enum" description="指定垂直位置" syntax="sub { $(name): subscript; }" standard-reference="http://www.w3.org/TR/css3-fonts/#propdef-font-variant-position">
+
+      <entry value="normal"/>
+      <entry value="sub"/>
+      <entry value="super"/>
+      <entry value="ordinal"/>
+  </CssProperty>
+    
+</CssModule>

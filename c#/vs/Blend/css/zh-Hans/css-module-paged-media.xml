@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Paged Media" standard-reference="http://www.w3.org/TR/css3-page/" status="WD" pub-date="2006-10-10">
+
+  <CssProperty _locID="fit" _locAttrData="description, syntax" version="3.0" browsers="none" restriction="enum" description="给出一个提示，指示在替换的元素的“width”和“height”属性都不为“auto”时如何缩放该元素。" syntax="用逗号分隔的“fit”关键字的列表，其中“fit”= fill | hidden | meet | slice" standard-reference="http://www.w3.org/TR/css3-page/#fit">
+
+    <entry _locID="fit_fill" _locAttrData="description" value="fill" description="独立地缩放对象的高度和宽度，以便使内容正好接触到包含框的所有边缘。"/>
+    <entry _locID="fit_hidden" _locAttrData="description" value="hidden" description="不缩放对象。"/>
+    <entry _locID="fit_meet" _locAttrData="description" value="meet" description="将对象设置得尽可能大，使其宽度 &lt;=“width”，高度 &lt;=“height”，同时保留其纵横比。根据“hidden”值来放置对象。"/>
+    <entry _locID="fit_slice" _locAttrData="description" value="slice" description="将对象设置得尽可能小，使其宽度 &gt;=“width”，高度 &gt;=“height”，同时保留其纵横比。根据“hidden”值来放置对象。"/>
+  </CssProperty>
+
+  <CssProperty _locID="fit-position" _locAttrData="description" version="3.0" browsers="none" type="background-position" restriction="percentage, length" description="给出一个提示，指示在替换的元素的“width”和“height”属性都不为“auto”时如何缩放该元素。" syntax="[ [&lt;percentage&gt; | &lt;length&gt; ]{1,2} | [ [top | center | bottom] || [left | center | right] ] ] | auto" standard-reference="http://www.w3.org/TR/css3-page/#fit">
+
+    <entry _locID="fit-position_fill" _locAttrData="description" value="fill" description="独立地缩放对象的高度和宽度，以便使内容正好接触到包含框的所有边缘。"/>
+    <entry _locID="fit-position_hidden" _locAttrData="description" value="hidden" description="不缩放对象。"/>
+    <entry _locID="fit-position_meet" _locAttrData="description" value="meet" description="将对象设置得尽可能大，使其宽度 &lt;=“width”，高度 &lt;=“height”，同时保留其纵横比。根据“hidden”值来放置对象。"/>
+    <entry _locID="fit-position_slice" _locAttrData="description" value="slice" description="将对象设置得尽可能小，使其宽度 &gt;=“width”，高度 &gt;=“height”，同时保留其纵横比。根据“hidden”值来放置对象。"/>
+  </CssProperty>
+
+  <CssProperty _locID="image-orientation" _locAttrData="description" version="3.0" browsers="none" restriction="angle" syntax="auto | &lt;angle&gt;" description="将图像按顺时针方向旋转" standard-reference="http://www.w3.org/TR/css3-page/#image-orientation">
+
+    <entry _locID="image-orientation_auto" _locAttrData="description" value="auto" description="图像将设置为页的方向"/>
+  </CssProperty>
+
+  <CssProperty _locID="page" _locAttrData="description" version="3.0" browsers="none" restriction="identifier" syntax="auto | &lt;identifier&gt;" description="指定应在其中显示元素的特定类型的页" standard-reference="http://www.w3.org/TR/css3-page/#page">
+
+    <entry value="auto"/>
+  </CssProperty>
+
+  <CssPropertyValue type="page-size" version="3.0">
+    <entry _locID="page-size-val_A5" _locAttrData="description" value="A5" description="ISO A5 媒体: 宽 148mm，高 210mm"/>
+    <entry _locID="page-size-val_A4" _locAttrData="description" value="A4" description="ISO A4 媒体: 宽 210mm，高 297mm"/>
+    <entry _locID="page-size-val_A3" _locAttrData="description" value="A3" description="ISO A3 媒体: 宽 297mm，高 420mm"/>
+    <entry _locID="page-size-val_B5" _locAttrData="description" value="B5" description="ISO B5 媒体: 宽 176mm，高 250mm"/>
+    <entry _locID="page-size-val_B4" _locAttrData="description" value="B4" description="ISO B4 媒体: 宽 250mm，高 353mm"/>
+    <entry _locID="page-size-val_letter" _locAttrData="description" value="letter" description="北美书信媒体: 宽 8.5 英寸，高 11 英寸"/>
+    <entry _locID="page-size-val_legal" _locAttrData="description" value="legal" description="北美法律文书: 宽 8.5 英寸，高 14 英寸"/>
+    <entry _locID="page-size-val_ledger" _locAttrData="description" value="ledger" description="北美分类帐: 宽 × 11 英寸高 17 英寸"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="page-break-before" _locAttrData="description" version="2.0" browsers="all" restriction="enum" syntax="table { $(name): always; }" description="定义元素前面的分页符的隔线。" standard-reference="http://www.w3.org/TR/CSS2/page.html#propdef-page-break-before">
+
+    <entry _locID="page-break-before_always" _locAttrData="description" value="always" description="始终强制在生成的框前面使用分页符。"/>
+    <entry _locID="page-break-before_auto" _locAttrData="description" value="auto" description="不强制也不禁止在生成的框前面使用分页符。"/>
+    <entry _locID="page-break-before_avoid" _locAttrData="description" value="avoid" description="避免在生成的框前面使用分页符。"/>
+    <entry _locID="page-break-before_left" _locAttrData="description" value="left" description="强制在生成的框前面使用一个或两个分页符，以便将下一页设置为左侧页面的格式。"/>
+    <entry _locID="page-break-before_right" _locAttrData="description" value="right" description="强制在生成的框前面使用一个或两个分页符，以便将下一页设置为右侧页面的格式。"/>
+  </CssProperty>
+
+  <CssProperty _locID="page-break-after" _locAttrData="description" version="2.0" browsers="all" restriction="enum" syntax="table { $(name): always; }" description="定义元素后面的分页符的隔线。" standard-reference="http://www.w3.org/TR/CSS2/page.html#propdef-page-break-after">
+
+    <entry _locID="page-break-after_always" _locAttrData="description" value="always" description="始终强制在生成的框后面使用分页符。"/>
+    <entry _locID="page-break-after_auto" _locAttrData="description" value="auto" description="不强制也不禁止在生成的框后面使用分页符。"/>
+    <entry _locID="page-break-after_avoid" _locAttrData="description" value="avoid" description="避免在生成的框后面使用分页符。"/>
+    <entry _locID="page-break-after_left" _locAttrData="description" value="left" description="强制在生成的框后面使用一个或两个分页符，以便将下一页设置为左侧页面的格式。"/>
+    <entry _locID="page-break-after_right" _locAttrData="description" value="right" description="强制在生成的框后面使用一个或两个分页符，以便将下一页设置为右侧页面的格式。"/>
+  </CssProperty>
+
+  <CssProperty _locID="page-break-inside" _locAttrData="description" version="2.0" browsers="C,IE8,O7,S1.3" restriction="enum" syntax="table { $(name): avoid; }" description="定义元素中的分页符的隔线。" standard-reference="http://www.w3.org/TR/CSS2/page.html#propdef-page-break-inside">
+
+    <entry _locID="page-break-inside_auto" _locAttrData="description" value="auto" description="不强制也不禁止在生成的框中使用分页符。"/>
+    <entry _locID="page-break-inside_avoid" _locAttrData="description" value="avoid" description="避免在生成的框中使用分页符。"/>
+  </CssProperty>
+
+  <CssProperty _locID="orphans" _locAttrData="description" version="2.0" browsers="C,IE8,O7,S1.3" restriction="integer" description="指定块元素中必须在页面底部保留的最小行数。" syntax="&lt;integer&gt;" standard-reference="http://www.w3.org/TR/CSS2/page.html#propdef-orphans"/>
+
+  <CssProperty _locID="widows" _locAttrData="description" version="2.0" browsers="C,IE8,O9.5,S1" restriction="integer" description="指定块元素中必须在页面顶部保留的最小行数。" syntax="&lt;integer&gt;" standard-reference="http://www.w3.org/TR/CSS2/page.html#propdef-widows"/>
+
+  <CssAtDirective name="page" _locID="page-rule" _locAttrData="description" version="2.0" include-root-directives="false" syntax="@page" description="指令定义各种页参数。" standard-reference="http://www.w3.org/TR/css3-page/#page-box-page-rule">
+
+    <CssPseudo name=":right" _locID="right-page-selector" _locAttrData="description" version="2.0" type="pseudo-class" syntax="@page :right { margin-left: 4cm; }" description="打印双面文档时，左页和右页的页框可能不同。这可通过页上下文中定义的 CSS 伪类表示。" standard-reference="http://www.w3.org/TR/css3-page/#left-right-first"/>
+
+    <CssPseudo name=":left" _locID="left-page-selector" _locAttrData="description" version="2.0" type="pseudo-class" syntax="@page :left { margin-left: 4cm; }" description="打印双面文档时，左页和右页的页框可能不同。这可通过页上下文中定义的 CSS 伪类表示。" standard-reference="http://www.w3.org/TR/css3-page/#left-right-first"/>
+
+    <CssPseudo name=":first" _locID="first-page-selector" _locAttrData="description" version="2.0" type="pseudo-class" syntax="@page :first { margin-left: 4cm; }" description="打印双面文档时，左页和右页的页框可能不同。这可通过页上下文中定义的 CSS 伪类表示。" standard-reference="http://www.w3.org/TR/css3-page/#left-right-first"/>
+
+    <CssProperty _locID="size" version="2.1" browsers="C,O8" type="page-size" restriction="length" syntax="&lt;length&gt;{1,2} | auto | [ &lt;page-size&gt; || [ portrait | landscape] ]" standard-reference="http://www.w3.org/TR/css3-page/#page-size-prop">
+
+      <entry _locID="size_auto" _locAttrData="description" value="auto" description="页框将设置为 UA 选择的页表的大小和方向。"/>
+      <entry _locID="size_portrait" _locAttrData="description" value="portrait" description="指定横向打印页面内容。"/>
+      <entry _locID="size_landscape" _locAttrData="description" value="landscape" description="指定纵向打印页面内容。"/>
+    </CssProperty>
+
+    <CssProperty _locID="marks" _locAttrData="description" version="2.0-2.0" browsers="none" restriction="enum" description="为分页媒体提供裁剪标记以允许裁剪和对齐打印输出。">
+
+      <entry _locID="marks_crop" _locAttrData="description" value="crop" description="将在页面上打印裁剪标记。"/>
+      <entry _locID="marks_" _locAttrData="description" value="cross" description="将在页面上打印对准标记。"/>
+      <entry _locID="marks_" _locAttrData="description" value="none" description="将不在页面上打印裁剪标记或对准标记。"/>
+    </CssProperty>
+
+    <CssAtDirective name="top-left" _locID="top-left-page-rule" _locAttrData="description" version="3" browsers="none" description="一个宽度可变的框，位于由上边距定义的区域中，且靠近左上角边距框。" standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+    <CssAtDirective name="top-left-corner" _locID="top-left-corner-page-rule" _locAttrData="description" version="3" browsers="none" description="一个宽度固定的框，用于填充由页框的上边距和左边距的相交处定义的区域。" standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+    <CssAtDirective name="top-center" _locID="top-center-page-rule" _locAttrData="description" version="3" browsers="none" description="一个宽度可变的框，位于由上边距定义的区域中，在页面区域中居中，且位于左上角边距框和右上角边距框之间。" standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+    <CssAtDirective name="top-right" _locID="top-right-page-rule" _locAttrData="description" version="3" browsers="none" description="一个宽度可变的框，位于由上边距定义的区域中，且靠近右上角边距框。" standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+    <CssAtDirective name="top-right-corner" _locID="top-right-corner-page-rule" _locAttrData="description" version="3" browsers="none" description="一个框，用于填充由页框的上边距和右边距的相交处定义的区域。" standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+    <CssAtDirective name="left-top" _locID="left-top-page-rule" _locAttrData="description" version="3" browsers="none" description="一个高度可变的框，位于由左边距定义的区域中，且靠近左上角边距框的底部。" standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+    <CssAtDirective name="left-middle" _locID="left-middle-page-rule" _locAttrData="description" version="3" browsers="none" description="一个高度可变的框，位于由左边距定义的区域中，在页面区域中居中，且位于左上角边距框和左下角边距框之间。" standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+    <CssAtDirective name="left-bottom" _locID="left-bottom-page-rule" _locAttrData="description" version="3" browsers="none" description="一个高度可变的框，位于由左边距定义的区域中，且靠近左下角边距框的顶部。" standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+    <CssAtDirective name="right-top" _locID="right-top-page-rule" _locAttrData="description" version="3" browsers="none" description="一个高度可变的框，位于由右边距定义的区域中，且靠近右下角边距框的底部。" standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+    <CssAtDirective name="right-middle" _locID="right-middle-page-rule" _locAttrData="description" version="3" browsers="none" description="一个高度可变的框，位于由右边距定义的区域中，在页面区域中居中，且位于右上角边距框和右下角边距框之间。" standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+    <CssAtDirective name="right-bottom" _locID="right-bottom-page-rule" _locAttrData="description" version="3" browsers="none" description="一个高度可变的框，位于由右边距定义的区域中，且靠近右下角边距框的顶部。" standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+    <CssAtDirective name="bottom-left-corner" _locID="bottom-left-corner-page-rule" _locAttrData="description" version="3" browsers="none" description="一个框，用于填充由页框的下边距和左边距的相交处定义的区域。" standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+    <CssAtDirective name="bottom-left" _locID="bottom-left-page-rule" _locAttrData="description" version="3" browsers="none" description="一个宽度可变的框，位于由下边距定义的区域中，且靠近左下角边距框。" standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+    <CssAtDirective name="bottom-center" _locID="bottom-center-page-rule" _locAttrData="description" version="3" browsers="none" description="一个宽度可变的框，位于由下边距定义的区域中，在页面区域中居中，且位于左下角和右下角边距框之间。" standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+    <CssAtDirective name="bottom-right" _locID="bottom-right-page-rule" _locAttrData="description" version="3" browsers="none" description="一个宽度可变的框，位于由下边距定义的区域中，且靠近右下角边距框。" standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+    <CssAtDirective name="bottom-right-corner" _locID="bottom-center-page-rule" _locAttrData="description" version="3" browsers="none" description="一个框，用于填充由页框的下边距和右边距的相交处定义的区域。" standard-reference="http://www.w3.org/TR/css3-page/#page-box"/>
+
+  </CssAtDirective>
+
+</CssModule>

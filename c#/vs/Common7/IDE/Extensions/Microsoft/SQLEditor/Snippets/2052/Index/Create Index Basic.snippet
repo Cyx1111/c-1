@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <_locDefinition xmlns="urn:locstudio">
+    <_locDefault _loc="locNone"/>
+    <_locTag _loc="locData">Title</_locTag>
+    <_locTag _loc="locData">Description</_locTag>
+    <_locTag _loc="locData">Author</_locTag>
+    <_locTag _loc="locData">ToolTip</_locTag>
+  </_locDefinition>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>创建基本索引</Title>
+      <Shortcut></Shortcut>
+      <Description>创建简单的非聚集索引。</Description>
+      <Author>Microsoft Corporation</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>SchemaName</ID>
+          <ToolTip>架构名称</ToolTip>
+          <Default>dbo</Default>
+        </Literal>
+        <Literal>
+          <ID>TableName</ID>
+          <ToolTip>对其应用索引的表的名称</ToolTip>
+          <Default>TableName</Default>
+        </Literal>
+        <Literal>
+          <ID>IndexName</ID>
+          <ToolTip>索引名称</ToolTip>
+          <Default>IX_TableName_Col1</Default>
+        </Literal>
+        <Literal>
+          <ID>Column1</ID>
+          <ToolTip>对其应用索引的列的名称</ToolTip>
+          <Default>column_1</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="SQL_SSDT">
+        <![CDATA[
+CREATE INDEX $IndexName$
+    ON $SchemaName$.$TableName$
+    ($Column1$)
+]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

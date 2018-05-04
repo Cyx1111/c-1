@@ -1,0 +1,11 @@
+E:\C#\Chapter005\Physical\bin\Debug\Physical.exe.config
+E:\C#\Chapter005\Physical\bin\Debug\Physical.exe
+E:\C#\Chapter005\Physical\bin\Debug\Physical.pdb
+E:\C#\Chapter005\Physical\obj\Debug\Physical.Properties.Resources.resources
+E:\C#\Chapter005\Physical\obj\Debug\Physical.csproj.GenerateResource.Cache
+E:\C#\Chapter005\Physical\obj\Debug\Physical.exe
+E:\C#\Chapter005\Physical\obj\Debug\Physical.pdb
+E:\C#\Chapter005\Physical\obj\Debug\Physical.frmMain.resources
+F:\C#\Physical\bin\Debug\Physical.exe.config
+F:\C#\Physical\obj\Debug\Physical.exe
+F:\C#\Physical\obj\Debug\Physical.pdb

@@ -1,0 +1,8 @@
+F:\vs全部内容\Zhi\GongZuo\bin\Debug\GongZuo.exe.config
+F:\vs全部内容\Zhi\GongZuo\bin\Debug\GongZuo.exe
+F:\vs全部内容\Zhi\GongZuo\bin\Debug\GongZuo.pdb
+F:\vs全部内容\Zhi\GongZuo\obj\Debug\GongZuo.csprojResolveAssemblyReference.cache
+F:\vs全部内容\Zhi\GongZuo\obj\Debug\GongZuo.Myoffice.resources
+F:\vs全部内容\Zhi\GongZuo\obj\Debug\GongZuo.csproj.GenerateResource.Cache
+F:\vs全部内容\Zhi\GongZuo\obj\Debug\GongZuo.exe
+F:\vs全部内容\Zhi\GongZuo\obj\Debug\GongZuo.pdb

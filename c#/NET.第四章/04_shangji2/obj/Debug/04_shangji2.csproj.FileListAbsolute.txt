@@ -1,0 +1,6 @@
+F:\C#\s2_003\04_shangji2\bin\Debug\04_shangji2.exe.config
+F:\C#\s2_003\04_shangji2\bin\Debug\04_shangji2.exe
+F:\C#\s2_003\04_shangji2\bin\Debug\04_shangji2.pdb
+F:\C#\s2_003\04_shangji2\obj\Debug\04_shangji2.csprojResolveAssemblyReference.cache
+F:\C#\s2_003\04_shangji2\obj\Debug\04_shangji2.exe
+F:\C#\s2_003\04_shangji2\obj\Debug\04_shangji2.pdb

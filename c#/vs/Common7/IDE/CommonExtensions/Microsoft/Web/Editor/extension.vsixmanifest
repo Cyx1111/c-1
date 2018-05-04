@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Vsix Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="9fc03ef6-07ed-4a9b-8c2f-9c2a694ef0c3">
+    <Name>Microsoft Visual Studio Web Editor</Name>
+    <Author>Microsoft Corporation</Author>
+    <Version>11.0</Version>
+    <Description>Microsoft Visual Studio Web Editor</Description>
+    <Locale>1033</Locale>
+    <SupportedProducts>
+      <VisualStudio Version="11.0">
+        <Edition>Pro</Edition>
+        <Edition>Express_All</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" />
+    <InstalledByMsi>true</InstalledByMsi>
+    <SystemComponent>true</SystemComponent>
+  </Identifier>
+  <References />
+  <Content>
+    <MefComponent>Microsoft.Web.Editor.dll</MefComponent>
+  </Content>
+</Vsix>

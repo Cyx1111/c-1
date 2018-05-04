@@ -1,0 +1,9 @@
+F:\C#\two\three\bin\Debug\three.exe.config
+F:\C#\two\three\bin\Debug\three.exe
+F:\C#\two\three\bin\Debug\three.pdb
+F:\C#\two\three\obj\Debug\three.csprojResolveAssemblyReference.cache
+F:\C#\two\three\obj\Debug\three.frmMain.resources
+F:\C#\two\three\obj\Debug\three.Properties.Resources.resources
+F:\C#\two\three\obj\Debug\three.csproj.GenerateResource.Cache
+F:\C#\two\three\obj\Debug\three.exe
+F:\C#\two\three\obj\Debug\three.pdb

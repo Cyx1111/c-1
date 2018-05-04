@@ -1,0 +1,6 @@
+F:\C#\NET_day03\NET_day03\bin\Debug\NET_day03.exe.config
+F:\C#\NET_day03\NET_day03\bin\Debug\NET_day03.exe
+F:\C#\NET_day03\NET_day03\bin\Debug\NET_day03.pdb
+F:\C#\NET_day03\NET_day03\obj\Debug\NET_day03.exe
+F:\C#\NET_day03\NET_day03\obj\Debug\NET_day03.pdb
+F:\C#\NET_day03\NET_day03\obj\Debug\NET_day03.csprojResolveAssemblyReference.cache

@@ -1,0 +1,21 @@
+﻿<!--DSL Tools Language Template-->
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TemplateData>
+		<Name Package="{718d98a4-3763-497a-8930-5081a62544ff}" ID="103"/>
+		<Description Package="{718d98a4-3763-497a-8930-5081a62544ff}" ID="102"/>
+		<Icon Package="{718d98a4-3763-497a-8930-5081a62544ff}" ID="201" />
+		<ProjectType>CSharp</ProjectType>
+		<SortOrder>360</SortOrder>
+		<TemplateID>Microsoft.CSharp.ArchitectureTools.Sequence</TemplateID>
+		<NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+        <DefaultName>SequenceDiagram.sequencediagram</DefaultName>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem TargetFileName="$fileinputname$.sequencediagram">blank.sequencediagram</ProjectItem>
+		<ProjectItem TargetFileName="$fileinputname$.sequencediagram.layout">blank.sequencediagram.layout</ProjectItem>
+	</TemplateContent>
+	<WizardExtension>
+		<Assembly>Microsoft.VSDesigner, Version=10.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+		<FullClassName>Microsoft.VSDesigner.ProjectWizard.ItemPropertyWizard</FullClassName>
+	</WizardExtension>
+</VSTemplate>

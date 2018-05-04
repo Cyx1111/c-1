@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EAD75031-52CB-4CDB-9A61-D887A3D77F21}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyKTV</RootNamespace>
+    <AssemblyName>MyKTV</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBHelper.cs" />
+    <Compile Include="FrmAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdd.Designer.cs">
+      <DependentUpon>FrmAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frmamend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmamend.Designer.cs">
+      <DependentUpon>Frmamend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEnter.Designer.cs">
+      <DependentUpon>FrmEnter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frmgyao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmgyao.Designer.cs">
+      <DependentUpon>Frmgyao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmminLoin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmminLoin.Designer.cs">
+      <DependentUpon>FrmminLoin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMusic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMusic.Designer.cs">
+      <DependentUpon>FrmMusic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmsingerName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmsingerName.Designer.cs">
+      <DependentUpon>FrmsingerName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frmsingerurl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmsingerurl.Designer.cs">
+      <DependentUpon>Frmsingerurl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSong.Designer.cs">
+      <DependentUpon>FrmSong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSongurl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSongurl.Designer.cs">
+      <DependentUpon>FrmSongurl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KTVDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KTVDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KTVUtil.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAdd.resx">
+      <DependentUpon>FrmAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmamend.resx">
+      <DependentUpon>Frmamend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEnter.resx">
+      <DependentUpon>FrmEnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmgyao.resx">
+      <DependentUpon>Frmgyao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmminLoin.resx">
+      <DependentUpon>FrmminLoin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMusic.resx">
+      <DependentUpon>FrmMusic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmsingerName.resx">
+      <DependentUpon>FrmsingerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmsingerurl.resx">
+      <DependentUpon>Frmsingerurl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSong.resx">
+      <DependentUpon>FrmSong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSongurl.resx">
+      <DependentUpon>FrmSongurl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="KTVDataSet.xsc">
+      <DependentUpon>KTVDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KTVDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KTVDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KTVDataSet.xss">
+      <DependentUpon>KTVDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\85H58PICWj4_1024.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24320036_170357632000_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ截图20180311192827.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\85H58PICWj4_10241.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\36Z58PICAB5_1024.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15376960-2cbf151ed7eabe80e8216e0594969e00.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\221.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15526014-4711e9e95e29309e237e4911d2b8fe1a-0.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CssModule name="Opera Extensions" standard-reference="http://www.opera.com/docs/specs/presto29/css/o-vendor/s" pub-date="2012-02-23">
+
+  <CssAtDirective name="-o-viewport" _locID="-o-viewport" _locAttrData="description" version="3.0" browsers="O11" include-root-properties="false" include-root-directives="false" syntax="@$(name) { width: 320px; zoom: 0.5; }" description="在 Opera Mobile 11 和更高版本中设置视区属性。" standard-reference="http://dev.w3.org/csswg/css-device-adapt/#the-viewport-rule">
+
+    <CssProperty ref="width">
+      <entry value="device-width"/>
+      <entry value="device-height"/>
+    </CssProperty>
+
+    <CssProperty ref="height">
+      <entry value="device-width"/>
+      <entry value="device-height"/>
+    </CssProperty>
+  </CssAtDirective>
+
+  <CssAtDirective name="-o-keyframes" version="3.0" browsers="O12" syntax="@-o-keyframes animation-name { }" standard-reference="http://www.w3.org/TR/css3-animations/#keyframes"/>
+  
+  <CssProperty _locID="-o-object-fit" _locAttrData="description" version="3.0" browsers="O10.6" restriction="enum" syntax="p { $(name): cover; }" description="object-fit 属性指定替换元素的内容应如何相对于按其使用的高度和宽度创建的框进行缩放。" standard-reference="http://dev.w3.org/csswg/css3-images/#object-fit">
+
+    <entry value="fill"/>
+    <entry value="contain"/>
+    <entry value="cover"/>
+    <entry value="none"/>
+    <entry value="scale-down"/>
+  </CssProperty>
+
+  <CssProperty _locID="-o-object-position" _locAttrData="description, syntax" _locComment="In the 'syntax' attribute, translate only the leading word 'Example:'." version="3.0" browsers="O10.6" restriction="enum, length, percentage" syntax="img { $(name):left top; }" description="确定替换元素在其框内的对齐方式。" standard-reference="http://dev.w3.org/csswg/css3-images/#object-position0">
+
+    <entry value="top"/>
+    <entry value="bottom"/>
+    <entry value="left"/>
+    <entry value="center"/>
+    <entry value="right"/>
+  </CssProperty>
+
+  <CssProperty name="-o-background-size" ref="background-size" browsers="O9.6" syntax="div { $(name): contain; }"/>
+
+  <CssProperty name="-o-border-image" ref="border-image" browsers="O11.6" syntax="div { $(name): url(border.png) 0 5 0 5;}"/>
+
+  <CssProperty name="-o-transform" ref="transform" browsers="O10.5" syntax="div { $(name): rotate(-90deg); }"/>
+
+  <CssProperty name="-o-transform-origin" ref="transform-origin" browsers="O10.5" syntax="div { $(name): 20% 40%; }"/>
+  
+  <CssProperty _locID="-o-table-baseline" _locAttrData="description" version="3.0" browsers="O9.6" restriction="integer" syntax="td { $(name): 2; }" description="确定内联表中应用作其基线的行。" standard-reference="http://www.w3.org/TR/mathml-for-css/"/>
+
+  <CssProperty name="-o-tab-size" ref="tab-size" browsers="O10.6"/>
+
+  <CssProperty name="-o-text-overflow" ref="text-overflow" browsers="O10"/>
+
+  <!-- Transition -->
+
+  <CssProperty name="-o-transition-property" ref="transition-property" browsers="O11.6"/>
+
+  <CssProperty name="-o-transition-duration" ref="transition-duration" browsers="O11.6"/>
+
+  <CssProperty name="-o-transition-timing-function" ref="transition-timing-function" browsers="O11.6"/>
+
+  <CssProperty name="-o-transition-delay" ref="transition-delay" browsers="O11.6"/>
+
+  <CssProperty name="-o-transition" ref="transition" browsers="O11.6"/>
+
+  <!-- Animation -->
+
+  <CssProperty name="-o-animation-name" ref="animation-name" browsers="O12"/>
+
+  <CssProperty name="-o-animation-duration" ref="animation-duration" browsers="O12"/>
+
+  <CssProperty name="-o-animation-fill-mode" ref="animation-fill-mode" browsers="O12"/>
+
+  <CssProperty name="-o-animation-timing-function" ref="animation-timing-function" browsers="O12"/>
+
+  <CssProperty name="-o-animation-iteration-count" ref="animation-iteration-count" browsers="O12"/>
+
+  <CssProperty name="-o-animation-direction" ref="animation-direction" browsers="O12"/>
+
+  <CssProperty name="-o-animation-play-state" ref="animation-play-state" browsers="O12"/>
+
+  <CssProperty name="-o-animation-delay" ref="animation-delay" browsers="O12"/>
+
+  <CssProperty name="-o-animation" ref="animation" browsers="O12"/>
+
+  <!-- Transitions -->
+
+  <CssProperty name="-o-transition-property" ref="transition-property" browsers="O11.5"/>
+
+  <CssProperty name="-o-transition-duration" ref="transition-duration" browsers="O11.5"/>
+
+  <CssProperty name="-o-transition-timing-function" ref="transition-timing-function" browsers="O11.5"/>
+
+  <CssProperty name="-o-transition-delay" ref="transition-delay" browsers="O11.5"/>
+
+  <CssProperty name="-o-transition" ref="transition" browsers="O11.5"/>
+
+  <CssProperty _locID="background">
+    <entry value="-o-linear-gradient()" version="3.0" browsers="O11.1"/>
+    <entry value="-o-repeating-linear-gradient()" version="3.0" browsers="O11.1"/>
+  </CssProperty>
+
+  <CssProperty _locID="background-image">
+    <entry value="-o-linear-gradient()" version="3.0" browsers="O11.1"/>
+    <entry value="-o-repeating-linear-gradient()" version="3.0" browsers="O11.1"/>
+  </CssProperty>
+
+</CssModule>

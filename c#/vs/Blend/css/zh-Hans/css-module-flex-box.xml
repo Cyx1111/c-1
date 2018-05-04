@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Flexible Box Layout" standard-reference="http://www.w3.org/TR/css3-flexbox/" status="WD" pub-date="2012-03-22">
+
+  <CssPropertyValue type="flexdirections">
+    <entry value="row"/>
+    <entry value="row-reverse"/>
+    <entry value="column"/>
+    <entry value="column-reverse"/>
+  </CssPropertyValue>
+
+  <CssPropertyValue type="flexaligns">
+    <entry _locID="flex-align_center" _locAttrData="description" value="center" description="flexbox 项目的外边距框位于线条横轴的中间。"/>
+    <entry _locID="flex-align_stretch" _locAttrData="description" value="stretch" description="如果 flexbox 项目的 cross-size 属性是“auto”之外的任何其他值，则此值等于“start”。"/>
+    <entry _locID="flex-align_baseline" _locAttrData="description" value="baseline" description="将所有 flexbox 项目对齐，以便使它们的基线排列整齐，然后分发内容上方和下方的可用空间。"/>
+    <entry _locID="flex-align_start" _locAttrData="description" value="start" description="使 flexbox 项目的 cross-start 外边距边缘与行的 cross-start 边缘齐平。"/>
+    <entry _locID="flex-align_end" _locAttrData="description" value="end" description="使 flexbox 项目的 cross-end 外边距边缘与行的 cross-end 边缘齐平。"/>
+  </CssPropertyValue>
+
+  <CssPropertyValue type="flexflows">
+    <entry _locID="flex-flow_row" _locAttrData="description" value="row" description="flexbox 的主轴的方向与当前书写模式的内联轴的方向(布局文本的方向)相同。main-start 和 main-end 方向分别等效于当前书写模式的“start”和“end”方向。"/>
+    <entry _locID="flex-flow_row-reverse" _locAttrData="description" value="row-reverse" description="与行相同，只不过将交换 main-start 和 main-end 方向。"/>
+    <entry _locID="flex-flow_column" _locAttrData="description" value="column" description="flexbox 的主轴的方向与当前书写模式的块轴的方向(布局块的方向)相同。main-start 和 main-end 方向分别等效于当前书写模式的“before”和“after”方向。"/>
+    <entry _locID="flex-flow_column-reverse" _locAttrData="description" value="column-reverse" description="与列相同，只不过将交换 main-start 和 main-end 方向。"/>
+    <entry _locID="flex-flow_wrap" _locAttrData="description" value="wrap" description="The flexbox is multi-line. The cross-start direction is equivalent to either the 'start' or 'before' direction of the current writing mode, whichever is in the cross-axis, and the cross-end direction is the opposite direction of cross-start."/>
+    <entry _locID="flex-flow_wrap-reverse" _locAttrData="description" value="wrap-reverse" description="与列相同，只不过将交换 main-start 和 main-end 方向。"/>
+  </CssPropertyValue>
+
+  <CssPropertyValue type="flexpacks">
+    <entry _locID="flex-pack_start" _locAttrData="description" value="start" description="对于普通方向框，将第一个子级的左边缘置于左侧，并将所有额外空间置于最后一个子级之后。对于反向方向框，将最后一个子级的右边缘置于右侧，并将所有额外空间置于第一个子级之前。"/>
+    <entry _locID="flex-pack_end" _locAttrData="description" value="end" description="对于普通方向框，将最后一个子级的右边缘置于右侧，并将所有额外空间置于第一个子级之前。对于反向方向框，将第一个子级的左边缘置于左侧，并将所有额外空间置于最后一个子级之后。"/>
+    <entry _locID="flex-pack_center" _locAttrData="description" value="center" description="均匀划分额外空间，一半置于第一个子级之前，另一半置于最后一个子级之后。"/>
+    <entry _locID="flex-pack_justify" _locAttrData="description" value="justify" description="均匀划分各个子级之间的空间，不将任何额外空间置于第一个子级之前或最后一个子级之后。如果只有一个子级，则将填充值视为它是开头的情况。"/>
+    <entry _locID="flex-pack_distribute" _locAttrData="description" value="distribute" description="线条均匀分布在弹性框中，每侧各占一半空间。"/>
+  </CssPropertyValue>
+
+  <CssPropertyValue type="flexwraps">
+    <entry _locID="flex-wrap_nowrap" _locAttrData="description" value="nowrap" description="弹性框为单线条。cross-start 方向等效于当前书写模式的“start”或“before”方向，以位于横轴上的方向为准，并且 cross-end 方向是 cross-start 的反方向。"/>
+    <entry _locID="flex-pack_wrap" _locAttrData="description" value="wrap" description="弹性框为多线条。cross-start 方向等效于当前书写模式的“start”或“before”方向，以位于横轴上的方向为准，并且 cross-end 方向是 cross-start 的反方向。"/>
+    <entry _locID="flex-pack_wrap-reverse" _locAttrData="description" value="wrap-reverse" description="与“wrap”相同，只不过将交换 cross-start 和 cross-end 方向。"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="display" version="3.0">
+    <entry value="flexbox" browsers="none"/>
+    <entry value="inline-flexbox" browsers="none"/>
+  </CssProperty>
+
+  <CssProperty _locID="flex" _locAttrData="description" version="3.0" browsers="none" restriction="length, number, percentage" syntax="p { $(name): 1 auto; }" description="指定弹性长度的参数:正负弹性和首选大小。" standard-reference="http://www.w3.org/TR/css3-flexbox/#flex">
+
+    <entry value="auto"/>
+    <entry value="none"/>
+  </CssProperty>
+
+  <CssProperty _locID="flex-align" _locAttrData="description" version="3.0" browsers="none" type="flexaligns" restriction="enum" syntax="div { $(name): center; }" description="“flex-align”属性用于更改长度轴中分配可用空间的方式。" standard-reference="http://www.w3.org/TR/css3-flexbox/#flex-align0"/>
+
+  <CssProperty _locID="flex-direction" _locAttrData="description" version="3.0" browsers="none" type="flexdirections" restriction="enum" syntax="div { $(name): column; }" description="指定弹性框项目在弹性框中的放置方式。" standard-reference="http://www.w3.org/TR/css3-flexbox/#flex-direction0"/>
+
+  <CssProperty _locID="flex-flow" _locAttrData="description" version="3.0" browsers="none" type="flexflows" restriction="enum" syntax="div { $(name): column wrap; }" description="指定 flexbox 项目在 flexbox 中的放置方式。" standard-reference="http://www.w3.org/TR/css3-flexbox/#flex-flow0"/>
+
+  <CssProperty _locID="flex-item-align" _locAttrData="description" version="3.0" browsers="none" type="flexaligns" restriction="enum" syntax="div { $(name): center; }" description="“flex-align”属性用于更改长度轴中分配可用空间的方式。" standard-reference="http://www.w3.org/TR/css3-flexbox/#flex-item-align">
+
+    <entry value="auto"/>
+  </CssProperty>
+
+  <CssProperty _locID="flex-line-pack" _locAttrData="description" version="3.0" browsers="none" type="flexpacks" restriction="enum" syntax="div { $(name): justify; }" description="当横轴中存在额外空间时，“flex-line-pack”属性会在弹性框中对齐它的各个线条，与“flex-pack”在主轴中对齐各个项目的方式类似。" standard-reference="http://www.w3.org/TR/css3-flexbox/#flex-line-pack0">
+
+    <entry _locID="flex-line-pack_stretch" _locAttrData="description" value="stretch" description="线条拉伸以占用剩余空间。如果遗留可用空间为负值，则此值与“start”相同。"/>
+  </CssProperty>
+
+  <CssProperty _locID="flex-order" _locAttrData="description" version="3.0" browsers="none" restriction="integer" syntax="p { $(name): 1; }" description="此属性是一个初始值为 1 的整数。" standard-reference="http://www.w3.org/TR/css3-flexbox/#flex-order0"/>
+
+  <CssProperty _locID="flex-pack" _locAttrData="description" version="3.0" browsers="none" type="flexpacks" restriction="enum" syntax="div { $(name): justify; }" description="“flex-pack”属性定义这些填充空间的灵活性。" standard-reference="http://www.w3.org/TR/css3-flexbox/#flex-pack0"/>
+
+  <CssProperty _locID="flex-wrap" _locAttrData="description" version="3.0" browsers="none" type="flexwraps" restriction="enum" syntax="div { $(name): nowrap; }" description="控制弹性框是单线条还是多线条以及横轴的方向，这将影响新线条的堆叠方向以及“flex-align”、“flex-item-align”和“flex-line-pack”属性的含义。" standard-reference="http://www.w3.org/TR/css3-flexbox/#flex-wrap0"/>
+
+</CssModule>

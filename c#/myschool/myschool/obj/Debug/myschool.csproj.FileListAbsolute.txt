@@ -1,0 +1,11 @@
+F:\C#\myschool\myschool\bin\Debug\myschool.exe.config
+F:\C#\myschool\myschool\bin\Debug\myschool.exe
+F:\C#\myschool\myschool\bin\Debug\myschool.pdb
+F:\C#\myschool\myschool\obj\Debug\myschool.csprojResolveAssemblyReference.cache
+F:\C#\myschool\myschool\obj\Debug\myschool.Form1.resources
+F:\C#\myschool\myschool\obj\Debug\myschool.Properties.Resources.resources
+F:\C#\myschool\myschool\obj\Debug\myschool.csproj.GenerateResource.Cache
+F:\C#\myschool\myschool\obj\Debug\myschool.exe
+F:\C#\myschool\myschool\obj\Debug\myschool.pdb
+F:\C#\myschool\myschool\obj\Debug\myschool.Form2.resources
+F:\C#\myschool\myschool\obj\Debug\myschool.Form3.resources

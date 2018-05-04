@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Basic User Interface" standard-reference="http://www.w3.org/TR/css3-ui/" status="WD" pub-date="2012-01-17">
+
+  <CssPseudo name=":default" _locID="default-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF3,IE10,O10,S5" syntax="input:default { color: red; }" description=":default 选择器应用于一个或多个 UI 元素，这些元素是一组类似的元素中的默认元素。此选择器通常应用于上下文菜单项、按钮和选择列表/菜单。" standard-reference="http://www.w3.org/TR/css3-ui/#pseudo-default"/>
+
+  <CssPseudo name=":valid" _locID="valid-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF4,IE10,O10,S5" syntax="input:valid { border-color: green; }" description="当元素对按不同规范定义的数据有效性语义有效或无效时，该元素为 :valid 或 :invalid。" standard-reference="http://www.w3.org/TR/css3-ui/"/>
+
+  <CssPseudo name=":invalid" _locID="invalid-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF4,IE10,O10,S5" syntax="input:invalid { border-color: red; }" description="当元素对按不同规范定义的数据有效性语义有效或无效时，该元素为 :valid 或 :invalid。" standard-reference="http://www.w3.org/TR/css3-ui/"/>
+
+  <CssPseudo name=":in-range" _locID="in-range-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF10,IE10,O9.6,S5.1" syntax="input:in-range { color: green; }" description="应将 min 和 max 属性与 in-range 和 out-of-range 伪类结合使用，无论是对范围输入、数字字段还是任何其他接受这些属性的类型都是如此。" standard-reference="http://www.w3.org/TR/css3-ui/#in-range"/>
+
+  <CssPseudo name=":out-of-range" _locID="out-of-range-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF10,IE10,O9.6,S5.1" syntax="input:out-of-range { color: red; }" description="应将 min 和 max 属性与 in-range 和 out-of-range 伪类结合使用，无论是对范围输入、数字字段还是任何其他接受这些属性的类型都是如此。" standard-reference="http://www.w3.org/TR/css3-ui/#out-of-range"/>
+
+  <CssPseudo name=":required" _locID="required-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF4,IE10,O10,S5" syntax="input:optional { color: yellow; }" description="如果表单元素的值在提交该元素所属的表单之前是必需的或可选的，则该元素为 :required 或 :optional。不是表单元素的元素既不是必需的也不是可选的。" standard-reference="http://www.w3.org/TR/css3-ui/"/>
+
+  <CssPseudo name=":optional" _locID="optional-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF4,IE10,O10,S5" syntax="input:optional { color: yellow; }" description="如果表单元素的值在提交该元素所属的表单之前是必需的或可选的，则该元素为 :required 或 :optional。不是表单元素的元素既不是必需的也不是可选的。" standard-reference="http://www.w3.org/TR/css3-ui/"/>
+
+  <CssPseudo name=":read-only" _locID="read-only-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF10,IE10,O9,S4" syntax="input:read-only { margin: auto; }" description="其内容不是 user-alterable 的元素为 :read-only。但是，其内容是 user-alterable 的元素(如文本输入字段)将被视为处于 :read-write 状态。在典型文档中，大多数元素为 :read-only。" standard-reference="http://www.w3.org/TR/css3-ui/"/>
+
+  <CssPseudo name=":read-write" _locID="read-write-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF10,IE10,O9,S4" syntax="input:read-write { margin: auto 2px; }" description="其内容不是 user-alterable 的元素为 :read-only。但是，其内容是 user-alterable 的元素(如文本输入字段)将被视为处于 :read-write 状态。在典型文档中，大多数元素为 :read-only。" standard-reference="http://www.w3.org/TR/css3-ui/"/>
+
+  <CssPseudo name=":indeterminate" _locID="indeterminate-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF3.6,IE9,O10.6,S3" syntax="input:indeterminate { margin: auto 2px; }" description=":indeterminate 伪类应用于其值处于不定状态的 UI 元素。" standard-reference="http://www.w3.org/TR/css3-ui/#indeterminate"/>
+
+  <CssProperty _locID="outline-color" _locAttrData="description" ref="color" version="2.0" browsers="C,FF1.5,IE8,O8,S1.2" description="轮廓的颜色" standard-reference="http://www.w3.org/TR/css3-ui/#outline-color0">
+
+    <entry _locID="outline-color_invert" _locAttrData="description" value="invert" description="“Invert”应对屏幕上的像素执行颜色反转。这是用于确保焦点边框可见的常见方法，而不管颜色背景如何。"/>
+  </CssProperty>
+
+  <CssProperty _locID="outline-style" _locAttrData="description" ref="border-style" version="2.0" browsers="C,FF1.5,IE8,O8,S1.2" description="轮廓的样式" standard-reference="http://www.w3.org/TR/css3-ui/#outline-style0">
+    <entry version="3.0" value="auto"/>
+  </CssProperty>
+
+  <CssProperty _locID="outline" _locAttrData="description" ref="border" version="2.0" browsers="C,FF1.5,IE8,O8,S1.2" description="速记属性，设置所有三个“outline-style”、“outline-width”和“outline-color”。" standard-reference="http://www.w3.org/TR/css3-ui/#outline0"/>
+
+  <CssProperty _locID="outline-width" _locAttrData="description" ref="border-width" version="2.0" browsers="C,FF1.5,IE8,O8,S1.2" description="轮廓的宽度" standard-reference="http://www.w3.org/TR/css3-ui/#outline-width0"/>
+
+  <CssProperty _locID="outline-offset" _locAttrData="description" version="3.0" browsers="C,FF1.5,O9.5,S1.2" restriction="length" syntax="article { $(name): 15px; }" description="轮廓的宽度" standard-reference="http://www.w3.org/TR/css3-ui/#outline-offset0">
+  </CssProperty>
+
+  <CssProperty _locID="resize" _locAttrData="description" version="3.0" browsers="C,FF4,S3" restriction="enum" syntax="div { $(name): both; }" description="允许控制元素的大小调整机制(例如，大小调整框或小工具)的外观和功能。应用于包含“overflow”而非“visible”的元素。" standard-reference="http://www.w3.org/TR/css3-ui/#resize0">
+
+    <entry _locID="resize_none" _locAttrData="description" value="none" description="UA 不提供针对元素的大小调整机制，并且不为用户提供任何用于调整元素大小的直接操作机制。"/>
+    <entry _locID="resize_both" _locAttrData="description" value="both" description="UA 提供双向大小调整机制以允许用户调整元素的高度和宽度。"/>
+    <entry _locID="resize_horizontal" _locAttrData="description" value="horizontal" description="UA 提供单向水平大小调整机制以允许用户仅调整元素的宽度。"/>
+    <entry _locID="resize_vertical" _locAttrData="description" value="vertical" description="UA 提供单向垂直大小调整机制以允许用户仅调整元素的高度。"/>
+  </CssProperty>
+
+  <CssProperty _locID="text-overflow" _locAttrData="description" version="3.0" browsers="C,FF9,IE5.5,O11.6,S2" restriction="enum" syntax="span { $(name): ellipsis; }" description="例如，文本可以在阻止其换行时溢出" standard-reference="http://dev.w3.org/csswg/css3-ui/#text-overflow">
+
+    <entry _locID="text-overflow_clip" _locAttrData="description" value="clip" description="剪切溢出的内联内容。可能只会呈现一部分字符。"/>
+    <entry _locID="text-overflow_ellipsis" _locAttrData="description" value="ellipsis" description="呈现一个省略号字符(U+2026)来表示剪切的内联内容。"/>
+  </CssProperty>
+
+  <CssProperty _locID="icon" _locAttrData="description" version="3.0" browsers="none" restriction="url" description="使作者能够使用图标等效项设计任何元素的样式。除非将“content”属性设置为值“icon”，否则不会使用/呈现元素的图标。" syntax="auto | 'uri' [, 'uri']*" standard-reference="http://www.w3.org/TR/css3-ui/#icon">
+
+    <entry _locID="icon_auto" _locAttrData="description" value="auto" description="使用用户代理提供的默认通用图标。"/>
+    <entry value="url()"/>
+  </CssProperty>
+
+  <CssPropertyValue type="box-sizings">
+    <entry _locID="box-sizing_content-box" _locAttrData="description" value="content-box" description="CSS2.1 指定的宽度和高度的行为。指定的宽度和高度(以及各自的 min/max 属性)分别适用于元素的内容框的宽度和高度。"/>
+    <entry _locID="box-sizing_border-box" _locAttrData="description" value="border-box" description="此元素的指定的宽度和高度(以及各自的 min/max 属性)确定了元素的边框。"/>
+    <entry _locID="box-sizing_padding-box" _locAttrData="description" value="padding-box" browsers="none" description="此元素的指定的宽度和高度(以及各自的 min/max 属性)确定了元素的边距框。"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="box-sizing" _locAttrData="description" version="3.0" browsers="C,IE8,O8,S5.1" type="box-sizings" restriction="enum" description="CSS3 中增添的框模型。" syntax="div { $(name): content-box; }" standard-reference="http://www.w3.org/TR/css3-ui/#box-sizing"/>
+
+  <CssProperty _locID="cursor" _locAttrData="description" version="2.0" restriction="url, number" description="允许控制元素中的光标外观" syntax="nav { $(name): pointer; }" standard-reference="http://www.w3.org/TR/css3-ui/#cursor0">
+
+    <entry _locID="cursor_auto" _locAttrData="description" value="auto" description="UA 将根据当前上下文确定要显示的光标。"/>
+    <entry _locID="cursor_default" _locAttrData="description" value="default" description="依赖平台的默认光标。通常呈现为一个箭头。"/>
+    <entry _locID="cursor_none" _locAttrData="description" value="none" version="3.0" description="不为元素呈现任何光标。"/>
+    <entry _locID="cursor_context-menu" _locAttrData="description" value="context-menu" version="3.0" description="上下文菜单对光标下面的对象可用。通常呈现为一个箭头，其旁边有一个像小型菜单一样的图形。"/>
+    <entry _locID="cursor_help" _locAttrData="description" value="help" description="帮助对光标下面的对象可用。通常呈现为一个问号或气球。"/>
+    <entry _locID="cursor_pointer" _locAttrData="description" value="pointer" description="光标是指示链接的指针。"/>
+    <entry _locID="cursor_progress" _locAttrData="description" value="progress" version="2.1" description="一个进度指示器。程序正在执行一些处理，但与“wait”不同，用户在此状态下仍可与程序进行交互。通常呈现为一个旋转的沙滩球或一个带手表或沙漏的箭头。"/>
+    <entry _locID="cursor_wait" _locAttrData="description" value="wait" description="指示程序处于忙碌状态，用户应等待。通常呈现为一个手表或沙漏。"/>
+    <entry _locID="cursor_cell" _locAttrData="description" value="cell" version="3.0" description="指示可以选择一个单元格或一组单元格。通常呈现为一个中间带有圆点的粗体加号。"/>
+    <entry _locID="cursor_crosshair" _locAttrData="description" value="crosshair" description="一个简单的十字线(例如，类似于“+”号的短线段)。通常用于指示二维位图选择模式。"/>
+    <entry _locID="cursor_text" _locAttrData="description" value="text" description="指示可以选择的文本。通常呈现为一个垂直 I 形。"/>
+    <entry _locID="cursor_vertical-text" _locAttrData="description" value="vertical-text" version="3.0" description="指示可以选择的垂直文本。通常呈现为一个水平 I 形。"/>
+    <entry _locID="cursor_alias" _locAttrData="description" value="alias" version="3.0" description="指示要创建的内容的别名/快捷方式。通常呈现为一个旁边有小型弯箭头的箭头。"/>
+    <entry _locID="cursor_copy" _locAttrData="description" value="copy" version="3.0" description="指示要复制的内容。通常呈现为一个旁边有小型加号的箭头。"/>
+    <entry _locID="cursor_move" _locAttrData="description" value="move" description="指示要移动的内容。"/>
+    <entry _locID="cursor_no-drop" _locAttrData="description" value="no-drop" version="3.0" description="指示无法将拖动的项目置于当前光标位置。通常呈现为一个包含一个有线条穿过的小圆圈的手形或指针。"/>
+    <entry _locID="cursor_not-allowed" _locAttrData="description" value="not-allowed" version="3.0" description="指示将不会执行请求的操作。通常呈现为一个有线条穿过的圆圈。"/>
+    <entry _locID="cursor_e-resize" _locAttrData="description" value="e-resize" description="指示将移动东边缘。"/>
+    <entry _locID="cursor_n-resize" _locAttrData="description" value="n-resize" description="指示将移动北边缘。"/>
+    <entry _locID="cursor_ne-resize" _locAttrData="description" value="ne-resize" description="指示从东北角开始移动。"/>
+    <entry _locID="cursor_nw-resize" _locAttrData="description" value="nw-resize" description="指示从西北角开始移动。"/>
+    <entry _locID="cursor_s-resize" _locAttrData="description" value="s-resize" description="指示将移动南边缘。"/>
+    <entry _locID="cursor_se-resize" _locAttrData="description" value="se-resize" description="指示从东南角开始移动。"/>
+    <entry _locID="cursor_sw-resize" _locAttrData="description" value="sw-resize" description="指示从西南角开始移动。"/>
+    <entry _locID="cursor_w-resize" _locAttrData="description" value="w-resize" description="指示将移动西边缘。"/>
+    <entry _locID="cursor_ew-resize" _locAttrData="description" value="ew-resize" version="3.0" description="指示双向东西大小调整光标。"/>
+    <entry _locID="cursor_ns-resize" _locAttrData="description" value="ns-resize" version="3.0" description="指示双向南北光标。"/>
+    <entry _locID="cursor_nesw-resize" _locAttrData="description" value="nesw-resize" version="3.0" description="指示双向东北/西南光标。"/>
+    <entry _locID="cursor_nwse-resize" _locAttrData="description" value="nwse-resize" version="3.0" description="指示双向西北/东南光标。"/>
+    <entry _locID="cursor_col-resize" _locAttrData="description" value="col-resize" version="3.0" description="指示可以水平调整项目/列的大小。通常呈现为向左箭头和向右箭头，二者之间用一根竖线分隔开。"/>
+    <entry _locID="cursor_row-resize" _locAttrData="description" value="row-resize" version="3.0" description="指示可以垂直调整项目/行的大小。通常呈现为向上箭头和向下箭头，二者之间用一根水平线分隔开。"/>
+    <entry _locID="cursor_all-scroll" _locAttrData="description" value="all-scroll" version="3.0" description="指示可以沿任意方向滚动项目。通常呈现为包含中间点的向上箭头、向下箭头、向左箭头和向右箭头。"/>
+    <entry _locID="cursor_zoom-in" _locAttrData="description" value="zoom-in" version="3.0" browsers="none" description="指示可以缩放项目，通常呈现为中间有“+”和“-”符号的放大镜，分别表示“放大”和“缩小”。"/>
+    <entry _locID="cursor_zoom-out" _locAttrData="description" value="zoom-out" version="3.0" browsers="none" description="指示可以缩放项目，通常呈现为中间有“+”和“-”符号的放大镜，分别表示“放大”和“缩小”。"/>
+  </CssProperty>
+
+  <CssProperty _locID="nav-index" _locAttrData="description" version="3.0" browsers="O9.5" restriction="number" description="提供用于指定有序导航顺序(也称作“Tab 键顺序”)的 input-method-neutral 方法。" syntax="auto | 'number'" standard-reference="http://www.w3.org/TR/css3-ui/#nav-index0">
+
+    <entry value="auto" description="The element's sequential navigation order is assigned automatically by the user agent."/>
+  </CssProperty>
+
+  <CssProperty _locID="nav-up" _locAttrData="description" version="3.0" browsers="O9.5" restriction="enum, identifier, string" description="提供一种用于控制方向焦点导航的方法。" syntax="auto | 'id' [ current | root | 'target-name' ]?" standard-reference="http://www.w3.org/TR/css3-ui/#nav-up">
+
+    <entry value="auto" description="The user agent automatically determines which element to navigate the focus to in response to directional navigational input."/>
+    <entry value="current"/>
+    <entry value="root"/>
+  </CssProperty>
+
+  <CssProperty _locID="nav-left" ref="nav-up" browsers="O9.5"/>
+  <CssProperty _locID="nav-right" ref="nav-up" browsers="O9.5"/>
+  <CssProperty _locID="nav-down" ref="nav-up" browsers="O9.5"/>
+
+  <CssProperty name="content">
+    <entry value="icon" description="The (pseudo-)element is replaced in its entirety by the resource referenced by its 'icon' property, and treated as a replaced element."/>
+  </CssProperty>
+
+  <CssPropertyValue type="imemodes">
+    <entry value="auto" description="No change is made to the current input method editor state. This is the default."/>
+    <entry value="normal" description="The IME state should be normal; this value can be used in a user style sheet to override the page setting."/>
+    <entry value="active" description="The input method editor is initially active; text entry is performed using it unless the user specifically dismisses it."/>
+    <entry value="inactive" description="The input method editor is initially inactive, but the user may activate it if they wish."/>
+    <entry value="disabled" description="The input method editor is disabled and may not be activated by the user."/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="ime-mode" _locAttrData="description" version="3.0" browsers="FF3,IE5" type="imemodes" restriction="enum" syntax="body { $(name): active; }" description="控制文本字段的输入法编辑器的状态。" standard-reference="http://www.w3.org/TR/css3-ui/#ime-mode"/>
+
+  <CssProperty _locID="user-select" _locAttrData="description" version="3.0" browsers="none" restriction="enum" syntax="div { $(name): text; }" description="控制所选内容的外观。" standard-reference="http://css-infos.net/property/-webkit-user-select">
+
+    <entry value="none"/>
+    <entry value="text"/>
+    <entry value="toggle"/>
+    <entry value="element"/>
+    <entry value="elements"/>
+    <entry value="all"/>
+  </CssProperty>
+  
+</CssModule>

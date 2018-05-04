@@ -1,0 +1,8 @@
+﻿<Browser Name="Internet Explorer 5.5">
+  <Headers>
+    <Header Name="User-Agent" Value="Mozilla/4.0 (compatible; IE 5.5; Windows NT 5.1)" />
+    <Header Name="Accept" Value="*/*" />
+    <Header Name="Accept-Language" Value="{{$IEAcceptLanguage}}" />
+    <Header Name="Accept-Encoding" Value="GZIP" />
+  </Headers>
+</Browser>

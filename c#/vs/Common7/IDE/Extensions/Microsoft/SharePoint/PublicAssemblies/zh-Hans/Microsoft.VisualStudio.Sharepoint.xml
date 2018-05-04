@@ -1,0 +1,3067 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.VisualStudio.SharePoint</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.VisualStudio.SharePoint.AssemblyDeploymentTarget">
+      <summary>指定项目的输出程序集的部署位置。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.AssemblyDeploymentTarget.GlobalAssemblyCache">
+      <summary>指定将程序集部署到全局程序集缓存 (GAC)。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.AssemblyDeploymentTarget.WebApplication">
+      <summary>指定将程序集部署到 Web 应用程序的 \bin 目录。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ClassNameChangedEventArgs">
+      <summary>为类名称更改时引发的事件提供数据。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ClassNameChangedEventArgs.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.ClassNameChangedEventArgs" /> 类的新实例。</summary>
+      <param name="className">当前类名。</param>
+      <param name="oldClassName">重命名操作之前的类名称。</param>
+      <param name="files">要修改的文件。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ClassNameChangedEventArgs.ClassName">
+      <summary>获取或设置当前类的名称。</summary>
+      <returns>一个表示类名称的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ClassNameChangedEventArgs.Files">
+      <summary>获取或设置受类重命名操作影响的文件列表。</summary>
+      <returns>一个提供受重命名操作影响的文件列表的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ClassNameChangedEventArgs.OldClassName">
+      <summary>获取或设置重命名操作之前的类名称。</summary>
+      <returns>一个表示类名称的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ClassNameChangingEventArgs">
+      <summary>为类名称即将更改时引发的事件提供数据。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ClassNameChangingEventArgs.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IList{System.String})">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.ClassNameChangingEventArgs" /> 类的新实例。</summary>
+      <param name="className">当前类名。</param>
+      <param name="newClassName">重命名操作之后的类名称。</param>
+      <param name="files">要修改的文件。</param>
+      <param name="additionalFiles">受重命名操作影响的文件。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ClassNameChangingEventArgs.AdditionalFiles">
+      <summary>除 <see cref="P:Microsoft.VisualStudio.SharePoint.ClassNameChangingEventArgs.Files" /> 中声明的文件外，还获取或设置受重命名操作影响的文件列表。</summary>
+      <returns>受重命名操作影响的文件列表。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ClassNameChangingEventArgs.ClassName">
+      <summary>获取或设置当前类的名称。</summary>
+      <returns>一个表示类名称的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ClassNameChangingEventArgs.Files">
+      <summary>获取或设置受重命名操作影响的文件列表。</summary>
+      <returns>受重命名操作影响的文件列表。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ClassNameChangingEventArgs.NewClassName">
+      <summary>获取或设置重命名操作之后的类名称。</summary>
+      <returns>一个表示类名称的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.DeploymentEventArgs">
+      <summary>为 <see cref="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentStarted" /> 和 <see cref="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentCompleted" /> 事件提供数据。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.DeploymentEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.ISharePointProject,Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.DeploymentEventArgs" /> 类的新实例。</summary>
+      <param name="project">要部署的项目。</param>
+      <param name="deploymentContext">一个提供有关当前部署会话的信息的对象。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.DeploymentEventArgs.DeploymentContext">
+      <summary>获取提供有关当前部署会话的信息的对象。</summary>
+      <returns>一个提供有关当前部署会话的信息的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.DeploymentPathChangedEventArgs">
+      <summary>为 <see cref="E:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentPathChanged" /> 事件提供数据。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.DeploymentPathChangedEventArgs.#ctor(System.String)">
+      <summary>使用部署路径的旧值初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.DeploymentPathChangedEventArgs" /> 类的新实例。</summary>
+      <param name="oldDeploymentPath">发生更改之前的 DeploymentPath 属性值。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.DeploymentPathChangedEventArgs.OldDeploymentPath">
+      <summary>获取原先的 <see cref="P:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentPath" /> 属性值。</summary>
+      <returns>一个表示路径的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.DeploymentStepCompletedEventArgs">
+      <summary>为 <see cref="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.DeploymentStepCompleted" /> 事件提供数据。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.DeploymentStepCompletedEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.ISharePointProjectItem,Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo,Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext)">
+      <summary>使用提供的 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 实例、部署步骤信息和部署上下文来初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.DeploymentStepCompletedEventArgs" /> 类的新实例。</summary>
+      <param name="projectItem">
+        <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 的一个实例。</param>
+      <param name="deploymentStepInfo">刚刚完成的部署步骤。</param>
+      <param name="deploymentContext">当前部署会话的部署上下文。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.DeploymentStepCompletedEventArgs.DeploymentContext">
+      <summary>获取当前部署上下文。</summary>
+      <returns>一个表示当前部署上下文的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.DeploymentStepCompletedEventArgs.DeploymentStepInfo">
+      <summary>获取刚刚完成的部署步骤。</summary>
+      <returns>一个表示刚刚完成的步骤的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.DeploymentStepStartedEventArgs">
+      <summary>为 <see cref="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.DeploymentStepStarted" /> 事件提供数据。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.DeploymentStepStartedEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.ISharePointProjectItem,Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo,Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext,Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflictCollection)">
+      <summary>使用提供的 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 实例、部署步骤信息、部署上下文和部署冲突集合初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.DeploymentStepStartedEventArgs" /> 类的新实例。</summary>
+      <param name="projectItem">一个项目项的实例。</param>
+      <param name="deploymentStepInfo">正在启动的部署步骤。</param>
+      <param name="deploymentContext">当前部署会话的部署上下文。</param>
+      <param name="conflicts">可用于报告部署冲突的部署冲突的集合。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.DeploymentStepStartedEventArgs.Conflicts">
+      <summary>获取与部署步骤关联的部署冲突的集合。</summary>
+      <returns>一个表示部署冲突的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.DeploymentStepStartedEventArgs.DeploymentContext">
+      <summary>获取当前部署上下文。</summary>
+      <returns>一个表示部署上下文的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.DeploymentStepStartedEventArgs.DeploymentStepInfo">
+      <summary>获取有关正在启动的部署步骤的信息。</summary>
+      <returns>一个表示部署步骤信息的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.DeploymentType">
+      <summary>指定要对文件执行的部署类型。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.DeploymentType.NoDeployment">
+      <summary>指定不部署到 SharePoint 的文件。 NoDeployment 的默认路径为空字符串。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.DeploymentType.ElementManifest">
+      <summary>指定将元素清单部署到 SharePoint。 元素清单由功能清单 (feature.xml) 引用。 ElementManifest 的默认路径为 {SharePointRoot}\Template\Features。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.DeploymentType.ElementFile">
+      <summary>指定将元素文件部署到 SharePoint。 元素文件由功能清单 (feature.xml) 引用。 ElementFile 的默认路径为 {SharePointRoot}\Template\Features。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.DeploymentType.TemplateFile">
+      <summary>指定将模板文件部署到 SharePoint。 模板文件由包清单 (manifest.xml) 引用。 TemplateFile 的默认路径为 {SharePointRoot}\Template。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.DeploymentType.RootFile">
+      <summary>指定将根文件部署到 SharePoint。 根文件由包清单 (manifest.xml) 引用。 RootFile 的默认路径为 {SharePointRoot}。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.DeploymentType.ClassResource">
+      <summary>指定将文件作为类资源部署到 SharePoint。 类资源由包清单 (manifest.xml) 引用。 ClassResource 的默认路径为 {ClassResourcePath}。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.DeploymentType.ApplicationResource">
+      <summary>指定将文件作为应用程序资源部署到 SharePoint。 应用程序资源由包清单 (manifest.xml) 引用。 ApplicationResource 的默认路径为：{WebApplicationRoot}\Resources。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.DeploymentType.AppGlobalResource">
+      <summary>指定将文件作为应用程序全局资源部署到 SharePoint。 AppGlobalResource 的默认路径为：{WebApplicationRoot}\App_GlobalResources。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.DeploymentType.PackageOnly">
+      <summary>指定仅标记为“包”的文件，这些文件包含在 WSP 文件中，不带任何部署详细信息。 PackageOnly 的默认路径为空字符串。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.DeploymentType.Resource">
+      <summary>指定将文件作为资源文件部署到 SharePoint。 资源的默认路径为 {SharePointRoot}\Template\Features。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.DeploymentType.DwpFile">
+      <summary>指定在包清单中，标记为“资源”的文件作为 Dwp 文件引用。 Dwp 文件由包清单 (manifest.xml) 引用。 DwpFile 的默认路径为 {WebApplicationRoot}\wpcatalog。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.DeploymentTypeChangedEventArgs">
+      <summary>为 <see cref="E:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentTypeChanged" /> 事件提供数据。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.DeploymentTypeChangedEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.DeploymentType)">
+      <summary>使用部署类型的旧值初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.DeploymentTypeChangedEventArgs" /> 类的新实例。</summary>
+      <param name="oldDeploymentType">更改事件之前的 DeploymentType 属性值。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.DeploymentTypeChangedEventArgs.OldDeploymentType">
+      <summary>获取更改事件之前的 <see cref="P:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentType" /> 属性值。</summary>
+      <returns>一个表示以前的 DeploymentType 属性值的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.IAnnotatedObject">
+      <summary>表示 <see cref="T:Microsoft.VisualStudio.SharePoint.IAnnotationDictionary" />，该类允许关联自定义数据和实现此接口的对象。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations">
+      <summary>获取实例 <see cref="T:Microsoft.VisualStudio.SharePoint.IAnnotationDictionary" />，以便关联自定义数据和实现 <see cref="T:Microsoft.VisualStudio.SharePoint.IAnnotatedObject" /> 接口的对象。</summary>
+      <returns>一个表示自定义数据的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.IAnnotationDictionary">
+      <summary>表示可以与 SharePoint 工具对象模型中的某些对象相关联的自定义数据对象的字典。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.IAnnotationDictionary.Add``1(``0)">
+      <summary>使用键的对象的 <see cref="T:System.Type" /> 将对象添加到该字典。</summary>
+      <param name="value">要添加的对象。</param>
+      <typeparam name="T">要添加的对象的类型。 这是该字典中对象的键。</typeparam>
+      <exception cref="T:System.ArgumentException">字典中已存在相同类型的对象。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.IAnnotationDictionary.GetValue``1">
+      <summary>获取具有指定引用类型的对象。</summary>
+      <returns>如果找到指定键，则为与该键相关联的对象；否则为 null。</returns>
+      <typeparam name="T">要获取的对象的类型。 这是与对象关联的密钥。 此类型必须是引用类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.IAnnotationDictionary.GetValue``1(System.Object)">
+      <summary>获取具有指定引用类型并与指定键相关联的对象。</summary>
+      <returns>如果找到指定键并且对象具有类型 <paramref name="T" />，则为与该键相关联的对象；否则为 null。</returns>
+      <param name="key">要获取的对象的键。</param>
+      <typeparam name="T">要获取的对象的类型。 此类型必须是引用类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.IAnnotationDictionary.Remove``1">
+      <summary>从该字典中移除具有指定 <see cref="T:System.Type" /> 的对象。</summary>
+      <returns>如果成功找到并移除该对象，则为 true；否则为 false。</returns>
+      <typeparam name="T">要移除的对象的类型。 这是与对象关联的密钥。</typeparam>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.IAnnotationDictionary.TryGetValue``1(System.Object,``0@)">
+      <summary>获取具有指定类型并与指定键相关联的对象。</summary>
+      <returns>如果该字典包含具有指定键的对象，并且此对象具有类型 <paramref name="T" />，则为 true；否则为 false。</returns>
+      <param name="key">要获取的对象的键。</param>
+      <param name="value">此方法返回后，如果找到指定的键并且对象具有类型 <paramref name="T" />，则包含与该键相关联的对象；否则，包含 <paramref name="value" /> 参数的类型默认值。 该参数未经初始化即被传递。</param>
+      <typeparam name="T">要获取的对象的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.IAnnotationDictionary.TryGetValue``1(``0@)">
+      <summary>获取具有指定类型的对象。</summary>
+      <returns>如果该字典包含类型为 <paramref name="T" /> 的对象，则为 true；否则为 false。</returns>
+      <param name="value">此方法返回后，如果找到指定的键，则包含与该键相关联的对象；否则，包含 <paramref name="value" /> 参数的类型默认值。 该参数未经初始化即被传递。</param>
+      <typeparam name="T">要获取的对象的类型。 这是与对象关联的密钥。</typeparam>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ICodeRefactoringEvents">
+      <summary>提供用于通知发生重构操作的事件。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ICodeRefactoringEvents.ClassNameChanged">
+      <summary>在更改类名称之后发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ICodeRefactoringEvents.ClassNameChanging">
+      <summary>在即将更改类名称时发生。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.IDeployableFile">
+      <summary>为所有可打包到 WSP 文件且可部署到 SharePoint 的文件提供基接口。 这些文件共享一组与部署相关的属性。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentPath">
+      <summary>获取或设置将在 SharePoint 中部署文件的路径，该路径相对于由 <see cref="P:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentRoot" /> 表示的基路径。</summary>
+      <returns>一个表示文件路径的字符串值。</returns>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentPathChanged">
+      <summary>在更改 <see cref="P:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentPath" /> 时发生。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentRoot">
+      <summary>获取 SharePoint 将存储文件的基路径。</summary>
+      <returns>一个表示文件路径的字符串值。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentType">
+      <summary>获取要对文件执行的部署类型。</summary>
+      <returns>一个表示部署类型的对象。</returns>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentTypeChanged">
+      <summary>在更改 <see cref="P:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentType" /> 时发生。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.IFeatureReceiver">
+      <summary>表示 SharePoint 中的功能接收器。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.IFeatureReceiver.Assembly">
+      <summary>获取或设置添加到功能（包含此 SharePoint 项目项）的功能接收器的程序集。</summary>
+      <returns>一个表示程序集名称的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.IFeatureReceiver.ClassName">
+      <summary>获取或设置添加到功能（包含此 SharePoint 项目项）的功能接收器的类。</summary>
+      <returns>一个表示类名称的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.IFeatureReceiver.ProjectItem">
+      <summary>获取对父项目项的引用。</summary>
+      <returns>对项目的引用。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.IMappedFolder">
+      <summary>表示 SharePoint 项目中映射到 SharePoint 中某个位置的文件夹。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.IMappedFolder.DeploymentLocation">
+      <summary>获取或设置映射文件夹映射到的 SharePoint 位置。 此路径为 SharePoint 根目录的相对路径。</summary>
+      <returns>表示路径的字符串。</returns>
+      <exception cref="T:System.ArgumentException">当路径设置为绝对路径、包含“...”或含有非法字符时发生。</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.IMappedFolder.FolderType">
+      <summary>获取映射文件夹的类型。 文件夹类型派生自 SharePoint 中公共位置的映射文件夹的位置。</summary>
+      <returns>映射文件夹类型。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.IMappedFolderCollection">
+      <summary>表示 SharePoint 项目中的已映射文件夹的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.IMappedFolderCollection.Add(Microsoft.VisualStudio.SharePoint.MappedFolderType)">
+      <summary>将具有指定类型的映射文件夹添加到当前 SharePoint 项目中，并将映射文件夹添加到项目的包中。</summary>
+      <returns>已创建的映射文件夹。</returns>
+      <param name="folderType">要创建的映射文件夹的类型。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="folderType" /> 参数为 <see cref="F:Microsoft.VisualStudio.SharePoint.MappedFolderType.Other" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.IMappedFolderCollection.Add(Microsoft.VisualStudio.SharePoint.MappedFolderType,System.Boolean)">
+      <summary>将具有指定类型的映射文件夹添加到当前 SharePoint 项目中。</summary>
+      <returns>已创建的映射文件夹。</returns>
+      <param name="folderType">要创建的映射文件夹的类型。</param>
+      <param name="skipAutoPackage">在项目中自动地将此映射文件夹添加到包中则为 false，否则为 true。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="folderType" /> 参数为 <see cref="F:Microsoft.VisualStudio.SharePoint.MappedFolderType.Other" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.IMappedFolderCollection.Add(System.String)">
+      <summary>将具有指定部署路径的映射文件夹添加到当前 SharePoint 项目中，并将映射文件夹添加到项目的包中。</summary>
+      <returns>已创建的映射文件夹。</returns>
+      <param name="deploymentPath">映射文件夹所映射到的 SharePoint 中的路径。 此路径为 SharePoint 配置单元的根的相对路径。 如果此文件夹当前不存在，则在解决方案部署时创建文件夹。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.IMappedFolderCollection.Add(System.String,System.Boolean)">
+      <summary>向当前 SharePoint 项目添加具有指定部署路径的映射文件夹。</summary>
+      <returns>已创建的映射文件夹。</returns>
+      <param name="deploymentPath">映射文件夹所映射到的 SharePoint 中的路径。 此路径为 SharePoint 配置单元的根的相对路径。 如果此文件夹当前不存在，则在解决方案部署时创建文件夹。</param>
+      <param name="skipAutoPackage">在项目中自动地将此映射文件夹添加到包中则为 false，否则为 true。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.IMappedFolderCollection.Project">
+      <summary>获取与该映射文件夹集合相关联的 SharePoint 项目。</summary>
+      <returns>与该映射文件夹集合相关联的 SharePoint 项目。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.IMenuItem">
+      <summary>表示可添加到 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 或 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode" /> 的上下文菜单中的菜单项。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.IMenuItem.Click">
+      <summary>单击菜单命令时发生。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.IMenuItem.IsEnabled">
+      <summary>获取或设置是否启用且可以执行菜单命令。</summary>
+      <returns>如果启用菜单命令，则为 True；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.IMenuItem.SortOrder">
+      <summary>获取菜单命令在 UI 中的排序顺序。 默认值为 0。</summary>
+      <returns>一个表示排序顺序的值。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.IMenuItem.Text">
+      <summary>获取或设置菜单命令文本。</summary>
+      <returns>一个表示菜单命令文本的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.IMenuItemCollection">
+      <summary>表示在 <see cref="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemMenuItemsRequested" /> 事件处理程序中动态添加的菜单项的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.IMenuItemCollection.Add(System.String)">
+      <summary>用指定的文本创建并添加新的菜单项实例。</summary>
+      <returns>一个表示添加到集合中的菜单项的对象。</returns>
+      <param name="text">上下文菜单中显示的菜单项的文本。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.IMenuItemCollection.Add(System.String,System.Int32)">
+      <summary>用指定的文本和排序顺序创建并添加新的菜单项实例。</summary>
+      <returns>一个表示添加到集合中的菜单项的对象。</returns>
+      <param name="text">上下文菜单中显示的菜单项的文本。</param>
+      <param name="sortOrder">指定菜单项的排序顺序的数字。 默认值为 0。 若要在默认排序顺序之前插入项，请指定一个负数。 若要在默认排序顺序之后插入项，请指定一个正数。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.INotifyObjectDisposed">
+      <summary>实现此接口的类会在释放对象时通知您。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.INotifyObjectDisposed.Disposed">
+      <summary>在释放对象时发生。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.INotifyObjectDisposed.IsDisposed">
+      <summary>获取对象是否已释放。</summary>
+      <returns>如果对象已释放，则为 True；否则为 false。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.INotifyObjectDisposing">
+      <summary>实现此接口的类会在释放对象时通知您。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.INotifyObjectDisposing.Disposing">
+      <summary>在正在释放对象时发生。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.INotifyObjectDisposing.IsDisposing">
+      <summary>获取是否正在释放对象。</summary>
+      <returns>如果正在释放对象，则为 True；否则为 false。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.IObservableModelElement">
+      <summary>表示公开正在更改/已更改属性事件的 DSL 模型元素。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.IObservableModelElement.PropertyChanged">
+      <summary>在 DSL 模型元素更改后发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.IObservableModelElement.PropertyChanging">
+      <summary>在更改 DSL 模型元素时发生。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.IPropertySourceCollection">
+      <summary>表示在“属性”窗口中显示的属性源对象的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.IPropertySourceCollection.Add(System.Object)">
+      <summary>将新属性源对象添加到 <see cref="T:Microsoft.VisualStudio.SharePoint.IPropertySourceCollection" /> 集合。</summary>
+      <param name="propertySource">要添加的属性源对象。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISafeControlEntry">
+      <summary>表示在部署时添加到 SharePoint 的 web.config 文件的安全控制项。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISafeControlEntry.AssemblyName">
+      <summary>获取或设置安全控制项的完全限定程序集名称。</summary>
+      <returns>一个表示完全限定程序集名称的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISafeControlEntry.IsSafe">
+      <summary>获取或设置安全控制项是否安全。</summary>
+      <returns>如果该控件处于安全状态，则为 True；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISafeControlEntry.IsSafeAgainstScript">
+      <summary>获取或设置该控件是否可防止参与者注入脚本，并因此使参与者可以编辑该控件。</summary>
+      <returns>如果该控件处于安全状态，则为 True；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISafeControlEntry.Name">
+      <summary>获取或设置安全控制项的名称。 此属性仅在设计时使用。</summary>
+      <returns>一个表示安全控制项名称的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISafeControlEntry.NamespaceName">
+      <summary>获取或设置安全控制项的命名空间。</summary>
+      <returns>一个表示命名空间的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISafeControlEntry.ProjectItem">
+      <summary>获取对父项目项的引用。</summary>
+      <returns>对项目项的引用。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISafeControlEntry.TypeName">
+      <summary>获取或设置安全控制项的类型名称。</summary>
+      <returns>一个表示安全控制项的类型名称的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISafeControlEntryCollection">
+      <summary>表示安全控制项的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISafeControlEntryCollection.Add(System.String,System.String,System.String,System.Boolean)">
+      <summary>将安全控制项添加到集合中。</summary>
+      <returns>安全控制项的实例。</returns>
+      <param name="namespaceName">安全控制项的命名空间。</param>
+      <param name="typeName">安全控制项的类型。</param>
+      <param name="assemblyName">安全控制项的完全限定程序集名称。</param>
+      <param name="isSafe">指定安全控制项是否安全。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISafeControlEntryCollection.Clear">
+      <summary>从集合中移除所有安全控制项。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISafeControlEntryCollection.ProjectItem">
+      <summary>获取对父项目项的引用。</summary>
+      <returns>对项目项的引用。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISafeControlEntryCollection.Remove(Microsoft.VisualStudio.SharePoint.ISafeControlEntry)">
+      <summary>从 <see cref="T:Microsoft.VisualStudio.SharePoint.ISafeControlEntryCollection" /> 集合中移除安全控制项。</summary>
+      <returns>如果找到了安全控制项并将其移除，则为 True；否则为 false。</returns>
+      <param name="entry">要移除的安全控制项。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISharePointCollection`1">
+      <summary>表示项的只读集合。 它不会提供用于修改集合内容的公共方法。 它在 SharePoint 项目模型中用作许多集合的基类型。 这些集合通常在内部更改，并且可以使用事件监视这些更改。</summary>
+      <typeparam name="T">项参数的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointCollection`1.Contains(`0)">
+      <summary>获取提供的项是否为此集合的成员。</summary>
+      <returns>如果项属于集合，则为 True；否则为 false。</returns>
+      <param name="item">要检查其是否包含在集合中的项。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointCollection`1.CopyTo(`0[],System.Int32)">
+      <summary>将此集合中的项复制到数组中。</summary>
+      <param name="array">用于接收集合中的项的数组。</param>
+      <param name="index">指定复制项的起始位置的数组索引。 若要从数组开头开始复制，请传递值 0。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointCollection`1.Count">
+      <summary>获取集合中项的数目。</summary>
+      <returns>集合中的项数。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISharePointConnection">
+      <summary>提供可用于从 Visual Studio 中的 SharePoint 工具扩展执行调入 SharePoint 服务器对象模型的 SharePoint 命令的方法。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand(System.String)">
+      <summary>使用指定的标识符执行 SharePoint 命令。</summary>
+      <param name="commandId">要执行的 SharePoint 命令的标识符。</param>
+      <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointConnectionException">与 SharePoint 连接时发生错误。</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="commandId" /> 与任何可用的 SharePoint 命令都不匹配。</exception>
+      <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointCommandException">SharePoint 命令失败引发异常。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand``1(System.String)">
+      <summary>使用指定的标识符和返回值类型执行 SharePoint 命令。</summary>
+      <returns>SharePoint 命令的返回值。</returns>
+      <param name="commandId">要执行的 SharePoint 命令的标识符。</param>
+      <typeparam name="TResult">要执行的 SharePoint 命令的返回值的类型。 这必须是可由 Windows Communication Foundation (WCF) 序列化的类型。</typeparam>
+      <exception cref="T:System.InvalidOperationException">SharePoint 命令的返回值类型与 <paramref name="TResult" /> 类型不匹配。</exception>
+      <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointConnectionException">与 SharePoint 连接时发生错误。</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="commandId" /> 与任何可用的 SharePoint 命令都不匹配。</exception>
+      <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointCommandException">SharePoint 命令失败引发异常。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand``1(System.String,``0)">
+      <summary>使用指定的标识符和参数类型执行 SharePoint 命令。</summary>
+      <param name="commandId">要执行的 SharePoint 命令的标识符。</param>
+      <param name="arg">要传递给 SharePoint 命令的参数。</param>
+      <typeparam name="T">要执行的 SharePoint 命令的参数的类型。 这必须是可由 Windows Communication Foundation (WCF) 序列化的类型。</typeparam>
+      <exception cref="T:System.InvalidOperationException">SharePoint 命令的参数类型与 <paramref name="T" /> 类型不匹配。</exception>
+      <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointConnectionException">与 SharePoint 连接时发生错误。</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="commandId" /> 与任何可用的 SharePoint 命令都不匹配。</exception>
+      <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointCommandException">SharePoint 命令失败引发异常。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand``2(System.String,``0)">
+      <summary>使用指定的标识符、参数类型和返回值类型执行 SharePoint 命令。</summary>
+      <returns>SharePoint 命令的返回值。</returns>
+      <param name="commandId">要执行的 SharePoint 命令的标识符。</param>
+      <param name="arg">要传递给 SharePoint 命令的参数。</param>
+      <typeparam name="T">要执行的 SharePoint 命令的参数的类型。 这必须是可由 Windows Communication Foundation (WCF) 序列化的类型。</typeparam>
+      <typeparam name="TResult">要执行的 SharePoint 命令的返回值的类型。 这必须是可由 Windows Communication Foundation (WCF) 序列化的类型。</typeparam>
+      <exception cref="T:System.InvalidOperationException">SharePoint 命令的参数类型与 <paramref name="T" /> 类型不匹配。 或 SharePoint 命令的返回值类型与 <paramref name="TResult" /> 类型不匹配。</exception>
+      <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointConnectionException">与 SharePoint 连接时发生错误。</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="commandId" /> 与任何可用的 SharePoint 命令都不匹配。</exception>
+      <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointCommandException">SharePoint 命令失败引发异常。</exception>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISharePointProject">
+      <summary>表示 SharePoint 项目。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.ActiveDeploymentConfiguration">
+      <summary>获取或设置用于部署的部署配置的名称。 该值应来自于系统上的可用部署配置列表。</summary>
+      <returns>部署配置的名称。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.AddItemTemplatesGuid">
+      <summary>获取用于返回添加项模板的语言特定项目类型 GUID。</summary>
+      <returns>一个表示项目类型的 GUID。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.AssemblyDeploymentTarget">
+      <summary>获取或设置应在服务器上部署项目的位置：“Bin”或“GAC”。</summary>
+      <returns>部署程序集的位置。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.AutoRetract">
+      <summary>获取或设置是否在调试后收回解决方案。</summary>
+      <returns>如果要在调试后自动收回程序集，则为 True；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.DeploymentConfigurations">
+      <summary>所有部署配置的字典，包括用户定义的部署配置和现有部署配置。</summary>
+      <returns>一个表示部署配置的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.Features">
+      <summary>获取项目中定义的 SharePoint 功能的集合。</summary>
+      <returns>SharePoint 功能的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.Id">
+      <summary>获取项目的 ID。</summary>
+      <returns>项目的 ID 值。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.IncludeAssemblyInPackage">
+      <summary>获取或设置是否应打包项目程序集。</summary>
+      <returns>如果程序集应打包，则为 True；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.IsSandboxedSolution">
+      <summary>获取或设置一个值，指示应将项目包部署为沙盒解决方案还是场解决方案。</summary>
+      <returns>如果该项目是沙盒解决方案，则为 True；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.IsSilverlightDebuggingEnabled">
+      <summary>获取或设置是否启用 Silverlight 调试。</summary>
+      <returns>如果启用 Silverlight 调试，则为 True；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.MappedFolders">
+      <summary>获取项目中映射文件夹的集合。</summary>
+      <returns>映射文件夹的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.OutputFullPath">
+      <summary>获取编译之后的项目程序集完整路径。</summary>
+      <returns>一个表示项目程序集路径的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.Package">
+      <summary>获取与项目关联的 SharePoint 包的实例。</summary>
+      <returns>程序包的实例。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.PostDeploymentCommand">
+      <summary>获取或设置在部署之后运行的命令行。</summary>
+      <returns>一个表示命令行的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.PreDeploymentCommand">
+      <summary>获取或设置在部署之前运行的命令行。</summary>
+      <returns>一个表示命令行的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.ProjectItems">
+      <summary>获取项目中的 SharePoint 项目项的集合。</summary>
+      <returns>项目项的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.ProjectService">
+      <summary>获取 SharePoint 项目服务的实例。</summary>
+      <returns>SharePoint 项目服务的一个实例。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.ProjectUserFileData">
+      <summary>获取项目用户文件中与 SharePoint 项目关联的读取和写入数据。</summary>
+      <returns>一个表示用户文件数据的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.SelectedProjectItems">
+      <summary>获取在“解决方案资源管理器”中选择的 SharePoint 项目项的列表。</summary>
+      <returns>项目项的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.SharePointConnection">
+      <summary>获取 SharePoint 连接实例，该实例使用户能在 vssphost.exe 64 位进程中针对 SharePoint 对象模型执行命令。</summary>
+      <returns>SharePoint 连接的一个实例。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.SiteUrl">
+      <summary>获取或设置项目在设计阶段、部署和调试期间使用的站点 URL。</summary>
+      <returns>SharePoint 网站的 URL。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.StartupItem">
+      <summary>获取或设置要在项目启动时启动的项。</summary>
+      <returns>一个表示项目项的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.StartupUrl">
+      <summary>获取要在项目启动时启动的 URL。</summary>
+      <returns>一个 URL。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProject.Synchronize">
+      <summary>向 SharePoint 项目对象模型应用任何挂起的添加项事件，以使其与 DTE 对象模型同步。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectCollection">
+      <summary>Visual Studio 解决方案中所有 SharePoint 项目的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectCollection.Find(System.Guid)">
+      <summary>查找具有指定 ID 的 SharePoint 项目的实例。</summary>
+      <returns>如果找到 SharePoint 项目的实例，则为该实例；否则为 null。</returns>
+      <param name="id">SharePoint 项目的 ID。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectCollection.Item(System.String)">
+      <summary>获取使用指定项目路径的 SharePoint 项目的实例。</summary>
+      <returns>如果找到 SharePoint 项目的实例，则为该实例；否则为 null。</returns>
+      <param name="fullPath">请求的项目的完整路径。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectCollection.ProjectService">
+      <summary>获取 SharePoint 项目服务的实例。</summary>
+      <returns>一个表示 SharePoint 项目服务的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents">
+      <summary>定义与 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> 对象相关的事件。 实现对象定义发生这些事件的上下文。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentCompleted">
+      <summary>在部署 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> 实例后发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentStarted">
+      <summary>在开始部署 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> 实例后发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectAdded">
+      <summary>在添加新的 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> 实例时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectDisposing">
+      <summary>在释放 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> 实例时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectInitialized">
+      <summary>在初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> 实例时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectMenuItemsRequested">
+      <summary>在从 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> 实例请求上下文菜单项时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectNameChanged">
+      <summary>在重命名 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> 实例时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectPropertiesRequested">
+      <summary>在查询 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> 实例的属性时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectPropertyChanged">
+      <summary>在更改 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> 实例中的项目属性值时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectRemoved">
+      <summary>在移除 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> 实例时发生。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension">
+      <summary>表示 SharePoint 项目的扩展名。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension.Initialize(Microsoft.VisualStudio.SharePoint.ISharePointProjectService)">
+      <summary>初始化 SharePoint 项目扩展名。</summary>
+      <param name="projectService">SharePoint 项目服务的实例。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature">
+      <summary>提供有关功能的信息。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature.EventReceiverFile">
+      <summary>获取与功能关联的事件接收器代码文件。</summary>
+      <returns>一个表示事件接收器文件的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature.FeatureFile">
+      <summary>为 .feature 文件获取项目成员。</summary>
+      <returns>一个表示项目成员的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature.Id">
+      <summary>获取功能文件的 ID。</summary>
+      <returns>一个表示 ID 值的 GUID。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature.ManifestTemplateFile">
+      <summary>获取与功能关联的清单模板文件。</summary>
+      <returns>一个表示清单模板文件的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature.Model">
+      <summary>获取功能文件的对象模型。</summary>
+      <returns>一个表示对象模型的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature.ProjectItems">
+      <summary>获取从此功能实例引用的 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 实例的集合。</summary>
+      <returns>一个 SharePoint 项目项的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature.ResourceFiles">
+      <summary>获取与功能关联的资源文件的集合。</summary>
+      <returns>资源文件的集合。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature.Validate">
+      <summary>对功能运行设计时验证，并更新 IDE 中的错误列表。</summary>
+      <returns>如果验证成功，则为 True；如果发现错误，则为 false。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureCollection">
+      <summary>SharePoint 项目中定义的所有 SharePoint 功能的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureCollection.Add">
+      <summary>添加新功能。</summary>
+      <returns>一个表示功能的对象。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureCollection.Add(System.Boolean)">
+      <summary>添加新功能。</summary>
+      <returns>一个表示功能的对象。</returns>
+      <param name="skipAutoPackage">为 true 时，不要向项目包中添加功能。</param>
+      <exception cref="T:System.ComponentModel.Design.CheckoutException">项目或程序包文件无法签出时发生</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureCollection.Add(System.String)">
+      <summary>使用指定的功能名称添加新功能。</summary>
+      <returns>一个表示功能的对象。</returns>
+      <param name="featureName">功能的名称。</param>
+      <exception cref="T:System.ComponentModel.Design.CheckoutException">项目文件无法签出时发生</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureCollection.Add(System.String,System.Boolean)">
+      <summary>使用指定的功能名称添加新功能。</summary>
+      <returns>一个表示功能的对象。</returns>
+      <param name="featureName">功能名称。</param>
+      <param name="skipAutoPackage">为 true 时，不要向项目包中添加功能。</param>
+      <exception cref="T:System.ComponentModel.Design.CheckoutException">项目或程序包文件无法签出时发生</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureCollection.Find(System.Guid)">
+      <summary>使用指定的 ID 获取 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature" /> 的实例。</summary>
+      <returns>一个表示功能的对象。</returns>
+      <param name="id">功能的 ID。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureCollection.Item(System.String)">
+      <summary>使用指定的文件夹路径获取 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature" /> 的实例。</summary>
+      <returns>如果找到 SharePoint 功能的实例，则为该实例；否则为 null（或在 Visual Basic 中为 Nothing）。</returns>
+      <param name="folderPath">
+        <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature" /> 文件夹路径。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureCollection.Project">
+      <summary>与功能关联的 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" />。</summary>
+      <returns>一个表示 SharePoint 项目的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureResourceFile">
+      <summary>表示功能的资源文件。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureResourceFile.CultureInfo">
+      <summary>获取文件名标识的资源文件的区域性信息。</summary>
+      <returns>一个表示区域性信息的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureResourceFile.Feature">
+      <summary>获取父项目功能。</summary>
+      <returns>一个表示功能的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureResourceFileCollection">
+      <summary>表示功能的资源文件的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureResourceFileCollection.Add(System.Globalization.CultureInfo)">
+      <summary>为指定的区域性创建新的资源文件，并将其添加到此集合中。</summary>
+      <returns>一个表示资源文件的对象。</returns>
+      <param name="cultureInfo">新资源文件的区域性信息。</param>
+      <exception cref="T:System.ArgumentNullException">如果 <paramref name="cultureInfo" /> 是 null，则会发生此异常。</exception>
+      <exception cref="T:System.ArgumentException">当已经存在具有指定的 <paramref name="cultureInfo" /> 的资源文件时发生。</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureResourceFileCollection.Feature">
+      <summary>获取父项目功能。</summary>
+      <returns>一个表示功能的对象。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureResourceFileCollection.Find(System.Globalization.CultureInfo)">
+      <summary>使用指定的区域性查找功能资源文件。</summary>
+      <returns>如果找到一个表示功能资源文件的对象，则为此对象；否则为 null。</returns>
+      <param name="cultureInfo">正在搜索的功能资源文件的区域性。</param>
+      <exception cref="T:System.ArgumentNullException">如果 <paramref name="cultureInfo" /> 是 null，则会发生此异常。</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureResourceFileCollection.Item(System.String)">
+      <summary>获取由此文件名指定的功能资源文件。</summary>
+      <returns>如果找到一个表示功能的对象，则为此对象；如果未找到表示功能的对象，则为 null。</returns>
+      <param name="fileName">可以是功能文件夹的相对路径或功能的绝对文件路径。</param>
+      <exception cref="T:System.ArgumentNullException">如果 <paramref name="fileName" /> 是 null，则会发生此异常。</exception>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem">
+      <summary>表示由 SharePoint 项目系统实现的 SharePoint 项目项的实例。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.DefaultFile">
+      <summary>获取或设置当激活“解决方案资源管理器”中的 SharePoint 项目项节点时所启动的文件。 （即单击解决方案资源管理器或按 Enter 键时）。</summary>
+      <returns>一个表示文件的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.ExtensionData">
+      <summary>获取允许项目项扩展在 Visual Studio 会话间保留自定义数据的信息。</summary>
+      <returns>一个表示扩展数据的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.FeatureProperties">
+      <summary>获取添加到功能（该功能包含此 SharePoint 项目项）的键/值对。</summary>
+      <returns>一个表示功能属性值的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.FeatureReceiver">
+      <summary>获取功能接收器（如果 SharePoint 项目项需要）。 打包时，此功能接收器添加到包含此 SharePoint 项目项的功能中。</summary>
+      <returns>一个表示功能接收器的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.Files">
+      <summary>获取 SharePoint 项目项文件夹节点及其子文件夹下的项目中的所有文件的集合。</summary>
+      <returns>文件的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.Id">
+      <summary>获取此 SharePoint 项目项实例的唯一 ID。</summary>
+      <returns>一个 GUID ID 值。</returns>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.Open">
+      <summary>在打开 SharePoint 项目项文件夹时发生。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.ProjectItemType">
+      <summary>获取对表示 SharePoint 项目项类型的对象的引用。</summary>
+      <returns>一个表示项目项类型的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.ProjectOutputReferences">
+      <summary>获取属于此项目项的项目输出引用的集合。 将生成引用的项目，并且其主输出将随项目项一起打包。</summary>
+      <returns>项目输出引用的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.ProjectUserFileData">
+      <summary>获取一个 <see cref="T:System.Collections.IDictionary" /> 对象，可使用该对象获取或设置在项目用户文件（例如，带有 .csproj.user 或 .vbproj.user 扩展名的文件）中保存的名称/值对。</summary>
+      <returns>一个表示项目用户文件数据的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.SafeControlEntries">
+      <summary>获取必须随此 SharePoint 项目项一起部署的安全控制项的集合。 将这些项添加到引用 SharePoint 项目项的包中。</summary>
+      <returns>安全控制项的集合。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemCollection">
+      <summary>表示 SharePoint 项目项的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemCollection.Add(System.String,System.String)">
+      <summary>创建并添加 SharePoint 项目项的新实例。</summary>
+      <returns>已添加的 SharePoint 项目项的实例。</returns>
+      <param name="name">要添加的 SharePoint 项目项的名称。</param>
+      <param name="projectItemType">要添加的 SharePoint 项目项的类型 ID。</param>
+      <exception cref="T:System.ArgumentNullException">如果这些参数中有 null，就会出现这种情况。</exception>
+      <exception cref="T:System.ArgumentException">在下列情况下会出现这种情况： 如果有任何参数为空字符串。 如果具有所提供名称的 SharePoint 项目项已存在。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemCollection.Add(System.String,System.String,System.Boolean)">
+      <summary>创建并添加 SharePoint 项目项的新实例。</summary>
+      <returns>已添加的 SharePoint 项目项的实例。</returns>
+      <param name="name">要添加的 SharePoint 项目项的名称。</param>
+      <param name="projectItemType">要添加的 SharePoint 项目项的类型 ID。</param>
+      <param name="skipAutoPackage">如果为 true，则跳过自动添加至第一个可用功能。</param>
+      <exception cref="T:System.ArgumentNullException">如果这些参数中有 null，就会出现这种情况。</exception>
+      <exception cref="T:System.ArgumentException">在下列情况下会出现这种情况： 如果有任何参数为空字符串。 如果具有所提供名称的 SharePoint 项目项已存在。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemCollection.Add(System.String,System.String,System.String)">
+      <summary>创建并添加 SharePoint 项目项的新实例。</summary>
+      <returns>已添加的 SharePoint 项目项的实例。</returns>
+      <param name="path">在其中创建新 SharePoint 项的项目子文件夹。</param>
+      <param name="name">要添加的 SharePoint 项目项的名称。</param>
+      <param name="projectItemType">要添加的 SharePoint 项目项的类型 ID。</param>
+      <exception cref="T:System.ArgumentNullException">如果这些参数中有 null，就会出现这种情况。</exception>
+      <exception cref="T:System.ArgumentException">在下列情况下会出现这种情况： 如果有任何参数为空字符串。 如果该路径不是有效绝对路径（即不在项目的根路径下）。 如果具有所提供名称的 SharePoint 项目项已存在。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemCollection.Add(System.String,System.String,System.String,System.Boolean)">
+      <summary>创建一个 SharePoint 项目项，并将其添加到项目中。</summary>
+      <returns>一个新项目项的实例。</returns>
+      <param name="path">项目项的基路径。 可以是项目路径的相对路径，也可以是项目路径的绝对路径。</param>
+      <param name="name">项目项的名称。 该名称应为文件系统友好名称。</param>
+      <param name="projectItemType">项目项的类型。</param>
+      <param name="skipAutoPackage">如果为 true，则项目系统不会自动为项目项添加功能或包。</param>
+      <exception cref="T:System.ArgumentNullException">如果这些参数中有 null，就会出现这种情况。</exception>
+      <exception cref="T:System.ArgumentException">在下列情况下会出现这种情况： 如果有任何参数为空字符串。 如果该路径不是有效绝对路径（即不在项目的根路径下）。 如果具有所提供名称的 SharePoint 项目项已存在。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemCollection.Find(System.Guid)">
+      <summary>按 ID 查找 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 实例。</summary>
+      <returns>如果找到表示 SharePoint 项目项实例的对象，则为该对象；否则为 null。</returns>
+      <param name="id">要查找的 SharePoint 项目项实例的 ID。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemCollection.Item(System.String)">
+      <summary>按文件夹路径获取 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 的实例。</summary>
+      <returns>如果找到 SharePoint 项目项的实例，则为该实例；否则为 null 或 Nothing。</returns>
+      <param name="folderPath">
+        <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 文件夹路径。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemCollection.Project">
+      <summary>获取拥有此集合的项目实例。</summary>
+      <returns>一个表示项目实例的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents">
+      <summary>定义与 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 对象相关的事件。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.DeploymentStepCompleted">
+      <summary>在对 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 实例完成部署步骤时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.DeploymentStepStarted">
+      <summary>在对 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 实例启动部署步骤时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemAdded">
+      <summary>在添加新 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 实例时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemDisposing">
+      <summary>在即将释放 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 实例时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemInitialized">
+      <summary>在初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 实例时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemMenuItemsRequested">
+      <summary>在请求 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 实例的上下文菜单项时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemNameChanged">
+      <summary>在重命名 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 实例时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemOpen">
+      <summary>在打开 SharePoint 项目项文件夹时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemPropertiesRequested">
+      <summary>在请求 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 实例的属性时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemPropertyChanged">
+      <summary>在 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 实例中的属性值更改时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemRemoved">
+      <summary>在移除 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 实例时发生。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFile">
+      <summary>表示 SharePoint 项目系统中的文件。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFile.ProjectItem">
+      <summary>获取对父项目项的引用。</summary>
+      <returns>一个表示项目项的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFile.Source">
+      <summary>获取相对于父 <see cref="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFile.ProjectItem" /> 节点的文件路径。</summary>
+      <returns>一个表示文件路径的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileCollection">
+      <summary>表示 SharePoint 项目项中文件的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileCollection.AddFromFile(System.String)">
+      <summary>将指定的文件添加到项目项文件集合。</summary>
+      <returns>已添加到集合中的项目项文件。</returns>
+      <param name="fileName">要添加的文件名。 该文件名应为 SharePoint 项目项文件夹内文件的路径。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileCollection.AddFromFileCopy(System.String)">
+      <summary>添加一个新文件作为指定文件的副本。 文件即添加到 SharePoint 项目项文件夹。</summary>
+      <returns>已添加到集合中的项目项文件的实例。</returns>
+      <param name="fileName">要复制的文件名。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileCollection.AddFromFileCopy(System.String,System.String)">
+      <summary>向指定子目录添加指定文件的副本作为项目项文件。 文件即添加到 SharePoint 项目项文件夹。</summary>
+      <returns>已添加到项目项文件夹中的项目项文件的实例。</returns>
+      <param name="fileName">要复制的文件名。</param>
+      <param name="subdirectory">要在其中添加文件的 SharePoint 项目项文件夹中的子目录。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileCollection.Item(System.String)">
+      <summary>按文件名获取 SharePoint 项目项文件。</summary>
+      <returns>一个表示项目项文件的对象。</returns>
+      <param name="fileName">SharePoint 项目项文件夹文件的绝对路径或相对路径。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileCollection.ProjectItem">
+      <summary>获取拥有此 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileCollection" /> 实例的 SharePoint 项目项。</summary>
+      <returns>一个表示项目项的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents">
+      <summary>定义与 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFile" /> 对象相关的事件。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents.FileAdded">
+      <summary>在添加新 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFile" /> 实例时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents.FileDeploymentPathChanged">
+      <summary>在修改 <see cref="P:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentPath" /> 属性时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents.FileDeploymentTypeChanged">
+      <summary>在修改 <see cref="P:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentType" /> 属性时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents.FileNameChanged">
+      <summary>在重命名 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFile" /> 实例时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents.FilePropertyChanged">
+      <summary>在修改 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFile" /> 实例中的属性值时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents.FileRemoved">
+      <summary>在移除 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFile" /> 实例时发生。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType">
+      <summary>表示 SharePoint 项目项的类型。 由于它继承自 <see cref="T:Microsoft.VisualStudio.SharePoint.IAnnotatedObject" /> 接口，因此允许用户关联自定义数据和类型。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType.Id">
+      <summary>获取 SharePoint 项目项类型的唯一 ID。</summary>
+      <returns>一个表示 ID 的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType.IsValid">
+      <summary>获取项目项是否有效。</summary>
+      <returns>如果项目项有效，则为 True；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType.Name">
+      <summary>获取设计器中显示的类型的友好名称。 默认情况下，该名称即为 ID。</summary>
+      <returns>一个表示类型名称的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType.ProjectService">
+      <summary>获取 SharePoint 项目服务的实例。</summary>
+      <returns>一个表示 SharePoint 项目服务实例的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType.SupportedAssemblyDeploymentTargets">
+      <summary>获取此 <see cref="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFile.ProjectItem" /> 支持的程序集的部署位置。</summary>
+      <returns>一个表示部署位置的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType.SupportedDeploymentScopes">
+      <summary>获取在 SharePoint 中支持的 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 部署范围。</summary>
+      <returns>一个表示部署范围的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType.SupportedTrustLevels">
+      <summary>获取 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 在 SharePoint 中支持的信任级别。</summary>
+      <returns>一个表示信任级别的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition">
+      <summary>帮助定义 SharePoint 项目项的类型。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.Name">
+      <summary>获取或设置设计器中显示的项目项类型的名称。 默认情况下，该名称为 ID。</summary>
+      <returns>一个表示项目项类型名称的字符串。</returns>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.ProjectItemStartupUrlRequested">
+      <summary>在请求启动 URL 的 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 时发生。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.ProjectItemType">
+      <summary>获取由此 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition" /> 实例定义的 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType" />。</summary>
+      <returns>一个表示项目项类型的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.ProjectService">
+      <summary>获取 SharePoint 项目服务的实例。</summary>
+      <returns>一个表示 SharePoint 项目服务实例的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedAssemblyDeploymentTargets">
+      <summary>获取或设置此项目项支持的程序集的部署位置。</summary>
+      <returns>一个表示程序集部署位置的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedDeploymentScopes">
+      <summary>获取或设置在 SharePoint 中支持的 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 部署范围。</summary>
+      <returns>一个表示项目项部署范围的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedTrustLevels">
+      <summary>获取或设置 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" />  支持的 SharePoint 中的信任级别。</summary>
+      <returns>一个表示信任级别的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension">
+      <summary>表示 SharePoint 项目项的特定类型的扩展名。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension.Initialize(Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType)">
+      <summary>初始化项目项类型扩展名。</summary>
+      <param name="projectItemType">所扩展的项目项类型的实例。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider">
+      <summary>提供自定义 SharePoint 项目项类型的定义。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider.InitializeType(Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition)">
+      <summary>由项目调用，以初始化 SharePoint 项目项类型的实例。</summary>
+      <param name="typeDefinition">要初始化的项目项类型定义。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger">
+      <summary>表示 SharePoint 日志记录服务，根据指定的 <see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" />，可以使 SharePoint 项目扩展将消息记录到“输出”窗口和“错误列表”。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.ActivateOutputWindow">
+      <summary>打开“输出”窗口，并激活当前的“输出”窗口窗格。</summary>
+      <returns>如果成功，则返回 true；否则返回 false。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.ClearErrorList">
+      <summary>清除所有与 SharePoint 工具相关的错误消息的“错误列表”。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory)">
+      <summary>根据指定的 <see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" />，将消息记录到 SharePoint 工具的“输出”窗口和“错误列表”。</summary>
+      <param name="message">消息文本。</param>
+      <param name="category">由 <see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" /> 指定的消息日志类别。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String)">
+      <summary>根据指定的 <see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" />，将消息记录到 SharePoint 工具的“输出”窗口和“错误列表”。</summary>
+      <param name="message">消息文本。</param>
+      <param name="category">由 <see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" /> 指定的消息日志类别。</param>
+      <param name="helpKeyword">此错误的“帮助”关键字。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32)">
+      <summary>根据指定的 <see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" />，将消息记录到 SharePoint 工具的“输出”窗口和“错误列表”。</summary>
+      <param name="message">消息文本。</param>
+      <param name="category">由 <see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" /> 指定的消息日志类别。</param>
+      <param name="filePath">带有错误的文件的完整路径。</param>
+      <param name="lineNumber">发生错误的行号。</param>
+      <param name="columnNumber">发生错误的列号。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32,System.String)">
+      <summary>根据指定的 <see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" />，将消息记录到 SharePoint 工具的“输出”窗口和“错误列表”。</summary>
+      <param name="message">消息文本。</param>
+      <param name="category">由 <see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" /> 指定的消息日志类别。</param>
+      <param name="filePath">带有错误的文件的完整路径。</param>
+      <param name="lineNumber">发生错误的行号。</param>
+      <param name="columnNumber">发生错误的列号。</param>
+      <param name="helpKeyword">此错误的“帮助”关键字。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectMember">
+      <summary>表示 SharePoint 项目的成员。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectMember.CollapseChildItems">
+      <summary>确保在“解决方案资源管理器”中折叠此 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectMember" /> 的所有子项。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectMember.FullPath">
+      <summary>获取项目成员文件或目录的完整源路径。</summary>
+      <returns>一个表示路径的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectMember.Icon">
+      <summary>获取在“解决方案资源管理器”中显示的项目成员节点的图标。</summary>
+      <returns>一个表示图标的 Image 对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectMember.IsExpanded">
+      <summary>获取或设置是否在“解决方案资源管理器”中展开该节点。</summary>
+      <returns>一个表示该节点是否已展开的布尔值。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectMember.Name">
+      <summary>获取在“解决方案资源管理器”中显示的项目成员节点的名称。</summary>
+      <returns>一个表示项目节点名称的字符串。</returns>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectMember.NameChanged">
+      <summary>在更改项目成员节点的名称时发生。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectMember.Project">
+      <summary>获取对包含项目的引用。</summary>
+      <returns>一个表示包含项目的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReference">
+      <summary>指定对 SharePoint 项目中项的引用。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReference.ItemId">
+      <summary>获取所引用项的 ID。</summary>
+      <returns>一个表示项目项 ID 的 GUID。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReference.ProjectPath">
+      <summary>获取所引用项所属的项目文件的路径。</summary>
+      <returns>一个表示项目文件路径的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReferenceCollection">
+      <summary>表示 SharePoint 项目项引用的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReferenceCollection.Add(System.String,System.Guid)">
+      <summary>创建对项目项的引用，并将其添加到此集合中。</summary>
+      <returns>添加到集合中的项目项引用。</returns>
+      <param name="projectPath">项目的路径。</param>
+      <param name="itemId">项目项的 ID。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReferenceResolver">
+      <summary>指定解析 SharePoint 项目项和项本身之间的引用的 API。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReferenceResolver.ResolveReference``1(Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReference)">
+      <summary>返回与所引用的 SharePoint 项目项关联的对象模型。</summary>
+      <returns>引用项的对象模型；如果无法解析该项，则为 null。</returns>
+      <param name="reference">对 SharePoint 项目项的引用。</param>
+      <typeparam name="T">与被引用项关联的对象模型的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReferenceResolver.ResolveReference``1(System.Guid)">
+      <summary>返回与所引用的 SharePoint 项目项关联的对象模型。</summary>
+      <returns>引用项的对象模型；如果无法解析该项，则为 null。</returns>
+      <param name="itemId">所引用项的 ID。</param>
+      <typeparam name="T">与被引用项关联的对象模型的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReferenceResolver.ResolveReference``1(System.String)">
+      <summary>返回与所引用的 SharePoint 项目项关联的对象模型。</summary>
+      <returns>引用项的对象模型；如果无法解析该项，则为 null。</returns>
+      <param name="path">SharePoint 项目项的定义的路径。</param>
+      <typeparam name="T">与被引用项关联的对象模型的类型。</typeparam>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReference">
+      <summary>表示引用的 Visual Studio 项目的主输出。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReference.OutputFullPath">
+      <summary>获取项目的输出的完整路径。</summary>
+      <returns>一个表示项目输出文件路径的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReference.ProjectFullPath">
+      <summary>获取所引用项目的路径。</summary>
+      <returns>一个表示项目文件路径的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReference.ProjectId">
+      <summary>获取所引用项目的 ID。</summary>
+      <returns>一个表示项目 ID 的 GUID。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReference.ProjectItem">
+      <summary>获取对包含此项目输出引用的项目项的引用。</summary>
+      <returns>一个表示项目项的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReferenceCollection">
+      <summary>表示属于项目项的项目输出引用的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReferenceCollection.Add(Microsoft.VisualStudio.SharePoint.ISharePointProject,Microsoft.VisualStudio.SharePoint.DeploymentType)">
+      <summary>向项目添加输出引用。 该引用作为生成依赖项添加到当前项目，并被纳入到 SharePoint 项目项中。</summary>
+      <returns>添加的引用。</returns>
+      <param name="project">要作为引用添加的项目。</param>
+      <param name="deploymentType">由 DeploymentType 枚举值指定的一种部署类型。</param>
+      <exception cref="T:System.ArgumentNullException">当 <paramref name="project" /> 参数为 null 时发生。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReferenceCollection.Add(System.Guid,Microsoft.VisualStudio.SharePoint.DeploymentType)">
+      <summary>将输出引用添加到由 <paramref name="projectId" /> 指定的项目中。 该引用作为生成依赖项添加到当前项目，并被纳入到 SharePoint 项目项中。</summary>
+      <returns>添加的引用。</returns>
+      <param name="projectId">Visual Studio 解决方案中的每个项目具有唯一 ID。 此参数表示要作为引用添加的项目的 ID。 应将由 <paramref name="projectId" /> 指定的项目加载到解决方案中，以便此方法可正常工作。</param>
+      <param name="deploymentType">由 DeploymentType 枚举值指定的一种部署类型。</param>
+      <exception cref="T:System.ArgumentException">当找不到具有指定的 <paramref name="projectId" /> 的项目时发生。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReferenceCollection.Add(System.String,Microsoft.VisualStudio.SharePoint.DeploymentType)">
+      <summary>向项目添加输出引用。 该引用作为生成依赖项添加到当前项目，并被纳入到 SharePoint 项目项中。</summary>
+      <returns>添加的引用。</returns>
+      <param name="projectFullPath">要作为引用添加的项目。 应将此项目加载到解决方案中，以便此方法可正常工作。</param>
+      <param name="deploymentType">由 DeploymentType 枚举值指定的一种部署类型。</param>
+      <exception cref="T:System.ArgumentNullException">当参数 <paramref name="projectFullPath" /> 为 null 时发生。</exception>
+      <exception cref="T:System.ArgumentException">当参数 <paramref name="projectFullPath" /> 为 null 或找不到没有相应的项目时发生。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReferenceCollection.Clear">
+      <summary>清除集合的内容。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReferenceCollection.ProjectItem">
+      <summary>获取对 SharePoint 项目项的引用。</summary>
+      <returns>一个表示 SharePoint 项目项引用的对象。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReferenceCollection.Remove(Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReference)">
+      <summary>从集合中移除指定的项目输出引用。 但是，此方法不移除由 Add 方法添加的项目引用。</summary>
+      <returns>如果移除操作成功，则为 True；否则为 false。</returns>
+      <param name="item">要移除的 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReference" /> 引用。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectPackage">
+      <summary>与 SharePoint 项目关联的 SharePoint 包。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectPackage.BuildPackage">
+      <summary>生成 SharePoint 解决方案包文件。</summary>
+      <returns>如果生成已成功，则为 True；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectPackage.Features">
+      <summary>获取在包文档对象中引用的功能的集合。</summary>
+      <returns>功能的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectPackage.Id">
+      <summary>获取在设计时使用的包的 ID。</summary>
+      <returns>一个表示包 ID 的 GUID。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectPackage.ManifestTemplateFile">
+      <summary>获取与包关联的清单模板文件。</summary>
+      <returns>一个表示清单模板文件的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectPackage.Model">
+      <summary>获取 SharePoint 包文档的根对象。</summary>
+      <returns>一个表示包文档的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectPackage.OutputPath">
+      <summary>获取在其中编译包的路径。</summary>
+      <returns>一个表示路径的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectPackage.PackageFile">
+      <summary>为 .package 文件获取项目成员。</summary>
+      <returns>一个表示项目成员的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectPackage.ProjectItems">
+      <summary>获取在包文档对象中引用的 SharePoint 项目项的集合。</summary>
+      <returns>项目项的集合。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectPackage.Validate">
+      <summary>对包运行设计时验证，并更新 IDE 错误列表。</summary>
+      <returns>如果验证成功，则为 True；如果发生错误，则为 false。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectService">
+      <summary>表示 SharePoint 项目服务，即 SharePoint 项目对象模型的根对象。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.CodeRefactoringEvents">
+      <summary>获取一个提供对与重构操作相关事件的访问的对象。</summary>
+      <returns>一个提供对事件的访问的对象。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Convert``2(``0)">
+      <summary>转换项目类型。</summary>
+      <returns>转换后的值。 具体值取决于所选择的输出类型。</returns>
+      <param name="value">要转换的值。</param>
+      <typeparam name="TInput">输入类型参数。 支持下列类型： ISharePointProject ISharePointProjectItem ISharePointProjectFeature ISharePointProjectPackage EnvDTE.Project EnvDTE.ProjectItem Visual Studio 项目接口，如 Microsoft.VisualStudio.Shell.Interop.IVsHierarchy 和 Microsoft.VisualStudio.Shell.Interop.IVsProject。</typeparam>
+      <typeparam name="TOutput">输出类型参数。 支持下列类型： ISharePointProject ISharePointProjectItem ISharePointProjectFeature ISharePointProjectPackage EnvDTE.Project EnvDTE.ProjectItem Visual Studio 项目接口，如 Microsoft.VisualStudio.Shell.Interop.IVsHierarchy 和 Microsoft.VisualStudio.Shell.Interop.IVsProject。 UInt32 可用于检索 Microsoft.VisualStudio.Shell.Interop.IVsHierarchy 项 ID。</typeparam>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.DeploymentSteps">
+      <summary>获取在扩展目录中找到的安装的部署步骤的列表。</summary>
+      <returns>部署步骤的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.IsSharePointInstalled">
+      <summary>返回是否在本地计算机上安装了 SharePoint。</summary>
+      <returns>如果 SharePoint 已安装，则为 True；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Logger">
+      <summary>获取日志记录服务的实例。</summary>
+      <returns>一个表示日志记录服务的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.PackageValidationProvider">
+      <summary>获取有助于验证项目功能和项目包的 <see cref="T:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationProvider" /> 的实例。</summary>
+      <returns>一个验证功能和包的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.ProjectItemTypes">
+      <summary>获取具有所有可用的项目项类型的字典。</summary>
+      <returns>项目项类型的字典。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Projects">
+      <summary>获取 Visual Studio 解决方案中 SharePoint 项目的集合。</summary>
+      <returns>项目的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.ServiceProvider">
+      <summary>获取 SharePoint 项目包的全局服务提供程序。</summary>
+      <returns>一个表示全局服务提供程序的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.SharePointConnection">
+      <summary>获取项目服务的 SharePoint 连接。</summary>
+      <returns>一个表示 SharePoint 连接的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.SharePointInstallPath">
+      <summary>获取 SharePoint 的安装路径（如果 SharePoint 安装在系统上）。</summary>
+      <returns>如果已安装 SharePoint，则为安装路径；如果未安装 SharePoint，则为 null。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectStartupItem">
+      <summary>表示可以设置为 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> 的启动项的项。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectStartupItem.RelativePath">
+      <summary>获取项目目录中项的唯一位置。</summary>
+      <returns>一个表示项目项路径的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectStartupItem.StartupUrl">
+      <summary>获取启动项时要启动的 URL。</summary>
+      <returns>网站的 URL。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.LogCategory">
+      <summary>指定使用 SharePoint 日志服务编写的消息显示在“输出”窗口和“错误列表”窗口中的何处。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.LogCategory.Error">
+      <summary>指定消息显示在“输出”窗口中，以及“错误列表”窗口的“错误”组中。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.LogCategory.Warning">
+      <summary>指定消息显示在“输出”窗口中，以及“错误列表”窗口的“警告”组中。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.LogCategory.Verbose">
+      <summary>指定消息仅显示在“输出”窗口中（如果启用了详细消息）。 该消息不会显示在“错误列表”窗口中。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.LogCategory.Message">
+      <summary>指定消息显示在“输出”窗口中，以及“错误列表”窗口的“消息”组中。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.LogCategory.Status">
+      <summary>指定消息仅显示在“输出”窗口中。 该消息不会显示在“错误列表”窗口中。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.MappedFolderType">
+      <summary>在 SharePoint 项目中指定映射文件夹的类型。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.MappedFolderType.Other">
+      <summary>这是适用于未映射到由其他 <see cref="T:Microsoft.VisualStudio.SharePoint.MappedFolderType" /> 值所指定其中一个文件夹的任何映射文件夹的值。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.MappedFolderType.ControlTemplates">
+      <summary>指示映射到 {SharePointRoot}\Template\ControlTemplates 的映射文件夹。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.MappedFolderType.Images">
+      <summary>指示映射到 {SharePointRoot}\Template\Images 的映射文件夹。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.MappedFolderType.Layouts">
+      <summary>指示映射到 {SharePointRoot}\Template\Layouts 的映射文件夹。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.MappedFolderType.SharePointRoot">
+      <summary>指示映射到 {SharePointRoot} 的映射文件夹。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.MappedFolderType.Template">
+      <summary>指示映射到 {SharePointRoot}\Template 的映射文件夹。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.MenuItemEventArgs">
+      <summary>表示 <see cref="E:Microsoft.VisualStudio.SharePoint.IMenuItem.Click" /> 事件的事件参数类。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.MenuItemEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.IMenuItem,System.Object)">
+      <summary>用部署类型的旧值初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.MenuItemEventArgs" /> 类的新实例。</summary>
+      <param name="menuItem">引发该事件的 Microsoft.VisualStudio.SharePoint.IMenuItem 的实例。</param>
+      <param name="owner">菜单项所属的对象。 它通常是可在 UI 中显示的节点，例如 Microsoft.VisualStudio.SharePoint.ISharePointProjectItem 或 Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.MenuItemEventArgs.MenuItem">
+      <summary>获取引发该事件的 <see cref="T:Microsoft.VisualStudio.SharePoint.IMenuItem" /> 的实例。</summary>
+      <returns>一个表示菜单项的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.MenuItemEventArgs.Owner">
+      <summary>获取菜单项的所有者。 它通常是可在 UI 中显示的节点，例如 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 或 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode" />。</summary>
+      <returns>一个表示菜单项所有者的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.NameChangedEventArgs">
+      <summary>表示 <see cref="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectMember.NameChanged" /> 事件的事件参数类。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.NameChangedEventArgs.#ctor(System.String)">
+      <summary>用部署类型的旧值初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.NameChangedEventArgs" /> 类的新实例。</summary>
+      <param name="oldName">发生更改之前的名称属性值。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.NameChangedEventArgs.OldName">
+      <summary>获取或设置更改之前的 <see cref="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectMember.Name" /> 属性值。</summary>
+      <returns>表示属性值的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.SharePointCommandException">
+      <summary>在 SharePoint 命令失败时引发的异常。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.SharePointCommandException.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.SharePointCommandException" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.SharePointCommandException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>用序列化数据初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.SharePointCommandException" /> 类的新实例。</summary>
+      <param name="info">SerializationInfo 对象，其中包含有关所引发异常的序列化对象数据。</param>
+      <param name="context">包含有关源或目标的上下文信息的 SerializationInfo 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.SharePointCommandException.#ctor(System.String)">
+      <summary>使用指定的错误消息初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.SharePointCommandException" /> 类的新实例。</summary>
+      <param name="message">描述此错误的消息。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.SharePointCommandException.#ctor(System.String,System.Exception)">
+      <summary>使用指定的错误消息和对导致该异常的内部异常的引用来初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.SharePointCommandException" /> 类的新实例。</summary>
+      <param name="message">解释异常原因的错误信息。</param>
+      <param name="innerException">导致当前异常的异常。 如果 <paramref name="innerException" /> 参数不是 null 引用（Visual Basic 中为 Nothing），则在处理内部异常的 catch 块中将引发当前异常。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.SharePointCommandException.#ctor(System.String,System.String,System.String,System.String)">
+      <summary>使用指定的错误消息、完整类型名称和原始堆栈跟踪来初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.SharePointCommandException" /> 类的新实例。</summary>
+      <param name="message">解释异常原因的错误信息。</param>
+      <param name="commandId">引发异常的命令的 ID。</param>
+      <param name="fullTypeName">引发异常的命令类的完整类型名称。</param>
+      <param name="originalStackTrace">vssphost4.exe 进程中异常的原始堆栈跟踪。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.SharePointCommandException.#ctor(System.String,System.String,System.String,System.String,System.Exception)">
+      <summary>使用指定的错误消息、完整类型名称、原始堆栈跟踪和对导致该异常的内部异常的引用来初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.SharePointCommandException" /> 类的新实例。</summary>
+      <param name="message">解释异常原因的错误信息。</param>
+      <param name="commandId">引发异常的命令的 ID。</param>
+      <param name="fullTypeName">引发异常的命令类的完整类型名称。</param>
+      <param name="originalStackTrace">vssphost4.exe 进程中异常的原始堆栈跟踪。</param>
+      <param name="innerException">导致当前异常的异常。 如果 <paramref name="innerException" /> 参数不是空引用（在 Visual Basic 中为 Nothing），则在处理内部异常的 catch 块中引发当前异常。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.SharePointCommandException.CommandId">
+      <summary>获取导致异常的命令 ID。</summary>
+      <returns>一个表示命令 ID 的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.SharePointCommandException.FullTypeName">
+      <summary>获取导致异常的命令类的完整类型名称。</summary>
+      <returns>一个表示类型名称的字符串。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.SharePointCommandException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>使用有关异常的信息设置 <see cref="T:System.Runtime.Serialization.SerializationInfo" />。</summary>
+      <param name="info">要用数据填充的 SerializationInfo 对象。</param>
+      <param name="context">此序列化的目标。 有关更多信息，请参见 System.Runtime.Serialization.StreamingContext。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.SharePointCommandException.OriginalStackTrace">
+      <summary>从 vssphost4.exe 进程中获取原始异常堆栈跟踪。</summary>
+      <returns>一个表示堆栈跟踪的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.SharePointConnectionException">
+      <summary>连接到本地 SharePoint 网站的尝试失败时引发的异常。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.SharePointConnectionException.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.SharePointConnectionException" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.SharePointConnectionException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.SharePointConnectionException" /> 类的新实例。</summary>
+      <param name="info">
+        <see cref="T:System.Runtime.Serialization.SerializationInfo" />，它存有有关所引发的异常的序列化对象数据。</param>
+      <param name="context">
+        <see cref="T:System.Runtime.Serialization.StreamingContext" />，它包含有关源或目标的上下文信息。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.SharePointConnectionException.#ctor(System.String)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.SharePointConnectionException" /> 类的新实例。</summary>
+      <param name="message">描述该异常的消息。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.SharePointConnectionException.#ctor(System.String,System.Exception)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.SharePointConnectionException" /> 类的新实例。</summary>
+      <param name="message">描述该异常的消息。</param>
+      <param name="inner">导致当前异常的异常。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs">
+      <summary>为与 SharePoint 项目相关的事件提供数据。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.ISharePointProject)">
+      <summary>使用提供的 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> 实例初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs" /> 类的新实例。</summary>
+      <param name="project">SharePoint 项目的实例。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs.Project">
+      <summary>获取或设置 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> 的实例。</summary>
+      <returns>SharePoint 项目对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.SharePointProjectItemEventArgs">
+      <summary>为与 SharePoint 项目项相关的事件提供数据。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.SharePointProjectItemEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.ISharePointProjectItem)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.SharePointProjectItemEventArgs" /> 类的新实例。</summary>
+      <param name="projectItem">与所引发的事件对应的 SharePoint 项目项。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.SharePointProjectItemEventArgs.ProjectItem">
+      <summary>获取或设置与引发事件相对应的 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" />。</summary>
+      <returns>与所引发的事件对应的 SharePoint 项目项。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.SharePointProjectItemFileEventArgs">
+      <summary>为与 SharePoint 项目项文件相关的事件提供数据。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.SharePointProjectItemFileEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFile)">
+      <summary>使用提供的 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFile" /> 实例初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.SharePointProjectItemFileEventArgs" /> 类的新实例。</summary>
+      <param name="projectItemFile">SharePoint 项目项文件对象的实例。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.SharePointProjectItemFileEventArgs.ProjectItemFile">
+      <summary>获取或设置 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFile" /> 的实例。</summary>
+      <returns>SharePoint 项目项文件对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.SharePointProjectItemIconAttribute">
+      <summary>指定要在 “解决方案资源管理器” 中显示客户项目类型的图标。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.SharePointProjectItemIconAttribute.#ctor(System.String)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.SharePointProjectItemIconAttribute" /> 类的新实例。</summary>
+      <param name="iconResourceName">嵌入式 .bmp 或 .ico 资源的命名空间限定名。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.SharePointProjectItemIconAttribute.IconResourceName">
+      <summary>获取或设置用作自定义项目项类型图标的嵌入式 .bmp 或 .ico 资源的命名空间限定名。</summary>
+      <returns>嵌入式 .bmp 或 .ico 资源的命名空间限定名。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.SharePointProjectItemMenuItemsRequestedEventArgs">
+      <summary>为 <see cref="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemMenuItemsRequested" /> 事件提供数据。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.SharePointProjectItemMenuItemsRequestedEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.ISharePointProjectItem,Microsoft.VisualStudio.SharePoint.IMenuItemCollection,Microsoft.VisualStudio.SharePoint.IMenuItemCollection)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.SharePointProjectItemMenuItemsRequestedEventArgs" /> 类的新实例。</summary>
+      <param name="projectItem">SharePoint 项目项的一个实例。</param>
+      <param name="addMenuItems">将在“添加项”上下文菜单组中显示的菜单项的集合。</param>
+      <param name="viewMenuItems">将在“查看项”上下文菜单组中显示的菜单项的集合。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.SharePointProjectItemMenuItemsRequestedEventArgs.AddMenuItems">
+      <summary>获取或设置将在“添加项”上下文菜单组中显示的菜单项的集合。</summary>
+      <returns>菜单项的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.SharePointProjectItemMenuItemsRequestedEventArgs.ViewMenuItems">
+      <summary>获取或设置将在“查看项”上下文菜单组中显示的菜单项的集合。</summary>
+      <returns>菜单项的集合。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.SharePointProjectItemOpenEventArgs">
+      <summary>为 <see cref="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.Open" /> 事件提供数据。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.SharePointProjectItemOpenEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.ISharePointProjectItem)">
+      <summary>使用提供的 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 实例初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.SharePointProjectItemOpenEventArgs" /> 类的新实例。</summary>
+      <param name="projectItem">SharePoint 项目项的一个实例。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.SharePointProjectItemOpenEventArgs.Handled">
+      <summary>获取或设置是否处理 <see cref="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.Open" /> 事件。</summary>
+      <returns>如果事件已得到处理，则为 True；否则为 false。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.SharePointProjectItemPropertiesRequestedEventArgs">
+      <summary>为 <see cref="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemPropertiesRequested" /> 事件提供数据。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.SharePointProjectItemPropertiesRequestedEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.ISharePointProjectItem,Microsoft.VisualStudio.SharePoint.IPropertySourceCollection)">
+      <summary>使用所提供的 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 实例和属性源集合初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.SharePointProjectItemPropertiesRequestedEventArgs" /> 类的新实例。</summary>
+      <param name="projectItem">SharePoint 项目项的一个实例。</param>
+      <param name="propertySources">所请求的属性源对象的集合。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.SharePointProjectItemPropertiesRequestedEventArgs.PropertySources">
+      <summary>获取或设置所请求的属性源对象的集合。</summary>
+      <returns>属性源对象的集合。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.SharePointProjectItemStartupUrlRequestedEventArgs">
+      <summary>为 <see cref="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.ProjectItemStartupUrlRequested" /> 事件提供数据。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.SharePointProjectItemStartupUrlRequestedEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.ISharePointProjectItem,Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext)">
+      <summary>使用提供的 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 实例初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.SharePointProjectItemStartupUrlRequestedEventArgs" /> 类的新实例。</summary>
+      <param name="projectItem">SharePoint 项目项的实例。</param>
+      <param name="deploymentContext">一个 ISharePointProjectItemDeploymentContext 对象，该对象包含有关项目项的部署的信息。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.SharePointProjectItemStartupUrlRequestedEventArgs.DeploymentContext">
+      <summary>获取或设置当前部署上下文。</summary>
+      <returns>一个 ISharePointProjectItemDeploymentContext 对象，该对象表示当前部署上下文。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.SharePointProjectItemStartupUrlRequestedEventArgs.StartupUrl">
+      <summary>获取或设置当 SharePoint 项目项作为启动项选中时用于调试的启动 URL。</summary>
+      <returns>一个 URL。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute">
+      <summary>指示要定义的项目类型的 ID，或指定要扩展的项目类型的 ID。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute.#ctor(System.String)">
+      <summary>使用项目项类型 ID 初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute" /> 类的新实例。</summary>
+      <param name="projectItemTypeId">要定义或扩展的项目项类型的 ID。 通常为命名空间限定名称，以避免不同供应商之间类型 ID 的冲突。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute.ProjectItemTypeId">
+      <summary>获取或设置要定义或扩展的项目项类型 ID。</summary>
+      <returns>一个表示项目项类型 ID 的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.SharePointProjectMenuItemsRequestedEventArgs">
+      <summary>为 <see cref="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectMenuItemsRequested" /> 事件提供数据。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.SharePointProjectMenuItemsRequestedEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.ISharePointProject,Microsoft.VisualStudio.SharePoint.IMenuItemCollection,Microsoft.VisualStudio.SharePoint.IMenuItemCollection)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.SharePointProjectMenuItemsRequestedEventArgs" /> 类的新实例。</summary>
+      <param name="project">SharePoint 项目的实例。</param>
+      <param name="addMenuItems">要在项目上下文菜单“添加新项”区域中显示的菜单项的集合。</param>
+      <param name="actionMenuItems">要在项目上下文菜单“操作”区域中显示的菜单项的集合。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.SharePointProjectMenuItemsRequestedEventArgs.ActionMenuItems">
+      <summary>获取或设置要在项目上下文菜单“操作”区域中显示的菜单项的集合。</summary>
+      <returns>菜单项的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.SharePointProjectMenuItemsRequestedEventArgs.AddMenuItems">
+      <summary>获取或设置要在项目上下文菜单“添加新项”区域中显示的菜单项的集合。</summary>
+      <returns>菜单项的集合。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.SharePointProjectPropertiesRequestedEventArgs">
+      <summary>为 <see cref="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectPropertiesRequested" /> 事件提供数据。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.SharePointProjectPropertiesRequestedEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.ISharePointProject,Microsoft.VisualStudio.SharePoint.IPropertySourceCollection)">
+      <summary>使用提供的 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> 实例和属性源的集合初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.SharePointProjectPropertiesRequestedEventArgs" /> 类的新实例。</summary>
+      <param name="project">SharePoint 项目的实例。</param>
+      <param name="propertySources">所请求的属性源对象的集合。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.SharePointProjectPropertiesRequestedEventArgs.PropertySources">
+      <summary>获取或设置所请求的属性源对象的集合。</summary>
+      <returns>所请求的属性源对象的集合。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.SupportedAssemblyDeploymentTargets">
+      <summary>表示指定的 SharePoint 项目项支持的所有程序集部署目标的枚举。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.SupportedAssemblyDeploymentTargets.GlobalAssemblyCache">
+      <summary>SharePoint 项目项支持将程序集部署到 GAC。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.SupportedAssemblyDeploymentTargets.WebApplication">
+      <summary>SharePoint 项目项支持将程序集部署到 Web 应用程序的 \bin 目录。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.SupportedAssemblyDeploymentTargets.All">
+      <summary>SharePoint 项目项支持将程序集部署到 \bin 目录或全局程序集缓存 (GAC)。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.SupportedDeploymentScopes">
+      <summary>指定可在 SharePoint 中激活的 SharePoint 项目项的部署范围。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.SupportedDeploymentScopes.Web">
+      <summary>可包含在 SharePoint“Web”范围的功能中的 SharePoint 项目项。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.SupportedDeploymentScopes.Site">
+      <summary>可包含在 SharePoint“Site”范围的功能中的 SharePoint 项目项。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.SupportedDeploymentScopes.WebApplication">
+      <summary>可包含在 SharePoint“WebApplication”范围的功能中的 SharePoint 项目项。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.SupportedDeploymentScopes.Farm">
+      <summary>可包含在 SharePoint“Farm”范围的功能中的 SharePoint 项目项。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.SupportedDeploymentScopes.Package">
+      <summary>不能包含在功能中的 SharePoint 项目项。 这些项目直接包含在包中。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.SupportedTrustLevels">
+      <summary>指定 SharePoint 项目项支持的 SharePoint 中信任级别的枚举值。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.SupportedTrustLevels.Sandboxed">
+      <summary>指示 SharePoint 项目项仅支持沙盒信任级别。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.SupportedTrustLevels.FullTrust">
+      <summary>指示 SharePoint 项目项仅支持 SharePoint 中的场信任级别。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.SupportedTrustLevels.All">
+      <summary>指示 SharePoint 项目项支持 SharePoint 中的所有信任级别。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Deployment.DeploymentStepAttribute">
+      <summary>标识实现部署步骤的类。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Deployment.DeploymentStepAttribute.#ctor(System.String)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.Deployment.DeploymentStepAttribute" /> 类的新实例。</summary>
+      <param name="id">部署步骤的唯一 ID。 建议使用包括基于公司的命名空间或前缀的字符串。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Deployment.DeploymentStepAttribute.Id">
+      <summary>获取部署步骤的 ID。</summary>
+      <returns>部署步骤的 ID。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Deployment.DeploymentStepIds">
+      <summary>定义随 Visual Studio 提供的部署步骤的 ID。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Deployment.DeploymentStepIds.ActivateFeatures">
+      <summary>指定 ActivateFeatures 步骤的 ID。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Deployment.DeploymentStepIds.AddSolution">
+      <summary>指定 AddSolution 步骤的 ID。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Deployment.DeploymentStepIds.PostDeploymentCommand">
+      <summary>指定 PostDeploymentCommand 步骤的 ID。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Deployment.DeploymentStepIds.PreDeploymentCommand">
+      <summary>指定 PreDeploymentCommand 步骤的 ID。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Deployment.DeploymentStepIds.RecycleApplicationPool">
+      <summary>指定 RecycleApplicationPool 步骤的 ID。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Deployment.DeploymentStepIds.RetractSolution">
+      <summary>指定 RetractSolution 步骤的 ID。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfiguration">
+      <summary>表示 SharePoint 项目的部署配置。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfiguration.DeploymentSteps">
+      <summary>获取一个步骤列表，其中包含在将此部署配置用作项目的活动配置时，部署项目会执行的步骤。</summary>
+      <returns>一个表示部署步骤的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfiguration.Description">
+      <summary>获取或设置部署配置的本地化说明。</summary>
+      <returns>一个表示部署配置说明的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfiguration.DisplayName">
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfiguration.Name">
+      <summary>获取部署配置的名称。</summary>
+      <returns>一个表示部署配置名称的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfiguration.RetractionSteps">
+      <summary>获取一个步骤列表，其中包含在将此部署配置用作项目的活动配置时，撤消项目会执行的步骤。</summary>
+      <returns>一个表示部署撤消步骤的列表的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfigurationDictionary">
+      <summary>包含部署步骤的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfigurationDictionary.Add(System.String)">
+      <summary>向字典添加部署配置。 使用此方法添加的部署配置未存储到项目文件或用户文件中。</summary>
+      <returns>创建的部署配置。</returns>
+      <param name="name">部署配置的名称。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfigurationDictionary.Add(System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})">
+      <summary>向字典添加部署配置。 使用此方法添加的部署配置未存储到项目文件或用户文件中。</summary>
+      <returns>创建的部署配置。</returns>
+      <param name="name">部署配置的名称。</param>
+      <param name="deploymentSteps">部署配置中作为部署操作一部分的步骤。</param>
+      <param name="retractionSteps">部署配置中作为撤消操作一部分的步骤。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict">
+      <summary>表示 SharePoint 项目项所部署的项与 SharePoint 站点上的项之间的冲突。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict.Description">
+      <summary>部署冲突的说明。</summary>
+      <returns>一个表示部署冲突说明的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict.ProjectItem">
+      <summary>与此部署冲突相关联的 SharePoint 项目项。</summary>
+      <returns>一个表示 SharePoint 项目项的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict.PromptBeforeResolve">
+      <summary>指示执行 <see cref="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict.Resolve" /> 方法之前是否提示用户。</summary>
+      <returns>如果提示用户，则为 True；否则为 false。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict.Resolve">
+      <summary>如果可能，将解决当前实例所表示的部署冲突。</summary>
+      <returns>如果解决成功，则为 True ；否则为 false。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflictCollection">
+      <summary>表示 <see cref="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict" /> 对象的集合。 每个 <see cref="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict" /> 表示 SharePoint 项目项所部署的项与 SharePoint 站点上的项之间的冲突。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflictCollection.Add(System.String,System.Func`2,System.Boolean)">
+      <summary>将新的 <see cref="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict" /> 对象添加到此集合中。</summary>
+      <returns>表示部署冲突的新对象。</returns>
+      <param name="description">部署冲突的说明。</param>
+      <param name="resolve">可以解决冲突的委托。 代理必须有一个布尔返回值和一个 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 类型的单个参数。</param>
+      <param name="promptBeforeResolve">如果在执行 <paramref name="resolve" /> 委托之前应提示用户，则为 true；否则为 false。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext">
+      <summary>表示当部署或撤消 SharePoint 项目时执行的部署步骤的上下文。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.IsDeploying">
+      <summary>指示是否正在部署项目。</summary>
+      <returns>如果正在部署项目，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.IsRetracting">
+      <summary>指示是否正在撤消项目。</summary>
+      <returns>如果正在撤消项目，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.Logger">
+      <summary>提供对项目记录器的访问。</summary>
+      <returns>一个表示项目记录器的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.Project">
+      <summary>提供对正在部署或撤消的当前项目的访问。</summary>
+      <returns>一个表示 SharePoint 项目的对象。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.SiteCollectionUrl">
+      <summary>返回项目根据 SharePoint 连接到的 Microsoft.SharePoint.SPSite 的规范 URL。</summary>
+      <returns>项目根据 SharePoint 连接到的 Microsoft.SharePoint.SPSite 的规范 URL。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.SiteUrl">
+      <summary>返回项目根据 SharePoint 连接到的 Microsoft.SharePoint.SPWeb 的规范 URL。</summary>
+      <returns>项目根据 SharePoint 连接到的 Microsoft.SharePoint.SPWeb 的规范 URL。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.WebApplicationUrl">
+      <summary>返回 SPWebApplication 的根 URL。</summary>
+      <returns>SPWebApplication 的根 URL。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep">
+      <summary>表示 SharePoint 项目的部署步骤。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.CanExecute(Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext)">
+      <summary>确定是否可以在当前上下文中执行部署步骤。</summary>
+      <returns>如果可以执行部署步骤，则为 true；否则为 false。</returns>
+      <param name="context">一个提供信息的对象，可用来确定执行部署步骤的上下文。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Execute(Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext)">
+      <summary>执行部署步骤。</summary>
+      <param name="context">一个提供信息的对象，可用来确定执行部署步骤的上下文。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Initialize(Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo)">
+      <summary>初始化部署步骤。</summary>
+      <param name="stepInfo">一个对象，包含有关部署步骤的信息。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo">
+      <summary>包含有关 SharePoint 项目的部署步骤的信息。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo.Description">
+      <summary>获取或设置部署步骤的说明。</summary>
+      <returns>部署步骤的说明。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo.Id">
+      <summary>获取或设置部署步骤的 ID。</summary>
+      <returns>部署步骤的 ID。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo.IsReadOnly">
+      <summary>获取一个值，该值指示 <see cref="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo" /> 对象是否为只读。</summary>
+      <returns>如果 <see cref="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo" /> 对象为只读，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo.Name">
+      <summary>获取或设置部署步骤的名称。</summary>
+      <returns>部署步骤的名称。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo.StatusBarMessage">
+      <summary>获取或设置当执行部署步骤时在状态栏中显示的消息。</summary>
+      <returns>当执行部署步骤时在状态栏中显示的消息。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext">
+      <summary>表示特定项目项的部署上下文。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext.Feature">
+      <summary>获取与项目项关联的主要功能。</summary>
+      <returns>一个表示 SharePoint 功能的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext.FeatureScope">
+      <summary>获取一个值，该值表示部署项目项功能的范围。</summary>
+      <returns>一个表示功能范围的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext.ProjectItem">
+      <summary>获取要部署的项目项。</summary>
+      <returns>一个表示 SharePoint 项目项的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeEventArgs">
+      <summary>为与“服务器资源管理器”中 SharePoint 节点相关的多个事件提供数据。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeEventArgs" /> 类的新实例。</summary>
+      <param name="node">与事件相关联的节点。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeEventArgs.Node">
+      <summary>获取与事件相关联的节点。</summary>
+      <returns>一个表示资源管理器节点的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeMenuItemsRequestedEventArgs">
+      <summary>为 <see cref="E:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeMenuItemsRequested" /> 事件提供数据。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeMenuItemsRequestedEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode,Microsoft.VisualStudio.SharePoint.IMenuItemCollection)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeMenuItemsRequestedEventArgs" /> 类的新实例。</summary>
+      <param name="node">要请求菜单项的节点。</param>
+      <param name="menuItems">节点的菜单项集合。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeMenuItemsRequestedEventArgs.MenuItems">
+      <summary>获取与 <see cref="E:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeMenuItemsRequested" /> 事件相关联的节点的菜单项集合。</summary>
+      <returns>与 <see cref="E:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeMenuItemsRequested" /> 事件相关联的节点的菜单项集合。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodePropertiesRequestedEventArgs">
+      <summary>为 <see cref="E:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodePropertiesRequested" /> 事件提供数据。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodePropertiesRequestedEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode,Microsoft.VisualStudio.SharePoint.IPropertySourceCollection)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodePropertiesRequestedEventArgs" /> 类的新实例。</summary>
+      <param name="node">要请求属性的节点。</param>
+      <param name="propertySources">节点的属性集合。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodePropertiesRequestedEventArgs.PropertySources">
+      <summary>获取与 <see cref="E:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodePropertiesRequested" /> 事件相关联的节点的属性集合。</summary>
+      <returns>与 <see cref="E:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodePropertiesRequested" /> 事件相关联的节点的属性集合。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypeAttribute">
+      <summary>指示要扩展的“服务器资源管理器”节点，或指定要定义的新“服务器资源管理器”节点的 ID。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypeAttribute.#ctor(System.String)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypeAttribute" /> 类的新实例。</summary>
+      <param name="nodeTypeId">要扩展或定义的节点的标识符。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypeAttribute.NodeTypeId">
+      <summary>获取要扩展或定义的节点的 ID。</summary>
+      <returns>要扩展或定义的节点的 ID。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypes">
+      <summary>为“服务器资源管理器”中的多个内置 SharePoint 节点定义 ID。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypes.ConnectionNode">
+      <summary>为“服务器资源管理器”中的站点连接节点（显示站点 URL 的节点）指定 ID。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypes.GenericFolderNode">
+      <summary>为“服务器资源管理器”中的父节点指定 ID。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypes.SiteNode">
+      <summary>为“服务器资源管理器”中的站点节点指定 ID。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode">
+      <summary>表示“服务器资源管理器”的“SharePoint 连接”节点层次结构中的节点。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.ChildNodes">
+      <summary>获取作为当前节点子级的 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode" /> 对象的集合。</summary>
+      <returns>作为当前节点子级的 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode" /> 对象的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.Context">
+      <summary>获取一个 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext" /> 对象，可以使用该对象获取有关与当前节点关联的 SharePoint 站点的信息。</summary>
+      <returns>一个 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext" /> 对象，可以使用该对象获取有关与当前节点关联的 SharePoint 站点的信息。</returns>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.DoubleClick">
+      <summary>在双击节点时发生。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.Icon">
+      <summary>获取或设置当前节点的图标。</summary>
+      <returns>当前节点的图标。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.IsDynamic">
+      <summary>获取一个值，该值指示每次刷新节点的父节点时是否重新创建该节点。</summary>
+      <returns>如果每次刷新节点的父节点时重新创建该节点，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.NodeType">
+      <summary>获取一个定义此节点行为的 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeType" /> 对象。</summary>
+      <returns>一个定义此节点行为的 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeType" /> 对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.ParentNode">
+      <summary>获取当前节点的父节点。</summary>
+      <returns>当前节点的父节点。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.Refresh">
+      <summary>更新节点显示的文本，然后重新创建其动态子节点。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.ServiceProvider">
+      <summary>获取当前节点的服务提供程序。</summary>
+      <returns>一个表示服务提供程序的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.SortOrder">
+      <summary>获取或设置一个值，该值用于在同级节点间对当前节点进行排序。</summary>
+      <returns>一个值，用于在同级节点间对当前节点进行排序。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.Text">
+      <summary>获取或设置节点的文本。</summary>
+      <returns>节点的文本。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeCollection">
+      <summary>表示 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode" /> 对象的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeCollection.Add(System.String,System.String,System.Collections.Generic.IDictionary{System.Object,System.Object})">
+      <summary>创建新的 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode" />，并将其添加到集合中。</summary>
+      <returns>新的 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode" />。</returns>
+      <param name="nodeTypeId">要用于定义新节点行为的 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeType" /> 的 ID。</param>
+      <param name="text">要与新节点一起显示的文本。</param>
+      <param name="annotations">要添加到新节点的 <see cref="P:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations" /> 属性的对象的字典。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeCollection.Add(System.String,System.String,System.Collections.Generic.IDictionary{System.Object,System.Object},System.Int32)">
+      <summary>使用在同级节点间的指定排序位置创建新的 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode" />。</summary>
+      <returns>新的 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode" />。</returns>
+      <param name="nodeTypeId">要用于定义新节点行为的 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeType" /> 的 ID。</param>
+      <param name="text">要与新节点一起显示的文本。</param>
+      <param name="annotations">要添加到新节点的 <see cref="P:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations" /> 属性的对象的字典。</param>
+      <param name="sortOrder">一个值，用于在同级节点间对当前节点进行排序。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeCollection.AddFolder(System.String,System.Drawing.Image,System.Action{Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode})">
+      <summary>创建新的文件夹节点，并使用指定委托为新文件夹节点创建子节点。</summary>
+      <returns>新文件夹节点。</returns>
+      <param name="text">要与新文件夹节点一起显示的文本。</param>
+      <param name="folderIcon">要与新文件夹节点一起显示的图标。</param>
+      <param name="createChildNodes">为新文件夹节点创建子节点时要执行的委托。 在引发新文件夹节点的 <see cref="E:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeChildrenRequested" /> 事件时，会自动执行此委托。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext">
+      <summary>提供一些成员，可以使用这些成员与 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode" /> 对象的关联 SharePoint 站点进行交互。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext.CreatePropertySourceObject(System.Collections.Generic.IDictionary{System.String,System.String})">
+      <summary>创建具有特殊类型描述符逻辑的对象，以便公开属性值的指定字典。</summary>
+      <returns>附加有指定属性的对象。</returns>
+      <param name="properties">要创建的属性。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext.SharePointConnection">
+      <summary>获取一个 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointConnection" /> 对象，该对象可用于执行调用到 SharePoint 服务器对象模型中的命令。</summary>
+      <returns>一个 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointConnection" /> 对象，可用于执行调用到 SharePoint 服务器对象模型中的命令。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext.ShowMessageBox(System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)">
+      <summary>显示消息框。</summary>
+      <returns>一个值，指定用户在消息框中单击了哪个按钮。</returns>
+      <param name="message">消息文本。</param>
+      <param name="buttons">要在消息框中显示的按钮。</param>
+      <param name="icon">要在消息框中显示的图标。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext.SiteId">
+      <summary>获取与节点关联的 SharePoint 站点 (Microsoft.SharePoint.SPWeb) 的 ID。</summary>
+      <returns>与节点关联的 SharePoint 站点 (Microsoft.SharePoint.SPWeb) 的 ID。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext.SiteUrl">
+      <summary>获取此节点关联的 SharePoint 网站 (Microsoft.SharePoint.SPWeb) 的 URL。</summary>
+      <returns>一个表示 SharePoint 网站的 URL 的值。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents">
+      <summary>定义由 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode" /> 对象引发的事件。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeChildrenRequested">
+      <summary>在 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode" /> 请求子节点时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeDisposing">
+      <summary>在即将释放 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode" /> 时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeInitialized">
+      <summary>在初始化新 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode" /> 时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeMenuItemsRequested">
+      <summary>在 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode" /> 请求快捷菜单项时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodePropertiesRequested">
+      <summary>在 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode" /> 请求属性时发生。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeType">
+      <summary>为“服务器资源管理器”的“SharePoint 连接”节点层次结构中的现有节点类型定义行为。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeType.DefaultIcon">
+      <summary>获取要与此类型的节点一起显示的图标。</summary>
+      <returns>要与此类型的节点一起显示的图标。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeType.Id">
+      <summary>获取此节点类型的 ID。</summary>
+      <returns>此节点类型的 ID。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeType.IsAlwaysLeaf">
+      <summary>获取一个值，该值指示此类型的节点是否没有子节点。</summary>
+      <returns>如果此类型的节点没有子节点，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeType.Name">
+      <summary>获取与节点类型关联的名称。</summary>
+      <returns>与节点类型关联的名称。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeDefinition">
+      <summary>为“服务器资源管理器”的“SharePoint 连接”节点层次结构中的新节点类型定义行为。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeDefinition.DefaultIcon">
+      <summary>获取或设置由节点类型定义的节点的默认图标。</summary>
+      <returns>由节点类型定义的节点的默认图标。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeDefinition.IsAlwaysLeaf">
+      <summary>获取一个值，该值指示此类型的节点是否没有子节点。</summary>
+      <returns>一个值，该值指示此类型的节点是否没有子节点。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeDefinition.Name">
+      <summary>获取与节点类型关联的名称。</summary>
+      <returns>与节点类型关联的名称。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeDefinition.NodeType">
+      <summary>获取一个布尔值，该值指示此类型的节点是否通常没有子节点。 如果存在 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeType" /> 的扩展，此属性将被取代。</summary>
+      <returns>一个表示节点类型的值。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension">
+      <summary>表示“服务器资源管理器”的“SharePoint 连接”节点层次结构中某个节点的扩展。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension.Initialize(Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeType)">
+      <summary>初始化节点扩展。</summary>
+      <param name="nodeType">要扩展的节点类型。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider">
+      <summary>为“服务器资源管理器”的“SharePoint 连接”节点层次结构中的新节点类型的定义。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider.InitializeType(Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeDefinition)">
+      <summary>初始化新节点类型。</summary>
+      <param name="typeDefinition">新节点类型的定义。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerSiteNodeInfo">
+      <summary>提供有关由“服务器资源管理器”中 SharePoint 站点节点表示的 SharePoint 站点（即  Microsoft.SharePoint.SPWeb）的信息。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerSiteNodeInfo.Id">
+      <summary>获取由 SharePoint 站点节点表示的 Microsoft.SharePoint.SPWeb 的 ID。</summary>
+      <returns>由 SharePoint 站点节点表示的 Microsoft.SharePoint.SPWeb 的 ID。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerSiteNodeInfo.IsConnectionRoot">
+      <summary>获取一个值，该值指示 SharePoint 站点节点是否为“服务器资源管理器”中“SharePoint 连接”节点的直接子级。</summary>
+      <returns>如果 SharePoint 站点节点是“服务器资源管理器”中“SharePoint 连接”节点的直接子级，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerSiteNodeInfo.IsRootWeb">
+      <summary>获取一个值，该值指示由 SharePoint 站点节点表示的 Microsoft.SharePoint.SPWeb 是否为其网站集 (Microsoft.SharePoint.SPSite) 的 RootWeb。</summary>
+      <returns>如果由 SharePoint 站点节点表示的 Microsoft.SharePoint.SPWeb 是其网站集 (Microsoft.SharePoint.SPSite) 的 RootWeb，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerSiteNodeInfo.Title">
+      <summary>获取由 SharePoint 站点节点表示的 Microsoft.SharePoint.SPWeb 的名称。</summary>
+      <returns>由 SharePoint 站点节点表示的 Microsoft.SharePoint.SPWeb 的名称。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerSiteNodeInfo.Url">
+      <summary>获取由 SharePoint 站点节点表示的 Microsoft.SharePoint.SPWeb 的 URL。</summary>
+      <returns>由 SharePoint 站点节点表示的 Microsoft.SharePoint.SPWeb 的 URL。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Features.DiscreteUpgradeActionType">
+      <summary>指定升级功能时要执行的操作的类型。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Features.DiscreteUpgradeActionType.AddContentTypeField">
+      <summary>向现有内容类型添加新字段。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Features.DiscreteUpgradeActionType.ApplyElementManifests">
+      <summary>提供新的功能元素。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Features.DiscreteUpgradeActionType.Custom">
+      <summary>在功能事件接收器中执行自定义代码。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Features.DiscreteUpgradeActionType.MapFile">
+      <summary>将非自定义文件重新映射到 Web 前端 (WFE) 文件系统上的其他安装路径。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Features.FeatureElementType">
+      <summary>指定在部署功能时 SharePoint 如何处理元素。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Features.FeatureElementType.ElementFile">
+      <summary>指定功能所需的支持文件。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Features.FeatureElementType.ElementManifest">
+      <summary>指定包含功能元素定义的文件。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Features.FeatureScope">
+      <summary>指定在其中激活功能的上下文。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Features.FeatureScope.Web">
+      <summary>为特定网站激活功能。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Features.FeatureScope.Farm">
+      <summary>为整个服务器场激活功能。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Features.FeatureScope.WebApplication">
+      <summary>为 Web 应用程序中的所有网站激活功能。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Features.FeatureScope.Site">
+      <summary>为网站集中的所有网站激活功能。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Features.IAddContentTypeFieldUpgradeAction">
+      <summary>表示将新字段添加到现有内容类型的升级操作。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IAddContentTypeFieldUpgradeAction.ContentTypeId">
+      <summary>获取或设置受升级操作影响的内容类型的 ID。</summary>
+      <returns>表示内容类型的 GUID。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IAddContentTypeFieldUpgradeAction.FieldId">
+      <summary>获取或设置列模板 ID。</summary>
+      <returns>表示模板 ID 的 GUID。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IAddContentTypeFieldUpgradeAction.IsPushedDown">
+      <summary>获取或设置是否将指定的已修改内容类型传播到其子内容类型和列表。</summary>
+      <returns>一个布尔值，表示是否传播内容类型。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Features.IApplyElementManifestsUpgradeAction">
+      <summary>表示提供新功能元素的升级操作。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IApplyElementManifestsUpgradeAction.Elements">
+      <summary>功能元素定义和支持文件的列表。</summary>
+      <returns>一个表示功能元素定义和支持文件的集合。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Features.ICustomFeatureActivationDependency">
+      <summary>表示激活另一个功能时所依赖的现有功能。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.ICustomFeatureActivationDependency.FeatureDescription">
+      <summary>获取或设置自定义激活依赖项的说明。</summary>
+      <returns>一个表示说明的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.ICustomFeatureActivationDependency.FeatureId">
+      <summary>获取或设置由自定义激活依赖项表示的功能的 SharePoint ID。</summary>
+      <returns>表示依赖功能的 ID 的 GUID。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.ICustomFeatureActivationDependency.FeatureTitle">
+      <summary>获取或设置自定义激活依赖项的名称。</summary>
+      <returns>一个表示依赖功能名称的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.ICustomFeatureActivationDependency.SolutionId">
+      <summary>获取或设置功能依赖的解决方案的 SharePoint ID。</summary>
+      <returns>表示解决方案的 ID 的 GUID。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.ICustomFeatureActivationDependency.SolutionName">
+      <summary>获取或设置 SharePoint 解决方案文件 (WSP) 的文件名。</summary>
+      <returns>一个表示文件名的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.ICustomFeatureActivationDependency.SolutionTitle">
+      <summary>获取或设置解决方案的标题。</summary>
+      <returns>一个表示解决方案标题的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.ICustomFeatureActivationDependency.SolutionUrl">
+      <summary>获取或设置用户可用于获取解决方案的 URL。</summary>
+      <returns>一个表示解决方案的 Web 位置的 URL。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Features.ICustomUpgradeAction">
+      <summary>表示运行功能事件接收器的升级操作。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.ICustomUpgradeAction.Name">
+      <summary>获取或设置升级操作的名称。</summary>
+      <returns>一个表示升级操作名称的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.ICustomUpgradeAction.Parameters">
+      <summary>获取在升级期间传递给功能事件接收器的参数列表。</summary>
+      <returns>一个表示已传递参数列表的集合。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Features.ICustomUpgradeActionParameter">
+      <summary>表示自定义升级操作参数。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.ICustomUpgradeActionParameter.Name">
+      <summary>获取或设置自定义升级操作参数的名称。</summary>
+      <returns>一个表示参数名的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.ICustomUpgradeActionParameter.Value">
+      <summary>获取或设置自定义升级操作参数值。</summary>
+      <returns>一个表示参数值的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Features.ICustomUpgradeActionParameterCollection">
+      <summary>表示自定义升级操作参数的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Features.ICustomUpgradeActionParameterCollection.Add">
+      <summary>添加新的自定义升级操作参数。</summary>
+      <returns>已添加到集合的新参数。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Features.IDiscreteUpgradeAction">
+      <summary>表示在功能升级期间运行的操作。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IDiscreteUpgradeAction.ActionType">
+      <summary>获取升级操作的类型。</summary>
+      <returns>一个表示升级操作类型的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Features.IDiscreteUpgradeActionCollection">
+      <summary>表示功能升级操作的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Features.IDiscreteUpgradeActionCollection.AddAddContentTypeFieldUpgradeAction">
+      <summary>将新的 <see cref="T:Microsoft.VisualStudio.SharePoint.Features.IAddContentTypeFieldUpgradeAction" /> 功能升级操作添加到集合。</summary>
+      <returns>一个表示升级操作的对象。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Features.IDiscreteUpgradeActionCollection.AddApplyElementManifestsUpgradeAction">
+      <summary>将新的 <see cref="T:Microsoft.VisualStudio.SharePoint.Features.IApplyElementManifestsUpgradeAction" /> 功能升级操作添加到集合。</summary>
+      <returns>一个表示升级操作的对象。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Features.IDiscreteUpgradeActionCollection.AddCustomUpgradeAction">
+      <summary>将新的 <see cref="T:Microsoft.VisualStudio.SharePoint.Features.ICustomUpgradeAction" /> 功能升级操作添加到集合。</summary>
+      <returns>一个表示升级操作的对象。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Features.IDiscreteUpgradeActionCollection.AddMapFileUpgradeAction">
+      <summary>将新的 <see cref="T:Microsoft.VisualStudio.SharePoint.Features.IMapFileUpgradeAction" /> 功能升级操作添加到集合。</summary>
+      <returns>一个表示升级操作的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Features.IElement">
+      <summary>表示与功能相关联的文件。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IElement.Location">
+      <summary>获取或设置功能清单文件中元素的相对路径。</summary>
+      <returns>一个表示功能元素的相对路径的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IElement.Type">
+      <summary>获取元素是表示功能元素定义还是支持文件。</summary>
+      <returns>如果元素是功能元素，则为 True；否则为 false。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Features.IElementCollection">
+      <summary>表示功能元素的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Features.IElementCollection.AddElementFile">
+      <summary>向功能元素集合添加新的元素文件。</summary>
+      <returns>添加到集合的新元素文件。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Features.IElementCollection.AddElementManifest">
+      <summary>添加新的元素清单。</summary>
+      <returns>添加到集合的新元素清单。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Features.IFeature">
+      <summary>表示 SharePoint 项目系统中的功能的定义。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IFeature.DeploymentPath">
+      <summary>获取或设置在部署功能的包中的路径。</summary>
+      <returns>一个表示部署路径的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IFeature.IsDesignerEnabled">
+      <summary>获取是否启用了功能的设计器。</summary>
+      <returns>如果启用了功能，则为 True；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IFeature.ProjectItems">
+      <summary>获取使用功能部署的项目项的列表。</summary>
+      <returns>一个表示使用功能部署的项目项的对象集合。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Features.IFeatureActivationDependency">
+      <summary>表示激活另一个功能时所依赖的功能。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureActivationDependency.Description">
+      <summary>获取或设置激活依赖项的说明。</summary>
+      <returns>一个表示功能激活依赖项说明的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureActivationDependency.MinimumVersion">
+      <summary>获取或设置为正常运行功能而必须安装的依赖功能的最低版本。</summary>
+      <returns>一个表示该功能所需的最低版本的值。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Features.IFeatureActivationDependencyCollection">
+      <summary>表示功能激活依赖项的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Features.IFeatureActivationDependencyCollection.AddCustomFeatureActivationDependency">
+      <summary>将新的 <see cref="T:Microsoft.VisualStudio.SharePoint.Features.ICustomFeatureActivationDependency" /> 添加到功能激活依赖项集合。</summary>
+      <returns>添加到集合的新功能激活依赖项。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Features.IFeatureActivationDependencyCollection.AddReferencedFeatureActivationDependency(System.Guid)">
+      <summary>将新的 <see cref="T:Microsoft.VisualStudio.SharePoint.Features.IReferencedFeatureActivationDependency" /> 添加到功能激活依赖项集合。</summary>
+      <returns>添加到集合的新功能激活依赖项。</returns>
+      <param name="itemId">所引用的功能的 ID。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest">
+      <summary>表示 SharePoint 功能的清单。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.ActivateOnDefault">
+      <summary>获取或设置是否在安装期间激活功能。</summary>
+      <returns>如果在安装期间激活功能，则为 True；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.ActivationDependencies">
+      <summary>获取激活当前功能时所依赖的功能的列表。</summary>
+      <returns>一个表示依赖功能列表的对象集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.AlwaysForceInstall">
+      <summary>获取或设置是否应强制安装功能（即使已安装该功能也是如此）。</summary>
+      <returns>如果应强制安装功能，则为 True；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.AutoActivateInCentralAdmin">
+      <summary>获取或设置在默认情况下是否为管理员激活功能。</summary>
+      <returns>如果在默认情况下激活功能，则为 True；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.Creator">
+      <summary>获取或设置创建功能的开发人员的姓名。</summary>
+      <returns>一个表示开发人员姓名的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.DefaultResourceFile">
+      <summary>获取或设置用于检索功能资源的中央资源文件。</summary>
+      <returns>一个表示默认资源文件的名称的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.Description">
+      <summary>获取或设置对功能作用的说明。</summary>
+      <returns>一个表示说明的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.Elements">
+      <summary>获取功能元素定义和支持文件的列表。</summary>
+      <returns>一个表示功能元素定义和支持文件的对象集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.FeatureId">
+      <summary>获取或设置功能的 SharePoint ID。</summary>
+      <returns>表示功能 ID 的 GUID。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.ImageAltText">
+      <summary>获取或设置与功能关联的图像的文本。</summary>
+      <returns>一个表示图像说明文本的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.ImageUrl">
+      <summary>获取或设置与功能关联的图像的相对 URL。</summary>
+      <returns>一个表示图像的 Web 位置的 URL</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.IsHidden">
+      <summary>获取或设置功能是否在要激活的可用功能列表中可见。</summary>
+      <returns>如果功能在列表中可见，则为 True；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.Properties">
+      <summary>获取功能属性的默认值的列表。</summary>
+      <returns>默认功能属性值的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.ReceiverAssembly">
+      <summary>获取或设置包含功能事件接收器的程序集的完全限定名称。</summary>
+      <returns>一个表示程序集的完全限定名称的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.ReceiverClass">
+      <summary>获取或设置功能的事件接收器的类名。</summary>
+      <returns>一个表示事件接收器类名的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.RequireResources">
+      <summary>获取或设置 SharePoint 是否针对特定语言和区域性检查资源。</summary>
+      <returns>如果 SharePoint 检查资源，则为 True；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.Scope">
+      <summary>获取或设置在其中激活功能的上下文。</summary>
+      <returns>一个表示在其中激活功能的上下文的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.SolutionId">
+      <summary>获取或设置要安装功能的 SharePoint 服务器的 ID。 此属性仅用于基础结构性用途，因此不应使用。</summary>
+      <returns>SharePoint 服务器的 GUID。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.Title">
+      <summary>获取或设置功能的标题（最多 255 个字符）。</summary>
+      <returns>一个表示功能标题的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.UIVersion">
+      <summary>获取或设置一个指示站点的兼容版本的字符串。</summary>
+      <returns>一个表示版本的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.UpgradeActions">
+      <summary>获取升级当前功能时要执行的操作的列表。</summary>
+      <returns>一个表示要在升级功能时应用的操作的对象集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.UpgradeActionsReceiverAssembly">
+      <summary>获取或设置包含功能事件接收器（用于处理自定义升级操作）的程序集的完全限定名称。</summary>
+      <returns>一个表示完全限定程序集名称的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.UpgradeActionsReceiverClass">
+      <summary>获取或设置用于处理自定义升级操作的功能事件接收器的类名。</summary>
+      <returns>一个表示功能事件接收器类名的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.Version">
+      <summary>获取或设置功能版本的与 System.Version 兼容的表示形式。 此值最多可包含四个数字（以小数点分隔）。</summary>
+      <returns>一个表示功能版本的 Version 值。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Features.IMapFileUpgradeAction">
+      <summary>表示一个升级操作，该操作将非自定义文件重新映射到 SharePoint Web 前端 (WFE) 服务器文件系统上的其他安装路径。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IMapFileUpgradeAction.FromPath">
+      <summary>获取或设置 SharePoint AllDocs 表中文件的安装路径。</summary>
+      <returns>一个表示文件路径的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IMapFileUpgradeAction.ToPath">
+      <summary>获取或设置 SharePoint AllDocs 表中安装路径的新值。</summary>
+      <returns>一个表示文件路径的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Features.IProperty">
+      <summary>表示功能属性的默认值。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IProperty.Key">
+      <summary>获取或设置功能属性的标识符。</summary>
+      <returns>一个表示功能属性标识符的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IProperty.Value">
+      <summary>获取或设置功能属性的值。</summary>
+      <returns>一个表示功能属性值的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Features.IPropertyCollection">
+      <summary>表示功能属性的默认值的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Features.IPropertyCollection.Add">
+      <summary>添加新的功能属性。</summary>
+      <returns>添加到集合的新功能属性。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Features.IReferencedFeatureActivationDependency">
+      <summary>表示 Visual Studio 解决方案中为另一个功能所依赖的功能。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IReferencedFeatureActivationDependency.ItemId">
+      <summary>获取所引用功能的 SharePoint 项目系统 ID。</summary>
+      <returns>表示功能 ID 的 GUID 值。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IReferencedFeatureActivationDependency.ProjectPath">
+      <summary>获取或设置所引用功能所属的项目文件的路径。</summary>
+      <returns>一个表示项目文件路径的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Features.IUpgradeAction">
+      <summary>表示在功能升级期间运行的操作。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IUpgradeAction.Description">
+      <summary>获取或设置升级操作的作用的说明。</summary>
+      <returns>一个表示升级操作说明的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Features.IUpgradeActionCollection">
+      <summary>表示功能升级操作的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Features.IUpgradeActionCollection.AddAddContentTypeFieldUpgradeAction">
+      <summary>将新的 <see cref="T:Microsoft.VisualStudio.SharePoint.Features.IAddContentTypeFieldUpgradeAction" /> 操作添加到功能升级操作集合。</summary>
+      <returns>添加到集合中的新升级操作。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Features.IUpgradeActionCollection.AddApplyElementManifestsUpgradeAction">
+      <summary>将新的 <see cref="T:Microsoft.VisualStudio.SharePoint.Features.IApplyElementManifestsUpgradeAction" /> 升级操作添加到功能升级操作集合。</summary>
+      <returns>添加到集合中的新升级操作。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Features.IUpgradeActionCollection.AddCustomUpgradeAction">
+      <summary>将新的 <see cref="T:Microsoft.VisualStudio.SharePoint.Features.ICustomUpgradeAction" /> 升级操作添加到功能升级操作集合。</summary>
+      <returns>添加到集合中的新升级操作。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Features.IUpgradeActionCollection.AddMapFileUpgradeAction">
+      <summary>将新的 <see cref="T:Microsoft.VisualStudio.SharePoint.Features.IMapFileUpgradeAction" /> 升级操作添加到功能升级操作集合。</summary>
+      <returns>添加到集合中的新升级操作。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Features.IUpgradeActionCollection.AddVersionRange">
+      <summary>将新的 <see cref="T:Microsoft.VisualStudio.SharePoint.Features.IVersionRange" /> 升级操作添加到功能升级操作集合。</summary>
+      <returns>一个表示版本范围的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Features.IVersionRange">
+      <summary>表示在特定版本功能升级期间执行的操作的集合。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IVersionRange.BeginVersion">
+      <summary>获取或设置要为其执行升级操作的功能的起始版本（含）。</summary>
+      <returns>一个表示功能起始版本的值。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IVersionRange.EndVersion">
+      <summary>获取或设置要为其执行升级操作的功能的结束版本（不含）。</summary>
+      <returns>一个表示功能结束版本的值。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Features.IVersionRange.UpgradeActions">
+      <summary>获取在升级此版本的功能时执行的操作的列表。</summary>
+      <returns>一个表示要在升级功能时执行的操作的列表的对象集合。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.ApplicationResourceType">
+      <summary>指定在服务器上部署应用程序资源文件的位置。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Packages.ApplicationResourceType.AppGlobalResourceFile">
+      <summary>应用程序资源文件会部署到服务器的 App_GlobalResources 文件夹中。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Packages.ApplicationResourceType.ApplicationResourceFile">
+      <summary>应用程序资源文件会部署到服务器的 Resources 文件夹中。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.DeploymentServerType">
+      <summary>指定要承载包的服务器的类型。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Packages.DeploymentServerType.ApplicationServer">
+      <summary>承载服务的服务器。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Packages.DeploymentServerType.WebFrontEnd">
+      <summary>承载网站的服务器。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.DeploymentTarget">
+      <summary>指定在 SharePoint 服务器上部署程序集的位置。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Packages.DeploymentTarget.GlobalAssemblyCache">
+      <summary>将程序集部署到全局程序集缓存 (GAC)。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Packages.DeploymentTarget.WebApplication">
+      <summary>将程序集部署到 Web 应用程序的 Bin 目录。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.IApplicationResource">
+      <summary>表示应用程序资源文件。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IApplicationResource.Location">
+      <summary>获取或设置应用程序资源文件在包含其的包中的相对位置。</summary>
+      <returns>一个表示资源路径的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IApplicationResource.Type">
+      <summary>获取在 SharePoint 服务器上部署应用程序资源文件的位置。</summary>
+      <returns>一个指定部署应用程序资源的位置的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.IApplicationResourceCollection">
+      <summary>表示应用程序资源文件的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Packages.IApplicationResourceCollection.AddAppGlobalResourceFile">
+      <summary>向集合添加新的应用程序全局资源文件。</summary>
+      <returns>已添加到集合中的新资源。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Packages.IApplicationResourceCollection.AddApplicationResourceFile">
+      <summary>向集合添加新的应用程序资源文件。</summary>
+      <returns>已添加到集合中的新资源。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.IAssembly">
+      <summary>表示一个程序集。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IAssembly.BindingRedirects">
+      <summary>获取与程序集相关联的绑定重定向。</summary>
+      <returns>一个表示程序集绑定重定向的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IAssembly.ClassResources">
+      <summary>获取与程序集相关联的类资源文件。</summary>
+      <returns>一个表示类资源文件的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IAssembly.DeploymentTarget">
+      <summary>获取或设置在服务器上部署程序集的位置。</summary>
+      <returns>一个指定部署程序集的位置的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IAssembly.Location">
+      <summary>获取或设置程序集在包含其的包中的相对位置。</summary>
+      <returns>一个表示在包中的相对位置的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IAssembly.SafeControls">
+      <summary>获取与程序集相关联的安全控件。</summary>
+      <returns>一个表示程序集中的安全控件的集合。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.IAssemblyCollection">
+      <summary>表示包中的程序集的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Packages.IAssemblyCollection.AddAssembly">
+      <summary>向集合添加新的程序集。</summary>
+      <returns>添加到集合的新程序集。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Packages.IAssemblyCollection.AddCustomAssembly">
+      <summary>向集合添加新的自定义程序集。</summary>
+      <returns>添加到集合的新程序集。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Packages.IAssemblyCollection.AddProjectOutputAssembly">
+      <summary>向集合添加新的项目输出程序集。</summary>
+      <returns>添加到集合的新程序集。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.IBindingRedirect">
+      <summary>表示程序集绑定重定向。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IBindingRedirect.OldVersion">
+      <summary>获取或设置要重定向到此程序集的以前版本程序集。</summary>
+      <returns>一个表示一个或多个程序集版本的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.IBindingRedirectCollection">
+      <summary>表示包程序集绑定重定向的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Packages.IBindingRedirectCollection.Add">
+      <summary>向集合添加新的程序集绑定重定向。</summary>
+      <returns>一个表示添加到集合中的新绑定重定向的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.IClassResource">
+      <summary>表示包中的类资源文件。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IClassResource.Location">
+      <summary>获取或设置类资源文件在包含其的包中的相对位置。</summary>
+      <returns>一个表示类资源文件位置的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IClassResource.SourcePath">
+      <summary>获取或设置类资源文件的名称。</summary>
+      <returns>一个表示类资源文件名称的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.IClassResourceCollection">
+      <summary>表示包类资源文件的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Packages.IClassResourceCollection.Add">
+      <summary>向集合添加新的类资源文件。</summary>
+      <returns>一个表示添加到集合中的新类资源的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.ICodeAccessSecurityAssembly">
+      <summary>表示代码访问安全性 (CAS) 策略中的程序集。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.ICodeAccessSecurityAssembly.Name">
+      <summary>获取或设置程序集的完全限定名称。</summary>
+      <returns>一个表示程序集名称的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.ICodeAccessSecurityAssembly.PublicKeyBlob">
+      <summary>获取或设置程序集的公钥（采用二进制格式）。</summary>
+      <returns>一个表示程序集公钥的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.ICodeAccessSecurityAssembly.Version">
+      <summary>获取或设置程序集的版本。</summary>
+      <returns>一个表示程序集版本的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.ICodeAccessSecurityAssemblyCollection">
+      <summary>表示与代码访问安全性 (CAS) 策略相关联的程序集的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Packages.ICodeAccessSecurityAssemblyCollection.Add">
+      <summary>添加新的代码访问安全性 (CAS) 程序集。</summary>
+      <returns>一个表示添加到集合中的新 CAS 程序集的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.ICustomAssembly">
+      <summary>表示包中包含的程序集。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.ICustomAssembly.SourcePath">
+      <summary>获取或设置要包含在包中的程序集的名称和路径。 该路径可以是绝对路径，也可以是相对于包项目的根目录的路径。</summary>
+      <returns>一个表示程序集的路径和名称的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.ICustomSolutionActivationDependency">
+      <summary>表示包中的自定义解决方案激活依赖项。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.ICustomSolutionActivationDependency.SolutionId">
+      <summary>获取或设置此解决方案所依赖的解决方案的 SharePoint ID。</summary>
+      <returns>一个表示解决方案的 SharePoint ID 的 GUID 值。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.ICustomSolutionActivationDependency.SolutionName">
+      <summary>获取或设置 SharePoint 解决方案文件 (WSP) 的文件名。</summary>
+      <returns>一个表示文件名的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.ICustomSolutionActivationDependency.SolutionTitle">
+      <summary>获取或设置解决方案的标题。</summary>
+      <returns>一个表示解决方案标题的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.ICustomSolutionActivationDependency.SolutionUrl">
+      <summary>获取或设置用户可用于获取解决方案的 URL。</summary>
+      <returns>一个表示解决方案的 Web 位置的 URL。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.IDwpFile">
+      <summary>表示包中的 Web 部件 (.dwp) 文件。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IDwpFile.Location">
+      <summary>获取或设置 Web 部件在包含其的包中的相对位置。</summary>
+      <returns>一个表示包中的 Web 部件 (.dwp) 文件位置的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.IDwpFileCollection">
+      <summary>表示包中 Web 部件 (.dwp) 文件的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Packages.IDwpFileCollection.Add">
+      <summary>向集合添加新的 Web 部件文件。</summary>
+      <returns>一个表示添加到集合中的新 Web 部件 (.dwp) 文件的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.IFeatureManifestReference">
+      <summary>表示包中的功能清单文件。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IFeatureManifestReference.Location">
+      <summary>获取或设置功能清单文件在包含其的包中的相对位置。</summary>
+      <returns>一个表示包中的功能清单文件位置的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.IFeatureManifestReferenceCollection">
+      <summary>表示包中的功能清单文件的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Packages.IFeatureManifestReferenceCollection.Add">
+      <summary>向集合添加新的功能清单引用。</summary>
+      <returns>一个表示添加到集合中的新功能清单引用的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.IPackage">
+      <summary>表示 SharePoint 项目系统中的包的定义。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IPackage.Features">
+      <summary>要使用包部署的功能。</summary>
+      <returns>一个表示要使用包部署的功能的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IPackage.IsDesignerEnabled">
+      <summary>获取是否启用了包的设计器。</summary>
+      <returns>如果启用了设计器，则为 True；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IPackage.Name">
+      <summary>获取 SharePoint 包文件 (WSP) 的名称。</summary>
+      <returns>一个表示 WSP 文件的名称的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IPackage.ProjectItems">
+      <summary>获取要使用包部署的 SharePoint 项目项。</summary>
+      <returns>一个表示要使用包部署的项目项的集合。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest">
+      <summary>表示 SharePoint 包清单。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.ActivationDependencies">
+      <summary>获取激活当前包所依赖的包。</summary>
+      <returns>一个表示包的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.ApplicationResourceFiles">
+      <summary>获取与包相关联的应用程序资源文件。</summary>
+      <returns>一个表示应用程序资源文件的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.Assemblies">
+      <summary>获取与包相关联的程序集。</summary>
+      <returns>一个表示程序集的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.DeploymentServerType">
+      <summary>获取或设置承载包的服务器的类型。</summary>
+      <returns>一个表示承载包的服务器类型的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.Description">
+      <summary>获取或设置包说明。</summary>
+      <returns>一个表示包说明的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.DwpFiles">
+      <summary>获取与包相关联的 Web 部件 (.dwp) 文件。</summary>
+      <returns>一个表示 Web 部件文件的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.FeatureManifests">
+      <summary>获取与包相关联的功能清单。</summary>
+      <returns>一个表示功能清单的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.PolicyItems">
+      <summary>获取包的代码访问安全性 (CAS) 策略。</summary>
+      <returns>一个表示 CAS 策略的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.ResetWebServer">
+      <summary>获取或设置是否在安装包后重新启动 IIS。</summary>
+      <returns>如果重置 Web 服务器，则为 True；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.ResetWebServerModeOnUpgrade">
+      <summary>获取或设置在升级包后重新启动 IIS 的方式。</summary>
+      <returns>一个表示升级后重新启动 Web 服务器的方式的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.Resources">
+      <summary>获取与包相关联的资源文件。</summary>
+      <returns>一个表示资源文件的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.RootFiles">
+      <summary>获取与包相关联的根文件。</summary>
+      <returns>一个表示根文件的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.SharePointProductVersion">
+      <summary>获取或设置该解决方案所适于的 SharePoint 版本。</summary>
+      <returns>一个表示版本号的字符串值。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.SiteDefinitionManifests">
+      <summary>获取与包相关联的站点定义清单文件。</summary>
+      <returns>一个表示站点定义清单文件的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.SolutionId">
+      <summary>获取或设置包 ID。</summary>
+      <returns>表示包 ID 的 GUID 值。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.TemplateFiles">
+      <summary>获取与包相关联的模板文件。</summary>
+      <returns>一个表示模板文件的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.Title">
+      <summary>获取或设置包标题。</summary>
+      <returns>一个表示包标题的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.IPermissionElement">
+      <summary>表示代码访问安全性 (CAS) 权限。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IPermissionElement.Xml">
+      <summary>获取或设置代码访问安全性 (CAS) 权限的 XML 内容。</summary>
+      <returns>一个表示 XML 的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.IPermissionElementCollection">
+      <summary>表示代码访问安全性 (CAS) 策略权限的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Packages.IPermissionElementCollection.Add">
+      <summary>向集合添加新的权限元素。</summary>
+      <returns>一个表示添加到集合中的新权限元素的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.IPolicyItem">
+      <summary>表示代码访问安全性 (CAS) 策略项。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IPolicyItem.Assemblies">
+      <summary>获取与代码访问安全性 (CAS) 策略项相关联的程序集。</summary>
+      <returns>一个表示程序集的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IPolicyItem.Description">
+      <summary>获取或设置权限集的说明。</summary>
+      <returns>一个表示说明的字符串值。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IPolicyItem.Name">
+      <summary>获取或设置权限集的名称。</summary>
+      <returns>一个表示权限集名称的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IPolicyItem.Permissions">
+      <summary>获取构成权限集的代码访问安全性 (CAS) 权限。</summary>
+      <returns>一个表示权限项的集合。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IPolicyItem.Version">
+      <summary>获取或设置权限集的版本号。</summary>
+      <returns>一个表示版本号的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.IPolicyItemCollection">
+      <summary>表示代码访问安全性 (CAS) 策略项的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Packages.IPolicyItemCollection.Add">
+      <summary>添加新的策略项。</summary>
+      <returns>一个表示添加到集合中的新策略项的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.IProjectOutputAssembly">
+      <summary>表示包含在包中的项目输出程序集。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IProjectOutputAssembly.ProjectPath">
+      <summary>获取或设置其输出包含在包中的项目文件的路径。</summary>
+      <returns>一个表示文件路径的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.IResource">
+      <summary>表示包中的资源文件。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IResource.Location">
+      <summary>获取或设置资源文件在包含其的包中的相对位置。</summary>
+      <returns>一个表示包中的资源文件位置的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.IResourceCollection">
+      <summary>表示包中资源文件的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Packages.IResourceCollection.Add">
+      <summary>向集合添加新的资源文件。</summary>
+      <returns>一个表示添加到集合中的新资源文件的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.IRootFile">
+      <summary>表示包中的根文件。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IRootFile.Location">
+      <summary>获取或设置根文件在包中的相对位置。</summary>
+      <returns>一个表示根文件的文件位置的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.IRootFileCollection">
+      <summary>表示包中根文件的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Packages.IRootFileCollection.Add">
+      <summary>向集合添加新的根文件。</summary>
+      <returns>一个表示添加到集合中的新根文件的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.ISafeControl">
+      <summary>表示包中的安全控件。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.ISafeControl.AssemblyName">
+      <summary>获取或设置包含控件的程序集的完全限定名称。</summary>
+      <returns>一个表示完全限定程序集名称的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.ISafeControl.IsSafe">
+      <summary>获取或设置控件是否可视为安全的。</summary>
+      <returns>如果控件是安全的，则为 True；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.ISafeControl.IsSafeAgainstScript">
+      <summary>获取或设置该控件是否可防止参与者注入脚本，并因此使参与者可以编辑该控件。</summary>
+      <returns>如果该控件处于安全状态，则为 True；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.ISafeControl.NamespaceName">
+      <summary>获取或设置控件命名空间。</summary>
+      <returns>一个表示控件命名空间的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.ISafeControl.TypeName">
+      <summary>获取或设置控件类名。</summary>
+      <returns>一个表示控件类名的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.ISafeControlCollection">
+      <summary>表示安全控件的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Packages.ISafeControlCollection.Add">
+      <summary>向集合添加新的安全控件。</summary>
+      <returns>一个表示添加到集合中的新安全控件的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.ISiteDefinitionManifest">
+      <summary>表示站点定义清单文件。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.ISiteDefinitionManifest.Location">
+      <summary>获取或设置站点定义清单文件在包中的相对位置。</summary>
+      <returns>一个表示文件位置的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.ISiteDefinitionManifest.WebTempFiles">
+      <summary>获取与站点定义清单文件相关联的 Web 模板文件。</summary>
+      <returns>表示 Web 模板文件的集合。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.ISiteDefinitionManifestCollection">
+      <summary>表示站点定义清单的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Packages.ISiteDefinitionManifestCollection.Add">
+      <summary>向集合添加新的站点定义清单文件。</summary>
+      <returns>一个表示添加到集合中的新站点定义清单的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.ISolutionActivationDependency">
+      <summary>表示 SharePoint 包的激活依赖项。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.ISolutionActivationDependency.Description">
+      <summary>获取或设置激活依赖项的说明。</summary>
+      <returns>一个描述激活依赖项的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.ISolutionActivationDependencyCollection">
+      <summary>表示激活另一个包时所依赖的包的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Packages.ISolutionActivationDependencyCollection.AddCustomSolutionActivationDependency">
+      <summary>添加新的自定义解决方案激活依赖项。</summary>
+      <returns>一个表示添加到集合中的新自定义解决方案激活依赖项的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.ITemplateFile">
+      <summary>表示包中的模板文件。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.ITemplateFile.Location">
+      <summary>获取或设置包中模板文件的相对位置。</summary>
+      <returns>一个表示模板文件位置的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.ITemplateFileCollection">
+      <summary>表示包中模板文件的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Packages.ITemplateFileCollection.Add">
+      <summary>向集合添加新的模板文件。</summary>
+      <returns>一个表示添加到集合中的新模板文件的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.IWebTempFile">
+      <summary>表示包中的 Web 模板文件。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Packages.IWebTempFile.Location">
+      <summary>获取或设置包中 Web 模板文件的相对位置。</summary>
+      <returns>一个表示 Web 模板文件位置的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.IWebTempFileCollection">
+      <summary>表示包中 Web 模板文件的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Packages.IWebTempFileCollection.Add">
+      <summary>向集合添加新的 Web 模板文件。</summary>
+      <returns>一个表示添加到集合中的新 Web 临时文件的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Packages.ResetWebServerModeOnUpgrade">
+      <summary>指定在升级后重新启动 Web 服务器的方式。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Packages.ResetWebServerModeOnUpgrade.Recycle">
+      <summary>应用程序池在升级后回收。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Packages.ResetWebServerModeOnUpgrade.StartStop">
+      <summary>应用程序池在升级后停止，然后重新启动。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Validation.IFeatureValidationContext">
+      <summary>表示在功能验证过程中传递给功能验证规则的上下文数据。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Validation.IFeatureValidationContext.Feature">
+      <summary>获取要对其执行验证的功能。</summary>
+      <returns>一个表示要验证的功能的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Validation.IFeatureValidationRule">
+      <summary>表示在 SharePoint 项目中功能时要应用的规则。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Validation.IFeatureValidationRule.ValidateFeature(Microsoft.VisualStudio.SharePoint.Validation.IFeatureValidationContext)">
+      <summary>确定功能当前是否与规则冲突。</summary>
+      <param name="context">与功能和验证相关联的上下文数据。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Validation.IFeatureValidationRule.ValidateProjectItem(Microsoft.VisualStudio.SharePoint.Validation.IFeatureValidationContext,Microsoft.VisualStudio.SharePoint.ISharePointProjectItem)">
+      <summary>确定在添加指定项目项后，功能是否与规则冲突。</summary>
+      <param name="context">与功能和验证相关联的上下文数据。</param>
+      <param name="projectItem">针对其验证功能的项目项。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext">
+      <summary>表示在包验证过程中传递给包验证规则的上下文数据。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext.Package">
+      <summary>获取要对其执行验证的包。</summary>
+      <returns>一个表示要验证的包的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationProvider">
+      <summary>表示可以验证 SharePoint 包及其构成部分的组件。 验证包括对包应用规则，并返回所有冲突的规则的列表。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationProvider.ValidateFeature(Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature)">
+      <summary>确定整个功能或是其构成项目项是否与验证规则冲突。</summary>
+      <returns>一个表示验证结果的对象。</returns>
+      <param name="projectFeature">要验证的功能。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationProvider.ValidateFeatureForProjectItem(Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature,Microsoft.VisualStudio.SharePoint.ISharePointProjectItem)">
+      <summary>确定是否可以向功能添加项目项。</summary>
+      <returns>一个表示验证结果的对象。</returns>
+      <param name="projectFeature">要验证的功能。</param>
+      <param name="projectItem">要针对其验证功能的项目项。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationProvider.ValidatePackage(Microsoft.VisualStudio.SharePoint.ISharePointProjectPackage)">
+      <summary>确定整个包或是其构成部分（功能和项目项）是否与验证规则冲突。</summary>
+      <returns>一个表示验证结果的对象。</returns>
+      <param name="projectPackage">要验证的包。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationProvider.ValidatePackageForFeature(Microsoft.VisualStudio.SharePoint.ISharePointProjectPackage,Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature)">
+      <summary>确定是否可以向包添加功能。</summary>
+      <returns>一个表示验证结果的对象。</returns>
+      <param name="projectPackage">要验证的包。</param>
+      <param name="projectFeature">要针对其验证包的功能。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationProvider.ValidatePackageForProjectItem(Microsoft.VisualStudio.SharePoint.ISharePointProjectPackage,Microsoft.VisualStudio.SharePoint.ISharePointProjectItem)">
+      <summary>确定是否可以向包添加项目项。</summary>
+      <returns>一个表示验证结果的对象。</returns>
+      <param name="projectPackage">要验证的包。</param>
+      <param name="projectItem">要针对其验证包的项目项。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule">
+      <summary>表示在 SharePoint 项目中验证包时要应用的规则。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule.ValidateFeature(Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext,Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature)">
+      <summary>确定在添加指定功能后，包是否与规则冲突。</summary>
+      <param name="context">与数据包和验证关联的上下文数据。</param>
+      <param name="feature">要针对其验证包的功能。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule.ValidatePackage(Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext)">
+      <summary>确定包当前是否与规则冲突。</summary>
+      <param name="context">与数据包和验证关联的上下文数据。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule.ValidateProjectItem(Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext,Microsoft.VisualStudio.SharePoint.ISharePointProjectItem)">
+      <summary>确定在添加指定项目项后，包是否与规则冲突。</summary>
+      <param name="context">与数据包和验证关联的上下文数据。</param>
+      <param name="projectItem">要针对其验证包的项目项。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Validation.IValidationContext">
+      <summary>在验证期间提供上下文数据的对象的基接口。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Validation.IValidationContext.RuleViolations">
+      <summary>获取验证规则冲突的当前集合。</summary>
+      <returns>一个表示验证规则冲突的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Validation.IValidationResult">
+      <summary>表示功能或包验证的结果。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Validation.IValidationResult.HasErrors">
+      <summary>获取是否有规则验证冲突为错误。</summary>
+      <returns>如果任何规则冲突的 Severity 属性为 ValidationRuleViolationSeverity.Error，则为 True；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Validation.IValidationResult.HasWarnings">
+      <summary>获取是否有规则验证冲突为警告。</summary>
+      <returns>如果任何规则冲突的 <see cref="T:Microsoft.VisualStudio.Package.Severity" /> 属性为 ValidationRuleViolationSeverity.Warning，则为 True；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Validation.IValidationResult.RuleViolations">
+      <summary>获取在验证期间发现的规则验证冲突的集合。</summary>
+      <returns>一个表示规则验证冲突的对象集合。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Validation.IValidationRuleViolation">
+      <summary>表示验证规则冲突的实例。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Validation.IValidationRuleViolation.Code">
+      <summary>获取与验证冲突相关联的错误代码。</summary>
+      <returns>一个表示错误代码的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Validation.IValidationRuleViolation.Document">
+      <summary>获取与验证冲突相关联的文档的路径。</summary>
+      <returns>一个表示文档路径的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Validation.IValidationRuleViolation.HelpKeyword">
+      <summary>获取与验证冲突相关联的 F1 帮助关键字。</summary>
+      <returns>一个表示 F1 帮助关键字的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Validation.IValidationRuleViolation.Message">
+      <summary>获取与验证冲突相关联的消息。</summary>
+      <returns>一个表示消息的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Validation.IValidationRuleViolation.Project">
+      <summary>获取包含与验证冲突相关联的文档的项目实例。</summary>
+      <returns>一个表示项目的对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Validation.IValidationRuleViolation.Severity">
+      <summary>获取此验证冲突的严重级别。</summary>
+      <returns>一个表示规则冲突严重级别的对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Validation.IValidationRuleViolationCollection">
+      <summary>表示验证规则冲突的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Validation.IValidationRuleViolationCollection.Add(Microsoft.VisualStudio.SharePoint.Validation.IValidationRuleViolation)">
+      <summary>向规则冲突集合中添加规则冲突。</summary>
+      <param name="ruleViolation">要添加到集合的规则冲突。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Validation.IValidationRuleViolationCollection.Add(System.String,Microsoft.VisualStudio.SharePoint.Validation.ValidationRuleViolationSeverity,System.String)">
+      <summary>向规则冲突集合中添加规则冲突。</summary>
+      <returns>一个表示已添加到集合的规则冲突的对象。</returns>
+      <param name="code">与规则冲突相关联的错误代码。</param>
+      <param name="severity">规则冲突的严重级别。</param>
+      <param name="message">与规则冲突相关联的消息。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Validation.IValidationRuleViolationCollection.Add(System.String,Microsoft.VisualStudio.SharePoint.Validation.ValidationRuleViolationSeverity,System.String,System.String,Microsoft.VisualStudio.SharePoint.ISharePointProject,System.String)">
+      <summary>向规则冲突集合中添加规则冲突。</summary>
+      <returns>一个表示已添加到集合的规则冲突的对象。</returns>
+      <param name="code">与规则冲突相关联的错误代码。</param>
+      <param name="severity">规则冲突的严重级别。</param>
+      <param name="message">与规则冲突相关联的消息。</param>
+      <param name="document">与规则冲突相关联的文档。</param>
+      <param name="project">与规则冲突相关联的项目。</param>
+      <param name="helpKeyword">与规则冲突相关联的帮助关键字。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Validation.IValidationRuleViolationCollection.AddRange(System.Collections.Generic.IEnumerable{Microsoft.VisualStudio.SharePoint.Validation.IValidationRuleViolation})">
+      <summary>向规则冲突集合中添加规则冲突集合。</summary>
+      <param name="ruleViolations">要添加到集合中的规则冲突的集合。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Validation.ValidationRuleViolationSeverity">
+      <summary>表示打包规则冲突的严重级别。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Validation.ValidationRuleViolationSeverity.Information">
+      <summary>表示要向用户显示的信息性消息，但不会指出包的语义问题或实际问题。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Validation.ValidationRuleViolationSeverity.Warning">
+      <summary>表示警告规则冲突，该冲突可能导致 SharePoint 服务器上出现包部署错误，但不会阻止创建包。 用户可以忽略此冲突。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Validation.ValidationRuleViolationSeverity.Error">
+      <summary>表示可能阻止创建包的严重规则冲突。 用户必须修复此冲突。</summary>
+    </member>
+  </members>
+</doc>

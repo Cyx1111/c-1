@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Text" standard-reference="http://www.w3.org/TR/css3-text/" status="WD" pub-date="2012-01-19">
+
+  <CssProperty _locID="text-transform" _locAttrData="description" restriction="enum" syntax="h1 { $(name): capitalize; }" description="控制元素的文本的大小写效果。" standard-reference="http://www.w3.org/TR/css3-text/#text-transform0">
+
+    <entry _locID="text-transform_none" _locAttrData="description" value="none" description="没有大小写效果。"/>
+    <entry _locID="text-transform_capitalize" _locAttrData="description" value="capitalize" description="将所有词设为首字母大写。"/>
+    <entry _locID="text-transform_uppercase" _locAttrData="description" value="uppercase" description="将每个词的所有字符设为大写。"/>
+    <entry _locID="text-transform_lowercase" _locAttrData="description" value="lowercase" description="将每个词的所有字符设为小写。"/>
+    <entry _locID="text-transform_fullwidth" _locAttrData="description" value="fullwidth" version="3.0" browsers="none" description="将所有字符设为全角形式。如果字符没有对应的全角形式，则保持原样。"/>
+    <entry _locID="text-transform_fullsize-kana" _locAttrData="description" value="fullsize-kana" version="3.0" browsers="none" description="将所有小型假名字符转换为正常假名。此值通常用于拼音批注文本。"/>
+  </CssProperty>
+
+  <CssProperty _locID="white-space" _locAttrData="description" version="1.0" restriction="enum" syntax="section { $(name): nowrap; }" description="“white-space-collapsing”和“text-wrap”属性的速写属性。" standard-reference="http://www.w3.org/TR/css3-text/#white-space0">
+
+    <entry _locID="white-space_normal" _locAttrData="description" value="normal" description="将“white-space-collapsing”设置为“collapse”并将“text-wrap”设置为“normal”。"/>
+    <entry _locID="white-space_pre" _locAttrData="description" value="pre" description="将“white-space-collapsing”设置为“preserve”并将“text-wrap”设置为“none”。"/>
+    <entry _locID="white-space_nowrap" _locAttrData="description" value="nowrap" description="将“white-space-collapsing”设置为“collapse”并将“text-wrap”设置为“none”。"/>
+    <entry _locID="white-space_pre-wrap" _locAttrData="description" value="pre-wrap" description="将“white-space-collapsing”设置为“preserve”并将“text-wrap”设置为“normal”。"/>
+    <entry _locID="white-space_pre-line" _locAttrData="description" value="pre-line" description="将“white-space-collapsing”设置为“preserve-breaks”并将“text-wrap”设置为“normal”。"/>
+  </CssProperty>
+
+  <CssProperty _locID="tab-size" _locAttrData="description" version="3.0" browsers="none" restriction="integer, length" syntax="div { $(name): 4; }" description="此属性确定呈现的制表符(U+0009)的宽度，此宽度用空白字符(U+0020)数表示" standard-reference="http://www.w3.org/TR/css3-text/#tab-size"/>
+
+  <CssProperty _locID="line-break" _locAttrData="description" version="3.0" browsers="none" restriction="enum" syntax="p { $(name): normal; }" description="指定哪一组换行限制在元素中有效。" standard-reference="http://www.w3.org/TR/css3-text/#line-break0">
+
+    <entry _locID="line-break_auto" _locAttrData="description" value="auto" description="UA 确定要用于 CJK 文字的一组换行限制，它可能根据行的长度更改这些限制；例如，对于较短的行，则使用限制性较低的一组换行规则。"/>
+    <entry _locID="line-break_loose" _locAttrData="description" value="loose" description="使用限制性最低的一组换行规则进行文本换行。通常用于较短的行，如在报纸中。"/>
+    <entry _locID="line-break_normal" _locAttrData="description" value="normal" description="使用最常用的一组换行规则进行文本换行。"/>
+    <entry _locID="line-break_strict" _locAttrData="description" value="strict" description="使用限制性高于“normal”的一组换行规则进行 CJK 文字换行。"/>
+  </CssProperty>
+
+  <CssProperty _locID="word-break" _locAttrData="description" version="3.0" browsers="C,FF15,IE5,S3" restriction="enum" syntax="p.album { $(name): break-all; }" description="指定非 CJK 文字的换行机会。" standard-reference="http://www.w3.org/TR/css3-text/#word-break0">
+
+    <entry _locID="word-break_normal" _locAttrData="description" value="normal" description="根据非 CJK 文字自身的规则进行换行。"/>
+    <entry _locID="word-break_break-all" _locAttrData="description" value="break-all" description="可以在非 CJK 文字的任意两个字形群集之间换行。此选项最常在下面的上下文中使用: 文本主要使用 CJK 字符和极少的非 CJK 摘要，并且要求文本更好地分布在每一行上。"/>
+    <entry _locID="word-break_keep-all" _locAttrData="description" value="keep-all" description="Block characters can no longer create implied break points. Otherwise this option is equivalent to 'normal'. This option is mostly used where the presence of word separator characters still creates line-breaking opportunities, as in Korean."/>
+  </CssProperty>
+
+  <CssProperty _locID="text-wrap" _locAttrData="description" version="3.0" browsers="none" restriction="enum" syntax="p.test { $(name): none; }" description="指定文本换行的模式。" standard-reference="http://www.w3.org/TR/css3-text/#word-break0">
+
+    <entry _locID="text-wrap_normal" _locAttrData="description" value="normal" description="可以在有效换行规则确定的允许的换行处换行。遵从 Unicode 标准附录 #14 中指定的针对 WJ、ZW 和 GL 换行类的规则。"/>
+    <entry _locID="text-wrap_none" _locAttrData="description" value="none" description="不可换行；在块容器中放不下的文本会从中溢出。"/>
+    <entry _locID="text-wrap_avoid" _locAttrData="description" value="avoid" description="在元素中禁止换行: 如果行中没有其他有效的换行点，则 UA 只能在元素中换行。"/>
+  </CssProperty>
+
+  <CssProperty _locID="text-align" _locAttrData="description" version="1.0" restriction="string" syntax="h2 { $(name): center; }" description="描述如何在内容不能完全填充行框时水平对齐块的内联内容。" standard-reference="http://www.w3.org/TR/css3-text/#text-align0">
+    <syntax version="3.0">start | end | left | right | center | justify | match-parent | &lt;1-character string&gt;</syntax>
+
+    <entry _locID="text-align_start" _locAttrData="description" value="start" version="3.0" browsers="none" description="内联内容与行框的开始边缘对齐。"/>
+    <entry _locID="text-align_end" _locAttrData="description" value="end" version="3.0" browsers="none" description="内联内容与行框的结束边缘对齐。"/>
+    <entry _locID="text-align_match-parent" _locAttrData="description" value="match-parent" version="3.0" browsers="none" description="此值的行为方式与“inherit”相同，只不过继承值“start”或“end”是根据其父级的“direction”值计算得到的。"/>
+    <entry _locID="text-align_left" _locAttrData="description" value="left" description="内联内容与行框的左边缘对齐。在垂直文本中，“left”与将作为从左向右书写的文本的开始边缘的行框边缘对齐。"/>
+    <entry _locID="text-align_right" _locAttrData="description" value="right" description="内联内容与行框的右边缘对齐。在垂直文本中，“right”与将作为从左向右书写的文本的结束边缘的行框边缘对齐。"/>
+    <entry _locID="text-align_center" _locAttrData="description" value="center" description="内联内容在行框中居中。"/>
+    <entry _locID="text-align_justify" _locAttrData="description" value="justify" description="文本根据“text-justify”属性指定的方法进行两端对齐。"/>
+  </CssProperty>
+
+  <CssProperty _locID="text-align-last" _locAttrData="description" version="3.0" browsers="FF12,IE5" restriction="enum" syntax="div { $(name): right; }" description="描述块的最后一行或紧靠强制换行符右侧的行在“text-align”设置为“justify”时如何对齐。" standard-reference="http://www.w3.org/TR/css3-text/#text-align-last0">
+
+    <entry value="auto" version="3.0"/>
+    <entry _locID="text-align-last_start" _locAttrData="description" value="start" version="3.0" browsers="none" description="内联内容与行框的开始边缘对齐。"/>
+    <entry _locID="text-align-last_end" _locAttrData="description" value="end" version="3.0" browsers="none" description="内联内容与行框的结束边缘对齐。"/>
+    <entry _locID="text-align-last_left" _locAttrData="description" value="left" description="内联内容与行框的左边缘对齐。在垂直文本中，“left”与将作为从左向右书写的文本的开始边缘的行框边缘对齐。"/>
+    <entry _locID="text-align-last_right" _locAttrData="description" value="right" description="内联内容与行框的右边缘对齐。在垂直文本中，“right”与将作为从左向右书写的文本的结束边缘的行框边缘对齐。"/>
+    <entry _locID="text-align-last_center" _locAttrData="description" value="center" description="内联内容在行框中居中。"/>
+    <entry _locID="text-align-last_justify" _locAttrData="description" value="justify" description="文本根据“text-justify”属性指定的方法进行两端对齐。"/>
+  </CssProperty>
+
+  <CssProperty _locID="text-justify" _locAttrData="description" version="3.0" browsers="IE5.5" restriction="enum" description="选择在“text-align”设置为“justify”时使用的两端对齐算法。该属性将应用于块容器，但 UA 也可能(但不要求)在内联元素上支持该属性。" syntax="div { $(name): inter-word; }" standard-reference="http://www.w3.org/TR/css3-text/#text-justify0">
+
+    <entry _locID="text-justify_none" _locAttrData="description" value="none" browsers="none" description="禁用两端对齐。"/>
+    <entry _locID="text-justify_auto" _locAttrData="description" value="auto" description="UA 根据性能和适当的呈现质量之间的平衡来确定要采用的两端对齐算法。"/>
+    <entry _locID="text-justify_inter-word" _locAttrData="description" value="inter-word" description="两端对齐主要更改词分隔符的间距。此值一般用于使用空格分隔词的语言，如英语或朝鲜语(有时)。"/>
+    <entry _locID="text-justify_inter-ideograph" _locAttrData="description" value="inter-ideograph" description="两端对齐主要更改词分隔符的间距和文字中的字形间边界的间距。此值一般用于 CJK 语言。"/>
+    <entry _locID="text-justify_inter-cluster" _locAttrData="description" value="inter-cluster" description="两端对齐主要更改词分隔符的间距和群集文字中的字形群集边界的间距。此值一般用于东南亚文字(如泰语)。"/>
+    <entry _locID="text-justify_distribute" _locAttrData="description" value="distribute" description="两端对齐主要更改词分隔符的间距和所有文字(连体和草书组除外)中的字形群集边界的间距。此值有时用于日语等语言，通常与“text-align-last”属性一起使用。"/>
+    <entry _locID="text-justify_kashida" _locAttrData="description" value="kashida" description="两端对齐主要通过使用 kashida 或其他书写拉伸来拉伸阿拉伯语和相关文字。"/>
+    <entry _locID="text-justify_trim" _locAttrData="description" value="trim" browsers="none" description="指定首选压缩部分来展开，并启用对字形中的空格(在印刷传统中允许使用)的裁剪。"/>
+  </CssProperty>
+
+  <CssProperty _locID="word-spacing" _locAttrData="description" version="1.0" restriction="length, percentage" description="指定词之间的最小、最大和最佳间距。" syntax="article { $(name): 3px; }" standard-reference="http://www.w3.org/TR/css3-text/#word-spacing0">
+
+    <syntax version="3.0">[normal | &lt;length&gt; | &lt;percentage&gt;]{1,3}</syntax>
+
+    <entry _locID="word-spacing_normal" _locAttrData="description" value="normal" description="当前字体和/或用户代理定义的正常词间间距。"/>
+  </CssProperty>
+
+  <CssProperty _locID="letter-spacing" _locAttrData="description" version="1.0" restriction="length, percentage" description="指定字形群集之间的最小、最大和最佳间距。" syntax="h2 { $(name): 2px; }" standard-reference="http://www.w3.org/TR/css3-text/#letter-spacing0">
+
+    <entry _locID="letter-spacing_normal" _locAttrData="description" value="normal" description="该间距是当前字体的正常间距。通常为零长度。"/>
+  </CssProperty>
+
+  <CssProperty _locID="text-indent" _locAttrData="description" version="1.0" restriction="percentage, length" description="指定应用于块中的内联内容的行的缩进。该缩进仅会影响块中的内联内容的第一行(除非指定了“hanging”关键字，此时缩进将影响除第一行之外的所有行)。" syntax="li { $(name): 5px; }" standard-reference="http://www.w3.org/TR/css3-text/#text-indent0">
+
+    <syntax version="3.0">[ &lt;length&gt; | &lt;percentage&gt; ] &amp;&amp; [hanging || each-line] ?</syntax>
+
+    <entry _locID="text-indent_hanging" _locAttrData="description" value="hanging" version="3.0" browsers="none" description="反转受影响的行。"/>
+    <entry _locID="text-indent_each-line" _locAttrData="description" value="each-line" version="3.0" browsers="none" description="缩进将影响块容器的第一行以及强制换行符后的每一行，但不会影响文字环绕换行符后的行。"/>
+  </CssProperty>
+
+  <CssProperty _locID="hanging-punctuation" _locAttrData="description" version="3.0" browsers="none" restriction="enum" syntax="p { $(name): first; }" description="确定标点符号(如果有一个)是否可放在内容区域外面的一整行文本的开头或结尾。" standard-reference="http://www.w3.org/TR/css3-text/#hanging-punctuation0">
+
+     <!-- Watch for changes! Reference says:
+          Need to work on the description. Add Unicode character classes.
+          Cover indentation as well. Check for Western use-cases. Add hyphens value?' -->
+
+    <entry _locID="hanging-punctuation_none" _locAttrData="description" value="none" description="无法悬垂任何字符。"/>
+    <entry _locID="hanging-punctuation_first" _locAttrData="description" value="first" description="标点(具体而言是左大括号和引号)可以悬垂在第一行的开始边缘的外面。"/>
+    <entry _locID="hanging-punctuation_allow-end" _locAttrData="description" value="allow-end" description="如果在进行两端对齐前无法在行中放下标点(具体而言是句号和逗号)，则可以将它悬垂在所有行的结束边缘的外面。"/>
+    <entry _locID="hanging-punctuation_force-end" _locAttrData="description" value="force-end" description="标点(具体而言是句号和逗号)可以悬垂在所有行的结束边缘的外面。如果对此行启用了两端对齐，则它会强制标点悬垂。"/>
+  </CssProperty>
+
+  <CssProperty _locID="text-decoration-line" _locAttrData="description" version="3.0" browsers="none" restriction="enum" type="text-decoration-lines" syntax="div { $(name): underline; }" description="指定要添加到元素的行效果(如果有)。" standard-reference="http://www.w3.org/TR/css3-text/#text-decoration-line0"/>
+
+  <CssPropertyValue type="text-decoration-lines">
+    <entry _locID="text-decoration-line_none" _locAttrData="description" value="none" description="Neither produces nor inhibits text decoration."/>
+    <entry _locID="text-decoration-line_underline" _locAttrData="description" value="underline" description="为每行文本添加下划线。"/>
+    <entry _locID="text-decoration-line_overline" _locAttrData="description" value="overline" description="每行文本的上面都有一条线。"/>
+    <entry _locID="text-decoration-line_line-through" _locAttrData="description" value="line-through" description="每行文本都有一条线穿过中部。"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="text-decoration-color" _locAttrData="description" version="3.0" browsers="none" type="color" restriction="color" syntax="div { $(name): #ff0; }" description="使用 text-decoration-line 指定在元素上设置的文本效果(下划线、上划线和删除线)的颜色。" standard-reference="http://www.w3.org/TR/css3-text/#text-decoration-color0"/>
+
+  <CssProperty _locID="text-decoration-style" _locAttrData="description" version="3.0" browsers="none" restriction="enum" type="text-decoration-styles" syntax="div { $(name): solid; }" description="指定下划线、删除线和上划线文本效果的线条样式。" standard-reference="http://www.w3.org/TR/css3-text/#text-decoration-style0"/>
+    
+  <CssPropertyValue type="text-decoration-styles">
+    <entry _locID="text-decoration-style_none" _locAttrData="description" value="none" description="不生成任何线条。"/>
+    <entry _locID="text-decoration-style_solid" _locAttrData="description" value="solid" description="生成实线。"/>
+    <entry _locID="text-decoration-style_double" _locAttrData="description" value="double" description="生成双线。"/>
+    <entry _locID="text-decoration-style_dotted" _locAttrData="description" value="dotted" description="生成虚线。"/>
+    <entry _locID="text-decoration-style_dashed" _locAttrData="description" value="dashed" description="生成虚线样式。"/>
+    <entry _locID="text-decoration-style_wavy" _locAttrData="description" value="wavy" description="生成波浪线。"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="text-decoration" _locAttrData="description" version="1.0" restriction="enum, color" type="text-decoration-lines, text-decoration-styles" description="应用于元素的文本所用的字体的效果。" syntax="a:visited { $(name): line-through; }" standard-reference="http://www.w3.org/TR/css3-text/#text-decoration0">
+
+    <syntax _locID="text-decoration_syntax" _locComment="Translate only the leading word 'Example:'." version="3.0">示例: article { text-decoration: navy dotted underline; }</syntax>
+  </CssProperty>
+
+  <CssProperty _locID="text-decoration-skip" _locAttrData="description" version="3.0" browsers="none" restriction="enum" description="指定影响元素的任何文本效果必须跳过的元素内容部分。它控制由元素绘制的所有文本效果线以及由元素的上级绘制的文本效果线。" syntax="none | [ images || spaces || ink || all ]" standard-reference="http://www.w3.org/TR/css3-text/#text-decoration-skip0">
+
+    <entry _locID="text-decoration-skip_none" _locAttrData="description" value="none" description="不跳过: 为所有文本内容和内联替换元素绘制文字效果。"/>
+    <entry _locID="text-decoration-skip_objects" _locAttrData="description" value="objects" description="如果此元素是原子内联(如图像或内联块)，则跳过它。"/>
+    <entry _locID="text-decoration-skip_spaces" _locAttrData="description" value="spaces" description="跳过空白: 这包括常规空格(U+0020)和制表符(U+0009)以及 nbsp (U+00A0)、表意空格(U+3000)、所有固定宽度空格(如 U+2000–U+200A、U+202F 和 U+205F)以及任何邻近的字母间距或单词间距。"/>
+    <entry _locID="text-decoration-skip_ink" _locAttrData="description" value="ink" description="跳过绘制字形的位置: 中断效果线以让文本在文本效果本应穿过字形的位置显示出来。UA 还可以跳过字形轮廓任意一侧的小段距离。"/>
+  </CssProperty>
+
+  <CssProperty _locID="text-underline-position" _locAttrData="description" version="3.0" browsers="IE10" restriction="enum" syntax="article { $(name): auto; }" description="设置在同一元素上指定的下划线的位置: 该位置不影响上级元素指定的下划线。此属性一般用于垂直书写的上下文(如日语文档)，其中，通常要求让下划线显示在受影响的文本的“上方”(右侧)" standard-reference="http://www.w3.org/TR/css3-text/#text-underline-position0">
+
+    <entry _locID="text-underline-position_auto" _locAttrData="description" value="auto" description="用户代理可使用任何算法来确定下划线的位置。在水平行布局中，下划线应针对字母对齐。在垂直行布局中，如果语言设置为日语或朝鲜语，则下划线应针对上方对齐。"/>
+    <entry _locID="text-underline-position_alphabetic" _locAttrData="description" value="alphabetic" browsers="none" description="下划线与字母基线对齐。在这种情况下，下划线可能穿过一些下行字母。"/>
+    <entry _locID="text-underline-position_below" _locAttrData="description" value="below" description="下划线与元素的内容框的下边缘对齐。"/>
+    <entry _locID="text-underline-position_left" _locAttrData="description" value="left" browsers="none" description="In vertical typographic modes, the underline is aligned as for 'below', on the left edge of the text."/>
+    <entry _locID="text-underline-position_right" _locAttrData="description" value="right" browsers="none" description="在垂直排字模式下，下划线应针对“下方”对齐，只不过它是与文本的右边缘对齐。"/>
+  </CssProperty>
+
+  <CssProperty _locID="text-emphasis-style" _locAttrData="description" version="3.0" browsers="none" restriction="string" type="text-emphasis-style" description="对元素的文本应用着重号。" syntax="none | [[ filled | open ] || [ dot | circle | double-circle | triangle | sesame ]] | &lt;string&gt;" standard-reference="http://www.w3.org/TR/css3-text/#text-emphasis-style0"/>
+
+  <CssPropertyValue type="text-emphasis-style">
+    <entry _locID="text-emphasis-style_none" _locAttrData="description" value="none" description="无着重号。"/>
+    <entry _locID="text-emphasis-style_filled" _locAttrData="description" value="filled" description="形状用纯色填充。"/>
+    <entry _locID="text-emphasis-style_open" _locAttrData="description" value="open" description="形状是空心的。"/>
+    <entry _locID="text-emphasis-style_dot" _locAttrData="description" value="dot" description="绘制小圆圈作为标记。实心点为 U+2022“•”，空心点为 U+25E6“◦”。"/>
+    <entry _locID="text-emphasis-style_circle" _locAttrData="description" value="circle" description="绘制大圆圈作为标记。实心圆为 U+25CF“●”，空心圆为 U+25CB“○”。"/>
+    <entry _locID="text-emphasis-style_double-circle" _locAttrData="description" value="double-circle" description="绘制双圆圈作为标记。实心双圆圈为 U+25C9“◉”，空心双圆圈为 U+25CE“◎”。"/>
+    <entry _locID="text-emphasis-style_triangle" _locAttrData="description" value="triangle" description="绘制三角形作为标记。实心三角形为 U+25B2“▲”，空心三角形为 U+25B3“△”。"/>
+    <entry _locID="text-emphasis-style_sesame" _locAttrData="description" value="sesame" description="绘制芝麻作为标记。实心芝麻为 U+FE45“﹅”，空心芝麻为 U+FE46“﹆”。"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="text-emphasis-color" _locAttrData="description" version="3.0" browsers="none" type="color" restriction="color" description="描述着重号的前景色。" syntax="div { $(name): #ff0; }" standard-reference="http://www.w3.org/TR/css3-text/#text-emphasis-color0"/>
+
+  <CssProperty _locID="text-emphasis" _locAttrData="description" version="3.0" browsers="none" restriction="color, string" type="text-emphasis-style" description="用于在一个声明中设置 text-emphasis-style 和 text-emphasis-color 的速记。" syntax="&lt;color&gt; | &lt;string&gt; | none | [ [ filled | open ] || [ dot | circle | double-circle | triangle | sesame ] ]" standard-reference="http://www.w3.org/TR/css3-text/#text-emphasis0"/>
+
+  <CssProperty _locID="text-emphasis-position" _locAttrData="description" version="3.0" browsers="none" restriction="enum" syntax="[ above | below ] &amp;&amp; [ right | left ]" description="描述绘制着重号的位置。" standard-reference="http://www.w3.org/TR/css3-text/#text-emphasis-position0">
+
+    <entry _locID="text-emphasis-position_above" _locAttrData="description" value="above" description="在水平排字模式下在文本上方绘制标记。"/>
+    <entry _locID="text-emphasis-position_below" _locAttrData="description" value="below" description="在水平排字模式下在文本下方绘制标记。"/>
+    <entry _locID="text-emphasis-position_right" _locAttrData="description" value="right" description="在垂直排字模式下在文本右侧绘制标记。"/>
+    <entry _locID="text-emphasis-position_left" _locAttrData="description" value="left" description="在垂直排字模式下在文本左侧绘制标记。"/>
+  </CssProperty>
+
+  <CssProperty _locID="text-shadow" _locAttrData="description" version="3.0" browsers="C,FF3.6,IE10,O9.5,S1.1" restriction="length, color" description="使阴影效果应用于元素文本。" syntax="h1 { $(name): 20px 12px 2px #333;}" standard-reference="http://www.w3.org/TR/css3-text/#text-shadow0">
+
+    <entry _locID="text-shadow" _locAttrData="description_none" value="none" description="无阴影效果。"/>
+  </CssProperty>
+
+  <CssProperty _locID="hyphens" _locAttrData="description" version="3.0" browsers="none" type="hyphens" restriction="enum" description="此属性控制是否允许断字以在一行文本中产生更多换行机会。" syntax="div { $(name): manual; }" standard-reference="http://www.w3.org/TR/css3-text/#hyphens0"/>
+
+  <CssPropertyValue type="hyphens">
+    <entry _locID="hyphens_none" _locAttrData="description" value="none" description="词不在换行符处换行，即使该词中的字符建议了换行点也是如此。"/>
+    <entry _locID="hyphens_manuel" _locAttrData="description" value="manual" description="词仅在有建议换行机会的字符的换行符处换行"/>
+    <entry _locID="hyphens_auto" _locAttrData="description" value="auto" description="Conditional hyphenation characters inside a word, if present, take priority over automatic resources when determining hyphenation points within the word."/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="overflow-wrap" _locAttrData="description" version="3.0" browsers="none" restriction="enum" syntax="div { $(name): break-word; }" description="此属性指定在不可换行的字符串因过长而在行框中放不下时，UA 是否会在某个词中换行以防止溢出。" standard-reference="http://www.w3.org/TR/css3-text/#overflow-wrap0">
+
+    <entry value="normal"/>
+    <entry value="break-word"/>
+  </CssProperty>
+
+  <CssProperty _locID="text-space-collapse" _locAttrData="description" version="3.0" browsers="none" restriction="enum" syntax="div { $(name): collapse; }" description="此属性声明元素中的空格是否折叠以及如何折叠。值具有以下意义，这些意义必须根据空格处理规则来解释。" standard-reference="http://www.w3.org/TR/css3-text/#text-space-collapse">
+
+    <entry value="collapse"/>
+    <entry value="preserve"/>
+    <entry value="preserve-breaks"/>
+  </CssProperty>
+
+  <CssProperty _locID="word-wrap" _locAttrData="description" version="2.0" restriction="enum" syntax="p { $(name): break-word; }" description="指定在不可换行的字符串因过长而放不下时，UA 是否会在某个词中换行以防止溢出。" standard-reference="http://www.w3.org/TR/css3-text/#word-wrap0">
+
+    <entry _locID="word-wrap_normal" _locAttrData="description" value="normal" description="仅可以在允许的换行点处换行。"/>
+    <entry _locID="word-wrap_break-word" _locAttrData="description" value="break-word" description="如果行中没有可接受的换行点，则不可换行的“word”可在任意点处换行。"/>
+    <entry _locID="word-wrap_hyphenate" _locAttrData="description" value="hyphenate" browsers="none" description="如果行中没有可接受的换行点，则可以为不可换行的“word”添加连字符，即使连字功能已关闭也是如此。"/>
+  </CssProperty>
+
+</CssModule>

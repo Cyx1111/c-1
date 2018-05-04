@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.VisualStudio.TemplateWizardInterface</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.VisualStudio.TemplateWizard.IFilterTokenValues">
+      <summary>指定当根据模板实例化项目或项时要运行的筛选逻辑。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TemplateWizard.IFilterTokenValues.FilterReplacementTokens(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+      <summary>指定当根据模板实例化项目或项时要运行的筛选逻辑。</summary>
+      <param name="projectFileExtension">项目文件的文件扩展名。</param>
+      <param name="projectItemFileExtension">项的文件扩展名。</param>
+      <param name="replacementValues">在参数替换过程中使用的键和值。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TemplateWizard.IWizard">
+      <summary>定义模板向导扩展的逻辑。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TemplateWizard.IWizard.BeforeOpeningFile(EnvDTE.ProjectItem)">
+      <summary>在打开模板中的项之前运行自定义向导逻辑。</summary>
+      <param name="projectItem">将要打开的项目项。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TemplateWizard.IWizard.ProjectFinishedGenerating(EnvDTE.Project)">
+      <summary>当项目已完成生成时运行自定义向导逻辑。</summary>
+      <param name="project">已完成生成的项目。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TemplateWizard.IWizard.ProjectItemFinishedGenerating(EnvDTE.ProjectItem)">
+      <summary>当项目项已完成生成时运行自定义向导逻辑。</summary>
+      <param name="projectItem">已完成生成的项目项。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TemplateWizard.IWizard.RunFinished">
+      <summary>当向导已完成所有任务时运行自定义向导逻辑。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TemplateWizard.IWizard.RunStarted(System.Object,System.Collections.Generic.Dictionary{System.String,System.String},Microsoft.VisualStudio.TemplateWizard.WizardRunKind,System.Object[])">
+      <summary>在模板向导运行的开头运行自定义向导逻辑。</summary>
+      <param name="automationObject">模板向导正在使用的自动化对象。</param>
+      <param name="replacementsDictionary">要替换的标准参数的列表。</param>
+      <param name="runKind">
+        <see cref="T:Microsoft.VisualStudio.TemplateWizard.WizardRunKind" /> 指示向导运行的类型。</param>
+      <param name="customParams">在项目中用来执行参数替换的自定义参数。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TemplateWizard.IWizard.ShouldAddProjectItem(System.String)">
+      <summary>指示是否应将指定的项目项添加到项目中。</summary>
+      <returns>如果应将项目项添加到项目中，则为 true；否则为 false。</returns>
+      <param name="filePath">项目项的路径。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TemplateWizard.TemplateWizardDisallowUserTemplatesSecurityAttribute">
+      <summary>指定模板向导扩展只能加载位于 Visual Studio 安装目录或其子目录之一中的模版。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TemplateWizard.TemplateWizardDisallowUserTemplatesSecurityAttribute.#ctor(System.Boolean)">
+      <summary>指定模板向导扩展只能加载位于 Visual Studio 安装目录或其子目录之一中的模版。</summary>
+      <param name="disallowUserTemplates">指定模板向导扩展只能加载位于 Visual Studio 安装目录或其子目录之一中的模版，则为  true；否则为 false。 默认值为 false。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TemplateWizard.TemplateWizardDisallowUserTemplatesSecurityAttribute.DisallowUserTemplates">
+      <summary>获取指示是否禁用用户模板的值。</summary>
+      <returns>如果禁用用户模板，则为 true；否则为 false。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TemplateWizard.TemplateWizardSecurityAttribute">
+      <summary>指定模板向导扩展仅在被指定的模板调用时运行。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TemplateWizard.TemplateWizardSecurityAttribute.#ctor(System.String)">
+      <summary>指定模板向导扩展仅在被指定的模板调用时运行。</summary>
+      <param name="callingTemplate">允许调用模板向导扩展的模板的名称。 例如，MyTemplate.vstemplate。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TemplateWizard.TemplateWizardSecurityAttribute.CallingTemplate">
+      <summary>获取允许调用模板向导扩展名的模板的名称。</summary>
+      <returns>允许调用模板向导扩展的模板的名称。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TemplateWizard.WizardBackoutException">
+      <summary>在模板向导完成之前被取消时所发生的异常。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TemplateWizard.WizardBackoutException.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TemplateWizard.WizardBackoutException" /> 的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TemplateWizard.WizardBackoutException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>用序列化数据初始化 <see cref="T:Microsoft.VisualStudio.TemplateWizard.WizardBackoutException" /> 类的新实例。</summary>
+      <param name="info">
+        <see cref="T:System.Runtime.Serialization.SerializationInfo" />，它存有有关所引发的异常的序列化对象数据。</param>
+      <param name="context">
+        <see cref="T:System.Runtime.Serialization.StreamingContext" />，它包含有关源或目标的上下文信息。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="info" /> 参数为一个空的引用（Visual Basic 中的 Nothing）</exception>
+      <exception cref="T:System.Runtime.Serialization.SerializationException">类名称为空引用（在 Visual Basic 中为 Nothing）或 <see cref="P:Microsoft.VisualStudio.TemplateWizard.WizardBackoutException.HResult" /> 为零 (0)。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TemplateWizard.WizardBackoutException.#ctor(System.String)">
+      <summary>使用指定的错误消息初始化 <see cref="T:Microsoft.VisualStudio.TemplateWizard.WizardBackoutException" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TemplateWizard.WizardBackoutException.#ctor(System.String,System.Exception)">
+      <summary>使用指定的错误消息和对导致此异常的内部异常的引用来初始化 <see cref="T:Microsoft.VisualStudio.TemplateWizard.WizardBackoutException" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TemplateWizard.WizardBackoutException.HResult">
+      <summary>获取或设置 HRESULT（一个分配给特定异常的编码数字值）。</summary>
+      <returns>HRESULT 值。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TemplateWizard.WizardCancelledException">
+      <summary>在模板向导完成之前被取消时发生的异常。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TemplateWizard.WizardCancelledException.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TemplateWizard.WizardCancelledException" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TemplateWizard.WizardCancelledException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>用序列化数据初始化 <see cref="T:Microsoft.VisualStudio.TemplateWizard.WizardCancelledException" /> 类的新实例。</summary>
+      <param name="info">
+        <see cref="T:System.Runtime.Serialization.SerializationInfo" />，它存有有关所引发的异常的序列化对象数据。</param>
+      <param name="context">
+        <see cref="T:System.Runtime.Serialization.StreamingContext" />，它包含有关源或目标的上下文信息。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="info" /> 参数为一个空的引用（Visual Basic 中的 Nothing）</exception>
+      <exception cref="T:System.Runtime.Serialization.SerializationException">类名称为空引用（在 Visual Basic 中为 Nothing）或 <see cref="P:Microsoft.VisualStudio.TemplateWizard.WizardCancelledException.HResult" /> 为零 (0)。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TemplateWizard.WizardCancelledException.#ctor(System.String)">
+      <summary>使用指定的错误消息初始化 <see cref="T:Microsoft.VisualStudio.TemplateWizard.WizardCancelledException" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TemplateWizard.WizardCancelledException.#ctor(System.String,System.Exception)">
+      <summary>使用指定的错误消息和对导致此异常的内部异常的引用来初始化 <see cref="T:Microsoft.VisualStudio.TemplateWizard.WizardCancelledException" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TemplateWizard.WizardCancelledException.HResult">
+      <summary>获取或设置 HRESULT（一个分配给特定异常的编码数字值）。</summary>
+      <returns>HRESULT 值。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TemplateWizard.WizardRunKind">
+      <summary>指定定义模板向导可以创建的不同模板的常数。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TemplateWizard.WizardRunKind.AsNewItem">
+      <summary>新项模板。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TemplateWizard.WizardRunKind.AsNewProject">
+      <summary>新项目模板。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TemplateWizard.WizardRunKind.AsMultiProject">
+      <summary>新多项目模板。</summary>
+    </member>
+  </members>
+</doc>

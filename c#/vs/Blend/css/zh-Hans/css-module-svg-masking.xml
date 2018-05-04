@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="SVG Masking" standard-reference="http://www.w3.org/TR/SVG/masking.html" status="REC" pub-date="2011-08-16">
+
+  <CssProperty _locID="clip-path" _locAttrData="description" version="3.0" type="url" restriction="url, enum" description="允许作者控制某个特定图形元素在何种情况(如果有)下可成为鼠标事件的目标。" standard-reference="http://www.w3.org/TR/SVG/masking.html#ClipPathElement">
+
+    <entry value="none"/>
+  </CssProperty>
+
+  <CssProperty _locID="clip-rule" _locAttrData="description" version="3.0" restriction="enum" description="允许作者控制某个特定图形元素在何种情况(如果有)下可成为鼠标事件的目标。" standard-reference="http://www.w3.org/TR/SVG/masking.html#ClipPathElement">
+
+    <entry _locID="clip-rule_nonzero" _locAttrData="description" value="nonzero" description="此规则会从画布上的一点以任意方向绘制一条射向无穷远的射线，并检查一段形状与射线相交的位置，从而确定该点的“内部性”。"/>
+    <entry _locID="clip-rule_evenodd" _locAttrData="description" value="evenodd" description="此规则会从画布上的一点以任意方向绘制一条射向无穷远的射线，然后计算给定形状中与该射线相交的路径段的数目，从而确定该点的“内部性”。"/>
+  </CssProperty>
+
+  <CssProperty _locID="mask" _locAttrData="description" version="3.0" browsers="FF3.5,IE10,O9" type="url" restriction="url, enum" description="允许作者控制某个特定图形元素在何种情况(如果有)下可成为鼠标事件的目标。" standard-reference="http://www.w3.org/TR/SVG/masking.html#ClipPathElement">
+
+    <entry value="none"/>
+  </CssProperty>
+
+</CssModule>

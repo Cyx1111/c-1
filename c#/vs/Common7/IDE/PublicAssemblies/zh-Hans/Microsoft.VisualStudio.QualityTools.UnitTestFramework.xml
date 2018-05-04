@@ -1,0 +1,2568 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.VisualStudio.QualityTools.UnitTestFramework</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.AfterAssemblyCleanupEventArgs">
+      <summary>为 <see cref="E:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution.AfterAssemblyCleanup" /> 事件提供数据。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.AfterAssemblyInitializeEventArgs">
+      <summary>为 <see cref="E:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution.AfterAssemblyInitialize" /> 事件提供数据。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.AfterAssemblyInitializeEventArgs.IsAssemblyInitializeFailed">
+      <summary>获取指示 Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll 程序集是否由于异常而被成功地初始化的值。</summary>
+      <returns>如果程序集因异常而失败，则为 true； 否则为 false。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.AfterClassCleanupEventArgs">
+      <summary>为 <see cref="E:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution.AfterClassCleanup" /> 事件提供数据。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.AfterClassInitializeEventArgs">
+      <summary>为 <see cref="E:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution.AfterClassInitialize" /> 事件提供数据。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.AfterClassInitializeEventArgs.IsClassInitializeFailed">
+      <summary>获取指示含有 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute" /> 的类是否因为出现异常而没有初始化的值。</summary>
+      <returns>如果类具有因异常而未被初始化的 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute" />，则为 true；否则为 false。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.AfterTestCleanupEventArgs">
+      <summary>为 <see cref="E:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution.AfterTestCleanup" /> 事件提供数据。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.AfterTestInitializeEventArgs">
+      <summary>为 <see cref="E:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution.AfterTestInitialize" /> 事件提供数据。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.AfterTestInitializeEventArgs.IsTestInitializeFailed">
+      <summary>获取指示应用了 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute" /> 的测试方法是否由于异常而未被初始化的值。</summary>
+      <returns>如果应用了 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute" /> 的测试方法因异常而未被初始化，则为 true；否则为 false。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssemblyCleanupAttribute">
+      <summary>标识一个包含代码的方法，该代码在运行程序集中的所有测试之后使用并释放程序集获得的资源。 此类不能被继承。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.AssemblyCleanupAttribute.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssemblyCleanupAttribute" /> 类的新实例。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssemblyInitializeAttribute">
+      <summary>标识一个包含代码的方法，该代码在运行程序集中的所有测试之前使用并分配程序集获得的资源。 此类不能被继承。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.AssemblyInitializeAttribute.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssemblyInitializeAttribute" /> 类的新实例。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.Assert">
+      <summary>使用 true/false 命题验证单元测试中的条件。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(System.Double,System.Double,System.Double)">
+      <summary>验证指定的两个双精度型值是否相等或者是否在对方的指定精度内。 如果它们不位于对方的指定精度内，则断言失败。</summary>
+      <param name="expected">要比较的第一个双精度型。 这是单元测试要求的双精度型值。</param>
+      <param name="actual">要比较的第二个双精度型。 这是单元测试生成的双精度型值。</param>
+      <param name="delta">要求的精确性。 只有当 <paramref name="expected" /> 与 <paramref name="actual" /> 的差超过 <paramref name="delta" /> 时断言才失败。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 与 <paramref name="actual" /> 的差超过 <paramref name="delta" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(System.Double,System.Double,System.Double,System.String)">
+      <summary>验证指定的两个双精度型值是否相等或者是否在对方的指定精度内。 如果它们不位于对方的指定精度内，则断言失败。 如果断言失败，将显示一则消息。</summary>
+      <param name="expected">要比较的第一个双精度型。 这是单元测试要求的双精度型值。</param>
+      <param name="actual">要比较的第二个双精度型。 这是单元测试生成的双精度型值。</param>
+      <param name="delta">要求的精确性。 只有当 <paramref name="expected" /> 与 <paramref name="actual" /> 的差超过 <paramref name="delta" /> 时断言才失败。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 与 <paramref name="actual" /> 的差超过 <paramref name="delta" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(System.Double,System.Double,System.Double,System.String,System.Object[])">
+      <summary>验证指定的两个双精度型值是否相等或者是否在对方的指定精度内。 如果它们不位于对方的指定精度内，则断言失败。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="expected">要比较的第一个双精度型。 这是单元测试要求的双精度型值。</param>
+      <param name="actual">要比较的第二个双精度型。 这是单元测试生成的双精度型值。</param>
+      <param name="delta">要求的精确性。 只有当 <paramref name="expected" /> 与 <paramref name="actual" /> 的差超过 <paramref name="delta" /> 时断言才失败。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 与 <paramref name="actual" /> 的差超过 <paramref name="delta" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(System.Object,System.Object)">
+      <summary>验证指定的两个对象是否相等。 如果两个对象不相等，则断言失败。</summary>
+      <param name="expected">要比较的第一个对象。 这是单元测试要求的对象。</param>
+      <param name="actual">要比较的第二个对象。 这是单元测试生成的对象。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 不等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(System.Object,System.Object,System.String)">
+      <summary>验证指定的两个对象是否相等。 如果两个对象不相等，则断言失败。 如果断言失败，将显示一则消息。</summary>
+      <param name="expected">要比较的第一个对象。 这是单元测试要求的对象。</param>
+      <param name="actual">要比较的第二个对象。 这是单元测试生成的对象。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 不等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(System.Object,System.Object,System.String,System.Object[])">
+      <summary>验证指定的两个对象是否相等。 如果两个对象不相等，则断言失败。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="expected">要比较的第一个对象。 这是单元测试要求的对象。</param>
+      <param name="actual">要比较的第二个对象。 这是单元测试生成的对象。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 不等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(System.Single,System.Single,System.Single)">
+      <summary>验证指定的两个单精度型值是否相等或者是否位于对方的指定精度内。 如果它们不位于对方的指定精度内，则断言失败。</summary>
+      <param name="expected">要比较的第一个单精度型值。 这是单元测试要求的单精度型值。</param>
+      <param name="actual">要比较的第二个单精度型值。 这是单元测试生成的单精度型值。</param>
+      <param name="delta">要求的精确性。 只有当 <paramref name="expected" /> 与 <paramref name="actual" /> 的差超过 <paramref name="delta" /> 时断言才失败。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 不等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(System.Single,System.Single,System.Single,System.String)">
+      <summary>验证指定的两个单精度型值是否相等或者是否位于对方的指定精度内。 如果它们不位于对方的指定精度内，则断言失败。 如果断言失败，将显示一则消息。</summary>
+      <param name="expected">要比较的第一个单精度型值。 这是单元测试要求的单精度型值。</param>
+      <param name="actual">要比较的第二个单精度型值。 这是单元测试生成的单精度型值。</param>
+      <param name="delta">要求的精确性。 只有当 <paramref name="expected" /> 与 <paramref name="actual" /> 的差超过 <paramref name="delta" /> 时断言才失败。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 不等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(System.Single,System.Single,System.Single,System.String,System.Object[])">
+      <summary>验证指定的两个单精度型值是否相等或者是否位于对方的指定精度内。 如果它们不位于对方的指定精度内，则断言失败。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="expected">要比较的第一个单精度型值。 这是单元测试要求的单精度型值。</param>
+      <param name="actual">要比较的第二个单精度型值。 这是单元测试生成的单精度型值。</param>
+      <param name="delta">要求的精确性。 只有当 <paramref name="expected" /> 与 <paramref name="actual" /> 的差超过 <paramref name="delta" /> 时断言才失败。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 与 <paramref name="actual" /> 的差超过 <paramref name="delta" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(System.String,System.String,System.Boolean)">
+      <summary>验证指定的两个字符串是否相等，根据指定的要求忽略大小写或不忽略大小写。 如果它们不相等，则断言失败。</summary>
+      <param name="expected">要比较的第一个字符串。 这是单元测试要求的字符串。</param>
+      <param name="actual">要比较的第二个字符串。 这是单元测试生成的字符串。</param>
+      <param name="ignoreCase">一个布尔值，指示区分大小写或不区分大小写的比较。 true 指示所进行的比较不区分大小写。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 不等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(System.String,System.String,System.Boolean,System.Globalization.CultureInfo)">
+      <summary>使用所指定的区域性信息验证指定的两个字符串是否相等，根据指定的要求忽略大小写或不忽略大小写。 如果它们不相等，则断言失败。</summary>
+      <param name="expected">要比较的第一个字符串。 这是单元测试要求的字符串。</param>
+      <param name="actual">要比较的第二个字符串。 这是单元测试生成的字符串。</param>
+      <param name="ignoreCase">一个布尔值，指示区分大小写或不区分大小写的比较。 true 指示所进行的比较不区分大小写。</param>
+      <param name="culture">一个 <see cref="T:System.Globalization.CultureInfo" /> 对象，提供区域性特定的比较信息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 不等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(System.String,System.String,System.Boolean,System.Globalization.CultureInfo,System.String)">
+      <summary>使用所指定的区域性信息验证指定的两个字符串是否相等，根据指定的要求忽略大小写或不忽略大小写。 如果它们不相等，则断言失败。 如果断言失败，将显示一则消息。</summary>
+      <param name="expected">要比较的第一个字符串。 这是单元测试要求的字符串。</param>
+      <param name="actual">要比较的第二个字符串。 这是单元测试生成的字符串。</param>
+      <param name="ignoreCase">一个布尔值，指示区分大小写或不区分大小写的比较。 true 指示所进行的比较不区分大小写。</param>
+      <param name="culture">一个 <see cref="T:System.Globalization.CultureInfo" /> 对象，提供区域性特定的比较信息。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 不等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(System.String,System.String,System.Boolean,System.Globalization.CultureInfo,System.String,System.Object[])">
+      <summary>使用所指定的区域性信息验证指定的两个字符串是否相等，根据指定的要求忽略大小写或不忽略大小写。 如果它们不相等，则断言失败。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="expected">要比较的第一个字符串。 这是单元测试要求的字符串。</param>
+      <param name="actual">要比较的第二个字符串。 这是单元测试生成的字符串。</param>
+      <param name="ignoreCase">一个布尔值，指示区分大小写或不区分大小写的比较。 true 指示所进行的比较不区分大小写。</param>
+      <param name="culture">一个 <see cref="T:System.Globalization.CultureInfo" /> 对象，提供区域性特定的比较信息。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 不等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(System.String,System.String,System.Boolean,System.String)">
+      <summary>验证指定的两个字符串是否相等，根据指定的要求忽略大小写或不忽略大小写。 如果它们不相等，则断言失败。 如果断言失败，将显示一则消息。</summary>
+      <param name="expected">要比较的第一个字符串。 这是单元测试要求的字符串。</param>
+      <param name="actual">要比较的第二个字符串。 这是单元测试生成的字符串。</param>
+      <param name="ignoreCase">一个布尔值，指示区分大小写或不区分大小写的比较。 true 指示所进行的比较不区分大小写。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 不等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(System.String,System.String,System.Boolean,System.String,System.Object[])">
+      <summary>验证指定的两个字符串是否相等，根据指定的要求忽略大小写或不忽略大小写。 如果它们不相等，则断言失败。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="expected">要比较的第一个字符串。 这是单元测试要求的字符串。</param>
+      <param name="actual">要比较的第二个字符串。 这是单元测试生成的字符串。</param>
+      <param name="ignoreCase">一个布尔值，指示区分大小写或不区分大小写的比较。 true 指示所进行的比较不区分大小写。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 不等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual``1(``0,``0)">
+      <summary>使用相等运算符验证指定的两个泛型数据是否相等。 如果它们不相等，则断言失败。</summary>
+      <param name="expected">要比较的第一个泛型类型数据。 这是单元测试要求的泛型类型数据。</param>
+      <param name="actual">要比较的第二个泛型类型数据。 这是单元测试生成的泛型类型数据。</param>
+      <typeparam name="T">
+      </typeparam>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 不等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual``1(``0,``0,System.String)">
+      <summary>使用相等运算符验证指定的两个泛型数据是否相等。 如果它们不相等，则断言失败。 如果断言失败，将显示一则消息。</summary>
+      <param name="expected">要比较的第一个泛型类型数据。 这是单元测试要求的泛型类型数据。</param>
+      <param name="actual">要比较的第二个泛型类型数据。 这是单元测试生成的泛型类型数据。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <typeparam name="T">
+      </typeparam>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 不等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual``1(``0,``0,System.String,System.Object[])">
+      <summary>使用相等运算符验证指定的两个泛型数据是否相等。 如果它们不相等，则断言失败。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="expected">要比较的第一个泛型类型数据。 这是单元测试要求的泛型类型数据。</param>
+      <param name="actual">要比较的第二个泛型类型数据。 这是单元测试生成的泛型类型数据。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <typeparam name="T">
+      </typeparam>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 不等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreNotEqual(System.Double,System.Double,System.Double)">
+      <summary>验证指定的两个双精度型值是否既不相等又不在对方的指定精度内。 如果它们相等或者在对方的指定精度内，则断言失败。</summary>
+      <param name="notExpected">要比较的第一个双精度型。 单元测试要求该双精度型值与 <paramref name="actual" /> 不匹配。</param>
+      <param name="actual">要比较的第二个双精度型。 这是单元测试生成的双精度型值。</param>
+      <param name="delta">要求的误差。 只有当 <paramref name="notExpected" /> 与 <paramref name="actual" /> 相等或者它们的差小于 <paramref name="delta" /> 时断言才失败。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="notExpected" /> 与 <paramref name="actual" /> 相等或者它们的差小于 <paramref name="delta" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreNotEqual(System.Double,System.Double,System.Double,System.String)">
+      <summary>验证指定的两个双精度型值是否既不相等又不在对方的指定精度内。 如果它们相等或者在对方的指定精度内，则断言失败。 如果断言失败，将显示一则消息。</summary>
+      <param name="notExpected">要比较的第一个双精度型。 单元测试要求该双精度型值与 <paramref name="actual" /> 不匹配。</param>
+      <param name="actual">要比较的第二个双精度型。 这是单元测试生成的双精度型值。</param>
+      <param name="delta">要求的误差。 只有当 <paramref name="notExpected" /> 与 <paramref name="actual" /> 相等或者它们的差小于 <paramref name="delta" /> 时断言才失败。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="notExpected" /> 与 <paramref name="actual" /> 相等或者它们的差小于 <paramref name="delta" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreNotEqual(System.Double,System.Double,System.Double,System.String,System.Object[])">
+      <summary>验证指定的两个双精度型值是否既不相等又不在对方的指定精度内。 如果它们相等或者在对方的指定精度内，则断言失败。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="notExpected">要比较的第一个双精度型。 单元测试要求该双精度型值与 <paramref name="actual" /> 不匹配。</param>
+      <param name="actual">要比较的第二个双精度型。 这是单元测试生成的双精度型值。</param>
+      <param name="delta">要求的误差。 只有当 <paramref name="notExpected" /> 与 <paramref name="actual" /> 相等或者它们的差小于 <paramref name="delta" /> 时断言才失败。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="notExpected" /> 与 <paramref name="actual" /> 相等或者它们的差小于 <paramref name="delta" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreNotEqual(System.Object,System.Object)">
+      <summary>验证指定的两个对象是否不相等。 如果两个对象相等，则断言失败。</summary>
+      <param name="notExpected">要比较的第一个对象。 单元测试要求该对象与 <paramref name="actual" /> 不匹配。</param>
+      <param name="actual">要比较的第二个对象。 这是单元测试生成的对象。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="notExpected" /> 等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreNotEqual(System.Object,System.Object,System.String)">
+      <summary>验证指定的两个对象是否不相等。 如果两个对象相等，则断言失败。 如果断言失败，将显示一则消息。</summary>
+      <param name="notExpected">要比较的第一个对象。 单元测试要求该对象与 <paramref name="actual" /> 不匹配。</param>
+      <param name="actual">要比较的第二个对象。 这是单元测试生成的对象。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="notExpected" /> 等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreNotEqual(System.Object,System.Object,System.String,System.Object[])">
+      <summary>验证指定的两个对象是否不相等。 如果两个对象相等，则断言失败。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="notExpected">要比较的第一个对象。 单元测试要求该对象与 <paramref name="actual" /> 不匹配。</param>
+      <param name="actual">要比较的第二个对象。 这是单元测试生成的对象。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="notExpected" /> 等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreNotEqual(System.Single,System.Single,System.Single)">
+      <summary>验证指定的两个单精度型值是否既不相等又不在对方的指定精度内。 如果它们相等或者在对方的指定精度内，则断言失败。</summary>
+      <param name="notExpected">要比较的第一个单精度型值。 这是单元测试要求的单精度型值。</param>
+      <param name="actual">要比较的第二个单精度型值。 这是单元测试生成的单精度型值。</param>
+      <param name="delta">要求的误差。 只有当 <paramref name="notExpected" /> 与 <paramref name="actual" /> 相等或者它们的差小于 <paramref name="delta" /> 时断言才失败。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="notExpected" /> 与 <paramref name="actual" /> 相等或者它们的差小于 <paramref name="delta" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreNotEqual(System.Single,System.Single,System.Single,System.String)">
+      <summary>验证指定的两个单精度型值是否既不相等又不在对方的指定精度内。 如果它们相等或者在对方的指定精度内，则断言失败。 如果断言失败，将显示一则消息。</summary>
+      <param name="notExpected">要比较的第一个单精度型值。 这是单元测试要求的单精度型值。</param>
+      <param name="actual">要比较的第二个单精度型值。 这是单元测试生成的单精度型值。</param>
+      <param name="delta">要求的误差。 只有当 <paramref name="notExpected" /> 与 <paramref name="actual" /> 相等或者它们的差小于 <paramref name="delta" /> 时断言才失败。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="notExpected" /> 与 <paramref name="actual" /> 相等或者它们的差小于 <paramref name="delta" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreNotEqual(System.Single,System.Single,System.Single,System.String,System.Object[])">
+      <summary>验证指定的两个单精度型值是否既不相等又不在对方的指定精度内。 如果它们相等或者在对方的指定精度内，则断言失败。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="notExpected">要比较的第一个单精度型值。 单元测试要求该单精度型值与 <paramref name="actual" /> 不匹配。</param>
+      <param name="actual">要比较的第二个单精度型值。 这是单元测试生成的单精度型值。</param>
+      <param name="delta">要求的误差。 只有当 <paramref name="notExpected" /> 与 <paramref name="actual" /> 相等或者它们的差小于 <paramref name="delta" /> 时断言才失败。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="notExpected" /> 与 <paramref name="actual" /> 相等或者它们的差小于 <paramref name="delta" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreNotEqual(System.String,System.String,System.Boolean)">
+      <summary>验证指定的两个字符串是否不相等，根据指定的要求忽略大小写或不忽略大小写。 如果它们相等，则断言失败。</summary>
+      <param name="notExpected">要比较的第一个字符串。 单元测试要求该字符串与 <paramref name="actual" /> 不匹配。</param>
+      <param name="actual">要比较的第二个字符串。 这是单元测试生成的字符串。</param>
+      <param name="ignoreCase">一个布尔值，指示区分大小写或不区分大小写的比较。 true 指示所进行的比较不区分大小写。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="notExpected" /> 等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreNotEqual(System.String,System.String,System.Boolean,System.Globalization.CultureInfo)">
+      <summary>使用所指定的区域性信息验证指定的两个字符串是否不相等，根据指定的要求忽略大小写或不忽略大小写。 如果它们相等，则断言失败。</summary>
+      <param name="notExpected">要比较的第一个字符串。 单元测试要求该字符串与 <paramref name="actual" /> 不匹配。</param>
+      <param name="actual">要比较的第二个字符串。 这是单元测试生成的字符串。</param>
+      <param name="ignoreCase">一个布尔值，指示区分大小写或不区分大小写的比较。 true 指示所进行的比较不区分大小写。</param>
+      <param name="culture">一个 <see cref="T:System.Globalization.CultureInfo" /> 对象，提供区域性特定的比较信息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="notExpected" /> 等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreNotEqual(System.String,System.String,System.Boolean,System.Globalization.CultureInfo,System.String)">
+      <summary>使用所指定的区域性信息验证指定的两个字符串是否不相等，根据指定的要求忽略大小写或不忽略大小写。 如果它们相等，则断言失败。 如果断言失败，将显示一则消息。</summary>
+      <param name="notExpected">要比较的第一个字符串。 单元测试要求该字符串与 <paramref name="actual" /> 不匹配。</param>
+      <param name="actual">要比较的第二个字符串。 这是单元测试生成的字符串。</param>
+      <param name="ignoreCase">一个布尔值，指示区分大小写或不区分大小写的比较。 true 指示所进行的比较不区分大小写。</param>
+      <param name="culture">一个 <see cref="T:System.Globalization.CultureInfo" /> 对象，提供区域性特定的比较信息。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="notExpected" /> 等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreNotEqual(System.String,System.String,System.Boolean,System.Globalization.CultureInfo,System.String,System.Object[])">
+      <summary>使用所指定的区域性信息验证指定的两个字符串是否不相等，根据指定的要求忽略大小写或不忽略大小写。 如果它们相等，则断言失败。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="notExpected">要比较的第一个字符串。 单元测试要求该字符串与 <paramref name="actual" /> 不匹配。</param>
+      <param name="actual">要比较的第二个字符串。 这是单元测试生成的字符串。</param>
+      <param name="ignoreCase">一个布尔值，指示区分大小写或不区分大小写的比较。 true 指示所进行的比较不区分大小写。</param>
+      <param name="culture">一个 <see cref="T:System.Globalization.CultureInfo" /> 对象，提供区域性特定的比较信息。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="notExpected" /> 等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreNotEqual(System.String,System.String,System.Boolean,System.String)">
+      <summary>验证指定的两个字符串是否不相等，根据指定的要求忽略大小写或不忽略大小写。 如果它们相等，则断言失败。 如果断言失败，将显示一则消息。</summary>
+      <param name="notExpected">要比较的第一个字符串。 单元测试要求该字符串与 <paramref name="actual" /> 不匹配。</param>
+      <param name="actual">要比较的第二个字符串。 这是单元测试生成的字符串。</param>
+      <param name="ignoreCase">一个布尔值，指示区分大小写或不区分大小写的比较。 true 指示所进行的比较不区分大小写。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="notExpected" /> 等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreNotEqual(System.String,System.String,System.Boolean,System.String,System.Object[])">
+      <summary>验证指定的两个字符串是否不相等，根据指定的要求忽略大小写或不忽略大小写。 如果它们相等，则断言失败。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="notExpected">要比较的第一个字符串。 单元测试要求该字符串与 <paramref name="actual" /> 不匹配。</param>
+      <param name="actual">要比较的第二个字符串。 这是单元测试生成的字符串。</param>
+      <param name="ignoreCase">一个布尔值，指示区分大小写或不区分大小写的比较。 true 指示所进行的比较不区分大小写。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="notExpected" /> 等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreNotEqual``1(``0,``0)">
+      <summary>验证指定的两个泛型类型数据是否不相等。 如果它们相等，则断言失败。</summary>
+      <param name="notExpected">要比较的第一个泛型类型数据。 单元测试要求泛型类型数据与 <paramref name="actual" /> 不匹配。</param>
+      <param name="actual">要比较的第二个泛型类型数据。 这是单元测试生成的泛型类型数据。</param>
+      <typeparam name="T">
+      </typeparam>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="notExpected" /> 等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreNotEqual``1(``0,``0,System.String)">
+      <summary>验证指定的两个泛型类型数据是否不相等。 如果它们相等，则断言失败。 如果断言失败，将显示一则消息。</summary>
+      <param name="notExpected">要比较的第一个泛型类型数据。 单元测试要求泛型类型数据与 <paramref name="actual" /> 不匹配。</param>
+      <param name="actual">要比较的第二个泛型类型数据。 这是单元测试生成的泛型类型数据。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <typeparam name="T">
+      </typeparam>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="notExpected" /> 等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreNotEqual``1(``0,``0,System.String,System.Object[])">
+      <summary>验证指定的两个泛型类型数据是否不相等。 如果它们相等，则断言失败。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="notExpected">要比较的第一个泛型类型数据。 单元测试要求泛型类型数据与 <paramref name="actual" /> 不匹配。</param>
+      <param name="actual">要比较的第二个泛型类型数据。 这是单元测试生成的泛型类型数据。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <typeparam name="T">
+      </typeparam>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="notExpected" /> 等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreNotSame(System.Object,System.Object)">
+      <summary>验证指定的两个对象变量是否引用不同的对象。 如果它们引用同一个对象，则断言失败。</summary>
+      <param name="notExpected">要比较的第一个对象。 单元测试要求该对象与 <paramref name="actual" /> 不匹配。</param>
+      <param name="actual">要比较的第二个对象。 这是单元测试生成的对象。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="notExpected" /> 与 <paramref name="actual" /> 引用相同的对象。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreNotSame(System.Object,System.Object,System.String)">
+      <summary>验证指定的两个对象变量是否引用不同的对象。 如果它们引用同一个对象，则断言失败。 如果断言失败，将显示一则消息。</summary>
+      <param name="notExpected">要比较的第一个对象。 单元测试要求该对象与 <paramref name="actual" /> 不匹配。</param>
+      <param name="actual">要比较的第二个对象。 这是单元测试生成的对象。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="notExpected" /> 与 <paramref name="actual" /> 引用相同的对象。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreNotSame(System.Object,System.Object,System.String,System.Object[])">
+      <summary>验证指定的两个对象变量是否引用不同的对象。 如果它们引用同一个对象，则断言失败。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="notExpected">要比较的第一个对象。 单元测试要求该对象与 <paramref name="actual" /> 不匹配。</param>
+      <param name="actual">要比较的第二个对象。 这是单元测试生成的对象。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="notExpected" /> 与 <paramref name="actual" /> 引用相同的对象。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreSame(System.Object,System.Object)">
+      <summary>验证指定的两个对象变量是否引用同一个对象。 如果它们引用不同的对象，则断言失败。</summary>
+      <param name="expected">要比较的第一个对象。 这是单元测试要求的对象。</param>
+      <param name="actual">要比较的第二个对象。 这是单元测试生成的对象。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 与 <paramref name="actual" /> 引用不同的对象。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreSame(System.Object,System.Object,System.String)">
+      <summary>验证指定的两个对象变量是否引用同一个对象。 如果它们引用不同的对象，则断言失败。 如果断言失败，将显示一则消息。</summary>
+      <param name="expected">要比较的第一个对象。 这是单元测试要求的对象。</param>
+      <param name="actual">要比较的第二个对象。 这是单元测试生成的对象。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 与 <paramref name="actual" /> 引用不同的对象。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreSame(System.Object,System.Object,System.String,System.Object[])">
+      <summary>验证指定的两个对象变量是否引用同一个对象。 如果它们引用不同的对象，则断言失败。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="expected">要比较的第一个对象。 这是单元测试要求的对象。</param>
+      <param name="actual">要比较的第二个对象。 这是单元测试生成的对象。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 与 <paramref name="actual" /> 引用不同的对象。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Equals(System.Object,System.Object)">
+      <summary>确定两个对象是否相等。</summary>
+      <param name="objA">一个可强制转换为 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.Assert" /> 实例的对象。</param>
+      <param name="objB">一个可强制转换为 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.Assert" /> 实例的对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Fail">
+      <summary>在不检查任何条件的情况下使断言失败。</summary>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">总是引发。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Fail(System.String)">
+      <summary>在不检查任何条件的情况下使断言失败。 显示消息。</summary>
+      <param name="message">要显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">总是引发。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Fail(System.String,System.Object[])">
+      <summary>在不检查任何条件的情况下使断言失败。 显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="message">要显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">总是引发。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Inconclusive">
+      <summary>指示无法验证断言。</summary>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertInconclusiveException">总是引发。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Inconclusive(System.String)">
+      <summary>指示无法验证断言。 显示消息。</summary>
+      <param name="message">要显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertInconclusiveException">总是引发。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Inconclusive(System.String,System.Object[])">
+      <summary>指示无法验证断言。 显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="message">要显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertInconclusiveException">总是引发。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse(System.Boolean)">
+      <summary>验证指定的条件是否为 false。 如果该条件为 true，则断言失败。</summary>
+      <param name="condition">要验证的条件为 false。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="condition" /> 的计算结果为 true。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse(System.Boolean,System.String)">
+      <summary>验证指定的条件是否为 false。 如果该条件为 true，则断言失败。 如果断言失败，将显示一则消息。</summary>
+      <param name="condition">要验证的条件为 false。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="condition" /> 的计算结果为 true。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse(System.Boolean,System.String,System.Object[])">
+      <summary>验证指定的条件是否为 false。 如果该条件为 true，则断言失败。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="condition">要验证的条件为 false。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="condition" /> 的计算结果为 true。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsInstanceOfType(System.Object,System.Type)">
+      <summary>验证指定的对象是否为指定类型的实例。 如果在该对象的继承层次结构中找不到该类型，则断言失败。</summary>
+      <param name="value">要验证的对象属于 <paramref name="expectedType" />。</param>
+      <param name="expectedType">预计能够在 <paramref name="value" /> 的继承层次结构中找到的类型。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="value" /> 为 null，或者在 <paramref name="value" /> 的继承层次结构中找不到 <paramref name="expectedType" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsInstanceOfType(System.Object,System.Type,System.String)">
+      <summary>验证指定的对象是否为指定类型的实例。 如果在该对象的继承层次结构中找不到该类型，则断言失败。 如果断言失败，将显示一则消息。</summary>
+      <param name="value">要验证的对象属于 <paramref name="expectedType" />。</param>
+      <param name="expectedType">预计能够在 <paramref name="value" /> 的继承层次结构中找到的类型。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="value" /> 为 null，或者在 <paramref name="value" /> 的继承层次结构中找不到 <paramref name="expectedType" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsInstanceOfType(System.Object,System.Type,System.String,System.Object[])">
+      <summary>验证指定的对象是否为指定类型的实例。 如果在该对象的继承层次结构中找不到该类型，则断言失败。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="value">要验证的对象属于 <paramref name="expectedType" />。</param>
+      <param name="expectedType">预计能够在 <paramref name="value" /> 的继承层次结构中找到的类型。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="value" /> 为 null，或者在 <paramref name="value" /> 的继承层次结构中找不到 <paramref name="expectedType" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsNotInstanceOfType(System.Object,System.Type)">
+      <summary>验证指定的对象是否不为指定类型的实例。 如果在该对象的继承层次结构中找到了指定的类型，则断言失败。</summary>
+      <param name="value">要验证的对象不属于 <paramref name="wrongType" />。</param>
+      <param name="wrongType">不应当在 <paramref name="value" /> 的继承层次结构中找到的类型。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="value" /> 不为 null，而且在 <paramref name="value" /> 的继承层次结构中找到了 <paramref name="wrongType" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsNotInstanceOfType(System.Object,System.Type,System.String)">
+      <summary>验证指定的对象是否不为指定类型的实例。 如果在该对象的继承层次结构中找到了指定的类型，则断言失败。 如果断言失败，将显示一则消息。</summary>
+      <param name="value">要验证的对象不属于 <paramref name="wrongType" />。</param>
+      <param name="wrongType">不应当在 <paramref name="value" /> 的继承层次结构中找到的类型。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="value" /> 不为 null，而且在 <paramref name="value" /> 的继承层次结构中找到了 <paramref name="wrongType" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsNotInstanceOfType(System.Object,System.Type,System.String,System.Object[])">
+      <summary>验证指定的对象是否不为指定类型的实例。 如果在该对象的继承层次结构中找到了指定的类型，则断言失败。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="value">要验证的对象不属于 <paramref name="wrongType" />。</param>
+      <param name="wrongType">不应当在 <paramref name="value" /> 的继承层次结构中找到的类型。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="value" /> 不为 null，而且在 <paramref name="value" /> 的继承层次结构中找到了 <paramref name="wrongType" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsNotNull(System.Object)">
+      <summary>验证指定的对象是否不为 null。 如果该对象为 null，则断言失败。</summary>
+      <param name="value">要验证的对象不为 null。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="value" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsNotNull(System.Object,System.String)">
+      <summary>验证指定的对象是否不为 null。 如果该对象为 null，则断言失败。 如果断言失败，将显示一则消息。</summary>
+      <param name="value">要验证的对象不为 null。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="value" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsNotNull(System.Object,System.String,System.Object[])">
+      <summary>验证指定的对象是否不为 null。 如果该对象为 null，则断言失败。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="value">要验证的对象不为 null。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="value" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsNull(System.Object)">
+      <summary>验证指定的对象是否为 null。 如果该对象不为 null，则断言失败。</summary>
+      <param name="value">要验证的对象为 null。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="value" /> 不是 null。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsNull(System.Object,System.String)">
+      <summary>验证指定的对象是否为 null。 如果该对象不为 null，则断言失败。 如果断言失败，将显示一则消息。</summary>
+      <param name="value">要验证的对象为 null。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="value" /> 不是 null。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsNull(System.Object,System.String,System.Object[])">
+      <summary>验证指定的对象是否为 null。 如果该对象不为 null，则断言失败。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="value">要验证的对象为 null。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="value" /> 不是 null。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue(System.Boolean)">
+      <summary>验证指定的条件是否为 true。 如果该条件为 false，则断言失败。</summary>
+      <param name="condition">要验证的条件为 true。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="condition" /> 的计算结果为 false。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue(System.Boolean,System.String)">
+      <summary>验证指定的条件是否为 true。 如果该条件为 false，则断言失败。 如果断言失败，将显示一则消息。</summary>
+      <param name="condition">要验证的条件为 true。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="condition" /> 的计算结果为 false。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue(System.Boolean,System.String,System.Object[])">
+      <summary>验证指定的条件是否为 true。 如果该条件为 false，则断言失败。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="condition">要验证的条件为 true。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="condition" /> 的计算结果为 false。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.ReplaceNullChars(System.String)">
+      <summary>在字符串中，用 "\\0" 替换空字符 ('\0')。</summary>
+      <returns>空字符被 "\\0" 替换的转换字符串。</returns>
+      <param name="input">要在其中搜索并替换空字符的字符串。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+      <summary>用于指示测试失败。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>用序列化数据初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException" /> 类的新实例。</summary>
+      <param name="info">
+        <see cref="T:System.Runtime.Serialization.SerializationInfo" />，它存有有关所引发的异常的序列化对象数据。</param>
+      <param name="context">
+        <see cref="T:System.Runtime.Serialization.StreamingContext" />，它包含有关源或目标的上下文信息。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="info" /> 为 null。</exception>
+      <exception cref="T:System.Runtime.Serialization.SerializationException">类名为 null 或 HResult 为零 (0)。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException.#ctor(System.String)">
+      <summary>使用指定的错误信息初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException" /> 类的新实例。</summary>
+      <param name="msg">描述错误的消息。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException.#ctor(System.String,System.Exception)">
+      <summary>使用指定错误消息和对作为此异常原因的内部异常的引用来初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException" /> 类的新实例。</summary>
+      <param name="msg">解释异常原因的错误信息。</param>
+      <param name="ex">导致当前异常的异常。 如果 <paramref name="ex" /> 参数不为 null，则当前异常在处理内部异常的 catch 块中引发。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertInconclusiveException">
+      <summary>用于表示尚未实现某个测试。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.AssertInconclusiveException.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertInconclusiveException" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.AssertInconclusiveException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>用序列化数据初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertInconclusiveException" /> 类的新实例。</summary>
+      <param name="info">
+        <see cref="T:System.Runtime.Serialization.SerializationInfo" />，它存有有关所引发的异常的序列化对象数据。</param>
+      <param name="context">
+        <see cref="T:System.Runtime.Serialization.StreamingContext" />，它包含有关源或目标的上下文信息。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="info" /> 参数为 null。</exception>
+      <exception cref="T:System.Runtime.Serialization.SerializationException">类名称是 null.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.AssertInconclusiveException.#ctor(System.String)">
+      <summary>使用指定的错误消息初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertInconclusiveException" /> 类的新实例。</summary>
+      <param name="msg">描述错误的消息。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.AssertInconclusiveException.#ctor(System.String,System.Exception)">
+      <summary>使用指定错误消息和对作为此异常原因的内部异常的引用来初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertInconclusiveException" /> 类的新实例。</summary>
+      <param name="msg">解释异常原因的错误信息。</param>
+      <param name="ex">导致当前异常的异常。 如果参数不为 null，则当前异常在处理内部异常的 catch 块中引发。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.BaseShadow">
+      <summary>公共方法使用此类来帮助测试私有类型。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.BaseShadow.#ctor(Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.BaseShadow" /> 类的新实例。</summary>
+      <param name="privateTarget">要在初始化时存储的对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.BaseShadow.#ctor(Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.BaseShadow" /> 类的新实例。</summary>
+      <param name="type">要在初始化时存储的类型。</param>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.BaseShadow.AttachShadowName">
+      <summary>派生类中的静态方法的名称。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.BaseShadow.Equals(System.Object)">
+      <summary>确定指定的对象是否等于当前对象。</summary>
+      <returns>如果指定的对象等于当前对象，则为 true；否则为 false。</returns>
+      <param name="obj">要与当前对象进行比较的对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.BaseShadow.GetHashCode">
+      <summary>返回此实例的哈希代码。</summary>
+      <returns>32 位有符号整数哈希代码。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.BaseShadow.GetShadowAttacher(System.Type)">
+      <summary>用于动态还原私有类型的数组。</summary>
+      <returns>AttachShadow 方法的 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.BaseShadow.ElementConverter" /> 委托。</returns>
+      <param name="type">类型，可能是数组或指针。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.BaseShadow.GetTargetObject(System.Object)">
+      <summary>静态函数，该函数将与 <see cref="M:Microsoft.VisualStudio.TestTools.UnitTesting.BaseShadow.TransferArray(System.Array,System.Type,Microsoft.VisualStudio.TestTools.UnitTesting.BaseShadow.ElementConverter)" /> 一起使用来执行深层数组复制，而不制作真实目标 <see cref="T:System.Type" /> 对象的卷影。</summary>
+      <returns>如果 <paramref name="Source" /> 是一个卷影，则返回基础目标 <see cref="T:System.Type" />；否则，返回 <paramref name="Source" />。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.BaseShadow.GetTargetType(System.Type)">
+      <summary>返回潜在卷影类的目标 <see cref="T:System.Type" />。</summary>
+      <returns>返回潜在卷影类的目标 <see cref="T:System.Type" />。 如果传递的类型不是卷影类型，则返回相同的类型。</returns>
+      <param name="type">要检查的类型。</param>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.BaseShadow.m_privateObject">
+      <summary>存储在此实例中的 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject" />。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.BaseShadow.MakeArrayType(System.Type,System.Int32)">
+      <summary>返回一个 <see cref="T:System.Type" /> 对象，该对象表示具有指定维数的指定类型的数组。</summary>
+      <returns>一个 <see cref="T:System.Type" /> 对象，它表示具有指定维数的指定类型的数组。</returns>
+      <param name="elementType">数组的元素类型。</param>
+      <param name="rank">数组的维数。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.BaseShadow.MakeByRefType(System.Type)">
+      <summary>返回一个 <see cref="T:System.Type" /> 对象，该对象表示作为 ref 参数传递的指定类型。</summary>
+      <returns>一个 <see cref="T:System.Type" /> 对象，它表示作为 ref 参数传递的当前类型。</returns>
+      <param name="elementType">元素类型。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.BaseShadow.MakePointerType(System.Type)">
+      <summary>返回表示指向指定类型的指针的 <see cref="T:System.Type" /> 对象。</summary>
+      <returns>一个表示指向指定类型的指针的 <see cref="T:System.Type" /> 对象。</returns>
+      <param name="elementType">元素类型。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.BaseShadow.Same(System.Object)">
+      <summary>用于传输同一 <see cref="T:System.Type" /> 的数组的虚拟方法。 这是用于相同类型的数组的 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.BaseShadow.ElementConverter" /> 委托的不安全实现。</summary>
+      <returns>返回 <paramref name="source" /> 对象。</returns>
+      <param name="source">源对象。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.BaseShadow.Target">
+      <summary>获取目标对象。</summary>
+      <returns>存储的对象。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.BaseShadow.ToString">
+      <summary>返回一个表示当前 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.BaseShadow" /> 对象的 <see cref="T:System.String" />。</summary>
+      <returns>一个表示当前 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.BaseShadow" /> 对象的 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.BaseShadow.TransferArray(System.Array,System.Type,Microsoft.VisualStudio.TestTools.UnitTesting.BaseShadow.ElementConverter)">
+      <summary>执行从一个 <see cref="T:System.Type" /> 数组到另一个类似的 <see cref="T:System.Type" /> 数组的深层复制。</summary>
+      <returns>与原始数组特征（秩和维度限制）相同的数组。</returns>
+      <param name="source">源数组。</param>
+      <param name="targetType">目标数组的类型。</param>
+      <param name="converter">用于执行数组元素之间转换的方法。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.BaseShadow.ElementConverter">
+      <summary>用于数组的深层复制的委托。 将数组的源元素转换为目标元素。</summary>
+      <returns>深层复制的目标元素。</returns>
+      <param name="source">要深层复制的源元素。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.BeforeAssemblyCleanupEventArgs">
+      <summary>为 <see cref="E:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution.BeforeAssemblyCleanup" /> 事件提供数据。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.BeforeAssemblyInitializeEventArgs">
+      <summary>为 <see cref="E:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution.BeforeAssemblyInitialize" /> 事件提供数据。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.BeforeClassCleanupEventArgs">
+      <summary>为 <see cref="E:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution.BeforeClassCleanup" /> 事件提供数据。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.BeforeClassInitializeEventArgs">
+      <summary>为 <see cref="E:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution.BeforeClassInitialize" /> 事件提供数据。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.BeforeTestCleanupEventArgs">
+      <summary>为 <see cref="E:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution.BeforeTestCleanup" /> 事件提供数据。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.BeforeTestInitializeEventArgs">
+      <summary>为 <see cref="E:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution.BeforeTestInitialize" /> 事件提供数据。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.ClassCleanupAttribute">
+      <summary>标识一个包含代码的方法，该代码将在测试类中所有的测试都运行以后使用，并释放测试类所获取的资源。 此类不能被继承。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.ClassCleanupAttribute.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.ClassCleanupAttribute" /> 类的新实例。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute">
+      <summary>标识一个包含代码的方法，这些代码必须在测试类中的任意测试运行之前使用，并用于分配测试类所使用的资源。 此类不能被继承。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute" /> 类的新实例。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert">
+      <summary>在单元测试中验证与集合关联的 true/false 命题。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.AllItemsAreInstancesOfType(System.Collections.ICollection,System.Type)">
+      <summary>验证指定集合中的所有元素是否为指定类型的实例。 如果在任何元素的继承层次结构中都找不到该类型，则断言失败。</summary>
+      <param name="collection">要验证的集合。</param>
+      <param name="expectedType">预计能够在 <paramref name="collection" /> 中各个元素的继承层次结构中找到的类型。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="collection" /> 中的一个元素为 null，或者在 <paramref name="collection" /> 中所有元素的继承层次结构中都找不到 <paramref name="expectedType" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.AllItemsAreInstancesOfType(System.Collections.ICollection,System.Type,System.String)">
+      <summary>验证指定集合中的所有元素是否为指定类型的实例。 如果集合中存在这样一个元素：在该元素的继承层次结构中找不到指定的类型，则断言失败。 如果断言失败，将显示一则消息。</summary>
+      <param name="collection">要验证的集合。</param>
+      <param name="expectedType">预计能够在 <paramref name="collection" /> 中各个元素的继承层次结构中找到的类型。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="collection" /> 中的一个元素为 null，或者在 <paramref name="collection" /> 中所有元素的继承层次结构中都找不到 <paramref name="expectedType" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.AllItemsAreInstancesOfType(System.Collections.ICollection,System.Type,System.String,System.Object[])">
+      <summary>验证指定集合中的所有元素是否为指定类型的实例。 如果集合中存在这样一个元素：在该元素的继承层次结构中找不到指定的类型，则断言失败。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="collection">要验证的集合。</param>
+      <param name="expectedType">预计能够在 <paramref name="collection" /> 中各个元素的继承层次结构中找到的类型。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="collection" /> 中的一个元素为 null，或者在 <paramref name="collection" /> 中所有元素的继承层次结构中都找不到 <paramref name="expectedType" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.AllItemsAreNotNull(System.Collections.ICollection)">
+      <summary>验证指定集合中的所有项是否都不为 null。 如果有任何元素为 null，则断言失败。</summary>
+      <param name="collection">要在其中搜索 null 元素的集合。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">在 <paramref name="collection" /> 中找到了一个 null 元素。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.AllItemsAreNotNull(System.Collections.ICollection,System.String)">
+      <summary>验证指定集合中的所有项是否都不为 null。 如果有任何元素为 null，则断言失败。 如果断言失败，将显示一则消息。</summary>
+      <param name="collection">要在其中搜索 null 元素的集合。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">在 <paramref name="collection" /> 中找到了一个 null 元素。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.AllItemsAreNotNull(System.Collections.ICollection,System.String,System.Object[])">
+      <summary>验证指定集合中的所有项是否都不为 null。 如果有任何元素为 null，则断言失败。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="collection">要在其中搜索 null 元素的集合。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">在 <paramref name="collection" /> 中找到了一个 null 元素。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.AllItemsAreUnique(System.Collections.ICollection)">
+      <summary>验证指定集合中的所有项是否都唯一。 如果集合中有两个元素相等，则断言失败。</summary>
+      <param name="collection">搜索重复元素的集合。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">在 <paramref name="collection" /> 中找到两个或多个相等的元素。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.AllItemsAreUnique(System.Collections.ICollection,System.String)">
+      <summary>验证指定集合中的所有项是否都唯一。 如果集合中有两个元素相等，则断言失败。 如果断言失败，将显示一则消息。</summary>
+      <param name="collection">搜索重复元素的集合。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">在 <paramref name="collection" /> 中找到两个或多个相等的元素。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.AllItemsAreUnique(System.Collections.ICollection,System.String,System.Object[])">
+      <summary>验证指定集合中的所有项是否都唯一。 如果集合中有两个元素相等，则断言失败。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="collection">搜索重复元素的集合。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">在 <paramref name="collection" /> 中找到两个或多个相等的元素。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.AreEqual(System.Collections.ICollection,System.Collections.ICollection)">
+      <summary>验证两个指定的集合是否相等。 如果这两个集合不相等，则断言失败。</summary>
+      <param name="expected">要比较的第一个集合。 这是单元测试要求的集合。</param>
+      <param name="actual">要比较的第二个集合。 这是单元测试生成的集合。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 不等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.AreEqual(System.Collections.ICollection,System.Collections.ICollection,System.Collections.IComparer)">
+      <summary>使用指定的方法对元素的值进行比较，从而验证两个指定的集合是否相等。 如果这两个集合不相等，则断言失败。</summary>
+      <param name="expected">要比较的第一个集合。 这是单元测试要求的集合。</param>
+      <param name="actual">要比较的第二个集合。 这是单元测试生成的集合。</param>
+      <param name="comparer">比较集合的元素时使用的比较实现。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 不等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.AreEqual(System.Collections.ICollection,System.Collections.ICollection,System.Collections.IComparer,System.String)">
+      <summary>使用指定的方法对元素的值进行比较，从而验证两个指定的集合是否相等。 如果这两个集合不相等，则断言失败。 如果断言失败，将显示一则消息。</summary>
+      <param name="expected">要比较的第一个集合。 这是单元测试要求的集合。</param>
+      <param name="actual">要比较的第二个集合。 这是单元测试生成的集合。</param>
+      <param name="comparer">比较集合的元素时使用的比较实现。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 不等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.AreEqual(System.Collections.ICollection,System.Collections.ICollection,System.Collections.IComparer,System.String,System.Object[])">
+      <summary>使用指定的方法对元素的值进行比较，从而验证两个指定的集合是否相等。 如果这两个集合不相等，则断言失败。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="expected">要比较的第一个集合。 这是单元测试要求的集合。</param>
+      <param name="actual">要比较的第二个集合。 这是单元测试生成的集合。</param>
+      <param name="comparer">比较集合的元素时使用的比较实现。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 不等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.AreEqual(System.Collections.ICollection,System.Collections.ICollection,System.String)">
+      <summary>验证两个指定的集合是否相等。 如果这两个集合不相等，则断言失败。 如果断言失败，将显示一则消息。</summary>
+      <param name="expected">要比较的第一个集合。 这是单元测试要求的集合。</param>
+      <param name="actual">要比较的第二个集合。 这是单元测试生成的集合。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 不等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.AreEqual(System.Collections.ICollection,System.Collections.ICollection,System.String,System.Object[])">
+      <summary>验证两个指定的集合是否相等。 如果这两个集合不相等，则断言失败。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="expected">要比较的第一个集合。 这是单元测试要求的集合。</param>
+      <param name="actual">要比较的第二个集合。 这是单元测试生成的集合。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 不等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.AreEquivalent(System.Collections.ICollection,System.Collections.ICollection)">
+      <summary>验证两个指定的集合是否等效。 如果两个集合不等效，则断言失败。</summary>
+      <param name="expected">要比较的第一个集合。 它包含单元测试需要的元素。</param>
+      <param name="actual">要比较的第二个集合。 这是单元测试生成的集合。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">在一个集合中找到某个元素，但在另一个集合中找不到该元素。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.AreEquivalent(System.Collections.ICollection,System.Collections.ICollection,System.String)">
+      <summary>验证两个指定的集合是否等效。 如果两个集合不等效，则断言失败。 如果断言失败，将显示一则消息。</summary>
+      <param name="expected">要比较的第一个集合。 它包含单元测试需要的元素。</param>
+      <param name="actual">要比较的第二个集合。 这是单元测试生成的集合。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">在一个集合中找到某个元素，但在另一个集合中找不到该元素。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.AreEquivalent(System.Collections.ICollection,System.Collections.ICollection,System.String,System.Object[])">
+      <summary>验证两个指定的集合是否等效。 如果两个集合不等效，则断言失败。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="expected">要比较的第一个集合。 它包含单元测试需要的元素。</param>
+      <param name="actual">要比较的第二个集合。 这是单元测试生成的集合。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">在一个集合中找到某个元素，但在另一个集合中找不到该元素。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.AreNotEqual(System.Collections.ICollection,System.Collections.ICollection)">
+      <summary>验证两个指定的集合是否不相等。 如果两个集合相等，则断言失败。</summary>
+      <param name="notExpected">要比较的第一个集合。 单元测试要求该集合与 <paramref name="actual" /> 不匹配。</param>
+      <param name="actual">要比较的第二个集合。 这是单元测试生成的集合。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.AreNotEqual(System.Collections.ICollection,System.Collections.ICollection,System.Collections.IComparer)">
+      <summary>使用指定的方法对元素的值进行比较，从而验证两个指定的集合是否不相等。 如果两个集合相等，则断言失败。</summary>
+      <param name="notExpected">要比较的第一个集合。 单元测试要求该集合与 <paramref name="actual" /> 不匹配。</param>
+      <param name="actual">要比较的第二个集合。 这是单元测试生成的集合。</param>
+      <param name="comparer">比较集合的元素时使用的比较实现。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.AreNotEqual(System.Collections.ICollection,System.Collections.ICollection,System.Collections.IComparer,System.String)">
+      <summary>使用指定的方法对元素的值进行比较，从而验证两个指定的集合是否不相等。 如果两个集合相等，则断言失败。 如果断言失败，将显示一则消息。</summary>
+      <param name="notExpected">要比较的第一个集合。 单元测试要求该集合与 <paramref name="actual" /> 不匹配。</param>
+      <param name="actual">要比较的第二个集合。 这是单元测试生成的集合。</param>
+      <param name="comparer">比较集合的元素时使用的比较实现。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.AreNotEqual(System.Collections.ICollection,System.Collections.ICollection,System.Collections.IComparer,System.String,System.Object[])">
+      <summary>使用指定的方法对元素的值进行比较，从而验证两个指定的集合是否不相等。 如果两个集合相等，则断言失败。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="notExpected">要比较的第一个集合。 单元测试要求该集合与 <paramref name="actual" /> 不匹配。</param>
+      <param name="actual">要比较的第二个集合。 这是单元测试生成的集合。</param>
+      <param name="comparer">比较集合的元素时使用的比较实现。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.AreNotEqual(System.Collections.ICollection,System.Collections.ICollection,System.String)">
+      <summary>验证两个指定的集合是否不相等。 如果两个集合相等，则断言失败。 如果断言失败，将显示一则消息。</summary>
+      <param name="notExpected">要比较的第一个集合。 单元测试要求该集合与 <paramref name="actual" /> 不匹配。</param>
+      <param name="actual">要比较的第二个集合。 这是单元测试生成的集合。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.AreNotEqual(System.Collections.ICollection,System.Collections.ICollection,System.String,System.Object[])">
+      <summary>验证两个指定的集合是否不相等。 如果两个集合相等，则断言失败。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="notExpected">要比较的第一个集合。 单元测试要求该集合与 <paramref name="actual" /> 不匹配。</param>
+      <param name="actual">要比较的第二个集合。 这是单元测试生成的集合。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="expected" /> 等于 <paramref name="actual" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.AreNotEquivalent(System.Collections.ICollection,System.Collections.ICollection)">
+      <summary>验证两个指定的集合是否不等效。 如果两个集合等效，则断言失败。</summary>
+      <param name="expected">要比较的第一个集合。 它包含单元测试要求与实际集合不同的元素。</param>
+      <param name="actual">要比较的第二个集合。 这是单元测试生成的集合。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">两个集合包含相同的元素，并且每个元素的重复次数也相同。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.AreNotEquivalent(System.Collections.ICollection,System.Collections.ICollection,System.String)">
+      <summary>验证两个指定的集合是否不等效。 如果两个集合等效，则断言失败。 如果断言失败，将显示一则消息。</summary>
+      <param name="expected">要比较的第一个集合。 它包含单元测试要求与实际集合不同的元素。</param>
+      <param name="actual">要比较的第二个集合。 这是单元测试生成的集合。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">两个集合包含相同的元素，并且每个元素的重复次数也相同。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.AreNotEquivalent(System.Collections.ICollection,System.Collections.ICollection,System.String,System.Object[])">
+      <summary>验证两个指定的集合是否不等效。 如果两个集合等效，则断言失败。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="expected">要比较的第一个集合。 它包含单元测试要求与实际集合不同的元素。</param>
+      <param name="actual">要比较的第二个集合。 这是单元测试生成的集合。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">两个集合包含相同的元素，并且每个元素的重复次数也相同。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.Contains(System.Collections.ICollection,System.Object)">
+      <summary>验证指定的集合是否包含指定的元素。 如果未在集合中找到该元素，则断言失败。</summary>
+      <param name="collection">搜索元素的集合。</param>
+      <param name="element">集合应包含的元素。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="collection" /> 中找不到 <paramref name="element" /></exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.Contains(System.Collections.ICollection,System.Object,System.String)">
+      <summary>验证指定的集合是否包含指定的元素。 如果未在集合中找到该元素，则断言失败。 如果断言失败，将显示一则消息。</summary>
+      <param name="collection">搜索元素的集合。</param>
+      <param name="element">集合应包含的元素。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="collection" /> 中找不到 <paramref name="element" /></exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.Contains(System.Collections.ICollection,System.Object,System.String,System.Object[])">
+      <summary>验证指定的集合是否包含指定的元素。 如果未在集合中找到该元素，则断言失败。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="collection">搜索元素的集合。</param>
+      <param name="element">集合应包含的元素。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="collection" /> 中找不到 <paramref name="element" /></exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.DoesNotContain(System.Collections.ICollection,System.Object)">
+      <summary>验证指定的集合是否不包含指定的元素。 如果在集合中找到了该元素，则断言失败。</summary>
+      <param name="collection">搜索元素的集合。</param>
+      <param name="element">集合不应包含的元素。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="collection" /> 中找到 <paramref name="element" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.DoesNotContain(System.Collections.ICollection,System.Object,System.String)">
+      <summary>验证指定的集合是否不包含指定的元素。 如果在集合中找到了该元素，则断言失败。 如果断言失败，将显示一则消息。</summary>
+      <param name="collection">搜索元素的集合。</param>
+      <param name="element">集合不应包含的元素。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="collection" /> 中找到 <paramref name="element" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.DoesNotContain(System.Collections.ICollection,System.Object,System.String,System.Object[])">
+      <summary>验证指定的集合是否不包含指定的元素。 如果在集合中找到了该元素，则断言失败。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="collection">搜索元素的集合。</param>
+      <param name="element">集合不应包含的元素。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="collection" /> 中找到 <paramref name="element" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.IsNotSubsetOf(System.Collections.ICollection,System.Collections.ICollection)">
+      <summary>验证第一个集合是否不是第二个集合的子集。</summary>
+      <param name="subset">不应是 <paramref name="superset" /> 的子集的集合。</param>
+      <param name="superset">不应是 <paramref name="subset" /> 的超集的集合。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="subset" /> 中的所有元素均能够在 <paramref name="superset" /> 中找到，而且数量足够。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.IsNotSubsetOf(System.Collections.ICollection,System.Collections.ICollection,System.String)">
+      <summary>验证第一个集合是否不是第二个集合的子集。 如果断言失败，将显示一则消息。</summary>
+      <param name="subset">不应是 <paramref name="superset" /> 的子集的集合。</param>
+      <param name="superset">不应是 <paramref name="subset" /> 的超集的集合。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="subset" /> 中的所有元素均能够在 <paramref name="superset" /> 中找到，而且数量足够。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.IsNotSubsetOf(System.Collections.ICollection,System.Collections.ICollection,System.String,System.Object[])">
+      <summary>验证第一个集合是否不是第二个集合的子集。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="subset">不应是 <paramref name="superset" /> 的子集的集合。</param>
+      <param name="superset">不应是 <paramref name="subset" /> 的超集的集合。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="subset" /> 中的所有元素均能够在 <paramref name="superset" /> 中找到，而且数量足够。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.IsSubsetOf(System.Collections.ICollection,System.Collections.ICollection)">
+      <summary>验证第一个集合是否为第二个集合的子集。</summary>
+      <param name="subset">应是 <paramref name="superset" /> 的子集的集合。</param>
+      <param name="superset">应是 <paramref name="subset" /> 的超集的集合。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="subset" /> 中的一个元素，该元素未在 <paramref name="superset" /> 中找到；或者 <paramref name="subset" /> 中的一个元素虽然在 <paramref name="superset" /> 中找到，但数量不够。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.IsSubsetOf(System.Collections.ICollection,System.Collections.ICollection,System.String)">
+      <summary>验证第一个集合是否为第二个集合的子集。 如果断言失败，将显示一则消息。</summary>
+      <param name="subset">应是 <paramref name="superset" /> 的子集的集合。</param>
+      <param name="superset">应是 <paramref name="subset" /> 的超集的集合。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="subset" /> 中的一个元素，该元素未在 <paramref name="superset" /> 中找到；或者 <paramref name="subset" /> 中的一个元素虽然在 <paramref name="superset" /> 中找到，但数量不够。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.IsSubsetOf(System.Collections.ICollection,System.Collections.ICollection,System.String,System.Object[])">
+      <summary>验证第一个集合是否为第二个集合的子集。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="subset">应是 <paramref name="superset" /> 的子集的集合。</param>
+      <param name="superset">应是 <paramref name="subset" /> 的超集的集合。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="subset" /> 中的一个元素，该元素未在 <paramref name="superset" /> 中找到；或者 <paramref name="subset" /> 中的一个元素虽然在 <paramref name="superset" /> 中找到，但数量不够。</exception>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.CssIterationAttribute">
+      <summary>表示该测试对应的项目迭代。 此类不能被继承。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CssIterationAttribute.#ctor(System.String)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.CssIterationAttribute" /> 类的新实例。</summary>
+      <param name="cssIteration">标识对应的项目迭代的字符串。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.CssIterationAttribute.CssIteration">
+      <summary>获取测试的迭代标识符。</summary>
+      <returns>迭代标识符。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.CssProjectStructureAttribute">
+      <summary>表示此测试所对应的团队项目层次结构中的节点。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.CssProjectStructureAttribute.#ctor(System.String)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.CssProjectStructureAttribute" /> 类的新实例。</summary>
+      <param name="cssProjectStructure">标识对应的项目功能的字符串。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.CssProjectStructureAttribute.CssProjectStructure">
+      <summary>获取测试的项目功能标识符。</summary>
+      <returns>项目功能标识符。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.DataAccessMethod">
+      <summary>指定常数，这些常数指示如何在数据驱动测试中访问数据行。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.DataAccessMethod.Sequential">
+      <summary>以顺序返回行。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.DataAccessMethod.Random">
+      <summary>以随机顺序返回行。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute">
+      <summary>为数据驱动测试提供数据源特定的信息。 此类不能被继承。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute.#ctor(System.String)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute" /> 类的新实例。 将使用与设置名称关联的数据提供程序和连接字符串来初始化该实例。</summary>
+      <param name="dataSourceSettingName">&lt;microsoft.visualstudio.qualitytools&gt; section in the app.config 文件夹中找到的数据源的名称。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute.#ctor(System.String,System.String)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute" /> 类的新实例。 用连接字符串和表名称来初始化该实例。</summary>
+      <param name="connectionString">特定于数据提供程序的连接字符串。</param>
+      <param name="tableName">数据表的名称。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute.#ctor(System.String,System.String,System.String,Microsoft.VisualStudio.TestTools.UnitTesting.DataAccessMethod)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute" /> 类的新实例。 使用用于访问数据源的数据提供程序、连接字符串、数据表和数据访问方法来初始化该实例。</summary>
+      <param name="providerInvariantName">固定的数据提供程序名称，如 System.Data.SqlClient。</param>
+      <param name="connectionString">特定于数据提供程序的连接字符串。</param>
+      <param name="tableName">数据表的名称。</param>
+      <param name="dataAccessMethod">指定数据的访问顺序。 它使用 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.DataAccessMethod" />。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute.ConnectionString">
+      <summary>获取一个值，该值表示数据源的连接字符串。</summary>
+      <returns>用于访问数据源的连接字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute.DataAccessMethod">
+      <summary>获取用于访问数据源的方法。</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.DataAccessMethod" /> 值之一。 如果未初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute" />，这将返回默认值 <see cref="F:Microsoft.VisualStudio.TestTools.UnitTesting.DataAccessMethod.Random" />。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute.DataSourceSettingName">
+      <summary>获取一个值，该值表示用于标识存储在配置文件中的数据源连接信息的设置名称。</summary>
+      <returns>&lt;microsoft.visualstudio.qualitytools&gt; section in the app.config 文件夹中找到的数据源的名称。</returns>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute.DefaultDataAccessMethod">
+      <summary>表示默认数据访问方法。 此字段为只读。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute.DefaultProviderName">
+      <summary>表示默认的数据提供程序名称。 此字段为只读。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute.ProviderInvariantName">
+      <summary>获取一个值，该值表示数据源的数据提供程序。</summary>
+      <returns>数据提供程序名称。 如果在对象初始化时未指定数据提供程序，将返回 System.Data.OleDb 的默认提供程序。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute.TableName">
+      <summary>获取一个值，该值表示提供数据的表名称。</summary>
+      <returns>为测试提供数据的表名称。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElement">
+      <summary>将数据源元素表示为配置文件中的 XML 标记。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElement.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElement" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElement.ConnectionString">
+      <summary>获取或设置在 &lt;connectionStrings&gt; 部分 app.config 文件中链接字符串设置元素。</summary>
+      <returns>连接字符串。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElement.DataAccessMethod">
+      <summary>获取或设置 app.config 文件中的数据源访问方法元素。</summary>
+      <returns>数据源访问方法。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElement.DataTableName">
+      <summary>获取或设置 app.config 文件中的表名称设置项。</summary>
+      <returns>表名。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElement.Name">
+      <summary>获取或设置 app.config 文件中的数据源名称设置项。</summary>
+      <returns>数据源名称。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElementCollection">
+      <summary>表示 XML 元素，此元素包含子 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElement" /> 对象的集合。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElementCollection.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElementCollection" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElementCollection.Add(Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElement)">
+      <summary>将数据源元素添加到 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElementCollection" />。</summary>
+      <param name="element">要添加到集合中的 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElement" />。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElementCollection.Clear">
+      <summary>从集合中移除所有数据源元素对象。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElementCollection.Item(System.Int32)">
+      <summary>获取或设置指定索位置的 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElement" />。</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElement" /> 对象。</returns>
+      <param name="index">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElement" /> 的位置。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElementCollection.Item(System.String)">
+      <summary>获取按名称标识的 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElement" />。</summary>
+      <returns>一个 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElement" /> 对象，如果 <paramref name="name" /> 键不存在，则为 null。</returns>
+      <param name="name">要返回的 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElement" /> 的名称。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElementCollection.Remove(Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElement)">
+      <summary>从集合中移除 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElement" />。</summary>
+      <param name="element">要从该集合中移除的元素。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElementCollection.Remove(System.String)">
+      <summary>从集合中移除 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElement" />。</summary>
+      <param name="name">要移除的元素的名称。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.DeploymentItemAttribute">
+      <summary>用于指定部署项，如每个测试部署的文件或目录。 此类不能被继承。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.DeploymentItemAttribute.#ctor(System.String)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.DeploymentItemAttribute" /> 类的新实例。 将使用部署项或目录的路径来初始化使用此构造函数创建的对象。</summary>
+      <param name="path">要部署的部署项或目录的相对路径或绝对路径。 所有项或目录将部署到已部署测试程序集驻留的目录。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.DeploymentItemAttribute.#ctor(System.String,System.String)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.DeploymentItemAttribute" /> 类的新实例。 将使用部署项和输出目录的路径来初始化使用此构造函数创建的对象。</summary>
+      <param name="path">要部署的部署项或目录的相对路径或绝对路径。</param>
+      <param name="outputDirectory">输出目录的路径。 这包含 <paramref name="path" /> 标识的所有项和目录。 此目录将相对于包含已部署测试程序集的目录。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.DeploymentItemAttribute.OutputDirectory">
+      <summary>获取表示输出目录的路径的值。</summary>
+      <returns>表示部署目录下将包含已部署文件和目录的某一目录的值。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.DeploymentItemAttribute.Path">
+      <summary>获取表示部署项的路径的值。</summary>
+      <returns>要部署的文件或目录的路径。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute">
+      <summary>用于指定对测试的说明。 此类不能被继承。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute.#ctor(System.String)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute" /> 类的新实例。</summary>
+      <param name="description">该测试的简短说明。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute.Description">
+      <summary>获取对测试的说明。</summary>
+      <returns>测试说明。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute">
+      <summary>表示测试方法的执行过程中应引发异常。 此类不能被继承。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute.#ctor(System.Type)">
+      <summary>用预期的异常初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute" /> 类的新实例。</summary>
+      <param name="exceptionType">预期的异常类型，此异常将由方法引发。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute.#ctor(System.Type,System.String)">
+      <summary>用预期的异常类型以及描述此异常的消息来初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute" /> 类的新实例。</summary>
+      <param name="exceptionType">预期的异常类型，此异常将由方法引发。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute.AllowDerivedTypes">
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute.ExceptionType">
+      <summary>获取预期的异常类型。</summary>
+      <returns>
+        <see cref="T:System.Type" /> 对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionBaseAttribute">
+      <summary>这是指定单元测试应引发异常的特性的基类。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionBaseAttribute.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionBaseAttribute" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionBaseAttribute.#ctor(System.String)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionBaseAttribute" /> 类的新实例。</summary>
+      <param name="noExceptionMessage">如果因未引发异常而导致测试失败，则测试结果中将包括此消息。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionBaseAttribute.NoExceptionMessage">
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionBaseAttribute.RethrowIfAssertException(System.Exception)">
+      <summary>如果异常为 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException" /> 或 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertInconclusiveException" />，则将再次引发异常。</summary>
+      <param name="exception">断言异常会引发异常。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionBaseAttribute.TestContext">
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionBaseAttribute.Verify(System.Exception)">
+      <param name="exception">由单元测试引发的异常。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.GenericParameterHelper">
+      <summary>此类是与泛型一起使用的占位符。 此类通过允许传递非特定的类型参数来帮助您测试泛型类型。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.GenericParameterHelper.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.GenericParameterHelper" /> 类的新实例。 此构造函数将 <see cref="P:Microsoft.VisualStudio.TestTools.UnitTesting.GenericParameterHelper.Data" /> 属性初始化为一个随机值。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.GenericParameterHelper.#ctor(System.Int32)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.GenericParameterHelper" /> 类的新实例。 此构造函数将 <see cref="P:Microsoft.VisualStudio.TestTools.UnitTesting.GenericParameterHelper.Data" /> 属性初始化为一个用户指定的值。</summary>
+      <param name="data">
+        <see cref="P:Microsoft.VisualStudio.TestTools.UnitTesting.GenericParameterHelper.Data" /> 属性的初始值。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.GenericParameterHelper.Clone">
+      <summary>创建作为当前实例副本的新 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.GenericParameterHelper" />。</summary>
+      <returns>一个作为当前实例副本的新 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.GenericParameterHelper" />。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.GenericParameterHelper.CompareTo(System.Object)">
+      <summary>将当前实例与同一类型的另一个对象进行比较，并返回一个整数，该整数指示当前实例在排序顺序中的位置是位于另一个对象之前、之后还是与其位置相同。</summary>
+      <returns>一个 32 位有符号整数，指示要比较的对象的相对顺序。 返回值的含义如下： 小于零此实例小于 <paramref name="obj" />。 零此实例等于 <paramref name="obj" />。 大于零此实例大于 <paramref name="obj" />。</returns>
+      <param name="obj">一个要与当前实例进行比较的 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.GenericParameterHelper" />。</param>
+      <exception cref="NotSupportedException">
+        <paramref name="obj" /> 并不属于类型 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.GenericParameterHelper" />。</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.GenericParameterHelper.Data">
+      <summary>获取或设置此实例的 Data 属性。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.GenericParameterHelper.Equals(System.Object)">
+      <summary>确定指定的 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.GenericParameterHelper" /> 对象是否等同于当前的 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.GenericParameterHelper" />。</summary>
+      <returns>如果指定的 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.GenericParameterHelper" /> 对象等于当前的 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.GenericParameterHelper" /> 对象，则为 true；否则为 false。</returns>
+      <param name="obj">要与当前 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.GenericParameterHelper" /> 对象进行比较的 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.GenericParameterHelper" /> 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.GenericParameterHelper.GetEnumerator">
+      <summary>返回一个其长度派生自 <see cref="P:Microsoft.VisualStudio.TestTools.UnitTesting.GenericParameterHelper.Data" /> 属性的枚举器。</summary>
+      <returns>一个从 <see cref="P:Microsoft.VisualStudio.TestTools.UnitTesting.GenericParameterHelper.Data" /> 属性派生其长度的枚举器。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.GenericParameterHelper.GetHashCode">
+      <summary>返回此 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.GenericParameterHelper" /> 对象的哈希代码。</summary>
+      <returns>此 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.GenericParameterHelper" /> 对象的 32 位带符号整数哈希代码。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.HostTypeAttribute">
+      <summary>指定运行相关单元测试的主机类型。 此类不能被继承。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.HostTypeAttribute.#ctor(System.String)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.HostTypeAttribute" /> 类的新实例。 这通过使用指定主机（将在其上运行单元测试）类型的参数加以实例化。</summary>
+      <param name="hostType">将运行该单元测试的主机类型。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.HostTypeAttribute.#ctor(System.String,System.String)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.HostTypeAttribute" /> 类的新实例。 这通过使用指定主机（将在其上运行单元测试）类型以及主机适配器的自定义数据的参数加以实例化。</summary>
+      <param name="hostType">将运行该单元测试的主机类型。</param>
+      <param name="hostData">主机适配器的自定义数据。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.HostTypeAttribute.HostData">
+      <summary>获取主机适配器的自定义数据。</summary>
+      <returns>主机适配器的自定义数据。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.HostTypeAttribute.HostType">
+      <summary>获取一个表示主机类型的值。</summary>
+      <returns>一个表示主机类型的值。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.IgnoreAttribute">
+      <summary>指示特定测试不应运行。 此类不能被继承。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.IgnoreAttribute.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.IgnoreAttribute" /> 类的新实例。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.InternalTestFailureException">
+      <summary>为指示测试的内部错误而引发的异常。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.InternalTestFailureException.#ctor">
+      <summary>在不使用参数的情况下初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.InternalTestFailureException" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.InternalTestFailureException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>用序列化数据初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.InternalTestFailureException" /> 类的新实例。</summary>
+      <param name="info">
+        <see cref="T:System.Runtime.Serialization.SerializationInfo" />，它存有有关所引发的异常的序列化对象数据。</param>
+      <param name="context">
+        <see cref="T:System.Runtime.Serialization.StreamingContext" />，它包含有关源或目标的上下文信息。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="info" /> 为 null</exception>
+      <exception cref="T:System.Runtime.Serialization.SerializationException">类名称是 null</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.InternalTestFailureException.#ctor(System.String)">
+      <summary>使用指定的错误消息初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.InternalTestFailureException" /> 类的新实例。</summary>
+      <param name="msg">错误消息字符串。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.InternalTestFailureException.#ctor(System.String,System.Exception)">
+      <summary>使用指定错误消息和对作为此异常原因的内部异常的引用来初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.InternalTestFailureException" /> 类的新实例。</summary>
+      <param name="msg">解释异常原因的错误信息。</param>
+      <param name="ex">导致当前异常的异常。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.ITestMethodInvoker">
+      <summary>用于调用测试方法正文的接口。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.ITestMethodInvoker.Invoke(System.Object[])">
+      <summary>通过使用提供的参数调用测试方法。</summary>
+      <returns>测试方法调用的结果。</returns>
+      <param name="parameters">将传递给调用程序的可选参数。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.OnTestStoppingEventArgs">
+      <summary>在测试完成前停止的情况下发生。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.OwnerAttribute">
+      <summary>用于指定负责对测试进行维护、运行和/或调试的人员。 此类不能被继承。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.OwnerAttribute.#ctor(System.String)">
+      <summary>初始化使用所有者名称的 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.OwnerAttribute" /> 类的新实例。</summary>
+      <param name="owner">测试的所有者。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.OwnerAttribute.Owner">
+      <summary>获取测试的所有者。</summary>
+      <returns>测试的所有者。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.PriorityAttribute">
+      <summary>用于指定单元测试的优先级。 此类不能被继承。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PriorityAttribute.#ctor(System.Int32)">
+      <summary>初始化有优先级值的 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.PriorityAttribute" /> 类的新实例。</summary>
+      <param name="priority">表示测试优先级值的整数。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.PriorityAttribute.Priority">
+      <summary>获取优先级值。</summary>
+      <returns>表示测试优先级值的整数。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject">
+      <summary>允许测试代码调用被测代码的方法和属性，这些方法和属性由于不是 public 的而不可访问。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.#ctor(System.Object)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject" /> 类的新实例，该类为指定的对象创建包装。</summary>
+      <param name="obj">要包装的对象。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="obj" /> 为 null</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.#ctor(System.Object,Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject" /> 类的新实例，该类为指定的对象创建包装。</summary>
+      <param name="obj">要包装的对象。</param>
+      <param name="type">被包装对象类型。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="type" /> 为 null</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.#ctor(System.Object,System.String)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject" /> 类的新实例，该类为指定的对象创建包装。</summary>
+      <param name="obj">要包装的对象。 这将作为到达私有成员的起始点。</param>
+      <param name="memberToAccess">取消引用字符串，它指向要检索的对象。 其格式为“objectX.objectY.objectZ”。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="memberToAccess" /> 为零长度字符串</exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="obj" /> 为 null 或 <paramref name="memberToAccess" /> 为 null</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.#ctor(System.String,System.String,System.Object[])">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject" /> 类的新实例。 这样会创建一个指定类型的对象，并将其包装到私有对象中。</summary>
+      <param name="assemblyName">包含该类型的程序集的名称。</param>
+      <param name="typeName">该类型的完全限定名。</param>
+      <param name="args">要传递给对象的构造函数的参数。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="assemblyName" /> 或 <paramref name="typeName" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.#ctor(System.String,System.String,System.Type[],System.Object[])">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject" /> 类的新实例。 这样会创建一个指定类型的对象，并将其包装到私有对象中。</summary>
+      <param name="assemblyName">包含该类型的程序集的名称。</param>
+      <param name="typeName">该类型的完全限定名。</param>
+      <param name="parameterTypes">一个 <see cref="T:System.Type" /> 对象数组，表示用于构造对象的参数的数目、顺序和类型。</param>
+      <param name="args">用于定义对象的参数。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="assemblyName" /> 或 <paramref name="typeName" /> 为 null。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="parameterTypes" /> 是多维的。 - 或 - 无法找到与 <see cref="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.#ctor(System.Type,System.Type[],System.Object[])" /> 中指定的参数匹配的构造函数。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.#ctor(System.Type,System.Object[])">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject" /> 类的新实例，该类为指定的对象创建包装。</summary>
+      <param name="type">被包装对象类型。</param>
+      <param name="args">用于定义对象的参数。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="type" /> 为 null。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="type" /> 不是 RuntimeType。</exception>
+      <exception cref="T:System.NotSupportedException">
+        <paramref name="type" /> 不能为 <see cref="T:System.Reflection.Emit.TypeBuilder" />。 - 或 - 不支持创建 <see cref="T:System.TypedReference" />、<see cref="T:System.ArgIterator" /> 和 <see cref="T:System.RuntimeArgumentHandle" /> 类型。</exception>
+      <exception cref="T:System.Reflection.TargetInvocationException">被调用的构造函数引发异常。</exception>
+      <exception cref="T:System.Runtime.InteropServices.COMException">
+        <paramref name="type" /> 是一个 COM 对象，但用于获取类型的类标识符无效，或被标识的类未注册。</exception>
+      <exception cref="T:System.TypeLoadException">
+        <paramref name="type" /> 不是有效的类型。</exception>
+      <exception cref="T:System.MissingMethodException">没有找到与 <paramref name="type" /> 和 <paramref name="args" /> 匹配的公共构造函数。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.#ctor(System.Type,System.Type[],System.Object[])">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject" /> 类的新实例。</summary>
+      <param name="type">被包装对象类型。</param>
+      <param name="parameterTypes">一个 <see cref="T:System.Type" /> 对象数组，表示用于构造对象的参数的数目、顺序和类型。</param>
+      <param name="args">用于定义对象的参数。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="type" /> 为 null。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="parameterTypes" /> 是多维的。 - 或 - 无法找到与 <see cref="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.#ctor(System.Type,System.Type[],System.Object[])" /> 中指定的参数匹配的构造函数。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.Equals(System.Object)">
+      <summary>返回一个值，该值指示是否两个私有对象正在封装同一个目标对象。</summary>
+      <returns>如果对象相等，则为 true；否则为 false。</returns>
+      <param name="obj">要比较的对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.GetArrayElement(System.String,System.Int32[])">
+      <summary>使用每个维度的下标数组来获取数组元素。</summary>
+      <returns>一个表示数组元素的对象。</returns>
+      <param name="name">要获取的数组的变量名。</param>
+      <param name="indices">一个数组，表示要获取的元素的位置。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="name" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.GetArrayElement(System.String,System.Reflection.BindingFlags,System.Int32[])">
+      <summary>使用每个维度的下标数组来获取数组元素。</summary>
+      <returns>一个表示数组元素的对象。</returns>
+      <param name="name">要获取的数组的变量名。</param>
+      <param name="indices">一个数组，表示要获取的元素的位置。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="name" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.GetField(System.String)">
+      <summary>根据名称从已命名的字段中获取一个值。</summary>
+      <returns>为 <paramref name="name" /> 字段设置的值。</returns>
+      <param name="name">要获取的私有字段的名称。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="name" /> 为 null 或为空。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.GetField(System.String,System.Reflection.BindingFlags)">
+      <summary>根据名称和查找掩码从已命名的字段中获取一个值。</summary>
+      <returns>为 <paramref name="name" /> 字段设置的值。</returns>
+      <param name="name">要获取的私有字段的名称。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="name" /> 为 null 或为空。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.GetFieldOrProperty(System.String)">
+      <summary>根据名称获取被包装字段或属性的值。</summary>
+      <returns>为 <paramref name="name" /> 字段或属性设置的值。</returns>
+      <param name="name">要获取的私有字段或属性的名称。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.GetFieldOrProperty(System.String,System.Reflection.BindingFlags)">
+      <summary>根据名称获取被包装字段或属性的值。</summary>
+      <returns>为 <paramref name="name" /> 字段或属性设置的值。</returns>
+      <param name="name">要获取的私有字段或属性的名称。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.GetHashCode">
+      <summary>获取被包装对象的哈希代码。</summary>
+      <returns>一个整数，表示被包装对象的哈希代码。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.GetProperty(System.String,System.Object[])">
+      <summary>获取由名称标识的被包装对象的属性。</summary>
+      <returns>一个对象，包含由 <paramref name="name" /> 标识的属性的值。</returns>
+      <param name="name">要获取的属性的名称。</param>
+      <param name="args">一个数组，包含要传递给将调用成员的参数。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="name" /> 为 null 或为空。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.GetProperty(System.String,System.Reflection.BindingFlags,System.Object[])">
+      <summary>获取由名称和绑定标志标识的被包装对象的属性。</summary>
+      <returns>一个对象，包含由 <paramref name="name" /> 标识的属性的值。</returns>
+      <param name="name">要获取的属性的名称。</param>
+      <param name="args">一个数组，包含要传递给将调用成员的参数。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="name" /> 为 null 或为空。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.GetProperty(System.String,System.Reflection.BindingFlags,System.Type[],System.Object[])">
+      <summary>获取由名称标识的被包装对象的索引属性。</summary>
+      <returns>一个对象，包含由 <paramref name="name" /> 标识的属性的值。</returns>
+      <param name="name">要获取的属性的名称。</param>
+      <param name="parameterTypes">一个 <see cref="T:System.Type" /> 对象数组，表示要获取的索引属性的参数的数目、顺序和类型。</param>
+      <param name="args">一个数组，包含要传递给将调用成员的参数。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="name" /> 为 null 或为空。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.GetProperty(System.String,System.Type[],System.Object[])">
+      <summary>获取由名称标识的被包装对象的属性。</summary>
+      <returns>一个对象，包含由 <paramref name="name" /> 标识的属性的值。</returns>
+      <param name="name">要获取的属性的名称。</param>
+      <param name="parameterTypes">一个 <see cref="T:System.Type" /> 对象数组，表示要获取的索引属性的参数的数目、顺序和类型。</param>
+      <param name="args">一个数组，包含要传递给将调用成员的参数。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="name" /> 为 null 或为空。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.Invoke(System.String,System.Object[])">
+      <summary>用于访问私有对象成员。</summary>
+      <returns>一个对象，表示私有成员的返回值。</returns>
+      <param name="name">要调用的成员名。</param>
+      <param name="args">该成员所需的所有参数。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.Invoke(System.String,System.Object[],System.Globalization.CultureInfo)">
+      <summary>用于访问私有对象成员。</summary>
+      <returns>一个对象，表示被调用成员的返回值。</returns>
+      <param name="name">要调用的成员名。</param>
+      <param name="args">该成员所需的所有参数。</param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo" /> 对象，表示要使用的全球化区域设置，将数值字符串转换为双精度等区域设置特定的转换可能需要该对象。 - 或 - null，表示使用当前线程的 <see cref="T:System.Globalization.CultureInfo" />。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.Invoke(System.String,System.Reflection.BindingFlags,System.Object[])">
+      <summary>用于访问私有对象成员。</summary>
+      <returns>一个对象，表示私有成员的返回值。</returns>
+      <param name="name">要调用的成员名。</param>
+      <param name="args">该成员所需的所有参数。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.Invoke(System.String,System.Reflection.BindingFlags,System.Object[],System.Globalization.CultureInfo)">
+      <summary>用于访问私有对象成员。</summary>
+      <returns>一个对象，表示被调用成员的返回值。</returns>
+      <param name="name">要调用的成员名。</param>
+      <param name="args">该成员所需的所有参数。</param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo" /> 对象，表示要使用的全球化区域设置，将数值字符串转换为双精度等区域设置特定的转换可能需要该对象。 - 或 - null，表示使用当前线程的 <see cref="T:System.Globalization.CultureInfo" />。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.Invoke(System.String,System.Reflection.BindingFlags,System.Type[],System.Object[])">
+      <summary>用于访问私有对象成员。</summary>
+      <returns>一个对象，表示被调用成员的返回值。</returns>
+      <param name="name">要调用的成员名。</param>
+      <param name="parameterTypes">一个 <see cref="T:System.Type" /> 对象数组，表示要访问的方法的参数的数目、顺序和类型。 - 或 - 一个类型为 <see cref="T:System.Type" />（即 Type[] types = new Type[0]）的空数组，用于获取一个不带参数的方法。</param>
+      <param name="args">该成员所需的所有参数。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.Invoke(System.String,System.Reflection.BindingFlags,System.Type[],System.Object[],System.Globalization.CultureInfo)">
+      <summary>用于访问私有对象成员。</summary>
+      <returns>一个对象，表示被调用成员的返回值。</returns>
+      <param name="name">要调用的成员名。</param>
+      <param name="parameterTypes">一个 <see cref="T:System.Type" /> 对象数组，表示要访问的方法的参数的数目、顺序和类型。 - 或 - 一个类型为 <see cref="T:System.Type" />（即 Type[] types = new Type[0]）的空数组，用于获取一个不带参数的方法。</param>
+      <param name="args">该成员所需的所有参数。</param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo" /> 对象，表示要使用的全球化区域设置，将数值字符串转换为双精度等区域设置特定的转换可能需要该对象。 - 或 - null，表示使用当前线程的 <see cref="T:System.Globalization.CultureInfo" />。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.Invoke(System.String,System.Reflection.BindingFlags,System.Type[],System.Object[],System.Globalization.CultureInfo,System.Type[])">
+      <summary>用于访问私有对象的泛型成员。</summary>
+      <param name="name">要调用的成员名。</param>
+      <param name="parameterTypes">一个 <see cref="T:System.Type" /> 对象数组，表示要访问的方法的参数的数目、顺序和类型。 - 或 - 一个类型为 <see cref="T:System.Type" />（即 Type[] types = new Type[0]）的空数组，用于获取一个不带参数的方法。</param>
+      <param name="args">该成员所需的所有参数。</param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo" /> 对象，表示要使用的全球化区域设置，将数值字符串转换为双精度等区域设置特定的转换可能需要该对象。 - 或 - null，表示使用当前线程的 <see cref="T:System.Globalization.CultureInfo" />。</param>
+      <param name="typeArguments">一个要在调用泛型方法时使用的类型参数数组。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.Invoke(System.String,System.Type[],System.Object[])">
+      <summary>用于访问私有对象方法。</summary>
+      <returns>一个对象，表示被调用方法的返回值。</returns>
+      <param name="name">要调用的成员名。</param>
+      <param name="parameterTypes">一个 <see cref="T:System.Type" /> 对象数组，表示要访问的方法的参数的数目、顺序和类型。 - 或 - 一个类型为 <see cref="T:System.Type" />（即 Type[] types = new Type[0]）的空数组，用于获取一个不带参数的方法。</param>
+      <param name="args">该成员所需的所有参数。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.Invoke(System.String,System.Type[],System.Object[],System.Globalization.CultureInfo)">
+      <summary>用于访问私有对象成员。</summary>
+      <returns>一个对象，表示被调用成员的返回值。</returns>
+      <param name="name">要调用的成员名。</param>
+      <param name="parameterTypes">一个 <see cref="T:System.Type" /> 对象数组，表示要访问的方法的参数的数目、顺序和类型。 - 或 - 一个类型为 <see cref="T:System.Type" />（即 Type[] types = new Type[0]）的空数组，用于获取一个不带参数的方法。</param>
+      <param name="args">该成员所需的所有参数。</param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo" /> 对象，表示要使用的全球化区域设置，将数值字符串转换为双精度等区域设置特定的转换可能需要该对象。 - 或 - null，表示使用当前线程的 <see cref="T:System.Globalization.CultureInfo" />。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.Invoke(System.String,System.Type[],System.Object[],System.Type[])">
+      <summary>用于访问私有对象的泛型成员。</summary>
+      <param name="name">要调用的成员名。</param>
+      <param name="parameterTypes">一个 <see cref="T:System.Type" /> 对象数组，表示要访问的方法的参数的数目、顺序和类型。 - 或 - 一个类型为 <see cref="T:System.Type" />（即 Type[] types = new Type[0]）的空数组，用于获取一个不带参数的方法。</param>
+      <param name="args">该成员所需的所有参数。</param>
+      <param name="typeArguments">一个要在调用泛型方法时使用的类型参数数组。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.RealType">
+      <summary>获取基础对象的类型。</summary>
+      <returns>
+        <see cref="T:System.Type" /> 对象。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.SetArrayElement(System.String,System.Object,System.Int32[])">
+      <summary>使用每个维度的下标数组来设置数组元素。</summary>
+      <param name="name">要设置的数组的变量名。</param>
+      <param name="value">要分配给数组元素的值。</param>
+      <param name="indices">一个数组，表示要设置的元素的位置。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.SetArrayElement(System.String,System.Reflection.BindingFlags,System.Object,System.Int32[])">
+      <summary>使用每个维度的下标数组来设置数组元素。</summary>
+      <param name="name">要设置的数组的变量名。</param>
+      <param name="value">要分配给数组元素的值。</param>
+      <param name="indices">一个数组，表示要设置的元素的位置。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.SetField(System.String,System.Object)">
+      <summary>设置被包装对象的字段的值，该字段由名称标识。</summary>
+      <param name="name">要为其设置值的字段的名称。</param>
+      <param name="value">要设置的值。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="name" /> 为 null 或为空。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.SetField(System.String,System.Reflection.BindingFlags,System.Object)">
+      <summary>设置被包装对象的字段的值，该字段由名称标识。</summary>
+      <param name="name">要为其设置值的字段的名称。</param>
+      <param name="value">要设置的值。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="name" /> 为 null 或为空。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.SetFieldOrProperty(System.String,System.Object)">
+      <summary>根据名称设置被包装字段或属性的值。</summary>
+      <param name="name">要设置的私有字段或属性的名称。</param>
+      <param name="value">要为 <paramref name="name" /> 设置的值。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.SetFieldOrProperty(System.String,System.Reflection.BindingFlags,System.Object)">
+      <summary>根据名称设置被包装字段或属性的值。</summary>
+      <param name="name">要设置的私有字段或属性的名称。</param>
+      <param name="value">要为 <paramref name="name" /> 设置的值。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.SetProperty(System.String,System.Object,System.Object[])">
+      <summary>设置由名称标识的被包装对象的属性。</summary>
+      <param name="name">要调用的属性的名称。</param>
+      <param name="value">用于设置 <paramref name="name" /> 标识的属性的值。</param>
+      <param name="args">一个数组，包含要传递给将调用属性的参数。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="name" /> 为 null 或为空。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.SetProperty(System.String,System.Reflection.BindingFlags,System.Object,System.Object[])">
+      <summary>设置由名称和绑定标志标识的被包装对象的属性。</summary>
+      <param name="name">要调用的属性的名称。</param>
+      <param name="value">用于设置 <paramref name="name" /> 标识的属性的值。</param>
+      <param name="args">一个数组，包含要传递给将调用属性的参数。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="name" /> 为 null 或为空。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.SetProperty(System.String,System.Reflection.BindingFlags,System.Object,System.Type[],System.Object[])">
+      <summary>设置由名称标识的被包装对象的索引属性。</summary>
+      <param name="name">要调用的属性的名称。</param>
+      <param name="value">用于设置 <paramref name="name" /> 标识的属性的值。</param>
+      <param name="parameterTypes">一个 <see cref="T:System.Type" /> 对象数组，表示要获取的索引属性的参数的数目、顺序和类型。</param>
+      <param name="args">一个数组，包含要传递给将调用属性的参数。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="name" /> 为 null 或为空。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.SetProperty(System.String,System.Type[],System.Object,System.Object[])">
+      <summary>设置由名称标识的被包装对象的索引属性。</summary>
+      <param name="name">要调用的属性的名称。</param>
+      <param name="parameterTypes">一个 <see cref="T:System.Type" /> 对象数组，表示要获取的索引属性的参数的数目、顺序和类型。</param>
+      <param name="value">用于设置 <paramref name="name" /> 标识的属性的值。</param>
+      <param name="args">一个数组，包含要传递给将调用属性的参数。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="name" /> 为 null 或为空。</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.Target">
+      <summary>获取或设置被包装对象。</summary>
+      <returns>被包装的对象。</returns>
+      <exception cref="T:System.ArgumentNullException">尝试将此属性设置为 null。</exception>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType">
+      <summary>表示私有类的类型，该私有类提供对私有静态实现的访问。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.#ctor(System.String,System.String)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType" /> 类的新实例。</summary>
+      <param name="assemblyName">程序集名称</param>
+      <param name="typeName">该类型的完全限定名</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="assemblyName" /> 或 <paramref name="typeName" /> 为 null 或为空。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.#ctor(System.Type)">
+      <summary>用类型信息初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType" /> 类的新实例。</summary>
+      <param name="type">要创建的已包装 <see cref="T:System.Type" />。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="type" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.GetStaticArrayElement(System.String,System.Int32[])">
+      <summary>获取已包装类型中包含的静态数组元素。</summary>
+      <returns>一个对象，在用 <paramref name="indices" /> 指定的位置上表示 <paramref name="name" /> 元素。</returns>
+      <param name="name">数组名称</param>
+      <param name="indices">下标的数组，这些下标用于标识要获取的元素。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.GetStaticArrayElement(System.String,System.Reflection.BindingFlags,System.Int32[])">
+      <summary>获取已包装类型中包含的静态数组元素。</summary>
+      <returns>一个对象，在用 <paramref name="indices" /> 指定的位置上表示 <paramref name="name" /> 元素。</returns>
+      <param name="name">数组名称</param>
+      <param name="indices">下标的数组，这些下标用于标识要获取的元素。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.GetStaticField(System.String)">
+      <summary>获取已包装类型中包含的静态字段。</summary>
+      <returns>一个对象，表示静态字段的值。</returns>
+      <param name="name">静态字段的名称。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.GetStaticField(System.String,System.Reflection.BindingFlags)">
+      <summary>获取已包装类型中包含的静态字段。</summary>
+      <returns>一个对象，表示静态字段的值。</returns>
+      <param name="name">静态字段的名称。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.GetStaticFieldOrProperty(System.String)">
+      <summary>根据名称获取已包装类型中的静态字段或属性的值。</summary>
+      <returns>为 <paramref name="name" /> 字段或属性设置的值。</returns>
+      <param name="name">要获取的静态字段或属性的值。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.GetStaticFieldOrProperty(System.String,System.Reflection.BindingFlags)">
+      <summary>根据名称获取已包装类型中的静态字段或属性的值。</summary>
+      <returns>为 <paramref name="name" /> 字段或属性设置的值。</returns>
+      <param name="name">要获取的静态字段或属性的值。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.GetStaticProperty(System.String,System.Object[])">
+      <summary>获取已包装类型中包含的静态属性。</summary>
+      <returns>一个对象，表示静态属性的值。</returns>
+      <param name="name">静态属性的名称。</param>
+      <param name="args">一个数组，包含要传递给将调用成员的参数。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.GetStaticProperty(System.String,System.Reflection.BindingFlags,System.Object[])">
+      <summary>获取已包装类型中包含的静态属性。</summary>
+      <returns>一个对象，表示静态属性的值。</returns>
+      <param name="name">静态属性的名称。</param>
+      <param name="args">一个数组，包含要传递给将调用成员的参数。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.GetStaticProperty(System.String,System.Reflection.BindingFlags,System.Type[],System.Object[])">
+      <summary>获取已包装类型中包含的静态索引属性。</summary>
+      <returns>一个对象，表示静态索引属性的值。</returns>
+      <param name="name">静态属性的名称。</param>
+      <param name="parameterTypes">一个 <see cref="T:System.Type" /> 对象数组，表示要获取的索引属性的参数的数目、顺序和类型。 - 或 - <see cref="T:System.Type" /> 类型的空数组（即 Type[] types = new Type[0]），用于获取未索引的属性。</param>
+      <param name="args">一个数组，包含要传递给将调用成员的参数。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.InvokeStatic(System.String,System.Object[])">
+      <summary>调用 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType" /> 上的静态方法。</summary>
+      <returns>一个对象，表示调用的静态方法的返回值（如果有）。</returns>
+      <param name="name">要调用的方法名。</param>
+      <param name="args">要传递的参数的任意数组</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="name" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.InvokeStatic(System.String,System.Object[],System.Globalization.CultureInfo)">
+      <summary>调用 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType" /> 上的静态方法。</summary>
+      <returns>一个对象，表示调用的静态方法的返回值（如果有）。</returns>
+      <param name="name">要调用的方法名。</param>
+      <param name="args">要传递的参数的任意数组</param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo" /> 对象，表示要使用的全球化区域设置，将数值字符串转换为双精度等区域设置特定的转换可能需要该对象。 - 或 - null，表示使用当前线程的 <see cref="T:System.Globalization.CultureInfo" />。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="name" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.InvokeStatic(System.String,System.Reflection.BindingFlags,System.Object[])">
+      <summary>调用 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType" /> 上的静态方法。</summary>
+      <returns>一个对象，表示调用的静态方法的返回值（如果有）。</returns>
+      <param name="name">要调用的方法名。</param>
+      <param name="args">要传递的参数的任意数组</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="name" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.InvokeStatic(System.String,System.Reflection.BindingFlags,System.Object[],System.Globalization.CultureInfo)">
+      <summary>调用 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType" /> 上的静态方法。</summary>
+      <returns>一个对象，表示调用的静态方法的返回值（如果有）。</returns>
+      <param name="name">要调用的方法名。</param>
+      <param name="args">要传递的参数的数组。</param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo" /> 对象，表示要使用的全球化区域设置，将数值字符串转换为双精度等区域设置特定的转换可能需要该对象。 - 或 - null，表示使用当前线程的 <see cref="T:System.Globalization.CultureInfo" />。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="name" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.InvokeStatic(System.String,System.Reflection.BindingFlags,System.Type[],System.Object[])">
+      <summary>调用 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType" /> 上的静态方法。</summary>
+      <returns>一个对象，表示调用的静态方法的返回值（如果有）。</returns>
+      <param name="name">要调用的方法名。</param>
+      <param name="parameterTypes">一个 <see cref="T:System.Type" /> 对象数组，表示方法的参数的数目、顺序和类型。 - 或 - 类型 Type 的空数组（即 Type[] types = new Type[0]），用于获取不带参数的方法。</param>
+      <param name="args">要传递的参数的数组。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="name" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.InvokeStatic(System.String,System.Reflection.BindingFlags,System.Type[],System.Object[],System.Globalization.CultureInfo)">
+      <summary>调用 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType" /> 上的静态方法。</summary>
+      <returns>一个对象，表示调用的静态方法的返回值（如果有）。</returns>
+      <param name="name">要调用的方法名。</param>
+      <param name="parameterTypes">一个 <see cref="T:System.Type" /> 对象数组，表示方法的参数的数目、顺序和类型。 - 或 - 类型 Type 的空数组（即 Type[] types = new Type[0]），用于获取不带参数的方法。</param>
+      <param name="args">要传递的参数的数组。</param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo" /> 对象，表示要使用的全球化区域设置，将数值字符串转换为双精度等区域设置特定的转换可能需要该对象。 - 或 - null，表示使用当前线程的 <see cref="T:System.Globalization.CultureInfo" />。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="name" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.InvokeStatic(System.String,System.Reflection.BindingFlags,System.Type[],System.Object[],System.Globalization.CultureInfo,System.Type[])">
+      <summary>调用 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType" /> 上的静态方法。</summary>
+      <param name="name">要调用的方法名。</param>
+      <param name="parameterTypes">一个 <see cref="T:System.Type" /> 对象数组，表示方法的参数的数目、顺序和类型。 - 或 - 类型 Type 的空数组（即 Type[] types = new Type[0]），用于获取不带参数的方法。</param>
+      <param name="args">要传递的参数的数组。</param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo" /> 对象，表示要使用的全球化区域设置，将数值字符串转换为双精度等区域设置特定的转换可能需要该对象。 - 或 - null，表示使用当前线程的 <see cref="T:System.Globalization.CultureInfo" />。</param>
+      <param name="typeArguments">一个要在调用泛型方法时使用的类型参数数组。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.InvokeStatic(System.String,System.Type[],System.Object[])">
+      <summary>调用 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType" /> 上的静态方法。</summary>
+      <returns>一个对象，表示调用的静态方法的返回值（如果有）。</returns>
+      <param name="name">要调用的方法名。</param>
+      <param name="parameterTypes">一个 <see cref="T:System.Type" /> 对象数组，表示方法的参数的数目、顺序和类型。 - 或 - 类型 Type 的空数组（即 Type[] types = new Type[0]），用于获取不带参数的方法。</param>
+      <param name="args">要传递的参数的数组</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="name" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.InvokeStatic(System.String,System.Type[],System.Object[],System.Globalization.CultureInfo)">
+      <summary>调用 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType" /> 上的静态方法。</summary>
+      <returns>一个对象，表示调用的静态方法的返回值（如果有）。</returns>
+      <param name="name">要调用的方法名。</param>
+      <param name="parameterTypes">一个 <see cref="T:System.Type" /> 对象数组，表示方法的参数的数目、顺序和类型。 - 或 - 类型 Type 的空数组（即 Type[] types = new Type[0]），用于获取不带参数的方法。</param>
+      <param name="args">要传递的参数的数组。</param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo" /> 对象，表示要使用的全球化区域设置，将数值字符串转换为双精度等区域设置特定的转换可能需要该对象。 - 或 - null，表示使用当前线程的 <see cref="T:System.Globalization.CultureInfo" />。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="name" /> 为 null。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.InvokeStatic(System.String,System.Type[],System.Object[],System.Type[])">
+      <summary>调用 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType" /> 上的静态方法。</summary>
+      <param name="name">要调用的方法名。</param>
+      <param name="parameterTypes">一个 <see cref="T:System.Type" /> 对象数组，表示方法的参数的数目、顺序和类型。 - 或 - 类型 Type 的空数组（即 Type[] types = new Type[0]），用于获取不带参数的方法。</param>
+      <param name="args">要传递的参数的数组。</param>
+      <param name="typeArguments">一个要在调用泛型方法时使用的类型参数数组。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.ReferencedType">
+      <summary>获取表示 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType" /> 的 <see cref="T:System.Type" />。</summary>
+      <returns>
+        <see cref="T:System.Type" /> 对象。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.SetStaticArrayElement(System.String,System.Object,System.Int32[])">
+      <summary>设置已包装类型中包含的静态数组元素。</summary>
+      <param name="name">数组名称</param>
+      <param name="value">用于设置 <paramref name="indices" /> 标识的元素的值。</param>
+      <param name="indices">下标的数组，这些下标用于标识要设置的元素。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.SetStaticArrayElement(System.String,System.Reflection.BindingFlags,System.Object,System.Int32[])">
+      <summary>设置已包装类型中包含的静态数组元素。</summary>
+      <param name="name">数组名称</param>
+      <param name="value">用于设置 <paramref name="indices" /> 标识的元素的值。</param>
+      <param name="indices">下标的数组，这些下标用于标识要设置的元素。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.SetStaticField(System.String,System.Object)">
+      <summary>设置已包装类型中包含的静态字段。</summary>
+      <param name="name">静态字段的名称。</param>
+      <param name="value">设置到静态字段的值。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.SetStaticField(System.String,System.Reflection.BindingFlags,System.Object)">
+      <summary>设置已包装类型中包含的静态字段。</summary>
+      <param name="name">静态字段的名称。</param>
+      <param name="value">设置到静态字段的值。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.SetStaticFieldOrProperty(System.String,System.Object)">
+      <summary>设置已包装类型中包含的静态字段或属性。</summary>
+      <param name="name">静态字段或属性的名称。</param>
+      <param name="value">设置到静态字段或属性的值。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.SetStaticFieldOrProperty(System.String,System.Reflection.BindingFlags,System.Object)">
+      <summary>设置已包装类型中包含的静态字段或属性。</summary>
+      <param name="name">静态字段或属性的名称。</param>
+      <param name="value">设置到静态字段或属性的值。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.SetStaticProperty(System.String,System.Object,System.Object[])">
+      <summary>设置已包装类型中包含的静态属性。</summary>
+      <param name="name">静态属性的名称。</param>
+      <param name="value">用于设置静态属性的值。</param>
+      <param name="args">一个数组，包含要传递给将调用成员的参数。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.SetStaticProperty(System.String,System.Object,System.Type[],System.Object[])">
+      <summary>设置已包装类型中包含的静态属性。</summary>
+      <param name="name">静态属性的名称。</param>
+      <param name="value">用于设置静态属性的值。</param>
+      <param name="parameterTypes">一个 <see cref="T:System.Type" /> 对象数组，表示要设置的索引属性的参数的数目、顺序和类型。 - 或 - <see cref="T:System.Type" /> 类型的空数组（即 Type[] types = new Type[0]），用于设置未索引的属性。</param>
+      <param name="args">一个数组，包含要传递给将调用成员的参数。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.SetStaticProperty(System.String,System.Reflection.BindingFlags,System.Object,System.Object[])">
+      <summary>设置已包装类型中包含的静态属性。</summary>
+      <param name="name">静态属性的名称。</param>
+      <param name="value">用于设置静态属性的值。</param>
+      <param name="args">一个数组，包含要传递给将调用成员的参数。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType.SetStaticProperty(System.String,System.Reflection.BindingFlags,System.Object,System.Type[],System.Object[])">
+      <summary>设置已包装类型中包含的静态属性。</summary>
+      <param name="name">静态属性的名称。</param>
+      <param name="value">用于设置静态属性的值。</param>
+      <param name="parameterTypes">一个 <see cref="T:System.Type" /> 对象数组，表示要设置的索引属性的参数的数目、顺序和类型。 - 或 - <see cref="T:System.Type" /> 类型的空数组（即 Type[] types = new Type[0]），用于设置未索引的属性。</param>
+      <param name="args">一个数组，包含要传递给将调用成员的参数。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.ShadowingAttribute">
+      <summary>不要使用此类。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.ShadowingAttribute.#ctor(System.String)">
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.ShadowingAttribute.FullNameOfSource">
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert">
+      <summary>在单位测试中验证与字符串相关联的 true/false 命题。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.Contains(System.String,System.String)">
+      <summary>验证第一个字符串是否包含第二个字符串。 此方法区分大小写。</summary>
+      <param name="value">应包含 <paramref name="substring" /> 的字符串。</param>
+      <param name="substring">应出现在 <paramref name="value" /> 中的字符串。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="value" /> 中找不到 <paramref name="substring" /></exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.Contains(System.String,System.String,System.String)">
+      <summary>验证第一个字符串是否包含第二个字符串。 如果断言失败，将显示一则消息。 此方法区分大小写。</summary>
+      <param name="value">应包含 <paramref name="substring" /> 的字符串。</param>
+      <param name="substring">应出现在 <paramref name="value" /> 中的字符串。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="value" /> 中找不到 <paramref name="substring" /></exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.Contains(System.String,System.String,System.String,System.Object[])">
+      <summary>验证第一个字符串是否包含第二个字符串。 断言失败时将显示一则消息，并向该消息应用指定的格式。 此方法区分大小写。</summary>
+      <param name="value">应包含 <paramref name="substring" /> 的字符串。</param>
+      <param name="substring">应出现在 <paramref name="value" /> 中的字符串。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="value" /> 中找不到 <paramref name="substring" /></exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.DoesNotMatch(System.String,System.Text.RegularExpressions.Regex)">
+      <summary>验证指定的字符串是否与正则表达式不匹配。</summary>
+      <param name="value">不应与 <paramref name="pattern" /> 匹配的字符串。</param>
+      <param name="pattern">
+        <paramref name="value" /> 不应与之匹配的正则表达式。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="value" /> 与 <paramref name="pattern" />匹配。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.DoesNotMatch(System.String,System.Text.RegularExpressions.Regex,System.String)">
+      <summary>验证指定的字符串是否与正则表达式不匹配。 如果断言失败，将显示一则消息。</summary>
+      <param name="value">不应与 <paramref name="pattern" /> 匹配的字符串。</param>
+      <param name="pattern">
+        <paramref name="value" /> 不应与之匹配的正则表达式。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="value" /> 与 <paramref name="pattern" />匹配。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.DoesNotMatch(System.String,System.Text.RegularExpressions.Regex,System.String,System.Object[])">
+      <summary>验证指定的字符串是否与正则表达式不匹配。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="value">不应与 <paramref name="pattern" /> 匹配的字符串。</param>
+      <param name="pattern">
+        <paramref name="value" /> 不应与之匹配的正则表达式。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="value" /> 与 <paramref name="pattern" />匹配。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.EndsWith(System.String,System.String)">
+      <summary>验证第一个字符串是否以第二个字符串结尾。 此方法区分大小写。</summary>
+      <param name="value">应以 <paramref name="substring" /> 结尾的字符串。</param>
+      <param name="substring">应该是 <paramref name="value" /> 的后缀的字符串。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="value" /> 不以 <paramref name="substring" /> 结尾。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.EndsWith(System.String,System.String,System.String)">
+      <summary>验证第一个字符串是否以第二个字符串结尾。 如果断言失败，将显示一则消息。 此方法区分大小写。</summary>
+      <param name="value">应以 <paramref name="substring" /> 结尾的字符串。</param>
+      <param name="substring">应该是 <paramref name="value" /> 的后缀的字符串。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="value" /> 不以 <paramref name="substring" /> 结尾。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.EndsWith(System.String,System.String,System.String,System.Object[])">
+      <summary>验证第一个字符串是否以第二个字符串结尾。 断言失败时将显示一则消息，并向该消息应用指定的格式。 此方法区分大小写。</summary>
+      <param name="value">应以 <paramref name="substring" /> 结尾的字符串。</param>
+      <param name="substring">应该是 <paramref name="value" /> 的后缀的字符串。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="value" /> 不以 <paramref name="substring" /> 结尾。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.Matches(System.String,System.Text.RegularExpressions.Regex)">
+      <summary>验证指定的字符串是否与正则表达式匹配。</summary>
+      <param name="value">应与 <paramref name="pattern" /> 匹配的字符串。</param>
+      <param name="pattern">
+        <paramref name="value" /> 应与之匹配的正则表达式。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="value" /> 与 <paramref name="pattern" /> 不匹配。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.Matches(System.String,System.Text.RegularExpressions.Regex,System.String)">
+      <summary>验证指定的字符串是否与正则表达式匹配。 如果断言失败，将显示一则消息。</summary>
+      <param name="value">应与 <paramref name="pattern" /> 匹配的字符串。</param>
+      <param name="pattern">
+        <paramref name="value" /> 应与之匹配的正则表达式。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="value" /> 与 <paramref name="pattern" /> 不匹配。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.Matches(System.String,System.Text.RegularExpressions.Regex,System.String,System.Object[])">
+      <summary>验证指定的字符串是否与正则表达式匹配。 断言失败时将显示一则消息，并向该消息应用指定的格式。</summary>
+      <param name="value">应与 <paramref name="pattern" /> 匹配的字符串。</param>
+      <param name="pattern">
+        <paramref name="value" /> 应与之匹配的正则表达式。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="value" /> 与 <paramref name="pattern" /> 不匹配。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.StartsWith(System.String,System.String)">
+      <summary>验证第一个字符串是否以第二个字符串开头。 此方法区分大小写。</summary>
+      <param name="value">应以 <paramref name="substring" /> 开头的字符串。</param>
+      <param name="substring">应该是 <paramref name="value" /> 的前缀的字符串。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="value" /> 不以 <paramref name="substring" /> 开头。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.StartsWith(System.String,System.String,System.String)">
+      <summary>验证第一个字符串是否以第二个字符串开头。 如果断言失败，将显示一则消息。 此方法区分大小写。</summary>
+      <param name="value">应以 <paramref name="substring" /> 开头的字符串。</param>
+      <param name="substring">应该是 <paramref name="value" /> 的前缀的字符串。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="value" /> 不以 <paramref name="substring" /> 开头。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.StartsWith(System.String,System.String,System.String,System.Object[])">
+      <summary>验证第一个字符串是否以第二个字符串开头。 断言失败时将显示一则消息，并向该消息应用指定的格式。 此方法区分大小写。</summary>
+      <param name="value">应以 <paramref name="substring" /> 开头的字符串。</param>
+      <param name="substring">应该是 <paramref name="value" /> 的前缀的字符串。</param>
+      <param name="message">断言失败时显示的消息。 在单元测试结果中可以看到此消息。</param>
+      <param name="parameters">设置 <paramref name="message" /> 格式时使用的参数的数组。</param>
+      <exception cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException">
+        <paramref name="value" /> 不以 <paramref name="substring" /> 开头。</exception>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute">
+      <summary>用于指定单元测试类别的类。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute.#ctor(System.String)">
+      <summary>通过向测试应用提供的类别来初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute" /> 类的新实例。</summary>
+      <param name="testCategory">要应用的测试类别。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute.TestCategories">
+      <summary>获取已应用于测试的测试类别。</summary>
+      <returns>返回已应用于测试的测试类别。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryBaseAttribute">
+      <summary>提供了类别特性的基类。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryBaseAttribute.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryBaseAttribute" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryBaseAttribute.TestCategories">
+      <summary>获取已应用于测试的测试类别。</summary>
+      <returns>测试类别。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute">
+      <summary>用于标识包含测试方法的类。 此类不能被继承。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute" /> 类的新实例。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassExtensionAttribute">
+      <summary>激活类，以将其识别为单元测试扩展类。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassExtensionAttribute.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassExtensionAttribute" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassExtensionAttribute.Equals(System.Object)">
+      <summary>确定此测试类扩展对象是否与提供的测试类扩展对象相等。</summary>
+      <returns>如果两个对象相等，则为 true；否则为 false。</returns>
+      <param name="other">提供用于比较的测试类扩展对象。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassExtensionAttribute.ExtensionId">
+      <summary>获取扩展的唯一 ID。</summary>
+      <returns>扩展的唯一 ID。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassExtensionAttribute.GetClientSide">
+      <summary>获取 TestTypeExtensionClientSide 对象。</summary>
+      <returns>TestTypeExtensionClientSide 对象。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassExtensionAttribute.GetExecution">
+      <summary>返回 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestExtensionExecution" /> 对象。</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestExtensionExecution" /> 对象。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassExtensionAttribute.GetHashCode">
+      <summary>针对测试类扩展对象 ID，返回哈希代码。</summary>
+      <returns>哈希代码。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestCleanupAttribute">
+      <summary>标识一个方法，此方法包含测试运行后必须用于释放测试类中的全部测试所获得的资源的代码。 此类不能被继承。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.TestCleanupAttribute.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestCleanupAttribute" /> 类的新实例。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestConfiguration">
+      <summary>提供对表示 app.config 文件中 microsoft.visualstudio.testtools 一节的 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection" /> 的访问。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestConfiguration.ConfigurationSection">
+      <summary>获取 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection" /> 对象。</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection" /> 对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection">
+      <summary>提供对数据源配置数据的访问。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection.DataSources">
+      <summary>获取 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElementCollection" />，它包含数据源配置信息。</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElementCollection" /> 对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext">
+      <summary>用于存储提供给单元测试的信息。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.#ctor">
+      <summary>初始化对象的新实例，此对象从 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext" /> 类派生。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.AddResultFile(System.String)">
+      <summary>当在派生类中重写时，向 TestResult.ResultFileNames 中的列表添加文件名。</summary>
+      <param name="fileName">要添加的文件名。</param>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.AspNetDevelopmentServerPrefix">
+      <summary>表示 ASP.NET 开发服务器的前缀。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.BeginTimer(System.String)">
+      <summary>当在派生类中重写时，开始一个具有指定名称的计时器。</summary>
+      <param name="timerName">要开始的计时器的名称。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.CurrentTestOutcome">
+      <summary>您可以在 TestCleanup 方法中使用此属性来确定已经运行的测试的结果。</summary>
+      <returns>说明已运行测试的结果的 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.UnitTestOutcome" />。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.DataConnection">
+      <summary>当在派生类中重写时，如果测试用于数据驱动测试，则获取当前数据连接。</summary>
+      <returns>
+        <see cref="T:System.Data.Common.DbConnection" /> 对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.DataRow">
+      <summary>当在派生类中重写时，如果测试用于数据驱动测试，则获取当前数据行。</summary>
+      <returns>
+        <see cref="T:System.Data.DataRow" /> 对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.DeploymentDirectory">
+      <summary>获取测试运行文件部署的目录。 此属性通常包含 <see cref="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.TestRunDirectory" /> 的子目录。</summary>
+      <returns>返回测试运行文件部署的目录。</returns>
+      <exception cref="T:System.InvalidCastException">无效的值类型是与该 <see cref="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.TestDeploymentDir" /> 测试上下文的属性相关联。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.EndTimer(System.String)">
+      <summary>当在派生类中重写时，结束一个具有指定名称的计时器。</summary>
+      <param name="timerName">要结束的计时器的名称。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.FullyQualifiedTestClassName">
+      <summary>获取包含当前正在运行的测试方法的完全限定的类名。</summary>
+      <returns>包含当前正在运行的测试方法的完全限定的类名。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.Properties">
+      <summary>当在派生类中重写时，获取测试属性。</summary>
+      <returns>一个 <see cref="T:System.Collections.IDictionary" /> 对象，其中包含表示测试属性的键/值对。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.RequestedPage">
+      <summary>获取所请求的页。</summary>
+      <returns>
+        <see cref="T:System.Web.UI.Page" /> 对象。</returns>
+      <exception cref="T:System.InvalidCastException">无效的值类型将与该测试上下文的 <see cref="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.RequestedPage" /> 的属性相关联。</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.ResultsDirectory">
+      <summary>获取包含测试结果和测试结果目录的顶级目录。 这通常是 <see cref="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.TestRunDirectory" /> 的一个子目录。</summary>
+      <returns>包含测试运行的测试结果和测试结果目录的顶级目录。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.TestDeploymentDir">
+      <summary>获取测试部署目录的路径。 已否决。 请改用 <see cref="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.DeploymentDirectory" />。</summary>
+      <returns>测试部署目录的路径。</returns>
+      <exception cref="T:System.InvalidCastException">无效的值类型是与该 <see cref="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.TestDeploymentDir" /> 测试上下文的属性相关联。</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.TestDir">
+      <summary>获取测试目录的路径。 已否决。 请改用 <see cref="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.TestRunDirectory" />。</summary>
+      <returns>测试目录的路径。</returns>
+      <exception cref="T:System.InvalidCastException">无效的值类型将与该测试上下文的 <see cref="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.TestDir" /> 的属性相关联。</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.TestLogsDir">
+      <summary>获取测试日志目录的路径。 已否决。 请改用 <see cref="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.TestRunResultsDirectory" />。</summary>
+      <returns>测试日志目录的路径。</returns>
+      <exception cref="T:System.InvalidCastException">无效的值类型将与该测试上下文的 <see cref="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.TestLogsDir" /> 的属性相关联。</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.TestName">
+      <summary>获取测试名称。</summary>
+      <returns>测试名称。</returns>
+      <exception cref="T:System.InvalidCastException">无效的值类型将与该测试上下文的 <see cref="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.TestName" /> 的属性相关联。</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.TestResultsDirectory">
+      <summary>获取测试结果文件的目录。</summary>
+      <returns>测试结果文件的目录。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.TestRunDirectory">
+      <summary>获取包含部署文件和结果文件的测试运行的顶级目录。</summary>
+      <returns>包含部署文件和结果文件的测试运行的顶级目录。</returns>
+      <exception cref="T:System.InvalidCastException">无效的值类型将与该测试上下文的 <see cref="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.TestDir" /> 的属性相关联。</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.TestRunResultsDirectory">
+      <summary>特定测试运行结果文件的顶级目录。 此属性通常包含 <see cref="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.ResultsDirectory" /> 的子目录。</summary>
+      <returns>测试运行结果文件的顶级目录。</returns>
+      <exception cref="T:System.InvalidCastException">无效的值类型将与该测试上下文的 <see cref="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.TestLogsDir" /> 的属性相关联。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.WriteLine(System.String,System.Object[])">
+      <summary>当在派生类中重写时，用于在测试运行时写入跟踪消息。</summary>
+      <param name="format">包含跟踪消息的字符串。</param>
+      <param name="args">要添加到跟踪消息中的参数。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution">
+      <summary>此类表示与测试执行相关的事件。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution" /> 类的新实例。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution.AfterAssemblyCleanup">
+      <summary>在程序集完成清理后发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution.AfterAssemblyInitialize">
+      <summary>在程序集初始化后发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution.AfterClassCleanup">
+      <summary>在类完成清理后发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution.AfterClassInitialize">
+      <summary>在类初始化后发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution.AfterTestCleanup">
+      <summary>在测试完成清理后发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution.AfterTestInitialize">
+      <summary>在测试初始化后发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution.BeforeAssemblyCleanup">
+      <summary>在程序集开始清理前发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution.BeforeAssemblyInitialize">
+      <summary>在程序集开始初始化前发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution.BeforeClassCleanup">
+      <summary>在类开始清理前发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution.BeforeClassInitialize">
+      <summary>在类开始初始化前发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution.BeforeTestCleanup">
+      <summary>在测试开始清理前发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution.BeforeTestInitialize">
+      <summary>在测试开始初始化前发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution.OnTestStopping">
+      <summary>在测试完成前停止的情况下发生。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution.RunContext">
+      <summary>获取此测试运行的上下文。</summary>
+      <returns>此测试运行的上下文。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecutionEventArgs">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution" /> 类中的事件的基类。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecutionEventArgs.Instance">
+      <summary>获取测试类的实例。 仅在测试方法中定义。</summary>
+      <returns>测试类的实例。 仅在测试方法中定义。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecutionEventArgs.MethodInfo">
+      <summary>获取被调用方法。</summary>
+      <returns>被调用的方法。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecutionEventArgs.TestContext">
+      <summary>获取用户的测试上下文。</summary>
+      <returns>用户的测试上下文。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestExtensionExecution">
+      <summary>通过该类可以对测试执行进行自定义。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.TestExtensionExecution.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestExtensionExecution" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.TestExtensionExecution.CreateTestMethodInvoker(Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodInvokerContext)">
+      <summary>创建测试方法调用程序。</summary>
+      <returns>按照 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.ITestMethodInvoker" /> 接口的定义返回测试方法调用程序。</returns>
+      <param name="context">上下文。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.TestExtensionExecution.Dispose">
+      <summary>释放由 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestExtensionExecution" /> 使用的所有资源。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.TestExtensionExecution.Initialize(Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution)">
+      <summary>开始执行之前，将调用此方法以启用对单元测试事件的订阅。</summary>
+      <param name="execution">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestExecution" />。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute">
+      <summary>标识在测试之前要运行的方法，从而分配并配置测试类中的所有测试所需的资源。 此类不能被继承。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute" /> 类的新实例。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute">
+      <summary>用于标识测试方法。 此类不能被继承。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute" /> 类的新实例。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodInvokerContext">
+      <summary>传递到 TestExtensionExecution.CreateMethodInvoker 的单元测试适配器。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodInvokerContext.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodInvokerContext" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodInvokerContext.InnerInvoker">
+      <summary>获取测试方法调用程序的 <see cref="M:Microsoft.VisualStudio.TestTools.UnitTesting.ITestMethodInvoker.Invoke" /> 方法。</summary>
+      <returns>测试方法调用程序的 <see cref="M:Microsoft.VisualStudio.TestTools.UnitTesting.ITestMethodInvoker.Invoke" /> 方法。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodInvokerContext.TestContext">
+      <summary>获取测试上下文。</summary>
+      <returns>测试上下文。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodInvokerContext.TestMethodInfo">
+      <summary>获取测试方法的 <see cref="T:System.Reflection.MethodInfo" />。</summary>
+      <returns>测试方法的 <see cref="T:System.Reflection.MethodInfo" />。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodInvokerResult">
+      <summary>由 <see cref="M:Microsoft.VisualStudio.TestTools.UnitTesting.ITestMethodInvoker.Invoke" /> 返回的结果。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodInvokerResult.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodInvokerResult" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodInvokerResult.Exception">
+      <summary>获取或设置在调用程序中引发的 <see cref="T:System.Exception" />。</summary>
+      <returns>在调用程序中引发的 <see cref="T:System.Exception" />。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodInvokerResult.ExtensionResult">
+      <summary>获取或设置单元测试扩展自定义结果。</summary>
+      <returns>单元测试扩展自定义结果。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute">
+      <summary>在方法上建立测试特定属性。 此类不能被继承。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute.#ctor(System.String,System.String)">
+      <summary>用 <see cref="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute.Name" /> 和  <see cref="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute.Value" /> 属性的值初始化  <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute" /> 类的新实例。</summary>
+      <param name="name">测试属性的名称。</param>
+      <param name="value">测试属性的值。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute.Name">
+      <summary>获取测试属性的名称。</summary>
+      <returns>测试属性的名称。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute.Value">
+      <summary>获取测试属性的值。</summary>
+      <returns>测试属性的值。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestTimeout">
+      <summary>可与 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.TimeoutAttribute" /> 类一起使用的超时枚举。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.TestTimeout.Infinite">
+      <summary>最大超时时长。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.TimeoutAttribute">
+      <summary>用于指定单元测试的超时时间。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.TimeoutAttribute.#ctor(Microsoft.VisualStudio.TestTools.UnitTesting.TestTimeout)">
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.TimeoutAttribute.#ctor(System.Int32)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.TimeoutAttribute" /> 类的新实例。</summary>
+      <param name="timeout">单元测试的超时时间。 以毫秒为单位。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.TimeoutAttribute.Timeout">
+      <summary>获取单元测试的超时时间。</summary>
+      <returns>单元测试的超时时间。 以毫秒为单位。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.UnitTestAssertException">
+      <summary>这是单元测试异常的基类。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.UnitTestAssertException.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.UnitTestAssertException" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.UnitTestAssertException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>用序列化数据初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.UnitTestAssertException" /> 类的新实例。</summary>
+      <param name="info">
+        <see cref="T:System.Runtime.Serialization.SerializationInfo" />，它存有有关所引发的异常的序列化对象数据。</param>
+      <param name="context">
+        <see cref="T:System.Runtime.Serialization.StreamingContext" />，它包含有关源或目标的上下文信息。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="info" /> 参数为 null。</exception>
+      <exception cref="T:System.Runtime.Serialization.SerializationException">类名为 null 或 <see cref="P:System.Exception.HResult" /> 为零 (0)。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.UnitTestAssertException.#ctor(System.String)">
+      <summary>用指定的错误初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.UnitTestAssertException" /> 类的新实例。</summary>
+      <param name="msg">解释异常原因的错误信息。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.UnitTestAssertException.#ctor(System.String,System.Exception)">
+      <summary>使用指定的错误信息和对导致此异常的内部异常的引用来初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.UnitTestAssertException" /> 类的新实例。</summary>
+      <param name="msg">解释异常原因的错误信息。</param>
+      <param name="ex">导致当前异常的异常。 如果 <paramref name="ex" /> 参数不为 null，则当前异常在处理内部异常的 catch 块中引发。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.UnitTestAssertException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>使用有关异常的信息设置 <see cref="T:System.Runtime.Serialization.SerializationInfo" />。</summary>
+      <param name="info">
+        <see cref="T:System.Runtime.Serialization.SerializationInfo" />，它存有有关所引发的异常的序列化对象数据。</param>
+      <param name="context">
+        <see cref="T:System.Runtime.Serialization.StreamingContext" />，它包含有关源或目标的上下文信息。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="info" /> 参数为 null。</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.UnitTestAssertException.Message">
+      <summary>获取描述当前异常的消息。</summary>
+      <returns>描述异常的消息。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.UnitTestOutcome">
+      <summary>使用 UnitTestOutcome 来以编程方式确定已运行或当前正在运行的测试的结果。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.UnitTestOutcome.Failed">
+      <summary>测试失败。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.UnitTestOutcome.Inconclusive">
+      <summary>引发 Assert.<see cref="M:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Inconclusive" />。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.UnitTestOutcome.Passed">
+      <summary>测试通过。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.UnitTestOutcome.InProgress">
+      <summary>当前正在运行该测试。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.UnitTestOutcome.Error">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.UnitTestOutcome.Timeout">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.UnitTestOutcome.Aborted">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.UnitTestOutcome.Unknown">
+      <summary>测试结果未知。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.WebServiceHelper">
+      <summary>包含用于 Web 服务测试的帮助器方法。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.WebServiceHelper.TryUrlRedirection(System.Web.Services.Protocols.WebClientProtocol,Microsoft.VisualStudio.TestTools.UnitTesting.TestContext,System.String)">
+      <summary>将 Web 服务对象重定向到 ASP.NET 开发服务器而不是提供的 Web 引用中定义的资源。</summary>
+      <returns>如果发生了重定向，则为 true；否则为 false。</returns>
+      <param name="client">要测试的 Web 服务类型的实例。</param>
+      <param name="context">此单元测试的 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext" />。</param>
+      <param name="identifier">标识 ASP.NET 开发服务器实例的唯一字符串。 它与测试方法中 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.Web.AspNetDevelopmentServerAttribute" /> 的 name 参数匹配。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.WorkItemAttribute">
+      <summary>用于指定与测试相关联的工作项。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.WorkItemAttribute.#ctor(System.Int32)">
+      <summary>使用标识号初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.WorkItemAttribute" /> 类的新实例。</summary>
+      <param name="id">工作项的 ID。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.WorkItemAttribute.Id">
+      <summary>获取工作项的 ID。</summary>
+      <returns>工作项 ID。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.Web.AspNetDevelopmentServerAttribute">
+      <summary>指定必须为用于测试的 ASP.NET 开发服务器使用的设置。 此项设置主要用于 Web 服务单元测试。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Web.AspNetDevelopmentServerAttribute.#ctor(System.String,System.String)">
+      <summary>使用服务器名称和 Web 应用程序的路径初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.Web.AspNetDevelopmentServerAttribute" /> 类的一个新实例。</summary>
+      <param name="name">ASP.NET 开发服务器的名称。 对于单一测试中指定的所有 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.Web.AspNetDevelopmentServerAttribute" />，此名称必须是唯一的。</param>
+      <param name="pathToWebApp">Web 应用程序的路径。 此值还可以包含环境变量。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Web.AspNetDevelopmentServerAttribute.#ctor(System.String,System.String,System.String)">
+      <summary>使用服务器名称、Web 应用程序的路径和 Web 应用程序根目录初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.Web.AspNetDevelopmentServerAttribute" /> 类的一个新实例。</summary>
+      <param name="name">服务器的名称。</param>
+      <param name="pathToWebApp">Web 应用程序的路径。 这还可能包括 %TEMPDIR%\website1 等环境变量。</param>
+      <param name="webAppRoot">Web 应用程序根目录。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Web.AspNetDevelopmentServerAttribute.Name">
+      <summary>获取 ASP.NET 开发服务器的名称。</summary>
+      <returns>ASP.NET 开发服务器的名称。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Web.AspNetDevelopmentServerAttribute.PathToWebApp">
+      <summary>获取 Web 应用程序的路径。</summary>
+      <returns>Web 应用程序的路径。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Web.AspNetDevelopmentServerAttribute.WebAppRoot">
+      <summary>获取 Web 应用程序根目录。</summary>
+      <returns>Web 应用程序根目录。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.Web.AspNetDevelopmentServerHostAttribute">
+      <summary>指定当 ASP.NET 开发服务器作为测试的主机服务器时使用的设置。 此设置用于 ASP.NET 单元测试。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Web.AspNetDevelopmentServerHostAttribute.#ctor(System.String)">
+      <summary>使用完整路径名初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.Web.AspNetDevelopmentServerHostAttribute" /> 类的一个新实例。</summary>
+      <param name="pathToWebApp">Web 应用程序的完整路径。 该路径可以包含环境变量，如 %TEMPDIR%\website1。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Web.AspNetDevelopmentServerHostAttribute.#ctor(System.String,System.String)">
+      <summary>使用完整路径名和 Web 应用程序根目录初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.Web.AspNetDevelopmentServerHostAttribute" /> 类的一个新实例。</summary>
+      <param name="pathToWebApp">Web 应用程序的完整路径。 该路径可以包含环境变量，如 %TEMPDIR%\website1。</param>
+      <param name="webAppRoot">Web 应用程序根目录。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Web.AspNetDevelopmentServerHostAttribute.PathToWebApp">
+      <summary>获取 Web 应用程序的路径。</summary>
+      <returns>Web 应用程序的路径。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Web.AspNetDevelopmentServerHostAttribute.WebAppRoot">
+      <summary>获取 Web 应用程序根目录。</summary>
+      <returns>Web 应用程序根目录。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.Web.CredentialAttribute">
+      <summary>为要求基本身份验证或 Windows 身份验证的 ASP.NET 网站指定用户名和密码。 此类不能被继承。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Web.CredentialAttribute.#ctor(System.String,System.String)">
+      <summary>使用访问测试网站所需的用户名和密码初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.Web.CredentialAttribute" /> 类的一个新实例。</summary>
+      <param name="userName">要进行身份验证的用户。</param>
+      <param name="password">用户的关联密码。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Web.CredentialAttribute.#ctor(System.String,System.String,System.String)">
+      <summary>使用访问测试网站所需的用户名、密码和域初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.Web.CredentialAttribute" /> 类的一个新实例。</summary>
+      <param name="userName">要进行身份验证的用户。</param>
+      <param name="password">用户的关联密码。</param>
+      <param name="domain">用户的域。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Web.CredentialAttribute.Domain">
+      <summary>获取用户的域。</summary>
+      <returns>用户的域的名称。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Web.CredentialAttribute.Password">
+      <summary>获得用户的密码。</summary>
+      <returns>用户的密码。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Web.CredentialAttribute.UserName">
+      <summary>获取用户的用户名。</summary>
+      <returns>用户的用户名。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.Web.UrlToTestAttribute">
+      <summary>指定应当请求的 URL，以给出测试上下文。 此类不能被继承。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Web.UrlToTestAttribute.#ctor(System.String)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.Web.UrlToTestAttribute" /> 类的新实例。</summary>
+      <param name="urlToTest">给出测试上下文的 URL。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Web.UrlToTestAttribute.UrlToTest">
+      <summary>获取给出测试上下文的 URL。</summary>
+      <returns>URL 字符串。</returns>
+    </member>
+  </members>
+</doc>

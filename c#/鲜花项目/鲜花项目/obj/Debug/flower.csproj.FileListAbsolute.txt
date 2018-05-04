@@ -1,0 +1,11 @@
+F:\C#\鲜花项目\鲜花项目\bin\Debug\鲜花项目.exe.config
+F:\C#\鲜花项目\鲜花项目\bin\Debug\鲜花项目.exe
+F:\C#\鲜花项目\鲜花项目\bin\Debug\鲜花项目.pdb
+F:\C#\鲜花项目\鲜花项目\obj\Debug\flower.csprojResolveAssemblyReference.cache
+F:\C#\鲜花项目\鲜花项目\obj\Debug\鲜花项目.frmMain.resources
+F:\C#\鲜花项目\鲜花项目\obj\Debug\鲜花项目.frmcha.resources
+F:\C#\鲜花项目\鲜花项目\obj\Debug\鲜花项目.Properties.Resources.resources
+F:\C#\鲜花项目\鲜花项目\obj\Debug\flower.csproj.GenerateResource.Cache
+F:\C#\鲜花项目\鲜花项目\obj\Debug\鲜花项目.exe
+F:\C#\鲜花项目\鲜花项目\obj\Debug\鲜花项目.pdb
+F:\C#\鲜花项目\鲜花项目\obj\Debug\鲜花项目.frmxiugai1.resources

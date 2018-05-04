@@ -1,0 +1,209 @@
+#outputArea {
+    position: absolute;
+    top: 2.18em;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    white-space: nowrap;
+    background-color: #FFFFFF; /*[{VSFONTCOLORBACKGROUND_DIAGNOSTICS}]*/
+}
+
+#outputList {
+    display: table;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    font-family: "Consolas", Lucida Console, monospace; /*[{VSFONTFAMILY_DIAGNOSTICS} , Lucida Console, monospace]*/
+    font-size: 9pt; /*[{VSFONTSIZE_DIAGNOSTICS}]*/
+    color: #000000; /*[{VSFONTCOLOR_DIAGNOSTICS}]*/
+    background-color: #FFFFFF; /*[{VSFONTCOLORBACKGROUND_DIAGNOSTICS}]*/
+}
+
+#outputList li {
+    padding: 2px 0 0 21px;
+    background-repeat: no-repeat;
+    background-position: left 1px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05); /*[1px solid {VSFONTCOLOR_CONSOLE_OUTPUT rgba(0.05)}]*/
+    min-height: 18px;
+    white-space: pre;
+}
+
+#outputList li > .BPT-HtmlTree{
+    padding-top: 2px;
+    margin-left: -2px;
+}
+
+#outputList li.noBorder {
+    border-bottom: none;
+}
+
+#outputList li.consoleItemInput {
+    color: #0000ff; /*[{VSFONTCOLOR_CONSOLE_INPUT}]*/
+    background-color: #FFFFFF; /*[{VSFONTCOLORBACKGROUND_CONSOLE_INPUT}]*/
+    font-weight: "normal"; /*[{VSFONTWEIGHT_CONSOLE_INPUT}]*/
+    background-image: url('../common/inputIcon.png');
+}
+
+#outputList li.consoleItemOutput {
+    color: #000000; /*[{VSFONTCOLOR_CONSOLE_OUTPUT}]*/
+    background-color: #FFFFFF; /*[{VSFONTCOLORBACKGROUND_CONSOLE_OUTPUT}]*/
+    font-weight: "normal"; /*[{VSFONTWEIGHT_CONSOLE_OUTPUT}]*/
+    background-image: none;
+}
+
+#outputList li.consoleItemLog {
+    color: #000000; /*[{VSFONTCOLOR_CONSOLE_OUTPUT}]*/
+    background-color: #FFFFFF; /*[{VSFONTCOLORBACKGROUND_CONSOLE_OUTPUT}]*/
+    font-weight: "normal"; /*[{VSFONTWEIGHT_CONSOLE_OUTPUT}]*/
+    background-image: none;
+}
+
+#outputList li.consoleItemAssert {
+    color: #ff0000; /*[{VSFONTCOLOR_CONSOLE_ERROR}]*/
+    background-color: #FFFFFF; /*[{VSFONTCOLORBACKGROUND_CONSOLE_ERROR}]*/
+    font-weight: "normal"; /*[{VSFONTWEIGHT_CONSOLE_ERROR}]*/
+    background-image: url('../common/errorIcon.png');
+}
+
+#outputList li.consoleItemError {
+    color: #ff0000; /*[{VSFONTCOLOR_CONSOLE_ERROR}]*/
+    background-color: #FFFFFF; /*[{VSFONTCOLORBACKGROUND_CONSOLE_ERROR}]*/
+    font-weight: "normal"; /*[{VSFONTWEIGHT_CONSOLE_ERROR}]*/
+    background-image: url('../common/errorIcon.png');
+}
+
+#outputList li.consoleItemInfo {
+    color: #008080; /*[{VSFONTCOLOR_CONSOLE_INFO}]*/
+    background-color: #FFFFFF; /*[{VSFONTCOLORBACKGROUND_CONSOLE_INFO}]*/
+    font-weight: "normal"; /*[{VSFONTWEIGHT_CONSOLE_INFO}]*/
+    background-image: url('../common/infoIcon.png');
+}
+
+#outputList li.consoleItemWarn {
+    color: #808080; /*[{VSFONTCOLOR_CONSOLE_WARNING}]*/
+    background-color: #FFFFFF; /*[{VSFONTCOLORBACKGROUND_CONSOLE_WARNING}]*/
+    font-weight: "normal"; /*[{VSFONTWEIGHT_CONSOLE_WARNING}]*/
+    background-image: url('../common/warnIcon.png');
+}
+
+#outputList li.consoleItemScriptError {
+    color: #ff0000; /*[{VSFONTCOLOR_CONSOLE_ERROR}]*/
+    background-color: #FFFFFF; /*[{VSFONTCOLORBACKGROUND_CONSOLE_ERROR}]*/
+    font-weight: "normal"; /*[{VSFONTWEIGHT_CONSOLE_ERROR}]*/
+    background-image: url('../common/errorIcon.png');
+}
+
+#outputList li.consoleItemOutput-Undefined {
+    color: #008080; /*[{VSFONTCOLOR_CONSOLE_INFO}]*/
+}
+
+.BPT-WarnMessage {
+    color: #808080; /*[{VSFONTCOLOR_CONSOLE_WARNING}]*/
+    background-color: #FFFFFF; /*[{VSFONTCOLORBACKGROUND_CONSOLE_WARNING}]*/
+    font-weight: "normal"; /*[{VSFONTWEIGHT_CONSOLE_WARNING}]*/
+    background-image: url('../common/warnIcon.png');
+    
+    padding-left: 21px;
+    padding-top: 2px;
+    margin-top: 2px;
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+.BPT-DataTree-Value-Exception {
+    color: #808080; /*[{VSFONTCOLOR_CONSOLE_WARNING}]*/
+    background-color: #FFFFFF; /*[{VSFONTCOLORBACKGROUND_CONSOLE_WARNING}]*/
+    font-weight: "normal"; /*[{VSFONTWEIGHT_CONSOLE_WARNING}]*/
+}
+
+.BPT-Toolbar .errorButton {
+    background-image: url('../common/errorButtonIcon.png');
+}
+
+.BPT-Toolbar .warnButton {
+    background-image: url('../common/warnButtonIcon.png');
+}
+
+.BPT-Toolbar .infoButton {
+    background-image: url('../common/infoButtonIcon.png');
+}
+
+.BPT-Toolbar .clearButton {
+    background-image: url('../common/clearIcon.png');
+}
+
+/* Dark theme overrides */
+.BPT-Tree-DarkTheme #outputList li.consoleItemInput {
+    background-image: url('../common/inputIconDark.png');
+}
+
+.BPT-Tree-DarkTheme #outputList li.consoleItemError,
+.BPT-Tree-DarkTheme #outputList li.consoleItemAssert,
+.BPT-Tree-DarkTheme #outputList li.consoleItemScriptError {
+    background-image: url('../common/errorIconDark.png');
+}
+
+.BPT-Tree-DarkTheme #outputList li.consoleItemInfo {
+    background-image: url('../common/infoIconDark.png');
+}
+
+.BPT-Tree-DarkTheme #outputList li.consoleItemWarn,
+.BPT-Tree-DarkTheme .BPT-WarnMessage {
+    background-image: url('../common/warnIconDark.png');
+}
+
+.BPT-Tree-DarkTheme .errorButton {
+    background-image: url('../common/errorButtonIconDark.png');
+}
+
+.BPT-Tree-DarkTheme .warnButton {
+    background-image: url('../common/warnButtonIconDark.png');
+}
+
+.BPT-Tree-DarkTheme .infoButton {
+    background-image: url('../common/infoButtonIconDark.png');
+}
+
+.BPT-Tree-DarkTheme .clearButton {
+    background-image: url('../common/clearButtonIconDark.png');
+}
+
+/* HtmlTree style changes so that we match DataTree */
+.BPT-HtmlTree {
+    margin-left: 0;
+}
+
+.BPT-HtmlTreeItem {
+    margin: -3px 3px;
+}
+
+.BPT-HtmlTree-ChildCollection-ShowAll {
+    margin: -3px 3px 3px 3px;
+}
+
+.BPT-HtmlTreeItem-Loading {
+    margin-top: 1px;
+    margin-left: -8px;
+}
+
+.BPT-HtmlTreeItem  > .BPT-HtmlTreeItem-Header{
+    padding: 1px 0;
+}
+
+.BPT-HtmlTreeItem-ExpandIcon, .BPT-HtmlTreeItem-ExpandIcon-Hidden {
+    top: 4px;
+}
+
+.BPT-HtmlTreeItem-Header:hover {
+    border-color: transparent;
+}
+
+.BPT-BatchedMessages {
+    display: none;
+}
+
+.BPT-ClearingOutput {
+    display: none;
+}

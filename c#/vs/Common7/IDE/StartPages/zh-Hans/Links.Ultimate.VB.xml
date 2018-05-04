@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items>
+  <getstarteditemgroup title="Get Started">
+    <itemsubgroup title="欢迎使用" id="welcome_title">
+      <item>
+        <title id="welcome_whatsnew_11">新增功能</title>
+        <image>whatsnewVS.png</image>
+        <commands>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="welcome_whatsnew_whatsnewvs_11">Visual Studio 的新增功能</title>
+            <parameter>http://go.microsoft.com/fwlink/p/?LinkId=234884&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="welcome_whatsnew_whatsnewdotnet_45">.NET Framework 的新增功能</title>
+            <parameter>http://go.microsoft.com/fwlink/p/?LinkId=234882&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+        </commands>
+      </item>
+      <item>
+        <title id="welcome_start_11">入门</title>
+        <image>getstarted.png</image>
+        <commands>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="welcome_start_11_vs">Visual Studio 入门</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkId=225422&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="welcome_start_11_blend">Blend 入门</title>
+            <parameter> http://go.microsoft.com/fwlink/?LinkId=248865&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="welcome_start_11_learn">了解有关 Visual Studio 的更多信息</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkId=248845&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Execute</commandtype>
+            <title id="launch_ext_mgr_11">发现扩展、外接程序和示例</title>
+            <parameter>Tools.ExtensionsandUpdates </parameter>
+          </command>
+        </commands>
+      </item>
+      <item>
+        <title id="sign_up_tfs">在云中管理项目</title>
+        <image>manageTFS.png</image>
+        <commands>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="sign_up_tfs_whats_new_pro">了解有关协作功能的更多信息，包括敏捷项目管理</title>
+            <parameter> http://go.microsoft.com/fwlink/?LinkId=248470&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="sign_up_tfs_sign_up">查看新增功能或注册帐户</title>
+            <parameter> http://go.microsoft.com/fwlink/?LinkId=248469&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+        </commands>
+      </item>
+      <item>
+        <title id="vs_learn_vs11_title">学习资源</title>
+        <image>resources.png</image>
+        <commands>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="vs_learn_vs11_troubleshoot">Visual Studio 故障排除和支持</title>
+            <parameter> http://go.microsoft.com/fwlink/?LinkId=248856&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="vs_learn_vs11_channel9">第 9 频道上的 Visual Studio 视频</title>
+            <parameter> http://go.microsoft.com/fwlink/?LinkId=248857&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="what_is_msdn">什么是 MSDN 订阅?</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkId=248851&amp;clcid=%VSSPV_LCID_HEX% </parameter>
+          </command>
+        </commands>
+      </item>
+    </itemsubgroup>
+    <itemsubgroup title="Windows 8" id="windows8_title">
+      <item>
+        <title id="windows_whatsnew_vs11_title">Windows 开发中的新增功能</title>
+        <image>whatsnew.png</image>
+        <commands>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="windows_whatsnew_vs11_windowsstoreapp">Windows 应用商店应用程序</title>
+            <parameter> http://go.microsoft.com/fwlink/?LinkId=225430&amp;clcid=%VSSPV_LCID_HEX% </parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="windows_whatsnew_vs11_devlic">获取 Windows 应用商店应用程序的开发人员许可证</title>
+            <parameter> http://go.microsoft.com/fwlink/?LinkId=248860&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="windows_whatsnew_vs11_desktop">了解有关 Windows 8 桌面开发的信息</title>
+            <parameter> http://go.microsoft.com/fwlink/?LinkId=248861&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+        </commands>
+      </item>
+      <item>
+        <title id="welcome_create_win8express_11">创建 Windows 应用商店应用程序</title>
+        <image>creating.png</image>
+        <commands>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="welcome_create_buildingwindowsstoreapp_11">学习生成 Windows 应用商店应用程序</title>
+            <parameter> http://go.microsoft.com/fwlink/?LinkId=248863&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="welcome_create_blend">使用 Blend 设计 Windows 应用商店应用程序</title>
+            <parameter> http://go.microsoft.com/fwlink/?LinkId=244288&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+        </commands>
+      </item>
+      <item>
+        <title id="windowsstoreapp_learn_vs11_title">学习资源</title>
+        <image>resources.png</image>
+        <commands>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="windowsstoreapp_learn_vs11_e2e">端到端应用程序和游戏</title>
+            <parameter> http://go.microsoft.com/fwlink/?LinkId=248867&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="windowsstoreapp_learn_vs11_api">Windows 应用商店应用程序 API 参考</title>
+            <parameter> http://go.microsoft.com/fwlink/?LinkId=248868&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="windowsstoreapp_learn_vs11_community">社区资源</title>
+            <parameter> http://go.microsoft.com/fwlink/?LinkId=248870&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+        </commands>
+      </item>
+      <item>
+        <title id="windowsstoreapp_welcome_sell_title">销售 Windows 应用商店应用程序</title>
+        <image>selling.png</image>
+        <commands>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="windowsstoreapp_welcome_sell_title">销售应用程序</title>
+            <parameter> http://go.microsoft.com/fwlink/?LinkId=248871&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="windowsstoreapp_welcome_join_title">成为 Windows 应用商店开发人员</title>
+            <parameter> http://go.microsoft.com/fwlink/?LinkId=248872&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="windowsstoreapp_welcome_prep_title">准备适用于 Windows 应用商店的应用程序</title>
+            <parameter> http://go.microsoft.com/fwlink/?LinkId=248873&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+        </commands>
+      </item>
+    </itemsubgroup>
+    <itemsubgroup title="Windows Azure" id="cloud_title">
+      <item>
+        <title id="cloud_whatsnew_vs11_title">Windows Azure 开发的新增功能</title>
+        <image>whatsnewAzure.png</image>
+        <commands>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="cloud_create_vs11_cmd0_title">Windows Azure .NET 开发中心</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkID=248875&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="cloud_whatsnew_vs11_cmd1_title">Windows Azure 的新增功能</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkID=248925&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="cloud_whatsnew_vs11_cmd2_title">Windows Azure 团队博客</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkID=248928&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+        </commands>
+      </item>
+
+      <item>
+        <title id="cloud_create_vs11_title">创建 Windows Azure 应用程序</title>
+        <image>creatingAzure.png</image>
+        <commands>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="cloud_create_vs11_cmd4_title">获取 Windows Azure SDK</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkId=246966&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="cloud_create_vs11_cmd3_title">Windows Azure 教程</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkID=248998&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="cloud_create_vs11_cmd1_title">Windows Azure 代码示例和工具包</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkID=248933&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="cloud_create_vs11_cmd2_title">Windows Azure 培训工具包</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkID=248934&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+        </commands>
+      </item>
+      <item>
+        <title id="cloud_learn_vs11_title">学习资源</title>
+        <image>resources.png</image>
+        <commands>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="cloud_resources_vs11_cmd1_title">Windows Azure tools for Visual Studio</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkID=248877&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="cloud_resources_vs11_cmd2_title">Windows Azure 库</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkID=248937&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="cloud_resources_vs11_cmd3_title">Windows Azure 论坛</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkID=248935&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+        </commands>
+      </item>
+    </itemsubgroup>
+    <itemsubgroup title="Web" id="data_title">
+      <item>
+        <title id="web_whatsnew_vs11_title">Web 开发中的新增功能</title>
+        <image>whatsnewWeb.png</image>
+        <commands>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="web_whatsnew_vs11_getting_started">入门</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkId=253351&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="web_whatsnew_vs11_whats_new">ASP.NET 4.5 和 Web 的新增功能</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkId=253352&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="web_whatsnew_vs11_find_hosting">查找 Web 宿主</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkId=253354&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="web_whatsnew_vs11_cloud">使用 Windows Azure 进行云开发</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkId=253355&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+        </commands>
+      </item>
+      <item>
+        <title id="web_create_vs11_creating">创建 Web 应用程序</title>
+        <image>creatingWeb.png</image>
+        <commands>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="web_create_vs11_webforms">ASP.NET WebForms</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkId=253357&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="web_create_vs11_mvc">ASP.NET MVC</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkId=253358&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="web_create_vs11_webpages">ASP.NET 网页</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkId=253359&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="web_create_vs11_webapi">ASP.NET Web API</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkId=253360&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+        </commands>
+      </item>
+      <item>
+        <title id="web_learn_vs11_resources">学习资源</title>
+        <image>resources.png</image>
+        <commands>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="web_resources_vs11_html">HTML5、CSS 和 JavaScript</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkID=253361&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="web_resources_vs11_nuget">常用 NuGet 程序包</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkId=253362&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="web_resources_vs11_community">ASP.NET 社区</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkId=253363&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="web_resources_vs11_mobile">使用 ASP.NET 的适合移动的网站</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkId=253364&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+        </commands>
+      </item>
+      <item>
+        <title id="web_learn_vs11_opensource">开放源</title>
+        <image>opensource.png</image>
+        <commands>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="web_opensource_vs11_opensource">ASP.NET 开放源程序包</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkId=253365&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="web_opensource_vs11_codeplex">CodePlex</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkId=253366&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="web_opensource_vs11_aspnetcodeplex">CodePlex 上的 ASP.NET Web 堆栈</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkId=253367&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="web_opensource_vs11_azuresource">Windows Azure SDK for .NET 源代码</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkId=253368&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+        </commands>
+      </item>
+    </itemsubgroup>
+    <itemsubgroup title="Windows Phone" id="windowsphone_title">
+      <item>
+        <title id="windowsphone_whatsnew_vs11_title">Windows Phone 的新增功能</title>
+        <image>whatsnew.png</image>
+        <commands>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="windowsphone_whatsnew_vs11_dev">Windows Phone 开发</title>
+            <parameter> http://go.microsoft.com/fwlink/?LinkId=248635&amp;clcid=%VSSPV_LCID_HEX% </parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="windowsphone_whatsnew_vs11_design">设计应用程序</title>
+            <parameter> http://go.microsoft.com/fwlink/?LinkId=249093&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+        </commands>
+      </item>
+      <item>
+        <title id="welcome_create_windowsphone_vs11">创建应用程序</title>
+        <image>creating.png</image>
+        <commands>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="welcome_create_windowsphone_app_vs11">创建您的第一个应用程序</title>
+            <parameter> http://go.microsoft.com/fwlink/?LinkId=248636&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="welcome_join_developer_prog_vs11">加入开发人员计划</title>
+            <parameter> http://go.microsoft.com/fwlink/?LinkId=249094&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="welcome_register_phone_vs11">注册开发针对的电话</title>
+            <parameter> http://go.microsoft.com/fwlink/?LinkId=249095&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+
+        </commands>
+      </item>
+      <item>
+        <title id="windowsphone_learn_vs11_title">学习资源</title>
+        <image>resources.png</image>
+        <commands>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="windowsphone_code_samples_vs11">代码示例</title>
+            <parameter> http://go.microsoft.com/fwlink/?LinkId=248637&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="windowsphone_learn_vs11_api">API 参考</title>
+            <parameter> http://go.microsoft.com/fwlink/?LinkId=249096&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="windowsphone_vs11_community">社区</title>
+            <parameter> http://go.microsoft.com/fwlink/?LinkId=249097&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+        </commands>
+      </item>
+      <item>
+        <title id="windowsphone_welcome_sell_title">销售应用程序</title>
+        <image>selling.png</image>
+        <commands>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="windowsphone_welcome_sell_title">通过应用程序赚钱</title>
+            <parameter> http://go.microsoft.com/fwlink/?LinkId=249098&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="windowsphone_welcome_prep_app_title">准备应用程序</title>
+            <parameter> http://go.microsoft.com/fwlink/?LinkId=249099&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="windowsphone_welcome_submit_title">将应用程序提交到应用商店</title>
+            <parameter> http://go.microsoft.com/fwlink/?LinkId=249100&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+        </commands>
+      </item>
+    </itemsubgroup>
+    <itemsubgroup title="Office 和 SharePoint" id="office_title">
+      <item>
+        <title id="office_whatsnew_vs11_title">Office 和 SharePoint 开发的新增功能</title>
+        <image>whatsnew.png</image>
+        <commands>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="office_whatsnew_vs11_developercenter">Microsoft Office 开发中心</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkId=252783&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="office_whatsnew_vs11">Microsoft Office 开发的新增功能</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkId=252788&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="office_whatsnew_vs11_sharepointdevelopercenter">Microsoft SharePoint 开发中心</title>
+            <parameter> http://go.microsoft.com/fwlink/?LinkId=252789&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="office_whatsnew_vs11_sharepoint">Microsoft SharePoint 开发的新增功能</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkId=252790&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+        </commands>
+      </item>
+      <item>
+        <title id="office_creating_vs11_office">创建 Microsoft Office 解决方案</title>
+        <image>creating.png</image>
+        <commands>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="office_creating_vs11_gettingstarted">Office 开发入门</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkId=252791&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="office_creating_vs11_video">Office 开发视频</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkId=252792&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="office_creating_vs11_gettingstartedsharepoint">SharePoint 开发入门</title>
+            <parameter> http://go.microsoft.com/fwlink/?LinkId=252793&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="office_creating_vs11_videosharepoint">SharePoint 开发视频</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkId=252794&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+        </commands>
+      </item>
+      <item>
+        <title id="office_learning_vs11">学习资源</title>
+        <image>resources.png</image>
+        <commands>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="office_learning_vs11_community">社区资源</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkId=252795&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="office_learning_vs11_forums">Office 论坛</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkId=252796&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="office_learning_vs11_codesamples">Office 代码示例</title>
+            <parameter> http://go.microsoft.com/fwlink/?LinkId=252797&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="office_learning_vs11_sharepointforum">SharePoint 论坛</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkId=252798&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="office_learning_vs11_sharepointsamples">SharePoint 代码示例</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkId=252799&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+        </commands>
+      </item>
+    </itemsubgroup>
+  </getstarteditemgroup>
+</items>

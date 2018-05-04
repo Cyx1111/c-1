@@ -1,0 +1,47 @@
+﻿TEMA
+    about_NuGet
+    
+DESCRIPCIÓN BREVE
+    Proporciona información acerca de los comandos del administrador de paquetes de NuGet.
+           
+DESCRIPCIÓN LARGA
+    Este tema describe los comandos del administrador de paquetes de NuGet. NuGet es una herramienta de administración 
+    de paquetes integrados para agregar bibliotecas y herramientas a  proyectos .NET.
+
+                 
+    Se incluyen los NuGet cmdlets siguientes.
+
+        Cmdlet					Descripción
+        ------------------		----------------------------------------------
+        Get-Package				Obtiene el conjunto de paquetes disponible en el origen del paquete.
+
+        Install-Package			Instala un paquete y sus dependencias en el proyecto.
+
+        Uninstall-Package		Desinstala el paquete. Si otros paquetes dependieran de este, 
+                                el comando dará un error a menos que  se especifique la opción -Force.
+
+        Update-Package			Actualiza un paquete y sus dependencias a una versión más reciente.
+
+        Add-BindingRedirect		Examina todos los ensamblados de la ruta de acceso de los resultados de un proyecto
+                                y agrega redirecciones de enlace al archivo de configuración 
+                                de la aplicación (o web) donde sea necesario.
+                            
+        Get-Project				Devuelve una referencia al DTE (Development Tools Environment) 
+                                del proyecto especificado. Si no se especifica ninguno, devuelve el  
+                                proyecto predeterminado seleccionado en la consola del administrador de paquetes.
+
+        Open-PackagePage        Abre el explorador señalando la ProjectUrl, LicenseUrl o 
+                                ReportAbuseUrl del paquete especificado.
+
+        Register-TabExpansion	Registra una expansión de pestaña para los parámetros de un comando.
+
+VEA TAMBIÉN
+    Documentación en línea: http://go.microsoft.com/fwlink/?LinkID=206619
+    Get-Package
+    Install-Package
+    Uninstall-Package
+    Update-Package
+    Add-BindingRedirect
+    Get-Project
+    Open-PackagePage
+    Register-TabExpansion

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+	<Identifier Id="Microsoft.VisualStudio.ArchitectureTools.ExtensibilityPack">
+		<Name>VS 2010 Ultimate Arch Tools</Name>
+		<Author>Microsoft</Author>
+		<Version>11.0</Version>
+		<Description xml:space="preserve">Enables code generation from UML models, and reverse engineering C# to create UML models.</Description>
+		<Locale>1033</Locale>
+		<InstalledByMsi>true</InstalledByMsi>
+		<SupportedProducts>
+			<VisualStudio Version="11.0">
+				<Edition>Ultimate</Edition>
+			</VisualStudio>
+		</SupportedProducts>
+		<SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5" />
+		<SystemComponent>true</SystemComponent>
+	</Identifier>
+	<References>
+		<Reference Id="Microsoft.VisualStudio.ArchitectureTools.Runtime.6077f06b-77df-4c5e-975a-97eb5b6e26b5" MinVersion="1.0" MaxVersion="1.0">
+			<Name>Visualization and Modeling Feature Pack Runtime</Name>
+			<VsixPath />
+		</Reference>
+	</References>
+	<Content>
+		<MefComponent>Microsoft.VisualStudio.ArchitectureTools.Xmi.Import.dll</MefComponent>
+		<MefComponent>Microsoft.VisualStudio.ArchitectureTools.WorkItemLinking.dll</MefComponent>
+		<CustomExtension Type="Microsoft.VisualStudio.UmlProfile">TextTemplateBindings.Profile</CustomExtension>
+		<CustomExtension Type="Microsoft.VisualStudio.UmlProfile">XmiImportProfile.profile</CustomExtension>
+		<MefComponent>Microsoft.VisualStudio.ArchitectureTools.Adapters.dll</MefComponent>
+    <MefComponent>Microsoft.VisualStudio.ArchitectureTools.ReverseEngineering.dll</MefComponent>
+    <MefComponent>Microsoft.VisualStudio.ArchitectureTools.TextTransformation.dll</MefComponent>
+		<MefComponent>Microsoft.VisualStudio.ArchitectureTools.Shell.dll</MefComponent>
+		<VsPackage>Microsoft.VisualStudio.ArchitectureTools.Shell.pkgdef</VsPackage>
+	</Content>
+</Vsix>

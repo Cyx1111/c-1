@@ -1,0 +1,11 @@
+﻿[$RootKey$\Packages\{00b73ab4-7a2a-4ddf-90c9-e78a163ab06a}]
+@="Microsoft.VisualStudio.Data.Tools.SqlObjectExplorer, SqlObjectExplorerPackage, Version=11.1.0.0, Culture=neutral, PublicKeyToken=2e6fdab672423145"
+"InprocServer32"="$WinDir$\SYSTEM32\MSCOREE.DLL"
+"Class"="Microsoft.VisualStudio.Data.Tools.SqlObjectExplorer.SqlObjectExplorerPackage"
+"CodeBase"="$RootFolder$Common7\IDE\Extensions\Microsoft\SQLDB\Microsoft.VisualStudio.Data.Tools.SqlObjectExplorer.dll"
+"CompanyName"="Microsoft Corporation"
+"ID"=dword:00000065
+"MinEdition"="Standard"
+"ProductVersion"="11.1"
+"ProductName"="Microsoft SQL Server Data Tools - SQL Object Explorer"
+

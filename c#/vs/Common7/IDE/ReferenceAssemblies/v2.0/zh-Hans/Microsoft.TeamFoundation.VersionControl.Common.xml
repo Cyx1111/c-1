@@ -1,0 +1,1215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.TeamFoundation.VersionControl.Common</name>
+  </assembly>
+  <members>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.ISCCProvider4Dot3ServiceIdentifier" />
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.ChangePendedFlags">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.ChangePendedFlags.Unknown">
+      <summary>服务器不支持此机制。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.ChangePendedFlags.None">
+      <summary>标志尚未设置。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.ChangePendedFlags.WorkingFolderMappingsUpdated">
+      <summary>一个或多个工作文件夹中更新之后调用。</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.CheckInOptions2">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.CheckInOptions2.None">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.CheckInOptions2.ValidateCheckInOwner">
+      <summary>确保作为签入所有者指定的标识引用了有效用户</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.CheckInOptions2.SuppressEvent">
+      <summary>取消该签入的事件</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.CheckInOptions2.DeleteShelveset">
+      <summary>在成功提交后删除搁置集到存储库</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.CheckInOptions2.OverrideGatedCheckIn">
+      <summary>跳过此签入封闭签入验证</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.CheckInOptions2.QueueBuildForGatedCheckIn">
+      <summary>，如果可能，将自动对封闭签入验证的生成</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.CheckInOptions2.AllContentUploaded">
+      <summary>服务器将允许调用签入为空或null列表项注册，签入(/all)，即使具有bit设置的编辑的更改。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.CheckInOptions2.AllowUnchangedContent">
+      <summary>t=The服务器将允许具有挂起的编辑签入的项，即使该目录未更改而不是取消更改(默认值)</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.CheckInOptions2.NoAutoResolve">
+      <summary>仅使用客户端。 提示客户端不尝试向自动解决冲突</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.CheckInOptions2.NoConflictsCheckForGatedCheckIn">
+      <summary>此标志仅影响服务器的行为，这些行为是服务器的路径的签入影响每个封闭生成定义。在服务器在搁置工作区并引发 GatedCheckinException 之前通常调用 CheckPendingChanges。如果对 CheckPendingChanges 的调用造成冲突，则 GatedCheckinException 不会引发异常; 而是签入失败则通知用户它们必须解决这些问题的冲突。如果此标志指定，则调用 CheckPendingChanges 跳过。这允许封闭签入搁置集后，即使签入的项不在之后，例如。生成代理工作区将搁置该搁置集此时尝试解决冲突。</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.CheckInState">
+      <summary>表示签入状态。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.CheckInState.Unknown">
+      <summary>默认初始状态。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.CheckInState.Paging">
+      <summary>签入将调用到服务器。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.CheckInState.Committed">
+      <summary>签入操作进行了。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.CheckInState.Failed">
+      <summary>签入任何内容()不会引发异常，但是，签入了(即移除了所有挂起的更改)</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.CodeChurnConstants">
+      <summary>代码使用的常数改动访问的工作对注册表、属性和设置。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.CodeChurnConstants.DetailsPropertyName">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.CodeChurnUtility">
+      <summary>实用工具选件类，用于分析代码改动详细信息。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.CodeChurnUtility.ConvertToInt(System.Byte[],System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+      <summary>采用一个代码改动属性值二进制格式并分析该返回代码改动详细信息。</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.ConflictOptions">
+      <summary>包含服务器若要将有关该冲突的客户端的选项</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.ConflictOptions.None">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.ConflictOptions.DisallowAutoMerge">
+      <summary>它应禁止自动合并的此选项通知客户端，它。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.ConflictOptions.PendingLocalVersionMismatch">
+      <summary>指示此冲突是由于本地/挂起的版本不匹配。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.ConflictOptions.LocalChangesRedundantInTargetVersion">
+      <summary>目前仅使用版本冲突。 此位设置，如果本地等待是多余的(不可应用)为版本移到的更改。</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.DestroyFlags">
+      <summary>使用的选项，则系统调用时在WebService销毁。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DestroyFlags.None">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DestroyFlags.Preview">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DestroyFlags.StartCleanup">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DestroyFlags.KeepHistory">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DestroyFlags.Silent">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DestroyFlags.AffectedChanges">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DestroyFlags.DeleteWorkspaceState">
+      <summary />
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.DiffFile">
+      <summary>行顺序从文件。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.DiffFile.Create(System.IO.Stream,System.Text.Encoding,Microsoft.TeamFoundation.VersionControl.Common.DiffOptions)">
+      <summary>创建指定的流的DiffFile。</summary>
+      <returns>流的DiffFile。</returns>
+      <param name="stream">使用的流。</param>
+      <param name="encoding">字符编码。流的。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.DiffFile.Create(System.String,System.Text.Encoding,Microsoft.TeamFoundation.VersionControl.Common.DiffOptions)">
+      <summary>为指定的文件创建DiffFile。</summary>
+      <returns>文件的DiffFile。</returns>
+      <param name="filePath">使用的文件的路径。</param>
+      <param name="fileEncoding">文件的字符编码。</param>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffFile.Encoding">
+      <summary>返回使用的编码来创建DiffFile实例</summary>
+      <returns>返回 <see cref="T:System.Text.Encoding" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffFile.HasPreamble">
+      <summary>返回true，如果文件的编码支持序文，并且该文件包含一篇序文</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.DiffLine">
+      <summary>一行从文件。</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffLine.Content">
+      <summary>获取行的内容。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffLine.EndOfLineTerminator">
+      <summary>获取行的行尾结束符。</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Diff.EndOfLineTerminator" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.DiffLine.GetHashCode">
+      <summary>获取行的哈希代码。</summary>
+      <returns>行的哈希代码</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.DiffLine.ToString">
+      <summary>检索DiffLine作为字符串</summary>
+      <returns>返回DiffLine</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.DiffLineComparer">
+      <summary>比较DiffLines的帮助器类选件</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.DiffLineComparer.#ctor(Microsoft.TeamFoundation.VersionControl.Common.DiffOptions)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.DiffLineComparer.Equals(Microsoft.TeamFoundation.VersionControl.Common.DiffLine,Microsoft.TeamFoundation.VersionControl.Common.DiffLine)">
+      <summary>，如果给定元素相等，则返回true。</summary>
+      <returns>True，如果两个元素相等</returns>
+      <param name="x">左元素</param>
+      <param name="y">正确的元素</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.DiffLineComparer.Equals(System.Object,System.Object)">
+      <summary>，如果给定元素相等，则返回true。</summary>
+      <returns>True，如果两个元素相等</returns>
+      <param name="left">左元素</param>
+      <param name="right">正确的元素</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.DiffLineComparer.GetHashCode(Microsoft.TeamFoundation.VersionControl.Common.DiffLine)">
+      <summary>为特定DiffElement提供哈希代码</summary>
+      <returns>哈希代码</returns>
+      <param name="element">DiffElement获取哈希代码。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.DiffLineComparer.GetHashCode(System.Object)">
+      <summary>为特定DiffElement提供哈希代码</summary>
+      <returns>哈希代码</returns>
+      <param name="element">DiffElement获取哈希代码。</param>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.DiffOptionFlags">
+      <summary>差异选项标记说明:，因为我们已提供了此枚举，则从旧引擎会将该几乎原义。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DiffOptionFlags.None">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DiffOptionFlags.IgnoreEndOfLineDifference">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DiffOptionFlags.IgnoreCase">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DiffOptionFlags.IgnoreWhiteSpace">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DiffOptionFlags.IgnoreKanaType">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DiffOptionFlags.IgnoreSymbols">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DiffOptionFlags.IgnoreNonSpace">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DiffOptionFlags.IgnoreWidth">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DiffOptionFlags.EnablePreambleHandling">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DiffOptionFlags.IgnoreLeadingAndTrailingWhiteSpace">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DiffOptionFlags.ScanFullFileForEncodingDetection">
+      <summary>如果为true，则文件将浏览编码检测。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DiffOptionFlags.ThrowIfDetectedEncodingMismatch">
+      <summary>引发，如果文件不能读取使用编码我们检测到。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DiffOptionFlags.IgnoreEndOfFileEndOfLineDifference">
+      <summary>忽略文件中的最后一行的行尾差异，如果差异是一个文件具有行尾(返回)</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.DiffOptions">
+      <summary>用于执行diffs可用的选项。 注意:，因为我们已提供了此选件类，则从旧引擎会将该几乎原义。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.DiffOptions.#ctor">
+      <summary>构造新的DiffOptions实例</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffOptions.CodePageOverride">
+      <summary>代码从command-line的页重写，非零方法的重写</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffOptions.CommandLineOptions">
+      <summary>通过的Command-line选项设置为第三方工具</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffOptions.ContextLines">
+      <summary>上下文的行数提供的使用它们的输出格式。</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffOptions.CultureInfo">
+      <summary>返回应使用的CultureInfo，如果任何DiffOption标志要求)。</summary>
+      <returns>返回 <see cref="T:System.Globalization.CultureInfo" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffOptions.Flags">
+      <summary>可用于差异操作设置的各种标志。</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.VersionControl.Common.DiffOptionFlags" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.DiffOptions.GetCodePage(System.Int32)">
+      <summary>如果有获取代码页重写。 否则返回提供的后备代码页。</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffOptions.OutputType">
+      <summary>使用的输出类型</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.VersionControl.Common.DiffOutputType" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffOptions.Recursive">
+      <summary>此差异是否应递归</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.DiffOptions.SetTargetEncodingToConsole">
+      <summary>设置目标编码的帮助器方法写入控制台的编码。</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffOptions.SourceEncoding">
+      <summary>源文件的编码。</summary>
+      <returns>返回 <see cref="T:System.Text.Encoding" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffOptions.SourceLabel">
+      <summary>应使用标记源的差异流的字符串。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffOptions.StreamWriter">
+      <summary>获取或设置输出流编写器。</summary>
+      <returns>返回 <see cref="T:System.IO.StreamWriter" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffOptions.TargetEncoding">
+      <summary>输出流的编码。</summary>
+      <returns>返回 <see cref="T:System.Text.Encoding" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffOptions.TargetLabel">
+      <summary>应使用标记目标diff流的字符串。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffOptions.UseThirdPartyTool">
+      <summary>此差异是否应尝试启动第三方工具</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffOptions.VssFormatType">
+      <summary>返回要使用，在设置输出流时的VSS输出子类型(如果有的话))。 此属性是严格备向后兼容目的。 此属性默认为VssOutputType.Vss与VSS命令行。</summary>
+      <returns>返回要生成的元素VSS diff输出。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffOptions.VssOutputWidth">
+      <summary>如果此属性来设置VSS输出到此宽度内的改编将进行调整。  在设置为-1输出都没有修整。</summary>
+      <returns>返回VSS输出格式的宽度。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.DiffOutputType">
+      <summary>可能的各种差异输出类型。 VSS输出类型有以下子类型。  注意:，因为我们已提供了此枚举，则从旧引擎会将该几乎原义。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DiffOutputType.Context">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DiffOutputType.RCS">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DiffOutputType.Ed">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DiffOutputType.Unified">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DiffOutputType.UnixNormal">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DiffOutputType.VSS">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DiffOutputType.Binary">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DiffOutputType.Visual">
+      <summary />
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.DiffSegment">
+      <summary>联接表差异厚片。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.DiffSegment.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffSegment.LatestByteLength">
+      <summary>在字节返回长度此厚片的最新文件流。</summary>
+      <returns>返回 <see cref="T:System.Int64" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffSegment.LatestLength">
+      <summary>长度(以标记)的此DiffSegment的最新文件。</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffSegment.LatestStart">
+      <summary>在最新的文件的开头的标记索引此DiffSegment的。</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffSegment.LatestStartOffset">
+      <summary>最新文件的开头的字节补偿此厚片的。</summary>
+      <returns>返回 <see cref="T:System.Int64" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffSegment.ModifiedByteLength">
+      <summary>在字节返回长度此厚片的目标文件流。</summary>
+      <returns>返回 <see cref="T:System.Int64" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffSegment.ModifiedLength">
+      <summary>长度(以标记)的此DiffSegment的已修改的文件。</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffSegment.ModifiedStart">
+      <summary>在已修改的文件的开头的标记索引此DiffSegment的。</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffSegment.ModifiedStartOffset">
+      <summary>开始的索引modifed该标记数组的标记。</summary>
+      <returns>返回 <see cref="T:System.Int64" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffSegment.Next">
+      <summary>在DiffSegment序列中的下一个厚片。 ，如果这是列表，结束返回null。</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.VersionControl.Common.DiffSegment" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffSegment.OriginalByteLength">
+      <summary>在字节返回长度此厚片的原始文件流。</summary>
+      <returns>返回 <see cref="T:System.Int64" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffSegment.OriginalLength">
+      <summary>返回标记数在原始文件的此DiffSegment的。</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffSegment.OriginalStart">
+      <summary>返回此DiffSegment的原始标记开始的索引。</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffSegment.OriginalStartOffset">
+      <summary>原始起始位置的索引在标记数组。</summary>
+      <returns>返回 <see cref="T:System.Int64" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffSegment.Type">
+      <summary>返回此DiffSegment DiffSegmentType。 (常见，修改，发生冲突)</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.VersionControl.Common.DiffSegmentType" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.DiffSegmentType">
+      <summary>DiffSegment/MergeHunk的类型。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DiffSegmentType.Common">
+      <summary>两个文件的内容相同该厚片的大小。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DiffSegmentType.Modified">
+      <summary>两个文件的内容为厚片的范围是不同的。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DiffSegmentType.Latest">
+      <summary>通用目录和后期了为厚片的范围是不同的。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DiffSegmentType.Conflict">
+      <summary>有两个常规/修改和常用/后期此文件的区域是不同的。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.DiffSegmentType.DiffCommon">
+      <summary>此文件的修改后的和最新区域是相同的，但是，常见的版本不同。</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.DiffSummary">
+      <summary>差异的摘要两个文件之间的</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.DiffSummary.#ctor(Microsoft.TeamFoundation.VersionControl.Common.DiffFile,Microsoft.TeamFoundation.VersionControl.Common.DiffFile,Microsoft.TeamFoundation.Diff.IDiffChange[],System.Boolean)">
+      <summary>构造新的DiffSummary从特定文件，并且diff更改列表。  ，如果请求， diff更改摘要列表中将包括。</summary>
+      <param name="original">原始文件顺序</param>
+      <param name="modified">已修改的文件顺序</param>
+      <param name="diffList">diff列表</param>
+      <param name="includeChanges">如果为true， diff更改列表中将包括在摘要</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.DiffSummary.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>用特定值创建 DiffSummary</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffSummary.Changes">
+      <summary>更改列表</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Diff.IDiffChange" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffSummary.ModifiedLineCount">
+      <summary>行数来修改的文件</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffSummary.OriginalLineCount">
+      <summary>行数在原始文件的</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.DiffSummary.ToString">
+      <summary>返回DiffSummary作为字符串</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffSummary.TotalLinesAdded">
+      <summary>添加行的总数</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffSummary.TotalLinesDeleted">
+      <summary>删除行的总数</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.DiffSummary.TotalLinesModified">
+      <summary>修改行的总数</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.GlobalPermissions">
+      <summary>定义了数据库的权限位掩码用于系统用于tblPermission.GrantedPermission和tblPermission.RevokedPermission的权限</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.GlobalPermissions.CreateWorkspace">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.GlobalPermissions.AdminWorkspaces">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.GlobalPermissions.AdminShelvesets">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.GlobalPermissions.AdminConnections">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.GlobalPermissions.AdminConfiguration">
+      <summary />
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.IMergeChange">
+      <summary>表示有关特定更改的信息。合并操作上。</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.IMergeChange.ChangeType">
+      <summary>差异的类型。</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.VersionControl.Common.MergeChangeType" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.IMergeChange.LatestChange">
+      <summary>表示后所有的最新更改对象更改</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Diff.IDiffChange" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.IMergeChange.LatestChanges">
+      <summary>原始的最新更改。</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Diff.IDiffChange" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.IMergeChange.ModifiedChange">
+      <summary>表示所有已更改的更改的修改后的更改对象</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Diff.IDiffChange" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.IMergeChange.ModifiedChanges">
+      <summary>原始的已修改的更改。</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Diff.IDiffChange" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.LabelSpec">
+      <summary>操作的Hatteras标签规范实用工具选件类。 它包含分析的格式，实例中，验证，依此类推。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.LabelSpec.Combine(System.String,System.String)">
+      <summary>从命标签名称和大小部件的限定标签名称</summary>
+      <returns>限定的标签名称</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.LabelSpec.IsLegalName(System.String)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.LabelSpec.IsLegalName(System.String,System.Boolean)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.LabelSpec.IsLegalScope(System.String)">
+      <summary>，如果labelScope是有效的标签范围，则返回true。 验证不通配符，它是服务器项目。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.LabelSpec.IsLegalSpec(System.String)">
+      <summary>，如果labelSpec是有效的标签规范，则返回true。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.LabelSpec.IsLegalSpec(System.String,System.Boolean)">
+      <summary>，如果labelSpec是有效的标签规范，则返回true。</summary>
+      <param name="labelSpec">验证的标签规范</param>
+      <param name="permitWildcardNames">指示在标签名称的通配符是否允许</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.LabelSpec.Parse(System.String,System.String,System.Boolean,System.String@,System.String@)">
+      <summary>分析窗体name@scope的标签规范并返回两个部分。 如果范围在标签规范未指定，请使用defaultScope参数。</summary>
+      <param name="spec">分析的标签规范</param>
+      <param name="defaultScope">labelScope的默认值(可能为空)</param>
+      <param name="permitWildcardNames">指示在标签名称的通配符是否允许</param>
+      <param name="labelName">返回的标签名称</param>
+      <param name="labelScope">返回的标签范围</param>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.MergeChangeType">
+      <summary>可能的更改的枚举合并操作的。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.MergeChangeType.Modified">
+      <summary>从原始序列的内容在被修改的顺序已更改。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.MergeChangeType.Latest">
+      <summary>从原始序列的内容在最新序列已更改。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.MergeChangeType.Both">
+      <summary>从原始序列的内容来修改的和最新序列已更改。 在已修改的和最新序列中已更改的内容是否相同和非冲突的。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.MergeChangeType.Conflict">
+      <summary>从原始序列的内容来修改的和最新序列已更改。 在已修改的和最新序列中已更改的内容是冲突的。</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.MergeOptionsEx">
+      <summary>完整设置合并选项，则将转换为int类型并将其发送到服务器，为了可以向后兼容的在将来的版本</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.MergeOptionsEx.None">
+      <summary>没有选项</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.MergeOptionsEx.ForceMerge">
+      <summary>指示服务器组件之前合并的源代码版本</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.MergeOptionsEx.Baseless">
+      <summary>指示服务器执行了项目之间的baseless合并</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.MergeOptionsEx.NoMerge">
+      <summary>实际提示服务器不可pend合并，但是，返回必须合并操作的预览</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.MergeOptionsEx.AlwaysAcceptMine">
+      <summary>指示服务器放弃从源中生成的所有更改，使从目标只更改。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.MergeOptionsEx.Silent">
+      <summary>指示服务器禁止所有get操作并冲突。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.MergeOptionsEx.NoImplicitBaseless">
+      <summary>预先在TFS仅工作2008中，提示服务器不为隐式使用的同一相对路径的又无缘无故地的将项目从根源和目标根。  即$/proj/trunk - &gt; $/proj/branch，则新文件中将设置此选项的$/proj/trunk/a.cs和$/proj/branch/a.cs将调用服务器不尝试合并2文件</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.MergeOptionsEx.Conservative">
+      <summary>，在声明组合为冲突时，指示服务器是保守的。 可从TFS 2010。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.MergeOptionsEx.NoAutoResolve">
+      <summary>仅使用客户端。 提示客户端不尝试向自动解决冲突</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.MergeSummary">
+      <summary>将摘要信息提供变化总数在不同的更改分类上的。  注意:，因为我们已提供了此选件类，则从旧引擎会将该几乎原义。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.MergeSummary.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.MergeSummary.TotalBoth">
+      <summary>仅更改总数来修改的文件和最新文件中(不是原始的)。</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.MergeSummary.TotalCommon">
+      <summary>更改总数共有的所有文件。</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.MergeSummary.TotalConflicting">
+      <summary>冲突更改的总数。</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.MergeSummary.TotalLatest">
+      <summary>仅更改总数在最新的文件中。</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.MergeSummary.TotalModified">
+      <summary>仅更改总数来修改的文件中。</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.OwnershipState">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.OwnershipState.Unknown">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.OwnershipState.OwnedByAuthorizedUser">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.OwnershipState.NotOwnedByAuthorizedUser">
+      <summary />
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.PendChangesOptions">
+      <summary>PendChanges web服务的选项。  在该连接中实际上将发送为整数值，而不是序列化枚举。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.PendChangesOptions.None">
+      <summary>客户端未指定任何选项</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.PendChangesOptions.GetLatestOnCheckout">
+      <summary>客户端请求同步到一个项的最新版本在签出(PendingEdit)。  在服务器下载最新版本的文件到客户端。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.PendChangesOptions.Silent">
+      <summary>这指示服务器不返回操作的GetOps。 在以下情况下，当GetLatestOnCheckout和无启用时，您仍可以接收GetOp，如果必须GetLatest。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.PendChangesOptions.ForceCheckOutLocalVersion">
+      <summary>这指示服务器强制“签出本地版本”行为。  例如，如果两个指定，此标志将取代上面GetLatestOnCheckout标志。  此标志将取代GetLatestOnCheckout团队项目批注。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.PendChangesOptions.SuppressItemNotFoundFailures">
+      <summary>此标志提示客户端不报告类型ItemNotFoundException服务器返回的所有失败作为NonFatalErrors。</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.PendingChangePropertyVersions">
+      <summary>SetPendingChangeProperty方案的活动版本</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.PendingChangePropertyVersions.NonVersioned">
+      <summary>当挂起的签入更改，它将转换为VersionedItem属性不与特定版本</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.PendingChangePropertyVersions.SpecificVersion">
+      <summary>当挂起的签入更改，它将转换为VersionedItem属性与变更集创建的版本</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.PropertyConstants">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.PropertyConstants.CreatedByKey">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.PropertyConstants.QueryAllPropertiesWildcard">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.ProxyFlags">
+      <summary>代理记录的标志</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.ProxyFlags.None">
+      <summary>未指定的标志</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.ProxyFlags.SiteDefault">
+      <summary>该代理是默认网站</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.ProxyFlags.GlobalDefault">
+      <summary>该代理是一个全局默认</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.QueryMergesExtendedOptions">
+      <summary>通过的选项对查询将扩展方法</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.QueryMergesExtendedOptions.None">
+      <summary>未指定的选项</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.QueryMergesExtendedOptions.QueryRenames">
+      <summary>指定查询只应查询重命名的源指定查询只应查询默认值为查询合并的源默认值为查询合并的源或目标重命名的源或目标</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.QueryMergesExtendedOptions.IncludeDownloadInfo">
+      <summary>include下载信息。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.QueryMergesExtendedOptions.QueryTargetMerges">
+      <summary>指定查询应当查询特定源项目的目标。</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.AuthenticatedUser">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.CheckinNoteNameSize">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.ContentField">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.Download">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.DownloadServiceIdentifier">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.EncodingBinary">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.EncodingUnchanged">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.ExceptionHeader">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.HashField">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.IBISEnablement">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.IndeterminateChangeset">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.IProjectMaintenance">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.ISCCAdmin">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.ISCCAdminServiceIdentifier">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.ISCCAdminServiceIdentifierString">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.ISCCProvider">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.ISCCProvider3">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.ISCCProvider3ServiceIdentifier">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.ISCCProvider4">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.ISCCProvider4Dot3" />
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.ISCCProvider4ServiceIdentifier">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.ISCCProviderServiceIdentifier">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.LengthField">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.LinkingProviderInterfaceName">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.MaxChangesetCommentSize">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.MaxCommentSize">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.MaxComputerNameSize">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.MaxIdentityNameSize">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.MaxLabelCommentSize">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.MaxLabelNameSize">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.MaxLocalPathComponentSize">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.MaxLocalPathSize">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.MaxPolicyNameSize">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.MaxPolicyOverrideCommentSize">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.MaxPropertyNameSize">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.MaxServerPathComponentSize">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.MaxServerPathSize">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.MaxShelvesetNameSize">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.MaxWorkspaceNameSize">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.ModifiedDateField">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.NoCICheckInComment">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.RangeField">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.ServerItemField">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.Upload">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.UploadServiceIdentifier">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.WorkspaceNameField">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.WorkspaceOwnerField">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.RepositoryFailureCodes">
+      <summary>版本控制操作失败的代码。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryFailureCodes.MergeBranchSourceReadPermissionWarning">
+      <summary>，当取消搁置集时，获取缺少的读取权限警告代码。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryFailureCodes.QueryShelvedItemsReadPermissionWarning">
+      <summary>，当查询已搁置的项目时，获取缺少的读取权限警告代码。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RepositoryFailureCodes.UnshelveReadPermissionWarning">
+      <summary>，当取消搁置集时，获取缺少的读取权限警告代码。</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.RollbackOptions">
+      <summary>回滚选项枚举在客户端/服务器是使用。 排列到服务器为整数</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RollbackOptions.None">
+      <summary>客户端未指定任何选项</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RollbackOptions.ToVersion">
+      <summary>指示某一版本请求的客户端最后期服务器在这种情况下将下载最新版本的文件到客户端。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RollbackOptions.Silent">
+      <summary>指示到服务器不返回任何获取操作或冲突信息</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RollbackOptions.KeepMergeHistory">
+      <summary>不回滚与此回滚操作的合并历史记录。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.RollbackOptions.NoAutoResolve">
+      <summary>仅使用客户端。 提示客户端不尝试向自动解决冲突</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.SecurityConstants">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.SecurityConstants.AllGlobalPermissions">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.SecurityConstants.AllItemPermissions">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.SecurityConstants.GlobalSecurityResource">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.SecurityConstants.PrivilegeSecurityNamespaceGuid">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.SecurityConstants.RepositorySecurityNamespaceGuid">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.SecurityConstants.WorkspaceRootSecurityResource">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.SecurityConstants.WorkspaceSecurityNamespaceGuid">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.SupportedFeatures">
+      <summary>能够枚举由客户端或服务器支持</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.SupportedFeatures.None">
+      <summary>此枚举的函数都不受支持。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.SupportedFeatures.GetLatestOnCheckout">
+      <summary>客户端支持选项同步到一个项目的最新版本在签出(PendingEdit)。  如果此标志设置，但GetLatestOnCheckout不在PendChangesOptions设置，则客户端将同步，仅当团队项目设置了GetLatestOnCheckout。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.SupportedFeatures.OneLevelMapping">
+      <summary>这意味着服务器/客户端支持一个级别映射</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.SupportedFeatures.Destroy">
+      <summary>销毁功能可用在服务器。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.SupportedFeatures.CreateBranch">
+      <summary>能够在服务器上创建一个做的分支。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.SupportedFeatures.GetChangesForChangeset">
+      <summary>能够对变更集中的更改。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.SupportedFeatures.ProxySuite">
+      <summary>这表明代理服务套件:AddProxy ()， DeleteProxy ()， QueryProxies ()，</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.SupportedFeatures.LocalVersions">
+      <summary>这表明能够查询从服务器的本地版本信息</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.SupportedFeatures.BatchedCheckins">
+      <summary>这表明能够调用挂起的更改下从服务器，并对挂起签入的更改，在做出更改之前。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.SupportedFeatures.WorkspacePermissions">
+      <summary>服务器支持工作区权限</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.SupportedFeatures.CheckinDates">
+      <summary>服务器支持能够将签入日期</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.SupportedFeatures.All">
+      <summary>这是支持所有功能的组合。 发生在版本之间的更改。 可以发送该它的值(从客户端对象模型到服务器，或者从服务器向客户端对象模型)和掩码，但是，您不应测试相等性它。</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.VersionControlConstants">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.VersionControlConstants.NoRevertToUpdate">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.VersionControlConstants.UpdateRevertToNotPresent">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath">
+      <summary>操作的版本控制项规范的实用工具选件类。它包含分析的格式，实例中，验证，依此类推。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.CheckForIllegalDollarInPath(System.String)">
+      <summary>此方法将引发InvalidPathException，如果有美元符号($ “”)按照路径分隔符(“/”)，，因为路径的部件不能从美元符号开始。</summary>
+      <param name="path">检查的路径(必须已教规本地化路径)。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.Combine(System.String,System.String)">
+      <summary>返回从父和相对构造的完全限定和教规本地化的路径。 如果相对已完全限定路径，请返回相对的一个教规本地化的副本。 如果相对不是完全限定的，请返回由追加相对于父和教规本地化结果的路径。 假定，父已教规本地化。</summary>
+      <returns>合并的，教规本地化的路径。</returns>
+      <param name="parent">追加的父相对路径(如果相对不是完全限定)。</param>
+      <param name="relative">限定可能会部分路径相对于父级。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.Combine(System.String,System.String,System.String)">
+      <summary>命名基本本地路径，基本服务器路径和目标本地路径计算目标服务器路径。 这是通过启动本地路径的相对路径，该转换为服务器相对路径并将其完成对基服务器路径。 注意:，则无法生成目标服务器路径，此方法将引发无效的路径异常。 此可能的原因包括: 1) 本地路径是在驱动器上并不是相对的。  2) 合并计算的相对路径对基服务器路径导致在根的“负文件夹” (深度， $)上的目录。  示例:合并(@ " c:\myproj\abc\xyz”， @ " c:\myproj\abc\blech”， @ " $/abc”) - &gt; @ " $/blech”合并(@ " c:\myproj\abc\xyz”， @ " c:\myproj\abc\xyz\x”， @ " $/xyz”) - &gt; @ " $/xyz/x”合并(@ " c:\myproj\abc\xyz”， @ " c:\yourproj\abc\xyz\x”， @ " $/xyz”) - &gt; @ " InvalidPathException”合并(@ " c:\myproj\abc\xyz”， @ " c:\yourproj\abc\xyz”， @ " $/myproj/abc/xyz”) - &gt; @ " $/yourproj/abc/xyz”</summary>
+      <returns>目标项的绝对服务器路径。</returns>
+      <param name="baseLocalPath">源项本地路径。</param>
+      <param name="targetLocalPath">目标项的本地路径。</param>
+      <param name="baseServerPath">源项目的服务器路径。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.Compare(System.String,System.String)">
+      <summary>比较两个版本控制项路径。</summary>
+      <returns>0，如果它们相等，大于0，则第一个较大的，低于0，则第二是更大。</returns>
+      <param name="item1">比较的第一项。</param>
+      <param name="item2">比较的第二个项目。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.Compare(System.String,System.String,System.Int32,System.Int32)">
+      <summary>比较两个版本控制项路径。</summary>
+      <returns>0，如果它们相等，大于0，则第一个较大的和小于0，则第二是更大。</returns>
+      <param name="item1">比较的第一项。</param>
+      <param name="item2">比较的第二个项目。</param>
+      <param name="item1Length">比较的第一项的长度。</param>
+      <param name="item2Length">比较的第二个项目的长度。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.CompareCaseSensitive(System.String,System.String)">
+      <summary>比较两个版本控制项路径与路径的每个部件中的不区分大小写的方法除最后一项在路径。 最后一项在路径进行比较以区分大小写的方法。</summary>
+      <returns>0，如果它们相等，大于0，则第一个较大的，低于0，则第二是更大。</returns>
+      <param name="item1">比较的第一项。</param>
+      <param name="item2">比较的第二个项目。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.CompareTopDown(System.String,System.String)">
+      <summary>比较两个版本控制路径并将其返回相对顺序。这与比较，但它在子任务后排序和。</summary>
+      <returns>0，如果它们相等，大于 0，则第一个较大的，低于 0，则第二是更大。</returns>
+      <param name="item1">比较的第一项。</param>
+      <param name="item2">比较的第二个项目。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.CompareTopDownUI(System.String,System.String)">
+      <summary>比较两个版本控制路径并将其返回相对于命令显示的(不区分区域性和的大小写)。 这与比较，但它在子任务后排序和。</summary>
+      <returns>0，如果它们相等，大于0，则第一个较大的，低于0，则第二是更大。</returns>
+      <param name="item1">比较的第一项。</param>
+      <param name="item2">比较的第二个项目。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.CompareUI(System.String,System.String)">
+      <summary>比较所示的两个版本控制项路径(区分区域性且不区分大小写)。</summary>
+      <returns>0，如果它们相等，大于0，则第一个较大的，低于0，则第二是更大。</returns>
+      <param name="item1">比较的第一项。</param>
+      <param name="item2">比较的第二个项目。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.CompareUI(System.String,System.String,System.Int32,System.Int32)">
+      <summary>比较所示的两个版本控制项路径(区分区域性且不区分大小写)。</summary>
+      <returns>0，如果它们相等，大于0，则第一个较大的，低于0，则第二是更大。</returns>
+      <param name="item1">比较的第一项。</param>
+      <param name="item2">比较的第二个项目。</param>
+      <param name="item1Length">比较的第一项的长度。</param>
+      <param name="item2Length">比较的第二个项目的长度。</param>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.DepthFirstTreeComparer">
+      <summary>此比较器可用于排序与树遍历的版本控制路径深度第一个，即。</summary>
+      <returns>返回 <see cref="T:System.Collections.Generic.IComparer`1" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.Equals(System.String,System.String)">
+      <summary>比较相等的两个文件规范。</summary>
+      <returns>，如果项目匹配，则返回true。</returns>
+      <param name="item1">比较的第一项。</param>
+      <param name="item2">比较的第二个项目。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.EqualsCaseSensitive(System.String,System.String)">
+      <summary>检查相等的两个文件路径。 返回它们是否相等。在路径的每个部件中的不区分大小写的方法除最后一项在路径。 最后一项在路径进行比较以区分大小写的方法。</summary>
+      <returns>True，则，因此，只有当这些相等在区分大小写的比较。</returns>
+      <param name="item1">比较的第一项。</param>
+      <param name="item2">比较的第二个项目。</param>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.FullPathComparer">
+      <summary>返回完全指定的服务器路径的字符串比较器。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.GetCommonParent(System.String,System.String)">
+      <summary>将两个服务器路径，请从返回父两个项目的$的最更的项目。  如果两个路径之一为空，其他将返回。  如果两个路径为空， ArgumentNullException将引发。</summary>
+      <returns>从父path1和path2 " $/的最更的项目。</returns>
+      <param name="path1">从开始$的服务器路径</param>
+      <param name="path2">从开始$的服务器路径</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.GetExtension(System.String)">
+      <summary>获取从版本控制规范的文件扩展名。</summary>
+      <returns>扩展，不包含句点。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.GetFileName(System.String)">
+      <summary>返回从一教规本地化的路径的最后一个路径元素。 例如，通过“$/abc/xyz”将返回“xyz”。 通过“$”将返回""。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.GetFolderDepth(System.String)">
+      <summary>返回path元素的级别数此规范的。 $将返回0个$/abc将返回1个$/abc/xyz将返回2，依此类推。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.GetFolderDepth(System.String,System.Int32)">
+      <summary>返回path元素的级别数此规范的最大深度。 $将返回0个$/abc将返回1个$/abc/xyz将返回2，依此类推。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.GetFolderName(System.String)">
+      <summary>获取指定的教规本地化的路径的父文件夹。 如果“$”通过， “$”形式返回父级。</summary>
+      <returns>父文件夹。</returns>
+      <param name="item">路径获取父文件夹。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.GetFullPath(System.String)">
+      <summary>教规本地化指定的项规范并返回字符串。 这将使操作如移除。“s，转换\到/中，等等。 它引发InvalidPathException，如果项目为空字符串，包含无效字符包含嵌入美元符号(通配符不被视为无效在检查)，或太长。</summary>
+      <returns>项目的规范字符串形式。</returns>
+      <param name="item">教规本地化的项规范。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.GetFullPath(System.String,System.Boolean)">
+      <summary>教规本地化指定的项规范并返回字符串。 这将使操作如移除。“s，转换\到/中，等等。 它引发InvalidPathException，如果项目为空字符串，包含无效字符包含嵌入美元符号(通配符不被视为无效在检查)，或太长。</summary>
+      <returns>项目的规范字符串形式。</returns>
+      <param name="item">教规本地化的项规范。</param>
+      <param name="checkReservedCharacters">布尔型标志是否验证版本控制保留字符。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.GetRelativeStartIndex(System.String,System.String)">
+      <summary>命名路径和文件夹，则返回该子字符串的索引。路径相对于个文件夹。如果路径不在文件夹下因此 0 返回 (表示整个路径)。MakeRelative (@ " $/src/project/abc.cpp”，@ " $/src”) - &gt; 6 MakeRelative (@ " $/src/project/abc.cpp”，@ " $/specs”) - &gt; 0 MakeRelative (@ " $/src/project/abc.cpp”，@ " $/src/proj”) - &gt; 0</summary>
+      <returns>相对路径部件索引在路径。</returns>
+      <param name="folder">使其相对的文件夹。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.GetTeamProject(System.String)">
+      <summary>返回给定的顶级“团队项目”文件夹服务器项目。</summary>
+      <returns>从版本控制规范的顶级项。</returns>
+      <param name="item">完全限定的服务器项目</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.GetTeamProjectName(System.String)">
+      <summary>返回一个顶级“给定的团队项目服务器项目。</summary>
+      <returns>从版本控制规范的顶级项。</returns>
+      <param name="item">完全限定的服务器项目。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.IsCanonicalizedPath(System.String,System.Boolean)">
+      <summary>，如果路径。教规本地化，则返回true。 路径不能在路径部件的开头包含一个$，或者任何无效字符。</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.IsImmediateChild(System.String,System.String)">
+      <summary>，如果项目是父的直接子级，则返回true。</summary>
+      <returns>，如果项目是父的直接子级，则为true。</returns>
+      <param name="item">检查项。</param>
+      <param name="parent">检查的父级。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.IsRootFolder(System.String)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.IsServerItem(System.String)">
+      <summary>返回true;如果指定字符串应该是服务器项目(而不是本地项目)。 不需要路径。教规本地化。 所有服务器项目路径是绝对的。</summary>
+      <returns>，如果该字符串为服务器项目，则为true。</returns>
+      <param name="path">检查的路径。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.IsSubItem(System.String,System.String)">
+      <summary>返回true，如果项目等于或在(层次结构)父级下。</summary>
+      <returns>True，如果项目是相等或父级下。</returns>
+      <param name="item">检查项。</param>
+      <param name="parent">检查的父级。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.IsTeamProject(System.String)">
+      <summary>返回传递的服务器项目是否团队项目 ($/abc、$/def 而不是 $/abc/efg 也不 $)</summary>
+      <returns>该项是否为团队项目。</returns>
+      <param name="item">完全限定的服务器项目</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.IsValidFolderName(System.String,System.String@)">
+      <summary>检查指定的文件夹名称是否有效。 由文件夹名称，我们引用一个文件夹，而不是完整路径。  通配符不允许示。  例如，一个文件夹名称在下面的完整路径可以是A、B、C $/A/B/C/file.txt</summary>
+      <returns>True，如果文件夹名称是否有效。</returns>
+      <param name="name">验证的文件夹的名称。</param>
+      <param name="error">错误字符串，如果文件夹名称无效;否则，则为null。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.IsValidPath(System.String)">
+      <summary>，如果该路径是有效的，则返回true;错误否则为。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.IsWildcard(System.String)">
+      <summary>确定指定的路径的最后一个元素是否包含通配符。路径可以是完全限定。</summary>
+      <returns>True，则路径包含通配符。</returns>
+      <param name="path">检查的路径。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.MakeRelative(System.String,System.String)">
+      <summary>命名路径和文件夹，则返回相对路径文件夹。 如果路径不在文件夹下路径返回非限定。 路径和文件夹假定在规范格式。 示例:MakeRelative (@ " $/src/project/abc.cpp”， @ " $/src”) - &gt; @ "项/abc.cpp” MakeRelative (@ " $/src/project/abc.cpp”， @ " $/specs”) - &gt; @ " $/src/project/abc.cpp” MakeRelative (@ " $/src/project/abc.cpp”， @ " $/src/proj”) - &gt; @ " $/src/project/abc.cpp”</summary>
+      <returns>相对路径。</returns>
+      <param name="item">提交的相对路径。</param>
+      <param name="folder">使其相对的文件夹。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.MakeRelative(System.String,System.String,System.Boolean)">
+      <summary>命名路径和文件夹，则返回相对路径文件夹。如果路径不在文件夹下，并且递归参数是错误路径然后返回非限定。否则，迭代方法在成为项目相对的指定文件夹和尝试的每个父目录。路径和文件夹假定在规范格式。示例:MakeRelative (@ " $/src/project/abc.cpp”，@ " $/src”，错误) - &gt; @ " 项/abc.cpp” MakeRelative (@ " $/src/project/abc.cpp”，@ " $/specs”，错误) - &gt; @ " $/src/project/abc.cpp” MakeRelative (@ " $/src/project/abc.cpp”，@ " $/src/proj”，错误) - &gt; @ " $/src/project/abc.cpp” MakeRelative (@ " $/src/project/abc.cpp”，@ " $/src”，为 true) - &gt; @ " 项/abc.cpp” MakeRelative (@ " $/src/project/abc.cpp”，@ " $/specs”，为 true) - &gt; @”。/src/project/abc.cpp” MakeRelative (@ " $/src/project/abc.cpp”，@ " $/src/proj”，为 true) - &gt; @”。/project/abc.cpp”</summary>
+      <returns>相对路径。</returns>
+      <param name="item">提交的相对路径。</param>
+      <param name="folder">使其相对的文件夹。</param>
+      <param name="recursive">指定的标志方法是否应相对化的文件夹的父级。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.Match(System.String,System.String,System.String,System.Boolean)">
+      <summary>比较一个项目以确定它是否匹配可能是通配符的文件夹和一个名称。如果递归为 true 的所有匹配项。matchFolder 下将匹配。通过使用 NTFS 文件系统匹配规则，通配符与执行。</summary>
+      <returns>则为 true，如果项目匹配，否则错误。</returns>
+      <param name="item">要匹配的项。</param>
+      <param name="matchFolder">匹配的文件夹。</param>
+      <param name="matchPattern">匹配的通配符。</param>
+      <param name="recursive">匹配是否以递归方式发生。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.MatchFileName(System.String,System.String)">
+      <summary>与指定的项目的最终元素设置为指定的通配符。</summary>
+      <returns>True，则通配符匹配。</returns>
+      <param name="item">与的完全限定路径。</param>
+      <param name="matchPattern">匹配的通配符。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.Parse(System.String,System.String@,System.String@)">
+      <summary>分析特定教规本地化的项规范到父文件夹和最后一个路径元素。 如果“$”通过，父级为“$”，名称为" "。</summary>
+      <param name="item">分析的项添加到父路径和名称。</param>
+      <param name="parent">返回的父路径。</param>
+      <param name="name">返回的名称。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.PrependRootIfNeeded(System.String)">
+      <summary>预置根的实用工具方法 ($) 到文件夹 - 最用于获取团队项目的文件夹，如果只有他的名称。</summary>
+      <returns>开始从根文件夹的路径。</returns>
+      <param name="folder">可以从 $ 已启动的文件夹路径。</param>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.RootFolder">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.Separator">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.StringComparer">
+      <summary>这是服务器路径比较的属性实例的象字典哈希。</summary>
+      <returns>返回 <see cref="T:System.StringComparer" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPath.ValidatePath(System.String)">
+      <summary>验证服务器路径。 不允许使用通配符。 引发异常，如果无效。</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPropertyKinds">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPropertyKinds.Annotation">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPropertyKinds.Changeset">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPropertyKinds.ImmutableVersionedItem">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPropertyKinds.PendingChange">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPropertyKinds.Shelveset">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.VersionControlPropertyKinds.VersionedItem">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.VersionControlWellKnownGroups">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.VersionControlWellKnownGroups.ProxyServiceGroup">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.VersionedItemPermissions">
+      <summary>定义了数据库的权限位掩码用于用于tblPermission.GrantedPermission和tblPermission.RevokedPermission (文件或文件夹)的已进行版本管理的项</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.VersionedItemPermissions.Read">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.VersionedItemPermissions.PendChange">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.VersionedItemPermissions.Checkin">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.VersionedItemPermissions.Label">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.VersionedItemPermissions.Lock">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.VersionedItemPermissions.ReviseOther">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.VersionedItemPermissions.UnlockOther">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.VersionedItemPermissions.UndoOther">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.VersionedItemPermissions.LabelOther">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.VersionedItemPermissions.AdminProjectRights">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.VersionedItemPermissions.CheckinOther">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.VersionedItemPermissions.Merge">
+      <summary>确定特定用户是否有权执行合并操作。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.VersionedItemPermissions.ManageBranch">
+      <summary>确定特定用户是否有权控制分支对象。  管理包含以下操作:创建分支对象，更新分支对象元数据，销毁分支对象。  请注意此权限不适用于常规分支。</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.VssOutputType">
+      <summary>支持的差异输出从visual源安全类型。 注意:，因为我们已提供了此枚举，则从旧引擎会将该几乎原义。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.VssOutputType.Vss">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.VssOutputType.Unix">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.VssOutputType.SideBySide">
+      <summary />
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.WorkspaceLocation">
+      <summary>指示数据的位置(挂起的更改，本地版本)为此工作区存储。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.WorkspaceLocation.Server">
+      <summary>指示服务器端(繁体)工作区，向后兼容与TFS 2005-2010。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.WorkspaceLocation.Local">
+      <summary>在客户端指示本地工作区，当挂起的更改和本地版本数据存储区。</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.WorkspaceOptions">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.WorkspaceOptions.None">
+      <summary />
+    </member>
+    <member name="F:Microsoft.TeamFoundation.VersionControl.Common.WorkspaceOptions.SetFileTimeToCheckin">
+      <summary>设置最近下载的文件的上次修改时间对签入时间。</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.VersionControl.Common.WorkspaceSpec">
+      <summary>操作的Hatteras工作区规范实用工具选件类。 它包含分析的格式，实例中，验证，依此类推。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.WorkspaceSpec.Combine(System.String,System.String)">
+      <summary>生成从单独的工作区和所有者部件的限定工作区名称。</summary>
+      <returns>限定工作区名称</returns>
+      <param name="workspace">工作区名称</param>
+      <param name="owner">工作区所有者</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.WorkspaceSpec.Combine(System.String,System.String,System.String)">
+      <summary>生成与所有者消除完全限定的工作区名称从单独的工作区和所有者部件。</summary>
+      <returns>完全限定的工作区名称</returns>
+      <param name="workspace">工作区名称</param>
+      <param name="ownerDisplay">工作区所有者显示名称</param>
+      <param name="ownerUnique">工作区所有者唯一名称</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.WorkspaceSpec.IsLegalName(System.String)">
+      <summary>检查工作区名称是否大于最大长度仅包含有效字符并小于，而不包含工作区分隔符。</summary>
+      <returns>，如果工作区名称有效，则为true;错误否则</returns>
+      <param name="workspaceName">检查的工作区名称</param>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.WorkspaceSpec.OwnerDisambiguationSeparatorEnd">
+      <summary>返回所有者消除分隔符的字符串末尾。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.WorkspaceSpec.OwnerDisambiguationSeparatorStart">
+      <summary>返回所有者消除分隔符的启动字符串。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.WorkspaceSpec.Parse(System.String,System.String,System.String,System.String@,System.String@,System.String@)">
+      <summary>分析窗体工作区的工作区规范; 用户和返回两个部分。 如果用户名在工作区规范未指定(或完全限定)，请使用来自defaultUser参数的信息。 注意:此方法可以限定的用户名(即没有域\标题)，此实例不尝试提供缺少的部分。 调用方负责执行此操作。</summary>
+      <param name="spec">分析的工作区规范</param>
+      <param name="defaultUser">完全限定的默认用户</param>
+      <param name="workspaceName">返回的工作区名称</param>
+      <param name="workspaceOwner">返回的工作区所有者</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.WorkspaceSpec.Parse(System.String,System.String,System.String@,System.String@)">
+      <summary>分析窗体工作区的工作区规范; 用户和返回两个部分。 如果用户名在工作区规范未指定(或完全限定)，请使用来自defaultUser参数的信息。 注意:此方法可以限定的用户名(即没有域\标题)，此实例不尝试提供缺少的部分。 调用方负责执行此操作。</summary>
+      <param name="spec">分析的工作区规范</param>
+      <param name="defaultUser">完全限定的默认用户</param>
+      <param name="workspaceName">返回的工作区名称</param>
+      <param name="workspaceOwner">返回的工作区所有者</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.VersionControl.Common.WorkspaceSpec.SanitizeProposedName(System.String)">
+      <summary>在给定建议的名称搁置集或工作区，截断它在搁置集工作区名称的最大长度，并移除无效字符。 名称验证由服务器强制。 清理清理清理名称的处理是当前基于此对象模型的版本。 当不太可能时，可能的，则此方法用于esprtfs的未来版本中，生成的名称可能不活动是由于在规则更改工作区和搁置集名称的。</summary>
+      <returns>已清洁的名称工作区或搁置集</returns>
+      <param name="proposedName">建议的名称工作区或搁置集</param>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.VersionControl.Common.WorkspaceSpec.Separator">
+      <summary>返回WorkspaceSpec的分隔符字符。</summary>
+      <returns>返回 <see cref="T:System.Char" />。</returns>
+    </member>
+  </members>
+</doc>

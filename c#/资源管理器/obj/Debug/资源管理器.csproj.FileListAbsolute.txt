@@ -1,0 +1,9 @@
+F:\C#\资源管理器\bin\Debug\资源管理器.exe.config
+F:\C#\资源管理器\bin\Debug\资源管理器.exe
+F:\C#\资源管理器\bin\Debug\资源管理器.pdb
+F:\C#\资源管理器\obj\Debug\资源管理器.csprojResolveAssemblyReference.cache
+F:\C#\资源管理器\obj\Debug\资源管理器.Form1.resources
+F:\C#\资源管理器\obj\Debug\资源管理器.Properties.Resources.resources
+F:\C#\资源管理器\obj\Debug\资源管理器.csproj.GenerateResource.Cache
+F:\C#\资源管理器\obj\Debug\资源管理器.exe
+F:\C#\资源管理器\obj\Debug\资源管理器.pdb

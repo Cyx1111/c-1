@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="1024" />
+    <Description Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="1025" />
+    <Icon Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="4017" />
+    <TemplateID>Microsoft.VB.WinRT.SearchContract</TemplateID>
+    <TemplateGroupID>WinRT-Managed</TemplateGroupID>
+    <ProjectType>VisualBasic</ProjectType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>SearchResultsPage.xaml</DefaultName>
+    <ShowByDefault>false</ShowByDefault>
+    <SortOrder>91</SortOrder>
+    <PreviewImage>SearchContract.png</PreviewImage>
+    <TargetPlatformName>Windows</TargetPlatformName>
+    <RequiredPlatformVersion>8</RequiredPlatformVersion>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="true" ItemType="Page" SubType="Designer" CustomTool="MSBuild:Compile" TargetFileName="$fileinputname$.xaml">SearchResultsPage.xaml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="true" TargetFileName="$fileinputname$.xaml.vb">SearchResultsPage.xaml.vb</ProjectItem>
+
+    <ProjectItem ReplaceParameters="false" TargetFileName="$wizardcommonprefix$ReadMe.txt">ReadMe.txt</ProjectItem>
+    <ProjectItem ReplaceParameters="false" TargetFileName="$wizardcommonprefix$StandardStyles.xaml">StandardStyles.xaml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$BindableBase.vb">BindableBase.vb</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$BooleanToVisibilityConverter.vb">BooleanToVisibilityConverter.vb</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$BooleanNegationConverter.vb">BooleanNegationConverter.vb</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$LayoutAwarePage.vb">LayoutAwarePage.vb</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$RichTextColumns.vb">RichTextColumns.vb</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$SuspensionManager.vb">SuspensionManager.vb</ProjectItem>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.WinRT.TemplateWizards, Version=11.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.WinRT.TemplateWizards.SmartItem.Wizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <CommonOptional>ReadMe.txt</CommonOptional>
+    <CommonRequired>StandardStyles.xaml</CommonRequired>
+    <CommonRequired>BindableBase.vb</CommonRequired>
+    <CommonRequired>BooleanToVisibilityConverter.vb</CommonRequired>
+    <CommonRequired>BooleanNegationConverter.vb</CommonRequired>
+    <CommonRequired>LayoutAwarePage.vb</CommonRequired>
+    <CommonRequired>RichTextColumns.vb</CommonRequired>
+    <CommonRequired>SuspensionManager.vb</CommonRequired>
+    <Activation>
+      <AppMethod Name="OnSearchActivated" CommentPrefix="' ">
+        <![CDATA[
+        ''' <summary>
+        ''' 在激活应用程序以显示搜索结果时调用。
+        ''' </summary>
+        ''' <param name="args">有关激活请求的详细信息。</param>
+        Protected Overrides Async Sub OnSearchActivated(args As Windows.ApplicationModel.Activation.SearchActivatedEventArgs)
+
+            ' TODO: 在 OnWindowCreated 中注册 Windows.ApplicationModel.Search.SearchPane.GetForCurrentView().QuerySubmitted
+            ' 事件，以在应用程序运行后加快搜索
+
+            ' 如果窗口尚未使用框架导航，则插入我们自己的框架
+            Dim previousContent As UIElement = Window.Current.Content
+            Dim frame As Frame = TryCast(previousContent, Frame)
+
+            ' 如果应用程序不包含顶级框架，则可能表示这是
+            ' 初次启动应用程序。一般而言，此方法和 App.xaml.vb 中的 OnLaunched 
+            ' 可调用公共方法。
+            If frame Is Nothing Then
+
+
+                ' 创建要充当导航上下文的框架，并将其与
+                ' a SuspensionManager 键关联
+                frame = New Frame
+                Common.SuspensionManager.RegisterFrame(frame, "AppFrame")
+
+                If args.PreviousExecutionState = ApplicationExecutionState.Terminated Then
+                    ' 仅当适用时还原保存的会话状态
+                    Try
+                        Await Common.SuspensionManager.RestoreAsync()
+                    Catch ex As Common.SuspensionManagerException
+                        ' 还原状态时出现问题。
+                        ' 假定没有状态并继续
+                    End Try
+                End If
+            End If
+
+            frame.Navigate(GetType($safeitemname$), args.QueryText)
+            Window.Current.Content = frame
+
+            ' 确保当前窗口处于活动状态
+            Window.Current.Activate()
+        End Sub
+        ]]>
+      </AppMethod>
+      <AppMethodComment>
+        <![CDATA[
+        ' TODO: 响应对搜索结果的激活
+        '
+        ' 以下代码无法自动添加到应用程序子类，
+        ' 因为找不到合适的类或已存在具有
+        ' 相同名称的方法。请通过显示对指定的搜索词的搜索结果来确保
+        ' 合适的代码处理激活。
+        '
+        ]]>
+      </AppMethodComment>
+      <ManifestData>
+        <Extension Category="windows.search" />
+      </ManifestData>
+      <ManifestComment>
+        <![CDATA[
+        ' TODO: 编辑清单以启用搜索
+        '
+        '包清单无法自动更新。打开包清单
+        ' 文件并确保启用了对搜索激活的支持。
+        ]]>
+      </ManifestComment>
+    </Activation>
+  </WizardData>
+ </VSTemplate>

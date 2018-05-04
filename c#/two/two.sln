@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "two", "..\Fly\two.csproj", "{86AE3EFE-A2A0-4A19-B62C-0B6321BBFD94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "three", "three\three.csproj", "{69058A76-B91B-4DA3-9245-A7DC9B8E3A5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "one", "..\Travellog\one.csproj", "{2E1D9A4D-8E0E-410F-924D-142F379238E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{413AFD6D-F6C5-4916-8779-AE2FEB43AEE2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86AE3EFE-A2A0-4A19-B62C-0B6321BBFD94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86AE3EFE-A2A0-4A19-B62C-0B6321BBFD94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86AE3EFE-A2A0-4A19-B62C-0B6321BBFD94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86AE3EFE-A2A0-4A19-B62C-0B6321BBFD94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69058A76-B91B-4DA3-9245-A7DC9B8E3A5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69058A76-B91B-4DA3-9245-A7DC9B8E3A5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69058A76-B91B-4DA3-9245-A7DC9B8E3A5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69058A76-B91B-4DA3-9245-A7DC9B8E3A5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E1D9A4D-8E0E-410F-924D-142F379238E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E1D9A4D-8E0E-410F-924D-142F379238E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E1D9A4D-8E0E-410F-924D-142F379238E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E1D9A4D-8E0E-410F-924D-142F379238E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2E1D9A4D-8E0E-410F-924D-142F379238E7} = {413AFD6D-F6C5-4916-8779-AE2FEB43AEE2}
+		{69058A76-B91B-4DA3-9245-A7DC9B8E3A5F} = {413AFD6D-F6C5-4916-8779-AE2FEB43AEE2}
+		{86AE3EFE-A2A0-4A19-B62C-0B6321BBFD94} = {413AFD6D-F6C5-4916-8779-AE2FEB43AEE2}
+	EndGlobalSection
+EndGlobal

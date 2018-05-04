@@ -1,0 +1,14 @@
+﻿[$RootKey$\Packages\{6B95EFF5-7930-48DD-AA8A-4F0E136E4CEE}]
+@="Microsoft.VisualStudio.Project.VS.Implementation.Package.ProjectPackage, Microsoft.VisualStudio.Project.VS.Implementation, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"InprocServer32"="$WinDir$\SYSTEM32\MSCOREE.DLL"
+"Class"="Microsoft.VisualStudio.Project.VS.Implementation.Package.ProjectPackage"
+"CodeBase"="$RootFolder$\Common7\IDE\CommonExtensions\Microsoft\Project\Microsoft.VisualStudio.Project.VS.Implementation.dll"
+
+[$RootKey$\CLSID\{943A3169-D328-4E42-8AF6-7200E5E8C2E4}]
+"Assembly"="Microsoft.VisualStudio.Project.Utilities.v11.0, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"Class"="Microsoft.VisualStudio.Project.Utilities.VsProjectCapabilityExpressionMatcher"
+"InprocServer32"="$WinDir$\system32\mscoree.dll"
+"ThreadingModel"="Both"
+
+[$RootKey$\BindingPaths\{00000000-0000-0000-0000-000000000000}]
+"$ShellFolder$Common7\IDE\CommonExtensions\Microsoft\Project"=""

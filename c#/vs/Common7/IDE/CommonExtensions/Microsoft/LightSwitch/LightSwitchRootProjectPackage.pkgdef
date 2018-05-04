@@ -1,0 +1,75 @@
+[$RootKey$]
+
+[$RootKey$\CLSID]
+
+[$RootKey$\CLSID\{705381F2-CA80-40F0-9AC4-E929E75D7861}]
+"Assembly"="Microsoft.LightSwitch.Design.Package, Version=11.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"Class"="Microsoft.LightSwitch.VSIntegration.Project.RootProject.ApplicationPropertyPageClass"
+"CodeBase"="$ShellFolder$\Common7\IDE\PrivateAssemblies\Microsoft.LightSwitch.Design.Package.dll"
+"InProcServer32"="$System$\mscoree.dll"
+"ThreadingModel"="Both"
+
+[$RootKey$\LightSwitch]
+
+[$RootKey$\LightSwitch\DefaultExtensions]
+
+[$RootKey$\LightSwitch\DefaultExtensions\Microsoft.LightSwitch.Cosmopolitan]
+"Author"="Microsoft"
+"Name"="LightSwitch Cosmopolitan Shell and Theme"
+
+[$RootKey$\LightSwitch\DefaultExtensions\Microsoft.LightSwitch.Extensions]
+"Author"="Microsoft"
+"Name"="Microsoft Visual Studio LightSwitch Extensions"
+
+[$RootKey$\LightSwitch\ProjectDefaults]
+
+[$RootKey$\LightSwitch\ProjectDefaults\RichClient]
+"ShellId"="Microsoft.LightSwitch.Cosmopolitan:CosmopolitanShell"
+"ThemeId"="Microsoft.LightSwitch.Cosmopolitan:CosmopolitanTheme"
+
+[$RootKey$\Menus]
+"{5f1c4e9f-35d5-4d14-ae85-7b8274754137}"=",1000,1"
+
+[$RootKey$\NewProjectTemplates\TemplateDirs\{5f1c4e9f-35d5-4d14-ae85-7b8274754137}\/1]
+@="LightSwitch"
+"TemplatesDir"="\\.\\NullPath"
+"SortPriority"=dword:00000105
+
+[$RootKey$\Packages]
+
+[$RootKey$\Packages\{5f1c4e9f-35d5-4d14-ae85-7b8274754137}]
+"Class"="Microsoft.LightSwitch.VSIntegration.Project.RootProject.RootProjectPackage"
+"CodeBase"="$ShellFolder$\Common7\IDE\PrivateAssemblies\Microsoft.LightSwitch.Design.Package.dll"
+"CompanyName"="Microsoft Corporation"
+"ID"=dword:00000064
+"InProcServer32"="$System$\mscoree.dll"
+"MinEdition"="Standard"
+"ProductName"="LightSwitch Root Project"
+"ProductVersion"="1.0"
+@="Microsoft.LightSwitch.VSIntegration.Project.RootProject.RootProjectPackage, Microsoft.LightSwitch.Design.Package, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+
+[$RootKey$\Packages\{5f1c4e9f-35d5-4d14-ae85-7b8274754137}\SatelliteDll]
+"DllName"="Microsoft.LightSwitch.Design.ProjectUI.dll"
+"Path"="$ShellFolder$\Common7\IDE"
+
+[$RootKey$\Projects]
+
+[$RootKey$\Projects\{ecd6d718-d1cf-4119-97f3-97c25a0dfbf9}]
+"DefaultProjectExtension"="lsproj"
+"DisplayName"="#2105"
+"DisplayProjectFileExtensions"="#2106"
+"Language(VsTemplate)"="LightSwitch"
+"Package"="{5f1c4e9f-35d5-4d14-ae85-7b8274754137}"
+"PossibleProjectExtensions"="lsproj"
+"ProjectTemplatesDir"="$ShellFolder$\Common7\IDE\ProjectTemplates\LightSwitch\1033"
+@="RootProjectFactory"
+
+[$RootKey$\Services]
+
+[$RootKey$\Services\{a25e4148-2743-4247-ae5b-f901320fb6c2}]
+"LightSwitch PropertySheetWindow"="{69d57f29-ec7e-4d47-a636-f793f220a8dc}"
+
+[$RootKey$\Setup]
+
+[$RootKey$\Setup\VSLS]
+"ProductName"="Microsoft LightSwitch"

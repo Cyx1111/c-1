@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Selectors" standard-reference="http://www.w3.org/TR/css3-selectors/" status="REC" pub-date="2011-09-29">
+
+  <CssPseudo name=":before" _locID="before-pseudo-class" _locAttrData="description" version="2.0" browsers="C,FF1,IE8,O8,S1" syntax="div:before { content: 'abc'; }" description="伪元素用于紧靠一个元素(或其他伪元素)的内容的前面插入内容。“content”属性用于指定要插入的内容。" standard-reference="http://www.w3.org/TR/css3-content/#inserting"/>
+
+  <CssPseudo name=":after" _locID="after-pseudo-class" _locAttrData="description" version="2.0" browsers="C,FF1,IE8,O8,S1" syntax="div:after { content: 'abc'; }" description="伪元素用于紧靠一个元素(或其他伪元素)的内容的后面插入内容。“content”属性用于指定要插入的内容。" standard-reference="http://www.w3.org/TR/css3-content/#inserting"/>
+
+  <CssPseudo name=":link" _locID="link-pseudo-element" _locAttrData="description" version="2.0" syntax="a:link { text-decoration: none; }" description=":link 伪类应用于尚未访问的链接。" standard-reference="http://www.w3.org/TR/css3-selectors/#the-link-pseudo-classes-link-and-visited"/>
+
+  <CssPseudo name=":visited" _locID="visited-pseudo-element" _locAttrData="description" version="2.0" syntax="a:visited { color: purple; }" description="在用户访问链接后立即应用 :visited 伪类。" standard-reference="http://www.w3.org/TR/css3-selectors/#the-link-pseudo-classes-link-and-visited"/>
+
+  <CssPseudo name=":active" _locID="active-pseudo-element" _locAttrData="description" version="2.0" syntax="a:active { color: red; }" description="在用户激活一个元素时应用 :active 伪类。例如，在用户按下和松开鼠标按钮之间应用。" standard-reference="http://www.w3.org/TR/css3-selectors/#the-user-action-pseudo-classes-hover-act"/>
+
+  <CssPseudo name=":hover" _locID="hover-pseudo-element" _locAttrData="description" version="2.0" syntax="a:hover { text-decoration: none; }" description="在用户使用指针设备指示某个元素但不一定要激活它时应用 :hover 伪类。例如，当光标(鼠标指针)悬停在该元素生成的框上时，可视用户代理可能会应用此伪类。" standard-reference="http://www.w3.org/TR/css3-selectors/#the-user-action-pseudo-classes-hover-act"/>
+
+  <CssPseudo name=":focus" _locID="focus-pseudo-element" _locAttrData="description" version="2.0" syntax="a:focus { color: yellow; }" description="在元素具有焦点(接受键盘或鼠标事件，或者其他形式的输入)时应用 :focus 伪类。" standard-reference="http://www.w3.org/TR/css3-selectors/#the-user-action-pseudo-classes-hover-act"/>
+
+  <CssPseudo name=":first-child" _locID="first-child-pseudo-class" _locAttrData="description" version="2.0" browsers="C,FF3,IE7,O9.5,S3.1" syntax="li:first-child { font-size: 1.2em; }" description="与 :nth-child(1) 相同。:first-child 伪类表示一个元素，该元素是其他某个元素的第一个子级。" standard-reference="http://www.w3.org/TR/css3-selectors/#first-child-pseudo"/>
+
+  <CssPseudo name=":first-line" _locID="first-line-pseudo-class" _locAttrData="description" version="2.0" syntax="p:first-line { color: green; }" description=":first-line 伪元素描述元素的第一个格式化行的内容。" standard-reference="http://www.w3.org/TR/css3-selectors/#first-line"/>
+
+  <CssPseudo name=":first-letter" _locID="first-letter-pseudo-class" _locAttrData="description" version="2.0" syntax="p:first-letter { font-size: 200%; }" description=":first-letter 伪元素表示一个元素的第一个字母(如果在该元素所在的行上其前面没有任何其他内容，如图像或内联表)。" standard-reference="http://www.w3.org/TR/css3-selectors/#first-letter"/>
+
+  <CssPseudo name=":lang(en)" _locID="lang-pseudo-function" _locAttrData="description" version="2.0" browsers="C,FF1,IE8,O8,S3" syntax="html:lang(en) { color: blue; }" description="伪类 :lang(C) 表示以 C 语言编写的元素。" standard-reference="http://www.w3.org/TR/css3-selectors/#lang-pseudo"/>
+
+  <CssPseudo name=":checked" _locID="checked-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF1,IE9,O9,S3.13" syntax="input:checked { color: red; }" description="单选按钮和复选框元素可由用户切换。在用户选择某些菜单项时，这些菜单项处于“已选中”状态。当此类元素切换为“打开”状态时，将应用 :checked 伪类。" standard-reference="http://www.w3.org/TR/css3-selectors/#checked"/>
+
+  <CssPseudo name=":empty" _locID="empty-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF1.5,IE9,O9,S3.1" syntax="div:empty { background-color: red; }" description=":empty 伪类表示没有任何子级的元素。" standard-reference="http://www.w3.org/TR/css3-selectors/#empty-pseudo"/>
+
+  <CssPseudo name=":enabled" _locID="enabled-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF1.5,IE9,O9,S3.1" syntax="input:enabled { background-color: green; }" description=":enabled 伪类表示处于已启用状态的用户界面元素；此类元素具有对应的已禁用状态。" standard-reference="http://www.w3.org/TR/css3-selectors/#enableddisabled"/>
+
+  <CssPseudo name=":disabled" _locID="disabled-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF1.5,IE9,O9,S3.1" syntax="input:disabled { background-color: silver; }" description=":disabled 伪类表示处于已禁用状态的用户界面元素；此类元素具有对应的已启用状态。" standard-reference="http://www.w3.org/TR/css3-selectors/#enableddisabled"/>
+
+  <CssPseudo name=":first-of-type" _locID="first-of-type-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF3.5,IE9,O9.5,S3.2" syntax="dl dt:first-of-type { font-size: 200%; }" description="与 :nth-of-type(1) 相同。:first-of-type 伪类表示一个元素，该元素是其类型在其父元素的子级列表中的第一个同级。" standard-reference="http://www.w3.org/TR/css3-selectors/#first-of-type-pseudo"/>
+
+  <CssPseudo name=":last-child" _locID="last-child-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF1,IE9,O9.5,S3.1" syntax="li:last-child { font-size: 1.2em; }" description="与 :nth-last-child(1) 相同。:last-child 伪类表示一个元素，该元素是其他某个元素的最后一个子级。" standard-reference="http://www.w3.org/TR/css3-selectors/#last-child-pseudo"/>
+
+  <CssPseudo name=":last-of-type" _locID="last-of-type-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF3.5,IE9,O9.5,S3.1" syntax="dl dt:last-of-type { font-size: 200%; }" description="与 :nth-last-of-type(1) 相同。:last-of-type 伪类表示一个元素，该元素是其类型在其父元素的子级列表中的最后一个同级。" standard-reference="http://www.w3.org/TR/css3-selectors/#last-of-type-pseudo"/>
+
+  <CssPseudo name=":not(:empty)" _locID="not-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF1,IE9,O9.5,S2" syntax="div:not(:empty) { border-color: pink; }" description="求反伪类 :not(X) 是一个函数表示法，它采用一个简单选择器(不包括求反伪类本身)作为参数。它表示不由其参数表示的元素。" standard-reference="http://www.w3.org/TR/css3-selectors/#negation"/>
+
+  <CssPseudo name=":nth-child(2n+1)" _locID="nth-child-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF3.5,IE9,O9.5,S3.1" syntax="tr:nth-child(2n+1) { border-color: pink; }" description=":nth-child(an+b) 伪类表示法表示一个元素，在文档树中该元素的前面有 an+b-1 个同级(n 为任意正整数或零值)，并且该元素有一个父元素。" standard-reference="http://www.w3.org/TR/css3-selectors/#nth-child-pseudo"/>
+
+  <CssPseudo name=":nth-last-child(-n+2)" _locID="nth-last-child-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF3.5,IE9,O9.5,S3.1" syntax="tr:nth-last-child(-n+2) { border-color: pink; }" description=":nth-last-child(an+b) 伪类表示法表示一个元素，在文档树中该元素的后面有 an+b-1 个同级(n 为任意正整数或零值)，并且该元素有一个父元素。" standard-reference="http://www.w3.org/TR/css3-selectors/#nth-last-child-pseudo"/>
+
+  <CssPseudo name=":nth-last-of-type(n+2)" _locID="nth-last-of-type-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF3.5,IE9,O9.5,S3.1" syntax="tr:nth-last-of-type(n+2) { border-color: pink; }" description=":nth-last-of-type(an+b) 伪类表示法表示一个元素，在文档树中该元素的后面有 an+b-1 个具有相同的扩展元素名的同级(n 为零或任意正整数值)，并且该元素有一个父元素。" standard-reference="http://www.w3.org/TR/css3-selectors/#nth-of-type-pseudo"/>
+
+  <CssPseudo name=":nth-of-type(2n+1)" _locID="nth-of-type-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF3.5,IE9,O9.5,S3.1" syntax="tr:nth-of-type(2n) { border-color: pink; }" description=":nth-of-type(an+b) 伪类表示法表示一个元素，在文档树中该元素的前面有 an+b-1 个具有相同的扩展元素名的同级(n 为零或任意正整数值)，并且该元素有一个父元素。" standard-reference="http://www.w3.org/TR/css3-selectors/#nth-of-type-pseudo"/>
+
+  <CssPseudo name=":only-child" _locID="only-child-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF1.5,IE9,O9.5,S3.1" syntax="p:only-child { color: #f00; }" description="表示一个元素，该元素具有一个父元素，且该父元素没有其他元素子级。与 :first-child:last-child 或 :nth-child(1):nth-last-child(1) 相同，但特异性较低。" standard-reference="http://www.w3.org/TR/css3-selectors/#only-child-pseudo"/>
+
+  <CssPseudo name=":only-of-type" _locID="only-of-type-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF3.5,IE9,O9.5,S3.2" syntax="p:only-of-type { color: #f00; }" description=":only-of-type 选择器与作为其父级的类型的唯一子级的所有元素匹配。与 :first-of-type:last-of-type 或 :nth-of-type(1):nth-last-of-type(1) 相同，但特异性较低。" standard-reference="http://www.w3.org/TR/css3-selectors/#only-of-type-pseudo"/>
+
+  <CssPseudo name=":root" _locID="root-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF1,IE9,O9.5,S1" syntax=":root { padding: auto 3em; }" description=":root 伪类表示一个作为文档的根的元素。在 HTML 4 中，这始终为 HTML 元素。" standard-reference="http://www.w3.org/TR/css3-selectors/#root-pseudo"/>
+
+  <CssPseudo name=":target" _locID="target-pseudo-class" _locAttrData="description" version="3.0" browsers="C,FF1,IE9,O9.5,S1" syntax="h2:target { background-color: yellow; }" description="某些 URI 引用资源内的位置。此类别的 URI 以“数字标记”(#)结尾，后跟一个定位标识符(成为“分段标识符”)。" standard-reference="http://www.w3.org/TR/css3-selectors/#root-pseudo"/>
+
+  <CssPseudo name="::selection" _locID="selection-pseudo-element" _locAttrData="description" version="3.0" browsers="C,FF4,IE9,O9.5,S1.1" syntax="p::selection { color: red; }" description="::selection 选择器与用户选择的元素的一部分匹配。只有少数 CSS 属性可应用于 ::selection: 颜色、背景、光标和边框。" standard-reference="http://www.w3.org/TR/css3-selectors/#selection"/>
+
+  <CssPseudo name="::before" _locID="before-pseudo-element" _locAttrData="description" version="3.0" browsers="C,FF1.5,IE10,O8,S1" syntax="div::before { content: 'abc'; }" description="伪元素用于紧靠一个元素(或其他伪元素)的内容的前面插入内容。“content”属性用于指定要插入的内容。" standard-reference="http://www.w3.org/TR/css3-content/#inserting"/>
+
+  <CssPseudo name="::after" _locID="after-pseudo-element" _locAttrData="description" version="3.0" browsers="C,FF1.5,IE10,O7,S4" syntax="div::after { content: 'abc'; }" description="伪元素用于紧靠一个元素(或其他伪元素)的内容的后面插入内容。“content”属性用于指定要插入的内容。" standard-reference="http://www.w3.org/TR/css3-content/#inserting"/>
+
+  <CssPseudo name="::first-line" _locID="first-line-pseudo-element" _locAttrData="description" version="3.0" browsers="C,FF1.5,IE10,O7,S1" syntax="p::first-line { color: green; }" description="::first-line 伪元素描述元素的第一个格式化行的内容。" standard-reference="http://www.w3.org/TR/css3-selectors/#first-line"/>
+
+  <CssPseudo name="::first-letter" _locID="first-letter-pseudo-element" _locAttrData="description" version="3.0" browsers="C,FF1.5,IE10,O7,S1" syntax="p::first-letter { font-size: 200%; }" description="::first-letter 伪元素表示元素的第一个字母(如果在该元素所在的行上其前面没有任何其他内容，如图像或内联表)。" standard-reference="http://www.w3.org/TR/css3-selectors/#first-letter"/>
+
+</CssModule>

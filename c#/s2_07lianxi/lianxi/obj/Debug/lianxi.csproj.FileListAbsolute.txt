@@ -1,0 +1,6 @@
+F:\C#\s2_07lianxi\lianxi\bin\Debug\lianxi.exe.config
+F:\C#\s2_07lianxi\lianxi\bin\Debug\lianxi.exe
+F:\C#\s2_07lianxi\lianxi\bin\Debug\lianxi.pdb
+F:\C#\s2_07lianxi\lianxi\obj\Debug\lianxi.csprojResolveAssemblyReference.cache
+F:\C#\s2_07lianxi\lianxi\obj\Debug\lianxi.exe
+F:\C#\s2_07lianxi\lianxi\obj\Debug\lianxi.pdb

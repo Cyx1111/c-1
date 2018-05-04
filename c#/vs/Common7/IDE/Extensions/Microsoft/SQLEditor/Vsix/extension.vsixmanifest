@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="SqlEditor..7DB76FEF-2C49-4E20-AD04-17DDE708C56A">
+    <Name>SQL Server Data Tools - Sql Editor</Name>
+    <Author>Microsoft</Author>
+    <Version>1.0</Version>
+    <Description>Microsoft SQL Server Data Tools, Sql Editor, Debugger and Language Services</Description>
+    <Locale>1033</Locale>
+    <MoreInfoUrl>http://msdn.microsoft.com/en-us/data/bb931106.aspx</MoreInfoUrl>
+    <License>ms-pl.rtf</License>
+    <Icon>SSDT-icon.png</Icon>
+    <PreviewImage>SSDT-screenshot.png</PreviewImage>
+    <SupportedProducts>
+      <VisualStudio Version="11.1">
+        <Edition>Pro</Edition>
+        <Edition>VWDExpress</Edition>
+        <Edition>IntegratedShell</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SystemComponent>true</SystemComponent>
+    <InstalledByMsi>true</InstalledByMsi>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5" />
+  </Identifier>
+  <References />
+  <Content>
+    <VsPackage>Microsoft.VisualStudio.Data.Tools.SqlLanguageServices.pkgdef</VsPackage>
+    <VsPackage>Microsoft.VisualStudio.Data.Tools.SqlEditor.pkgdef</VsPackage>
+    <VsPackage>Microsoft.VisualStudio.Data.Tools.SqlDebugger.pkgdef</VsPackage>
+    <!-- Extension Package (may not be needed in final release) -->
+    <VsPackage>Microsoft.SqlServer.Management.SqlEditorEditorExtensions.pkgdef</VsPackage>
+  </Content>
+</Vsix>

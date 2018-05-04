@@ -1,0 +1,10 @@
+F:\C#\s2_day02\s2_day02\bin\Debug\s2_day02.exe.config
+F:\C#\s2_day02\s2_day02\bin\Debug\s2_day02.exe
+F:\C#\s2_day02\s2_day02\bin\Debug\s2_day02.pdb
+F:\C#\s2_day02\s2_day02\obj\Debug\s2_day02.Frmjudge.resources
+F:\C#\s2_day02\s2_day02\obj\Debug\s2_day02.Frmshow.resources
+F:\C#\s2_day02\s2_day02\obj\Debug\s2_day02.Properties.Resources.resources
+F:\C#\s2_day02\s2_day02\obj\Debug\NET_day02.csproj.GenerateResource.Cache
+F:\C#\s2_day02\s2_day02\obj\Debug\s2_day02.exe
+F:\C#\s2_day02\s2_day02\obj\Debug\s2_day02.pdb
+F:\C#\s2_day02\s2_day02\obj\Debug\NET_day02.csprojResolveAssemblyReference.cache

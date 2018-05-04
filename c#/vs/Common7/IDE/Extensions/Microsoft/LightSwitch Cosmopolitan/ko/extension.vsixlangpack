@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageLanguagePackManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="Microsoft.LightSwitch.Cosmopolitan" Version="1.0" Language="ko-KR" Publisher="Microsoft" />
+    <DisplayName>LightSwitch Cosmopolitan Shell and Theme</DisplayName>
+    <Description>현대적이고 명확한 UI로 구성된 LightSwitch Cosmopolitan Shell and Theme는 Silverlight Cosmopolitan 테마에서 영감을 얻은 것입니다.</Description>
+  </Metadata>
+</PackageLanguagePackManifest>

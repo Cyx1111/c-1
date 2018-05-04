@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Transitions" standard-reference="http://www.w3.org/TR/css3-transitions/" status="WD" pub-date="2012-04-03">
+
+  <CssProperty _locID="transition" _locAttrData="description" version="3.0" browsers="IE10" restriction="time, property, enum" type="transition-property, timing-functions" syntax="div { $(name): background-color linear 1s; }" description="速记属性将四个转换属性合并为一个属性。" standard-reference="http://www.w3.org/TR/css3-transitions/#transition"/>
+
+  <CssProperty _locID="transition-delay" _locAttrData="description" version="3.0" browsers="IE10" restriction="time" syntax="div { $(name): 1s; }" description="定义转换开始的时间。它允许在应用转换之后过段时间再开始执行转换。" standard-reference="http://www.w3.org/TR/css3-transitions/#transition-delay"/>
+
+  <CssProperty _locID="transition-duration" _locAttrData="description" version="3.0" browsers="IE10" restriction="time" syntax="div { $(name): 1s; }" description="指定从旧值转换为新值所需的时间。" standard-reference="http://www.w3.org/TR/css3-transitions/#transition-duration"/>
+  
+  <CssProperty _locID="transition-property" _locAttrData="description" version="3.0" browsers="IE10" restriction="property" type="transition-property" syntax="div { $(name): background-color; }" description="指定要向其应用转换的 CSS 属性的名称。" standard-reference="http://www.w3.org/TR/css3-transitions/#transition-property"/>
+
+  <CssPropertyValue type="transition-property">
+    <entry _locID="transition-property_none" _locAttrData="description" value="none" description="将不转换任何属性。"/>
+    <entry _locID="transition-property_all" _locAttrData="description" value="all" description="所有可进行转换的属性都将执行此操作。"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="transition-timing-function" _locAttrData="description" version="3.0" browsers="IE10" type="timing-functions" restriction="enum" syntax="div { $(name): linear; }" description="描述将如何计算在转换过程中使用的中间值。" standard-reference="http://www.w3.org/TR/css3-transitions/#transition-timing-function"/>
+
+  <CssPropertyValue type="timing-functions">
+    <entry _locID="transition-timing-function_ease" _locAttrData="description" value="ease" description="等效于 cubic-bezier(0.25, 0.1, 0.25, 1.0)。"/>
+    <entry _locID="transition-timing-function_linear" _locAttrData="description" value="linear" description="等效于 cubic-bezier(0.0, 0.0, 1.0, 1.0)。"/>
+    <entry _locID="transition-timing-function_ease-in" _locAttrData="description" value="ease-in" description="等效于 cubic-bezier(0.42, 0, 1.0, 1.0)。"/>
+    <entry _locID="transition-timing-function_ease-out" _locAttrData="description" value="ease-out" description="等效于 cubic-bezier(0, 0, 0.58, 1.0)。"/>
+    <entry _locID="transition-timing-function_ease-in-out" _locAttrData="description" value="ease-in-out" description="等效于 cubic-bezier(0.42, 0, 0.58, 1.0)。"/>
+    <entry _locID="transition-timing-function_cubic-bezier" _locAttrData="description" value="cubic-bezier()" description="指定三次贝塞尔曲线。这四个值将曲线的点 P1 和 P2 指定为(x1, y1, x2, y2)。所有值都必须在 [0, 1] 范围内。"/>
+    <entry _locID="transition-timing-function_step-start" _locAttrData="description" value="step-start" description="step-start 函数等效于 steps(1, start)。"/>
+    <entry _locID="transition-timing-function_step-end" _locAttrData="description" value="step-end" description="step-end 函数等效于 steps(1, end)。"/>
+    <entry _locID="transition-timing-function_steps" _locAttrData="description" value="steps(1, start)" description="第一个参数指定函数中的间隔数。第二个参数(可选)是值“start”或“end”。"/>
+  </CssPropertyValue>
+
+</CssModule>

@@ -1,0 +1,1297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.VisualStudio.QualityTools.ExecutionCommon</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.AdapterRunResult">
+      <summary>测试框架用来指示测试运行是成功还是失败的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.AdapterRunResult" /> 枚举。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.Execution.AdapterRunResult.RunSuccess">
+      <summary>枚举值为 0。 测试运行成功。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.Execution.AdapterRunResult.RunError">
+      <summary>枚举值为 1。 测试运行失败。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.AgentContext">
+      <summary>封装代理环境的上下文。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.AgentContext.#ctor(System.String,System.String,System.String,System.Boolean)">
+      <summary>使用提供的参数初始化 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.AgentContext" /> 类的新实例。</summary>
+      <param name="agentName">代理的名称。</param>
+      <param name="agentDisplayName">代理的显示名称。</param>
+      <param name="agentConnectionString">代理的计算机名称和用于侦听传入连接的端口。</param>
+      <param name="isRemote">如果远程访问此代理，则为 true；否则为 false。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.AgentContext.ConnectionString">
+      <summary>获取代理的计算机名称和用于侦听传入连接的端口。</summary>
+      <returns>一个包含计算机名称和端口的 string。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.AgentContext.CreateForLocalAgent">
+      <summary>针对本地托管代理，返回新的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.AgentContext" />。</summary>
+      <returns>针对本地托管代理的新 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.AgentContext" />。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.AgentContext.DisplayName">
+      <summary>获取或设置代理的显示名称（该名称在整个环境中是唯一的）。</summary>
+      <returns>一个包含代理显示名称的 string。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.AgentContext.IsRemote">
+      <summary>获取一个值，该值指示是否在远程执行此代理上下文。</summary>
+      <returns>如果在远程执行此代理上下文，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.AgentContext.Name">
+      <summary>获取或设置代理的完全限定名称（当代理在测试控制器中注册时）。</summary>
+      <returns>如 T:Microsoft.TeamFoundation.TestManagement.Client.ITestController 注册的完全限定的代理名称。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.BasicTransferInformation">
+      <summary>从诊断数据适配器收集请求文件或流传输所需的信息。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.BasicTransferInformation.#ctor(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext)">
+      <summary>使用提供的上下文初始化 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.BasicTransferInformation" /> 类的新实例。</summary>
+      <param name="context">
+        <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext" /> 对象。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.BasicTransferInformation.ClientFileName">
+      <summary>获取客户端上文件的路径和名称。</summary>
+      <returns>客户端上文件的路径和名称。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.BasicTransferInformation.Context">
+      <summary>获取或设置诊断数据适配器的上下文。</summary>
+      <returns>诊断数据适配器的上下文。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.BasicTransferInformation.Description">
+      <summary>获取或设置发送数据的简短说明。</summary>
+      <returns>所发送的数据的简短说明。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.BasicTransferInformation.PerformCleanup">
+      <summary>获取一个值，该值指示传输后是否应当执行清理。</summary>
+      <returns>如果在传输后应当执行清理，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.BasicTransferInformation.RequestId">
+      <summary>获取或设置与所传输数据关联的请求 ID。</summary>
+      <returns>与所传输数据关联的请求的 ID。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.BasicTransferInformation.UserToken">
+      <summary>获取或设置一个标记，此标记可以与异步传输完成时的通知一起使用，以唯一标识此传输。</summary>
+      <returns>一个标记，该标记可以与异步传输完成时的通知一起使用，以唯一标识此传输。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.ControllerContext">
+      <summary>表示测试控制器的当前上下文。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.ControllerContext.#ctor(System.String,System.String,System.String)">
+      <summary>使用提供的名称、显示名称和连接字符串初始化 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.ControllerContext" /> 类的新实例。</summary>
+      <param name="name">控制器的完全限定名称。</param>
+      <param name="displayName">控制器的显示名称。 通常，这是控制器计算机的域名系统服务器 (DNS) 主机名，不包含域后缀。</param>
+      <param name="connectionString">控制器的名称。 这包括端口号。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.ControllerContext.ConnectionString">
+      <summary>获取控制器的名称。 这包括端口号。 set 访问器仅供内部使用。</summary>
+      <returns>控制器的名称。 这包括端口号。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.ControllerContext.CreateForLocalController">
+      <summary>新建针对本地承载的控制器初始化的控制器上下文。</summary>
+      <returns>此 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.ControllerContext" /> 类的新实例。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.ControllerContext.DisplayName">
+      <summary>获取控制器的显示名称。 set 访问器仅供内部使用。</summary>
+      <returns>控制器的显示名称。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.ControllerContext.Name">
+      <summary>获取控制器的完全限定名称。 set 访问器仅供内部使用。</summary>
+      <returns>控制器的完全限定名称。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.CustomCollectorData">
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.CustomCollectorData.#ctor">
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.CustomCollectorGenericErrorData">
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.CustomCollectorGenericErrorData.#ctor">
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.CustomCollectorGenericErrorData.Message">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.CustomNotificationEventArgs">
+      <summary>提供自定义诊断数据适配器中所用事件参数类的基类。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.CustomNotificationEventArgs.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.CustomNotificationEventArgs" /> 类的新实例，以便发送测试会话的自定义通知。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.CustomNotificationEventArgs.#ctor(Microsoft.VisualStudio.TestTools.Common.TestExecId)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.CustomNotificationEventArgs" /> 类的新实例，以便使用提供的测试执行 ID 发送测试用例的自定义通知。</summary>
+      <param name="testExecId">当前测试用例的 <see cref="T:Microsoft.VisualStudio.TestTools.Common.TestExecId" />。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext">
+      <summary>表示发生数据收集的上下文。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext.#ctor(Microsoft.VisualStudio.TestTools.Common.SessionId)">
+      <summary>使用所提供的会话 ID 初始化 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext" /> 类的一个新实例。</summary>
+      <param name="sessionId">
+        <see cref="T:Microsoft.VisualStudio.TestTools.Common.SessionId" /> 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext.#ctor(Microsoft.VisualStudio.TestTools.Common.SessionId,Microsoft.VisualStudio.TestTools.Common.TestExecId)">
+      <summary>使用所提供的会话 ID 和测试执行 ID 初始化 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext" /> 类的一个新实例。</summary>
+      <param name="sessionId">
+        <see cref="T:Microsoft.VisualStudio.TestTools.Common.SessionId" /> 对象。</param>
+      <param name="testExecId">
+        <see cref="T:Microsoft.VisualStudio.TestTools.Common.TestExecId" /> 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext.Equals(System.Object)">
+      <summary>确定指定的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext" /> 是否与当前的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext" /> 匹配。</summary>
+      <returns>如果指定的 <see cref="T:System.Object" /> 与当前的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext" /> 匹配，则为 true；否则为 false。</returns>
+      <param name="obj">与当前的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext" /> 进行比较的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext" />。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext.GetHashCode">
+      <summary>作为 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext" /> 的哈希函数。</summary>
+      <returns>当前 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext" /> 的哈希代码。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext.HasTestCase">
+      <summary>获取一个值，该值指示正在执行的测试用例是否与此上下文关联。</summary>
+      <returns>如果正在执行关联的测试用例，则为 true；否则为 false。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext.op_Equality(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext,Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext)">
+      <summary>返回一个值，该值指示 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext" /> 的两个实例是否匹配。</summary>
+      <returns>如果 <paramref name="context1" /> 与 <paramref name="context2" /> 匹配，则为 true；否则为 false。</returns>
+      <param name="context1">
+        <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext" />。</param>
+      <param name="context2">
+        <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext" />。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext.op_Inequality(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext,Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext)">
+      <summary>返回一个值，该值指示 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext" /> 的两个实例是否不匹配。</summary>
+      <returns>如果 <paramref name="context1" /> 与 <paramref name="context2" /> 不匹配，则为 true；否则为 false。</returns>
+      <param name="context1">
+        <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext" />。</param>
+      <param name="context2">
+        <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext" />。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext.SessionId">
+      <summary>获取在其中进行数据收集的会话的 <see cref="Microsoft.VisualStudio.TestTools.Common.SessionId" />。 不会是 null。</summary>
+      <returns>
+        <see cref="Microsoft.VisualStudio.TestTools.Common.SessionId" /> 对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext.TestExecId">
+      <summary>获取标识发生数据收集的测试执行的 <see cref="T:Microsoft.VisualStudio.TestTools.Common.TestExecId" />。</summary>
+      <returns>一个 <see cref="T:Microsoft.VisualStudio.TestTools.Common.TestExecId" /> 对象；如果此上下文没有关联的执行中测试，则为 null。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEnvironmentContext">
+      <summary>封装承载诊断数据适配器的环境。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEnvironmentContext.#ctor(Microsoft.VisualStudio.TestTools.Execution.AgentContext,Microsoft.VisualStudio.TestTools.Execution.ControllerContext,Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext)">
+      <summary>使用提供的代理上下文、控制器上下文和会话数据集合上下文初始化 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEnvironmentContext" /> 类的新实例。</summary>
+      <param name="agentContext">代理的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.AgentContext" />。</param>
+      <param name="controllerContext">控制器的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.ControllerContext" />。</param>
+      <param name="sessionDataCollectionContext">诊断数据适配器的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext" />。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEnvironmentContext.#ctor(Microsoft.VisualStudio.TestTools.Execution.AgentContext,Microsoft.VisualStudio.TestTools.Execution.ControllerContext,Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext,Microsoft.VisualStudio.TestTools.Common.TcmContext)">
+      <summary>使用提供的代理上下文、控制器上下文、会话数据集合上下文和测试用例管理器上下文初始化 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEnvironmentContext" /> 类的新实例。</summary>
+      <param name="agentContext">代理的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.AgentContext" />。</param>
+      <param name="controllerContext">控制器的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.ControllerContext" />。</param>
+      <param name="sessionDataCollectionContext">诊断数据适配器的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext" />。</param>
+      <param name="tcmContext">测试用例管理器的 <see cref="T:Microsoft.VisualStudio.TestTools.Common.TcmContext" />。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEnvironmentContext.AgentContext">
+      <summary>获取代理上下文。 set 访问器仅供内部使用。</summary>
+      <returns>代理上下文。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEnvironmentContext.ControllerContext">
+      <summary>获取测试控制器上下文。 set 访问器仅供内部使用。</summary>
+      <returns>测试控制器上下文。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEnvironmentContext.CreateForLocalEnvironment">
+      <summary>返回本地承载的代理和控制器的数据集合环境上下文。</summary>
+      <returns>数据集合环境上下文。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEnvironmentContext.CreateForLocalEnvironment(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext)">
+      <summary>使用提供的会话数据集合上下文，返回本地承载的代理和控制器的数据集合环境上下文。</summary>
+      <returns>本地承载的代理和控制器的数据集合环境上下文。</returns>
+      <param name="sessionDataCollectionContext">
+        <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext" /> 对象。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEnvironmentContext.IsManualTest">
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEnvironmentContext.SessionDataCollectionContext">
+      <summary>获取诊断数据适配器的会话上下文。 set 访问器仅供内部使用。</summary>
+      <returns>诊断数据适配器的会话上下文。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEnvironmentContext.TcmContext">
+      <summary>获取测试用例管理器的上下文。</summary>
+      <returns>测试用例管理器的上下文。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEventArgs">
+      <summary>所有执行事件参数的基类。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEventArgs.#ctor(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext)">
+      <summary>通过存储给定信息初始化实例。</summary>
+      <param name="context">事件的上下文信息。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEventArgs.#ctor(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext,System.Uri)">
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEventArgs.Context">
+      <summary>获取或设置事件的上下文信息。</summary>
+      <returns>返回事件的上下文信息。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEventArgs.TargetDataCollectorUri">
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents">
+      <summary>定义诊断数据适配器可以注册的执行事件。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.#ctor">
+    </member>
+    <member name="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.CustomNotification">
+      <summary>当响应生自定义通知时发生。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.DataRequest">
+      <summary>引发以请求中间数据。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.SessionEnd">
+      <summary>在测试会话结束时引发。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.SessionPause">
+      <summary>在测试会话暂停时引发。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.SessionResume">
+      <summary>在测试会话恢复时引发。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.SessionStart">
+      <summary>在测试会话开始时引发。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.TestCaseEnd">
+      <summary>在测试用例结束时引发。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.TestCaseFailed">
+    </member>
+    <member name="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.TestCasePause">
+      <summary>在测试用例暂停时引发。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.TestCaseReset">
+      <summary>在测试用例重置时引发。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.TestCaseResume">
+      <summary>在测试用例恢复时引发。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.TestCaseStart">
+      <summary>在测试用例开始时引发。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.TestStepEnd">
+      <summary>在测试步骤结束时引发。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.TestStepStart">
+      <summary>在测试步骤开始时引发。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionLogger">
+      <summary>将诊断数据适配器的错误消息发送到客户端，该客户端可以是测试运行程序、Visual Studio IDE 或 Visual Studio 专业测试工具版。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectionLogger.#ctor">
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectionLogger.LogError(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext,System.Exception)">
+      <summary>记录异常的错误消息。</summary>
+      <param name="context">在其中发送消息的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext" />。</param>
+      <param name="exception">异常。 不能为 null。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectionLogger.LogError(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext,System.String)">
+      <summary>记录错误消息。</summary>
+      <param name="context">在其中发送消息的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext" />。</param>
+      <param name="text">错误文本。 不能为 null。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectionLogger.LogError(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext,System.String,System.Exception)">
+      <summary>记录异常的错误消息。</summary>
+      <param name="context">在其中发送消息的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext" />。</param>
+      <param name="text">用于解释异常的文本。 不能为 null。</param>
+      <param name="exception">异常。 不能为 null。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectionLogger.LogException(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext,System.Exception,Microsoft.VisualStudio.TestTools.Common.DataCollectorMessageLevel)">
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectionLogger.LogWarning(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext,System.String)">
+      <summary>记录一个警告消息。</summary>
+      <param name="context">在其中发送消息的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext" />。</param>
+      <param name="text">警告文本。 不能为 null。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectionLogger.SendData(Microsoft.VisualStudio.TestTools.Execution.CustomNotificationEventArgs,Microsoft.VisualStudio.TestTools.Execution.CustomCollectorData)">
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectionLogger.SendData(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext,Microsoft.VisualStudio.TestTools.Execution.CustomCollectorData)">
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink">
+      <summary>诊断数据适配器使用 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink" /> 存储文件和 XML 数据，以便将来附加到 Bug 和测试报告。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink.SendFileAsync(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext,System.String,System.Boolean)">
+      <summary>使用为此方法指定的参数将文件异步发送至 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink" />。</summary>
+      <param name="context">一个 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.IBaseRunContext" />，用于描述运行测试的上下文。 不能为 null。</param>
+      <param name="path">文件所在的本地路径。</param>
+      <param name="deleteFile">true 表示在发送文件后自动将其删除；否则为 false。</param>
+      <exception cref="FileNotFoundException">
+        <paramref name="path" /> 不存在。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink.SendFileAsync(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext,System.String,System.String,System.Boolean)">
+      <summary>使用为此方法指定的参数将中间文件异步发送至 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink" />。</summary>
+      <param name="context">一个 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.IBaseRunContext" />，用于描述运行测试的上下文。 不能为 null。</param>
+      <param name="path">文件所在的本地路径。</param>
+      <param name="description">文件的简短说明。</param>
+      <param name="deleteFile">true 表示在发送文件后自动将其删除；否则为 false。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink.SendFileAsync(Microsoft.VisualStudio.TestTools.Execution.FileTransferInformation)">
+      <summary>使用提供的文件传输信息对象将此中间文件异步发送至 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink" />。</summary>
+      <param name="fileTransferInformation">
+        <see cref="T:Microsoft.VisualStudio.TestTools.Execution.FileTransferInformation" /> 对象。</param>
+    </member>
+    <member name="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink.SendFileCompleted">
+      <summary>在文件发送到 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink" /> 后发生。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink.SendStreamAsync(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext,System.IO.Stream,System.String,System.Boolean)">
+      <summary>使用为此方法指定的参数将流发送至 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink" />。</summary>
+      <param name="context">一个 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.IBaseRunContext" />，用于描述运行测试的上下文。 不能为 null。</param>
+      <param name="stream">要发送的 <see cref="T:System.IO.Stream" />。</param>
+      <param name="fileName">客户端上用于数据的文件名。</param>
+      <param name="closeStream">true 表示在发送完成后自动关闭流；否则为 false。</param>
+      <exception cref="ArgumentException">
+        <paramref name="fileName" /> is null 为空，为保留文件名或者包含无效字符。</exception>
+      <exception cref="InvalidOperationException">无法读取 <paramref name="stream" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink.SendStreamAsync(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext,System.IO.Stream,System.String,System.String,System.Boolean)">
+      <summary>使用为此方法指定的参数将流发送至 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink" />。</summary>
+      <param name="context">一个 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext" />，用于描述运行测试的上下文。 不能为 null。</param>
+      <param name="stream">要发送的 System.IO.Stream。</param>
+      <param name="fileName">客户端上用于数据的文件名。 不能为 null 或为空，也不能包含非法字符。 不包括完整路径。</param>
+      <param name="description">文件的简短说明。</param>
+      <param name="closeStream">true 表示在发送完成后自动关闭流；否则为 false。</param>
+      <exception cref="ArgumentException">
+        <paramref name="fileName" /> is null 为空，为保留文件名或者包含无效字符。</exception>
+      <exception cref="InvalidOperationException">无法读取 <paramref name="stream" />。</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink.SendStreamAsync(Microsoft.VisualStudio.TestTools.Execution.StreamTransferInformation)">
+      <summary>使用为此方法指定的参数将流发送至 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink" />。</summary>
+      <param name="streamTransferInformation">
+        <see cref="T:Microsoft.VisualStudio.TestTools.Execution.StreamTransferInformation" /> 对象。</param>
+    </member>
+    <member name="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink.SendStreamCompleted">
+      <summary>在流发送到 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink" /> 后发生。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.DataCollector">
+      <summary>提供了自定义诊断数据适配器的基类。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollector.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollector" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollector.Dispose">
+      <summary>释放由 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollector" /> 使用的所有资源。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollector.Dispose(System.Boolean)">
+      <summary>释放由 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollector" /> 使用的非托管资源，还可以选择释放托管资源。</summary>
+      <param name="disposing">如果释放托管资源，则为 true。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollector.Initialize(System.Xml.XmlElement,Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents,Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink,Microsoft.VisualStudio.TestTools.Execution.DataCollectionLogger,Microsoft.VisualStudio.TestTools.Execution.DataCollectionEnvironmentContext)">
+      <summary>由测试框架调用以初始化内部对象和自定义诊断数据适配器的数据。</summary>
+      <param name="configurationElement">具有测试配置数据的 <see cref="T:System.Xml.XmlElement" />。</param>
+      <param name="events">一个 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents" /> 对象，包含自定义诊断数据适配器可注册的事件。</param>
+      <param name="dataSink">一个 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink" /> 对象，可供自定义诊断数据适配器用来保存文件和数据。</param>
+      <param name="logger">一个 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionLogger" /> 对象，可供自定义诊断数据适配器用来在测试期间记录信息。</param>
+      <param name="environmentContext">一个 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEnvironmentContext" /> 类，包含有关当前测试的上下文的信息。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectorConfigurationEditorAttribute">
+      <summary>指定应当使用测试框架的配置编辑器配置诊断数据适配器。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectorConfigurationEditorAttribute.#ctor(System.String)">
+      <summary>使用所提供的编辑器类型初始化 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectorConfigurationEditorAttribute" /> 类的新实例。</summary>
+      <param name="typeUri">一个统一资源标识符 (URI)，指示必须从 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.IDataCollectorConfigurationEditor" /> 接口派生的编辑器的类型。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.DataCollectorConfigurationEditorAttribute.HelpUri">
+      <summary>获取或设置配置编辑器的帮助内容的 URI。</summary>
+      <returns>配置编辑器的帮助内容的 URI。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.DataCollectorConfigurationEditorAttribute.TypeUri">
+      <summary>获取指示编辑器类型的 URI。</summary>
+      <returns>指示编辑器类型的 URI。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectorConfigurationEditorTypeUriAttribute">
+      <summary>以统一资源标识符 (URI) 的形式标识诊断数据适配器配置编辑器。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectorConfigurationEditorTypeUriAttribute.#ctor(System.String)">
+      <summary>使用提供的标识诊断数据适配器配置编辑器类型的 URI 初始化 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectorConfigurationEditorTypeUriAttribute" /> 的实例。</summary>
+      <param name="typeUri">数据收集器配置编辑器的 URI。 不能为 null。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.DataCollectorConfigurationEditorTypeUriAttribute.TypeUri">
+      <summary>获取唯一标识诊断数据适配器配置编辑器类型的 URI。</summary>
+      <returns>一个 string，其中包含诊断数据适配器配置编辑器类型的 URI。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectorDescriptionAttribute">
+      <summary>将说明附加到自定义诊断数据适配器。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectorDescriptionAttribute.#ctor(System.String)">
+      <summary>使用提供的诊断数据适配器说明初始化 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectorDescriptionAttribute" /> 的实例。</summary>
+      <param name="description">一个包含诊断数据适配器说明的 string。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectorDescriptionAttribute.#ctor(System.String,System.Boolean)">
+      <summary>使用数据收集器的说明初始化 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectorDescriptionAttribute" />。</summary>
+      <param name="description">诊断数据适配器的说明或包含该说明的资源名称。</param>
+      <param name="isResourceName">true 表示提供的说明字符串是资源名称；false 表示提供的字符串应直接用作数据收集器的说明。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.DataCollectorDescriptionAttribute.Description">
+      <summary>获取诊断数据适配器的说明。</summary>
+      <returns>一个包含诊断数据适配器说明的 string。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.DataCollectorDescriptionAttribute.IsResourceName">
+      <summary>指示提供的说明 string 是资源名称还是诊断数据适配器的实际说明。</summary>
+      <returns>如果提供的说明 string 是资源名称，则为 true； 如果提供的 string 应直接用作诊断数据适配器的说明，则为 false。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectorEnabledByDefaultAttribute">
+      <summary>指定当测试管理器用户界面 (UI) 中列出诊断数据适配器时默认启用该适配器类。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectorEnabledByDefaultAttribute.#ctor">
+      <summary>初始化默认启用的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectorEnabledByDefaultAttribute" /> 类的实例。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectorEnabledByDefaultAttribute.#ctor(System.Boolean)">
+      <summary>使用提供的用来确定是否默认启用适配器的值初始化 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectorEnabledByDefaultAttribute" /> 类的实例。</summary>
+      <param name="isEnabledByDefault">如果默认启用收集器，则为 true；否则为 false。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.DataCollectorEnabledByDefaultAttribute.IsEnabledByDefault">
+      <summary>获取或设置默认启用状态。</summary>
+      <returns>一个 bool 值，指示是否默认启用诊断数据适配器。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectorFriendlyNameAttribute">
+      <summary>为诊断数据适配器定义友好名称。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectorFriendlyNameAttribute.#ctor(System.String)">
+      <summary>使用提供的诊断数据适配器友好名称初始化 <see cref="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectorFriendlyNameAttribute.#ctor(System.String)" /> 类的实例。</summary>
+      <param name="friendlyName">诊断数据适配器的友好名称。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectorFriendlyNameAttribute.#ctor(System.String,System.Boolean)">
+      <summary>使用友好名称初始化 <see cref="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectorFriendlyNameAttribute.#ctor(System.String)" /> 类的实例，并指示 string 是否为资源名称。</summary>
+      <param name="friendlyName">诊断数据适配器的友好名称或包含该友好名称的资源名称。</param>
+      <param name="isResourceName">true 指示为友好名称提供的字符串是资源名。 false 指示所提供字符串应直接用作适配器的友好名称。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.DataCollectorFriendlyNameAttribute.FriendlyName">
+      <summary>获取诊断数据适配器的用户友好名称。</summary>
+      <returns>一个包含收集器用户友好名称的 string。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.DataCollectorFriendlyNameAttribute.IsResourceName">
+      <summary>获取指示友好名称是否为资源名称的值。</summary>
+      <returns>一个 bool 值，指示提供的友好名称 string 是否为资源名称。 false 值指示提供的 string 应直接用作数据收集器的友好名称；否则，将根据当前语言设置从资源中提取友好名称。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectorNotifications">
+      <summary>由自定义测试适配器用于引发诊断数据适配器事件。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectorNotifications.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectorNotifications" /> 类的新实例。</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectorNotifications.CustomEventCompleted">
+      <summary>当诊断数据适配器完成异步事件的处理时由测试框架引发。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectorNotifications.RaiseCustomEvent(Microsoft.VisualStudio.TestTools.Execution.CustomNotificationEventArgs)">
+      <summary>使用提供的事件参数引发自定义事件。</summary>
+      <param name="eventArgs">派生自 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.CustomNotificationEventArgs" /> 的自定义类。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectorNotifications.RaiseCustomEvent(Microsoft.VisualStudio.TestTools.Execution.CustomNotificationEventArgs,Microsoft.VisualStudio.TestTools.Execution.NotificationBroadcastLevel)">
+      <summary>使用提供的事件参数和广播级别的指示引发自定义事件。</summary>
+      <param name="eventArgs">派生自 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.CustomNotificationEventArgs" /> 的自定义类。</param>
+      <param name="broadcastLevel">
+        <see cref="T:Microsoft.VisualStudio.TestTools.Execution.NotificationBroadcastLevel" /> 枚举的成员。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectorNotifications.RaiseCustomEventAsync(Microsoft.VisualStudio.TestTools.Execution.CustomNotificationEventArgs)">
+      <summary>使用提供的事件参数异步引发自定义事件。</summary>
+      <param name="eventArgs">派生自 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.CustomNotificationEventArgs" /> 的自定义类。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectorNotifications.RaiseCustomEventAsync(Microsoft.VisualStudio.TestTools.Execution.CustomNotificationEventArgs,Microsoft.VisualStudio.TestTools.Execution.NotificationBroadcastLevel)">
+      <summary>使用提供的事件参数和广播级别的指示异步引发自定义事件。</summary>
+      <param name="eventArgs">派生自 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.CustomNotificationEventArgs" /> 的自定义类。</param>
+      <param name="broadcastLevel">
+        <see cref="T:Microsoft.VisualStudio.TestTools.Execution.NotificationBroadcastLevel" /> 枚举的成员。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectorNotifications.RaiseCustomEventAsync(Microsoft.VisualStudio.TestTools.Execution.CustomNotificationEventArgs,Microsoft.VisualStudio.TestTools.Execution.NotificationBroadcastLevel,System.Object)">
+      <summary>使用提供的事件参数、广播级别的指示和用户标记异步引发自定义事件。</summary>
+      <param name="eventArgs">派生自 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.CustomNotificationEventArgs" /> 的自定义类。</param>
+      <param name="broadcastLevel">
+        <see cref="T:Microsoft.VisualStudio.TestTools.Execution.NotificationBroadcastLevel" /> 枚举的成员。</param>
+      <param name="userToken">可在 <see cref="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectorNotifications.CustomEventCompleted" /> 事件中返回的用于标识此自定义通知的标记。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectorNotifications.RaiseTestFailedEvent(Microsoft.VisualStudio.TestTools.Common.ITestElement,Microsoft.VisualStudio.TestTools.Execution.TestCaseFailureType)">
+      <summary>引发 <see cref="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.TestCaseFailed" /> 事件，以将测试用例已失败的情况通知给诊断数据适配器。</summary>
+      <param name="testCase">一个表示当前测试用例的 <see cref="T:Microsoft.VisualStudio.TestTools.Common.ITestElement" /> 对象。</param>
+      <param name="failureType">
+        <see cref="T:Microsoft.VisualStudio.TestTools.Execution.TestCaseFailureType" /> 值之一。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectorSettings">
+      <summary>读取并更新诊断数据适配器的配置设置和静态数据。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectorSettings.#ctor(System.Xml.XmlElement,System.Xml.XmlElement,System.Boolean,Microsoft.VisualStudio.TestTools.Execution.RoleContext)">
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.DataCollectorSettings.Configuration">
+      <summary>获取或设置诊断数据适配器的配置。</summary>
+      <returns>一个包含诊断数据适配器配置的 XML 元素。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.DataCollectorSettings.DefaultConfiguration">
+      <summary>获取诊断数据适配器的默认配置。</summary>
+      <returns>一个包含诊断数据适配器默认配置的 XML 元素。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.DataCollectorSettings.IsEnabled">
+      <summary>获取或设置一个值，该值用于启用或禁用诊断数据适配器。</summary>
+      <returns>一个 bool 值，指示是否已启用诊断数据适配器。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.DataCollectorSettings.RoleContext">
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectorSupportsTailoredApplicationsAttribute">
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectorSupportsTailoredApplicationsAttribute.#ctor">
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectorSupportsTailoredApplicationsAttribute.#ctor(System.Boolean)">
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.DataCollectorSupportsTailoredApplicationsAttribute.IsEnabledByDefault">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.DataCollectorSupportsTailoredApplicationsAttribute.SupportsTailoredApplications">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectorTypeUriAttribute">
+      <summary>使用 URI 唯一标识诊断数据适配器的类型。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectorTypeUriAttribute.#ctor(System.String)">
+      <summary>通过将提供的 string 用作诊断数据适配器的 URI 来创建 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectorTypeUriAttribute" /> 类的实例。</summary>
+      <param name="typeUri">诊断数据适配器类型的 URI。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.DataCollectorTypeUriAttribute.TypeUri">
+      <summary>获取唯一标识诊断数据适配器类型的 URI。</summary>
+      <returns>一个 string，其中包含唯一标识诊断数据适配器类型的 URI。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectorVersionObsoleteAttribute">
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataCollectorVersionObsoleteAttribute.#ctor(System.String,System.String,System.String)">
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.DataCollectorVersionObsoleteAttribute.ConfigurationConverter">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.DataCollectorVersionObsoleteAttribute.NewVersionTypeName">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.DataCollectorVersionObsoleteAttribute.NewVersionTypeUri">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.DataRequestEventArgs">
+      <summary>
+        <see cref="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.DataRequest" /> 事件的事件参数类。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.DataRequestEventArgs.#ctor(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext,Microsoft.VisualStudio.TestTools.Common.ITestElement,Microsoft.VisualStudio.TestTools.Common.TcmInformation,System.TimeSpan)">
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.DataRequestEventArgs.RequestedDuration">
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.DataRequestEventArgs.RequestId">
+      <summary>获取或设置唯一标识此请求上下文的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.RequestId" />。</summary>
+      <returns>唯一标识此请求上下文的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.RequestId" />。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.ExecutionUtilities">
+      <summary>提供实用工具方法以帮助执行和调试测试。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.ExecutionUtilities.DebugTarget(Microsoft.VisualStudio.TestTools.Execution.IResultSink,System.Guid,Microsoft.VisualStudio.TestTools.Common.DebugTargetInfo,System.TimeSpan)">
+      <summary>请求对测试的调试操作。</summary>
+      <returns>一个包含调试操作结果的 <see cref="T:Microsoft.VisualStudio.TestTools.Common.DebugOperationResult" /> 对象。</returns>
+      <param name="sink">要将调试请求发送到的 <see cref="T:Microsoft.VisualStudio.TestTools.Common.IResultSink" />。</param>
+      <param name="runId">测试运行的 GUID 标识符。</param>
+      <param name="targetInfo">一个包含调试操作相关信息的 <see cref="T:Microsoft.VisualStudio.TestTools.DebugTargetInfo" /> 对象。</param>
+      <param name="timeout">等待调试器执行调试操作的 <see cref="T:System.TimeSpan" />。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.ExecutionUtilities.IsAuthenticatedUserInAdminGroup(System.Security.Principal.WindowsIdentity)">
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.FileTransferInformation">
+      <summary>表示请求文件传输所需的信息。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.FileTransferInformation.#ctor(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext,System.String,System.Boolean)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.FileTransferInformation" /> 类的新实例。</summary>
+      <param name="context">
+        <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext" /> 对象。</param>
+      <param name="path">客户端文件系统上文件的路径。</param>
+      <param name="deleteFile">如果在传输完成后删除文件，则为 true。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.FileTransferInformation.ClientFileName">
+      <summary>获取客户端文件系统上文件的路径和文件名。</summary>
+      <returns>客户端文件系统上文件的路径和文件名。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.FileTransferInformation.DeleteFile">
+      <summary>获取一个值，该值指示当传输完成时是否删除本地文件。</summary>
+      <returns>如果在传输完成后删除文件，则为 true；否则 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.FileTransferInformation.Path">
+      <summary>获取或设置客户端文件系统上文件的路径和文件名。</summary>
+      <returns>客户端文件系统上文件的路径和文件名。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.FileTransferInformation.PerformCleanup">
+      <summary>获取一个值，该值指示传输后是否应当执行清理过程。</summary>
+      <returns>如果执行清理，则为 true；否则为 false。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.IBaseAdapter">
+      <summary>提供用作自定义测试适配器基础的接口。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.IBaseAdapter.AbortTestRun">
+      <summary>当测试运行过程中发生内部错误时调用。 此方法的行为应与 <see cref="M:Microsoft.VisualStudio.TestTools.Execution.IBaseAdapter.StopTestRun" /> 方法类似。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.IBaseAdapter.Cleanup">
+      <summary>当测试运行完成时调用。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.IBaseAdapter.PauseTestRun">
+      <summary>当用户请求暂停测试运行时调用。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.IBaseAdapter.ResumeTestRun">
+      <summary>当用户请求恢复测试运行时调用。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.IBaseAdapter.Run(Microsoft.VisualStudio.TestTools.Common.ITestElement,Microsoft.VisualStudio.TestTools.Execution.ITestContext)">
+      <summary>调用以执行测试用例。</summary>
+      <param name="testElement">用于描述加载哪个适配器的测试元素。</param>
+      <param name="testContext">适配器的上下文。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.IBaseAdapter.StopTestRun">
+      <summary>当用户请求停止测试运行时调用。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.IBaseRunContext">
+      <summary>提供测试适配器用于与测试执行框架通信的接口。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.IBaseRunContext.PauseTestRun">
+      <summary>发送暂停测试运行的请求。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.IBaseRunContext.ResultSink">
+      <summary>获得用于将测试结果发送至测试执行框架的对象。</summary>
+      <returns>返回此运行上下文的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.IResultSink" />。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.IBaseRunContext.RunConfig">
+      <summary>获取有关测试运行的信息。</summary>
+      <returns>一个包含执行运行配置的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.IExecutionRunConfiguration" />。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.IBaseRunContext.StopTestRun">
+      <summary>发送停止测试运行的请求。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.IBaseRunContext.TestRunner">
+      <summary>提供测试适配器用于运行一个或多个内部测试的接口。</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.TestTools.Execution.ITestRunner" /> 对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.IContextAccessor">
+      <summary>用于生成帮助器类以存储和检索来自上下文的值的接口。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.IContextAccessor.AddDoubleValue(System.String,System.Double)">
+      <summary>使用指定的键和值添加元素。</summary>
+      <param name="key">一个 string，表示要添加的元素的键。</param>
+      <param name="value">要添加的 double 值。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.IContextAccessor.AddIntValue(System.String,System.Int32)">
+      <summary>添加具有指定键和值的元素。</summary>
+      <param name="key">一个 string，表示要添加的元素的键。</param>
+      <param name="value">要添加的 int 值。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.IContextAccessor.AddObject(System.String,System.Object)">
+      <summary>添加具有指定键和值的元素。</summary>
+      <param name="key">一个 string，表示要添加的元素的键。</param>
+      <param name="value">要添加的 object 值。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.IContextAccessor.AddStringValue(System.String,System.String)">
+      <summary>添加具有指定键和值的元素。</summary>
+      <param name="key">一个 string，表示要添加的元素的键。</param>
+      <param name="value">要添加的 string 值。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.IContextAccessor.Count">
+      <summary>获取存储的值的总数。</summary>
+      <returns>一个指示存储值数量的 int。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.IContextAccessor.GetDoubleValue(System.String)">
+      <summary>检索与指定键关联的值。</summary>
+      <returns>检索到的 double 值。</returns>
+      <param name="key">一个 string，表示要检索的元素的键。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.IContextAccessor.GetEnumerator">
+      <summary>返回用于循环访问 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.IContextAccessor" /> 的 <see cref="T:System.Collections.IDictionaryEnumerator" />。</summary>
+      <returns>用于 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.IContextAccessor" /> 的 <see cref="T:System.Collections.IDictionaryEnumerator" />。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.IContextAccessor.GetIntValue(System.String)">
+      <summary>检索与指定键关联的值。</summary>
+      <returns>检索到的 int 值。</returns>
+      <param name="key">一个 string，表示要检索的元素的键。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.IContextAccessor.GetObject(System.String)">
+      <summary>检索与指定键关联的 object。</summary>
+      <returns>检索到的 object 值。</returns>
+      <param name="key">一个 string，表示要检索的值的键。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.IContextAccessor.GetStringValue(System.String)">
+      <summary>检索与指定键关联的 string。</summary>
+      <returns>检索到的 string 值。</returns>
+      <param name="key">要检索的 string 的键。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.IContextAccessor.RemoveValue(System.String)">
+      <summary>移除具有指定键的元素。</summary>
+      <param name="key">要移除的元素的键。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.IDataCollectionAwareTestAdapter">
+      <summary>提供一个接口，该接口将引发诊断数据适配器事件的能力添加到自定义测试适配器。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.IDataCollectionAwareTestAdapter.DataCollectors">
+      <summary>获取或设置一个 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectorNotifications" /> 对象，该对象可以引发诊断数据适配器事件。</summary>
+      <returns>一个诊断数据适配器（数据收集器）通知对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.IDataCollectionRunContext">
+      <summary>对象的界面，其中封装自定义诊断数据适配器的当前环境。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.IDataCollectionRunContext.ResultSink">
+      <summary>获取将测试结果保存到测试管理器服务器的对象。</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.TestTools.Execution.IResultSink" /> 对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.IDataCollectionRunContext.RunContextVariables">
+      <summary>获取一个对象，该对象可用于访问上下文中的每个值。</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.TestTools.Execution.IContextAccessor" /> 对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.IDataCollectionRunContext.TestRun">
+      <summary>获取对测试运行对象的引用。</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.TestTools.Common.TestRun" /> 对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.IDataCollectorConfigurationConverter">
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.IDataCollectorConfigurationConverter.Convert(System.Uri,System.Xml.XmlElement,System.Uri,System.Xml.XmlElement,System.Xml.XmlElement@)">
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.IDataCollectorConfigurationEditor">
+      <summary>提供一个接口，用于创建诊断数据适配器的自定义配置编辑器。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.IDataCollectorConfigurationEditor.Initialize(System.IServiceProvider,Microsoft.VisualStudio.TestTools.Execution.DataCollectorSettings)">
+      <summary>使用服务提供程序和诊断数据适配器的配置设置初始化配置编辑器。</summary>
+      <param name="serviceProvider">一个 <see cref="T:System.IServiceProvider" />，允许使用者查询它可以提供的任何服务的父级。</param>
+      <param name="settings">一个 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectorSettings" /> 对象，包含诊断数据适配器的当前设置。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.IDataCollectorConfigurationEditor.ResetToAgentDefaults">
+      <summary>将配置编辑器重置为默认设置。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.IDataCollectorConfigurationEditor.SaveData">
+      <summary>将数据保存在配置编辑器中。</summary>
+      <returns>诊断数据适配器的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectorSettings" /> 对象。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.IDataCollectorConfigurationEditor.VerifyData">
+      <summary>验证是否发生任何错误。 通常在关闭数据收集器配置编辑器之前由框架调用。</summary>
+      <returns>如果未出现任何错误，则为 true；否则为 false。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.IExecutionRunConfiguration">
+      <summary>测试运行信息的接口。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.IExecutionRunConfiguration.TestElements">
+      <summary>获取运行中的测试元素的列表。</summary>
+      <returns>返回测试运行中的测试元素的列表。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.IExecutionRunConfiguration.TestRun">
+      <summary>获取 <see cref="T:Microsoft.VisualStudio.TestTools.Common.TestRun" /> 对象。</summary>
+      <returns>返回 <see cref="T:Microsoft.VisualStudio.TestTools.Common.TestRun" /> 对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.IHostAdapter">
+      <summary>用于为主机应用程序中的测试执行提供支持的接口。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.IHostAdapter.GetTestAdapter(Microsoft.VisualStudio.TestTools.Common.ITestElement,Microsoft.VisualStudio.TestTools.Execution.IRunContext)">
+      <summary>加载并返回用于给定测试元素和运行上下文的测试适配器。</summary>
+      <returns>当前 <see cref="T:Microsoft.VisualStudio.TestTools.TestAdapter.ITestAdapter" />。</returns>
+      <param name="test">一个用于描述加载哪个测试适配器的 <see cref="T:Microsoft.VisualStudio.TestTools.Common.ITestElement" />。</param>
+      <param name="runContext">测试适配器的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.IRunContext" />。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.IRegisterHostAdapter">
+      <summary>为主机适配器代理提供用于在远程处理信道上进行发布的接口。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.IRegisterHostAdapter.Ping">
+      <summary>验证连接，确认对此方法的调用没有产生错误。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.IRegisterHostAdapter.Register(Microsoft.VisualStudio.TestTools.Execution.IHostAdapter)">
+      <summary>注册 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.IHostAdapter" />。</summary>
+      <param name="hostAdapter">要注册的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.IHostAdapter" />。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.IResultSink">
+      <summary>用于发送消息、结果和通知的接口。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.IResultSink.AddResult(Microsoft.VisualStudio.TestTools.Common.TestMessage)">
+      <summary>将消息添加到结果接收器。</summary>
+      <param name="testMessage">要添加到结果接收器的 <see cref="T:Microsoft.VisualStudio.TestTools.Common.TestMessage" />。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.IRunContext">
+      <summary>为测试适配器提供用于检索关于测试运行的信息的接口。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.IRunContext.AgentName">
+      <summary>获取正在运行测试的计算机的名称。</summary>
+      <returns>正在运行测试的计算机的名称。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.IRunContext.RunContextVariables">
+      <summary>获取运行上下文变量。</summary>
+      <returns>一个包含上下文命名值的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.IContextAccessor" /> 对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.ITestContext">
+      <summary>一个上下文接口定义，用于定义在测试运行进程中传递到方法的测试上下文。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.ITestContext.Properties">
+      <summary>获取此测试上下文的属性。</summary>
+      <returns>一个 <see cref="T:System.Collections.Generic.IDictionary" /> 对象，其中包含此测试上下文的属性。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.ITestContext.ResultSink">
+      <summary>获取此测试上下文的结果接收器，其中包含测试的通过或失败结果。</summary>
+      <returns>此测试上下文的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.IResultSink" /> 对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.ITestContext.RunContextVariables">
+      <summary>获取运行上下文变量。</summary>
+      <returns>一个包含运行上下文变量的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.IContextAccessor" /> 对象。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.ITestContext.TestContextVariables">
+      <summary>获取测试上下文变量。</summary>
+      <returns>一个包含测试上下文变量的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.IContextAccessor" /> 对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.ITestExecutionPlugin">
+      <summary>用于在测试执行框架中执行代码的可插入接口。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.ITestExecutionPlugin.AfterExecutionCompleted(Microsoft.VisualStudio.TestTools.Common.TestRun,Microsoft.VisualStudio.TestTools.Execution.IResultSink,Microsoft.VisualStudio.TestTools.Execution.IDataCollectionRunContext)">
+      <summary>此方法在完成所有测试之后调用，表明测试运行已完成。</summary>
+      <param name="run">当前正在处理并且要求执行特殊操作的测试运行。</param>
+      <param name="sink">用于发送数据的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.IResultSink" /> 对象。</param>
+      <param name="runContext">一个表示测试上下文的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.IDataCollectionRunContext" /> 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.ITestExecutionPlugin.AfterTestCompleted(Microsoft.VisualStudio.TestTools.Execution.IDataCollectionRunContext,Microsoft.VisualStudio.TestTools.Common.TestExecId)">
+      <summary>在测试完成后调用此方法。</summary>
+      <param name="runContext">一个表示测试上下文的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.IDataCollectionRunContext" /> 对象。</param>
+      <param name="id">测试 ID。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.ITestExecutionPlugin.BeforeExecutionStarted(Microsoft.VisualStudio.TestTools.Common.TestRun,Microsoft.VisualStudio.TestTools.Execution.IResultSink,Microsoft.VisualStudio.TestTools.Execution.IDataCollectionRunContext)">
+      <summary>在测试运行开始执行之前调用此方法。</summary>
+      <param name="run">当前正在处理并且要求执行特殊操作的测试运行。</param>
+      <param name="sink">用于发送数据的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.IResultSink" /> 对象。</param>
+      <param name="runContext">一个表示测试上下文的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.IDataCollectionRunContext" /> 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.ITestExecutionPlugin.BeforeTestStarted(Microsoft.VisualStudio.TestTools.Execution.IDataCollectionRunContext,Microsoft.VisualStudio.TestTools.Common.TestExecId)">
+      <summary>在测试启动之前调用此方法。</summary>
+      <returns>如果代理应继续运行测试，则为 true；如果代理不应运行测试，则为 false。 当返回 false 时，代理假定该插件报告该测试失败，并且不记录结果。 即使返回 false，该插件仍将引发该测试的 <see cref="F:Microsoft.VisualStudio.TestTools.Common.TestMessageKind.TestEnd" /> 事件。</returns>
+      <param name="runContext">一个表示测试上下文的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.IDataCollectionRunContext" /> 对象。</param>
+      <param name="id">测试 ID。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.ITestRunner">
+      <summary>提供控制器与代理之间的接口，利用该接口，套件适配器可以回调和执行一系列测试用例。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.ITestRunner.LoadRun(Microsoft.VisualStudio.TestTools.Common.ITestElement[],Microsoft.VisualStudio.TestTools.Execution.IResultSink,System.Collections.Generic.IDictionary{System.String,System.Object})">
+      <summary>运行负载测试用例。</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.TestTools.Execution.AdapterRunResult" /> 枚举的一个成员，指示每个测试是成功还是失败。</returns>
+      <param name="testElement">要执行的 <see cref="T:Microsoft.VisualStudio.TestTools.Common.ITestElement" /> 对象的数组。</param>
+      <param name="resultSink">用于存储测试结果的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.IResultSink" />。</param>
+      <param name="contextProperties">一个包含测试上下文属性的 <see cref="T:System.Collections.Generic.IDictionary&lt;TKey,TValue&gt;" /> 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.ITestRunner.Run(Microsoft.VisualStudio.TestTools.Common.ITestElement[],Microsoft.VisualStudio.TestTools.Execution.IResultSink)">
+      <summary>运行测试用例。</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.TestTools.Execution.AdapterRunResult" /> 枚举的一个成员，指示每个测试是成功还是失败。</returns>
+      <param name="testElement">要执行的 <see cref="T:Microsoft.VisualStudio.TestTools.Common.ITestElement" /> 对象的数组。</param>
+      <param name="resultSink">用于存储测试结果的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.IResultSink" />。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.MediaRecorderCommand">
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.Execution.MediaRecorderCommand.GetDefaultAudioDeviceName">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.Execution.MediaRecorderCommand.StartInputVolumeLevelPolling">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.Execution.MediaRecorderCommand.StopInputVolumeLevelPolling">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.Execution.MediaRecorderCommand.MuteDefaultAudioDevice">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.Execution.MediaRecorderCommand.UnmuteDefaultAudioDevice">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.Execution.MediaRecorderCommand.GetDefaultAudioDeviceMuteStatus">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.Execution.MediaRecorderCommand.EnableAudioRecorder">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.Execution.MediaRecorderCommand.DisableAudioRecorder">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.Execution.MediaRecorderCommand.GetAudioRecorderStatus">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.Execution.MediaRecorderCommand.DisableVideoRecorder">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.Execution.MediaRecorderCommand.EnableVideoRecorder">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.Execution.MediaRecorderCommand.GetVideoRecorderStatus">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.MediaRecorderCommandEventArgs">
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.MediaRecorderCommandEventArgs.#ctor(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext,Microsoft.VisualStudio.TestTools.Execution.MediaRecorderCommand)">
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.MediaRecorderCommandEventArgs.Command">
+      <returns>返回 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.MediaRecorderCommand" />。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.MediaRecorderCustomData">
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.MediaRecorderCustomData.#ctor(System.String)">
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.MediaRecorderCustomData.Data">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.MediaRecorderVolumeLevelData">
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.MediaRecorderVolumeLevelData.#ctor(System.Single)">
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.MediaRecorderVolumeLevelData.Volume">
+      <returns>返回 <see cref="T:System.Single" />。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.NotificationBroadcastLevel">
+      <summary>枚举诊断数据适配器的范围，测试适配器可以向该范围广播自定义通知事件。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.Execution.NotificationBroadcastLevel.LocalOnly">
+      <summary>仅向本地诊断数据适配器广播通知事件。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.Execution.NotificationBroadcastLevel.All">
+      <summary>向所有诊断数据适配器（包括本地和远程）广播通知事件。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.RequestId">
+      <summary>唯一地标识请求，可与消息和事件一起使用。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.RequestId.CompareTo(Microsoft.VisualStudio.TestTools.Execution.RequestId)">
+      <summary>将此实例与提供的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.RequestId" /> 进行比较。</summary>
+      <returns>一个 32 位有符号整数，指示正在进行比较的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.RequestId" /> 的相对顺序。 返回值的含义如下： 小于零此实例小于 <paramref name="other" />。 零此实例等于 <paramref name="other" />。 大于零。此实例大于 <paramref name="other" />。</returns>
+      <param name="other">比较的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.RequestId" />。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.RequestId.CompareTo(System.Object)">
+      <summary>将此实例与提供的对象进行比较。</summary>
+      <returns>一个 32 位有符号整数，该整数指示进行比较的对象的相对顺序。 返回值的含义如下： 小于零此实例小于 <paramref name="obj" />。 零此实例等于 <paramref name="obj" />。 大于零。此实例大于 <paramref name="obj" />。</returns>
+      <param name="obj">要进行比较的对象。</param>
+      <exception cref="ArgumentException">对象不属于类型 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.RequestId" />。</exception>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.Execution.RequestId.Empty">
+      <summary>一个具有空 GUID 的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.RequestId" />。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.RequestId.Equals(Microsoft.VisualStudio.TestTools.Execution.RequestId)">
+      <summary>比较此实例与提供的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.RequestId" /> 的值是否相等。</summary>
+      <returns>如果相等，则为 true；否则为 false。</returns>
+      <param name="other">比较的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.RequestId" />。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.RequestId.Equals(System.Object)">
+      <summary>比较此实例与提供的对象的值是否相等。</summary>
+      <returns>如果相等，则为 true；否则为 false。</returns>
+      <param name="obj">要进行比较的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.RequestId" /> 类型的对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.RequestId.GetHashCode">
+      <summary>获取此实例的哈希代码。</summary>
+      <returns>此 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.RequestId" /> 的基础哈希代码。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.RequestId.Id">
+      <summary>获取或设置表示 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.RequestId" /> 的基础 GUID。</summary>
+      <returns>一个表示 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.RequestId" /> 的 GUID。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.RequestId.op_Equality(Microsoft.VisualStudio.TestTools.Execution.RequestId,Microsoft.VisualStudio.TestTools.Execution.RequestId)">
+      <summary>比较两个 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.RequestId" /> 的值是否相等。</summary>
+      <returns>如果相等，则为 true；否则为 false。</returns>
+      <param name="left">相等运算符左侧的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.RequestId" />。</param>
+      <param name="right">相等运算符右侧的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.RequestId" />。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.RequestId.op_Inequality(Microsoft.VisualStudio.TestTools.Execution.RequestId,Microsoft.VisualStudio.TestTools.Execution.RequestId)">
+      <summary>比较两个 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.RequestId" /> 的值是否不相等。</summary>
+      <returns>如果不相等，则为 true；否则为 false。</returns>
+      <param name="left">不等运算符左侧的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.RequestId" />。</param>
+      <param name="right">不等运算符右侧的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.RequestId" />。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.RequestId.ToString">
+      <summary>将实例转换为注册表格式的小写字符串。</summary>
+      <returns>一个注册表格式的小写字符串，表示基础 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.RequestId" />。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.RoleContext">
+      <summary>封装有关正在配置诊断数据适配器的角色的上下文信息。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.RoleContext.#ctor(System.Boolean,System.Boolean)">
+      <summary>使用提供的远程角色和执行角色指示符初始化 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.RoleContext" /> 类的新实例。</summary>
+      <param name="isRemoteRole">如果此上下文用于为远程角色配置的诊断数据适配器，则为 true；否则为 false。</param>
+      <param name="isExecutionRole">如果此上下文用于为执行角色配置的诊断数据适配器，则为 true；否则为 false。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.RoleContext.IsExecutionRole">
+      <summary>获取一个值，该值指示此上下文是否用于为执行角色配置的诊断数据适配器。</summary>
+      <returns>如果此上下文用于为执行角色配置的诊断数据适配器，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.RoleContext.IsRemoteRole">
+      <summary>获取指示此上下文是否用于为远程角色配置的诊断数据适配器的值。</summary>
+      <returns>如果此上下文用于为远程角色配置的诊断数据适配器，则为 true；否则为 false。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.RunConfiguration">
+      <summary>用于管理测试运行配置数据和对象的类。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.RunConfiguration.#ctor(Microsoft.VisualStudio.TestTools.Common.TestRun)">
+      <summary>使用新的 <see cref="T:Microsoft.VisualStudio.TestTools.Common.TestRun" /> 初始化新的 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.RunConfiguration" /> 对象。</summary>
+      <param name="testRun">用于初始化此 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.RunConfiguration" /> 的 <see cref="T:Microsoft.VisualStudio.TestTools.Common.TestRun" />。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.RunConfiguration.IsValid">
+      <summary>报告 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.RunConfiguration" /> 是否有效。</summary>
+      <returns>如果 <see cref="T:Microsoft.VisualStudio.TestTools.Common.TestRun" /> 有效并且此 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.RunConfiguration" /> 包含 <see cref="T:Microsoft.VisualStudio.TestTools.Common.ITestElement" /> 对象，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.RunConfiguration.TestCount">
+      <summary>获取此 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.RunConfiguration" /> 中的 <see cref="T:Microsoft.VisualStudio.TestTools.Common.ITestElement" /> 对象数。</summary>
+      <returns>此 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.RunConfiguration" /> 中的 <see cref="T:Microsoft.VisualStudio.TestTools.Common.ITestElement" /> 对象数。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.RunConfiguration.TestElements">
+      <summary>获取 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.RunConfiguration" /> 中的所有 <see cref="T:Microsoft.VisualStudio.TestTools.Common.ITestElement" /> 对象。</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.TestTools.Common.ITestElement" /> 对象的数组。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.RunConfiguration.TestRun">
+      <summary>获取此 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.RunConfiguration" /> 的 <see cref="T:Microsoft.VisualStudio.TestTools.Common.TestRun" />。</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.TestTools.Common.TestRun" /> 对象。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.SessionEndEventArgs">
+      <summary>表示 <see cref="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.SessionEnd" /> 事件的事件参数。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.SessionEndEventArgs.#ctor(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext)">
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.SessionPauseEventArgs">
+      <summary>表示 <see cref="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.SessionPause" /> 事件的事件参数。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.SessionPauseEventArgs.#ctor(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext)">
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.SessionResumeEventArgs">
+      <summary>表示 <see cref="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.SessionResume" /> 事件的事件参数。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.SessionResumeEventArgs.#ctor(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext)">
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.SessionStartEventArgs">
+      <summary>表示 <see cref="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.SessionStart" /> 事件的事件参数。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.SessionStartEventArgs.#ctor(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext)">
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.StreamTransferInformation">
+      <summary>表示请求流传输所需的信息。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.StreamTransferInformation.#ctor(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext,System.IO.Stream,System.String,System.Boolean)">
+      <summary>使用提供的参数初始化 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.StreamTransferInformation" /> 类的新实例。</summary>
+      <param name="context">
+        <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext" /> 对象。</param>
+      <param name="stream">
+        <see cref="T:System.IO.Stream" /> 对象。</param>
+      <param name="fileName">要在客户端上使用的路径和文件名。</param>
+      <param name="closeStream">如果在传输后关闭流，则为 true。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.StreamTransferInformation.ClientFileName">
+      <summary>获取客户端上文件的路径和文件名。</summary>
+      <returns>客户端上文件的路径和文件名称。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.StreamTransferInformation.CloseStream">
+      <summary>获取或设置一个值，该值指示传输后是否关闭流。</summary>
+      <returns>如果在传输后关闭流，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.StreamTransferInformation.FileName">
+      <summary>获取客户端上文件的路径和文件名。</summary>
+      <returns>客户端上文件的路径和文件名称。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.StreamTransferInformation.PerformCleanup">
+      <summary>获取一个值，该值指示传输后是否执行清理。</summary>
+      <returns>如果传输后执行清理，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.StreamTransferInformation.Stream">
+      <summary>获取或设置传输的流。</summary>
+      <returns>传输的流。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.TestCaseEndEventArgs">
+      <summary>表示 <see cref="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.TestCaseEnd" /> 事件的事件参数。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.TestCaseEndEventArgs.#ctor(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext,Microsoft.VisualStudio.TestTools.Common.ITestElement,Microsoft.VisualStudio.TestTools.Common.TcmInformation,Microsoft.VisualStudio.TestTools.Common.TestOutcome)">
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.TestCaseEndEventArgs.TestOutcome">
+      <summary>获取或设置测试的 <see cref="T:Microsoft.VisualStudio.TestTools.Common.TestOutcome" />。</summary>
+      <returns>测试的结果。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.TestCaseEventArgs">
+      <summary>提供测试用例事件中所用全部事件参数类的基类。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.TestCaseEventArgs.#ctor(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext,Microsoft.VisualStudio.TestTools.Common.ITestElement,Microsoft.VisualStudio.TestTools.Common.TcmInformation)">
+      <summary>使用提供的信息初始化 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.TestCaseEventArgs" /> 类的新实例。</summary>
+      <param name="context">
+        <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext" /> 对象。</param>
+      <param name="testElement">由 <see cref="T:Microsoft.VisualStudio.TestTools.Common.ITestElement" /> 对象表示的当前测试元素。</param>
+      <param name="tcmInformation">一个 <see cref="T:Microsoft.VisualStudio.TestTools.Common.TcmInformation" /> 对象，该对象用于从测试管理器获取有关测试的更多数据。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.TestCaseEventArgs.#ctor(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext,System.Guid,Microsoft.VisualStudio.TestTools.Common.TcmInformation,System.String,System.Boolean)">
+      <summary>使用给定信息初始化 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.TestCaseEventArgs" /> 类的新实例。</summary>
+      <param name="context">
+        <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext" /> 对象。</param>
+      <param name="testCaseId">由 <see cref="T:Microsoft.VisualStudio.TestTools.Common.ITestElement" /> 对象表示的当前测试用例 ID。</param>
+      <param name="tcmInformation">一个 <see cref="T:Microsoft.VisualStudio.TestTools.Common.TcmInformation" /> 对象，该对象用于从测试管理器获取有关测试的更多数据。</param>
+      <param name="testCaseName">测试用例的名称。</param>
+      <param name="isChildTestCase">如果当前测试用例为另一测试用例的子用例，则为 true。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.TestCaseEventArgs.IsChildTestCase">
+      <summary>获取或设置一个值，该值指示测试用例是否为另一个测试用例的子测试用例。</summary>
+      <returns>如果测试用例为子测试用例，则为 true；如果测试用例为顶级测试用例，则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.TestCaseEventArgs.TcmInformation">
+      <summary>获取对象，该对象中包含的信息可用于从测试管理器服务器获取有关测试用例的更多数据。</summary>
+      <returns>一个信息对象；如果测试不是源自测试管理器，则为 null。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.TestCaseEventArgs.TestCaseId">
+      <summary>获取或设置测试用例标识符。</summary>
+      <returns>测试用例 ID。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.TestCaseEventArgs.TestCaseName">
+      <summary>获取或设置测试用例的名称。</summary>
+      <returns>测试用例的名称。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.TestCaseEventArgs.TestElement">
+      <summary>获取当前测试。</summary>
+      <returns>当前测试 。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.TestCaseFailedEventArgs">
+      <summary>表示为 <see cref="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.TestCaseFailed" /> 事件提供的参数。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.TestCaseFailedEventArgs.#ctor(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext,Microsoft.VisualStudio.TestTools.Common.ITestElement,Microsoft.VisualStudio.TestTools.Common.TcmInformation,Microsoft.VisualStudio.TestTools.Execution.TestCaseFailureType)">
+      <summary>使用提供的参数值初始化 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.TestCaseFailedEventArgs" /> 类的新实例。</summary>
+      <param name="context">一个 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext" /> 对象，包含当前上下文信息。</param>
+      <param name="testElement">关联的 <see cref="T:Microsoft.VisualStudio.TestTools.Common.ITestElement" /> 对象。</param>
+      <param name="tcmInformation">一个 <see cref="T:Microsoft.VisualStudio.TestTools.Common.TcmInformation" />，包含有关测试用例管理器的信息。</param>
+      <param name="failureType">
+        <see cref="T:Microsoft.VisualStudio.TestTools.Execution.TestCaseFailureType" /> 值之一。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.TestCaseFailedEventArgs.FailureType">
+      <summary>获取或设置失败的类型（如果出现任何失败）。</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.TestTools.Execution.TestCaseFailureType" /> 值之一。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.TestCaseFailureType">
+      <summary>此枚举表示测试用例的失败类型，与在 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.TestCaseFailedEventArgs" /> 类中使用的一样。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.Execution.TestCaseFailureType.None">
+      <summary>无失败。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.Execution.TestCaseFailureType.Assertion">
+      <summary>断言失败。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.Execution.TestCaseFailureType.UnhandledException">
+      <summary>某个异常未处理。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.Execution.TestCaseFailureType.UnexpectedException">
+      <summary>遇到意外的异常。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.Execution.TestCaseFailureType.MissingException">
+      <summary>异常丢失。</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TestTools.Execution.TestCaseFailureType.Other">
+      <summary>发生未知的失败类型。</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.TestCasePauseEventArgs">
+      <summary>表示 <see cref="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.TestCasePause" /> 事件的事件参数。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.TestCasePauseEventArgs.#ctor(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext,Microsoft.VisualStudio.TestTools.Common.ITestElement,Microsoft.VisualStudio.TestTools.Common.TcmInformation)">
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.TestCaseResetEventArgs">
+      <summary>表示 <see cref="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.TestCaseReset" /> 事件的事件参数。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.TestCaseResetEventArgs.#ctor(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext,Microsoft.VisualStudio.TestTools.Common.ITestElement,Microsoft.VisualStudio.TestTools.Common.TcmInformation)">
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.TestCaseResumeEventArgs">
+      <summary>表示 <see cref="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.TestCaseResume" /> 事件的事件参数。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.TestCaseResumeEventArgs.#ctor(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext,Microsoft.VisualStudio.TestTools.Common.ITestElement,Microsoft.VisualStudio.TestTools.Common.TcmInformation)">
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.TestCaseStartEventArgs">
+      <summary>表示 <see cref="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.TestCaseStart" /> 事件的事件参数。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.TestCaseStartEventArgs.#ctor(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext,Microsoft.VisualStudio.TestTools.Common.ITestElement,Microsoft.VisualStudio.TestTools.Common.TcmInformation)">
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.TestExecutionSection">
+      <summary>表示 app.config 配置文件的执行部分的配置设置。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.TestExecutionSection.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.TestExecutionSection" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.TestExecutionSection.DeserializeElement(System.Xml.XmlReader,System.Boolean)">
+      <summary>读取 app.config 文件，并用该文件的测试执行部分中的值填充此对象的属性。</summary>
+      <param name="reader">
+        <see cref="T:System.Xml.XmlReader" /> 对象。</param>
+      <param name="serializeCollectionKey">如果仅反序列化键属性值，则为 true；否则为 false。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.TestExecutionSection.SerializeElement(System.Xml.XmlWriter,System.Boolean)">
+      <summary>读取 app.config 文件，并用该文件的测试执行部分中的值填充此对象的属性。</summary>
+      <returns>如果序列化成功，则为 true；否则为 false。</returns>
+      <param name="writer">
+        <see cref="T:System.Xml.XmlWriter" /> 对象。</param>
+      <param name="serializeCollectionKey">如果仅序列化键属性值，则为 true；否则为 false。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.TestExecutionSection.SerializeToXmlElement(System.Xml.XmlWriter,System.String)">
+      <summary>将该设置序列化为提供的 XML 元素名称。</summary>
+      <returns>如果序列化成功，则为 true；否则为 false。</returns>
+      <param name="writer">
+        <see cref="T:System.Xml.XmlWriter" /> 对象。</param>
+      <param name="elementName">要将值序列化为的 XML 元素部分的名称。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.TestMessageReceiverDelegate">
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.TestStepEndEventArgs">
+      <summary>表示 <see cref="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.TestStepEnd" /> 事件的事件参数。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.TestStepEndEventArgs.#ctor(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext,Microsoft.VisualStudio.TestTools.Common.ITestElement,Microsoft.VisualStudio.TestTools.Common.TcmInformation,System.Int32,System.String,Microsoft.VisualStudio.TestTools.Common.TestOutcome)">
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.TestStepEndEventArgs.TestStepOutcome">
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.TestStepEventArgs">
+      <summary>所有测试步骤事件参数的基类。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.TestStepEventArgs.#ctor(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext,Microsoft.VisualStudio.TestTools.Common.ITestElement,Microsoft.VisualStudio.TestTools.Common.TcmInformation,System.Int32,System.String)">
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.TestStepEventArgs.#ctor(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext,System.Guid,Microsoft.VisualStudio.TestTools.Common.TcmInformation,System.String,System.Boolean,System.Int32,System.String)">
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.TestStepEventArgs.TestStepDescription">
+      <summary>获取或设置测试步骤的说明。</summary>
+      <returns>返回测试步骤的说明。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.TestStepEventArgs.TestStepId">
+      <summary>获取或设置测试步骤的 ID。</summary>
+      <returns>返回测试步骤的 ID。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.TestStepStartEventArgs">
+      <summary>表示 <see cref="E:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.TestStepStart" /> 事件的事件参数。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.TestStepStartEventArgs.#ctor(Microsoft.VisualStudio.TestTools.Execution.DataCollectionContext,Microsoft.VisualStudio.TestTools.Common.ITestElement,Microsoft.VisualStudio.TestTools.Common.TcmInformation,System.Int32,System.String)">
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.Execution.Aggregation.AggregationSessionConfiguration">
+      <summary>提供数据集合聚合函数所使用的会话级别配置信息。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.Aggregation.AggregationSessionConfiguration.#ctor">
+      <summary>使用默认设置初始化 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.Aggregation.AggregationSessionConfiguration" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.Execution.Aggregation.AggregationSessionConfiguration.#ctor(System.String)">
+      <summary>通过使用会话使用的输出目录初始化 <see cref="T:Microsoft.VisualStudio.TestTools.Execution.Aggregation.AggregationSessionConfiguration" /> 类的新实例。</summary>
+      <param name="outputDirectory">会话使用的输出目录。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.Execution.Aggregation.AggregationSessionConfiguration.OutputDirectory">
+      <summary>获取当前会话的输出目录。</summary>
+      <returns>当前会话的输出目录。</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.TestAdapter.ILoadTestAdapter">
+      <summary>负载测试适配器要实现的接口。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.TestAdapter.ILoadTestAdapter.LoadRun(Microsoft.VisualStudio.TestTools.Common.ITestElement,Microsoft.VisualStudio.TestTools.Execution.ITestContext)">
+      <summary>线程安全的 Run 方法。</summary>
+      <param name="testElement">测试元素。</param>
+      <param name="testContext">测试上下文。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.TestAdapter.ITestAdapter">
+      <summary>所有测试适配器要实现的接口。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.TestAdapter.ITestAdapter.Initialize(Microsoft.VisualStudio.TestTools.Execution.IRunContext)">
+      <summary>在加载测试适配器执行测试运行时调用。</summary>
+      <param name="runContext">此测试运行的上下文。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.TestAdapter.ITestAdapter.PreTestRunFinished(Microsoft.VisualStudio.TestTools.Execution.IRunContext)">
+      <summary>在测试运行完成时调用，使测试适配器可以进行清理。</summary>
+      <param name="runContext">此测试运行的上下文。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.TestAdapter.ITestAdapter.ReceiveMessage(System.Object)">
+      <summary>从用户界面、控制器或代理接收下游消息。</summary>
+      <param name="message">消息。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.TestAdapter.ITimeoutTestAdapter">
+      <summary>测试适配器请求测试超时通知的接口。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.TestAdapter.ITimeoutTestAdapter.TestTimeout(Microsoft.VisualStudio.TestTools.Common.ITestElement)">
+      <summary>由代理调用以停止单个测试而不是停止整个运行。 测试超时时调用。</summary>
+      <param name="test">要停止的测试。</param>
+    </member>
+  </members>
+</doc>

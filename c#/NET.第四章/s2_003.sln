@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "s2_004", "s2_004\s2_004.csproj", "{07097E5E-9C73-43BC-9E7D-F034EB5D9E45}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "New.day4", "New.day4", "{39F4D023-C6A1-4AAA-B1D2-B67EBB72EFA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_shangji1", "04_shangji1\04_shangji1.csproj", "{B69757D2-7499-413D-B011-6CE33B1FDAFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_shangji2", "04_shangji2\04_shangji2.csproj", "{EC50D9B8-679D-4C57-BE4F-1732299220E1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07097E5E-9C73-43BC-9E7D-F034EB5D9E45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07097E5E-9C73-43BC-9E7D-F034EB5D9E45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07097E5E-9C73-43BC-9E7D-F034EB5D9E45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07097E5E-9C73-43BC-9E7D-F034EB5D9E45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B69757D2-7499-413D-B011-6CE33B1FDAFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B69757D2-7499-413D-B011-6CE33B1FDAFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B69757D2-7499-413D-B011-6CE33B1FDAFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B69757D2-7499-413D-B011-6CE33B1FDAFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC50D9B8-679D-4C57-BE4F-1732299220E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC50D9B8-679D-4C57-BE4F-1732299220E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC50D9B8-679D-4C57-BE4F-1732299220E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC50D9B8-679D-4C57-BE4F-1732299220E1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{07097E5E-9C73-43BC-9E7D-F034EB5D9E45} = {39F4D023-C6A1-4AAA-B1D2-B67EBB72EFA7}
+		{B69757D2-7499-413D-B011-6CE33B1FDAFF} = {39F4D023-C6A1-4AAA-B1D2-B67EBB72EFA7}
+		{EC50D9B8-679D-4C57-BE4F-1732299220E1} = {39F4D023-C6A1-4AAA-B1D2-B67EBB72EFA7}
+	EndGlobalSection
+EndGlobal

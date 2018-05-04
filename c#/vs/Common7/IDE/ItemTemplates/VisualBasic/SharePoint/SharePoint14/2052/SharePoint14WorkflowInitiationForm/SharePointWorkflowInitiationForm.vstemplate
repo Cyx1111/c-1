@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID="334"/>
+    <Description Package="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID="333"/>
+    <Icon Package="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID="228"/>
+    <TemplateID>SharePoint14WorkflowInitiationForm_VB</TemplateID>
+    <FrameworkVersion>3.5</FrameworkVersion>
+    <ProjectType>VisualBasic</ProjectType>
+    <SortOrder>100</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>WorkflowInitiationForm.aspx</DefaultName>
+    <TemplateGroupID>SharePointItemTemplateGroupID</TemplateGroupID>
+    <ShowByDefault>false</ShowByDefault>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>Microsoft.SharePoint</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Data</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Drawing</Assembly>
+      </Reference>      
+      <Reference>
+        <Assembly>System.Web</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Xml</Assembly>
+      </Reference>      
+    </References>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.$fileinputextension$">Default.aspx</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.$fileinputextension$.vb" SubType="ASPXCodeBehind">Default.aspx.vb</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.$fileinputextension$.designer.vb">Default.aspx.designer.vb</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="SharePointProjectParentFilter" Value="ProjectItem;MappedFolder"/>
+      <CustomParameter Name="$loc_PrePopulateComment$" _locID="$loc_PrePopulateComment$" _locAttrData="Value" Value="(可选)在此处添加代码以预填充窗体字段。"/>
+      <CustomParameter Name="$loc_SiteWorkflowComment$" _locID="$loc_SiteWorkflowComment$" _locAttrData="Value" Value="站点工作流的“List”和“ID”参数将为 null。"/>
+      <CustomParameter Name="$loc_IgnoreErrorsComment$" _locID="$loc_IgnoreErrorsComment$" _locAttrData="Value" Value="读取请求参数失败"/>
+      <CustomParameter Name="$loc_WorkflowFailedStartError$" _locID="$loc_WorkflowFailedStartError$" _locAttrData="Value" Value="启动工作流失败"/>
+      <CustomParameter Name="$loc_GetInitDataSummary$" _locID="$loc_GetInitDataSummary$" _locAttrData="Value" Value="当用户单击启动工作流的按钮时，调用此方法。"/>
+      <CustomParameter Name="$loc_InitiationCodeRegion$" _locID="$loc_InitiationCodeRegion$" _locAttrData="Value" Value="工作流启动代码 - 通常不应更改以下代码"/>
+      <CustomParameter Name="$loc_GetInitDataComment$" _locID="$loc_GetInitDataComment$" _locAttrData="Value" Value="TODO: 返回包含将传递到工作流的启动数据的字符串。该字符串通常采用 XML 格式。"/>
+      <CustomParameter Name="$loc_ParamsFailedLoadingError$" _locID="$loc_ParamsFailedLoadingError$" _locAttrData="Value" Value="读取请求参数失败"/>
+      <CustomParameter Name="$loc_StartWorkflowClickComment$" _locID="$loc_StartWorkflowClickComment$" _locAttrData="Value" Value="(可选)在此处添加代码以在启动工作流之前执行其他步骤"/>
+      <CustomParameter Name="$loc_StartWorkflowButtonText$" _locID="$loc_StartWorkflowButtonText$" _locAttrData="Value" Value="启动工作流"/>
+      <CustomParameter Name="$loc_CancelButtonText$" _locID="$loc_CancelButtonText$" _locAttrData="Value" Value="取消"/>
+      <CustomParameter Name="$loc_InitiationFormTitle$" _locID="$loc_InitiationFormTitle$" _locAttrData="Value" Value="工作流启动窗体"/>
+      <CustomParameter Name="$loc_AutoGenComment$" _locID="$loc_AutoGenComment$" _locAttrData="Value" Value="自动生成的字段。"/>
+      <CustomParameter Name="$loc_ControlComment$" _locID="$loc_ControlComment$" _locAttrData="Value" Value="控件"/>
+      <CustomParameter Name="$loc_ModifyComment$" _locID="$loc_ModifyComment$" _locAttrData="Value" Value="若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。"/>
+    </CustomParameters>
+</TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.WorkflowInitiationFormWizard</FullClassName>
+  </WizardExtension>  
+</VSTemplate>

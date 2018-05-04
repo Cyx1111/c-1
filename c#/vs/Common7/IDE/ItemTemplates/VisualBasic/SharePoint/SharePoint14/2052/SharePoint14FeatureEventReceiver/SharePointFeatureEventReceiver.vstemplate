@@ -1,0 +1,27 @@
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{540DCB6B-915E-4a16-A7D8-838D154377A8}" ID="501"/>
+    <Description Package="{540DCB6B-915E-4a16-A7D8-838D154377A8}" ID="502"/>
+    <Icon Package="{540DCB6B-915E-4a16-A7D8-838D154377A8}" ID="503"/>
+    <TemplateID>SharePoint14FeatureEventReceiver_VB_ITEM</TemplateID>
+    <ProjectType>VisualBasic</ProjectType>
+    <DefaultName>FeatureEventReceiver.vb</DefaultName>
+    <Hidden>true</Hidden>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem TargetFileName="$fileinputname$.vb" ReplaceParameters="true" OpenInEditor="false">FeatureEventReceiver.vb</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="$loc_ClassComment$" _locID="$loc_ClassComment$" _locAttrData="Value" Value="此类用于处理在激活、停用、安装、卸载和升级功能的过程中引发的事件。"/>
+      <CustomParameter Name="$loc_ClassGuidComment$" _locID="$loc_ClassGuidComment$" _locAttrData="Value" Value="附加到此类的 GUID 可能会在打包期间使用，不应进行修改。"/>
+      <CustomParameter Name="$loc_FeatureActivatedComment$" _locID="$loc_FeatureActivatedComment$" _locAttrData="Value" Value="取消对以下方法的注释，以便处理激活某个功能后引发的事件。"/>
+      <CustomParameter Name="$loc_FeatureDeactivatingComment$" _locID="$loc_FeatureDeactivatingComment$" _locAttrData="Value" Value="取消对以下方法的注释，以便处理在停用某个功能前引发的事件。"/>
+      <CustomParameter Name="$loc_FeatureInstalledComment$" _locID="$loc_FeatureInstalledComment$" _locAttrData="Value" Value="取消对以下方法的注释，以便处理在安装某个功能后引发的事件。"/>
+      <CustomParameter Name="$loc_FeatureUninstallingComment$" _locID="$loc_FeatureUninstallingComment$" _locAttrData="Value" Value="取消对以下方法的注释，以便处理在卸载某个功能前引发的事件。"/>
+      <CustomParameter Name="$loc_FeatureUpgradingComment$" _locID="$loc_FeatureUpgradingComment$" _locAttrData="Value" Value="取消对以下方法的注释，以便处理在升级某个功能时引发的事件。"/>
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.GenericWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.TeamFoundation.DeleteTeamProject</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.TeamFoundation.Client.DeletionException">
+      <summary>，则引发错误在删除时生成。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Client.DeletionException.#ctor">
+      <summary>初始化的新DeletionException实例。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Client.DeletionException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>初始化的新DeletionException实例。</summary>
+      <param name="info">描述异常的消息。</param>
+      <param name="context">异常的上下文。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Client.DeletionException.#ctor(System.String)">
+      <summary>初始化的新DeletionException实例。</summary>
+      <param name="message">描述异常的消息。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Client.DeletionException.#ctor(System.String,System.Exception)">
+      <summary>初始化的新DeletionException实例。</summary>
+      <param name="message">描述异常的消息。</param>
+      <param name="innerException">导致此异常的异常。</param>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Client.TeamProjectDeleter">
+      <summary>此API支持Team Foundation server基础结构并且不应在代码中直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Client.TeamProjectDeleter.#ctor(Microsoft.TeamFoundation.Client.TeamFoundationServer,System.String,System.Boolean)">
+      <summary>此API支持Team Foundation server基础结构并且不应在代码中直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Client.TeamProjectDeleter.#ctor(Microsoft.TeamFoundation.Client.TfsTeamProjectCollection,System.String,System.Boolean)">
+      <summary>此API支持Team Foundation server基础结构并且不应在代码中直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Client.TeamProjectDeleter.Delete">
+      <summary>此API支持Team Foundation server基础结构并且不应在代码中直接使用。</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Client.TeamProjectDeleter.ExcludeWss">
+      <summary>此API支持Team Foundation server基础结构并且不应在代码中直接使用。</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Client.TeamProjectDeleter.HasWssToDelete">
+      <summary>此API支持Team Foundation server基础结构并且不应在代码中直接使用。</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Client.TeamProjectDeleter.IssuesDeletingProject">
+      <summary>此API支持Team Foundation server基础结构并且不应在代码中直接使用。</summary>
+      <returns>返回 <see cref="T:System.Collections.Generic.List`1" />。</returns>
+    </member>
+    <member name="E:Microsoft.TeamFoundation.Client.TeamProjectDeleter.StatusEvent">
+      <summary>此API支持Team Foundation server基础结构并且不应在代码中直接使用。</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Client.TeamProjectDeleter.StatusEventArgs">
+      <summary>此API支持Team Foundation server基础结构并且不应在代码中直接使用。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Client.TeamProjectDeleter.StatusEventArgs.#ctor(System.String)">
+      <summary>此API支持Team Foundation server基础结构并且不应在代码中直接使用。</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Client.TeamProjectDeleter.StatusEventArgs.message">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Client.TeamProjectDeleter.StatusEventHandler">
+      <summary>此API支持Team Foundation server基础结构并且不应在代码中直接使用。</summary>
+    </member>
+  </members>
+</doc>

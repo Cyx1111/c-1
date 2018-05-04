@@ -1,0 +1,15 @@
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name _locID="JSP_Item_JScriptName">JavaScript 文件</Name>
+    <Description _locID="JSP_Item_JScriptDesc">包含 JavaScript 代码的脚本文件。</Description>
+    <Icon>JScript.ico</Icon>
+    <TemplateID>Microsoft.JavaScript.JavaScript</TemplateID>
+    <ProjectType>JavaScript</ProjectType>
+    <BlendProjectSubType>WJApplication</BlendProjectSubType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>script.js</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem>JScript.js</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

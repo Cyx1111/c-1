@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="Microsoft.ConcurrencyVisualizer.Extension" Version="2.0" Language="en-US" Publisher="Microsoft" />
+    <DisplayName>Concurrency Visualizer</DisplayName>
+    <Description>Visualizes execution history and profiles applications</Description>
+    <!--PreviewImage>ConcVi.png</PreviewImage -->
+  </Metadata>
+  <Installation AllUsers="true" InstalledByMsi="true" SystemComponent="true">
+    <InstallationTarget Id="Microsoft.VisualStudio.Ultimate" Version="11.0" />
+    <InstallationTarget Id="Microsoft.VisualStudio.Premium" Version="11.0" />
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="11.0" />
+  </Installation>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+  </Assets>
+</PackageManifest>

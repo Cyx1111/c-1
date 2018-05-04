@@ -1,0 +1,18 @@
+﻿<!--DSL Tools Language Template-->
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TemplateData>
+    <TemplateID>Microsoft.Modeling.UmlSequenceDiagram</TemplateID>
+    <Name Package="{718d98a4-3763-497a-8930-5081a62544ff}" ID="105"/>
+		<Description Package="{718d98a4-3763-497a-8930-5081a62544ff}" ID="106"/>
+		<Icon Package="{718d98a4-3763-497a-8930-5081a62544ff}" ID="201" />
+		<ProjectType>Modeling</ProjectType>
+		<SortOrder>361</SortOrder>
+		<NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+		<DefaultName>UMLSequenceDiagram.sequencediagram</DefaultName>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem TargetFileName="$fileinputname$.sequencediagram">blank.sequencediagram</ProjectItem>
+		<ProjectItem TargetFileName="$fileinputname$.sequencediagram.layout">blank.sequencediagram.layout</ProjectItem>
+	</TemplateContent>
+</VSTemplate>
+

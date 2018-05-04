@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.VisualStudio.TestTools.UITest.CodeGeneration</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter">
+      <summary>执行用户接口 (UI) 测试中的测试操作、解释结果并写入日志。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.#ctor(Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UITestInterpreter)">
+      <summary>使用给定解释器初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter" /> 类的新实例。</summary>
+      <param name="interpreter">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UITestInterpreter" /> 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.Cancel">
+      <summary>在用户单击“取消播放”按钮时调用。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.CurrentBrowser">
+      <summary>获取或设置包含当前浏览器名称和版本的字符串。</summary>
+      <returns>当前浏览器的名称和版本。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.DelayBetweenActions">
+      <summary>获取或设置执行每个操作前延迟的时间。</summary>
+      <returns>执行之间的秒数。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.Dispose">
+      <summary>释放资源。</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.InRetryMode">
+      <summary>获取或设置一个值，该值指示此解释器是否处于重试模式。</summary>
+      <returns>如果解释器处于重试模式，则为 true；否则为 false。 默认值为 false。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.Invoke(Microsoft.VisualStudio.TestTools.UITest.Common.AssertAction,Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap)">
+      <summary>使用给定的映射执行提供的操作并记录结果。</summary>
+      <param name="action">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.AssertAction" /> 对象。</param>
+      <param name="map">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap" /> 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.Invoke(Microsoft.VisualStudio.TestTools.UITest.Common.BrowserAction,Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap)">
+      <summary>使用给定的映射执行提供的操作并记录结果。</summary>
+      <param name="browserAction">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.BrowserAction" /> 对象。</param>
+      <param name="map">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap" /> 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.Invoke(Microsoft.VisualStudio.TestTools.UITest.Common.DelayAction,Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap)">
+      <summary>使用给定的映射执行提供的操作并记录结果。</summary>
+      <param name="action">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.DelayAction" /> 对象。</param>
+      <param name="map">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap" /> 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.Invoke(Microsoft.VisualStudio.TestTools.UITest.Common.DragAction,Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap)">
+      <summary>使用给定的映射执行提供的操作并记录结果。</summary>
+      <param name="action">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.DragAction" /> 对象。</param>
+      <param name="map">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap" /> 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.Invoke(Microsoft.VisualStudio.TestTools.UITest.Common.DragDropAction,Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap)">
+      <summary>使用给定的映射执行提供的操作并记录结果。</summary>
+      <param name="action">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.DragDropAction" /> 对象。</param>
+      <param name="map">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap" /> 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.Invoke(Microsoft.VisualStudio.TestTools.UITest.Common.ErrorAction,Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap)">
+      <summary>使用给定的映射执行提供的操作并记录结果。</summary>
+      <param name="action">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.ErrorAction" /> 对象。</param>
+      <param name="map">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap" /> 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.Invoke(Microsoft.VisualStudio.TestTools.UITest.Common.InvokeAction,Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap)">
+      <summary>为 SystemAction 调用。</summary>
+      <param name="action">SystemAction。</param>
+      <param name="map">UIMap</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.Invoke(Microsoft.VisualStudio.TestTools.UITest.Common.KeyboardAction,Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap)">
+      <summary>使用给定的映射执行提供的操作并记录结果。</summary>
+      <param name="action">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.KeyboardAction" /> 对象。</param>
+      <param name="map">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap" /> 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.Invoke(Microsoft.VisualStudio.TestTools.UITest.Common.LaunchApplicationAction,Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap)">
+      <summary>使用给定的映射执行提供的操作并记录结果。</summary>
+      <param name="action">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.LaunchApplicationAction" /> 对象。</param>
+      <param name="map">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap" /> 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.Invoke(Microsoft.VisualStudio.TestTools.UITest.Common.MarkerAction,Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap)">
+      <summary>使用给定的映射执行提供的操作并记录结果。</summary>
+      <param name="action">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.MarkerAction" /> 对象。</param>
+      <param name="map">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap" /> 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.Invoke(Microsoft.VisualStudio.TestTools.UITest.Common.MediaAction,Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap)">
+      <summary>生成 MediaAction 的操作录制</summary>
+      <param name="map">控件和事件映射</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.Invoke(Microsoft.VisualStudio.TestTools.UITest.Common.MouseAction,Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap)">
+      <summary>使用给定的映射执行提供的操作并记录结果。</summary>
+      <param name="action">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.MouseAction" /> 对象。</param>
+      <param name="map">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap" /> 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.Invoke(Microsoft.VisualStudio.TestTools.UITest.Common.NavigateToUrlAction,Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap)">
+      <summary>使用给定的映射执行提供的操作并记录结果。</summary>
+      <param name="action">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.NavigateToUrlAction" /> 对象。</param>
+      <param name="map">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap" /> 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.Invoke(Microsoft.VisualStudio.TestTools.UITest.Common.NoOperationAction,Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap)">
+      <summary>使用给定的映射执行提供的操作并记录结果。</summary>
+      <param name="action">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.NoOperationAction" /> 对象。</param>
+      <param name="map">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap" /> 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.Invoke(Microsoft.VisualStudio.TestTools.UITest.Common.SendKeysAction,Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap)">
+      <summary>使用给定的映射执行提供的操作并记录结果。</summary>
+      <param name="action">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.SendKeysAction" /> 对象。</param>
+      <param name="map">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap" /> 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.Invoke(Microsoft.VisualStudio.TestTools.UITest.Common.SetStateAction,Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap)">
+      <summary>使用给定的映射执行提供的操作并记录结果。</summary>
+      <param name="action">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.SetStateAction" /> 对象。</param>
+      <param name="map">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap" /> 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.Invoke(Microsoft.VisualStudio.TestTools.UITest.Common.SetValueAction,Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap)">
+      <summary>使用给定的映射执行提供的操作并记录结果。</summary>
+      <param name="action">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.SetValueAction" /> 对象。</param>
+      <param name="map">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap" /> 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.Invoke(Microsoft.VisualStudio.TestTools.UITest.Common.SharedStepsReferenceAction,Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap)">
+      <summary>使用给定的映射执行提供的操作并记录结果。</summary>
+      <param name="action">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.SharedStepsReferenceAction" /> 对象。</param>
+      <param name="map">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap" /> 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.Invoke(Microsoft.VisualStudio.TestTools.UITest.Common.StringAssertAction,Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap)">
+      <summary>使用给定的映射执行提供的操作并记录结果。</summary>
+      <param name="action">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.StringAssertAction" /> 对象。</param>
+      <param name="map">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap" /> 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.Invoke(Microsoft.VisualStudio.TestTools.UITest.Common.SystemAction,Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap)">
+      <summary>为 SystemAction 调用。</summary>
+      <param name="action">SystemAction。</param>
+      <param name="map">UIMap</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.Invoke(Microsoft.VisualStudio.TestTools.UITest.Common.TestStepMarkerAction,Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap)">
+      <summary>使用给定的映射执行提供的操作并记录结果。</summary>
+      <param name="action">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.TestStepMarkerAction" /> 对象。</param>
+      <param name="map">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap" /> 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.Invoke(Microsoft.VisualStudio.TestTools.UITest.Common.VerifyConfigurationAction,Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap)">
+      <summary>使用给定的映射执行提供的操作并记录结果。</summary>
+      <param name="action">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.VerifyConfigurationAction" /> 对象。</param>
+      <param name="map">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap" /> 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.Invoke(Microsoft.VisualStudio.TestTools.UITest.Common.WarningAction,Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap)">
+      <summary>使用给定的映射执行提供的操作并记录结果。</summary>
+      <param name="action">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.WarningAction" /> 对象。</param>
+      <param name="map">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap" /> 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.Invoke(Microsoft.VisualStudio.TestTools.UITest.Common.WebDialogAction,Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap)">
+      <summary>使用给定的映射执行提供的操作并记录结果。</summary>
+      <param name="action">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.WebDialogAction" /> 对象。</param>
+      <param name="map">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap" /> 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.SearchAndInvoke(Microsoft.VisualStudio.TestTools.UITest.Common.UITestAction,Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap,Microsoft.VisualStudio.TestTools.UITest.Common.CustomInvoker)">
+      <summary>使用给定的映射执行提供的操作，并使用您的自定义调用程序实现来记录结果。</summary>
+      <param name="action">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.UITestAction" /> 对象。</param>
+      <param name="map">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap" /> 对象。</param>
+      <param name="func">一个 <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.CustomInvoker" /> 委托。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.SearchTimeout">
+      <summary>获取或设置搜索进程超时前的秒数。</summary>
+      <returns>超时前的秒数。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.ThinkTimeMultiplier">
+      <summary>获取或设置要用于思考时间值的倍数。</summary>
+      <returns>一个 double 值。</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.TopLevelWindowSinglePassSearch">
+      <summary>获取或设置一个值单向搜索是否为顶级窗口是使用。</summary>
+      <returns>使用单向搜索时为真，否则则为假。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UIActionInterpreter.WaitForThinkTime(Microsoft.VisualStudio.TestTools.UITest.Common.UITestAction)">
+      <summary>先等待合适的思考时间量，再调用提供的操作。</summary>
+      <param name="action">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.UITestAction" /> 对象。</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UITestInterpreter">
+      <summary>执行用户界面 (UI) 测试中的每个测试操作，并使用 <see cref="P:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UITestInterpreter.ActionInvoker" /> 属性的值解释每个操作的结果。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UITestInterpreter.#ctor(Microsoft.VisualStudio.TestTools.UITest.Common.UITest)">
+      <summary>初始化 <see cref="T:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UITestInterpreter" /> 类的新实例。</summary>
+      <param name="uiTest">正被解释的 <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.UITest" />。</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UITestInterpreter.ActionInvoker">
+      <summary>获取或设置用于解释此测试的 <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionInvoker" />。</summary>
+      <returns>测试操作调用程序。</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UITestInterpreter.Cancel">
+      <summary>取消当前步骤或测试的解释。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UITestInterpreter.Dispose(System.Boolean)">
+      <summary>（可选）释放资源。</summary>
+      <param name="disposing">设置为 true 可释放内部资源。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UITestInterpreter.ExecuteAction(Microsoft.VisualStudio.TestTools.UITest.Common.UITestAction,Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap)">
+      <summary>执行该特定事件。事件包含其行为的 UIObject 的 ID。此 ID 用于获取对象的 queryid，并将传递给输入事件对象的调用方法。调用方法还需要 UITestActionInvoker 接口类型的对象。在这种情况默认值为实现 UITestActionInvoker 的 UITestPlayback 类型。</summary>
+      <param name="action">要执行的操作。</param>
+      <param name="map">包含事件的 UIMap。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UITestInterpreter.ExecuteTest(Microsoft.VisualStudio.TestTools.UITest.Common.UITest)">
+      <summary>执行给定测试。</summary>
+      <param name="uiTest">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.UITest" /> 对象。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UITestInterpreter.ExecuteTest(Microsoft.VisualStudio.TestTools.UITest.Common.UITest,System.Int64,System.Int64)">
+      <summary>对指定范围的操作执行给定测试。</summary>
+      <param name="uiTest">
+        <see cref="T:Microsoft.VisualStudio.TestTools.UITest.Common.UITest" /> 对象。</param>
+      <param name="startId">起始操作的标识符。 提供负数可从列表开头开始。</param>
+      <param name="stopId">结束操作的标识符。 提供负数可执行到列表中的最后一个操作。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UITestInterpreter.HighlightElement">
+      <summary>突出显示与当前操作关联的 UI 元素。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UITestInterpreter.IsExpectedExceptionFromActionExecution(System.Exception)">
+      <summary>如果给定异常从操作执行中是预期的则返回 true。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UITestInterpreter.LogActionExecutionException(System.Exception)">
+      <summary>记录 SQM 数据用于播放异常。</summary>
+      <param name="exception">播放时发生的异常。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UITestInterpreter.OnErrorHandledByUser(Microsoft.VisualStudio.TestTools.UITest.Common.UITestErrorEventArgs)">
+      <summary>在用户处理该操作执行错误后调用。这可以用于跟踪类似的日志。</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UITestInterpreter.RaiseWaitForThinkTimeEvent(Microsoft.VisualStudio.TestTools.UITest.Common.UITestAction,System.Int32)">
+      <summary>引发 <see cref="E:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UITestInterpreter.InterpreterProgress" /> 事件。</summary>
+      <param name="action">当前操作。</param>
+      <param name="thinkTime">以秒为单位的等待时间。</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.TestTools.UITest.CodeGeneration.UITestInterpreter.Unhighlight">
+      <summary>移除与当前操作关联的 UI 元素的突出显示。</summary>
+    </member>
+  </members>
+</doc>

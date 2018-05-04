@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name _locID="JSP_Item_XSLTFileName">XSLT 文件</Name>
+    <Description _locID="JSP_Item_XSLTFileDesc">用于转换 XML 文档的样式表。</Description>
+    <Icon>XSLTFile.ico</Icon>
+    <TemplateID>Microsoft.JavaScript.XSLTFile</TemplateID>
+    <ProjectType>JavaScript</ProjectType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>xsltfile.xslt</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem>XSLTFile.xslt</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

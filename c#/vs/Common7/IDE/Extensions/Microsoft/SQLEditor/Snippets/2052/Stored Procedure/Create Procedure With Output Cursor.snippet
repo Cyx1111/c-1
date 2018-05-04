@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <_locDefinition xmlns="urn:locstudio">
+    <_locDefault _loc="locNone"/>
+    <_locTag _loc="locData">Title</_locTag>
+    <_locTag _loc="locData">Description</_locTag>
+    <_locTag _loc="locData">Author</_locTag>
+    <_locTag _loc="locData">ToolTip</_locTag>
+  </_locDefinition>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>创建具有 CURSOR OUTPUT 参数的过程</Title>
+      <Shortcut></Shortcut>
+      <Description>创建具有游标输出参数的存储过程。</Description>
+      <Author>Microsoft Corporation</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>SchemaName</ID>
+          <ToolTip>架构名称</ToolTip>
+          <Default>dbo</Default>
+        </Literal>
+        <Literal>
+          <ID>storedprocname</ID>
+          <ToolTip>存储过程名称</ToolTip>
+          <Default>Sample_Procedure</Default>
+        </Literal>
+        <Literal>
+          <ID>Param1</ID>
+          <ToolTip>输出参数名称</ToolTip>
+          <Default>sample_procedure_cursor</Default>
+        </Literal>
+        <Literal>
+          <ID>datatype1</ID>
+          <ToolTip>输出参数的数据类型</ToolTip>
+          <Default>CURSOR</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="SQL_SSDT">
+        <![CDATA[CREATE PROCEDURE $SchemaName$.$storedprocname$ 
+    @$Param1$ $datatype1$ VARYING OUTPUT
+AS
+    SET @$Param1$ = CURSOR FOR
+        select 1
+    OPEN @$Param1$ 
+RETURN 0 $end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

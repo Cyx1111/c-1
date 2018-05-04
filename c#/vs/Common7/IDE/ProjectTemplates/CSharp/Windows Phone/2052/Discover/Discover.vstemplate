@@ -1,0 +1,24 @@
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" type="Project">
+  <TemplateData>
+    <Name>安装 Windows Phone SDK 8.0</Name>
+    <Description>提供通过安装 Windows Phone SDK 8.0 启用 Windows Phone 项目的说明</Description>
+    <ProjectType>CSharp</ProjectType>
+    <RequiredFrameworkVersion>4</RequiredFrameworkVersion>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <CreateNewFolder>false</CreateNewFolder>
+    <DefaultName>DiscoverWindowsPhoneTools</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <Icon>Discover.ico</Icon>
+    <SortOrder>100</SortOrder>
+    <PromptForSaveOnCreation>false</PromptForSaveOnCreation>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Hidden>false</Hidden>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="Discover.csproj" ReplaceParameters="true">
+      <ProjectItem OpenInWebBrowser="true">Discover.html</ProjectItem>
+      <ProjectItem>DiscoverLogo.gif</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

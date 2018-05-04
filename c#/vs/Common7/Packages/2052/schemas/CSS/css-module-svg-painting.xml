@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="SVG Painting" standard-reference="http://www.w3.org/TR/SVG11/painting.html" status="REC" pub-date="2011-08-16">
+
+  <CssProperty _locID="text-rendering" _locAttrData="description" version="3.0" browsers="C,FF3,O9,S5" restriction="enum" description="SVG 内容的创建者可能希望在实现过程中提供提示，建议在呈现文本时要做出哪些权衡。“text-rendering”属性提供了这些提示。" standard-reference="http://www.w3.org/TR/SVG11/painting.html#TextRenderingProperty">
+
+    <entry value="auto" version="3.0"/>
+    <entry value="optimizeSpeed" version="3.0"/>
+    <entry value="optimizeLegibility" version="3.0"/>
+    <entry value="geometricPrecision" version="3.0"/>
+  </CssProperty>
+
+  <CssProperty _locID="image-rendering" _locAttrData="description" version="3.0" browsers="C,FF3.6,O11.6,S" restriction="enum" description="SVG 内容的创建者可能希望在实现过程中提供提示，建议在执行图像处理时如何在速度和质量之间做出权衡。“image-rendering”属性为 SVG 用户代理提供了有关如何优化其图像呈现的提示。" standard-reference="http://www.w3.org/TR/SVG11/painting.html#ImageRenderingProperty">
+
+    <entry value="auto" version="3.0"/>
+    <entry value="optimizeSpeed" version="3.0"/>
+    <entry value="optimizeQuality" version="3.0"/>
+  </CssProperty>
+
+  <CssProperty _locID="color-rendering" _locAttrData="description" version="3.0" browsers="none" restriction="enum" description="SVG 内容的创建者可能希望在实现过程中提供提示，建议在执行颜色内插和复合时如何在速度和质量之间做出权衡。“color-rendering”属性为 SVG 用户代理提供了有关如何优化其颜色内插和复合操作的提示。" standard-reference="http://www.w3.org/TR/SVG11/painting.html#ColorRenderingProperty">
+
+    <entry value="auto" version="3.0"/>
+    <entry value="optimizeSpeed" version="3.0"/>
+    <entry value="optimizeQuality" version="3.0"/>
+  </CssProperty>
+
+  <CssProperty _locID="shape-rendering" _locAttrData="description" version="3.0" browsers="none" restriction="enum" description="SVG 内容的创建者可能希望在实现过程中提供提示，建议在呈现矢量图形元素(如“path”元素)和基本形状(如圆形和矩形)时要做出哪些权衡。" standard-reference="http://www.w3.org/TR/SVG11/painting.html#ShapeRenderingProperty">
+
+    <entry value="auto" version="3.0"/>
+    <entry value="optimizeSpeed" version="3.0"/>
+    <entry value="optimizeQuality" version="3.0"/>
+    <entry value="crispEdges" version="3.0"/>
+    <entry value="geometricPrecision" version="3.0"/>
+  </CssProperty>
+
+  <CssProperty _locID="fill" _locAttrData="description" version="3.0" type="color" restriction="color, enum, url" description="“fill”属性绘制给定图形元素的内部。" standard-reference="http://www.w3.org/TR/SVG11/painting.html#FillProperty">
+
+    <entry value="none"/>
+    <entry value="url()"/>
+  </CssProperty>
+
+  <CssProperty _locID="fill-rule" _locAttrData="description" version="3.0" restriction="enum" description="“fill-rule”属性指示要用于确定要包含在形状中的画布的部分的算法。" standard-reference="http://www.w3.org/TR/SVG11/painting.html#FillRuleProperty">
+
+    <entry value="nonzero" version="3.0"/>
+    <entry value="evenodd" version="3.0"/>
+  </CssProperty>
+
+  <CssProperty _locID="fill-opacity" _locAttrData="description" version="3.0" restriction="number(0-1)" description="“fill-opacity”指定用于绘制当前对象的内部的绘制操作的不透明度。" standard-reference="http://www.w3.org/TR/SVG11/painting.html#FillOpacityProperty"/>
+
+  <CssProperty _locID="stroke" _locAttrData="description" version="3.0" type="color" restriction="color" description="“stroke”属性用于沿给定图形元素的轮廓进行绘制。" standard-reference="http://www.w3.org/TR/SVG11/painting.html#StrokeProperty"/>
+
+  <CssProperty _locID="stroke-width" _locAttrData="description" version="3.0" restriction="percentage, length, integer" description="此属性指定当前对象的描边宽度。" standard-reference="http://www.w3.org/TR/SVG11/painting.html#StrokeWidthProperty"/>
+
+  <CssProperty _locID="stroke-linecap" _locAttrData="description" version="3.0" restriction="enum" description="指定在描画开放的子路径时要在其末端使用的形状。" standard-reference="http://www.w3.org/TR/SVG11/painting.html#StrokeLinecapProperty">
+
+    <entry value="butt" version="3.0"/>
+    <entry value="round" version="3.0"/>
+    <entry value="square" version="3.0"/>
+  </CssProperty>
+
+  <CssProperty _locID="stroke-linejoin" _locAttrData="description" version="3.0" restriction="enum" description="指定在描画路径或基本形状时要在其边角处使用的形状。" standard-reference="http://www.w3.org/TR/SVG11/painting.html#StrokeLinejoinProperty">
+
+    <entry value="miter" version="3.0"/>
+    <entry value="round" version="3.0"/>
+    <entry value="bevel" version="3.0"/>
+  </CssProperty>
+
+  <CssProperty _locID="stroke-miterlimit" _locAttrData="description" version="3.0" restriction="number" syntax="path { $(name): 4; }" description="当两条线段以锐角相交，且已为“stroke-linejoin”指定了斜接联接时，该斜接可以扩展到远远大于描画路径的线条的粗度。" standard-reference="http://www.w3.org/TR/SVG11/painting.html#StrokeMiterLimitProperty"/>
+
+  <CssProperty _locID="stroke-dasharray" _locAttrData="description" version="3.0" restriction="length, percentage, enum" description="控制用于描画路径的短划线和间隙的样式。" standard-reference="http://www.w3.org/TR/SVG11/painting.html#StrokeDashArrayProperty">
+
+    <entry value="none" version="3.0"/>
+  </CssProperty>
+
+  <CssProperty _locID="stroke-dashoffset" _locAttrData="description" version="3.0" restriction="percentage, length, integer" description="指定在短划线图案中开始短划线的距离。" standard-reference="http://www.w3.org/TR/SVG11/painting.html#StrokeDashOffsetProperty"/>
+
+  <CssProperty _locID="stroke-opacity" _locAttrData="description" version="3.0" restriction="number(0-1)" description="指定用于描画当前对象的绘制操作的不透明度。" standard-reference="http://www.w3.org/TR/SVG11/painting.html#StrokeOpacityProperty"/>
+
+  <CssProperty _locID="marker-start" _locAttrData="description" version="3.0" restriction="url" description="定义应在给定的“path”元素或基本形状的第一个顶点上绘制的箭头或多点标记。" standard-reference="http://www.w3.org/TR/SVG11/painting.html#MarkerStartProperty">
+
+    <entry value="url()" version="3.0"/>
+    <entry value="none" version="3.0"/>
+  </CssProperty>
+
+  <CssProperty _locID="marker-end" _locAttrData="description" version="3.0" restriction="url" description="定义应在最后一个顶点上绘制的箭头或多点标记。" standard-reference="http://www.w3.org/TR/SVG11/painting.html#MarkerEndProperty">
+
+    <entry value="url()" version="3.0"/>
+    <entry value="none" version="3.0"/>
+  </CssProperty>
+
+  <CssProperty _locID="marker-mid" _locAttrData="description" version="3.0" restriction="url" description="定义应在其他每个顶点上绘制的箭头或多点标记。" standard-reference="http://www.w3.org/TR/SVG11/painting.html#MarkerMidProperty">
+
+    <entry value="url()" version="3.0"/>
+    <entry value="none" version="3.0"/>
+  </CssProperty>
+
+  <CssProperty _locID="marker" _locAttrData="description" version="3.0" restriction="url" description="指定应用于给定“path”元素或基本形状上的所有顶点值集中的所有点的标记符号。" standard-reference="http://www.w3.org/TR/SVG11/painting.html#MarkerProperty">
+
+    <entry value="url()" version="3.0"/>
+    <entry value="none" version="3.0"/>
+  </CssProperty>
+
+  <CssProperty _locID="color-interpolation" _locAttrData="description" version="3.0" browsers="none" restriction="enum" description="指定渐变内插、颜色动画和 Alpha 合成的色彩空间。" standard-reference="http://www.w3.org/TR/SVG11/painting.html#ColorInterpolationProperty">
+
+    <entry value="auto" version="3.0"/>
+    <entry value="sRGB" version="3.0"/>
+    <entry value="linearRGB" version="3.0"/>
+  </CssProperty>
+
+  <CssProperty _locID="color-interpolation-filters" _locAttrData="description" version="3.0" browsers="none" restriction="enum" description="指定通过滤镜效果执行的图像处理操作的色彩空间。" standard-reference="http://www.w3.org/TR/SVG11/painting.html#ColorInterpolationFiltersProperty">
+
+    <entry value="auto" version="3.0"/>
+    <entry value="sRGB" version="3.0"/>
+    <entry value="linearRGB" version="3.0"/>
+  </CssProperty>
+
+  <CssProperty _locID="text-anchor" _locAttrData="description" version="3.0" restriction="enum" description="用于相对于给定点对齐(首端对齐、居中对齐或末端对齐)文本字符串。" standard-reference="http://www.w3.org/TR/SVG11/text.html#TextAnchorProperty">
+
+    <entry value="start"/>
+    <entry value="middle"/>
+    <entry value="end"/>
+  </CssProperty>
+
+</CssModule>

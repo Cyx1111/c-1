@@ -1,0 +1,47 @@
+﻿RUBRIQUE
+    about_NuGet
+    
+DESCRIPTION SOMMAIRE
+    Fournit des informations sur les commandes du Gestionnaire de package NuGet.
+           
+DESCRIPTION DÉTAILLÉE
+    Cette rubrique décrit les commandes du Gestionnaire de package NuGet. NuGet est un outil de gestion de packages intégré 
+    qui permet d’ajouter des bibliothèques et outils aux projets .NET.
+
+                 
+    Les cmdlets NuGet suivantes sont incluses.
+
+        Cmdlet					Description
+        ------------------		----------------------------------------------
+        Get-Package				Obtient l’ensemble de packages disponibles à partir de la source du package.
+
+        Install-Package			Installe un package et ses dépendances dans le projet.
+
+        Uninstall-Package		Désinstalle un package. Si d’autres packages dépendent de ce package, 
+                                		la commande échoue si l’option -Force n’est pas spécifiée.
+
+        Update-Package			Met à jour vers une version plus récente d’un package et ses dépendances.
+
+        Add-BindingRedirect		Vérifie tous les assemblys figurant dans le chemin de sortie d’un projet
+                                et ajoute des redirections de liaison au fichier de configuration d’application (ou Web), 
+                                comme nécessaire.
+                            
+        Get-Project				Retourne une référence à l’environnement d'outils de développement 
+                                pour le projet spécifié. Si aucun projet n’est spécifié, retourne le 
+                                projet par défaut sélectionné dans la console du Gestionnaire de package.
+
+        Open-PackagePage        Ouvrir le navigateur en pointant sur l’URL de projet,l’URL de licence ou l’
+                                URL de signalement d’un abus du package spécifié.
+
+        Register-TabExpansion	Enregistre un développement d’onglet pour les paramètres d’une commande.
+
+VOIR AUSSI
+    Documentation en ligne : http://go.microsoft.com/fwlink/?LinkID=206619
+    Get-Package
+    Install-Package
+    Uninstall-Package
+    Update-Package
+    Add-BindingRedirect
+    Get-Project
+    Open-PackagePage
+    Register-TabExpansion

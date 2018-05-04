@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RoleTemplateData RoleProjectTargetFramework="4.0" MinWindowsAzureToolsVersion="1.7" RoleProjectGuid="20908EC7-8B30-49FE-BF04-2278AE9AEC9A">
+  <VsTemplate Name="MvcWebApplicationProjectTemplatev4.0.vb.zip" Language="VisualBasic" TargetFramework="4.0" />
+  <AssemblyReferences>
+    <Reference Name="Microsoft.WindowsAzure.ServiceRuntime, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" SpecificVersion="false" />
+    <Reference Name="Microsoft.WindowsAzure.StorageClient, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" SpecificVersion="false" CopyLocal="true"/>
+    <Reference Name="Microsoft.WindowsAzure.Diagnostics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" SpecificVersion="false" CopyLocal="true"/>
+  </AssemblyReferences>
+  <ProjectItems>
+    <ProjectItem CustomReplaceableParameters="true">WebRole.vb</ProjectItem>
+  </ProjectItems>
+  <RoleProject Type="Web" />
+</RoleTemplateData>

@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.TeamFoundation.ProjectManagement</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.AddPanelConfiguration">
+      <summary>添加panel配置</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.AddPanelConfiguration.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.AddPanelConfiguration.Fields">
+      <summary>添加panel的字段</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.Field" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.AddPanelConfiguration.ToString">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.AgileProjectConfiguration">
+      <summary>敏捷项目功能的配置设置。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.AgileProjectConfiguration.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.AgileProjectConfiguration.IterationBacklog">
+      <summary>迭代积压工作</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.IterationBacklogConfiguration" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.AgileProjectConfiguration.ProductBacklog">
+      <summary>产品积压工作配置</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.ProductBacklogConfiguration" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.AgileProjectConfiguration.ToString">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.Column">
+      <summary>用于存储有关用于产品积压工作的列信息。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.Column.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.Column.ColumnWidth">
+      <summary>列的宽度（以像素为单位）。</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.Column.FieldName">
+      <summary>机智字段的名称。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.Column.ToString">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.CommonProjectConfiguration">
+      <summary>包含用于允许过程模板的自定义项的常见配置值。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.CommonProjectConfiguration.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.CommonProjectConfiguration.BugWorkItems">
+      <summary>bug工作项类别</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.WorkItemCategory" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.CommonProjectConfiguration.FeedbackRequestWorkItems">
+      <summary>反馈请求工作项类别</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.WorkItemCategory" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.CommonProjectConfiguration.FeedbackResponseWorkItems">
+      <summary>反馈响应Workitems类别</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.WorkItemCategory" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.CommonProjectConfiguration.FeedbackWorkItems">
+      <summary>反馈Workitems类别</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.WorkItemCategory" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.CommonProjectConfiguration.RequirementWorkItems">
+      <summary>父工作项类别</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.WorkItemCategory" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.CommonProjectConfiguration.TaskWorkItems">
+      <summary>子工作项类别</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.WorkItemCategory" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.CommonProjectConfiguration.ToString">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.CommonProjectConfiguration.TypeFields">
+      <summary>字段与项目配置</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.TypeField" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.CommonProjectConfiguration.Weekends">
+      <summary>周末</summary>
+      <returns>返回 <see cref="T:System.DayOfWeek" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.Field">
+      <summary>字段信息</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.Field.#ctor">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.ProcessConfiguration.Client.Field.m_name">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.Field.Name">
+      <summary>引用字段的名称</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.Field.ToString">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.FieldTypeEnum">
+      <summary>字段Cateogries</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.ProcessConfiguration.Client.FieldTypeEnum.Activity">
+      <summary>事件字段。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.ProcessConfiguration.Client.FieldTypeEnum.ApplicationLaunchInstructions">
+      <summary>应用程序生成命令字段</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.ProcessConfiguration.Client.FieldTypeEnum.ApplicationStartInformation">
+      <summary>应用程序启动信息字段</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.ProcessConfiguration.Client.FieldTypeEnum.ApplicationType">
+      <summary>应用程序类型字段</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.ProcessConfiguration.Client.FieldTypeEnum.Effort">
+      <summary>工作量字段</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.ProcessConfiguration.Client.FieldTypeEnum.FeedbackNotes">
+      <summary>反馈注意字段</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.ProcessConfiguration.Client.FieldTypeEnum.Order">
+      <summary>排列字段</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.ProcessConfiguration.Client.FieldTypeEnum.RemainingWork">
+      <summary>"剩余工作"字段</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.ProcessConfiguration.Client.FieldTypeEnum.Requestor">
+      <summary>必须由字段</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.ProcessConfiguration.Client.FieldTypeEnum.Team">
+      <summary>团队字段</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.IterationBacklogConfiguration">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.IterationBacklogConfiguration.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.IterationBacklogConfiguration.Columns">
+      <summary>列定义</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.Column" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.IterationBacklogConfiguration.ToString">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.IterationBacklogConfiguration.WorkItemCountLimit">
+      <summary>在的工作项的数量的一个困难限制在敏捷键盘将显示</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.ProcessConfigurationService">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.ProcessConfigurationService.#ctor(Microsoft.TeamFoundation.Client.TfsTeamProjectCollection)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.ProcessConfigurationService.CollectionServiceIdentifier">
+      <returns>返回 <see cref="T:System.Guid" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.ProcessConfigurationService.ComponentName">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.ProcessConfigurationService.GetAgileConfiguration(System.String)">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.AgileProjectConfiguration" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.ProcessConfigurationService.GetAgileConfigurationOperation">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Client.Channels.TfsClientOperation" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.ProcessConfigurationService.GetCommonConfiguration(System.String)">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.CommonProjectConfiguration" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.ProcessConfigurationService.GetCommonConfigurationOperation">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Client.Channels.TfsClientOperation" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.ProcessConfigurationService.ServiceType">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.ProcessConfigurationService.SetAgileConfiguration(System.String,Microsoft.TeamFoundation.ProcessConfiguration.Client.AgileProjectConfiguration)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.ProcessConfigurationService.SetAgileConfigurationOperation">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Client.Channels.TfsClientOperation" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.ProcessConfigurationService.SetCommonConfiguration(System.String,Microsoft.TeamFoundation.ProcessConfiguration.Client.CommonProjectConfiguration)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.ProcessConfigurationService.SetCommonConfigurationOperation">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Client.Channels.TfsClientOperation" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.ProcessConfigurationService.ValidateAgileConfiguration(System.String,Microsoft.TeamFoundation.ProcessConfiguration.Client.AgileProjectConfiguration)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.ProcessConfigurationService.ValidateAgileConfigurationOperation">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Client.Channels.TfsClientOperation" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.ProcessConfigurationService.ValidateCommonConfiguration(System.String,Microsoft.TeamFoundation.ProcessConfiguration.Client.CommonProjectConfiguration)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.ProcessConfigurationService.ValidateCommonConfigurationOperation">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Client.Channels.TfsClientOperation" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.ProductBacklogConfiguration">
+      <summary>产品积压工作配置</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.ProductBacklogConfiguration.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.ProductBacklogConfiguration.AddPanel">
+      <summary>AddPanel</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.AddPanelConfiguration" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.ProductBacklogConfiguration.Columns">
+      <summary>列定义</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.Column" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.ProductBacklogConfiguration.ToString">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.ProjectProcessConfigurationService">
+      <summary>ProcessConfigurationService web服务的公共接口。 允许进程(如任务键盘/积压工作集)设置或检索/验证的配置项。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.ProjectProcessConfigurationService.GetAgileConfiguration(System.String)">
+      <summary>检索敏捷过程团队项目的配置</summary>
+      <returns>敏捷过程指定团队项目的配置设置</returns>
+      <param name="projectUri">团队项目的URI设置与</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.ProjectProcessConfigurationService.GetCommonConfiguration(System.String)">
+      <summary>检索公用处理团队项目的配置</summary>
+      <returns>通用处理指定团队项目的配置设置</returns>
+      <param name="projectUri">团队项目的URI设置与</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.ProjectProcessConfigurationService.SetAgileConfiguration(System.String,Microsoft.TeamFoundation.ProcessConfiguration.Client.AgileProjectConfiguration)">
+      <summary>调用将敏捷过程团队项目的配置</summary>
+      <param name="projectUri">关联这些设置的项目的名称。</param>
+      <param name="agileConfiguration">敏捷过程所指定的项目配置</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.ProjectProcessConfigurationService.SetCommonConfiguration(System.String,Microsoft.TeamFoundation.ProcessConfiguration.Client.CommonProjectConfiguration)">
+      <summary>调用共同进程团队项目的配置</summary>
+      <param name="projectUri">关联这些设置项目的URI。</param>
+      <param name="commonConfiguration">通用处理该指定的项目配置</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.ProjectProcessConfigurationService.ValidateAgileConfiguration(System.String,Microsoft.TeamFoundation.ProcessConfiguration.Client.AgileProjectConfiguration)">
+      <summary>调用验证指定的敏捷配置有效。 执行一个深的验证，如果projectUri指定和验证指定的字段是否存在，如。 如果项目名称未指定将在其中执行一个浅绿验证。</summary>
+      <param name="projectUri">验证设置项的名称。 可能为 null。</param>
+      <param name="agileConfiguration">敏捷过程所指定的项目配置</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.ProjectProcessConfigurationService.ValidateCommonConfiguration(System.String,Microsoft.TeamFoundation.ProcessConfiguration.Client.CommonProjectConfiguration)">
+      <summary>调用验证指定的常见配置有效。 执行一个深的验证，如果projectUri指定和验证指定的字段是否存在，如。 如果项目名称未指定将在其中执行一个浅绿验证。</summary>
+      <param name="projectUri">验证设置项目的URI。 可能为 null。</param>
+      <param name="commonConfiguration">通用处理该指定的项目配置</param>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.State">
+      <summary>用于存储有关用于产品积压工作和Taskboard状态的信息。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.State.#ctor">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.State.ToString">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.State.Type">
+      <summary>获取或设置类型或类别，为状态。</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.StateTypeEnum" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.State.Value">
+      <summary>获取或设置为状态的文本值。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.StateTypeEnum">
+      <summary>表示可能的类别可供每taskboard和PBL状态。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.ProcessConfiguration.Client.StateTypeEnum.Complete">
+      <summary>完成“完成”)的状态(</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.ProcessConfiguration.Client.StateTypeEnum.Declined">
+      <summary>请求的或接收的反馈被拒绝。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.ProcessConfiguration.Client.StateTypeEnum.InProgress">
+      <summary>为“inprogress”)的进程内状态(</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.ProcessConfiguration.Client.StateTypeEnum.Proposed">
+      <summary>建议状态(“todo”)</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.ProcessConfiguration.Client.StateTypeEnum.Received">
+      <summary>请求的反馈接收。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.ProcessConfiguration.Client.StateTypeEnum.Requested">
+      <summary>反馈请求。</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.ProcessConfiguration.Client.StateTypeEnum.Resolved">
+      <summary>已解决的bug</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.ProcessConfiguration.Client.StateTypeEnum.Reviewed">
+      <summary>接收的反馈了检查。</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.TeamConfiguration">
+      <summary>包含团队设置。</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.TeamConfiguration.IsDefaultTeam">
+      <summary>指示团队是否是“默认”团队项目的团队</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.TeamConfiguration.ProjectUri">
+      <summary>团队项目的项目团队所属的URI</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.TeamConfiguration.TeamId">
+      <summary>团队的标识符</summary>
+      <returns>返回 <see cref="T:System.Guid" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.TeamConfiguration.TeamName">
+      <summary>团队名称</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.TeamConfiguration.TeamSettings">
+      <summary>团队设置</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.TeamSettings" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.TeamConfiguration.ToString">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.TeamFieldValue">
+      <summary>包含单个团队字段值的详细信息。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.TeamFieldValue.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.TeamFieldValue.IncludeChildren">
+      <summary>指示子节点是否应包含的，如果团队字段支持层次结构</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.TeamFieldValue.ToString">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.TeamFieldValue.Value">
+      <summary>一个字符串可比的工作项字段的值</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.TeamSettings">
+      <summary>包含团队设置。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.TeamSettings.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.TeamSettings.BacklogIterationPath">
+      <summary>工作跟踪团队的迭代积压工作(或空项目迭代路径，如果未设置)</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.TeamSettings.CurrentIterationPath">
+      <summary>工作跟踪团队的当前迭代(或空项目迭代路径，如果未设置)。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.TeamSettings.IterationPaths">
+      <summary>团队迭代。 设置来跟踪团队参与的迭代路径的工作项</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.TeamSettings.TeamField">
+      <summary>“团队域” refname。 ，如果团队字段在项目中，未设置可能为null</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.TeamSettings.TeamFieldValues">
+      <summary>团队字段值。 在索引0的值是默认值。 可以为空数组</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.TeamFieldValue" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.TeamSettings.ToString">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.TeamSettingsConfigurationService">
+      <summary>TeamConfigurationService web服务的公共接口。  允许团队配置项(例如产品积压工作路径，团队字段)设置和检索。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.TeamSettingsConfigurationService.GetTeamConfigurations(System.Collections.Generic.IEnumerable{System.Guid})" />
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.TeamSettingsConfigurationService.GetTeamConfigurationsForUser(System.Collections.Generic.IEnumerable{System.String})">
+      <summary>获取团队的团队将当前用户/标识是成员(范围设置团队项目)</summary>
+      <returns>团队设置的集合每个团队的用户属于特定项目的成员</returns>
+      <param name="projectUris">将在团队下的大小返回的项URI。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.TeamSettingsConfigurationService.SetTeamSettings(System.Guid,Microsoft.TeamFoundation.ProcessConfiguration.Client.TeamSettings)">
+      <summary>设置特定的团队团队设置</summary>
+      <param name="teamId">团队组的标识符</param>
+      <param name="settings">团队的设置</param>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.TypeField">
+      <summary>字段信息</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.TypeField.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.TypeField.Format">
+      <summary>字段的格式</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.TypeField.ToString">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.TypeField.Type">
+      <summary>字段的类型</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.FieldTypeEnum" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.TypeField.TypeFieldValues">
+      <summary>值与字段</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.TypeFieldValue" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.TypeFieldValue">
+      <summary>TypeField值信息</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.TypeFieldValue.#ctor">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.TypeFieldValue.ToString">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.TypeFieldValue.Type">
+      <summary>获取或设置类型或类别，字段的值。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.TypeFieldValue.Value">
+      <summary>获取或设置字段的值的文本值。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.WorkItemCategory">
+      <summary>工作项类别</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.WorkItemCategory.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.WorkItemCategory.CategoryName">
+      <summary>类别名称</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.WorkItemCategory.PluralName">
+      <summary>类别的复数名称</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.ProcessConfiguration.Client.WorkItemCategory.States">
+      <summary>状态与工作项类别</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.ProcessConfiguration.Client.State" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.ProcessConfiguration.Client.WorkItemCategory.ToString">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+  </members>
+</doc>

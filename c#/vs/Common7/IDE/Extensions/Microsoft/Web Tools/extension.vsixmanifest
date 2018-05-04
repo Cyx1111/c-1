@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+    <Identifier Id="0AC2ABB1-6383-4608-BA51-B58A23DD9E8A">
+        <Name>Microsoft Web Developer Tools</Name>
+        <Author>Microsoft Corporation</Author>
+        <Version>1.0.30710.0</Version>
+        <Description xml:space="preserve">Provides the latest Web Developer Tools for ASP.NET</Description>
+        <Icon>icon32.png</Icon>
+        <Locale>1033</Locale>
+        <SupportedProducts>
+            <VisualStudio Version="11.0">
+                <Edition>IntegratedShell</Edition>
+            </VisualStudio>
+        </SupportedProducts>
+        <InstalledByMsi>true</InstalledByMsi>
+        <SupportedFrameworkRuntimeEdition MinVersion="4.5" />
+    </Identifier>
+    <References>
+        <Reference Id="Microsoft.VisualStudio.MPF" MinVersion="10.0">
+            <Name>Visual Studio MPF</Name>
+        </Reference>
+    </References>
+    <Content>
+        <VsPackage>Eureka\Microsoft.VisualStudio.Web.Eureka.pkgdef</VsPackage>
+        <VsPackage>Publish\Microsoft.VisualStudio.Web.Publish.pkgdef</VsPackage>
+        <VsPackage>Publish\VSPropertyPage_Reg.pkgdef</VsPackage>
+        <MefComponent>Eureka\Microsoft.VisualStudio.Web.Eureka.dll</MefComponent>
+        <MefComponent>JavaScript\Microsoft.VisualStudio.JavaScript.Web.Extensions.dll</MefComponent>
+        <MefComponent>Publish\Microsoft.VisualStudio.Web.Publish.dll</MefComponent>
+    </Content>
+</Vsix>

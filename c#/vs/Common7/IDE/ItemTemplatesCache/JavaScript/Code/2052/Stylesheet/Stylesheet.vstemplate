@@ -1,0 +1,15 @@
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name _locID="JSP_Item_CSSName">样式表</Name>
+    <Description _locID="JSP_Item_CSSDesc">用于定义丰富 HTML 样式的空白 CSS 文档。</Description>
+    <Icon>Stylesheet.ico</Icon>
+    <TemplateID>Microsoft.JavaScript.StyleSheet</TemplateID>
+    <ProjectType>JavaScript</ProjectType>
+    <BlendProjectSubType>WJApplication</BlendProjectSubType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>stylesheet.css</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem OpenInEditor="true" BlendOpenInEditor="false">StyleSheet.css</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

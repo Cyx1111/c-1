@@ -1,0 +1,41 @@
+﻿KONU
+    about_NuGet
+    
+KISA AÇIKLAMA
+    NuGet Paket Yöneticisi komutları hakkında bilgiler sağlar.
+           
+UZUN AÇIKLAMA
+    Bu konu, NuGet Paket Yöneticisi komutlarını açıklar. NuGet, .NET projelerine kütüphaneler ve araçlar ekleme amaçlı bir tümleşik paket yönetimi aracıdır.
+
+                 
+    Aşağıdaki NuGet cmdlets dahildir.
+
+        Cmdlet					Açıklama
+        ------------------		----------------------------------------------
+        Get-Package				Paket kaynağında bulunan paket kümelerini alır.
+
+        Install-Package			Paketi ve bağımlılıklarını projeye yükler.
+
+        Uninstall-Package		Paketi kaldırır.
+ Başka paketler bu pakete bağımlıysa,-Force seçeneği belirtilmediği sürece komut başarısız olacaktır.
+
+        Update-Package			Paketi ve bağımlılıklarını yeni bir sürüme güncelleştirir.
+
+        Add-BindingRedirect		Projenin çıkış yolu içindeki tüm derlemeleri inceler ve gerektiği zaman uygulama (veya web) yapılandırmasına bağlayıcı yeniden yönlendirmeler ekler.
+                            
+        Get-Project				Başvuruyu belirlenmiş projenin DTE (Development Tools Environment) öğesine döndürür. Proje belirlenmemişse, Paket Yöneticisi Konsolu'nda seçilmiş varsayılan projeye döndürür.
+
+        Open-PackagePage        Belirtilmiş paketin ProjectUrl, LicenseUrl veya ReportAbuseUrl öğelerine işaret eden tarayıcıyı açar.
+
+        Register-TabExpansion	Komut parametreleri için sekme genişlemesini kaydeder.
+
+AYRICA BKZ.
+    Çevrimiçi belgeler: <http://go.microsoft.com/fwlink/?LinkID=206619>
+    Get-Package
+    Install-Package
+    Uninstall-Package
+    Update-Package
+    Add-BindingRedirect
+    Get-Project
+    Open-PackagePage
+    Register-TabExpansion

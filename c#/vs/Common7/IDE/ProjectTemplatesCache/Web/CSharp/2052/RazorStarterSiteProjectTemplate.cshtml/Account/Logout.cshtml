@@ -1,0 +1,13 @@
+﻿@{
+    //  退出当前用户上下文
+    WebSecurity.Logout();
+
+    //  重定向回主页或返回 URL
+    var returnUrl = Request.QueryString["ReturnUrl"];
+    if (returnUrl.IsEmpty()) {
+        Response.Redirect("~/");
+    } else {
+        Context.RedirectLocal(returnUrl);
+    }
+}
+

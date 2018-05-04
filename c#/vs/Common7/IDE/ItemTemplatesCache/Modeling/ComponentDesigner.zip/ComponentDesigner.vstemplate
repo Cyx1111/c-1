@@ -1,0 +1,18 @@
+﻿<!--DSL Tools Language Template-->
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TemplateData>
+    <TemplateID>Microsoft.Modeling.UmlComponentDiagram</TemplateID>
+    <Name Package="{e1bc0ae8-0af6-41f4-b12a-de109db41662}" ID="103"/>
+		<Description Package="{e1bc0ae8-0af6-41f4-b12a-de109db41662}" ID="102"/>
+		<Icon Package="{e1bc0ae8-0af6-41f4-b12a-de109db41662}" ID="201" />
+		<ProjectType>Modeling</ProjectType>
+		<SortOrder>364</SortOrder>
+		<NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+		<DefaultName>UMLComponentDiagram.componentdiagram</DefaultName>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem TargetFileName="$fileinputname$.componentdiagram">blank.componentdiagram</ProjectItem>
+		<ProjectItem TargetFileName="$fileinputname$.componentdiagram.layout">blank.componentdiagram.layout</ProjectItem>
+	</TemplateContent>
+</VSTemplate>
+

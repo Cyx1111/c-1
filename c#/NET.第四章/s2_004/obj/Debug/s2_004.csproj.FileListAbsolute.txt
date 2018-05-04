@@ -1,0 +1,6 @@
+F:\C#\s2_003\s2_004\bin\Debug\s2_004.exe.config
+F:\C#\s2_003\s2_004\obj\Debug\s2_004.csprojResolveAssemblyReference.cache
+F:\C#\s2_003\s2_004\bin\Debug\s2_004.exe
+F:\C#\s2_003\s2_004\bin\Debug\s2_004.pdb
+F:\C#\s2_003\s2_004\obj\Debug\s2_004.exe
+F:\C#\s2_003\s2_004\obj\Debug\s2_004.pdb

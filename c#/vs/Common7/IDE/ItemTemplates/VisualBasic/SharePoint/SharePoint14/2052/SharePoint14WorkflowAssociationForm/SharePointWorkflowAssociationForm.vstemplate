@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID="336"/>
+    <Description Package="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID="335"/>
+    <Icon Package="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID="228"/>
+    <TemplateID>SharePoint14WorkflowAssociationForm_VB</TemplateID>
+    <FrameworkVersion>3.5</FrameworkVersion>
+    <ProjectType>VisualBasic</ProjectType>
+    <SortOrder>90</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>WorkflowAssociationForm.aspx</DefaultName>
+    <TemplateGroupID>SharePointItemTemplateGroupID</TemplateGroupID>
+    <ShowByDefault>false</ShowByDefault>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>Microsoft.SharePoint</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Data</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Drawing</Assembly>
+      </Reference>      
+      <Reference>
+        <Assembly>System.Web</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Xml</Assembly>
+      </Reference>      
+    </References>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.$fileinputextension$">Default.aspx</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.$fileinputextension$.vb" SubType="ASPXCodeBehind">Default.aspx.vb</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.$fileinputextension$.designer.vb">Default.aspx.designer.vb</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="SharePointProjectParentFilter" Value="ProjectItem;MappedFolder"/>
+      <CustomParameter Name="$loc_AssociationFailedError$" _locID="$loc_AssociationFailedError$" _locAttrData="Value" Value="关联工作流模板时出错。{0}"/>
+      <CustomParameter Name="$loc_ListCreationError$" _locID="$loc_ListCreationError$" _locAttrData="Value" Value="未能创建列表 {0}，因为已存在同名的列表"/>
+      <CustomParameter Name="$loc_HistoryListDescription$" _locID="$loc_HistoryListDescription$" _locAttrData="Value" Value="自定义历史记录列表"/>
+      <CustomParameter Name="$loc_TaskListDescription$" _locID="$loc_TaskListDescription$" _locAttrData="Value" Value="自定义任务列表"/>
+      <CustomParameter Name="$loc_CreateNewListComment$" _locID="$loc_CreateNewListComment$" _locAttrData="Value" Value="如果值以“z”开头，则新建一个列表"/>
+      <CustomParameter Name="$loc_UseExistingListComment$" _locID="$loc_UseExistingListComment$" _locAttrData="Value" Value="使用现有列表"/>
+      <CustomParameter Name="$loc_IfFirstLoadComment$" _locID="$loc_IfFirstLoadComment$" _locAttrData="Value" Value="检查是否为第一次加载页面"/>
+      <CustomParameter Name="$loc_PrePopulateComment$" _locID="$loc_PrePopulateComment$" _locAttrData="Value" Value="(可选)在此处添加代码以预填充窗体字段。"/>
+      <CustomParameter Name="$loc_GetAssocDataSummary$" _locID="$loc_GetAssocDataSummary$" _locAttrData="Value" Value="当用户单击关联工作流的按钮时，调用此方法。"/>
+      <CustomParameter Name="$loc_AssociationCodeRegion$" _locID="$loc_AssociationCodeRegion$" _locAttrData="Value" Value="工作流关联代码 - 通常不应更改以下代码"/>
+      <CustomParameter Name="$loc_GetAssocDataComment$" _locID="$loc_GetAssocDataComment$" _locAttrData="Value" Value="TODO: 返回包含将传递到工作流的关联数据的字符串。该字符串通常采用 XML 格式。"/>
+      <CustomParameter Name="$loc_AssociateWorkflowClickComment$" _locID="$loc_AssociateWorkflowClickComment$" _locAttrData="Value" Value="(可选)在此处添加代码以在关联工作流之前执行其他步骤"/>
+      <CustomParameter Name="$loc_AssociateWorkflowButtonText$" _locID="$loc_AssociateWorkflowButtonText$" _locAttrData="Value" Value="关联工作流"/>
+      <CustomParameter Name="$loc_CancelButtonText$" _locID="$loc_CancelButtonText$" _locAttrData="Value" Value="取消"/>
+      <CustomParameter Name="$loc_AssociationFormTitle$" _locID="$loc_AssociationFormTitle$" _locAttrData="Value" Value="工作流关联窗体"/>
+      <CustomParameter Name="$loc_AutoGenComment$" _locID="$loc_AutoGenComment$" _locAttrData="Value" Value="自动生成的字段。"/>
+      <CustomParameter Name="$loc_ControlComment$" _locID="$loc_ControlComment$" _locAttrData="Value" Value="控件"/>
+      <CustomParameter Name="$loc_ModifyComment$" _locID="$loc_ModifyComment$" _locAttrData="Value" Value="若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。"/>
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.WorkflowAssociationFormWizard</FullClassName>
+  </WizardExtension>  
+</VSTemplate>

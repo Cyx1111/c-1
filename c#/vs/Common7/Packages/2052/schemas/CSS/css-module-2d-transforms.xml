@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="2D Transforms" standard-reference="http://www.w3.org/TR/css3-2d-transforms/" status="WD" pub-date="2011-12-15">
+
+  <CssProperty _locID="transform" _locAttrData="description" version="3.0" browsers="IE10" type="transforms" restriction="enum" syntax="div { $(name): rotate(-90deg); }" description="通过“transform”属性对元素应用二维转换。此属性包含转换函数的列表，这些函数与 SVG 允许的转换函数类似。" standard-reference="http://www.w3.org/TR/css3-2d-transforms/#transform-property"/>
+
+  <CssPropertyValue type="transforms">
+    <entry value="none"/>
+    <entry _locID="transform_matrix" _locAttrData="description" value="matrix()" description="使用六值转换矩阵的形式指定二维转换。matrix(a,b,c,d,e,f) 与应用转换矩阵 [a b c d e f] 等效"/>
+    <entry _locID="transform_matrix3d" _locAttrData="description" value="matrix3d()" description="指定一个三维转换作为包含 16 个值的 4x4 列主序齐次矩阵。"/>
+    <entry _locID="transform_translate" _locAttrData="description" value="translate()" description="指定基于向量 [tx, ty] 的二维平移，其中，tx 是第一个 translation-value 参数，ty 是可选的第二个 translation-value 参数。"/>
+    <entry _locID="transform_translate3d" _locAttrData="description" value="translate3d()" description="指定基于向量 [tx,ty,tz] 的三维平移，其中 tx、ty 和 tz 分别是第一个、第二个和第三个 translation-value 参数。"/>
+    <entry _locID="transform_translateX" _locAttrData="description" value="translateX()" description="指定按给定数量在 X 方向进行的平移。"/>
+    <entry _locID="transform_translateY" _locAttrData="description" value="translateY()" description="指定按给定数量在 Y 方向进行的平移。"/>
+    <entry _locID="transform_translateZ" _locAttrData="description" value="translateZ()" description="指定按给定数量在 Z 方向进行的平移。请注意，translateZ translation-value 中不允许包含百分比值，如果存在百分比值，则将其作为 0 计算。"/>
+    <entry _locID="transform_scale" _locAttrData="description" value="scale()" description="指定基于由 2 个参数描述的 [sx,sy] 缩放向量的二维缩放操作。如果未提供第二个参数，则表示该参数的值与第一个参数的值相同。"/>
+    <entry _locID="transform_scale3d" _locAttrData="description" value="scale3d()" description="指定基于由 3 个参数描述的 [sx,sy,sz] 缩放向量的三维缩放操作。"/>
+    <entry _locID="transform_scaleX" _locAttrData="description" value="scaleX()" description="指定使用 [sx,1] 缩放向量的缩放操作，其中 sx 作为参数提供。"/>
+    <entry _locID="transform_scaleY" _locAttrData="description" value="scaleY()" description="指定使用 [sy,1] 缩放向量的缩放操作，其中 sy 作为参数提供。"/>
+    <entry _locID="transform_scaleZ" _locAttrData="description" value="scaleZ()" description="指定使用 [1,1,sz] 缩放向量的缩放操作，其中 sz 作为参数提供。"/>
+    <entry _locID="transform_rotate" _locAttrData="description" value="rotate()" description="指定围绕 transform-origin 属性所定义的元素原点旋转参数中指定的角度的二维旋转。"/>
+    <entry _locID="transform_rotate3d" _locAttrData="description" value="rotate3d()" description="指定围绕前 3 个参数描述的 [x,y,z] 方向向量旋转最后一个参数中指定的角度的顺时针三维旋转。"/>
+    <entry _locID="transform_rotateX" _locAttrData="description" value="rotateX('angle')" description="指定围绕 X 轴旋转给定角度的顺时针旋转。"/>
+    <entry _locID="transform_rotateY" _locAttrData="description" value="rotateY('angle')" description="指定围绕 Y 轴旋转给定角度的顺时针旋转。"/>
+    <entry _locID="transform_rotateZ" _locAttrData="description" value="rotateZ('angle')" description="指定围绕 Z 轴旋转给定角度的顺时针旋转。"/>
+    <entry _locID="transform_skewX" _locAttrData="description" value="skewX()" description="指定沿 X 轴倾斜给定角度的倾斜转换。"/>
+    <entry _locID="transform_skewY" _locAttrData="description" value="skewY()" description="指定沿 Y 轴倾斜给定角度的倾斜转换。"/>
+    <entry _locID="transform_skew" _locAttrData="description" value="skew()" description="指定沿 X 轴和 Y 轴的倾斜转换。第一个角度参数指定在 X 轴上的倾斜角度。第二个角度参数指定在 Y 轴上的倾斜角度。如果未给定第二个参数，则将值 0 用于 Y 角度(即: 不存在 Y 轴的倾斜角度)。"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="transform-origin" _locAttrData="description" version="3.0" browsers="IE10" type="transform-origins" restriction="length, percentage" syntax=".album { $(name): 20% 40%; }" description="建立元素的转换原点。按以下方式应用此属性: 首先基于此属性的相反值平移元素，然后应用元素转换，最后基于属性值平移。" standard-reference="http://www.w3.org/TR/css3-2d-transforms/#transform-origin"/>
+
+  <CssPropertyValue type="transform-origins">
+    <entry value="left"/>
+    <entry value="center"/>
+    <entry value="right"/>
+    <entry value="top"/>
+    <entry value="bottom"/>
+  </CssPropertyValue>
+
+</CssModule>

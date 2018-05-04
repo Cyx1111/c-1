@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Backgrounds and Borders" standard-reference="http://www.w3.org/TR/css3-background/#level-3" status="CR" pub-date="2012-04-17">
+
+  <CssProperty _locID="background" _locAttrData="description" version="1.0" restriction="enum, color, length, percentage, url" type="background-image, background-repeat, background-attachment, background-position, box" description="元素的背景" syntax="section { $(name): url(image.png) no-repeat #999; }" standard-reference="http://www.w3.org/TR/css3-background/#background"/>
+
+  <CssProperty _locID="background-color" _locAttrData="description" type="color" version="1.0" restriction="color" syntax="body { $(name): white; }" description="用于元素的背景的颜色" standard-reference="http://www.w3.org/TR/css3-background/#the-background-color"/>
+
+  <CssProperty _locID="background-image" _locAttrData="description" version="1.0" description="用于元素的背景的图像" syntax="article { $(name): url(image.png); }" restriction="url, enum" type="background-image" standard-reference="http://www.w3.org/TR/css3-background/#the-background-image"/>
+
+  <CssPropertyValue type="background-image">
+    <entry _locID="background-image_none" _locAttrData="description" value="none" description="值“none”将作为图像图层计数，但不绘制任何内容。"/>
+    <entry value="url()"/>
+    <entry value="linear-gradient()" version="3.0" browsers="none"/>
+    <entry value="radial-gradient()" version="3.0" browsers="none"/>
+    <entry value="repeating-linear-gradient()" version="3.0" browsers="IE10"/>
+    <entry value="repeating-radial-gradient()" version="3.0" browsers="IE10"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="background-repeat" _locAttrData="description" restriction="enum" type="background-repeat" version="1.0" description="如何在元素中平铺背景图像" syntax="article { $(name): no-repeat; }" standard-reference="http://www.w3.org/TR/css3-background/#the-background-repeat"/>
+
+  <CssPropertyValue type="background-repeat">
+    <entry _locID="background-repeat_no-repeat" _locAttrData="description" value="no-repeat" version="1.0" description="放置一次图像，并且在此方向上不再重复。"/>
+    <entry _locID="background-repeat_repeat" _locAttrData="description" value="repeat" version="1.0" description="根据需要在此方向上重复图像以覆盖背景绘图区域。"/>
+    <entry _locID="background-repeat_repeat-x" _locAttrData="description" value="repeat-x" version="1.0" description="等效于“repeat no-repeat”。"/>
+    <entry _locID="background-repeat_repeat-y" _locAttrData="description" value="repeat-y" version="1.0" description="等效于“no-repeat repeat”。"/>
+    <entry _locID="background-repeat_round" _locAttrData="description" value="round" version="3.0" description="将重复图像所需的次数以适合背景定位区域。如果无法适合整数数量的图像，则将重新缩放图像以达到此目的。"/>
+    <entry _locID="background-repeat_space" _locAttrData="description" value="space" version="3.0" description="将重复图像所需次数以适合背景定位区域而不会进行剪裁，然后用空白将图像分隔开以填满区域。第一个和最后一个图像与区域边缘接壤。"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="background-attachment" _locAttrData="description" version="1.0" browsers="all" restriction="enum" type="background-attachment" description="如果指定背景图像，则此属性指定这些图像是相对于视区固定(“fixed”)还是沿元素(“scroll”)或其内容(“local”)滚动。" syntax=".box { $(name): fixed; }" standard-reference="http://www.w3.org/TR/css3-background/#the-background-attachment"/>
+
+  <CssPropertyValue type="background-attachment">
+    <entry _locID="background-attachment_fixed" _locAttrData="description" value="fixed" version="1.0" description="背景相对于视区是固定的。在没有视区的分页媒体中，“固定”背景是相对于页框固定的，因此在每一页上都是重复的。"/>
+    <entry _locID="background-attachment_local" _locAttrData="description" value="local" version="3.0" description="背景相对于元素内容是固定的: 如果元素具有滚动机制，则背景随元素内容滚动。"/>
+    <entry _locID="background-attachment_scroll" _locAttrData="description" value="scroll" version="1.0" description="背景相对于元素本身是固定的，且不会随其内容滚动。(它将有效地附加到元素边框。)"/>
+  </CssPropertyValue>
+
+  <CssPropertyValue type="background-position">
+    <entry _locID="background-position_bottom" _locAttrData="description" value="bottom" description="如果给定了一个或两个值，则等效于垂直位置的“100%”，否则将下边缘指定为下一个偏移的原点。"/>
+    <entry _locID="background-position_center" _locAttrData="description" value="center" description="如果未指定水平位置，则等效于水平位置的“50%”(“left 50%”)；如果指定了水平位置，则等效于垂直位置的“50%”(“top 50%”)。"/>
+    <entry _locID="background-position_left" _locAttrData="description" value="left" description="如果给定了一个或两个值，则等效于水平位置的“0%”；否则将左边缘指定为下一个偏移的原点。"/>
+    <entry _locID="background-position_right" _locAttrData="description" value="right" description="如果给定了一个或两个值，则等效于水平位置的“100%”；否则将右边缘指定为下一个偏移的原点。"/>
+    <entry _locID="background-position_top" _locAttrData="description" value="top" description="如果给定了一个或两个值，则等效于垂直位置的“0%”；否则将上边缘指定为下一个偏移的原点。"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="background-position" _locAttrData="description" version="1.0" type="background-position" restriction="length, percentage" description="如果已指定背景图像，则此属性在其相应的背景定位区域内指定其初始位置(进行任何调整大小操作后)。" syntax="div { $(name): left center}" standard-reference="http://www.w3.org/TR/css3-background/#the-background-position"/>
+
+  <CssPropertyValue type="box">
+    <entry _locID="background-clip_border-box" _locAttrData="description" value="border-box" description="在边框内绘制背景或将背景剪切到边框中。"/>
+    <entry _locID="background-clip_padding-box" _locAttrData="description" value="padding-box" description="在内边距框中绘制背景或将背景剪切到边距框中。"/>
+    <entry _locID="background-clip_content-box" _locAttrData="description" value="content-box" description="在内容框中绘制背景或将背景剪切到内容框中。"/>    
+  </CssPropertyValue>
+
+  <CssProperty _locID="background-clip" _locAttrData="description, syntax" version="3.0" browsers="C,FF4,IE9,O10.5,S3" type="box" restriction="enum" description="确定背景绘制区域。" syntax="header { $(name):border-box; }" standard-reference="http://www.w3.org/TR/css3-background/#the-background-clip"/>
+
+  <CssProperty _locID="background-origin" _locAttrData="description" version="3.0" browsers="C,FF4,IE9,O10.5,S3" type="box" restriction="enum" description="对于呈现为单个框的元素，指定背景定位区域。对于呈现为多个框的元素(例如，多个行上的内联框、多个页面上的框)，指定“box-decoration-break”在哪些框中运行以确定背景定位区域。" syntax="header { $(name): border-box; }" standard-reference="http://www.w3.org/TR/css3-background/#the-background-origin"/>
+
+  <CssPropertyValue type="bg-size">
+    <entry _locID="background-size_contain" _locAttrData="description" value="contain" description="在保留图像固有的纵横比(如果有)的同时，将图像缩放到最大大小，使其宽度和高度能够适合背景定位区域。"/>
+    <entry _locID="background-size_cover" _locAttrData="description" value="cover" description="在保留图像固有的纵横比(如果有)的同时，将图像缩放到最小大小，使其宽度和高度能够完全覆盖背景定位区域。"/>
+    <entry value="auto"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="background-size" _locAttrData="description" version="3.0" browsers="C,FF4,IE9,O10,S4.1" type="bg-size" restriction="length, percentage" description="指定背景图像的大小。" syntax="header { $(name): 20px; }" standard-reference="http://www.w3.org/TR/css3-background/#the-background-size"/>
+  
+  <CssProperty _locID="border" _locAttrData="description" version="1.0" restriction="length, color, enum" type="border-style, border-width" description="用于设置边框宽度、样式和颜色的速记属性" syntax="header { $(name): 5px solid red;}" standard-reference="http://www.w3.org/TR/css3-background/#borders"/>
+
+  <CssProperty _locID="border-left" ref="border"/>
+  <CssProperty _locID="border-top" ref="border"/>
+  <CssProperty _locID="border-right" ref="border"/>
+  <CssProperty _locID="border-bottom" ref="border"/>
+
+  <CssPropertyValue type="border-width">
+    <entry version="1.0" value="medium"/>
+    <entry version="1.0" value="thin"/>
+    <entry version="1.0" value="thick"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="border-width" _locAttrData="description" type="border-width" restriction="length" version="1.0" description="“Border-width”是一个用于设置四个“border-*-width”属性的速记。如果它具有四个值，则将依次设置上边框、右边框、下边框和左边框。如果左边框值缺失，则它与上边框值相同；如果下边框值缺失，则它与上边框值相同；如果右边框值缺失，则它与上边框值相同。" syntax="td { $(name): 2px; }" standard-reference="http://www.w3.org/TR/css3-background/#border-width"/>
+
+  <CssProperty _locID="border-top-width" ref="border-width"/>
+  <CssProperty _locID="border-left-width" ref="border-width"/>
+  <CssProperty _locID="border-right-width" ref="border-width"/>
+  <CssProperty _locID="border-bottom-width" ref="border-width"/>
+
+  <CssProperty _locID="border-color" _locAttrData="description" type="color" restriction="color" version="1.0" description="元素的所有四个边缘的边框颜色。" syntax="td { $(name): blue; }" standard-reference="http://www.w3.org/TR/css3-background/#border-color"/>
+
+  <CssProperty _locID="border-top-color" ref="border-color"/>
+  <CssProperty _locID="border-left-color" ref="border-color"/>
+  <CssProperty _locID="border-right-color" ref="border-color"/>
+  <CssProperty _locID="border-bottom-color" ref="border-color"/>
+
+  <CssPropertyValue type="border-style">
+    <entry _locID="border-style_dashed" _locAttrData="description" version="1.0" value="dashed" description="一系列方头虚线。"/>
+    <entry _locID="border-style_dotted" _locAttrData="description" version="1.0" value="dotted" description="一系列圆点。"/>
+    <entry _locID="border-style_double" _locAttrData="description" version="1.0" value="double" description="两条平行实线，二者之间留有一定的间距。(未指定线条的粗细，但线条和间距之和必须等于“border-width”。)"/>
+    <entry _locID="border-style_groove" _locAttrData="description" version="1.0" value="groove" description="看上去就像是在画布中切开一样。(这通常是使用比“border-color”略亮和略暗的两种颜色创建“阴影”来实现的。)"/>
+    <entry _locID="border-style_hidden" _locAttrData="description" version="3.0" value="hidden" description="与“none”相同，但在边框折叠表的边框冲突解决规则中具有不同的行为。"/>
+    <entry _locID="border-style_inset" _locAttrData="description" version="1.0" value="inset" description="看上去就好像边框内的内容陷入画布中一样。在边框合并表中将被视为“ridge”。"/>
+    <entry _locID="border-style_none" _locAttrData="description" version="1.0" value="none" description="无边框。忽略颜色和宽度(即，除非边框是一个图像，否则其宽度为 0)"/>
+    <entry _locID="border-style_outset" _locAttrData="description" version="1.0" value="outset" description="看上去就好像边框内的内容取自画布。在边框合并表中将被视为“groove”。"/>
+    <entry _locID="border-style_ridge" _locAttrData="description" version="1.0" value="ridge" description="看起来就好像它取自画布。"/>
+    <entry _locID="border-style_solid" _locAttrData="description" version="1.0" value="solid" description="一条线段。"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="border-style" _locAttrData="description" type="border-style" restriction="enum" version="1.0" syntax="td { $(name): solid; }" description="围绕元素边缘的边框的样式。" standard-reference="http://www.w3.org/TR/css3-background/#border-style"/>
+
+  <CssProperty _locID="border-left-style" ref="border-style"/>
+  <CssProperty _locID="border-top-style" ref="border-style"/>
+  <CssProperty _locID="border-right-style" ref="border-style"/>
+  <CssProperty _locID="border-bottom-style" ref="border-style"/>
+
+  <CssProperty _locID="border-radius" _locAttrData="description" version="3.0" browsers="C,FF4,IE9,O10.5,S5" restriction="length, percentage" syntax="td { $(name): 3px 4px; }" description="“border-*-radius”属性的两个长度或百分比值定义一个四分之一椭圆的半径，该椭圆定义外部边框边缘的角的形状。第一个值为水平半径，第二个值为垂直半径。如果省略第二个值，则将从第一个值中复制它。如果任一长度为零，则角为方角，而不是圆角。水平半径的百分比是指边框的宽度，而垂直半径的百分比是指边框的高度。" standard-reference="http://www.w3.org/TR/css3-background/#border-radius"/>
+
+  <CssProperty _locID="border-top-left-radius" browsers="C,FF4,IE9,O10.5,S5" ref="border-radius" syntax="td { $(name): 4px; }"/>
+  <CssProperty _locID="border-top-right-radius" browsers="C,FF4,IE9,O10.5,S5" ref="border-top-left-radius"/>
+  <CssProperty _locID="border-bottom-left-radius" browsers="C,FF4,IE9,O10.5,S5" ref="border-top-left-radius"/>
+  <CssProperty _locID="border-bottom-right-radius" browsers="C,FF4,IE9,O10.5,S5" ref="border-top-left-radius"/>
+
+  <CssProperty _locID="border-image-source" _locAttrData="description" version="3.0" browsers="C,FF13" restriction="url" type="border-image-source" syntax="aside { $(name): url(image.png); }" description="指定要使用的图像而非“border-style”属性给定的边框样式，并指定元素的额外背景层。如果值为“none”或者无法显示图像，则将使用边框样式。" standard-reference="http://www.w3.org/TR/css3-background/#the-border-image-source"/>
+
+  <CssPropertyValue type="border-image-source">
+    <entry value="none"/>
+    <entry value="url()"/> 
+  </CssPropertyValue>
+
+  <CssProperty _locID="border-image-slice" _locAttrData="description" version="3.0" browsers="C,FF12" restriction="number, percentage" type="border-image-slice" syntax="div { $(name): 10%; }" description="四个“border-image-slice”值分别表示从图像的上边缘、右边缘、下边缘和左边缘向里偏移的量，这些值将图像划分为九个区域: 四个角区域、四个边缘区域和一个中间区域。除非存在“fill”关键字，否则将丢弃中间图像部分(视为完全透明)。(它将在背景上进行绘制；请参见 border-image 绘制过程。)如果缺少第四个数字/百分比，则它与第二个数字/百分比相同。如果缺少第三个数字/百分比，则它与第一个数字/百分比相同。如果缺少第二个数字/百分比，则它与第一个数字/百分比相同。" standard-reference="http://www.w3.org/TR/css3-background/#border-image-slice"/>
+
+  <CssPropertyValue type="border-image-slice">
+    <entry value="fill" description="Causes the middle part of the border-image to be preserved. (By default it is discarded, i.e., treated as empty.)"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="border-image-width" _locAttrData="description" version="3.0" browsers="FF13" restriction="length, percentage, number" type="border-image-width" syntax=".album { $(name): 4px; }" description="“border-image-width”的四个值指定了用于将边框图像区域划分为九个部分的偏移量。它们分别表示与图像区域的上边缘、右边缘、下边缘和左边缘的向内距离。" standard-reference="http://www.w3.org/TR/css3-background/#border-image-slice"/>
+
+  <CssPropertyValue type="border-image-width">
+    <entry _locID="border-image-width_auto" _locAttrData="description" value="auto" description="如果指定了“auto”，则边框图像宽度为相应的图像切片的固有宽度或高度(以适用者为准)。如果图像不具有所需的固有尺寸，则改用相应的 border-width。"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="border-image-outset" _locAttrData="description" version="3.0" browsers="FF13" restriction="length, number" syntax="div { $(name): 3px; }" description="这些值指定边框图像区域分别向边框的上边缘、右边缘、下边缘和左边缘的外部扩展的量。如果缺少第四个值，则它与第二个值相同。如果缺少第三个值，则它与第一个值相同。如果缺少第二个值，则它与第一个值相同。数字表示相应 border-width 的倍数。" standard-reference="http://www.w3.org/TR/css3-background/#border-image-outset"/>
+
+  <CssProperty _locID="border-image-repeat" _locAttrData="description" version="3.0" browsers="FF13" restriction="enum" type="border-image-repeat" syntax="td { $(name): stretch; }" description="指定四条边的图像和边框图像的中间部分的缩放和平铺方式。如果缺少第二个关键字，则假定它与第一个关键字相同。" standard-reference="http://www.w3.org/TR/css3-background/#the-border-image-repeat"/>
+
+  <CssPropertyValue type="border-image-repeat">
+    <entry _locID="border-image-repeat_stretch" _locAttrData="description" value="stretch" description="拉伸图像以填充区域。"/>
+    <entry _locID="border-image-repeat_repeat" _locAttrData="description" value="repeat" description="平铺(重复)图像以填充区域。"/>
+    <entry _locID="border-image-repeat_round" _locAttrData="description" value="round" description="平铺(重复)图像以填充区域。如果无法使用整数数量的平铺来填充区域，则重新缩放图像以实现这一点。"/>
+    <entry _locID="border-image-repeat_space" _locAttrData="description" value="space" description="平铺(重复)图像以填充区域。如果无法使用整数数量的平铺来填充区域，则在平铺的周围分布额外的空白。"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="border-image" _locAttrData="description" version="3.0" browsers="C" restriction="length, percentage, number, url, enum" type="border-image-source, border-image-slice, border-image-width, border-image-repeat" syntax="td { $(name): url(border.png) 30 30 round;}" description="用于设置“border-image-source”、“border-image-slice”、“border-image-width”、“border-image-outset”和“border-image-repeat”的速记属性。已省略的值将被设置为其初始值。" standard-reference="http://www.w3.org/TR/css3-background/#border-image"/>
+
+  <CssProperty _locID="box-decoration-break" _locAttrData="description" version="3.0" browsers="O11" restriction="enum" syntax="div { $(name): clone; }" description="指定是否将单个框视为一个连续框的分解部分，或者是否使用边框和内边距来围绕每个框。" standard-reference="http://www.w3.org/TR/css3-background/#the-box-decoration-break">
+
+    <entry _locID="box-decoration-break_clone" _locAttrData="description" value="clone" description="每个框单独用边框和内边距围绕。“border-radius”、“border-image”和“box-shadow”(如果有)分别应用于每个框。在元素的每个框中单独绘制背景。因此，非重复的背景图像将在元素的每个框中呈现一次。"/>
+    <entry _locID="box-decoration-break_slice" _locAttrData="description" value="slice" description="不在中断处插入任何边框和内边距。不在中断边缘处绘制任何框阴影；“border-radius”在角区域没有任何效果；将为整个框呈现“border-image”，就好像没有中断一样。这样产生的效果是，元素在呈现的时候好像并没有断开，之后才被切分的。"/>
+  </CssProperty>
+
+  <CssPropertyValue type="shadow">
+    <entry value="none"/>
+    <entry _locID="box-shadow_inset" _locAttrData="description" value="inset" description="更改从外部阴影(将框投影到画布上的阴影，就好像将框提升到画布上一样)到内部阴影(将画布投影到框上的阴影，就好像从画布上剪切出框并将其提升到画布后面一样)的投影。"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="box-shadow" _locAttrData="description" version="3.0" browsers="C,FF9,IE9,O11.6,S5.1" restriction="length, color, enum" type="shadow" syntax="div { $(name): rgba(0,0,0,0.4) 10px 10px inset; }" description="向框附加一个或多个 drop-shadow。此属性是以逗号分隔的阴影列表，每个阴影均由 2-4 个长度值、一个可选颜色和一个可选“inset”关键字指定。省略的长度为 0；省略的颜色为用户代理选择的颜色。" standard-reference="http://www.w3.org/TR/css3-background/#box-shadow"/>
+    
+</CssModule>

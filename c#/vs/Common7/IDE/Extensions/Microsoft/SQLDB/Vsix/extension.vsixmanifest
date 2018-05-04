@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="SqlStudio..AAAAAAAA-3691-4DF9-905E-1FC3D5513942">
+    <Name>SQL Server Data Tools</Name>
+    <Author>Microsoft</Author>
+    <Version>1.0</Version>
+    <Description>Microsoft SQL Server Data Tools</Description>
+    <Locale>1033</Locale>
+    <MoreInfoUrl>http://msdn.microsoft.com/en-us/data/bb931106.aspx</MoreInfoUrl>
+    <License>ms-pl.rtf</License>
+    <Icon>SSDT-icon.png</Icon>
+    <PreviewImage>SSDT-screenshot.png</PreviewImage>
+    <SupportedProducts>
+      <VisualStudio Version="11.1">
+        <Edition>Pro</Edition>
+        <Edition>VWDExpress</Edition>
+        <Edition>IntegratedShell</Edition>      
+      </VisualStudio>
+    </SupportedProducts>
+    <SystemComponent>true</SystemComponent>
+    <InstalledByMsi>true</InstalledByMsi>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5" />
+  </Identifier>
+  <References />
+  <Content>
+    <VsPackage>Microsoft.VisualStudio.Data.Tools.Package.pkgdef</VsPackage>
+    <VsPackage>Microsoft.VisualStudio.Data.Tools.Package.SqlProfile.pkgdef</VsPackage>
+    <VsPackage>Microsoft.VisualStudio.Data.Tools.Relational.Design.Package.pkgdef</VsPackage>
+    <VsPackage>Microsoft.VisualStudio.Data.Tools.SqlObjectExplorer.pkgdef</VsPackage>
+    <MefComponent>Microsoft.VisualStudio.Data.Tools.Delta.dll</MefComponent>
+    <MefComponent>Microsoft.VisualStudio.Data.Tools.Delta.UI.dll</MefComponent>
+  </Content>
+</Vsix>

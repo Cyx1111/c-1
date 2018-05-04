@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name _locID="JSP_Item_XMLSchemaName">XML 架构</Name>
+    <Description _locID="JSP_Item_XMLSchemaDesc">用于描述 XML 文档的架构。</Description>
+    <Icon>XMLSchema.ico</Icon>
+    <TemplateID>Microsoft.JavaScript.XMLSchema</TemplateID>
+    <ProjectType>JavaScript</ProjectType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>schema.xsd</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true">XMLSchema.xsd</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

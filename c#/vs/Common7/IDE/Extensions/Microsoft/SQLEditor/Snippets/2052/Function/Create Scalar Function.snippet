@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <_locDefinition xmlns="urn:locstudio">
+    <_locDefault _loc="locNone"/>
+    <_locTag _loc="locData">Title</_locTag>
+    <_locTag _loc="locData">Description</_locTag>
+    <_locTag _loc="locData">Author</_locTag>
+    <_locTag _loc="locData">ToolTip</_locTag>
+  </_locDefinition>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>创建标量函数</Title>
+      <Shortcut></Shortcut>
+      <Description>创建标量函数。</Description>
+      <Author>Microsoft Corporation</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>SchemaName</ID>
+          <ToolTip>架构名称</ToolTip>
+          <Default>dbo</Default>
+        </Literal>
+        <Literal>
+          <ID>FunctionName</ID>
+          <ToolTip>函数名称</ToolTip>
+          <Default>FunctionName</Default>
+        </Literal>
+        <Literal>
+          <ID>Param1</ID>
+          <ToolTip>输入参数的名称</ToolTip>
+          <Default>param1</Default>
+        </Literal>
+        <Literal>
+          <ID>Param2</ID>
+          <ToolTip>输入参数的名称</ToolTip>
+          <Default>param2</Default>
+        </Literal>
+        <Literal>
+          <ID>Datatype_Param1</ID>
+          <ToolTip>输入参数的数据类型</ToolTip>
+          <Default>int</Default>
+        </Literal>
+        <Literal>
+          <ID>Datatype_Param2</ID>
+          <ToolTip>输入参数的数据类型</ToolTip>
+          <Default>int</Default>
+        </Literal>
+        <Literal>
+          <ID>Returned_datatype</ID>
+          <ToolTip>标量函数返回的数据类型</ToolTip>
+          <Default>INT</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="SQL_SSDT">
+        <![CDATA[
+CREATE FUNCTION [$SchemaName$].[$FunctionName$]
+(
+    @$Param1$ $Datatype_Param1$,
+    @$Param2$ $Datatype_Param2$
+)
+RETURNS $Returned_datatype$
+AS
+BEGIN
+
+    RETURN @$Param1$ + @$Param2$
+
+END
+]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

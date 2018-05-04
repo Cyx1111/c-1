@@ -1,0 +1,162 @@
+[$RootKey$\CLSID\{169F2886-6566-432e-A93D-5588BD583229}]
+@="Microsoft.VisualStudio.Editor.Implementation.VsDocDataAdapter"
+"InprocServer32"="$WinDir$\system32\mscoree.dll"
+"Assembly"="Microsoft.VisualStudio.CommonIDE,version=11.0.0.0,publicKeyToken=b03f5f7f11d50a3a,culture=neutral"
+"Class"="Microsoft.VisualStudio.Editor.Implementation.VsDocDataAdapter"
+"ThreadingModel"="Both"
+[$RootKey$\CLSID\{2491432F-3A10-4884-B628-574D57F41E9B}]
+@="Microsoft.VisualStudio.Editor.Implementation.PlatformFactory"
+"InprocServer32"="$WinDir$\system32\mscoree.dll"
+"Assembly"="Microsoft.VisualStudio.Editor.Implementation,version=11.0.0.0,publicKeyToken=b03f5f7f11d50a3a,culture=neutral"
+"Class"="Microsoft.VisualStudio.Editor.Implementation.PlatformFactory"
+"ThreadingModel"="Both"
+[$RootKey$\CLSID\{6B00B705-A6A3-4D9C-815A-CF60160A1FBA}]
+@="Microsoft.VisualStudio.Editor.Implementation.PrimeEditor"
+"InprocServer32"="$WinDir$\system32\mscoree.dll"
+"Assembly"="Microsoft.VisualStudio.Editor.Implementation,version=11.0.0.0,publicKeyToken=b03f5f7f11d50a3a,culture=neutral"
+"Class"="Microsoft.VisualStudio.Editor.Implementation.PrimeEditor"
+"ThreadingModel"="Both"
+[$RootKey$\CLSID\{85115CFE-3F29-4e52-AE98-6FE62573D11C}]
+@="Microsoft.VisualStudio.Editor.Implementation.VsHiddenTextManagerAdapter"
+"InprocServer32"="$WinDir$\system32\mscoree.dll"
+"Assembly"="Microsoft.VisualStudio.Editor.Implementation,version=11.0.0.0,publicKeyToken=b03f5f7f11d50a3a,culture=neutral"
+"Class"="Microsoft.VisualStudio.Editor.Implementation.VsHiddenTextManagerAdapter"
+"ThreadingModel"="Both"
+[$RootKey$\CLSID\{8E7B96A8-E33D-11d0-A6D5-00C04FB67F6A}]
+@="Microsoft.VisualStudio.Editor.Implementation.VsTextBufferAdapter"
+"InprocServer32"="$WinDir$\system32\mscoree.dll"
+"Assembly"="Microsoft.VisualStudio.Editor.Implementation,version=11.0.0.0,publicKeyToken=b03f5f7f11d50a3a,culture=neutral"
+"Class"="Microsoft.VisualStudio.Editor.Implementation.VsTextBufferAdapter"
+"ThreadingModel"="Both"
+[$RootKey$\CLSID\{F5E7E719-1401-11d1-883B-0000F87579D2}]
+@="Microsoft.VisualStudio.Editor.Implementation.VsCodeWindowAdapter"
+"InprocServer32"="$WinDir$\system32\mscoree.dll"
+"Assembly"="Microsoft.VisualStudio.Editor.Implementation,version=11.0.0.0,publicKeyToken=b03f5f7f11d50a3a,culture=neutral"
+"Class"="Microsoft.VisualStudio.Editor.Implementation.VsCodeWindowAdapter"
+"ThreadingModel"="Both"
+[$RootKey$\CLSID\{F5E7E71E-1401-11d1-883B-0000F87579D2}]
+@="Microsoft.VisualStudio.Editor.Implementation.VsTextViewAdapter"
+"InprocServer32"="$WinDir$\system32\mscoree.dll"
+"Assembly"="Microsoft.VisualStudio.Editor.Implementation,version=11.0.0.0,publicKeyToken=b03f5f7f11d50a3a,culture=neutral"
+"Class"="Microsoft.VisualStudio.Editor.Implementation.VsTextViewAdapter"
+"ThreadingModel"="Both"
+[$RootKey$\Editors]
+[$RootKey$\Editors\{8B382828-6202-11D1-8870-0000F87579D2}]
+@="Source Code (Text) Editor"
+"CommonPhysicalViewAttributes"=dword:00000002
+"DisplayName"="#105"
+"Package"="{e269b994-ef71-4ce0-8bcd-581c217372e8}"
+"ExcludeInFileExtnMapping"=dword:00000001
+"EditorTrustLevel"=dword:00000001
+[$RootKey$\Editors\{8B382828-6202-11D1-8870-0000F87579D2}\Extensions]
+"*"=dword:0000001e
+"txt"=dword:0000002a
+"doc"=dword:00000019
+"rtf"=dword:00000019
+[$RootKey$\Editors\{8B382828-6202-11D1-8870-0000F87579D2}\LogicalViews]
+"{7651a701-06e5-11d1-8ebd-00a0c90f26ea}"=""
+"{7651a703-06e5-11d1-8ebd-00a0c90f26ea}"=""
+"{7651a700-06e5-11d1-8ebd-00a0c90f26ea}"=""
+[$RootKey$\Editors\{C7747503-0E24-4FBE-BE4B-94180C3947D7}]
+@="Source Code (Text) Editor with Encoding"
+"CommonPhysicalViewAttributes"=dword:00000003
+"DisplayName"="#104"
+"Package"="{e269b994-ef71-4ce0-8bcd-581c217372e8}"
+"EditorTrustLevel"=dword:00000001
+"LinkedEditorGuid"="{8B382828-6202-11D1-8870-0000F87579D2}"
+[$RootKey$\Editors\{C7747503-0E24-4FBE-BE4B-94180C3947D7}\Extensions]
+"*"=dword:0000001d
+"txt"=dword:00000029
+"doc"=dword:00000018
+"rtf"=dword:00000018
+[$RootKey$\Editors\{C7747503-0E24-4FBE-BE4B-94180C3947D7}\LogicalViews]
+"{7651a701-06e5-11d1-8ebd-00a0c90f26ea}"=""
+"{7651a703-06e5-11d1-8ebd-00a0c90f26ea}"=""
+"{7651a700-06e5-11d1-8ebd-00a0c90f26ea}"=""
+[$RootKey$\Packages\{e269b994-ef71-4ce0-8bcd-581c217372e8}]
+@="Microsoft.VisualStudio.Editor.Implementation.EditorPackage"
+"InprocServer32"="$WinDir$\system32\mscoree.dll"
+"Class"="Microsoft.VisualStudio.Editor.Implementation.EditorPackage"
+"ID"=dword:00000001
+"Assembly"="Microsoft.VisualStudio.Editor.Implementation,version=11.0.0.0,publicKeyToken=b03f5f7f11d50a3a,culture=neutral"
+"MinEdition"="Standard"
+"ProductVersion"="1.0"
+"ProductName"="Text"
+"CompanyName"="Microsoft"
+[$RootKey$\Services\{48d069e8-1993-4752-baf3-232236a3ea4f}]
+@="{e269b994-ef71-4ce0-8bcd-581c217372e8}"
+"Name"="Managed Font and Color Information Service"
+[$RootKey$\FontAndColors\Text Editor]
+"Category"="{A27B4E24-A735-4d1d-B8E7-9716E1E3D8E0}"
+"Package"="{DAF27B38-80B3-4C58-8133-AFD41C36C79A}"
+"SortElements"=dword:00000001
+"CacheMOUItems"=dword:00000001
+"CategoryVersion"=dword:00000001
+[$RootKey$\FontAndColors\Text Editor Language Service Items]
+"Category"="{E0187991-B458-4F7E-8CA9-42C9A573B56C}"
+"Package"="{DAF27B38-80B3-4C58-8133-AFD41C36C79A}"
+"HideInDialog"=dword:00000001
+[$RootKey$\FontAndColors\Text Editor MEF Items]
+"Category"="{75A05685-00A8-4DED-BAE5-E7A50BFA929A}"
+"Package"="{DAF27B38-80B3-4C58-8133-AFD41C36C79A}"
+"HideInDialog"=dword:00000001
+[$RootKey$\FontAndColors\Text Editor Text Manager Items]
+"Category"="{58E96763-1D3B-4E05-B6BA-FF7115FD0B7B}"
+"Package"="{DAF27B38-80B3-4C58-8133-AFD41C36C79A}"
+"HideInDialog"=dword:00000001
+[$RootKey$\FontAndColors\Text Editor Text Marker Items]
+"Category"="{FF349800-EA43-46C1-8C98-878E78F46501}"
+"Package"="{DAF27B38-80B3-4C58-8133-AFD41C36C79A}"
+"HideInDialog"=dword:00000001
+[$RootKey$\FontAndColors\Printer]
+"Category"="{47724E70-AF55-48fb-A928-BB161C1D0C05}"
+"Package"="{DAF27B38-80B3-4C58-8133-AFD41C36C79A}"
+"SortElements"=dword:00000001
+"CategoryVersion"=dword:00000001
+[$RootKey$\FontAndColors\Printer Language Service Items]
+"Category"="{E3322D66-3F09-4C6E-8C87-27D416C6ACF6}"
+"Package"="{DAF27B38-80B3-4C58-8133-AFD41C36C79A}"
+"HideInDialog"=dword:00000001
+[$RootKey$\FontAndColors\Printer MEF Items]
+"Category"="{24908F31-6647-42B7-BEE5-556C73736824}"
+"Package"="{DAF27B38-80B3-4C58-8133-AFD41C36C79A}"
+"HideInDialog"=dword:00000001
+[$RootKey$\FontAndColors\Printer Text Manager Items]
+"Category"="{D8D69480-3814-4468-9A5A-104934C9D470}"
+"Package"="{DAF27B38-80B3-4C58-8133-AFD41C36C79A}"
+"HideInDialog"=dword:00000001
+[$RootKey$\FontAndColors\Printer Text Marker Items]
+"Category"="{6FFEE80D-673F-42AE-B15C-BA24A2CAF080}"
+"Package"="{DAF27B38-80B3-4C58-8133-AFD41C36C79A}"
+"HideInDialog"=dword:00000001
+[$RootKey$\FontAndColors\All Text Tool Windows]
+"Category"="{C34C709B-C855-459E-B38C-3021F162D3B1}"
+"Package"="{DAF27B38-80B3-4C58-8133-AFD41C36C79A}"
+"HideInDialog"=dword:00000000
+[$RootKey$\FontAndColors\Command Window]
+"Category"="{EE1BE240-4E81-4beb-8EEA-54322B6B1BF5}"
+"Package"="{DAF27B38-80B3-4C58-8133-AFD41C36C79A}"
+"HideInDialog"=dword:00000000
+[$RootKey$\FontAndColors\Immediate Window]
+"Category"="{6BB65C5A-2F31-4bde-9F48-8A38DC0C63E7}"
+"Package"="{DAF27B38-80B3-4C58-8133-AFD41C36C79A}"
+"HideInDialog"=dword:00000000
+[$RootKey$\FontAndColors\Output Window]
+"Category"="{9973EFDF-317D-431C-8BC1-5E88CBFD4F7F}"
+"Package"="{DAF27B38-80B3-4C58-8133-AFD41C36C79A}"
+"HideInDialog"=dword:00000000
+[$RootKey$\FontAndColors\Find Results]
+"Category"="{5C48B2CB-0366-4fbf-9786-0BB37E945687}"
+"Package"="{DAF27B38-80B3-4C58-8133-AFD41C36C79A}"
+"HideInDialog"=dword:00000000
+[$RootKey$\FontAndColors\ToolTips]
+"Category"="{A9A5637F-B2A8-422e-8FB5-DFB4625F0111}"
+"Package"="{DAF27B38-80B3-4C58-8133-AFD41C36C79A}"
+"HideInDialog"=dword:00000000
+[$RootKey$\FontAndColors\Statement Completion]
+"Category"="{C1614BB1-734F-4a31-BD42-5AE6275E16D2}"
+"Package"="{DAF27B38-80B3-4C58-8133-AFD41C36C79A}"
+"HideInDialog"=dword:00000000
+[$RootKey$\Services\{DAF27B38-80B3-4C58-8133-AFD41C36C79A}]
+"Name"="Text Editor Fonts and Colors Defaults Provider"
+@="{e269b994-ef71-4ce0-8bcd-581c217372e8}"

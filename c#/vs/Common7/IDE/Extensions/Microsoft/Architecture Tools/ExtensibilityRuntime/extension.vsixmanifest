@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="Microsoft.VisualStudio.ArchitectureTools.Runtime.6077f06b-77df-4c5e-975a-97eb5b6e26b5">
+    <Name>Visualization and Modeling Feature Pack Runtime</Name>
+    <Author>Microsoft</Author>
+    <Version>1.0</Version>
+    <Description xml:space="preserve">Runtime capabilities for extensions authored using the Visualization and Modeling Feature Pack.</Description>
+    <MoreInfoUrl>http://go.microsoft.com/fwlink/?LinkId=192777</MoreInfoUrl>
+    <GettingStartedGuide>http://go.microsoft.com/fwlink/?LinkId=192764</GettingStartedGuide>
+    <InstalledByMsi>true</InstalledByMsi>
+    <Locale>1033</Locale>
+    <SupportedProducts>
+      <VisualStudio Version="11.0">
+        <Edition>Ultimate</Edition>
+        <Edition>Premium</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5" />
+    <SystemComponent>true</SystemComponent>
+  </Identifier>
+  <References />
+  <Content>
+    <MefComponent>Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.dll</MefComponent>
+    <CustomExtension Type="Microsoft.VisualStudio.DirectedGraph.Provider">Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.Provider.dll</CustomExtension>
+  </Content>
+</Vsix>

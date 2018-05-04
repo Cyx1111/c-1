@@ -1,0 +1,14 @@
+F:\C#\new next3\new next3\bin\Debug\new next3.exe.config
+F:\C#\new next3\new next3\bin\Debug\new next3.exe
+F:\C#\new next3\new next3\bin\Debug\new next3.pdb
+F:\C#\new next3\new next3\obj\Debug\new next3.csprojResolveAssemblyReference.cache
+F:\C#\new next3\new next3\obj\Debug\new_next3.Frmabout.resources
+F:\C#\new next3\new next3\obj\Debug\new_next3.Properties.Resources.resources
+F:\C#\new next3\new next3\obj\Debug\new next3.csproj.GenerateResource.Cache
+F:\C#\new next3\new next3\obj\Debug\new next3.exe
+F:\C#\new next3\new next3\obj\Debug\new next3.pdb
+F:\C#\new next3\new next3\obj\Debug\new_next3.demo3.resources
+F:\C#\new next3\new next3\obj\Debug\new_next3.Frmxiugai.resources
+F:\C#\new next3\new next3\obj\Debug\new_next3.demo4.resources
+F:\C#\new next3\new next3\obj\Debug\new_next3.Form2.resources
+F:\C#\new next3\new next3\obj\Debug\new_next3.dvglist.resources

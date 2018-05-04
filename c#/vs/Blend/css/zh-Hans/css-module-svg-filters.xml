@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="SVG Filters" standard-reference="http://www.w3.org/TR/SVG11/filters.html" status="REC" pub-date="2011-08-16">
+
+  <CssProperty _locID="enable-background" _locAttrData="description" version="3.0" restriction="integer, length, percentage, enum" description="为共享背景图像分配容器中的所有图形元素。" standard-reference="http://www.w3.org/TR/SVG11/filters.html#EnableBackgroundProperty">
+
+    <entry _locID="enable-background_new" _locAttrData="description" value="new" description="创建新背景图像画布。当前容器元素的所有子级都能访问背景，除了呈现到目标设备之外，它们将呈现到两个父级背景图像画布。"/>
+    <entry _locID="enable-background_accumulate" _locAttrData="description" value="accumulate" description="如果上级容器元素具有 new 属性，则当前容器中的所有图形元素都会在父级背景图和目标上呈现。"/>
+  </CssProperty>
+
+  <CssProperty _locID="lighting-color" _locAttrData="description" version="3.0" type="color" restriction="color" description="定义筛选器基元“feDiffuseLighting”和“feSpecularLighting”的光源的颜色。" standard-reference="http://www.w3.org/TR/SVG11/filters.html#LightingColorProperty"/>
+
+  <CssProperty _locID="flood-color" _locAttrData="description" version="3.0" type="color" restriction="color" description="指示要用于充满当前筛选器基元子区域的颜色。" standard-reference="http://www.w3.org/TR/SVG11/filters.html#FloodColorProperty"/>
+
+  <CssProperty _locID="flood-opacity" _locAttrData="description" version="3.0" restriction="number(0-1)" description="指示要用于充满当前筛选器基元子区域的不透明度。" standard-reference="http://www.w3.org/TR/SVG11/filters.html#FloodOpacityProperty"/>
+
+</CssModule>

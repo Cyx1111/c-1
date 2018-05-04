@@ -1,0 +1,694 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.TeamFoundation.Build.ProcessComponents</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.TeamFoundation.Build.TeamBuildEventArgs">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.TeamBuildEventArgs.#ctor(System.String,System.String)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.TeamBuildEventArgs.Tag">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.TeamBuildEventArgs.Value">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.UpdateBuildNumberDropLocation">
+      <summary>此任务将更新生成number和放置位置服务器的。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.UpdateBuildNumberDropLocation.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.UpdateBuildNumberDropLocation.BuildNumber">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.UpdateBuildNumberDropLocation.BuildUri">
+      <summary>为生成的URI此任务执行的属性。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.UpdateBuildNumberDropLocation.DropLocation">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.BuildStep">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.BuildStep.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.BuildStep.BuildUri">
+      <summary>为生成的URI此任务执行的属性。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.BuildStep.Id">
+      <summary>添加的生成步骤的ID。 这可以用于更新与BuildStep任务的第二个实例中的现有的生成步骤。</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.BuildStep.Message">
+      <summary>要添加的生成步骤的消息。 这是显示在生成中包含的文本。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.BuildStep.Name">
+      <summary>要添加的生成步骤的选项卡名称。 如果未指定，则文本为该名称也是使用。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.BuildStep.Status">
+      <summary>要添加的生成步骤的状态。 如果未指定，则将使用 <see cref="BuildStepStatus.InProgress" /> ，并生成步骤不会标记为已完成，直到BuildStep任务的第二个调用更新其状态(使用 <see cref="Id output" /> 属性)。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.CopyDirectoryTask">
+      <summary>此任务将复制所有输入到指定的目标</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.CopyDirectoryTask.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.CopyDirectoryTask.Destination">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.CopyDirectoryTask.Source">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.CreateNewWorkItem">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.CreateNewWorkItem.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.CreateNewWorkItem.BuildId">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.CreateNewWorkItem.BuildNumber">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.CreateNewWorkItem.Description">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.CreateNewWorkItem.TeamProject">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.CreateNewWorkItem.Title">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.CreateNewWorkItem.WorkItemFieldValues">
+      <summary>分号分隔的列表名称/值对填充工作项的典型的输入:“propname1=propvalue1; propname2=propvalue2; propname3=propvalue3”。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.CreateNewWorkItem.WorkItemType">
+      <summary>使用此工作项类型创建新工作项。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.CreateWorkspaceTask">
+      <summary>使用现有工作区模板文件，此任务用于创建工作区。 它修改基于任务的 <see cref="LocalPath" /> 属性的本地路径。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.CreateWorkspaceTask.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.CreateWorkspaceTask.BuildDirectory">
+      <summary>执行生成的生成代理的工作目录。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.CreateWorkspaceTask.BuildUri">
+      <summary>为生成的URI此任务执行的属性。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.CreateWorkspaceTask.Comment">
+      <summary>这是注释附加到任务创建的工作区。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.CreateWorkspaceTask.Name">
+      <summary>这是创建工作区的名称。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.CreateWorkspaceTask.Owner">
+      <summary>这是创建工作区的所有者。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.CreateWorkspaceTask.SourcesDirectory">
+      <summary>执行生成典型BuildDirectory的生成代理的源目录\。 \ sources。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.DeleteWorkspaceTask">
+      <summary>此任务用于从现有工作区模板文件删除工作区。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.DeleteWorkspaceTask.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.DeleteWorkspaceTask.DeleteLocalItems">
+      <summary>如果为true， <see cref="DeleteWorkspaceTask" /> 将尝试删除所有本地项目文件和文件夹才能删除。</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.DeleteWorkspaceTask.Name">
+      <summary>这是删除工作区的名称。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.GenCheckinNotesUpdateWorkItems">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.GenCheckinNotesUpdateWorkItems.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GenCheckinNotesUpdateWorkItems.AssociatedChangesets">
+      <returns>返回 <see cref="T:Microsoft.Build.Framework.ITaskItem" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GenCheckinNotesUpdateWorkItems.BuildId">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GenCheckinNotesUpdateWorkItems.BuildNumber">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GenCheckinNotesUpdateWorkItems.BuildUri">
+      <summary>为生成的URI此任务执行的属性。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GenCheckinNotesUpdateWorkItems.CurrentLabel">
+      <summary>在当前编译的源的源标签。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GenCheckinNotesUpdateWorkItems.LastLabel">
+      <summary>必须与当前生成源比较最后编译的源标签。 此属性，因为它可能为null用于特定定义的第一个生成，则不需要。 如果未提供，变更集或工作项不会与生成。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GenCheckinNotesUpdateWorkItems.UpdateWorkItems">
+      <summary>设置为true，如果要在生成XYZ需 <see cref="WorkItems" /> 更新与“修复”链接。</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.Get">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Get.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.AllowUnmapped">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.AutoMerge">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.BuildDirectory">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.Deletes">
+      <summary>从工作区中删除所有项的列表。</summary>
+      <returns>返回 <see cref="T:Microsoft.Build.Framework.ITaskItem" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.Filespec">
+      <summary>应检索的本地路径文件规范。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.Force">
+      <summary>强制所有文件检索，而不仅仅是已过时的特性。 此选项还会复盖处于版本控制下在本地磁盘上的可写的文件，但会检查。</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.Gets">
+      <summary>不在工作区发生所有项的列表。</summary>
+      <returns>返回 <see cref="T:Microsoft.Build.Framework.ITaskItem" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.NoCIOption">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.Overwrite">
+      <summary>此选项可以复盖可写的文件，而无需强行要求完全工作区的访问。</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.PopulateOutput">
+      <summary>布尔型该控件输出是否属性获取，替换，删除填充。</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.Preview">
+      <summary>当设置为true，则文件实际上并没有下载;相反，将显示活动激发的文件将下载。</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.Recursive">
+      <summary>递归检索 <see cref="Filespec" /> 。</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.Replaces">
+      <summary>在工作区中替换所有项的列表。</summary>
+      <returns>返回 <see cref="T:Microsoft.Build.Framework.ITaskItem" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.Version">
+      <summary>将用于选择文件的正确版本检索到本地工作区的Hatteras格式的版本说明符。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.Warnings">
+      <summary>在 <see cref="Get" /> 操作时遇到的警告列表。</summary>
+      <returns>返回 <see cref="T:Microsoft.Build.Framework.ITaskItem" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.Workspace">
+      <summary>工作区的名称。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.BuildAgentName">
+      <summary>使用的代理名称执行此生成。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.BuildAgentUri">
+      <summary>用于代理的URI执行此生成。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.BuildDefinitionName">
+      <summary>用于定义的名称执行此生成。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.BuildDefinitionUri">
+      <summary>用于定义的URI执行此生成。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.BuildDirectory">
+      <summary>生成的生成代理的工作目录，与任何可变替换。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.BuildNumber">
+      <summary>用于标识此生成的number。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.BuildUri">
+      <summary>为生成的URI此任务执行的属性。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.CompilationStatus">
+      <summary>生成的生成阶段的状态。</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Build.Client.BuildPhaseStatus" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.CompilationSuccess">
+      <summary>生成的生成阶段的成功或失败。</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.ConfigurationFolderUri">
+      <summary>用于生成配置文件夹的URI。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.DropLocation">
+      <summary>生成的输出的位置。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.LabelName">
+      <summary>为编译生成的标签。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.LastChangedBy">
+      <summary>更改编译的最后一个用户的名称。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.LastChangedOn">
+      <summary>最后一次更改的日期和时间对生成的。</summary>
+      <returns>返回 <see cref="T:System.DateTime" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.LogLocation">
+      <summary>日志文件的位置生成的。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.MachineName">
+      <summary>生成的生成代理的计算机。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.MaxProcesses">
+      <summary>最大数量为生成的生成代理处理。</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.Port">
+      <summary>生成的生成代理的端口。</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.Quality">
+      <summary>生成的质量。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.Reason">
+      <summary>这个原因生成请求。</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Build.Client.BuildReason" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.RequestedBy">
+      <summary>请求时编译的用户。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.RequestedFor">
+      <summary>生成请求的用户。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.SourceGetVersion">
+      <summary>源用于生成检索的日期和时间。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.StartTime">
+      <summary>生成开始的日期和时间。</summary>
+      <returns>返回 <see cref="T:System.DateTime" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.Status">
+      <summary>生成的总体状态。</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Build.Client.BuildStatus" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.TeamProject">
+      <summary>拥有生成的团队项目。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.TestStatus">
+      <summary>生成的测试步骤的状态。</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Build.Client.BuildPhaseStatus" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.TestSuccess">
+      <summary>生成的测试阶段的成功或失败。</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.InternalMapping">
+      <summary>此选件类包含最小权限所需的信息重新创建一个工作文件夹的权限。 这些序列化到本地文件。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.InternalMapping.#ctor">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.InternalMapping.#ctor(Microsoft.TeamFoundation.VersionControl.Client.WorkingFolder)">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Tasks.InternalMapping.LocalItem">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Tasks.InternalMapping.ServerItem">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Tasks.InternalMapping.Type">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.Label">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Label.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Label.Child">
+      <summary>所需对当前标签范围下的处理标签具有相同的名称。 将此属性设置为任何字符串参数在标签命令行会使用。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Label.Comments">
+      <summary>这是注释应用于该标签。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Label.Files">
+      <summary>这是将文件夹或文件放在标签。 此属性通过 MSBuild 任务配置设置。</summary>
+      <returns>返回 <see cref="T:Microsoft.Build.Framework.ITaskItem" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Label.Name">
+      <summary>创建标签的名称。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Label.Recursive">
+      <summary>递归检索Filespec。</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Label.Scope">
+      <summary>创建的标签的范围。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Label.Version">
+      <summary>这是适用的版本字符串于添加到标签的项。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.RevertWorkspaceTask">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.RevertWorkspaceTask.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.RevertWorkspaceTask.WorkspaceName">
+      <summary>对转换将使用工作区的名称。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.RevertWorkspaceTask.WorkspaceOwner">
+      <summary>对转换将使用工作区的所有者。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.SerializedWorkspace">
+      <summary>用于序列化工作区映射到文件中的此选件类。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.SerializedWorkspace.#ctor">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.SerializedWorkspace.Deserialize(System.String)">
+      <summary>创建序列化的工作区从文件之前使用创建 <see cref="Serialize" /> 方法。</summary>
+      <returns>序列化的工作区从提供的文件。</returns>
+      <param name="serializedFile">这是序列化的工作区文件的完全限定路径。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.SerializedWorkspace.FindCommonServerPath(Microsoft.TeamFoundation.VersionControl.Client.WorkingFolder[])">
+      <summary>从获取常见最小的服务器路径设置文件夹映射。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+      <param name="workingFolders">文件夹映射选定的工作区。</param>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Tasks.SerializedWorkspace.Mappings">
+      <summary>这是用于此序列化工作区的一组映射。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.SerializedWorkspace.Serialize(Microsoft.TeamFoundation.VersionControl.Client.WorkingFolder[],System.String)">
+      <summary>用于序列化工作区与可用于CreateWorkspace任务用于生成另一个工作区的本地XML文件。</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Build.Tasks.SerializedWorkspace" />。</returns>
+      <param name="workspaceFileName">这是序列化工作区中本地文件的路径。</param>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.SetBuildProperties">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.SetBuildProperties.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.SetBuildProperties.BuildNumber">
+      <summary>用于标识此生成的number。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.SetBuildProperties.BuildUri">
+      <summary>为生成的URI此任务执行的属性。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.SetBuildProperties.CompilationStatus">
+      <summary>生成的生成阶段的状态。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.SetBuildProperties.DropLocation">
+      <summary>生成的输出的位置。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.SetBuildProperties.LabelName">
+      <summary>为编译生成的标签名称。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.SetBuildProperties.LogLocation">
+      <summary>日志文件的位置生成的。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.SetBuildProperties.Quality">
+      <summary>生成的质量。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.SetBuildProperties.SourceGetVersion">
+      <summary>生成的源版本。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.SetBuildProperties.Status">
+      <summary>生成的总体状态。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.SetBuildProperties.TestStatus">
+      <summary>生成的测试步骤的状态。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.Task">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Task.#ctor">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Task.AddNameValuePair(System.String)">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Task.AddNameValuePair(System.String,Microsoft.Build.Framework.ITaskItem[])">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Task.AddNameValuePair(System.String,System.Boolean)">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Task.AddNameValuePair(System.String,System.String)">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Task.BuildEngine">
+      <summary>实现ITask<see cref="BuildEngine" /> 属性。</summary>
+      <returns>返回 <see cref="T:Microsoft.Build.Framework.IBuildEngine" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Task.BuildUri">
+      <summary>为生成的URI此任务执行的属性。 派生类可以重写此属性将需要它的。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Task.Execute">
+      <summary>实现ITask -实现方法。</summary>
+      <returns>True，则任务成功，否则错误。 <see cref="Microsoft.TeamFoundation.Build.Tasks.Task" /> 对象通常应引发异常而不是返回错误。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Task.GetParameterLog(System.String[])">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Task.HostObject">
+      <summary>实现ITask<see cref="HostObject" /> 属性。</summary>
+      <returns>返回 <see cref="T:Microsoft.Build.Framework.ITaskHost" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Task.LogCustomEvent(Microsoft.Build.Framework.CustomBuildEventArgs)">
+      <summary>记录的帮助器自定义事件，如果任务在 MSBuild中运行。</summary>
+      <param name="e">要记录的事件参数。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Task.LogError(System.String)">
+      <summary>记录的帮助器错误字符串，如果任务在 MSBuild中运行。</summary>
+      <param name="errorMessage">作为错误将记录的字符串。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Task.LogErrorEvent(Microsoft.Build.Framework.BuildErrorEventArgs)">
+      <summary>记录的帮助器错误事件，如果任务在 MSBuild中运行。</summary>
+      <param name="e">要记录的事件参数。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Task.LogMessage(System.String)">
+      <summary>记录的帮助器消息字符串;如果任务在 MSBuild中运行。</summary>
+      <param name="message">为消息将记录的字符串。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Task.LogMessage(System.String,Microsoft.Build.Framework.MessageImportance)">
+      <summary>记录的帮助器消息字符串;如果任务在 MSBuild中运行。</summary>
+      <param name="message">为消息将记录的字符串。</param>
+      <param name="importance">要记录消息的重要性。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Task.LogMessageEvent(Microsoft.Build.Framework.BuildMessageEventArgs)">
+      <summary>记录的帮助器邮件事件，如果任务在 MSBuild中运行。</summary>
+      <param name="e">要记录的事件参数。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Task.LogWarning(System.String)">
+      <summary>记录的帮助器警告字符串;如果任务在 MSBuild中运行。</summary>
+      <param name="warningMessage">为警告要记录的字符串。</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Task.LogWarningEvent(Microsoft.Build.Framework.BuildWarningEventArgs)">
+      <summary>记录的帮助器警告事件，如果任务在 MSBuild中运行。</summary>
+      <param name="e">要记录的事件参数。</param>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Task.TeamFoundationServerUrl">
+      <summary>为Team Foundation server的URL的属性。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Task.Tfs">
+      <summary>授予Team Foundation server的访问的延迟 <see cref="init" /> 属性。</summary>
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.Client.TfsTeamProjectCollection" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.TeamBuildTaskCompletedEventArgs">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.TeamBuildTaskCompletedEventArgs.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TeamBuildTaskCompletedEventArgs.Successful">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.TeamBuildTaskStartedEventArgs">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.TeamBuildTaskStartedEventArgs.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TeamBuildTaskStartedEventArgs.TaskDisplayText">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TeamBuildTaskStartedEventArgs.TaskType">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.TeamBuildTaskTrackingEventArgs">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.TeamBuildTaskTrackingEventArgs.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TeamBuildTaskTrackingEventArgs.TaskId">
+      <returns>返回 <see cref="T:System.Guid" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask">
+      <summary>MSBuild 任务执行MSTest.exe。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.BuildFlavor">
+      <summary>测试结果的生成风格应发布。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.Category">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.ExitCode">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.MaxPriority">
+      <summary>为测试执行指定最高优先级别。 只执行优先级别小于或等于此值的测试。 ，如果您不想指定最高优先级，请指定-1。</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.MetadataFile">
+      <summary>指向测试元数据文件列表执行。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.MinPriority">
+      <summary>为测试执行指定最低优先级别。 只执行优先级别大于或等于此值的测试。 ，如果您不想指定最低优先级，请指定-1。</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.PathToResultsFilesRoot">
+      <summary>测试结果的根位置应保存。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.Platform">
+      <summary>测试结果的生成平台应发布。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.Publish">
+      <summary>指定是否应发布测试结果。</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.PublishBuild">
+      <summary>生成发布测试结果应采用这将 <see cref="BuildUri" />替换的标识符。 它用于向后兼容左侧示。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.PublishServer">
+      <summary>测试结果的 Team Foundation Server 应发布这将 <see cref="TeamFoundationServerUrl" />替换。 它用于向后兼容左侧示。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.RunConfigFile">
+      <summary>包含一组执行运行的运行配置文件。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.SearchPathRoot">
+      <summary>测试的根位置可以找到。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.StandardErrorImportance">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.StandardOutputImportance">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.TeamFoundationServerUrl">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.TeamProject">
+      <summary>协作式发布测试结果应采用的项目。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.TestConfigId">
+      <summary>指定现有测试管理配置的ID与发布的运行。</summary>
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.TestConfigName">
+      <summary>指定要与已发布运行关联的现有测试管理配置的名称。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.TestContainers">
+      <summary>运行的测试容器。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.TestLists">
+      <summary>测试列表运行。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.TestNames">
+      <summary>名称在测试列表或测试容器中运行。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.Timeout">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.ToolExe">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.ToolPath">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.WorkflowTask">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.WorkflowTask.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.WorkflowTask.Extensions">
+      <returns>返回 <see cref="T:System.Collections.Generic.ICollection`1" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.WorkspaceItemConverterTask">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.WorkspaceItemConverterTask.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.WorkspaceItemConverterTask.LocalItems">
+      <summary>作为输入，要转换的LocalItems为ServerItems。 作为输出，转换的ServerItems。</summary>
+      <returns>返回 <see cref="T:Microsoft.Build.Framework.ITaskItem" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.WorkspaceItemConverterTask.ServerItems">
+      <summary>作为输入，要转换的ServerItems为LocalItems。 作为输出，转换的LocalItems。</summary>
+      <returns>返回 <see cref="T:Microsoft.Build.Framework.ITaskItem" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.WorkspaceItemConverterTask.WorkspaceName">
+      <summary>对转换将使用工作区的名称。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.WorkspaceItemConverterTask.WorkspaceOwner">
+      <summary>对转换将使用工作区的所有者。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+  </members>
+</doc>

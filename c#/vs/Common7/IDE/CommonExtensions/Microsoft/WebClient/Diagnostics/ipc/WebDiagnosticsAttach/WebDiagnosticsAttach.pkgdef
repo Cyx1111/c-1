@@ -1,0 +1,7 @@
+[$RootKey$\Packages\{c1181695-1815-47d3-adac-0c873e3ac77d}]
+@="WebDiagnosticsAttach Package"
+"InprocServer32"="$PackageFolder$\WebDiagnosticsAttach.dll"
+"CompanyName"="Microsoft"
+"ProductName"="WebDiagnosticsAttach"
+"ProductVersion"="1.0"
+

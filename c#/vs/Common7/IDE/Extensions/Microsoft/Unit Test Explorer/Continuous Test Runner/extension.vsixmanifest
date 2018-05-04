@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="1aab8aee-afba-4c01-b444-0a56dc17792f">
+    <Name>Test Window CTR</Name>
+    <Author>Microsoft</Author>
+    <Version>11.0</Version>
+    <Description xml:space="preserve">Unit Test Explorer</Description>
+    <Locale>1033</Locale>
+    <SupportedProducts>
+      <VisualStudio Version="11.0">
+        <Edition>Ultimate</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5" />
+    <SystemComponent>true</SystemComponent>
+  </Identifier>
+  <References />
+  <Content>
+    <VsPackage>Microsoft.VisualStudio.TestWindow.ContinuousTestRunner.pkgdef</VsPackage>
+  </Content>
+</Vsix>
+

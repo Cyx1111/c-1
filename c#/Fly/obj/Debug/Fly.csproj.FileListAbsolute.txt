@@ -1,0 +1,11 @@
+H:\VS项目\Text\Fly\bin\Debug\Fly.exe.config
+H:\VS项目\Text\Fly\bin\Debug\Fly.exe
+H:\VS项目\Text\Fly\bin\Debug\Fly.pdb
+H:\VS项目\Text\Fly\obj\Debug\Fly.exe
+H:\VS项目\Text\Fly\obj\Debug\Fly.pdb
+F:\C#\Fly\bin\Debug\Fly.exe.config
+F:\C#\Fly\obj\Debug\Fly.exe
+F:\C#\Fly\obj\Debug\Fly.pdb
+F:\C#\Fly\bin\Debug\Fly.exe
+F:\C#\Fly\bin\Debug\Fly.pdb
+F:\C#\Fly\obj\Debug\Fly.csprojResolveAssemblyReference.cache

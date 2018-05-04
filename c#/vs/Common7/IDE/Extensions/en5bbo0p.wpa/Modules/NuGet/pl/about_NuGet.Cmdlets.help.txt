@@ -1,0 +1,47 @@
+﻿TEMAT
+    about_NuGet
+    
+KRÓTKI OPIS
+    Udostępnia informacje na temat poleceń Menedżera pakietów NuGet.
+           
+DŁUGI OPIS
+    W tym temacie opisano polecenia Menedżera pakietów NuGet . NuGet to zintegrowane narzędzie do 
+    zarządzania pakietami, pozwalające dodawać biblioteki i narzędzia do projektów programu .NET.
+
+                 
+    Dostępne są następujące polecenia narzędzia NuGet cmdlets.
+
+        Cmdlet					Opis
+        ------------------		----------------------------------------------
+        Get-Package				Pobiera zestaw pakietów dostępnych w źródle pakietów.
+
+        Install-Package			Instaluje pakiet i jego zależności w projekcie.
+
+        Uninstall-Package		Odinstalowuje pakiet. Jeśli od tego pakietu zależą inne pakiety, 
+                                polecenie nie powiedzie się, chyba że zostanie określona opcja -Force.
+
+        Update-Package			Aktualizuje pakiet i jego zależności do nowszej wersji.
+
+        Add-BindingRedirect		Analizuje wszystkie zestawy w ścieżce wyjściowej projektu
+                                i dodaje przekierowania wiązań do pliku konfiguracji aplikacji 
+                                (lub pliku konfiguracji w sieci Web) w razie potrzeby.
+                            
+        Get-Project				Zwraca odwołanie do środowiska DTE (Development Tools Environment) 
+                                określonego projektu. Jeśli żaden projekt nie zostanie określony, 
+                                zwraca domyślny projekt wybrany w konsoli Menedżera pakietów.
+
+        Open-PackagePage        Otwiera przeglądarkę z adresemProjectUrl, LicenseUrl lub 
+                                ReportAbuseUrl określonego pakietu.
+
+        Register-TabExpansion	Rejestruje rozszerzenie karty dla parametrów polecenia.
+
+ZOBACZ TEŻ
+    Dokumentacja w trybie online: http://go.microsoft.com/fwlink/?LinkID=206619
+    Get-Package
+    Install-Package
+    Uninstall-Package
+    Update-Package
+    Add-BindingRedirect
+    Get-Project
+    Open-PackagePage
+    Register-TabExpansion

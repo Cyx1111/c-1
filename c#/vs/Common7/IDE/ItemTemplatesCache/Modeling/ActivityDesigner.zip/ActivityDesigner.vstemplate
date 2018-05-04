@@ -1,0 +1,17 @@
+﻿<!--DSL Tools Language Template-->
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TemplateData>
+    <TemplateID>Microsoft.Modeling.UmlActivityDiagram</TemplateID>
+    <Name Package="{ed281a55-31b1-41ba-8fd3-6547a7e539cd}" ID="103"/>
+		<Description Package="{ed281a55-31b1-41ba-8fd3-6547a7e539cd}" ID="102"/>
+		<Icon Package="{ed281a55-31b1-41ba-8fd3-6547a7e539cd}" ID="201" />
+		<ProjectType>Modeling</ProjectType>
+		<SortOrder>363</SortOrder>
+		<DefaultName>UMLActivityDiagram.activitydiagram</DefaultName>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem TargetFileName="$fileinputname$.activitydiagram">blank.activitydiagram</ProjectItem>
+		<ProjectItem TargetFileName="$fileinputname$.activitydiagram.layout">blank.activitydiagram.layout</ProjectItem>
+	</TemplateContent>
+</VSTemplate>
+

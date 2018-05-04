@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="1028" />
+    <Description Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="1029" />
+    <Icon Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="4018" />
+    <TemplateID>Microsoft.VB.WinRT.ShareTargetContract</TemplateID>
+    <TemplateGroupID>WinRT-Managed</TemplateGroupID>
+    <ProjectType>VisualBasic</ProjectType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>ShareTargetPage.xaml</DefaultName>
+    <ShowByDefault>false</ShowByDefault>
+    <SortOrder>92</SortOrder>
+    <PreviewImage>ShareTargetContract.png</PreviewImage>
+    <TargetPlatformName>Windows</TargetPlatformName>
+    <RequiredPlatformVersion>8</RequiredPlatformVersion>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="true" ItemType="Page" SubType="Designer" CustomTool="MSBuild:Compile" TargetFileName="$fileinputname$.xaml">ShareTargetPage.xaml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="true" TargetFileName="$fileinputname$.xaml.vb">ShareTargetPage.xaml.vb</ProjectItem>
+
+    <ProjectItem ReplaceParameters="false" TargetFileName="$wizardcommonprefix$ReadMe.txt">ReadMe.txt</ProjectItem>
+    <ProjectItem ReplaceParameters="false" TargetFileName="$wizardcommonprefix$StandardStyles.xaml">StandardStyles.xaml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$BindableBase.vb">BindableBase.vb</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$BooleanToVisibilityConverter.vb">BooleanToVisibilityConverter.vb</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$BooleanNegationConverter.vb">BooleanNegationConverter.vb</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$LayoutAwarePage.vb">LayoutAwarePage.vb</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$RichTextColumns.vb">RichTextColumns.vb</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$SuspensionManager.vb">SuspensionManager.vb</ProjectItem>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.WinRT.TemplateWizards, Version=11.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.WinRT.TemplateWizards.SmartItem.Wizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <CommonOptional>ReadMe.txt</CommonOptional>
+    <CommonRequired>StandardStyles.xaml</CommonRequired>
+    <CommonRequired>BindableBase.vb</CommonRequired>
+    <CommonRequired>BooleanToVisibilityConverter.vb</CommonRequired>
+    <CommonRequired>BooleanNegationConverter.vb</CommonRequired>
+    <CommonRequired>LayoutAwarePage.vb</CommonRequired>
+    <CommonRequired>RichTextColumns.vb</CommonRequired>
+    <CommonRequired>SuspensionManager.vb</CommonRequired>
+    <Activation>
+      <AppMethod Name="OnShareTargetActivated" CommentPrefix="' ">
+        <![CDATA[
+        ''' <summary>
+        ''' 在将应用程序作为共享操作的目标激活时调用。
+        ''' </summary>
+        ''' <param name="e">有关激活请求的详细信息。</param>
+        Protected Overrides Sub OnShareTargetActivated(ByVal e As Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs)
+            Dim shareTargetPage As New $safeitemname$
+            shareTargetPage.Activate(e)
+        End Sub
+        ]]>
+      </AppMethod>
+      <AppMethodComment>
+        <![CDATA[
+        ' TODO: 响应作为共享目标的激活
+        '
+        ' 以下代码无法自动添加到应用程序子类，
+        ' 因为找不到合适的类或已存在具有
+        ' 相同名称的方法。请通过显示适合于接收共享项的弹出框来确保
+        ' 合适的代码处理激活。
+        '
+        ]]>
+      </AppMethodComment>
+      <ManifestData>
+        <Extension Category="windows.shareTarget">
+          <ShareTarget>
+            <SupportedFileTypes SupportsAnyFileType="false"></SupportedFileTypes>
+            <DataFormat>text</DataFormat>
+            <DataFormat>uri</DataFormat>
+          </ShareTarget>
+        </Extension>
+      </ManifestData>
+      <ManifestComment>
+        <![CDATA[
+        ' TODO: 编辑清单以允许用作共享目标
+        '
+        ' 包清单无法自动更新。请打开包清单
+        ' 文件，并确保启用对用作共享目标的激活的支持。
+        ]]>
+      </ManifestComment>
+    </Activation>
+  </WizardData>
+</VSTemplate>

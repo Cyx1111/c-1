@@ -1,0 +1,9 @@
+F:\C#\NET.第十章\NET.第十章\bin\Debug\NET.第十章.exe.config
+F:\C#\NET.第十章\NET.第十章\bin\Debug\NET.第十章.exe
+F:\C#\NET.第十章\NET.第十章\bin\Debug\NET.第十章.pdb
+F:\C#\NET.第十章\NET.第十章\obj\Debug\NET.第十章.Form1.resources
+F:\C#\NET.第十章\NET.第十章\obj\Debug\NET.第十章.Properties.Resources.resources
+F:\C#\NET.第十章\NET.第十章\obj\Debug\NET.第十章.csproj.GenerateResource.Cache
+F:\C#\NET.第十章\NET.第十章\obj\Debug\NET.第十章.exe
+F:\C#\NET.第十章\NET.第十章\obj\Debug\NET.第十章.pdb
+F:\C#\NET.第十章\NET.第十章\obj\Debug\NET.第十章.csprojResolveAssemblyReference.cache

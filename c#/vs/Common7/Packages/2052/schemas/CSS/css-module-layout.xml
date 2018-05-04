@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="CSS Legacy" standard-reference="http://www.w3.org/TR/CSS2/visuren.html" status="WD" pub-date="2011-11-29">
+
+  <CssProperty _locID="position" version="2.0" restriction="enum" syntax="div { $(name): absolute; }" standard-reference="http://www.w3.org/TR/CSS2/visuren.html#propdef-position">
+
+    <entry _locID="position_absolute" _locAttrData="description" value="absolute" description="该框的位置(和可能的大小)通过“top”、“right”、“bottom”和“left”属性指定。这些属性指定相对于框的“包容块”的偏移量。"/>
+    <entry _locID="position_fixed" _locAttrData="description" value="fixed" description="该框的位置根据“absolute”模型计算，但是，也会根据一些参照物来固定位置。与“absolute”模型一样，该框的边距不会与任何其他边距重叠。"/>
+    <entry _locID="position_relative" _locAttrData="description" value="relative" description="该框的位置根据正常流计算(这称为正常流中的位置)。然后该框会相对于其正常位置偏移。"/>
+    <entry _locID="position_static" _locAttrData="description" value="static" description="该框为一个正常框，并根据正常流进行布局。“top”、“right”、“bottom”和“left”属性不适用。"/>
+  </CssProperty>
+
+  <CssProperty _locID="left" _locAttrData="description" version="2.0" restriction="length, percentage" description="指定绝对定位框的左边距边缘到该框的“包容块”的左边缘右侧的偏移距离。" syntax="article { $(name): 50px; }" standard-reference="http://www.w3.org/TR/CSS2/visuren.html#propdef-left">
+    
+    <entry _locID="left_auto" _locAttrData="description" value="auto" description="对于非替换元素，此值的效果取决于相关属性中哪些也具有值“auto”"/>
+  </CssProperty>
+
+  <CssProperty _locID="top" _locAttrData="description" ref="left" description="指定绝对定位框的上边距边缘到该框的“包容块”的上边缘下方的偏移距离。" standard-reference="http://www.w3.org/TR/CSS2/visuren.html#propdef-top"/>
+
+  <CssProperty _locID="right" _locAttrData="description" ref="left" description="指定绝对定位框的右边距边缘到该框的“包容块”的右边缘左侧的偏移距离。" standard-reference="http://www.w3.org/TR/CSS2/visuren.html#propdef-right"/>
+
+  <CssProperty _locID="bottom" _locAttrData="description" ref="left" description="指定绝对定位框的下边距边缘到该框的“包容块”的下边缘上方的偏移距离。" standard-reference="http://www.w3.org/TR/CSS2/visuren.html#propdef-bottom"/>
+
+  <CssProperty _locID="z-index" _locAttrData="description" version="2.0" restriction="integer" description="对于一个定位框，“z-index”属性指定该框在当前堆叠上下文中的堆叠级别以及该框是否建立了本地堆叠上下文。" syntax="img { $(name): 3; }" standard-reference="http://www.w3.org/TR/CSS2/visuren.html#propdef-z-index">
+
+    <entry _locID="z-index_auto" _locAttrData="description" value="auto" description="当前堆栈上下文中生成的框的堆栈级别是 0。该框如果不是根元素，就不会建立新堆栈上下文。"/>
+  </CssProperty>
+
+  <CssProperty _locID="line-height" _locAttrData="description" version="1.0" restriction="number, length, percentage" description="确定内联框的文本内容区域的 block-progression 维度。" syntax="#menu { $(name): 22px; }" standard-reference="http://www.w3.org/TR/css3-linebox/#line-height">
+    <entry _locID="line-height_normal" _locAttrData="description" value="normal" description="告诉用户代理将计算值设置为基于元素的字号的“合理”值。"/>
+    <entry _locID="line-height_none" _locAttrData="description" value="none" description="该属性的计算值是上级块元素的 font-size。"/>
+  </CssProperty>
+
+  <CssProperty _locID="vertical-align" _locAttrData="description" version="1.0" restriction="percentage, length" description="影响由线条框中的内联级元素生成的内联框的垂直位置。" syntax="div { $(name): middle; }" standard-reference="http://www.w3.org/TR/css3-linebox/#vertical-align">
+
+    <syntax version="3.0">auto | use-script | baseline | sub | super | top | text-top | central | middle | bottom | text-bottom | &lt;percentage&gt; | &lt;length&gt;</syntax>
+
+    <entry _locID="vertical-align_baseline" _locAttrData="description" value="baseline" description="将元素的“alphabetic”基线与父级元素的“alphabetic”基线对齐。"/>
+    <entry _locID="vertical-align_sub" _locAttrData="description" value="sub" description="将该框的基线降低到父级框的下标的合适位置。(此值对元素的文本的字号没有影响。)"/>
+    <entry _locID="vertical-align_super" _locAttrData="description" value="super" description="将该框的基线提升到父级框的上标的合适位置。(此值对元素的文本的字号没有影响。)"/>
+    <entry _locID="vertical-align_top" _locAttrData="description" value="top" description="将扩展内联框的前边缘与内联框的前边缘对齐。"/>
+    <entry _locID="vertical-align_text-top" _locAttrData="description" value="text-top" description="将该框的顶部与父级元素的字体的前边缘对齐。"/>
+    <entry _locID="vertical-align_bottom" _locAttrData="description" value="bottom" description="将扩展内联框的后边缘与内联框的后边缘对齐。"/>
+    <entry _locID="vertical-align_text-bottom" _locAttrData="description" value="text-bottom" description="将该框的底部与父元素的字体的后边缘对齐。"/>
+    <entry _locID="vertical-align_auto" _locAttrData="description" value="auto" version="3.0" description="将父框的基准基线与等效的或启发式重构的元素内联框的基线对齐。"/>
+    <entry _locID="vertical-align_use-script" _locAttrData="description" value="use-script" version="3.0" browsers="none" description="将元素的脚本首选基线(由计算的脚本值确定)与父元素的等效基线对齐。"/>
+    <entry _locID="vertical-align_central" _locAttrData="description" value="central" browsers="none" version="3.0" description="将内联元素的“central”基线与父级的中央基线对齐。"/>
+    <entry _locID="vertical-align_middle" _locAttrData="description" value="middle" version="3.0" description="将内联元素的“middle”基线与父级的中部基线对齐。"/>
+  </CssProperty>
+
+  <CssProperty _locID="direction" _locAttrData="description" restriction="enum" version="2.0" syntax="div { $(name): rtl; }" description="指定某一线条上的文本和元素的基方向性，以及 Unicode 双向算法的嵌入和重写的方向性。" standard-reference="http://www.w3.org/TR/css3-writing-modes/#direction0">
+
+    <entry _locID="direction_rtl" _locAttrData="description" value="rtl" description="从右到左的方向。"/>
+    <entry _locID="direction_ltr" _locAttrData="description" value="ltr" description="从左到右的方向。"/>
+  </CssProperty>--&gt;
+
+  <CssProperty _locID="unicode-bidi" _locAttrData="description" restriction="enum" version="2.0" syntax="p { $(name): embed; }" description="与双向算法有关的嵌入级别。" standard-reference="http://www.w3.org/TR/css3-writing-modes/#unicode-bidi0">
+
+    <entry _locID="unicode-bidi_normal" _locAttrData="description" value="normal" description="元素不开放与双向算法相关的额外级别的嵌入。对于内联级别的元素，隐式重新排序可跨元素边界工作。"/>
+    <entry _locID="unicode-bidi_embed" _locAttrData="description" value="embed" description="如果元素是内联级别，则此值将开放与双向算法相关的额外级别的嵌入。此嵌入级别的方向由“direction”属性给出。"/>
+    <entry _locID="unicode-bidi_isolate" _locAttrData="description" value="isolate" version="3.0" browsers="none" description="元素的内容被视为位于单独的独立段落中。"/>
+    <entry _locID="unicode-bidi_plaintext" _locAttrData="description" value="plaintext" version="3.0" browsers="none" description="对于 Unicode 双向算法，元素构造的包含块所针对的每个双向段落的基方向性不由元素的计算“direction”确定。"/>
+    <entry _locID="unicode-bidi_bidi-override" _locAttrData="description" value="bidi-override" description="在元素内部，重新排序将严格按照“direction”属性的顺序进行；将忽略双向算法的隐式部分。"/>
+  </CssProperty>
+
+  <!--<CssProperty _locID="chains"
+               _locAttrData="syntax"
+               version="3.0"
+               browsers="none"
+               restriction="integer"
+               syntax="Example: @page:first { chains: a b c d e f; }"
+               standard-reference="http://www.w3.org/TR/css3-layout/#chains">
+
+    <entry _locID="z-index_auto"
+           _locAttrData="description"
+           value="auto"
+           description="The stack level of the generated box in the current stacking context is the same as its parent's box. The box does not establish a new local stacking context." />
+  </CssProperty>
+
+  <CssPseudo name="::slot(b)"
+           _locID="slot-pseudo-function"
+           _locAttrData="description"
+           version="3.0"
+           browsers="none"
+           syntax="body::slot(b) { background: #FF0 }"
+           description="'::slot(X)' pseudo-element selects the slot with name X (a letter or &quot;@&quot;) of the subject of a selector. If that subject is not a template element, or if it has no such slot, the pseudo-element selects nothing."
+           standard-referece="http://www.w3.org/TR/css3-layout/#slot" />
+
+  <CssProperty _locID="break-inside">
+    <entry value="avoid-slot" />
+  </CssProperty>
+
+  <CssProperty _locID="break-before">
+    <entry value="slot" />
+    <entry value="avoid-slot" />
+  </CssProperty>
+
+  <CssProperty _locID="break-after">
+    <entry value="slot" />
+    <entry value="avoid-slot" />
+  </CssProperty>-->
+</CssModule>

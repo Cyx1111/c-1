@@ -1,0 +1,9 @@
+F:\C#\NET.第十章\jisuanqi\bin\Debug\jisuanqi.exe.config
+F:\C#\NET.第十章\jisuanqi\bin\Debug\jisuanqi.exe
+F:\C#\NET.第十章\jisuanqi\bin\Debug\jisuanqi.pdb
+F:\C#\NET.第十章\jisuanqi\obj\Debug\jisuanqi.csprojResolveAssemblyReference.cache
+F:\C#\NET.第十章\jisuanqi\obj\Debug\jisuanqi.Form1.resources
+F:\C#\NET.第十章\jisuanqi\obj\Debug\jisuanqi.Properties.Resources.resources
+F:\C#\NET.第十章\jisuanqi\obj\Debug\jisuanqi.csproj.GenerateResource.Cache
+F:\C#\NET.第十章\jisuanqi\obj\Debug\jisuanqi.exe
+F:\C#\NET.第十章\jisuanqi\obj\Debug\jisuanqi.pdb

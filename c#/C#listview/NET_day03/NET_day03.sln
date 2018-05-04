@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NET_day03", "NET_day03\NET_day03.csproj", "{FD0C79D4-6B78-4EB1-94A4-533CAB5D2C44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NET_day02", "..\s2_day02\s2_day02\NET_day02.csproj", "{AFC543C4-E186-4374-A8A5-D9EAC4EB839A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NET_day01", "..\s2one\s2one\NET_day01.csproj", "{99BB54B5-03CB-4DED-B281-E48D60054220}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".NET", ".NET", "{9875DB35-FEEB-4914-8BF2-9AD24F518599}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD0C79D4-6B78-4EB1-94A4-533CAB5D2C44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD0C79D4-6B78-4EB1-94A4-533CAB5D2C44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD0C79D4-6B78-4EB1-94A4-533CAB5D2C44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD0C79D4-6B78-4EB1-94A4-533CAB5D2C44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFC543C4-E186-4374-A8A5-D9EAC4EB839A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFC543C4-E186-4374-A8A5-D9EAC4EB839A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFC543C4-E186-4374-A8A5-D9EAC4EB839A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFC543C4-E186-4374-A8A5-D9EAC4EB839A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99BB54B5-03CB-4DED-B281-E48D60054220}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99BB54B5-03CB-4DED-B281-E48D60054220}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99BB54B5-03CB-4DED-B281-E48D60054220}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99BB54B5-03CB-4DED-B281-E48D60054220}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{99BB54B5-03CB-4DED-B281-E48D60054220} = {9875DB35-FEEB-4914-8BF2-9AD24F518599}
+		{AFC543C4-E186-4374-A8A5-D9EAC4EB839A} = {9875DB35-FEEB-4914-8BF2-9AD24F518599}
+	EndGlobalSection
+EndGlobal

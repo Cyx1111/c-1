@@ -1,0 +1,76 @@
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{164B10B9-B200-11D0-8C61-00A0C91E29D5}" ID="3141"/>
+    <Description Package="{164B10B9-B200-11D0-8C61-00A0C91E29D5}" ID="3142"/>
+    <Icon Package="{164B10B9-B200-11D0-8C61-00A0C91E29D5}" ID="4576"/>
+    <ProjectType>VisualBasic</ProjectType>
+    <SortOrder>100</SortOrder>
+    <DefaultName>Explorer.vb</DefaultName>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <TemplateID>Microsoft.VisualBasic.WindowsForms.Explorer</TemplateID>
+    <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+  </TemplateData>
+  <TemplateContent>
+        <References>
+            <Reference>
+                <Assembly>System</Assembly>
+                <URL>http://www.microsoft.com</URL>
+            </Reference>
+            <Reference>
+                <Assembly>System.Drawing</Assembly>
+                <URL>http://www.microsoft.com</URL>
+            </Reference>
+            <Reference>
+                <Assembly>System.Windows.Forms</Assembly>
+                <URL>http://www.microsoft.com</URL>
+            </Reference>
+        </References>
+
+    <ProjectItem ReplaceParameters="true" SubType="Form">Explorer.vb</ProjectItem>
+    <ProjectItem ReplaceParameters="true">Explorer.Designer.vb</ProjectItem>
+    <ProjectItem TargetFileName="$fileinputname$.resx" ReplaceParameters="false">Explorer.resx</ProjectItem>
+    <CustomParameters>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_Status$" Name="$IT_EXP_VB_Loc_Status$" Value="状态"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_Back$" Name="$IT_EXP_VB_Loc_Back$" Value="后退"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_Back_Tooltip$" Name="$IT_EXP_VB_Loc_Back_Tooltip$" Value="后退到上一项"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_Forward$" Name="$IT_EXP_VB_Loc_Forward$" Value="前进"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_Forward_Tooltip$" Name="$IT_EXP_VB_Loc_Forward_Tooltip$" Value="前进到下一项"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_Folders$" Name="$IT_EXP_VB_Loc_Folders$" Value="文件夹"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_Folders_Tooltip$" Name="$IT_EXP_VB_Loc_Folders_Tooltip$" Value="切换文件夹视图"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_Views$" Name="$IT_EXP_VB_Loc_Views$" Value="视图"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_List$" Name="$IT_EXP_VB_Loc_List$" Value="列表"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_Details$" Name="$IT_EXP_VB_Loc_Details$" Value="详细信息"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_LargeIcons$" Name="$IT_EXP_VB_Loc_LargeIcons$" Value="大图标"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_SmallIcons$" Name="$IT_EXP_VB_Loc_SmallIcons$" Value="小图标"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_Tile$" Name="$IT_EXP_VB_Loc_Tile$" Value="平铺"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_FileTS_Menu$" Name="$IT_EXP_VB_Loc_FileTS_Menu$" Value="文件(&amp;F)"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_NewTS_Menu$" Name="$IT_EXP_VB_Loc_NewTS_Menu$" Value="新建(&amp;N)"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_OpenTS_Menu$" Name="$IT_EXP_VB_Loc_OpenTS_Menu$" Value="打开(&amp;O)"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_SaveTS_Menu$" Name="$IT_EXP_VB_Loc_SaveTS_Menu$" Value="保存(&amp;S)"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_SaveAsTS_Menu$" Name="$IT_EXP_VB_Loc_SaveAsTS_Menu$" Value="另存为(&amp;A)"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_PrintTS_Menu$" Name="$IT_EXP_VB_Loc_PrintTS_Menu$" Value="打印(&amp;P)"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_PrintPreviewTS_Menu$" Name="$IT_EXP_VB_Loc_PrintPreviewTS_Menu$" Value="打印预览(&amp;V)"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_ExitTS_Menu$" Name="$IT_EXP_VB_Loc_ExitTS_Menu$" Value="退出(&amp;X)"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_EditTS_Menu$" Name="$IT_EXP_VB_Loc_EditTS_Menu$" Value="编辑(&amp;E)"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_UndoTS_Menu$" Name="$IT_EXP_VB_Loc_UndoTS_Menu$" Value="撤消(&amp;U)"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_RedoTS_Menu$" Name="$IT_EXP_VB_Loc_RedoTS_Menu$" Value="重复(&amp;R)"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_CutTS_Menu$" Name="$IT_EXP_VB_Loc_CutTS_Menu$" Value="剪切(&amp;T)"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_CopyTS_Menu$" Name="$IT_EXP_VB_Loc_CopyTS_Menu$" Value="复制(&amp;C)"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_PasteTS_Menu$" Name="$IT_EXP_VB_Loc_PasteTS_Menu$" Value="粘贴(&amp;P)"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_SelectAllTS_Menu$" Name="$IT_EXP_VB_Loc_SelectAllTS_Menu$" Value="全选(&amp;A)"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_ViewTS_Menu$" Name="$IT_EXP_VB_Loc_ViewTS_Menu$" Value="视图(&amp;V)"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_ToolbarTS_Menu$" Name="$IT_EXP_VB_Loc_ToolbarTS_Menu$" Value="工具栏(&amp;T)"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_StatusBarTS_Menu$" Name="$IT_EXP_VB_Loc_StatusBarTS_Menu$" Value="状态栏(&amp;S)"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_FolderTS_Menu$" Name="$IT_EXP_VB_Loc_FolderTS_Menu$" Value="文件夹(&amp;F)"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_ToolsTS_Menu$" Name="$IT_EXP_VB_Loc_ToolsTS_Menu$" Value="工具(&amp;T)"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_OptionsTS_Menu$" Name="$IT_EXP_VB_Loc_OptionsTS_Menu$" Value="选项(&amp;O)"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_HelpTS_Menu$" Name="$IT_EXP_VB_Loc_HelpTS_Menu$" Value="帮助(&amp;H)"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_ContentsTS_Menu$" Name="$IT_EXP_VB_Loc_ContentsTS_Menu$" Value="目录(&amp;C)"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_IndexTS_Menu$" Name="$IT_EXP_VB_Loc_IndexTS_Menu$" Value="索引(&amp;I)"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_SearchTS_Menu$" Name="$IT_EXP_VB_Loc_SearchTS_Menu$" Value="搜索(&amp;S)"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_AboutTS_Menu$" Name="$IT_EXP_VB_Loc_AboutTS_Menu$" Value="关于(&amp;A)"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_TextFilter$" Name="$IT_EXP_VB_Loc_TextFilter$" Value="文本文件"/>
+        <CustomParameter _locID="$IT_EXP_VB_Loc_ColumnName$" Name="$IT_EXP_VB_Loc_ColumnName$" Value="列"/>
+    </CustomParameters>
+  </TemplateContent>
+</VSTemplate>

@@ -1,0 +1,58 @@
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{5f1c4e9f-35d5-4d14-ae85-7b8274754137}" ID="2103" />
+    <Description  Package="{5f1c4e9f-35d5-4d14-ae85-7b8274754137}" ID="2102" />
+    <Icon Package="{5f1c4e9f-35d5-4d14-ae85-7b8274754137}" ID="3000" />
+    <ProjectType>LightSwitch</ProjectType>
+    <TemplateID>Microsoft.LightSwitch.BlankLightSwitchApplication</TemplateID>
+    <SortOrder>70</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <CreateNewFolder>true</CreateNewFolder>
+    <CreateInPlace>true</CreateInPlace>
+    <DefaultName>Application</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="LightSwitchProject.lsproj" ReplaceParameters="true">
+
+      <!-- Client project -->
+      <ProjectItem ReplaceParameters="true" TargetFileName="Client\Client.csproj">Client.csproj</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Client\Properties\AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Client\Config.xml">Config.xml</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Client\Properties\Client.lsml">Client.lsml</ProjectItem>
+      <ProjectItem OpenInEditor="false" ReplaceParameters="true" TargetFileName="Client\Properties\AppManifest.xml">AppManifest.xml</ProjectItem>
+      <ProjectItem OpenInEditor="false" ReplaceParameters="true" TargetFileName="Client\Properties\OutOfBrowserSettings.xml">OutOfBrowserSettings.xml</ProjectItem>
+      <Folder Name="Client\Screens\"/>
+      <Folder Name="Client\DataLogic\"/>
+      <Folder Name="Client\DataSources\"/>
+
+      <!-- Server project -->
+      <ProjectItem ReplaceParameters="true" TargetFileName="Server\Server.csproj">Server.csproj</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Server\Properties\AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Server\Properties\Service.lsml">Service.lsml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Server\Web.config">Web.config</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Server\Web.Debug.config">Web.Debug.config</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Server\Web.Release.config">Web.Release.config</ProjectItem>
+      <Folder Name="Server\DataLogic\"/>
+      <Folder Name="Server\DataSources\"/>
+
+      <!-- Common project -->
+      <ProjectItem ReplaceParameters="true" TargetFileName="Common\Common.csproj">Common.csproj</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Common\Properties\AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Common\Properties\Common.lsml">Common.lsml</ProjectItem>
+      <ProjectItem TargetFileName="Common\GeneratedArtifacts\DataRuntime.cs">DataRuntime.cs</ProjectItem>
+
+      <!-- Root project -->
+      <ProjectItem OpenInEditor="false" ReplaceParameters="true" TargetFileName="default.htm">default.htm</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Silverlight.js">Silverlight.js</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ServiceConfiguration.cscfg">ServiceConfiguration.cscfg</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ServiceDefinition.csdef">ServiceDefinition.csdef</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.LightSwitch.Design.VSTemplateWizard, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, Custom=null</Assembly>
+    <FullClassName>Microsoft.LightSwitch.Design.VSTemplateWizard.TemplateWizardImplementation</FullClassName>
+  </WizardExtension>
+</VSTemplate>

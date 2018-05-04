@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.TeamFoundation.WorkItemTracking.ControlsCore</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl">
+      <summary>处理产品studio说明字段。 子类RichEditBox，添加IsDirty属性和一个上下文菜单。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.#ctor">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.AllowFormatting">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.BuildStyle(System.Collections.Generic.IDictionary{System.String,System.String})">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.Clear">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.ClearStatusText">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.DetachEventHandlers">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.Dispose(System.Boolean)">
+      <summary>清理正在使用的所有资源。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.EnsureCacheIsInitialized">
+      <summary>确保文本缓存初始化与所提供的HTML的控件的解释，确保，任何区别视为用户编辑。  必须执行此操作，在RefreshText ()之后用户任意操作提供此控件具有焦点时(用任何编辑操作)之前。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.GetEditElement">
+      <returns>返回 <see cref="T:System.Windows.Forms.HtmlElement" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.GetHtmlFromSelectedRange(mshtml.IHTMLControlRange)">
+      <summary>分析选定大小并返回相应的HTML</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.GetStyleElem(System.Windows.Forms.HtmlElement,System.String)">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.GetTextInternal">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.GetVisibility(System.Windows.Forms.HtmlElement)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.GetWorkItemServerVersion">
+      <returns>返回 <see cref="T:Microsoft.TeamFoundation.WorkItemTracking.Common.WorkItemServerVersion" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.IsDirty">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.IsInputKey(System.Windows.Forms.Keys)">
+      <summary>指示指定的键是输入参数的键。  添加enter，家庭，末尾，该页，该页DN，到基础的导航键设置具有标签选择状态副作用，因为忙，在提供输入键为HTML控件不会显示某些关键的标准输入事件(例如定位)。</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.IsInsideEdit(System.Windows.Forms.HtmlElement)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.IsReady">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.Label">
+      <returns>返回 <see cref="T:System.Windows.Forms.Label" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.NormalizeText(System.String)">
+      <summary>通过移除尾部/前导空格规范化文本并使换行符匹配。</summary>
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.OnGotFocus(System.EventArgs)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.OnLinkClick(System.String)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.OnLinkClick(System.Windows.Forms.HtmlElement)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.OnNavigating(System.Windows.Forms.WebBrowserNavigatingEventArgs)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.OnPaste(System.Object,System.EventArgs)">
+    </member>
+    <member name="E:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.OnTextChanged">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.ParseStyle(System.String)">
+      <returns>返回 <see cref="T:System.Collections.Generic.IDictionary`2" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.PasteClipboardImage">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.PreProcessMessage(System.Windows.Forms.Message@)">
+      <summary>重写逻辑此处截获并选择性地筛选键盘消息给基类。</summary>
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.PreProcessUrl(System.String)">
+      <summary>执行受信任的链接的导航的受保护方法。  他们决定处理的实现。验证所有输入安全负责。</summary>
+      <returns>True，如果URL进行处理，错误，如果不支持</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.ReadOnly">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.Retrieve">
+      <summary>运行规范化通过)，以便修改后的文本不同，文本状态更新。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.SetElementEditable(System.Windows.Forms.HtmlElement,System.Boolean)">
+      <summary>设置在指定的元素中的" ContentEditable属性。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.SetStatusText(System.String)">
+      <returns>返回 <see cref="T:System.Boolean" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.SetStyleElem(System.Windows.Forms.HtmlElement,System.String,System.String)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.SetVisibility(System.Windows.Forms.HtmlElement,System.Boolean)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.ShowContextMenu(System.Int32,System.Int32)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.ShowPrompt(System.Boolean)">
+      <summary>基类实现，应重写在支持提示的派生类。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.SwapHtmlAttributes(System.Windows.Forms.HtmlElement,System.String,System.String)">
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.Text">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.ToolTip">
+      <returns>返回 <see cref="T:System.Windows.Forms.ToolTip" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.UpdateToolTip">
+      <summary>调用时，工具提示应更新。</summary>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.Url">
+      <returns>返回 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControl.WndProc(System.Windows.Forms.Message@)">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.HtmlControlEventHandler">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.POINT">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.POINT.x">
+    </member>
+    <member name="F:Microsoft.TeamFoundation.WorkItemTracking.Controls.POINT.y">
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.SafeWebBrowser">
+      <summary>webbrowser控件的安全版本。</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.SafeWebBrowser.#ctor">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.SafeWebBrowser.CreateWebBrowserSiteBase">
+      <returns>返回 <see cref="T:System.Windows.Forms.WebBrowserSiteBase" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.SafeWebBrowser.IOleServiceProvider">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.SafeWebBrowser.IOleServiceProvider.QueryService(System.Guid@,System.Guid@,System.IntPtr@)">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.WorkItemTracking.Controls.SafeWebBrowser.MyWebBrowserSite">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.SafeWebBrowser.MyWebBrowserSite.#ctor(System.Windows.Forms.WebBrowser)">
+    </member>
+    <member name="M:Microsoft.TeamFoundation.WorkItemTracking.Controls.SafeWebBrowser.MyWebBrowserSite.Microsoft#TeamFoundation#WorkItemTracking#Controls#SafeWebBrowser#IOleServiceProvider#QueryService(System.Guid@,System.Guid@,System.IntPtr@)">
+      <returns>返回 <see cref="T:System.Int32" />。</returns>
+    </member>
+  </members>
+</doc>

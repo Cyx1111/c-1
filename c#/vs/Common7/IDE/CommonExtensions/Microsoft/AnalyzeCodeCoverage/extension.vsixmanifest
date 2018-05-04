@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="CodeCoverage.Microsoft.f47a268a-bba9-442d-ac61-eef97f906458">
+    <Name>Analyze Code Coverage</Name>
+    <Author>Microsoft</Author>
+    <Version>1.0</Version>
+    <Description xml:space="preserve">Analyze Code Coverage</Description>
+    <Locale>1033</Locale>
+    <SupportedProducts>
+      <VisualStudio Version="11.0">
+        <Edition>Ultimate</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5" />
+    <SystemComponent>true</SystemComponent>
+  </Identifier>
+  <References />
+  <Content>
+    <MefComponent>Microsoft.VisualStudio.TestWindow.CodeCoverage.dll</MefComponent>
+    <MefComponent>Microsoft.VisualStudio.TestWindow.CodeCoverage.Settings.dll</MefComponent>
+    <VsPackage>Microsoft.VisualStudio.TestWindow.CodeCoverage.pkgdef</VsPackage>
+  </Content>
+</Vsix>

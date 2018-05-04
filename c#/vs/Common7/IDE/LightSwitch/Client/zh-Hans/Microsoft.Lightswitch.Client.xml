@@ -1,0 +1,999 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc><assembly>
+    <name>Microsoft.LightSwitch.Client</name>
+  </assembly><members>
+    <member name="T:Microsoft.LightSwitch.Runtime.Shell.ViewModels.Commands.IShellCommandGroup">
+      <summary>
+            表示属于 LightSwitch 应用程序 shell 的一组命令。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.Commands.IShellCommandGroup.Name">
+      <summary>
+            获取应用程序模型中的组的名称。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.Commands.IShellCommandGroup.DisplayName">
+      <summary>
+            获取组的显示名称（在 LightSwitch 应用程序中向最终用户显示）。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.Commands.IShellCommandGroup.Commands">
+      <summary>
+            获取属于组的命令集。
+            </summary>
+    </member>
+    <member name="T:Microsoft.LightSwitch.Framework.Client.ClientApplication`3">
+      <Summary> 表示在客户端层上运行的应用程序。</Summary>
+    </member>
+    <member name="T:Microsoft.LightSwitch.Framework.Client.ClientApplication`2">
+      <Summary> 表示在客户端层上运行的应用程序。</Summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Framework.Client.ClientApplication`2.ShowDefaultScreen(Microsoft.LightSwitch.IEntityObject)">
+      <summary>
+            显示给定实体的默认详细信息屏幕。如果未对该实体类型指定默认详细信息屏幕，则将自动生成一个。
+            </summary> <param name="entity">为其显示默认屏幕的实体。</param>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Framework.Client.ClientApplication`2.ShowScreen(Microsoft.LightSwitch.Model.IScreenDefinition,System.Collections.Generic.IEnumerable{System.Object})">
+      <summary>
+            显示特定屏幕。如果该屏幕不是多实例型，这将把焦点设置到该屏幕的任何现有实例。
+            </summary> <param name="screenDefinition">描述要打开的屏幕的模型定义。</param> <param name="parameters"> 屏幕需要的任何参数。</param>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Framework.Client.ClientApplication`2.SetAuthenticationService(Microsoft.LightSwitch.Security.Client.IAuthenticationService)">
+      <summary>
+            设置身份验证服务。
+            </summary> <param name="service">身份验证服务。</param>
+      <remarks>
+            将此方法标记为内部，将能够进行测试以重置身份验证服务，从而绕过 AuthenticationService 属性 setter 中的参数检查。
+            </remarks>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Framework.Client.ClientApplication`2.AuthenticationService">
+      <summary>
+            获取或设置用于确定和验证当前用户身份的身份验证服务。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Framework.Client.ClientApplication`2.User">
+      <summary>
+            获取当前用户。该用户可用于获取身份验证信息并检查用户的权限。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Framework.Client.ClientApplication`2.ActiveScreens">
+      <summary>
+            提供应用程序中屏幕实例的集合。这可用于将焦点设置到特定屏幕或在其他屏幕上运行代码。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Framework.Client.ClientApplication`2.Current">
+      <summary>
+            获取当前客户端应用程序实例。
+            </summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Framework.Client.ClientApplication`3.CreateDataWorkspaceCore">
+      <summary>
+            创建一个新的数据工作区。
+            </summary> <returns>已创建的数据工作区。</returns>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Framework.Client.ClientApplication`3.CreateDataWorkspace">
+      <summary>
+            初始化新的数据工作区。数据工作区可用于查询数据并对数据源进行更改，而与任何其他屏幕或数据工作区无关。
+            </summary> <returns>已创建的数据工作区。</returns>
+    </member>
+    <member name="T:Microsoft.LightSwitch.Presentation.IContentItem">
+      <summary>
+            表示屏幕内容树的元素。
+            </summary>
+      <remarks>
+            内容项充当 LightSwitch 可视化对象的视图模型，所有 LightSwitch 控件都绑定到实现此界面的类的一个实例。内容项提供影响可视化效果的属性（如 DisplayName），并提供有关可视化对象如何将自身绑定到实际数据的绑定信息。
+            </remarks>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Presentation.IContentItem.FindShortcutForCommand(System.String)">
+      <summary>
+            查找相应的可执行文件以用于实现与此内容项的命令相关联的键盘快捷方式。
+            </summary>
+      <remarks>
+            使用此方法而不是调用 Details 属性中的可执行文件，可允许内容项根据内容树中的上下文处理相应的启用/禁用行为。例如，如果程序员从屏幕设计器中的集合节点删除了 DeleteSelected 命令，该命令将不会显示在屏幕中。同样，应禁用该命令的任何快捷方式的功能。不要缓存函数返回的值，因为内容项的绑定会发生更改，从而导致稍后返回不同的值。调用方在调用 Execute/ExecuteAsync 之前应对返回的 IExecutable 对象检查 CanExecute/CanExecuteAsync。
+            </remarks> <param name="targetMethodName">为其查找快捷可执行对象的方法的名称。</param><returns>表示应在用户调用键盘快捷方式时执行的操作的可执行对象。</returns>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Presentation.IContentItem.CreateTemplatedTreeCopy(System.Object)">
+      <summary>
+            使用此内容项及其子项作为模板以创建与当前树（其数据绑定除外）相同的新树。创建集合的可视化子级时应使用此新树。
+            </summary> <param name="newBindingRoot">用于新实例的新的数据绑定根，这将重写模板内容项中的值。</param><returns>具有设置为新绑定根的数据绑定的内容项树。</returns>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Presentation.IContentItem.GetService``1">
+      <summary>
+            此方法仅供 LightSwitch 内部使用。
+            </summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Presentation.IContentItem.SetValidationResult(System.String,Microsoft.LightSwitch.ValidationSeverity)">
+      <summary>
+            设置内容项上的验证结果。此结果可由控件调用来设置瞬态验证错误，如分析错误等。这将在数据中出现任何更改时被自动清除。
+            </summary> <param name="result">要设置到的验证结果。</param>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Presentation.IContentItem.ClearValidationResult">
+      <summary>
+            清除由 SetValidationResult() 方法设置的自定义验证结果。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IContentItem.DisplayName">
+      <summary>
+            获取或设置内容项显示名称，通常用于控件标题
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IContentItem.Description">
+      <summary>
+            获取或设置当前内容项的说明。该说明通常用作工具提示。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IContentItem.IsEnabled">
+      <summary>
+            获取或设置一个值，该值指示是否应启用与此内容项关联的 UI。
+            </summary>
+      <remarks>
+            如果 IsAvailable 属性的值为 false，则此属性的值将为 false。如果某一命令的 CanExecute() 返回 false，则此属性的值将为 false。无需显式绑定到此属性，将在控件的父级上自动设置此属性。
+            </remarks>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IContentItem.IsReadOnly">
+      <summary>
+            获取或设置一个值，该值指示与此内容项关联的 UI 是否应为只读。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IContentItem.IsVisible">
+      <summary>
+            获取或设置一个值，该值指示内容项是否可见。
+            </summary>
+      <remarks>
+            如果隐藏，则 ContentItemPresenter 不会显示内容项。无需绑定到此属性。
+            </remarks>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IContentItem.IsProcessing">
+      <summary>
+            指示仍在运行时计算/加载值，且尚未准备好显示。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IContentItem.IsAvailable">
+      <summary>
+            获取一个值，该值指示为此内容项提供值的对象是否不为 null。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IContentItem.Details">
+      <summary>
+            获取此内容项所绑定到的项的详细信息对象。
+            </summary>
+      <remarks>
+            此属性的值将是对应的屏幕属性的详细信息对象。
+            </remarks>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IContentItem.Value">
+      <summary>
+            获取或设置此内容项所绑定到的数据值。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IContentItem.StringValue">
+      <summary>
+            获取内容项的字符串值。
+            </summary>
+      <remarks>
+            处理基于值的字符串的文本编辑器等控件可绑定到此属性。此属性处理字符串和其他简单类型之间的转换以及 null 与空字符串之间的转换。此属性还处理面向值映射的选项显示名称，即，如果一个属性具有选项，则 stringValue 应为某一选项的显示名称。
+            </remarks>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IContentItem.Choices">
+      <summary>
+            获取屏幕集合属性，该属性为此内容项所表示的一段数据提供可能的值选项。此属性通常由选择器控件使用。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IContentItem.Properties">
+      <summary>
+            获取控件属性（如 DisplayName、Height、Width 等）的属性包。若要检索属性值，则使用属性名建立索引。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IContentItem.DataError">
+      <summary>
+            获取表示与此内容项相关联的数据加载故障的异常（如果有的话）。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IContentItem.BindingPath">
+      <summary>
+            获取相对于内容项在内容树中的位置的绑定路径（相对于数据源根）。此路径的格式是一种简单的点表示法（如“Address.City”），具体取决于目标应用程序平台。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IContentItem.DataSourceRoot">
+      <summary>
+            获取可视化对象绑定时应使用的源。对于屏幕上的项，这可以是屏幕，但也可以是实体，或者，如果使用集合，则可以是集合中包含的实际数据元素。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IContentItem.DataSourceRootDefinition">
+      <summary>
+            获取数据绑定根对象的应用程序模型定义（如果有）。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IContentItem.ChoicesSourceRootDefinition">
+      <summary>
+            保留仅供内部使用，可能在未来的 LightSwitch 版本中废弃。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IContentItem.View">
+      <summary>
+            获取对此内容项使用的控件或视图类型。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IContentItem.ChildItems">
+      <summary>
+            获取给定内容项的子级。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IContentItem.CommandItems">
+      <summary>
+            获取表示此内容项可用的命令的内容项的列表。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IContentItem.ParentItem">
+      <summary>
+            获取此内容项的父级（如果存在）。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IContentItem.EffectiveParentItem">
+      <summary>
+            获取有效的父级内容项（如果存在）。如果此内容项是从另一内容项克隆的，则返回作为克隆源的项的父级。否则将返回所有者。
+            </summary>
+      <remarks>
+            获取一个值，该值指示为此内容项提供值的对象是否不为 null。
+            </remarks>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IContentItem.GeneratedFromItem">
+      <summary>
+            获取从其生成此内容项的内容项（如果有）。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IContentItem.Screen">
+      <summary>
+            获取此内容项的根屏幕。
+            </summary>
+      <remarks>
+            此属性在一些情况下可能为空（内容项是项模板或由数据演示者创建）。
+            </remarks>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IContentItem.ContentItemKind">
+      <summary>
+            获取指示此 ContentItem 的数据种类和用途的值。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IContentItem.LastMemberModelItem">
+      <summary>
+            获取此内容项的绑定路径中的最后成员模型。例如，如果一个内容项的绑定根是屏幕的 Customer 属性，且绑定路径是“Order.Employee.Address.City”，然后，此属性将返回 Address 数据类型的 City 成员的模型定义。
+            </summary>
+      <remarks>如果没有绑定路径或者绑定表达式为空（直接绑定到数据源），则返回 null</remarks>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IContentItem.ResultingDataType">
+      <summary>
+            获取绑定值的数据类型。如果内容项绑定到整个屏幕，则此属性返回 null。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IContentItem.ResultingModel">
+      <summary>
+            获取描述绑定值的类型的模型项。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IContentItem.ContentItemDefinition">
+      <summary>
+            获取从其创建此内容项的 IContentItemDefinition。可动态创建内容项，而无需使用应用程序模型，因此，此属性可返回 null。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IContentItem.IsDisposed">
+      <summary>
+            获取一个值，该值指示此内容项是否已经被释放。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IContentItem.FontStyle">
+      <summary>
+            获取或设置一个值，该值指示将使用哪种字体样式来显示此内容项。
+            </summary>
+    </member>
+    <member name="T:Microsoft.LightSwitch.Presentation.IContentItemService">
+      <summary>
+            表示用于创建内容项的服务。
+            </summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Presentation.IContentItemService.CreateContentItem(Microsoft.LightSwitch.Presentation.IContentItem,Microsoft.LightSwitch.Presentation.IContentItem,Microsoft.LightSwitch.Model.IContentItemDefinition,Microsoft.LightSwitch.Client.IScreenObject)">
+      <summary>
+            基于内容项定义创建内容项
+            </summary> <param name="parent">如果已指定，则此内容项将被添加到父级的 ChildItems 集合。</param><param name="owner">如果与父级不同，则所有者将可能为 null。内容项将从所有者继承属性。例如，一个按钮没有父级，但其所有者是包含它的内容项。</param><param name="contentItemDefinition">用于创建内容项的应用程序模型定义。</param><param name="screen">将作为内容项宿主的屏幕。</param>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Presentation.IContentItemService.CreateContentItem(Microsoft.LightSwitch.Presentation.IContentItem,Microsoft.LightSwitch.Presentation.IContentItem,Microsoft.LightSwitch.Model.INamedItem,Microsoft.LightSwitch.Model.INamedItem,System.String,System.String,System.String,Microsoft.LightSwitch.Client.IScreenObject)">
+      <summary>
+            动态创建绑定到一些屏幕成员的内容项。
+            </summary> <param name="parent">如果已指定，则此内容项将被添加到父级的 ChildItems 集合。</param><param name="owner">如果与父级不同，则所有者将可能为 null。内容项将从所有者继承属性。例如，一个按钮没有父级，但其所有者是包含它的内容项。</param><param name="dataSourceRootDefinition">此内容项的根数据源对象的应用程序模型定义。</param><param name="choicesRootModelDefinition">此参数已过时，传递 null</param><param name="bindingPath">内容项应当用于数据绑定的绑定路径。</param><param name="overrideViewId">指定要使用的控件（视图），否则将选择一个默认值。</param><param name="overrideBucketName">指定内容项的占位符名称。如果内容项与其父级一样具有智能布局，则使用此参数。</param><param name="screen">将作为内容项宿主的屏幕。</param>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Presentation.IContentItemService.CreateContentItemTree(Microsoft.LightSwitch.Client.IScreenObject)">
+      <summary>
+            为屏幕对象创建新的内容树。
+            </summary> <param name="screen">要为其创建内容树的屏幕。</param>
+    </member>
+    <member name="T:Microsoft.LightSwitch.Presentation.IControlFactory">
+      <summary>
+            此接口的实施者提供了可用于为屏幕的内容项创建控件的数据模板。
+            </summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Presentation.IControlFactory.GetDisplayModeDataTemplate(Microsoft.LightSwitch.Presentation.IContentItem)">
+      <summary>
+            可选择允许为给定控件提供只读数据模板。这种更简单的模板可由 DataGrid 等控件使用以在它不具有焦点时表示控件。contentItem 参数可用于基于控件属性设置或其他上下文来确定是否具有更简单的模板可用。如果返回 null，则将使用 DataTemplate 属性返回的数据模板。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Presentation.IControlFactory.DataTemplate">
+      <summary>
+            提供可用于为屏幕的内容项创建控件的常规数据模板。
+            </summary>
+    </member>
+    <member name="T:Microsoft.LightSwitch.Runtime.Shell.View.IScreenView">
+      <summary>
+            表示 LightSwitch 应用程序中现有（实例化）屏幕的用户界面（视图）。
+            </summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Runtime.Shell.View.IScreenView.ActivateUIElement(Microsoft.LightSwitch.IBusinessObject,Microsoft.LightSwitch.Details.IBusinessProperty)">
+      <summary>
+            查找显示目标/属性组合并将焦点设置到该组合的 UI 元素。
+            </summary> <param name="target">目标实体</param> <param name="targetProperty">目标属性。如果为 null，则激活该实体。</param>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Runtime.Shell.View.IScreenView.Focus">
+      <summary>
+            将焦点设置到此屏幕。
+            </summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Runtime.Shell.View.IScreenView.BeginModal(Microsoft.LightSwitch.Runtime.Shell.View.IScreenModalDialog)">
+      <summary>
+            准备屏幕以在顶部显示模式对话框。在出现模式对话框之前，应始终调用它。
+            </summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Runtime.Shell.View.IScreenView.EndModal(Microsoft.LightSwitch.Runtime.Shell.View.IScreenModalDialog)">
+      <summary>
+            关闭模式对话框后将屏幕恢复为普通外观和行为。
+            </summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Runtime.Shell.View.IScreenView.CommitUIChanges">
+      <summary>
+            确保提交了（发送到屏幕数据模型）UI 层中的所有挂起的更改（如：最终用户正在编辑值）。在启动屏幕数据工作区保存操作前，这通常是必要的。
+            </summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Runtime.Shell.View.IScreenView.GetActiveModalDialogs">
+      <summary>
+            获取所有者为此屏幕的所有现有模式对话框。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.View.IScreenView.RootUI">
+      <summary>
+            获取屏幕 UI 的根控件 (FrameworkElement)。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.View.IScreenView.Screen">
+      <summary>
+            获取使用此屏幕视图显示的屏幕对象。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.View.IScreenView.ShellCommands">
+      <summary>
+            获取与此屏幕关联的 shell 命令集。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.View.IScreenView.IsShowingModal">
+      <summary>
+            获取一个值，该值指示屏幕是否显示模式对话框。
+            </summary>
+    </member>
+    <member name="E:Microsoft.LightSwitch.Runtime.Shell.View.IScreenView.PreviewShowingModal">
+      <summary>
+            事件在显示模式对话框之前引发。
+            </summary>
+    </member>
+    <member name="T:Microsoft.LightSwitch.Runtime.Services.IExecutableInfo">
+      <summary>
+            检索有关 IExecutableItem 的信息而不对它进行实例化。
+            </summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Runtime.Services.IExecutableInfo.CreateExecutableObject">
+      <summary>
+            创建将执行给定 IExecutableItem（如：执行方法或显示屏幕）的命令。
+            </summary> <returns>用于执行 IExecutableItem 的命令。</returns>
+    </member>
+    <member name="T:Microsoft.LightSwitch.Runtime.Shell.View.IUserSettingsService">
+      <summary>
+            表示用于管理用户设置的服务。
+            </summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Runtime.Shell.View.IUserSettingsService.GetSetting``1(System.String)">
+      <summary>
+            从存储区中获取指定用户设置。
+            </summary> <typeparam name="T">用户设置对象的类型。</typeparam><param name="name">设置的唯一名称。</param><returns>指定的用户设置对象。如果设置不存在，则返回 null。</returns>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Runtime.Shell.View.IUserSettingsService.SetSetting(System.String,System.Object)">
+      <summary>
+            将指定的用户设置设置到存储区。
+            </summary> <param name="name">设置的唯一名称。</param><param name="setting">指定的用户设置对象。</param>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Runtime.Shell.View.IUserSettingsService.ResetSetting(System.String)">
+      <summary>
+            重置（清除）存储区中的指定设置。
+            </summary> <param name="name">设置的唯一名称。</param>
+    </member>
+    <member name="E:Microsoft.LightSwitch.Runtime.Shell.View.IUserSettingsService.Closing">
+      <summary>
+            关闭事件由应用程序关闭事件引发。由关闭浏览器还是由关闭浏览器外窗口引发取决于部署方案。如果控件具有尚未保存到设置服务的缓存的任何设置，则需要在引发此事件时保存。控件应显式调用 SetSetting 方法来保存设置。此事件之后，设置服务将在应用程序关闭之前在物理磁盘上保持内存缓存中的设置。
+            </summary>
+    </member>
+    <member name="T:Microsoft.LightSwitch.Runtime.Shell.ViewModels.IScreenValidationViewModel">
+      <summary>
+            表示屏幕级别验证视图模型。它提供了与屏幕成员和数据工作区相关联的验证错误的相关信息。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.IScreenValidationViewModel.Screen">
+      <summary>
+            获取与此视图模型相关联的屏幕对象。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.IScreenValidationViewModel.Summary">
+      <summary>
+            获取与给定屏幕相关联的所有验证结果的简短说明。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.IScreenValidationViewModel.ServerValidationResults">
+      <summary>
+            获取源自服务器的所有验证结果。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.IScreenValidationViewModel.ClientValidationResults">
+      <summary>
+            获取源自客户端应用程序的验证结果。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.IScreenValidationViewModel.AllValidationResults">
+      <summary>
+            获得所有已知的验证结果（源自客户端和源自服务器）。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.IScreenValidationViewModel.HasResults">
+      <summary>
+            获取一个值，该值指示屏幕是否具有任何错误、警告或信息性验证结果。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.IScreenValidationViewModel.HasErrors">
+      <summary>
+            获取一个值，该值指示屏幕是否具有任何错误。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.IScreenValidationViewModel.HasWarnings">
+      <summary>
+            获取一个值，该值指示屏幕是否具有任何警告类型的验证结果。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.IScreenValidationViewModel.HasInformation">
+      <summary>
+            获取一个值，该值指示屏幕是否具有信息性验证结果。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.IScreenValidationViewModel.HasServerResults">
+      <summary>
+            获取一个值，该值指示屏幕是否具有源自服务器（数据源）的任何验证结果。
+            </summary>
+    </member>
+    <member name="T:Microsoft.LightSwitch.Runtime.Shell.ViewModels.IScreenValidationViewModelService">
+      <summary>
+            表示可用于检索给定屏幕的验证视图模型的服务。
+            </summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Runtime.Shell.ViewModels.IScreenValidationViewModelService.GetViewModel(Microsoft.LightSwitch.Client.IScreenObject)">
+      <summary>
+            获取给定屏幕的验证视图模型。
+            </summary> <param name="screen">屏幕对象</param>
+      <remarks>屏幕必须处于活动（正在运行）状态才能检索其验证视图模型。</remarks>
+    </member>
+    <member name="T:Microsoft.LightSwitch.Client.IClientMessageAlertService">
+      <summary>
+            表示可用于向 LightSwitch 应用程序的用户显示简单消息（警报）的服务。
+            </summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Client.IClientMessageAlertService.ShowScreenAlert(System.String,System.String,Microsoft.LightSwitch.BaseServices.Alert.MessageAlertType,Microsoft.LightSwitch.Client.MessageConfirmationType,System.Action{Microsoft.LightSwitch.Client.MessageAlertResult},Microsoft.LightSwitch.Client.IScreenObject)">
+      <summary>
+            向指定屏幕显示警报模式。
+            </summary> <param name="message">要显示的消息。</param><param name="caption">标题</param> <param name="messageConfirmation">警报确认的类型。</param><param name="alertType">警报类型</param> <param name="callback">完成时调用的回调。</param><param name="screen">其警报应为模式的屏幕。</param>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Client.IClientMessageAlertService.ShowScreenAlert(System.String,System.String,Microsoft.LightSwitch.BaseServices.Alert.MessageAlertType,Microsoft.LightSwitch.Client.MessageConfirmationType,System.Action{Microsoft.LightSwitch.Client.MessageAlertResult},Microsoft.LightSwitch.Client.IScreenObject,System.String[])">
+      <summary>
+            向指定屏幕显示警报模式。
+            </summary> <param name="message">要显示的消息</param> <param name="caption">标题</param><param name="messageConfirmation">警报确认的类型。</param><param name="alertType">警报类型</param> <param name="callback">完成时调用的回调</param> <param name="screen">其警报应为模式的屏幕</param> <param name="customButtonText">为按钮指定自定义文本。顺序应与 messageConfirmation 中指定的顺序相同。</param>
+    </member>
+    <member name="T:Microsoft.LightSwitch.Runtime.Shell.ViewModels.CurrentUser.ICurrentUserViewModel">
+      <summary>
+            表示在应用程序 shell 内显示的当前用户信息的视图模型。
+            </summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Runtime.Shell.ViewModels.CurrentUser.ICurrentUserViewModel.ChangePassword(System.String,System.String)">
+      <summary>
+            更改当前用户的密码。
+            </summary> <param name="oldPassword">用户的旧密码。</param><param name="newPassword">用户的新密码。</param>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.CurrentUser.ICurrentUserViewModel.IsUserInfoAvailable">
+      <summary>
+            获取一个值，该值指示是否存在任何用户信息。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.CurrentUser.ICurrentUserViewModel.AreUserInfoAndOperationsAvailable">
+      <summary>
+            获取一个值，该值指示是否针对当前用户的用户信息和可执行的操作。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.CurrentUser.ICurrentUserViewModel.IsOnlyUserInfoAvailable">
+      <summary>
+            获取一个值，该值指示是否只有用户信息可用。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.CurrentUser.ICurrentUserViewModel.CurrentUserDisplayName">
+      <summary>
+            获取当前应用程序用户的显示名称。
+            </summary>
+    </member>
+    <member name="T:Microsoft.LightSwitch.Runtime.Shell.ViewModels.ActiveScreens.IActiveScreensViewModel">
+      <summary>
+            表示活动屏幕（具有焦点的屏幕）的视图模型。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.ActiveScreens.IActiveScreensViewModel.Current">
+      <summary>
+            获取活动的屏幕。
+            </summary>
+    </member>
+    <member name="T:Microsoft.LightSwitch.Runtime.Shell.ViewModels.Commands.ICommandsViewModel">
+      <summary>
+            表示应用程序 shell 命令的视图模型。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.Commands.ICommandsViewModel.ShellCommands">
+      <summary>
+            获取所有 shell 命令的简单列表。
+            </summary>
+      <remarks>
+            能够按组显示命令的 shell 应使用 ShellCommandGroups 属性。
+            </remarks>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.Commands.ICommandsViewModel.ShellCommandGroups">
+      <summary>
+            获取所有 shell 命令组的集合。
+            </summary>
+    </member>
+    <member name="T:Microsoft.LightSwitch.Runtime.Shell.ViewModels.Commands.IShellCommand">
+      <summary>
+            表示 shell 命令的视图模型。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.Commands.IShellCommand.DisplayName">
+      <summary>
+            获取命令的显示名称。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.Commands.IShellCommand.Description">
+      <summary>
+            获取命令的说明（可用作信息工具提示或类似功能）。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.Commands.IShellCommand.Image">
+      <summary>
+            获取命令图标的来源（ImageSource 对象）。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.Commands.IShellCommand.IsVisible">
+      <summary>
+            获取一个值，该值指示命令 UI 是否应可见。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.Commands.IShellCommand.IsEnabled">
+      <summary>
+            获取指示是否启用命令的值。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.Commands.IShellCommand.Group">
+      <summary>
+            获取包含此命令的组的名称。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.Commands.IShellCommand.ShowSmallImage">
+      <summary>
+            获取一个值，该值指示是否应对 shell 命令 UI 使用小图标（与常规大小的图标相反）。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.Commands.IShellCommand.ExecutableObject">
+      <summary>
+            获取可调用以执行命令的可执行对象。
+            </summary>
+    </member>
+    <member name="T:Microsoft.LightSwitch.Runtime.Shell.ViewModels.Navigation.INavigationGroup">
+      <summary>
+            表示可包含嵌套导航项的导航项。
+            </summary>
+    </member>
+    <member name="T:Microsoft.LightSwitch.Runtime.Shell.ViewModels.Navigation.INavigationItem">
+      <summary>
+            表示出现在屏幕导航菜单内的导航项。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.Navigation.INavigationItem.Id">
+      <summary>
+            获取当前导航项的唯一标识符。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.Navigation.INavigationItem.DisplayName">
+      <summary>
+            获取当前导航项的显示名称。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.Navigation.INavigationItem.Description">
+      <summary>
+            获取当前导航项的说明。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.Navigation.INavigationItem.Parent">
+      <summary>
+            获取作为当前导航项的父级的导航项。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.Navigation.INavigationItem.IsSelected">
+      <summary>
+            获取或设置一个值，该值指示当前导航项是否已被选中。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.Navigation.INavigationGroup.Children">
+      <summary>
+            获取当前导航组中包含的导航项。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.Navigation.INavigationGroup.DefaultChild">
+      <summary>
+            获取当前导航组的默认子导航项。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.Navigation.INavigationGroup.IsExpanded">
+      <summary>
+            获取或设置一个值，该值指示当前导航组是否已展开。
+            </summary>
+    </member>
+    <member name="T:Microsoft.LightSwitch.Runtime.Shell.ViewModels.Navigation.INavigationViewModel">
+      <summary>
+            表示屏幕导航菜单的视图模型。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.Navigation.INavigationViewModel.NavigationItems">
+      <summary>
+            获取要在导航菜单中显示的顶级导航项。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Runtime.Shell.ViewModels.Navigation.INavigationViewModel.DefaultItem">
+      <summary>
+            获取默认导航项。默认项是在应用程序启动时显示的导航项。
+            </summary>
+    </member>
+    <member name="T:Microsoft.LightSwitch.Client.IMessageAlertState">
+      <summary>
+            此界面允许您以编程方式控制消息警报服务显示的警报。
+            </summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Client.IMessageAlertState.Dismiss">
+      <summary>
+            关闭警报对话框。
+            </summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Client.IMessageAlertState.Dismiss(Microsoft.LightSwitch.Client.MessageAlertResult)">
+      <summary>
+            关闭具有特定结果的警报。
+            </summary> <param name="alertResult">应向警报调用程序返回的警报结果。</param>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Client.IMessageAlertState.IsDismissed">
+      <summary>
+            如果警报已关闭，则返回 true。
+            </summary>
+    </member>
+    <member name="T:Microsoft.LightSwitch.Client.IScreenObject">
+      <summary>
+            提供要在其上执行业务逻辑的屏幕实例。
+            </summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Client.IScreenObject.Save">
+      <summary>
+            在屏幕的默认数据工作区中保存数据。
+            </summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Client.IScreenObject.Refresh">
+      <summary>
+            重新加载屏幕数据，放弃任何更改。
+            </summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Client.IScreenObject.Close(System.Boolean)">
+      <summary>
+            关闭屏幕。
+            </summary> <param name="promptUserToSave">设置为 True 时，这将提示用户在关闭屏幕前保存修改的数据。</param>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Client.IScreenObject.Name">
+      <summary>
+            返回屏幕的名称。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Client.IScreenObject.DisplayName">
+      <summary>
+            获取或设置屏幕的标题。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Client.IScreenObject.Description">
+      <summary>
+            获取或设置屏幕的说明。屏幕说明通常在应用程序中用于提供附加可视化提示，比如工具提示。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Client.IScreenObject.CanSave">
+      <summary>
+            返回是否可保存屏幕。
+            </summary>
+      <remarks>
+            这由许多因素确定，包括用户编写的逻辑、屏幕上数据的验证状态以及是否可保存屏幕的数据源。
+            </remarks>
+    </member>
+    <member name="T:Microsoft.LightSwitch.Framework.Client.ScreenObject`2">
+      <summary>
+            表示应用程序中显示的屏幕。此类可用于封装业务逻辑以与屏幕相关联。
+            </summary> <typeparam name="TScreen">屏幕的特定类型。</typeparam> <typeparam name="TDetails">特定类型屏幕的详细信息类。</typeparam>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Framework.Client.ScreenObject`2.Save">
+      <summary>
+            在屏幕的默认数据工作区中保存数据。
+            </summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Framework.Client.ScreenObject`2.Refresh">
+      <summary>
+            重新加载屏幕数据，放弃任何更改。
+            </summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Framework.Client.ScreenObject`2.Close(System.Boolean)">
+      <summary>
+            关闭屏幕。
+            </summary> <param name="promptUserToSave">设置为 True 时，这将提示用户在关闭屏幕前保存修改的数据。</param>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Framework.Client.ScreenObject`2.SetDisplayNameFromEntity(Microsoft.LightSwitch.IEntityObject)">
+      <summary>
+            根据给定的 <see cref="T:Microsoft.LightSwitch.IEntityObject" /> 设置屏幕的 DisplayName。
+            </summary>
+      <remarks>
+            如果 <see cref="T:Microsoft.LightSwitch.IEntityObject" /> 为 null 或其 ToString() 值为 null 或空白，DisplayName 将来自屏幕模型。
+            </remarks>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Framework.Client.ScreenObject`2.Microsoft#LightSwitch#Client#IScreenObject#Details">
+      <summary>
+            返回屏幕详细信息。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Framework.Client.ScreenObject`2.Name">
+      <summary>
+            返回屏幕的名称。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Framework.Client.ScreenObject`2.DisplayName">
+      <summary>
+            获取或设置屏幕的标题。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Framework.Client.ScreenObject`2.Description">
+      <summary>
+            获取或设置屏幕的说明。屏幕说明通常在应用程序中用于提供附加可视化提示，比如工具提示。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Framework.Client.ScreenObject`2.CanSave">
+      <summary>
+            返回是否可保存屏幕。
+            </summary>
+      <remarks>
+            这由许多因素确定，包括用户编写的逻辑、屏幕上数据的验证状态以及是否可保存屏幕的数据源。
+            </remarks>
+    </member>
+    <member name="T:Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails`2">
+      <summary>
+            表示屏幕的附加详细信息类。
+            </summary> <typeparam name="TScreen">屏幕的类型。</typeparam><typeparam name="TDetails">详细信息类的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails`2.Microsoft#LightSwitch#Client#Implementation#Internal#IScreenDetailsImplementation#PushCommandExecution">
+      <summary>
+            由屏幕命令调用以通知命令正在执行。
+            </summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails`2.Microsoft#LightSwitch#Client#Implementation#Internal#IScreenDetailsImplementation#PopCommandExecution">
+      <summary>
+            调用以删除当前正在执行的命令。
+            </summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails`2.GetPropertyValue``1(`0,Microsoft.LightSwitch.Details.Framework.Client.ScreenProperty{`0,`1,``0}.Entry)">
+      <summary>
+            在给定 Screen 属性及其属性项的情况下获取属性值。
+            </summary>
+      <remarks>
+            此方法从 ScreenProperty.OfT2::Value 属性调用。- 上面的所有公共静态方法 GetValue。VB 编译器需要使用类型更强的公共静态方法来正确推断类型。
+            </remarks>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails`2.InvalidateCollectionPropertyDependency``1(Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty{`0,`1,``0}.Entry)">
+      <summary>
+            使 Screen Collection 属性依赖项无效，但不引发该属性的属性更改事件。VisualCollection 将在进行集合更改时调用此方法，因为属性自身不会更改，但需要使其依赖项无效。
+            </summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails`2.InvokeChangedPartialMethod``1(Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty{`0,`1,``0}.Entry)">
+      <summary>
+            调用屏幕上的部分 XXX_Changed() 方法。
+            </summary>
+      <remarks>
+            由于这是蒂姆的代码，因此只能在 LogicDispatcher 上运行。
+            </remarks>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails`2.InvokeChangedPartialMethod``1(Microsoft.LightSwitch.Details.Framework.Client.ScreenReferenceProperty{`0,`1,``0}.Entry)">
+      <summary>
+            调用屏幕上的部分 XXX_Changed() 方法。
+            </summary>
+      <remarks>
+            由于这是蒂姆的代码，因此只能在 LogicDispatcher 上运行。
+            </remarks>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails`2.TryNormalizeLocalPropertyValue``1(Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty{`0,`1,``0}.Entry,``0)">
+      <summary>
+            尝试在 Screen Local 属性上设置值之前对它进行规范化。
+            </summary> <returns>- 如果 T 是 Date 或 DateTime？+ 如果 LightSwitch 属性类型为“Date”，则值将被截断。+ 如果 LightSwitch 属性类型为“DateTime”，则值将具有未指定的类型。- 否则将传入同一个值。</returns>
+      <remarks>
+            - LightSwitch 数据类型“Date”的本地屏幕属性应被截断，且具有未指定的类型。- LightSwitch 数据类型“DateTime”的本地屏幕属性应具有未指定的类型。
+            </remarks>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails`2.InvalidateDependency``1(Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty{`0,`1,``0}.Entry,Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty{`0,`1,``0}.Data@)">
+      <summary>
+            使 Screen Collection 属性依赖项无效，但不引发该属性的属性更改事件。此方法由 Screen Collection 属性项（代码生成）使用。
+            </summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails`2.IsValidationPassed">
+      <summary>
+            如果在要求保存域服务之前没有阻碍性的验证结果，则返回 true。
+            </summary> <returns></returns>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails`2.Name">
+      <summary>
+            获取屏幕的名称，与屏幕设计器中所指定的一致。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails`2.Screen">
+      <summary>
+            获取这些详细信息应用到的屏幕。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails`2.DisplayName">
+      <summary>
+            获取显示名称，与屏幕设计器中所指定的一致。这是向最终用户显示的名称。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails`2.Description">
+      <summary>
+            获取屏幕的说明，与屏幕设计器中所指定的一致。
+            </summary>
+    </member>
+    <member name="T:Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder">
+      <summary>
+            向范围内的当前 IScreenObject 添加新的 ValidationResult 实例。
+            </summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder.AddScreenError(System.String)">
+      <summary>
+            向结果集合中添加一个针对整个屏幕的验证错误。
+            </summary> <param name="message">要向最终用户显示的有关新验证结果的消息。</param>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder.AddScreenResult(System.String,Microsoft.LightSwitch.ValidationSeverity)">
+      <summary>
+            向结果集合中添加一个针对整个屏幕的验证结果。
+            </summary> <param name="message">要向最终用户显示的有关新验证结果的消息。</param> <param name="severity"> 新验证结果的严重级别。</param>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder.AddScreenResult(System.String,Microsoft.LightSwitch.ValidationSeverity,System.String)">
+      <summary>
+            向结果集合中添加一个针对整个屏幕的验证结果。
+            </summary> <param name="message">要向最终用户显示的有关新验证结果的消息。</param> <param name="severity"> 新验证结果的严重级别。</param> <param name="id"> 新验证结果的字符串标识符。</param>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder.AddPropertyError(System.String)">
+      <summary>
+            向结果集合中添加一个验证错误。根据正在验证的项默认使用此属性。
+            </summary> <param name="message">要向最终用户显示的有关新验证结果的消息。</param>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder.AddPropertyError(System.String,Microsoft.LightSwitch.Details.Client.IScreenProperty)">
+      <summary>
+            添加一个针对特定属性的属性验证错误。
+            </summary> <param name="message">要向最终用户显示的有关新验证结果的消息。</param> <param name="property"> 新验证错误将应用到的属性。</param>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder.AddPropertyResult(System.String,Microsoft.LightSwitch.ValidationSeverity)">
+      <summary>
+            向结果集合中添加一个验证结果。根据正在验证的项默认使用此属性。
+            </summary> <param name="message">要向最终用户显示的有关新验证结果的消息。</param> <param name="severity"> 新验证结果的严重级别。</param>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder.AddPropertyResult(System.String,Microsoft.LightSwitch.ValidationSeverity,System.String)">
+      <summary>
+            向结果集合中添加一个验证结果。根据正在验证的项默认使用此属性。
+            </summary> <param name="message">要向最终用户显示的有关新验证结果的消息。</param> <param name="severity"> 新验证结果的严重级别。</param> <param name="id"> 新验证结果的字符串标识符。</param>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder.AddPropertyResult(System.String,Microsoft.LightSwitch.ValidationSeverity,Microsoft.LightSwitch.Details.Client.IScreenProperty)">
+      <summary>
+            添加针对特定属性的属性验证结果。
+            </summary> <param name="message">要向最终用户显示的有关新验证结果的消息。</param> <param name="severity"> 新验证结果的严重级别。</param> <param name="property"> 新验证结果将应用到的属性。</param>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder.AddPropertyResult(System.String,Microsoft.LightSwitch.ValidationSeverity,Microsoft.LightSwitch.Details.Client.IScreenProperty,System.String)">
+      <summary>
+            添加针对特定属性的属性验证结果。
+            </summary> <param name="message">要向最终用户显示的有关新验证结果的消息。</param> <param name="severity"> 新验证结果的严重级别。</param> <param name="property"> 新验证结果将应用到的属性。</param> <param name="id"> 新验证结果的字符串标识符。</param>
+    </member>
+    <member name="T:Microsoft.LightSwitch.Framework.Client.VisualCollection`1">
+      <summary>
+            表示屏幕中使用的集合。
+            </summary> <typeparam name="T">集合中使用的对象的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Framework.Client.VisualCollection`1.AddNew">
+      <summary>
+            在 VisualCollection 中添加新对象。
+            </summary> <returns>已添加到集合中的对象。</returns>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Framework.Client.VisualCollection`1.AddAndEditNew">
+      <summary>
+            在 VisualCollection 中添加新对象，并打开模式窗口以编辑它。
+            </summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Framework.Client.VisualCollection`1.AddAndEditNew(System.Action{`0})">
+      <summary>
+            在 VisualCollection 中添加新对象，并打开模式窗口以编辑它。
+            </summary> <param name="completeAction">在模式窗口对话框关闭后将运行的方法。</param>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Framework.Client.VisualCollection`1.EditSelected">
+      <summary>
+            为集合中的选定项打开模式窗口编辑器。
+            </summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Framework.Client.VisualCollection`1.RemoveSelected">
+      <summary>
+            从集合中删除选定项。如果此集合表示一个集合导航属性，则将解除已删除项与相关实体的关联。
+            </summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Framework.Client.VisualCollection`1.DeleteSelected">
+      <summary>
+            标记要删除的当前选定项，然后从集合中删除它。该项将在保存 DataWorkspace 时被删除。
+            </summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Framework.Client.VisualCollection`1.Refresh">
+      <summary>
+            从数据源添加任何新项以刷新集合。
+            </summary>
+    </member>
+    <member name="M:Microsoft.LightSwitch.Framework.Client.VisualCollection`1.Load">
+      <summary>
+            为此集合加载数据。如果该集合已加载，则重新执行查询以重新加载该集合。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Framework.Client.VisualCollection`1.Screen">
+      <summary>
+            获取存在此 VisualCollection 实例的屏幕。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Framework.Client.VisualCollection`1.Count">
+      <summary>
+            获取集合中当前包含的项数。如果这是一个分页集合，则该值是当前页上的项数。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Framework.Client.VisualCollection`1.CanAddNew">
+      <summary>
+            获取一个值，该值指示当前用户是否有权在可视化集合中添加新对象。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Framework.Client.VisualCollection`1.CanEdit">
+      <summary>
+            获取一个值，该值指示当前用户是否有权在可视化集合中编辑对象。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Framework.Client.VisualCollection`1.CanRemove">
+      <summary>
+            获取一个值，该值指示当前用户是否有权从可视化集合中删除对象。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Framework.Client.VisualCollection`1.CanDelete">
+      <summary>
+            获取一个值，该值指示当前用户是否有权从可视化集合中删除对象。这不仅从集合中移除该对象同时还会删除该对象。
+            </summary>
+    </member>
+    <member name="P:Microsoft.LightSwitch.Framework.Client.VisualCollection`1.SelectedItem">
+      <summary>
+            获取或设置当前在可视化集合中选定的对象。
+            </summary>
+    </member>
+  </members></doc>

@@ -1,0 +1,14 @@
+﻿Expression Blend 4
+=====================================================
+下面列出随 Microsoft Expression Blend 4 软件提供的一组文件，您可以依据 Expression Blend 4 许可证将它们再分发。  
+
+在遵守此软件许可条款的情况下，您可以将以下目录中包含的文件原封不动地作为程序的一部分再分发：
+
+_____________________________________________________________
+
+ProjectTemplates\
+Templates\
+SampleDataResources\
+Samples\
+AppThemes\
+

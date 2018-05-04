@@ -1,0 +1,9 @@
+F:\C#\S2Chapter0101\Travellog\bin\Debug\Travellog.exe.config
+F:\C#\S2Chapter0101\Travellog\bin\Debug\Travellog.exe
+F:\C#\S2Chapter0101\Travellog\bin\Debug\Travellog.pdb
+F:\C#\S2Chapter0101\Travellog\obj\Debug\Travellog.csprojResolveAssemblyReference.cache
+F:\C#\S2Chapter0101\Travellog\obj\Debug\Travellog.FrmMain.resources
+F:\C#\S2Chapter0101\Travellog\obj\Debug\Travellog.Properties.Resources.resources
+F:\C#\S2Chapter0101\Travellog\obj\Debug\Travellog.csproj.GenerateResource.Cache
+F:\C#\S2Chapter0101\Travellog\obj\Debug\Travellog.exe
+F:\C#\S2Chapter0101\Travellog\obj\Debug\Travellog.pdb

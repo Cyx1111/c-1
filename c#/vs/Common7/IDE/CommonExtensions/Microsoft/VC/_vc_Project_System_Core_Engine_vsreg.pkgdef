@@ -1,0 +1,11 @@
+[$RootKey$]
+
+[$RootKey$\CLSID]
+
+[$RootKey$\CLSID\{152d56b2-e357-46d9-8dd2-f85d1c892678}]
+"Assembly"="Microsoft.VisualStudio.Project.VisualC.VCProjectEngine, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"Class"="Microsoft.VisualStudio.Project.VisualC.VCProjectEngine.VCProjectEngineShim"
+"InprocServer32"="$System$\mscoree.dll"
+"ThreadingModel"="Apartment"
+@="Microsoft.VisualStudio.Project.VisualC.VCProjectEngine.VCProjectEngineShim"
+

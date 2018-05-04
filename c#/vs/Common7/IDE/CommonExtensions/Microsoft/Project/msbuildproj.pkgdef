@@ -1,0 +1,22 @@
+﻿[$RootKey$\Projects\{13B669BE-BB05-4DDF-9536-439F39A36129}]
+@="ProjectFactory"
+"DisplayName"="Common Project System"
+"DisplayProjectFileExtensions"="Common Project System Files (*.msbuildproj);*.msbuildproj"
+"Package"="{6B95EFF5-7930-48DD-AA8A-4F0E136E4CEE}"
+"DefaultProjectExtension"="msbuildproj"
+"PossibleProjectExtensions"="msbuildproj"
+"ProjectTemplatesDir"="$RootFolder$\Common7\IDE\CommonExtensions\Microsoft\Project\Templates\Projects"
+"Language(VsTemplate)"="CPS Projects"
+"DisableAsynchronousSolutionLoad"=dword:00000001
+[$RootKey$\NewProjectTemplates\TemplateDirs\{6B95EFF5-7930-48DD-AA8A-4F0E136E4CEE}\/1]
+@="CPS Projects"
+"SortPriority"=dword:00000064
+"TemplatesDir"="$RootFolder$\Common7\IDE\CommonExtensions\Microsoft\Project\Templates\Projects"
+[$RootKey$\Projects\{13B669BE-BB05-4DDF-9536-439F39A36129}\AddItemTemplates\TemplateDirs\{6B95EFF5-7930-48DD-AA8A-4F0E136E4CEE}\/1]
+@="My Items"
+"TemplatesDir"="$RootFolder$\Common7\IDE\CommonExtensions\Microsoft\Project\Templates\Projects\ProjectItems"
+"SortPriority"=dword:000001F4
+
+; MSBuild host objects can be registered for CPS just like in C#/VB.  But IHostObjectProvider exports also work.
+; [$RootKey$\Projects\{13B669BE-BB05-4DDF-9536-439F39A36129}\MSBuildHostObjects\CoreCompile;Csc]
+; @="{E2905C7C-4435-4212-9148-BE9614BD377B}"

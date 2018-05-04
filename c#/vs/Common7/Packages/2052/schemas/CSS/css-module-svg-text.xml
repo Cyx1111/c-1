@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="SVG Text" standard-reference="http://www.w3.org/TR/SVG11/text.html" status="REC" pub-date="2011-08-16">
+
+  <CssProperty _locID="glyph-orientation-horizontal" _locAttrData="description" version="3.0" restriction="angle" description="设置或检索一个值，该值将改变一个字符序列相对于水平对象的 inline-progression-direction 的方向。" standard-reference="http://www.w3.org/TR/SVG11/text.html#GlyphOrientationHorizontalProperty"/>
+
+  <CssProperty _locID="glyph-orientation-vertical" _locAttrData="description" version="3.0" restriction="angle, enum" description="设置或检索一个值，该值将改变一个字符序列相对于垂直对象的 inline-progression-direction 的方向。" standard-reference="http://www.w3.org/TR/SVG11/text.html#GlyphOrientationVerticalProperty">
+
+    <entry _locID="glyph-orientation-vertical_auto" _locAttrData="description" value="auto" description="基于全角或非全角字符以及最常用方向设置方向。"/>
+  </CssProperty>
+
+  <CssProperty _locID="kerning" _locAttrData="description" version="3.0" restriction="length, enum" description="指示用户代理应基于相关字体中包含的字距调整表调整字形内部间距还是禁用自动字距调整并将内部字符间距设置为特定长度。" standard-reference="http://www.w3.org/TR/SVG11/text.html#KerningProperty">
+
+    <entry _locID="kerning_none" _locAttrData="description" value="auto" description="指示用户代理应基于将使用的字体中包含的字距调整表调整字形内部间距。"/>
+  </CssProperty>
+
+</CssModule>

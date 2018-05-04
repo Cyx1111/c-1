@@ -1,0 +1,78 @@
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{164B10B9-B200-11D0-8C61-00A0C91E29D5}" ID="3133"/>
+    <Description Package="{164B10B9-B200-11D0-8C61-00A0C91E29D5}" ID="3134"/>
+    <Icon Package="{164B10B9-B200-11D0-8C61-00A0C91E29D5}" ID="4572"/>
+    <ProjectType>VisualBasic</ProjectType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <SortOrder>100</SortOrder>
+    <DefaultName>MDIParent.vb</DefaultName>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <TemplateID>Microsoft.VisualBasic.WindowsForms.MdiParent</TemplateID>
+    <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+  </TemplateData>
+  <TemplateContent>
+        <References>
+            <Reference>
+                <Assembly>System</Assembly>
+                <URL>http://www.microsoft.com</URL>
+            </Reference>
+            <Reference>
+                <Assembly>System.Drawing</Assembly>
+                <URL>http://www.microsoft.com</URL>
+            </Reference>
+            <Reference>
+                <Assembly>System.Windows.Forms</Assembly>
+                <URL>http://www.microsoft.com</URL>
+            </Reference>
+        </References>
+
+    <ProjectItem ReplaceParameters="true" SubType="Form">MDIParent.vb</ProjectItem>
+    <ProjectItem ReplaceParameters="true">MDIParent.Designer.vb</ProjectItem>
+    <ProjectItem TargetFileName="$fileinputname$.resx" ReplaceParameters="false">MDIParent.resx</ProjectItem>
+    <CustomParameters>
+        <CustomParameter _locID="$IT_MD_VB_Loc_Window$" Name="$IT_MD_VB_Loc_Window$" Value="窗口"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_TextFilesFilter$" Name="$IT_MD_VB_Loc_TextFilesFilter$" Value="文本文件(*.txt)|*.txt|所有文件(*.*)|*.*"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_4$" Name="$IT_MD_VB_Loc_4$" Value="目录(&amp;C)"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_Help$" Name="$IT_MD_VB_Loc_Help$" Value="帮助(&amp;H)"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_Index$" Name="$IT_MD_VB_Loc_Index$" Value="索引(&amp;I)"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_Search$" Name="$IT_MD_VB_Loc_Search$" Value="搜索(&amp;S)"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_About$" Name="$IT_MD_VB_Loc_About$" Value="关于(&amp;A) ..."/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_Arrange$" Name="$IT_MD_VB_Loc_Arrange$" Value="排列图标(&amp;A)"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_CloseAll$" Name="$IT_MD_VB_Loc_CloseAll$" Value="全部关闭(&amp;L)"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_NewWindow$" Name="$IT_MD_VB_Loc_NewWindow$" Value="新建窗口(&amp;N)"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_Windows$" Name="$IT_MD_VB_Loc_Windows$" Value="窗口(&amp;W)"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_Cascade$" Name="$IT_MD_VB_Loc_Cascade$" Value="层叠(&amp;C)"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_Vertical$" Name="$IT_MD_VB_Loc_Vertical$" Value="垂直平铺(&amp;V)"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_Horizontal$" Name="$IT_MD_VB_Loc_Horizontal$" Value="水平平铺(&amp;H)"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_Options$" Name="$IT_MD_VB_Loc_Options$" Value="选项(&amp;O)"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_HelpTS$" Name="$IT_MD_VB_Loc_HelpTS$" Value="帮助"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_PrintPreview$" Name="$IT_MD_VB_Loc_PrintPreview$" Value="打印预览"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_Status$" Name="$IT_MD_VB_Loc_Status$" Value="状态"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_PrintTS$" Name="$IT_MD_VB_Loc_PrintTS$" Value="打印"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_NewTS$" Name="$IT_MD_VB_Loc_NewTS$" Value="新建"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_OpenTS$" Name="$IT_MD_VB_Loc_OpenTS$" Value="打开"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_SaveTS$" Name="$IT_MD_VB_Loc_SaveTS$" Value="保存"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_PrintPreviewTS$" Name="$IT_MD_VB_Loc_PrintPreviewTS$" Value="打印预览(&amp;V)"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_PrintTS_Menu$" Name="$IT_MD_VB_Loc_PrintTS_Menu$" Value="打印(&amp;P)"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_ExitTS_Menu$" Name="$IT_MD_VB_Loc_ExitTS_Menu$" Value="退出(&amp;X)"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_PrintSetup_TS_Menu$" Name="$IT_MD_VB_Loc_PrintSetup_TS_Menu$" Value="打印设置"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_SaveAsTS_Menu$" Name="$IT_MD_VB_Loc_SaveAsTS_Menu$" Value="另存为(&amp;A)"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_NewTS_Menu$" Name="$IT_MD_VB_Loc_NewTS_Menu$" Value="新建(&amp;N)"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_FileMenu$" Name="$IT_MD_VB_Loc_FileMenu$" Value="文件(&amp;F)"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_OpenMenu$" Name="$IT_MD_VB_Loc_OpenMenu$" Value="打开(&amp;O)"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_SaveMenu$" Name="$IT_MD_VB_Loc_SaveMenu$" Value="保存(&amp;S)"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_EditMenu$" Name="$IT_MD_VB_Loc_EditMenu$" Value="编辑(&amp;E)"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_UndoMenu$" Name="$IT_MD_VB_Loc_UndoMenu$" Value="撤消(&amp;U)"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_RedoMenu$" Name="$IT_MD_VB_Loc_RedoMenu$" Value="重复(&amp;R)"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_CutMenu$" Name="$IT_MD_VB_Loc_CutMenu$" Value="剪切(&amp;T)"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_CopyMenu$" Name="$IT_MD_VB_Loc_CopyMenu$" Value="复制(&amp;C)"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_PasteMenu$" Name="$IT_MD_VB_Loc_PasteMenu$" Value="粘贴(&amp;P)"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_SelectAllTS_Menu$" Name="$IT_MD_VB_Loc_SelectAllTS_Menu$" Value="全选(&amp;A)"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_ViewMenu$" Name="$IT_MD_VB_Loc_ViewMenu$" Value="视图(&amp;V)"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_Toolbar_Menu$" Name="$IT_MD_VB_Loc_Toolbar_Menu$" Value="工具栏(&amp;T)"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_StatusBar_Menu$" Name="$IT_MD_VB_Loc_StatusBar_Menu$" Value="状态栏(&amp;S)"/>
+        <CustomParameter _locID="$IT_MD_VB_Loc_ToolsMenu$" Name="$IT_MD_VB_Loc_ToolsMenu$" Value="工具(&amp;T)"/>
+    </CustomParameters>
+  </TemplateContent>
+</VSTemplate>

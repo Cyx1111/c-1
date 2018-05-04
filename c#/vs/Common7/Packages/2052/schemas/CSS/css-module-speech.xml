@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Speech" standard-reference="http://www.w3.org/TR/css3-speech/" status="WD" pub-date="2012-03-20">
+
+  <CssProperty _locID="voice-volume" _locAttrData="description" version="3.0" browsers="none" restriction="volume, enum" description="指示语音合成器输出的波形的波幅。“silent”的值映射到“0”，而“x-loud”映射到“100”。其他值与数字音量水平的映射依赖于实现方式，且因语音合成器的不同而异。" syntax="&lt;decibel&gt; | silent | x-soft | soft | medium | loud | x-loud" standard-reference="http://www.w3.org/TR/css3-speech/#voice-volume">
+
+    <entry _locID="voice-volume_silent" _locAttrData="description" value="silent" description="音量值 0。"/>
+    <entry value="x-soft"/>
+    <entry value="soft"/>
+    <entry value="medium"/>
+    <entry value="loud"/>
+    <entry _locID="voice-volume_x-loud" _locAttrData="description" value="x-loud" description="音量值 100。"/>
+  </CssProperty>
+
+  <CssProperty _locID="voice-balance" _locAttrData="description" version="3.0" browsers="none" restriction="number(-100-100)" description="指示左右声道之间的平衡，并且采用消费级音频设备上广泛支持的双声道(立体声)模型。" syntax="&lt;number&gt; | left | center | right | leftwards | rightwards" standard-reference="http://www.w3.org/TR/css3-speech/#voice-balance">
+
+    <entry _locID="voice-balance_left" _locAttrData="description" value="left" description="与 -100 相同。"/>
+    <entry _locID="voice-balance_center" _locAttrData="description" value="center" description="与“0”相同。"/>
+    <entry _locID="voice-balance_right" _locAttrData="description" value="right" description="与“100”或“+ 100”相同。"/>
+    <entry _locID="voice-balance_leftwards" _locAttrData="description" value="leftwards" description="将声音向左移动(相对于继承的音量平衡)。更精确地说是将继承的值减去 20，并将生成的值剪辑到范围“-100”到“100”。"/>
+    <entry _locID="voice-balance_rightwards" _locAttrData="description" value="rightwards" description="将声音向右移动(相对于继承的音量平衡)。更精确地说是将继承的值加上 20，并将生成的值剪辑到范围“-100”到“100”。"/>
+  </CssProperty>
+
+  <CssProperty _locID="speak" _locAttrData="description" version="2.0" browsers="none" restriction="enum" syntax="div { $(name): normal; }" description="指定是否用语音呈现文本以及如何呈现(如果用语音呈现的话)。" standard-reference="http://www.w3.org/TR/css3-speech/#speak">
+
+    <entry _locID="speak_none" _locAttrData="description" value="none" description="禁止语音呈现，以便元素无需呈现时间。"/>
+    <entry _locID="speak_normal" _locAttrData="description" value="normal" description="使用依赖于语言的发音规则来呈现元素及其子级。不读出标点，而改为通过各种停顿来自然呈现。"/>
+    <entry _locID="speak_spell-out" _locAttrData="description" value="spell-out" description="逐个字母地拼写文本(对于首字母缩略和缩写很有用)。在重音字符极少的语言中，允许以无重音拼写代替重音。"/>
+    <entry _locID="speak_digits" _locAttrData="description" value="digits" description="逐个数位地读出数字，例如，“十二”将读作“一二”，“31”将读作“三一”。"/>
+    <entry _locID="speak_literal-punctuation" _locAttrData="description" value="literal-punctuation" description="与“normal”值相似，但将按字面读出标点(如分号、大括号等等)。"/>
+    <entry _locID="speak_no-punctuation" _locAttrData="description" value="no-punctuation" description="与“normal”值相似，但不会读出标点，也不会通过各种停顿来呈现标点。"/>
+  </CssProperty>
+
+  <CssPropertyValue type="pause-time">
+    <entry value="none"/>
+    <entry value="x-weak"/>
+    <entry value="weak"/>
+    <entry value="medium"/>
+    <entry value="strong"/>
+    <entry value="x-strong"/>
+  </CssPropertyValue>
+
+  <CssProperty _locID="pause-before" _locAttrData="description" version="2.0" browsers="none" restriction="time" description="指定某个元素前面或“cue-before”(如果指定了任何这类值)前面要留意的暂停或韵律边界。这些值指示语音输出的中断的韵律强度。" syntax="h3 { $(name): 30ms; }" standard-reference="http://www.w3.org/TR/css3-speech/#pause-before" type="pause-time"/>
+
+  <CssProperty _locID="pause-after" _locAttrData="description" ref="pause-before" version="2.0" browsers="none" description="指定某个元素后面或“cue-after”(如果指定了任何这类值)后面要留意的暂停或韵律边界。这些值指示语音输出的中断的韵律强度。" standard-reference="http://www.w3.org/TR/css3-speech/#pause-after"/>
+
+  <CssProperty _locID="pause" _locAttrData="description" version="2.0" browsers="none" restriction="time, enum" type="pause-time" description="用于设置“pause-before”和“pause-after”的速记。如果提供了两个值，则第一个值为“pause-before”，第二个值为“pause-after”。如果只提供了一个值，则它将应用于两个属性。" syntax="h2 { $(name): 30ms 40ms; }" standard-reference="http://www.w3.org/TR/css3-speech/#pause"/>
+
+  <CssProperty _locID="rest-before" _locAttrData="description" version="3.0" browsers="none" type="pause-time" restriction="time" description="指定某个元素内容前面要留意的停顿或韵律边界。" syntax="h3 { $(name): 4s; }" standard-reference="http://www.w3.org/TR/css3-speech/#rest-before"/>
+
+  <CssProperty _locID="rest-after" _locAttrData="description" ref="rest-before" description="指定某个元素内容后面要留意的停顿或韵律边界。" standard-reference="http://www.w3.org/TR/css3-speech/#rest-after"/>
+
+  <CssProperty _locID="rest" _locAttrData="description" ref="rest-before" description="用于设置“rest-before”和“rest-after”的速记。如果提供了两个值，则第一个值为“rest-before”，第二个值为“rest-after”。如果只提供了一个值，则它将应用于两个属性。" standard-reference="http://www.w3.org/TR/css3-speech/#rest"/>
+
+  <CssProperty _locID="cue-before" _locAttrData="description" version="2.0" browsers="none" restriction="url, volume, enum" description="听觉图标是区分语义元素的另一种方法。声音可在元素的前面和/或后面播放以分隔该元素。" syntax="h1 { $(name): url(dong.wav) -3dB;}" standard-reference="http://www.w3.org/TR/css3-speech/#cue-before">
+
+    <entry _locID="cue-before_" _locAttrData="description" value="none" description="未指定听觉图标。"/>
+    <entry _locID="cue-before_silent" _locAttrData="description" value="silent" description="值“0”"/>
+    <entry value="x-soft"/>
+    <entry value="soft"/>
+    <entry value="medium"/>
+    <entry value="loud"/>
+    <entry _locID="cue-before_x-loud" _locAttrData="description" value="x-loud" description="值“100”"/>
+    <entry value="url()"/>
+  </CssProperty>
+
+  <CssProperty _locID="cue-after" ref="cue-before" standard-reference="http://www.w3.org/TR/css3-speech/#cue-after"/>
+
+  <CssProperty _locID="cue" _locAttrData="description" ref="cue-before" description="用于设置“cue-before”和“cue-after”的速记。如果提供了两个值，则第一个值为“cue-before”，第二个值为“cue-after”。如果仅提供了一个值，则它将应用于两个属性。" standard-reference="http://www.w3.org/TR/css3-speech/#cue"/>
+
+  <CssProperty _locID="voice-family" _locAttrData="description" version="2.0" browsers="none" restriction="number, string" syntax="[[&lt;specific-voice&gt; | &lt;generic-voice&gt; ],]* [&lt;specific-voice&gt; | &lt;generic-voice&gt; ]" description="用逗号分隔的、按照优先顺序排列的声音系列名称(与“font-family”比较)的列表。" standard-reference="http://www.w3.org/TR/css3-speech/#voice-family">
+
+    <syntax version="3.0">[[&lt;specific-voice&gt; | [&lt;age&gt;] &lt;generic-voice&gt;] [&lt;number&gt;],]* [&lt;specific-voice&gt; | [&lt;age&gt;] &lt;generic-voice&gt;] [&lt;number&gt;]</syntax>
+
+    <entry _locID="voice-family_neutral" _locAttrData="description" value="neutral" description="“generic-voice”的中性声音"/>
+    <entry _locID="voice-family_male" _locAttrData="description" value="male" description="“generic-voice”的男性声音"/>
+    <entry _locID="voice-family_female" _locAttrData="description" value="female" description="“generic-voice”的女性声音"/>
+
+    <entry value="child" description="Child voice for 'age'"/>
+    <entry value="young" description="Young person voice for 'age'"/>
+    <entry value="old" description="Old person voice for 'age'"/>
+  </CssProperty>
+
+  <CssProperty _locID="voice-rate" _locAttrData="description" version="3.0" browsers="none" restriction="percentage" description="控制语速。声音的默认速率取决于语言和方言，还取决于声音的个人特征。" syntax="&lt;percentage&gt; | x-slow | slow | medium | fast | x-fast" standard-reference="http://www.w3.org/TR/css3-speech/#voice-rate">
+
+    <entry value="x-slow"/>
+    <entry value="slow"/>
+    <entry _locID="voice-rate_fast" _locAttrData="description" value="medium" description="等效于 100%，表示此声音的语速正常。"/>
+    <entry value="fast"/>
+    <entry value="x-fast"/>
+  </CssProperty>
+
+  <CssProperty _locID="voice-pitch" _locAttrData="description" version="3.0" browsers="none" restriction="percentage, number, frequency, semitones" syntax="h2 { $(name): absolute 30Hz; }" description="指定语音的平均音调(一种频率)。声音的平均音调取决于声音系列。例如，标准男性声音的平均音调约为 120Hz，但对于女性声音，平均声调则为 210Hz。" standard-reference="http://www.w3.org/TR/css3-speech/#voice-pitch">
+
+    <entry value="absolute"/>
+    <entry value="x-low"/>
+    <entry value="low"/>
+    <entry _locID="voice-pitch_medium" _locAttrData="description" value="medium" description="等效于 100%，表示此声音的正常音调"/>
+    <entry value="high"/>
+    <entry value="x-high"/>
+  </CssProperty>
+
+  <CssProperty _locID="voice-range" _locAttrData="description" version="3.0" browsers="none" restriction="percentage, number, frequency, semitones" syntax="h2 { $(name): +10Hz; }" description="指定平均音调变化。人类语言是用各种音调和音调变化叙说的；这些变化传递了附加的意义和强调。" standard-reference="http://www.w3.org/TR/css3-speech/#voice-props-voice-range">
+
+    <entry value="absolute"/>
+    <entry value="x-low"/>
+    <entry value="low"/>
+    <entry value="medium"/>
+    <entry value="high"/>
+    <entry value="x-high"/>
+  </CssProperty>
+
+  <CssProperty _locID="voice-stress" _locAttrData="description" version="3.0" browsers="none" restriction="enum" syntax="h2 { $(name): moderate; }" description="指示要应用的强调的强度。强调是用音调变化、时序变化、响度和其他声音差异的组合指示的，这些因素因语言的不同而异。" standard-reference="http://www.w3.org/TR/css3-speech/#voice-stress">
+
+    <entry _locID="voice-stress_none" _locAttrData="description" value="none" description="禁止合成器强调其通常会强调的词。"/>
+    <entry value="normal"/>
+    <entry value="moderate"/>
+    <entry value="strong"/>
+    <entry _locID="voice-stress_reduced" _locAttrData="description" value="reduced" description="实际上就是强调某个词的反义。例如，当短语“going to”的强调程度降低时，可能就读作“gonna”。"/>
+  </CssProperty>
+
+  <CssProperty _locID="voice-duration" _locAttrData="description" version="3.0" browsers="none" restriction="time" description="允许作者指定呈现所选元素的内容所用的时间。此属性将重写“voice-rate”属性。" syntax="&lt;time&gt;" standard-reference="http://www.w3.org/TR/css3-speech/#voice-duration"/>
+
+  <CssProperty _locID="speak-as" _locAttrData="description" version="3.0" browsers="none" restriction="enum" syntax="div { $(name): spell-out; }" description="指定如何基于可能值的基本预定义列表用语音呈现文本。" standard-reference="http://www.w3.org/TR/css3-speech/#speak-as">
+
+    <entry _locID="speak-as_normal" _locAttrData="description" value="normal" description="使用依赖于语言的发音规则来呈现元素的内容。"/>
+    <entry _locID="speak-as_spell-out" _locAttrData="description" value="spell-out" description="逐个字母地拼写文本(对首字母缩略和缩写很有用)。"/>
+    <entry _locID="speak-as_digits" _locAttrData="description" value="digits" description="逐个数位地读出数字，例如，“十二”将读作“一二”，“31”将读作“三一”。"/>
+    <entry _locID="speak-as_literal-punctuation" _locAttrData="description" value="literal-punctuation" description="标点(如分号、大括号等等)将被大声读出(即，按字面读出)，而不是以适当停顿的方式自然地呈现。"/>
+    <entry _locID="speak-as_no-punctuation" _locAttrData="description" value="no-punctuation" description="将不呈现标点: 既不读出，也不以停顿的方式呈现。"/>
+  </CssProperty>
+
+  <CssProperty _locID="volume" _locAttrData="description" version="2.0" browsers="none" restriction="percentage, number" description="音量指的是波形的中间音量。换句话说，对于音量为 50 且音调大幅变化的声音，其峰值可能远远大于 50。" syntax="&lt;number&gt; | &lt;percentage&gt; | silent | x-soft | soft | medium | loud | x-loud" standard-reference="http://www.w3.org/TR/CSS2/aural.html#propdef-volume">
+
+    <entry _locID="volume_silent" _locAttrData="description" value="silent" description="完全没有声音。值“0”的意义与“silent”不同。"/>
+    <entry _locID="volume_x-soft" _locAttrData="description" value="x-soft" description="与“0”相同。"/>
+    <entry _locID="volume_soft" _locAttrData="description" value="soft" description="与“25”相同。"/>
+    <entry _locID="volume_medium" _locAttrData="description" value="medium" description="与“50”相同。"/>
+    <entry _locID="volume_loud" _locAttrData="description" value="loud" description="与“75”相同。"/>
+    <entry _locID="volume_x-loud" _locAttrData="description" value="x-loud" description="与“100”相同。"/>
+  </CssProperty>
+
+  <CssProperty _locID="play-during" _locAttrData="description" version="2.0-2.1" browsers="none" restriction="url" description="在呈现元素的内容时要播放的声音。" syntax="&lt;uri&gt; [ mix || repeat ]? | auto | none" standard-reference="http://www.w3.org/TR/CSS2/aural.html#propdef-play-during">
+
+    <entry _locID="play-during_mix" _locAttrData="description" value="mix" description="继承自父元素的“play-during”属性的声音将继续播放，并且由 &lt;uri&gt; 指定的声音将与其混合"/>
+    <entry _locID="play-during_repeat" _locAttrData="description" value="repeat" description="如果声音太短，无法填充元素的整个持续时间，则会重复播放。否则，该声音将播放一次，然后停止。"/>
+    <entry _locID="play-during_auto" _locAttrData="description" value="auto" description="父元素的声音将继续播放。"/>
+    <entry _locID="play-during_none" _locAttrData="description" value="none" description="无声。父元素(如果有)的声音在当前元素的持续时间内无声，且在当前元素之后继续保持此状态。"/>
+    <entry value="url()"/>
+  </CssProperty>
+
+  <CssProperty _locID="azimuth" _locAttrData="description" version="2.0" browsers="none" restriction="angle" syntax="&lt;angle&gt; | [[ left-side | far-left | left | center-left | center | center-right | right | far-right | right-side ] || behind ] | leftwards | rightwards" description="声音空间信息" standard-reference="http://www.w3.org/TR/2007/CR-CSS21-20070719/aural.html#propdef-azimuth">
+
+    <entry value="behind"/>
+    <entry _locID="azimuth_center" _locAttrData="description" value="center" description="与“0deg”相同。对于“behind”，则为“180deg”。"/>
+    <entry _locID="azimuth_center-left" _locAttrData="description" value="center-left" description="与“340deg”相同。对于“behind”，则为“200deg”。"/>
+    <entry _locID="azimuth_center-right" _locAttrData="description" value="center-right" description="与“20deg”相同。对于“behind”，则为“160deg”。"/>
+    <entry _locID="azimuth_far-left" _locAttrData="description" value="far-left" description="与“300deg”相同。对于“behind”，则为“240deg”。"/>
+    <entry _locID="azimuth_far-right" _locAttrData="description" value="far-right" description="与“60deg”相同。对于“behind”，则为“120deg”。"/>
+    <entry _locID="azimuth_left" _locAttrData="description" value="left" description="与“320deg”相同。对于“behind”，则为“220deg”。"/>
+    <entry _locID="azimuth_left-side" _locAttrData="description" value="left-side" description="与“270deg”相同。对于“behind”，则为“270deg”。"/>
+    <entry _locID="azimuth_leftwards" _locAttrData="description" value="leftwards" description="将声音向左移动(相对于当前角度)。更精确地说是减去 20 度。"/>
+    <entry _locID="azimuth_right" _locAttrData="description" value="right" description="与“40deg”相同。对于“behind”，则为“140deg”。"/>
+    <entry _locID="azimuth_right-side" _locAttrData="description" value="right-side" description="与“90deg”相同。对于“behind”，则为“90deg”。"/>
+    <entry _locID="azimuth_rightwards" _locAttrData="description" value="rightwards" description="将声音向右移动(相对于当前角度)。更精确地说是加上 20 度。"/>
+  </CssProperty>
+
+  <CssProperty _locID="elevation" _locAttrData="description" version="2.0" browsers="none" restriction="angle" syntax="&lt;angle&gt; | below | level | above | higher | lower" description="声音空间信息" standard-reference="http://www.w3.org/TR/2007/CR-CSS21-20070719/aural.html#propdef-azimuth">
+
+    <entry _locID="elevation_below" _locAttrData="description" value="below" description="与“-90deg”相同。"/>
+    <entry _locID="elevation_level" _locAttrData="description" value="level" description="与“0deg”相同。"/>
+    <entry _locID="elevation_above" _locAttrData="description" value="above" description="与“90deg”相同。"/>
+    <entry _locID="elevation_higher" _locAttrData="description" value="higher" description="将当前仰角加上 10 度。"/>
+    <entry _locID="elevation_lower" _locAttrData="description" value="lower" description="将当前仰角减去 10 度。"/>
+  </CssProperty>
+
+  <CssProperty _locID="richness" _locAttrData="description, syntax" version="2.0" browsers="none" restriction="number(0-100)" syntax="一个介于“0”和“100”之间的值。该值越高，声音传得就越远。较小的值将产生柔和优美的声音。" description="指定讲话声音的饱满度或洪亮度。饱满的声音可以在较大的房间内“传开”，而柔和的声音则不会。" standard-reference="http://www.w3.org/TR/CSS2/aural.html#propdef-richness"/>
+
+  <CssProperty _locID="stress" _locAttrData="description, syntax" version="2.0" browsers="none" restriction="number(0-100)" syntax="一个 0 到 100 之间的值。值的意义取决于所说的语言。例如，级别“50”表示一个标准的说英语的男性声音(平均音调 = 122Hz)，对于意大利语而言，用正常声调和强调说话将有不同于“50”的意义。" description="指定声音的声调轮廓线的“局部峰值”的高度。例如，英语是一种重音语言，句子的各个部分将被分配主要重音、次要重音或第三重音。" standard-reference="http://www.w3.org/TR/CSS2/aural.html#propdef-stress"/>
+
+  <CssProperty _locID="pitch" _locAttrData="description" version="2.0" browsers="none" restriction="frequency" description="指定语音的平均音调(一种频率)。声音的平均音调取决于声音系列。例如，标准男性声音的平均音调约为 120Hz，但对于女性声音，平均声调则为 210Hz。" syntax="&lt;frequency&gt; | x-low | low | medium | high | x-high" standard-reference="http://www.w3.org/TR/CSS2/aural.html#propdef-pitch">
+
+    <entry value="x-low"/>
+    <entry value="low"/>
+    <entry _locID="pitch_medium" _locAttrData="description" value="medium" description="等效于 100%，表示此声音的正常音调"/>
+    <entry value="high"/>
+    <entry value="x-high"/>
+  </CssProperty>
+
+  <CssProperty _locID="pitch-range" _locAttrData="description" version="2.0" browsers="none" restriction="number" description="指定平均音调中的变化。可感知的人类声音的音调由基频确定，该值对于男性声音一般为 120Hz，对于女性声音一般为 210Hz。" syntax="&lt;number&gt;" standard-reference="http://www.w3.org/TR/CSS2/aural.html#propdef-pitch-range"/>
+
+  <CssProperty _locID="speech-rate" _locAttrData="description" version="2.0" browsers="none" restriction="number" description="控制语速。声音的默认速率取决于语言和方言，还取决于声音的个人特征。" syntax="&lt;number&gt; | x-slow | slow | medium | fast | x-fast | faster | slower" standard-reference="http://www.w3.org/TR/CSS2/aural.html#propdef-speech-rate">
+
+    <entry _locID="speech-rate_x-slow" _locAttrData="description" value="x-slow" description="与每分钟 80 个词相同。"/>
+    <entry _locID="speech-rate_slow" _locAttrData="description" value="slow" description="与每分钟 120 个词相同。"/>
+    <entry _locID="speech-rate_medium" _locAttrData="description" value="medium" description="与每分钟 180-200 词相同。"/>
+    <entry _locID="speech-rate_fast" _locAttrData="description" value="fast" description="与每分钟 300 个词相同。"/>
+    <entry _locID="speech-rate_x-fast" _locAttrData="description" value="x-fast" description="与每分钟 500 个词相同。"/>
+    <entry _locID="speech-rate_faster" _locAttrData="description" value="faster" description="为当前语速增加 40 字/分钟。"/>
+    <entry _locID="speech-rate_slower" _locAttrData="description" value="slower" description="当前语速减去 40 字/分钟。"/>
+  </CssProperty>
+
+</CssModule>
